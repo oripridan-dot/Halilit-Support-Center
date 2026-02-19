@@ -20,6 +20,20 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FACTORY_PY="$SCRIPT_DIR/factory.py"
 
+# ── Load .env if present ──────────────────────────────────────────────────────
+if [[ -f "$SCRIPT_DIR/.env" ]]; then
+    set -a
+    # shellcheck disable=SC1091
+    source "$SCRIPT_DIR/.env"
+    set +a
+fi
+
+# ── Activate venv if present and not already active ───────────────────────────
+if [[ -z "${VIRTUAL_ENV:-}" && -f "$SCRIPT_DIR/.venv/bin/activate" ]]; then
+    # shellcheck disable=SC1091
+    source "$SCRIPT_DIR/.venv/bin/activate"
+fi
+
 # ── Defaults ──────────────────────────────────────────────────────────────────
 MAX_CYCLES=3
 SKIP_STEER=false
@@ -77,6 +91,11 @@ fi
 
 END_TS=$(date +%s)
 ELAPSED=$((END_TS - START_TS))
+
+# ── Step 4: COMMIT & PUSH ─────────────────────────────────────────────────────
+echo "📦 [4/4] Committing and pushing progress..."
+python3 "$FACTORY_PY" commit || echo "⚠️  Commit step encountered an error (non-fatal)"
+echo ""
 
 echo ""
 echo "☀️  ============================================="

@@ -245,6 +245,97 @@ def cmd_commit(dry_run: bool = False) -> None:
     subprocess.run(args, cwd=str(FACTORY), env=env)
 
 
+def cmd_reflect(context: str) -> None:
+    """
+    Mentor (Reflect Agent): extract a lesson from a failure event and append it
+    to docs/LEARNED_GUIDELINES.md so all future agents learn from the mistake.
+    """
+    ensure_env()
+    log("Activating Mentor Agent (Reflect)...")
+    agent = FACTORY / "reflect_agent.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    subprocess.run(
+        [sys.executable, str(agent), context],
+        cwd=str(FACTORY),
+        env=env,
+    )
+
+
+def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> None:
+    """
+    Task-Force Coordinator: spin up a multi-agent improvement cycle with a shared
+    Blackboard file, then orchestrate Steerer → Builder → Watchdog rounds.
+    """
+    ensure_env()
+    import uuid as _uuid
+
+    if not agents:
+        agents = ["steerer", "builder", "watchdog"]
+
+    # Resolve a short unique id if none provided
+    if not task_id:
+        task_id = _uuid.uuid4().hex[:8]
+
+    log(f"Assembling Task Force [{task_id}]...")
+    log(f"  Goal   : {goal}")
+    log(f"  Agents : {', '.join(agents)}")
+
+    # Create Blackboard
+    specs_temp = SPECS / "temp"
+    specs_temp.mkdir(parents=True, exist_ok=True)
+    bb_path = specs_temp / f"task_force_{task_id}.md"
+    bb_content = f"""# Task-Force Blackboard: {task_id}
+
+**Goal:** {goal}
+**Agents:** {', '.join(agents)}
+**Status:** In Progress
+
+---
+
+## Round 1 — Steerer: Architecture Contract
+*(pending — Steerer will populate this)*
+
+---
+
+## Round 2 — Builder: Implementation Notes
+*(pending — Builder will populate this)*
+
+---
+
+## Round 3 — Watchdog: Review & Feedback
+*(pending — Watchdog will populate this)*
+
+---
+
+## API Contracts
+*(agents append here)*
+
+## Blockers / Escalations
+*(agents append here)*
+"""
+    bb_path.write_text(bb_content, encoding="utf-8")
+    log(f"  Blackboard created: {bb_path.relative_to(ROOT)}")
+
+    # Round 1 — Steerer
+    log("Round 1/3: Activating Steerer (Architecture Contract)...")
+    env = {**os.environ,
+           "PYTHONPATH": str(FACTORY), "TF_BLACKBOARD": str(bb_path)}
+    subprocess.run([sys.executable, str(
+        FACTORY / "steerer_agent.py")], cwd=str(FACTORY), env=env)
+
+    # Round 2 — Builder (uses spec written to blackboard by steerer if any)
+    log("Round 2/3: Activating Builder (Implementation)...")
+    subprocess.run([sys.executable, str(FACTORY / "builder_agent.py"),
+                   str(bb_path)], cwd=str(FACTORY), env=env)
+
+    # Round 3 — Watchdog / Patcher (reviews builder output)
+    log("Round 3/3: Activating Watchdog (Review)...")
+    subprocess.run([sys.executable, str(
+        FACTORY / "watchdog_agent.py")], cwd=str(FACTORY), env=env)
+
+    log(f"✅ Task Force [{task_id}] complete. See Blackboard: {bb_path.relative_to(ROOT)}")
+
+
 def cmd_status() -> None:
     """Print environment health information."""
     log("Environment Status")
@@ -266,7 +357,7 @@ def cmd_status() -> None:
 # Entry Point
 # ---------------------------------------------------------------------------
 HELP = """
-Dark Factory — Master Controller  (v9.6.1 — Level 7 Self-Improving)
+Dark Factory — Master Controller  (v9.7.0 — Chief)
 
 Usage:
   python factory.py <command> [args]
@@ -291,6 +382,10 @@ Level 8 — Professional Standards:
   commit                         Repo Agent: semantic commit message + push to git
   commit --dry-run               Preview commit message without committing
 
+Level 9 — Feedback & Memory Loop:
+  reflect "failure context"      Mentor: extract lesson → append to docs/LEARNED_GUIDELINES.md
+  task_force <id> "goal"         Coordinator: multi-agent Task Force (Steerer→Builder→Watchdog)
+
 Examples:
   python factory.py init
   python factory.py design "A SystemSettings view that lists scrapers and lets operators toggle them"
@@ -302,6 +397,8 @@ Examples:
   python factory.py heal
   python factory.py optimize frontend/src/components/views/InventoryView.tsx
   python factory.py patch frontend/src/components/views/InventoryView.tsx "Change the header colour to blue"
+  python factory.py reflect "TS error: missing product.id field in InventoryView — fixed by adding id to ProductCard type"
+  python factory.py task_force accessory_engine "Implement cross-sell accessories on Product Detail"
 """
 
 if __name__ == "__main__":
@@ -363,6 +460,22 @@ if __name__ == "__main__":
     elif command == "commit":
         dry = "--dry-run" in sys.argv or "-n" in sys.argv
         cmd_commit(dry_run=dry)
+
+    elif command == "reflect":
+        if len(sys.argv) < 3:
+            log('❌ Usage: python factory.py reflect "failure context"')
+            sys.exit(1)
+        cmd_reflect(sys.argv[2])
+
+    elif command == "task_force":
+        if len(sys.argv) < 4:
+            log(
+                '❌ Usage: python factory.py task_force <id> "goal" [agent1,agent2,...]')
+            sys.exit(1)
+        tf_id = sys.argv[2]
+        tf_goal = sys.argv[3]
+        tf_agents = sys.argv[4].split(",") if len(sys.argv) > 4 else None
+        cmd_task_force(tf_id, tf_goal, tf_agents)
 
     else:
         log(f"Unknown command: {command}")

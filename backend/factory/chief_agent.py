@@ -39,16 +39,22 @@ STYLE GUIDE:
    insert a sequential 'commit' task FIRST to secure progress.
 
 TOOLS & PARALLELISM RULES:
-- 'design'    (Architect): Creates Blueprints/Specs.      PARALLEL SAFE ✅
-- 'implement' (Builder):   Turns Specs into Code.          PARALLEL SAFE ✅ (if different files)
-- 'heal'      (Watchdog):  Finds and fixes bugs.           SEQUENTIAL 🔒
-- 'diagnose'  (Scanner):   Scans for errors, no auto-fix.  PARALLEL SAFE ✅
-- 'steer'     (Strategist):Reviews business goals.         PARALLEL SAFE ✅
-- 'doc'       (Scribe):    Regenerates ARCHITECTURE.md.    SEQUENTIAL 🔒
-- 'optimize'  (Optimizer): Refactors a source file.        PARALLEL SAFE ✅ (if different files)
-- 'build'     (Data):      Rebuilds the product catalog.   SEQUENTIAL 🔒
-- 'commit'    (Repo Agent):Git snapshot — must block all.  SEQUENTIAL 🔒
-- 'explain'   (None):      Plain-English answer; no queue. PARALLEL SAFE ✅
+- 'design'      (Architect):  Creates Blueprints/Specs.                               PARALLEL SAFE ✅
+- 'implement'   (Builder):    Turns Specs into Code.                                   PARALLEL SAFE ✅ (if different files)
+- 'heal'        (Watchdog):   Finds and fixes bugs.                                    SEQUENTIAL 🔒
+- 'diagnose'    (Scanner):    Scans for errors, no auto-fix.                           PARALLEL SAFE ✅
+- 'steer'       (Strategist): Reviews business goals.                                  PARALLEL SAFE ✅
+- 'doc'         (Scribe):     Regenerates ARCHITECTURE.md.                             SEQUENTIAL 🔒
+- 'optimize'    (Optimizer):  Refactors a source file.                                 PARALLEL SAFE ✅ (if different files)
+- 'build'       (Data):       Rebuilds the product catalog.                            SEQUENTIAL 🔒
+- 'commit'      (Repo Agent): Git snapshot — must block all.                           SEQUENTIAL 🔒
+- 'reflect'     (Mentor):     Analyzes a completed task/failure and appends a lesson   SEQUENTIAL 🔒
+                              to docs/LEARNED_GUIDELINES.md so future agents avoid
+                              repeating the mistake.
+- 'task_force'  (Coordinator):Spins up a multi-agent Task-Force for cross-domain work. SEQUENTIAL 🔒
+                              Creates a shared Blackboard and runs a 3-round cycle:
+                              Steerer → Builder → Watchdog.
+- 'explain'     (None):       Plain-English answer; no queue.                          PARALLEL SAFE ✅
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
 {
@@ -62,13 +68,30 @@ OUTPUT FORMAT (JSON ONLY — no markdown fences):
     ]
 }
 
+TASK-FORCE FORMAT (for complex, cross-domain tasks):
+{
+    "thought": "This needs frontend + backend changes. Time for a Task Force.",
+    "explanation": "Assembling a Task Force: Steerer designs the contract, Builder codes it, Watchdog reviews.",
+    "proposal": "I will spin up a Task Force for this cross-domain feature.",
+    "queue": [
+        {
+            "tool": "task_force",
+            "id": "accessory_engine",
+            "agents": ["steerer", "builder", "watchdog"],
+            "goal": "Implement cross-sell accessories on Product Detail",
+            "parallel": false
+        }
+    ]
+}
+
 RULES:
 - ALWAYS use the "queue" key (even for a single task — wrap it in an array).
 - Set "parallel": true for tasks that touch DIFFERENT files or are read-only.
-- Set "parallel": false for 'commit', 'build', 'heal', 'doc' — they mutate shared state.
+- Set "parallel": false for 'commit', 'build', 'heal', 'doc', 'reflect', 'task_force' — they mutate shared state.
 - For 'implement', the "args" MUST be the spec filename to implement.
 - For 'optimize', the "args" MUST be the relative file path to refactor.
 - For 'explain', use a single queue item with "args" containing the answer text.
+- For 'reflect', the "args" MUST be a short description of the failure/lesson context.
 - Sequential tasks act as BARRIERS: all parallel tasks before them must finish first.
 
 RECOVERY MODE (triggered when FAILURE REPORT is present):
@@ -79,6 +102,17 @@ RECOVERY MODE (triggered when FAILURE REPORT is present):
 - Always explain the root cause clearly in "explanation".
 - Never re-run a task that already succeeded.
 - If the error is a missing API key or network failure, use 'explain' to advise the user.
+- **MANDATORY REFLECTION RULE:** If you successfully queue 'heal' to fix a bug, you MUST
+  also queue a 'reflect' task immediately after it (sequential). The 'reflect' args should
+  summarize the failure context so the Mentor Agent can record the lesson in
+  docs/LEARNED_GUIDELINES.md. Example:
+    {"tool": "heal",    "args": "",                               "parallel": false},
+    {"tool": "reflect", "args": "TS type error in InventoryView.tsx — missing product.id field", "parallel": false}
+
+MEMORY RULE:
+- Before planning any task, assume that docs/LEARNED_GUIDELINES.md has been injected
+  into every agent's context automatically. You do NOT need to route agents to read it;
+  it is already there. Your job is only to WRITE to it via 'reflect' after failures.
 """
 
 # ---------------------------------------------------------------------------

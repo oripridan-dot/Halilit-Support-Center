@@ -1,8 +1,25 @@
 import os
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
 import google.genai as genai
+
+# Make context_discovery importable even when running from inside the package
+_FACTORY_DIR = Path(__file__).resolve().parent
+if str(_FACTORY_DIR) not in sys.path:
+    sys.path.insert(0, str(_FACTORY_DIR))
+
+try:
+    from context_discovery import (
+        search_codebase as _search_codebase,
+        read_file_context as _read_file_context,
+        build_dynamic_context as _build_dynamic_context,
+        SearchHit,
+    )
+    _DISCOVERY_AVAILABLE = True
+except ImportError:
+    _DISCOVERY_AVAILABLE = False
 
 # Load .env from project root (backend/factory -> backend -> root)
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -22,13 +39,39 @@ FAST_MODEL = "gemini-2.0-flash-lite"
 MODEL = SMART_MODEL
 
 
-def get_project_context(target_type: str = "frontend") -> str:
+def get_project_context(target_type: str = "frontend", blackboard_file: str = "") -> str:
     """
     Loads critical project context so the Agent respects the Architecture.
     Returns a formatted string of key files to inject into prompts.
+
+    Args:
+        target_type:     "frontend" | "backend" — selects architecture files.
+        blackboard_file: Optional path to a Task-Force Blackboard file.
+                         When set, its contents are injected as shared context.
     """
     root = _PROJECT_ROOT
     context_parts: list[str] = []
+
+    # --- Always inject Lessons Learned (persistent agent memory) ---
+    lessons_path = root / "docs" / "LEARNED_GUIDELINES.md"
+    if lessons_path.exists():
+        lessons = lessons_path.read_text(encoding="utf-8")
+        context_parts.append(
+            f"--- CRITICAL LESSONS LEARNED (read before acting) ---\n{lessons}\n"
+            f"--- END LESSONS ---\n"
+        )
+
+    # --- Task-Force Blackboard (shared context for current mission) ---
+    if blackboard_file:
+        bb_path = Path(blackboard_file)
+        if not bb_path.is_absolute():
+            bb_path = root / blackboard_file
+        if bb_path.exists():
+            bb_content = bb_path.read_text(encoding="utf-8")
+            context_parts.append(
+                f"--- TASK-FORCE BLACKBOARD (shared team context) ---\n{bb_content}\n"
+                f"--- END BLACKBOARD ---\n"
+            )
 
     if target_type == "frontend":
         files = [
@@ -96,3 +139,51 @@ def save_artifact(path: str, content: str) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(content, encoding="utf-8")
     print(f"💾 Wrote: {path}")
+
+
+# ---------------------------------------------------------------------------
+# Dynamic codebase search (wraps context_discovery)
+# ---------------------------------------------------------------------------
+
+def search_codebase(query: str, max_results: int = 8) -> list:
+    """
+    Search the source tree for files matching the query.
+    Returns list[SearchHit] or [] if context_discovery is unavailable.
+
+    Example::
+        hits = search_codebase("inventory grid out-of-stock")
+        for h in hits:
+            print(h.path, h.line)
+    """
+    if not _DISCOVERY_AVAILABLE:
+        return []
+    return _search_codebase(query, max_results=max_results)
+
+
+def read_file_tool(path: str, max_chars: int = 4000) -> str:
+    """
+    Read a repo-relative or absolute file and return its content.
+    Safe to call from any agent — returns a formatted context block.
+    """
+    if not _DISCOVERY_AVAILABLE:
+        full = _PROJECT_ROOT / path
+        if full.exists():
+            c = full.read_text(encoding="utf-8", errors="replace")
+            return f"### File: {path}\n```\n{c[:max_chars]}\n```\n"
+        return f"# (file not found) {path}"
+    return _read_file_context(path, max_chars=max_chars)
+
+
+def build_dynamic_context(queries: list[str], extra_paths: list[str] | None = None) -> str:
+    """
+    Discover and concatenate relevant codebase context for the given queries.
+    Agents call this instead of the hardcoded get_project_context() when they
+    need to find relevant files at runtime.
+
+    Example::
+        ctx = build_dynamic_context(["related products", "ProductDetailView"])
+        # ctx now contains content of relevant files
+    """
+    if not _DISCOVERY_AVAILABLE:
+        return get_project_context()
+    return _build_dynamic_context(queries, extra_paths=extra_paths)

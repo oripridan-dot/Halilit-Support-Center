@@ -1,152 +1,126 @@
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import {
-  AlertTriangle,
-  CheckCircle,
-  Loader2,
-  Package,
-  PhoneMissed,
-  RefreshCcw,
-  XCircle,
-} from "lucide-react";
-
-import { useNavigationStore } from "../../store/navigationStore";
-import { useConductorCatalog } from "../../hooks/useConductorCatalog";
+import React from 'react';
+import { AlertTriangle, CheckCircle, Loader2, XCircle } from 'lucide-react';
+import { useQuery } from '@tanstack/react-query';
+import { format } from 'date-fns';
+import { useNavigationStore } from '../../stores/navigationStore';
+import { useConductorCatalog } from '../../hooks/useConductorCatalog';
 
 interface DashboardStats {
   total_products: number;
   calls_for_price: number;
   top_brands_count: number;
   last_ingestion_run: {
-    status: "never" | "running" | "ok" | "failed";
-    finished_at?: string | null;
-    product_count?: number | null;
-  } | null;
+    status: "never" | "running" | "complete" | "failed" | "unknown";
+    finished_at: string | null;
+    product_count: number | null;
+  };
 }
 
 interface MetricCardProps {
   icon: React.ComponentType;
   label: string;
-  value: React.ReactNode; // large number or JSX status
-  sub?: React.ReactNode; // small hint line below label
+  value: React.ReactNode;
+  sub?: React.ReactNode;
   accent: "blue" | "amber" | "green" | "red" | "zinc";
-  onClick?: () => void; // if present → render as <button>
+  onClick?: () => void;
 }
 
-const MetricCard: React.FC<MetricCardProps> = ({
-  icon: Icon,
-  label,
-  value,
-  sub,
-  accent,
-  onClick,
-}) => {
-  const textColor = `text-${accent}-400`;
-  const bgClass = `bg-zinc-800 hover:bg-zinc-700`; // hover only if onClick is defined
-  const cursorClass = onClick ? "cursor-pointer" : "";
+const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, sub, accent, onClick }) => {
+  const accentColors: Record<string, string> = {
+    blue: 'bg-blue-100/10 text-blue-500',
+    amber: 'bg-amber-100/10 text-amber-500',
+    green: 'bg-green-100/10 text-green-500',
+    red: 'bg-red-100/10 text-red-500',
+    zinc: 'bg-zinc-100/10 text-zinc-500',
+  };
+  const accentClasses = accentColors[accent] || '';
 
-  const cardContent = (
-    <div className="flex flex-col gap-1 p-4 rounded-xl">
-      <div className="flex items-center gap-2">
-        <Icon className={textColor} size={20} />
-        <h3 className="text-lg font-semibold text-zinc-100">{label}</h3>
+  return (
+    <div className="flex flex-col gap-2 p-4 rounded-xl bg-bg-elevated hover:bg-zinc-800 transition-colors touch-target" onClick={onClick} style={onClick ? { cursor: 'pointer' } : {}}>
+      <div className="flex items-center justify-between">
+        <div className={`p-2 rounded-md ${accentClasses}`}>
+          <Icon size={20} />
+        </div>
       </div>
-      <div className="text-3xl font-bold text-zinc-50 mt-2">{value}</div>
-      {sub && <div className="text-sm text-zinc-400">{sub}</div>}
-    </div>
-  );
-
-  return onClick ? (
-    <button
-      onClick={onClick}
-      className={`${bgClass} ${cursorClass} w-full rounded-xl`}
-    >
-      {cardContent}
-    </button>
-  ) : (
-    <div className={`${bgClass} ${cursorClass} w-full rounded-xl`}>
-      {cardContent}
+      <div className="text-sm text-text-secondary">{label}</div>
+      <div className="text-2xl font-semibold">{value}</div>
+      {sub && <div className="text-xs text-text-muted">{sub}</div>}
     </div>
   );
 };
 
-interface LastRunStatusProps {
-  run: DashboardStats["last_ingestion_run"];
-}
-
-const LastRunStatus: React.FC<LastRunStatusProps> = ({ run }) => {
-  if (!run) return <span className="text-zinc-500">—</span>;
-
-  if (run.status === "never") {
+const LastRunStatus: React.FC<{ run: DashboardStats['last_ingestion_run'] }> = ({ run }) => {
+  if (run.status === 'never') {
     return <span className="text-zinc-500">—</span>;
   }
-
-  if (run.status === "running") {
+  if (run.status === 'running') {
     return (
-      <div className="flex items-center gap-1 text-blue-400">
-        <Loader2 className="animate-spin" size={16} />
-        Running…
-      </div>
+      <>
+        <Loader2 size={16} className="inline mr-1 animate-spin text-blue-400" />
+        <span className="text-blue-400">Running...</span>
+      </>
     );
   }
-
-  let colorClass = "text-emerald-400";
-  let icon = <CheckCircle size={16} />;
-  let text = "";
-
-  if (run.status === "failed") {
-    colorClass = "text-red-400";
-    icon = <XCircle size={16} />;
-    text = "Failed";
-  } else {
-    if (run.finished_at) {
-      text = new Date(run.finished_at).toLocaleString("en-IL", {
-        dateStyle: "short",
-        timeStyle: "short",
-      });
-    } else {
-      text = "Unknown";
-    }
+  if (run.status === 'complete' || run.status === 'unknown') {
+    return (
+      <>
+        <CheckCircle size={16} className="inline mr-1 text-emerald-400" />
+        {new Date(run.finished_at!).toLocaleString("en-IL", { dateStyle: "short", timeStyle: "short" })}
+      </>
+    );
   }
+  if (run.status === 'failed') {
+    return (
+      <>
+        <XCircle size={16} className="inline mr-1 text-red-400" />
+        <span className="text-red-400">Failed</span>
+      </>
+    );
+  }
+  return <span className="text-zinc-500">—</span>;
+};
 
-  return (
-    <div className={`flex items-center gap-1 ${colorClass}`}>
-      {icon}
-      {text}
-    </div>
-  );
+
+const useDashboardStats = () => {
+    const query = useQuery({
+        queryKey: ['dashboardStats'],
+        queryFn: async () => {
+            const res = await fetch('/api/dashboard/stats');
+            const text = await res.text();
+            if (text.startsWith('<')) {
+                throw new Error('Backend is unavailable');
+            }
+            if (!res.ok) {
+                const json = await res.json();
+                throw new Error(json.error || 'Failed to fetch dashboard stats');
+            }
+            return JSON.parse(text) as DashboardStats;
+        },
+        staleTime: 30_000,
+        retry: 0,
+    });
+
+    return {
+        ...query,
+        stats: query.data,
+        errorMsg: query.error?.message,
+    };
 };
 
 const DashboardView: React.FC = () => {
-  const { goToInventory, goToInventoryCfp, goToIngestionStatus } =
-    useNavigationStore();
+  const { goToInventory, goToInventoryCfp, goToIngestionStatus } = useNavigationStore();
+  const { stats, errorMsg, isLoading, refetch } = useDashboardStats();
   const { isLoading: isCatalogLoading } = useConductorCatalog();
-  const {
-    data: stats,
-    error: statsError,
-    refetch,
-  } = useQuery<DashboardStats>({
-    queryKey: ["dashboard-stats"],
-    queryFn: async () => {
-      const res = await fetch("/api/dashboard/stats");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json() as Promise<DashboardStats>;
-    },
-    staleTime: 30_000,
-    retry: 0,
-  });
+  const hasStats = !!stats && !errorMsg;
 
-  const hasStats = !!stats && !statsError && !isCatalogLoading;
-  const errorMsg = statsError?.message;
+  const today = format(new Date(), 'EEEE, MMMM do, yyyy');
 
   return (
-    <div className="flex flex-col gap-6 p-6">
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-zinc-100">Mission Control</h1>
-        <span className="text-sm text-zinc-400">
-          Operator Console · {new Date().toLocaleDateString()}
-        </span>
-      </div>
+    <div className="p-6">
+      <header className="flex items-center justify-between mb-8">
+        <h1 className="text-2xl font-semibold">Mission Control</h1>
+        <p className="text-sm text-text-muted">{today}</p>
+      </header>
 
       {errorMsg && (
         <div
@@ -154,9 +128,7 @@ const DashboardView: React.FC = () => {
                   bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
         >
           <AlertTriangle size={14} className="text-amber-400 shrink-0" />
-          <span className="text-amber-300 font-medium">
-            Stats unavailable —
-          </span>
+          <span className="text-amber-300 font-medium">Stats unavailable —</span>
           <span className="text-zinc-400 truncate">{errorMsg}</span>
           <button
             onClick={() => refetch()}
@@ -168,88 +140,54 @@ const DashboardView: React.FC = () => {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-8">
         <MetricCard
-          icon={Package}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Package }))) as React.ComponentType}
           label="Total products"
-          value={
-            hasStats ? (
-              stats.total_products.toLocaleString()
-            ) : (
-              <span className="text-zinc-600 animate-pulse">…</span>
-            )
-          }
+          value={hasStats ? stats.total_products.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Active SKUs"
           accent="blue"
           onClick={() => goToInventory()}
         />
         <MetricCard
-          icon={PhoneMissed}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Phone }))) as React.ComponentType}
           label="Call for price"
-          value={
-            hasStats ? (
-              stats.calls_for_price.toLocaleString()
-            ) : (
-              <span className="text-zinc-600 animate-pulse">…</span>
-            )
-          }
+          value={hasStats ? stats.calls_for_price.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Missing IL price"
-          accent={hasStats && stats.calls_for_price > 0 ? "amber" : "zinc"}
+          accent={hasStats && stats.calls_for_price > 0 ? 'amber' : 'zinc'}
           onClick={() => goToInventoryCfp()}
         />
         <MetricCard
-          icon={RefreshCcw}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Briefcase }))) as React.ComponentType}
           label="Active brands"
-          value={
-            hasStats ? (
-              stats.top_brands_count.toLocaleString()
-            ) : (
-              <span className="text-zinc-600 animate-pulse">…</span>
-            )
-          }
+          value={hasStats ? stats.top_brands_count.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Distinct brands in catalog"
           accent="green"
         />
         <MetricCard
-          icon={RefreshCcw}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Clock }))) as React.ComponentType}
           label="Last ingestion run"
-          value={
-            hasStats ? (
-              <LastRunStatus run={stats.last_ingestion_run} />
-            ) : (
-              <span className="text-zinc-600 animate-pulse">…</span>
-            )
-          }
+          value={hasStats ? <LastRunStatus run={stats.last_ingestion_run} /> : <span className="text-zinc-600 animate-pulse">…</span>}
           sub={
-            hasStats &&
-            stats.last_ingestion_run &&
-            stats.last_ingestion_run.product_count !== null
-              ? `${stats.last_ingestion_run.product_count} products synced`
+              hasStats && stats.last_ingestion_run.status !== 'never'
+              ? `${stats.last_ingestion_run.product_count?.toLocaleString() || 0} products synced`
               : "No run recorded"
           }
           accent={
-            hasStats && stats.last_ingestion_run?.status === "failed"
-              ? "red"
-              : hasStats && stats.last_ingestion_run?.status === "running"
-                ? "blue"
-                : "zinc"
-          }
+              hasStats
+                ? stats.last_ingestion_run.status === 'failed'
+                  ? 'red'
+                  : stats.last_ingestion_run.status === 'running'
+                  ? 'blue'
+                  : 'zinc'
+                : 'zinc'
+            }
         />
       </div>
 
-      <div className="flex gap-4 mt-6">
-        <button
-          onClick={() => goToInventory()}
-          className="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded-lg px-4 py-2"
-        >
-          Open Inventory Master
-        </button>
-        <button
-          onClick={() => goToIngestionStatus()}
-          className="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 rounded-lg px-4 py-2"
-        >
-          Data Pipeline
-        </button>
+      <div className="flex gap-4">
+        <button className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-text-primary transition-colors" onClick={() => goToInventory()}>Open Inventory Master</button>
+        <button className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-text-primary transition-colors" onClick={() => goToIngestionStatus()}>Data Pipeline</button>
       </div>
     </div>
   );

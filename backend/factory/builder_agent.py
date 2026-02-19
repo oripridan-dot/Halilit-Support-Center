@@ -8,10 +8,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # Import from same package
 try:
-    from agent_core import query_llm, save_artifact, get_project_context
+    from agent_core import query_llm, save_artifact, get_project_context, build_dynamic_context
+    from sandbox_executor import inner_loop, parse_verification_commands
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from agent_core import query_llm, save_artifact, get_project_context
+    from agent_core import query_llm, save_artifact, get_project_context, build_dynamic_context
+    from sandbox_executor import inner_loop, parse_verification_commands
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -68,13 +70,28 @@ def _detect_domain(spec_content: str) -> str:
 
 
 def _extract_target(spec_content: str, spec_file: Path) -> Path | None:
-    """Return the absolute output path from the spec's Component/Target field."""
+    """Return the absolute output path from the spec's Component/Target field.
+    Falls back to the first path listed under '## Affected Files' (repair specs).
+    """
+    # 1. Standard Target / Component field
     match = re.search(
         r'\*{0,2}(?:Target|Component):?\*{0,2}\s*`?([^`\n*#]+)`?',
         spec_content, re.IGNORECASE
     )
     if match:
         return PROJECT_ROOT / match.group(1).strip()
+
+    # 2. Repair spec fallback: first backtick-quoted path in ## Affected Files
+    section = re.search(
+        r'##\s+Affected Files.*?(?=\n##|\Z)', spec_content,
+        re.IGNORECASE | re.DOTALL
+    )
+    if section:
+        path_match = re.search(r'`([^`]+\.(?:ts|tsx|py|js|jsx|css))`',
+                               section.group(0))
+        if path_match:
+            return PROJECT_ROOT / path_match.group(1).strip()
+
     return None
 
 
@@ -130,79 +147,104 @@ def build_component(spec_path: str) -> None:
     spec_content = spec_file.read_text(encoding="utf-8")
 
     domain = _detect_domain(spec_content)
-    print(f"📥 Loading {domain} context...")
-    context = get_project_context(domain)
 
+    # --- Dynamic Context Discovery (Pillar 1) --------------------------------
+    # Extract meaningful search queries from the spec title and component path
+    _title_match = re.search(r"#\s+Spec:\s*(.+)", spec_content)
+    _comp_match = re.search(
+        r"\*{0,2}(?:Target|Component):?\*{0,2}\s*`?([^`\n*#]+)`?", spec_content, re.IGNORECASE)
+    discovery_queries: list[str] = []
+    if _title_match:
+        discovery_queries.append(_title_match.group(1).strip())
+    if _comp_match:
+        # e.g. "frontend/src/components/views/InventoryView.tsx" → "InventoryView"
+        comp_name = Path(_comp_match.group(1).strip()).stem
+        discovery_queries.append(comp_name)
+
+    if discovery_queries:
+        print(f"🔎  Discovering context for: {discovery_queries}...")
+        dynamic_ctx = build_dynamic_context(discovery_queries)
+    else:
+        print(f"📥 Loading {domain} context (static fallback)...")
+        dynamic_ctx = get_project_context(domain)
+
+    context = dynamic_ctx
     full_path = _extract_target(spec_content, spec_file)
 
-    base_task = (
-        "Write the COMPLETE file content for the target file defined in the spec.\n"
-        "Ensure all imports are relative to the project structure in the context above.\n"
-        "Output ONLY raw code — no markdown fences, no commentary."
-    )
+    # --- Closure: the builder_fn passed to inner_loop -------------------------
+    # State shared across inner-loop rounds
+    _state: dict = {"critic_issues": None}
 
-    current_error: str | None = None
-    critic_issues: str | None = None
+    def _builder_fn(spec_text: str, error_feedback: str | None) -> bool:
+        """
+        Called by inner_loop on each round.
+        Generates code, runs critic review, writes to disk.
+        Returns True if code was written, False if LLM returned nothing.
+        """
+        attempt_label = "⚡  Generating code" if error_feedback is None else "🩹  Self-healing"
+        print(f"{attempt_label}...")
 
-    for attempt in range(MAX_RETRIES):
-        if attempt == 0:
-            print("⚡  Agent is coding...")
-        else:
-            print(f"🩹  Self-Healing attempt {attempt}/{MAX_RETRIES - 1}...")
-
-        # Build prompt — include any feedback from previous iteration
-        feedback_block = ""
-        if current_error:
-            feedback_block += f"\n\n--- ❌ PREVIOUS TSC ERRORS — FIX ALL OF THESE ---\n{current_error}\n"
-        if critic_issues:
-            feedback_block += f"\n\n--- ❌ CRITIC REJECTION — FIX ALL OF THESE ---\n{critic_issues}\n"
+        # Build feedback block from sandbox errors + previous critic issues
+        feedback_parts: list[str] = []
+        if error_feedback:
+            feedback_parts.append(
+                f"--- ❌ VERIFICATION FAILURE — FIX ALL OF THESE ---\n{error_feedback}")
+        if _state["critic_issues"]:
+            feedback_parts.append(
+                f"--- ❌ CRITIC REJECTION — FIX ALL OF THESE ---\n{_state['critic_issues']}")
+        feedback_block = "\n\n".join(feedback_parts)
 
         prompt = (
             f"{context}\n\n"
-            f"--- SPECIFICATION TO IMPLEMENT ---\n{spec_content}\n\n"
-            f"{feedback_block}"
-            f"--- TASK ---\n{base_task}"
+            f"--- SPECIFICATION TO IMPLEMENT ---\n{spec_text}\n\n"
+            f"{feedback_block}\n\n"
+            f"--- TASK ---\n"
+            "Write the COMPLETE file content for the target file defined in the spec.\n"
+            "Ensure all imports are relative to the project structure in the context above.\n"
+            "Output ONLY raw code — no markdown fences, no commentary."
         )
 
-        # Coding is routine — use the fast/cheap tier
         raw_output = query_llm(SYSTEM_PROMPT, prompt, model_tier="fast")
         if not raw_output:
             print("❌ Agent returned no output.")
-            return
+            return False
 
         clean_code = _strip_fences(raw_output)
 
-        # Critic pass (before touching disk)
+        # Critic gate (before touching disk)
         critic_ok, critic_issues = _critic_review(
-            clean_code, spec_content, context)
+            clean_code, spec_text, context)
+        _state["critic_issues"] = None
         if not critic_ok:
-            print(f"⚠️   Critic rejected the code. Rewriting…")
-            current_error = None  # clear TSC error — focus on critic issues
-            continue
+            print(f"⚠️   Critic rejected the code.")
+            _state["critic_issues"] = critic_issues
+            # Write anyway so inner_loop can run verification (which will also fail
+            # and provide real compiler errors)
 
-        # Write to disk
         if full_path:
             save_artifact(str(full_path), clean_code)
         else:
             print("⚠️  Target path not found in Spec. Printing to stdout:")
             print(clean_code)
-            return
+            return False
 
-        # TSC validation (frontend only)
-        if domain == "frontend":
-            tsc_ok, tsc_errors = _run_tsc()
-            if tsc_ok:
-                print(
-                    f"✅  Verified & Approved: {full_path.relative_to(PROJECT_ROOT)}")
-                return
-            print(f"⚠️  TSC failed. Feeding errors back to agent…")
-            current_error = tsc_errors
-            critic_issues = None
-        else:
-            print(f"✅  Written: {full_path.relative_to(PROJECT_ROOT)}")
-            return
+        return True
 
-    print("❌  Could not auto-heal after max retries. Last build saved — review manually.")
+    # --- Run the autonomous inner loop (Pillar 3) ----------------------------
+    passed = inner_loop(
+        spec_text=spec_content,
+        builder_fn=_builder_fn,
+        max_rounds=MAX_RETRIES,
+        verbose=True,
+    )
+
+    if passed:
+        rel = full_path.relative_to(
+            PROJECT_ROOT) if full_path else spec_file.name
+        print(f"✅  Verified & Approved: {rel}")
+    else:
+        print(
+            "❌  Could not auto-heal after max retries. Last build saved — review manually.")
 
 
 if __name__ == "__main__":
