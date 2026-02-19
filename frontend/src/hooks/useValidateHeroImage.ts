@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface UseValidateHeroImageResult {
   isValidating: boolean;
@@ -6,70 +6,71 @@ interface UseValidateHeroImageResult {
 }
 
 const CACHE_KEY_PREFIX = 'image_validation:';
-const CACHE_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
+const CACHE_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
 
 function useValidateHeroImage(imageUrl: string): UseValidateHeroImageResult {
-  const [isValidating, setIsValidating] = useState(false);
+  const [isValidating, setIsValidating] = useState<boolean>(false);
   const [isValid, setIsValid] = useState<boolean | null>(null);
-  const debounceTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  const clearDebounce = () => {
-    if (debounceTimeout.current) {
-      clearTimeout(debounceTimeout.current);
-      debounceTimeout.current = null;
-    }
-  };
+  const debouncedValidate = useCallback(
+    (url: string) => {
+      let timeoutId: NodeJS.Timeout | null = null;
 
-  const validateImage = async (url: string) => {
-    if (!url) {
-      setIsValid(false);
-      return;
-    }
+      const validate = async () => {
+        if (!url) {
+          setIsValid(false);
+          return;
+        }
 
-    setIsValidating(true);
+        setIsValidating(true);
 
-    const cachedResult = localStorage.getItem(`${CACHE_KEY_PREFIX}${url}`);
-    if (cachedResult) {
-      const { isValid: cachedIsValid, timestamp } = JSON.parse(cachedResult);
-      if (Date.now() - timestamp < CACHE_DURATION_MS) {
-        setIsValid(cachedIsValid);
-        setIsValidating(false);
-        return;
-      } else {
-        localStorage.removeItem(`${CACHE_KEY_PREFIX}${url}`); // Expired cache
-      }
-    }
+        const cachedResult = localStorage.getItem(`${CACHE_KEY_PREFIX}${url}`);
+        if (cachedResult) {
+          const { isValid: cachedIsValid, timestamp } = JSON.parse(cachedResult);
+          if (Date.now() - timestamp < CACHE_EXPIRY_MS) {
+            setIsValid(cachedIsValid);
+            setIsValidating(false);
+            return;
+          } else {
+            localStorage.removeItem(`${CACHE_KEY_PREFIX}${url}`); // Expired, remove from cache
+          }
+        }
 
-    try {
-      const response = await fetch(url, { method: 'HEAD', cache: 'no-cache' });
-      const isValid = response.ok && response.status >= 200 && response.status < 300;
-      setIsValid(isValid);
-      if (!isValid) {
-        localStorage.setItem(`${CACHE_KEY_PREFIX}${url}`, JSON.stringify({ isValid: false, timestamp: Date.now() }));
-      }
-    } catch (error) {
-      console.error('Image validation error:', error);
-      setIsValid(false);
-      localStorage.setItem(`${CACHE_KEY_PREFIX}${url}`, JSON.stringify({ isValid: false, timestamp: Date.now() }));
-    } finally {
-      setIsValidating(false);
-    }
-  };
+        try {
+          const response = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
+          const isValid = response.status >= 200 && response.status < 300;
+          setIsValid(isValid);
+          if (!isValid) {
+            localStorage.setItem(`${CACHE_KEY_PREFIX}${url}`, JSON.stringify({ isValid: false, timestamp: Date.now() }));
+          }
+        } catch (error: any) {
+          console.error(`Error validating image ${url}:`, error);
+          setIsValid(false);
+          localStorage.setItem(`${CACHE_KEY_PREFIX}${url}`, JSON.stringify({ isValid: false, timestamp: Date.now() }));
+        } finally {
+          setIsValidating(false);
+        }
+      };
+      
+      timeoutId = setTimeout(validate, 500);
+
+      return () => {
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+      };
+
+    },
+    []
+  );
 
   useEffect(() => {
-    if (!imageUrl) {
-      setIsValid(false);
-      return;
-    }
-    clearDebounce();
-    debounceTimeout.current = setTimeout(() => {
-      validateImage(imageUrl);
-    }, 500);
-
+    debouncedValidate(imageUrl);
     return () => {
-      clearDebounce();
+      // Cleanup function to clear the timeout if the component unmounts or the URL changes
+      // This is handled inside debouncedValidate already
     };
-  }, [imageUrl]);
+  }, [imageUrl, debouncedValidate]);
 
   return { isValidating, isValid };
 }

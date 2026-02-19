@@ -1,77 +1,60 @@
-import React from 'react';
-import { useValidateHeroImage } from '../../hooks/useValidateHeroImage';
+import React, { useMemo } from 'react';
+import { useConductorCatalog, useJITIntelligence } from '../../hooks';
 
-interface ProductImageProps {
-  src: string | undefined | null;
-  alt: string;
-  className?: string;
-  isHero?: boolean;
+interface SourcingBadgeProps {
+  source: 'Official Scout' | 'Inferred Scout';
+  'aria-label': string;
 }
 
-const ProductImage: React.FC<ProductImageProps> = ({ src, alt, className, isHero = false }) => {
-  const { isValidating, isValid } = useValidateHeroImage(src);
-  const isJITImage = src?.includes('jit'); // Simple check for JIT images
+const SourcingBadge: React.FC<SourcingBadgeProps> = ({ source, 'aria-label': ariaLabel }) => {
+  let badgeStyle = '';
+  let badgeText = '';
 
-  const getBadge = () => {
-    if (!src) return null;
-
-    if (isJITImage) {
-      return (
-        <span
-          aria-label="Source: Inferred Scout"
-          className="bg-purple-100 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-700 dark:text-purple-300 absolute top-2 right-2"
-        >
-          Inferred Scout
-        </span>
-      );
-    }
-
-    return (
-      <span
-        aria-label="Source: Official Scout"
-        className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-700 dark:text-blue-300 absolute top-2 right-2"
-      >
-        Official Scout
-      </span>
-    );
-  };
-
-  const imageStyle = {
-    objectFit: 'contain',
-    width: '100%',
-    height: '100%',
-  };
-
-  if (isHero && isValidating) {
-    return (
-      <div className={`relative ${className}`}>
-        <div className="animate-pulse bg-gray-300 w-full h-full"></div>
-      </div>
-    );
-  }
-
-  if ((isHero && isValid === false) || !src) {
-    return (
-      <div className={`relative ${className}`}>
-        <img src="/placeholder.png" alt={alt} style={imageStyle} className="w-full h-full" />
-      </div>
-    );
+  switch (source) {
+    case 'Official Scout':
+      badgeStyle = 'bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-blue-300';
+      badgeText = 'Official Scout';
+      break;
+    case 'Inferred Scout':
+      badgeStyle = 'bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-purple-300';
+      badgeText = 'Inferred Scout';
+      break;
   }
 
   return (
-    <div className={`relative ${className}`}>
-      <img
-        src={src || '/placeholder.png'}
-        alt={alt}
-        style={imageStyle}
-        onError={(e) => {
-          if (!isHero) {
-            (e.target as HTMLImageElement).src = '/placeholder.png';
-          }
-        }}
-        className="w-full h-full"
-      />
-      {src && getBadge()}
+    <span
+      aria-label={ariaLabel}
+      className={`absolute top-0 right-0 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${badgeStyle}`}
+    >
+      {badgeText}
+    </span>
+  );
+};
+
+interface ProductImageProps {
+  imageUrl: string | undefined;
+  altText: string;
+}
+
+const ProductImage: React.FC<ProductImageProps> = ({ imageUrl, altText }) => {
+  const isJIT = imageUrl?.includes('thumbnail');
+
+  if (!imageUrl) {
+    return (
+      <div className="w-full h-64 flex items-center justify-center bg-slate-900 text-white">
+        No image available
+      </div>
+    );
+  }
+
+  const badgeSource = isJIT ? 'Inferred Scout' : 'Official Scout';
+  const badgeAriaLabel = `Source: ${badgeSource}`;
+
+
+  return (
+    <div className="relative">
+      <img src={imageUrl} alt={altText} className="w-full h-64 object-contain" />
+      <SourcingBadge source={badgeSource} aria-label={badgeAriaLabel} />
     </div>
   );
 };

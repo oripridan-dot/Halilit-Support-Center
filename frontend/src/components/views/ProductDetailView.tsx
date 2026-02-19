@@ -1,6 +1,9 @@
 import React, { useMemo } from 'react';
 import { useConductorCatalog, useJITIntelligence } from '../../hooks';
 import { Product } from '../../types';
+import SourcingBadge from '../ProductDetail/SourcingBadge';
+import JITBadge from '../ProductDetail/JITBadge';
+import ProductImage from '../ProductImage';
 
 interface SourcingBadgeProps {
   source: 'Official Scout' | 'Commercial Scout' | 'JIT Intelligence' | 'Inferred Scout';
@@ -78,115 +81,99 @@ const ProductDetailView: React.FC<{ productId: string }> = ({ productId }) => {
 
 
   const imageUrl = useMemo(() => {
-    if (JITStatus === 'success' && JITState?.snap?.thumbnail) {
+    if (JITStatus === 'success' && JITState?.snap?.thumbnail && JITState.status === "complete") {
         return JITState.snap.thumbnail;
     }
     return catalogProduct?.image_url || '';
   }, [catalogProduct?.image_url, JITState?.snap?.thumbnail, JITStatus]);
 
-  const getBadgeSource = (dataType: 'name' | 'brand' | 'price' | 'image'): 'Official Scout' | 'Commercial Scout' | 'JIT Intelligence' | 'Inferred Scout' | null => {
-    if (JITStatus === 'success') {
-      switch (dataType) {
-        case 'name':
-          return JITState?.snap?.name ? 'JIT Intelligence' : 'Official Scout';
-        case 'brand':
-          return JITState?.snap?.brand ? 'JIT Intelligence' : 'Official Scout';
-        case 'price':
-          return JITState?.snap?.price || JITState?.snap?.price_eilat ? 'JIT Intelligence' : 'Commercial Scout';
-        case 'image':
-            return JITState?.snap?.thumbnail ? 'Inferred Scout' : 'Official Scout';
-        default:
-          return null;
-      }
+  const getBadgeSource = (dataType: 'name' | 'brand' | 'price' | 'image'): 'Official Scout' | 'Commercial Scout' | 'JIT Intelligence' | undefined => {
+    if (dataType === 'name' || dataType === 'brand' || dataType === 'image') {
+      return 'Official Scout';
     }
-    switch (dataType) {
-        case 'name':
-        case 'brand':
-          return 'Official Scout';
-        case 'price':
-          return 'Commercial Scout';
-        case 'image':
-            return 'Official Scout';
-        default:
-          return null;
-      }
+    if (dataType === 'price') {
+      return 'Commercial Scout';
+    }
+    return undefined;
   };
 
+  const getNameBadgeSource = (): 'Official Scout' | 'JIT Intelligence' | 'Official Scout + JIT' | undefined => {
+    if (JITStatus === 'success' && JITState?.snap?.name) {
+      return 'JIT Intelligence';
+    }
+    return 'Official Scout';
+  };
+
+  const getBrandBadgeSource = (): 'Official Scout' | 'JIT Intelligence' | 'Official Scout + JIT' | undefined => {
+    if (JITStatus === 'success' && JITState?.snap?.brand) {
+      return 'JIT Intelligence';
+    }
+    return 'Official Scout';
+  };
+
+  const getPriceBadgeSource = (): 'Commercial Scout' | 'JIT Intelligence' | 'Commercial Scout + JIT' | undefined => {
+    if (JITStatus === 'success' && (JITState?.snap?.price || JITState?.snap?.price_eilat)) {
+      return 'JIT Intelligence';
+    }
+    return 'Commercial Scout';
+  };
+
+
+
   if (isCatalogLoading) {
-    return <div>Loading product details...</div>;
+    return <div>Loading...</div>;
   }
 
   if (isCatalogError) {
-    return <div>Error loading product details.</div>;
-  }
-
-  if (!catalogProduct) {
-    return <div>Product not found.</div>;
+    return <div>Error loading product data</div>;
   }
 
   return (
     <div>
       {/* Product Name */}
       {productName && (
-        <SourcingBadge
-          source={getBadgeSource('name') || 'Official Scout'}
-          aria-label={`Source: ${getBadgeSource('name') || 'Official Scout'}`}
-        >
-          <h1>{productName}</h1>
-        </SourcingBadge>
+        <div className="mb-2">
+          <span className="font-bold">Name: {productName}</span>
+          <SourcingBadge
+            source={getNameBadgeSource() || 'Official Scout'}
+            aria-label={`Source: ${getNameBadgeSource()}`}
+          />
+          <JITBadge productId={productId} />
+        </div>
       )}
 
       {/* Brand Name */}
       {brandName && (
-        <SourcingBadge
-          source={getBadgeSource('brand') || 'Official Scout'}
-          aria-label={`Source: ${getBadgeSource('brand') || 'Official Scout'}`}
-        >
-          <p>Brand: {brandName}</p>
-        </SourcingBadge>
+        <div className="mb-2">
+          <span className="font-bold">Brand: {brandName}</span>
+          <SourcingBadge
+            source={getBrandBadgeSource() || 'Official Scout'}
+            aria-label={`Source: ${getBrandBadgeSource()}`}
+          />
+        </div>
       )}
 
       {/* Price */}
-      {priceIL !== null && (
-        <SourcingBadge
-          source={getBadgeSource('price') || 'Commercial Scout'}
-          aria-label={`Source: ${getBadgeSource('price') || 'Commercial Scout'}`}
-        >
-          <p>Price (IL): {priceIL}</p>
-        </SourcingBadge>
-      )}
-
-      {priceEilat !== null && (
+      {(priceIL !== null || priceEilat !== null) ? (
+        <div className="mb-2">
+          <span className="font-bold">Price: {priceIL !== null ? `${priceIL} IL` : ''} {priceEilat !== null ? `(${priceEilat} Eilat)` : ''}</span>
           <SourcingBadge
-              source={getBadgeSource('price') || 'Commercial Scout'}
-              aria-label={`Source: ${getBadgeSource('price') || 'Commercial Scout'}`}
-          >
-              <p>Price (Eilat): {priceEilat}</p>
-          </SourcingBadge>
+              source={getPriceBadgeSource() || 'Commercial Scout'}
+              aria-label={`Source: ${getPriceBadgeSource()}`}
+          />
+        </div>
+      ) : (
+          <div className="mb-2">
+            <span className="font-bold">Price: Call for Price</span>
+          </div>
       )}
 
       {/* Image */}
-      {imageUrl && (
-        <SourcingBadge
-            source={getBadgeSource('image') || 'Official Scout'}
-            aria-label={`Source: ${getBadgeSource('image') || 'Official Scout'}`}
-        >
-          <img src={imageUrl} alt={productName} width={200} />
-        </SourcingBadge>
-      )}
+      <div className="mb-2">
+        {imageUrl && <ProductImage imageUrl={imageUrl} altText={productName || 'Product'} />}
+      </div>
 
-       {/* Specifications -  This part needs to be reviewed and potentially refactored. The spec refers to ALL specs,
-            but there's no spec on what constitutes a spec.
-       */}
-        {catalogProduct.specifications && Object.entries(catalogProduct.specifications).map(([key, value]) => (
-            <SourcingBadge
-                key={key}
-                source={'Official Scout'}
-                aria-label="Source: Official Scout"
-            >
-                <p>{key}: {value}</p>
-            </SourcingBadge>
-        ))}
+      <SourcingBadge productId={productId} />
     </div>
   );
 };
