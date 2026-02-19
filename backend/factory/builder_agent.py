@@ -68,13 +68,28 @@ def _detect_domain(spec_content: str) -> str:
 
 
 def _extract_target(spec_content: str, spec_file: Path) -> Path | None:
-    """Return the absolute output path from the spec's Component/Target field."""
+    """Return the absolute output path from the spec's Component/Target field.
+    Falls back to the first path listed under '## Affected Files' (repair specs).
+    """
+    # 1. Standard Target / Component field
     match = re.search(
         r'\*{0,2}(?:Target|Component):?\*{0,2}\s*`?([^`\n*#]+)`?',
         spec_content, re.IGNORECASE
     )
     if match:
         return PROJECT_ROOT / match.group(1).strip()
+
+    # 2. Repair spec fallback: first backtick-quoted path in ## Affected Files
+    section = re.search(
+        r'##\s+Affected Files.*?(?=\n##|\Z)', spec_content,
+        re.IGNORECASE | re.DOTALL
+    )
+    if section:
+        path_match = re.search(r'`([^`]+\.(?:ts|tsx|py|js|jsx|css))`',
+                               section.group(0))
+        if path_match:
+            return PROJECT_ROOT / path_match.group(1).strip()
+
     return None
 
 

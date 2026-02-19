@@ -232,7 +232,8 @@ def commit_and_push(dry_run: bool = False) -> None:
     # 4. Commit (disable GPG signing — avoids failures in dev containers)
     result = _run_git(["-c", "commit.gpgsign=false", "commit", "-m", msg])
     if result.returncode != 0:
-        print(f"❌ Commit failed:\n{result.stderr}")
+        combined = (result.stdout + "\n" + result.stderr).strip()
+        print(f"❌ Commit failed:\n{combined}")
         return
 
     # 5. Update changelog with the current tag

@@ -20,6 +20,20 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FACTORY_PY="$SCRIPT_DIR/factory.py"
 
+# ── Load .env if present ──────────────────────────────────────────────────────
+if [[ -f "$SCRIPT_DIR/.env" ]]; then
+    set -a
+    # shellcheck disable=SC1091
+    source "$SCRIPT_DIR/.env"
+    set +a
+fi
+
+# ── Activate venv if present and not already active ───────────────────────────
+if [[ -z "${VIRTUAL_ENV:-}" && -f "$SCRIPT_DIR/.venv/bin/activate" ]]; then
+    # shellcheck disable=SC1091
+    source "$SCRIPT_DIR/.venv/bin/activate"
+fi
+
 # ── Defaults ──────────────────────────────────────────────────────────────────
 MAX_CYCLES=3
 SKIP_STEER=false
