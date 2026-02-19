@@ -36,10 +36,13 @@ except ImportError:
     logger.warning("Pillow not installed — visual validation will be limited.")
 
 # Resampling constant (Pillow 9.1+ uses Image.Resampling.LANCZOS)
-try:
-    _LANCZOS = Image.Resampling.LANCZOS
-except AttributeError:
-    _LANCZOS = Image.LANCZOS  # type: ignore
+if HAS_PILLOW:
+    try:
+        _LANCZOS = Image.Resampling.LANCZOS
+    except AttributeError:
+        _LANCZOS = Image.LANCZOS  # type: ignore
+else:
+    _LANCZOS = None
 
 # Known placeholder hashes or signatures could be added here
 PLACEHOLDER_TEXTS = ["placeholder", "image not available", "no image"]
