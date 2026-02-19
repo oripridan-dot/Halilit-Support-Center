@@ -1,70 +1,45 @@
 ```markdown
-# Halilit Support Center — Architecture
-
 ## Overview
 
-The Halilit Support Center is a web application designed to manage and display product information, inventory, and other relevant data for Halilit products. It features a dashboard, inventory view, and product detail view, with a backend API that fetches and processes data. The application uses a "Dark Factory" approach, employing AI agents to automate code generation and documentation.
+The Halilit Support Center is a web application designed for managing product information and providing insights. It features a dashboard, inventory view, and product detail view. The application uses a backend API to fetch and process data, including a JIT (Just-In-Time) intelligence engine for real-time product research. The backend also includes a "Dark Factory" with automated agents for code generation and documentation.
 
 ## Frontend Views
 
-*   **DashboardView**: Renders a dashboard with key metrics and status information.
-    *   Component: `frontend/src/components/views/DashboardView.tsx`
-    *   State: Accessed via `useNavigationStore`.
-    *   Renders: Metric cards displaying product counts, calls for price, top brands, and ingestion run status.
-*   **InventoryView**: Displays a list of products with inventory details.
-    *   Component: `frontend/src/components/views/InventoryView.tsx`
-    *   Route/State: Accessed via React Router and `useNavigationStore`.
-    *   Renders: A paginated list of products, and uses a `StockBadge` component to display stock status.
-*   **ProductDetailView**: Shows detailed information for a specific product.
-    *   Component: `frontend/src/components/views/ProductDetailView.tsx`
-    *   Route/State: Uses `productId` from URL parameters.
-    *   Renders: Product details, and an `EcosystemTab` component.
+*   **DashboardView**: Renders a dashboard with summary statistics and metric cards. Uses the `/` route via the `DASHBOARD` view state.
+*   **InventoryView**: Displays a list of products. Accessible via the `/inventory` route (or the `INVENTORY` view state) and includes search and filtering.
+*   **ProductDetailView**: Shows detailed information for a specific product, accessed via the `PRODUCT_DETAIL` view state. Requires a `productId` parameter in the route.
 
 ## Hooks & State
 
-*   **`useConductorCatalog`**: Fetches and provides product data.
-    *   File: `frontend/src/hooks/useConductorCatalog.ts`
-    *   Purpose: Retrieves product catalog data from the backend.
-    *   Returns: `products`, `isLoading`, `error`, `refetch`.
-*   **`useJITIntelligence`**: Manages JIT (Just-In-Time) intelligence data loading.
-    *   File: `frontend/src/hooks/useJITIntelligence.ts`
-    *   Purpose: Orchestrates the process of fetching and processing product information from various sources (inventory, product pages, brand pages, reviews).
-    *   Returns: Not specified in code snapshot.
-*   **`useNavigationStore`**: Manages application navigation state.
-    *   File: `frontend/src/store/navigationStore.ts`
-    *   Purpose: Controls the current view and stores navigation-related data.
-    *   Returns: `currentView`, `activeProductId`, `searchQuery`, `initialCfpFilter`, `goToDashboard`, `goToInventory`.
-*   **`useDebounceValue`**: Debounces a value.
-    *   File: `frontend/src/hooks/useDebounceValue.ts`
-    *   Purpose: Debounces a value.
-    *   Returns: Not specified in code snapshot.
+*   **`useConductorCatalog`**: Fetches product data from the `/api/conductor/catalog` endpoint and provides access to products, loading state, and potential errors.
+*   **`useJITIntelligence`**: Manages the JIT intelligence workflow, providing phases such as `snap`, `intel`, `wisdom`, and `complete`.
+*   **`useNavigationStore`**: Manages the application's navigation state, including the current view, active product ID, search query, and a flag for pre-applying the "Call-for-Price" filter.
+*   **`useDebounceValue`**: Debounces a value, likely used for filtering in the `InventoryView`.
 
 ## Backend API
 
-*   `/api/conductor/catalog`: Returns the product catalog data.
-    *   Method: Not specified.
-    *   Returns: Pre-built catalog data.
+*   `/api/conductor/catalog` (GET): Returns product catalog data.
+*   `/` (GET): Serves the frontend application.
+*   `/docs` (GET): Serves FastAPI's auto-generated API documentation.
 
 ## Data Pipeline
 
-1.  **Scraping**: Not present in the code snapshot, but implied as a data source.
-2.  **Product Normalization**:
-    *   File: `backend/product_normalizer.py`
-    *   Purpose: Transforms scraped product data into a consistent, flat format.
-3.  **Catalog Build**: Not specified in the code snapshot.
-4.  **Frontend Consumption**: Frontend components fetch data from the API and display it.
+1.  **Scraping:** Not directly present in the provided code, but implied as the initial source of product data.
+2.  **Product Normalization:** The `backend/product_normalizer.py` module processes and normalizes the scraped product data.  It ensures a consistent product shape.
+3.  **Catalog Build:** The `build_catalog` function (from `backend/product_normalizer.py`) builds the product catalog.
+4.  **Frontend Consumption:** The frontend fetches and displays the processed product data.
 
 ## Factory Agents
 
-*   **`backend/factory/builder_agent.py`**: Materializes code from a specification.
-*   **`backend/factory/steerer_agent.py`**: Identifies critical gaps and generates new or updated specifications.
-*   **`backend/factory/scribe_agent.py`**: Regenerates documentation based on the codebase.
-*   **`backend/factory/spec_writer.py`**: Translates human intent into specifications.
+*   **`steerer_agent.py`**: Identifies gaps in product specifications and generates new or updated specs.
+*   **`scribe_agent.py`**: Generates and updates documentation (like this document) based on the codebase.
+*   **`spec_writer.py`**: Translates plain text descriptions into detailed specifications.
+*   **`builder_agent.py`**: Materializes code from specifications.
 
 ## Key Conventions
 
-*   **Imports**:  Uses `@tanstack/react-query` for data fetching, `react-router-dom` for navigation, and `lucide-react` for icons.
-*   **Naming**:  Uses PascalCase for React components (e.g., `MetricCard`), and camelCase for variables (e.g., `activeTab`).
-*   **Tailwind Theme Tokens**: Utilizes Tailwind CSS for styling, with custom color palettes (e.g., `blue`, `amber`, `green`).
-*   **Source Rules**: Enforced by `backend/source_rules.py`.  All data must originate from authorized sources.
+*   **Imports:**  Code uses `lucide-react` for icons and `react-query` for data fetching.  `zustand` is used for state management.
+*   **Naming:**  Components are PascalCase (e.g., `MetricCard`), and hooks are `use...` (e.g., `useConductorCatalog`).
+*   **Tailwind:** Uses Tailwind CSS for styling, with color accents like `blue`, `amber`, `green`, `red`, and `zinc`.
+*   **Source Rules:** Enforced by `backend/source_rules.py`. Every data point must come from an approved source, and no data synthesis is allowed.
 ```

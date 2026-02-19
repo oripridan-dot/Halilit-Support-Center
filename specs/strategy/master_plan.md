@@ -51,42 +51,48 @@ The Steerer Agent should flag any spec or component that does NOT satisfy the ab
 > **Chief Routing Rule:** When a task maps to a Business Goal below, read the linked Chapter(s) — and only those — before routing agents. Do not guess spec paths; they are all listed here.
 
 ### Book 1 — The Data Engine (Source of Truth)
+
 Covers how raw brand and Halilit data is fetched, validated, and stored. These chapters govern the backend pipeline and the Three Source Rules.
 
-| Chapter | Spec Path | Governs |
-|---|---|---|
-| 1.1 Commercial Source (Halilit API) | `specs/01_data/halilit_api.md` | Golden List, SKUs, IL + Eilat prices |
-| 1.2 Official Scout (Brand Pages) | `specs/01_data/official_scout.md` | Titles, descriptions, media, specs |
-| 1.3 Catalog Organizer | `specs/01_data/catalog_organizer.md` | Normalization, taxonomy, graph |
-| 1.4 Data Compliance | `specs/01_data/COMPLIANCE.md` | Three Source Rules enforcement |
+| Chapter                             | Spec Path                            | Governs                              |
+| ----------------------------------- | ------------------------------------ | ------------------------------------ |
+| 1.1 Commercial Source (Halilit API) | `specs/01_data/halilit_api.md`       | Golden List, SKUs, IL + Eilat prices |
+| 1.2 Official Scout (Brand Pages)    | `specs/01_data/official_scout.md`    | Titles, descriptions, media, specs   |
+| 1.3 Catalog Organizer               | `specs/01_data/catalog_organizer.md` | Normalization, taxonomy, graph       |
+| 1.4 Data Compliance                 | `specs/01_data/COMPLIANCE.md`        | Three Source Rules enforcement       |
 
 ### Book 2 — The Ingestion Pipeline
+
 Covers the mechanics of getting data from raw scrape to normalized catalog.
 
-| Chapter | Spec Path | Governs |
-|---|---|---|
-| 2.1 Ingestion Rules | `specs/data_pipeline/01_ingestion_rules.md` | Field mapping, deduplication, draft validation |
-| 2.2 Relationship Logic | `specs/data_pipeline/02_relationship_logic.md` | Accessory, alternative, bundle graph edges |
+| Chapter                | Spec Path                                      | Governs                                        |
+| ---------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| 2.1 Ingestion Rules    | `specs/data_pipeline/01_ingestion_rules.md`    | Field mapping, deduplication, draft validation |
+| 2.2 Relationship Logic | `specs/data_pipeline/02_relationship_logic.md` | Accessory, alternative, bundle graph edges     |
 
 ### Book 3 — The Operator Experience (Canonical Views)
+
 These are the three master UI specs. Every frontend component must satisfy its parent chapter before any feature spec is implemented.
 
-| Chapter | Spec Path | Governs |
-|---|---|---|
-| 3.1 Dashboard | `specs/interface/01_operator_dashboard.md` | KPI tiles, catalog health, quick actions |
-| 3.2 Inventory Grid | `specs/interface/02_inventory_grid.md` | Product rows, stock badges, search, sort, filter |
+| Chapter                                | Spec Path                                    | Governs                                              |
+| -------------------------------------- | -------------------------------------------- | ---------------------------------------------------- |
+| 3.1 Dashboard                          | `specs/interface/01_operator_dashboard.md`   | KPI tiles, catalog health, quick actions             |
+| 3.2 Inventory Grid                     | `specs/interface/02_inventory_grid.md`       | Product rows, stock badges, search, sort, filter     |
 | 3.3 Product Intelligence (Detail View) | `specs/interface/03_product_intelligence.md` | Hero, pricing panel, JIT intelligence, ecosystem tab |
 
 ### Book 4 — Feature Specs (Generated)
+
 Granular specs for individual features. Always implement against the parent Chapter 3 spec first. Grouped by Business Goal.
 
 **Goal 1 — Maximize Attachment Rate**
+
 - `specs/interface/accessory_recommendations_component.md`
 - `specs/interface/product_detail_-_accessory_recommendations.md`
 - `specs/interface/product_detail_-_ecosystem_tab.md`
 - `specs/interface/product_detail_ecosystem_tab.md`
 
 **Goal 2 — Zero Broken Images**
+
 - `specs/interface/product_detail_-_hero_image_validation_service.md`
 - `specs/interface/product_detail_-_image_fallback_implementation.md`
 - `specs/interface/product_detail_-_image_sourcing.md`
@@ -95,10 +101,12 @@ Granular specs for individual features. Always implement against the parent Chap
 - `specs/interface/image_refresh_service.md`
 
 **Goal 3 — Aggressive Out-of-Stock Signaling**
+
 - `specs/interface/inventory_stock_status_indicators.md`
 - `specs/interface/product_tile_-_out_of_stock_and_cfp_indicators.md`
 
 **Goal 4 — Speed of Service**
+
 - `specs/interface/inventory_search_debounce.md`
 - `specs/interface/inventory_search_stock_cfp_sorting.md`
 - `specs/interface/sort_search_results_by_stock_status.md`
@@ -106,6 +114,7 @@ Granular specs for individual features. Always implement against the parent Chap
 - `specs/behavior/01_search_scenarios.md`
 
 **Goal 5 — Pricing Clarity**
+
 - `specs/pricing_logic.md`
 - `specs/interface/product_detail_-_side-by-side_pricing.md`
 - `specs/interface/product_detail_side_by_side_pricing_component.md`
@@ -113,12 +122,14 @@ Granular specs for individual features. Always implement against the parent Chap
 - `specs/interface/product_detail_-_copy_sku_button.md`
 
 **Cross-Cutting Features**
+
 - `specs/interface/product_detail_-_sourcing_badge.md` — Data trust / sourcing badges
 - `specs/interface/sourcing_badge_data_trust.md`
 - `specs/interface/product_detail_-_dynamic_jit_badge_updates.md` — JIT streaming
 - `specs/interface/product_detail_-_halilit_url_button.md`
 
 ### Book 5 — Infrastructure & Fixes
+
 Repair specs and internal service improvements.
 
 - `specs/interface/fix_canonical_product_type.md`
@@ -133,17 +144,17 @@ Repair specs and internal service improvements.
 
 All agents must use these terms exactly. Never substitute synonyms.
 
-| Term | Definition |
-|---|---|
-| **Golden List** | The authoritative set of products Halilit.com sells. Owned by the Commercial source. If a product is not on the Golden List, it does not exist in this system. |
-| **Verified Accessory** | A related product confirmed as compatible via the Relationship Graph (`02_relationship_logic.md`). Must show a green "Verified" badge in the UI. |
-| **Alternative** | A product that can replace another (same category, different brand/model). Confirmed via the Relationship Graph. |
-| **JIT Intelligence** | On-demand enrichment streamed via SSE for a single product. Generated by `jit_agent.py`. Never stored as ground truth — supplementary only. |
-| **Sourcing Badge** | A UI indicator on every spec value showing which of the Three Sources provided it (Commercial / Official / Contextual). |
-| **Call for Price (CfP)** | A product where `price === null`. Must display a "Call for Price" label + Copy SKU button instead of a price. |
-| **The Artifact** | The compiled frontend (`frontend/dist/`) or the normalized catalog JSON. Always generated — never hand-edited. |
-| **Skeleton** | A loading placeholder rendered within 200 ms while catalog data is in flight. Required for every view. |
-| **The Spine** | This file (`specs/strategy/master_plan.md`). Injected into the Chief on every cycle. |
-| **The Librarian** | The Chief Agent's role: reads the Spine, routes Builders to the exact Chapters needed. |
-| **Task Force** | A 3-round Steerer → Builder → Watchdog cycle for cross-domain features requiring an API contract. |
-| **Three Source Rules** | The fundamental law in `backend/source_rules.py`. Commercial owns prices/SKUs. Official owns specs/media. Contextual owns reviews. No field may be set by a source that does not own it. |
+| Term                     | Definition                                                                                                                                                                               |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Golden List**          | The authoritative set of products Halilit.com sells. Owned by the Commercial source. If a product is not on the Golden List, it does not exist in this system.                           |
+| **Verified Accessory**   | A related product confirmed as compatible via the Relationship Graph (`02_relationship_logic.md`). Must show a green "Verified" badge in the UI.                                         |
+| **Alternative**          | A product that can replace another (same category, different brand/model). Confirmed via the Relationship Graph.                                                                         |
+| **JIT Intelligence**     | On-demand enrichment streamed via SSE for a single product. Generated by `jit_agent.py`. Never stored as ground truth — supplementary only.                                              |
+| **Sourcing Badge**       | A UI indicator on every spec value showing which of the Three Sources provided it (Commercial / Official / Contextual).                                                                  |
+| **Call for Price (CfP)** | A product where `price === null`. Must display a "Call for Price" label + Copy SKU button instead of a price.                                                                            |
+| **The Artifact**         | The compiled frontend (`frontend/dist/`) or the normalized catalog JSON. Always generated — never hand-edited.                                                                           |
+| **Skeleton**             | A loading placeholder rendered within 200 ms while catalog data is in flight. Required for every view.                                                                                   |
+| **The Spine**            | This file (`specs/strategy/master_plan.md`). Injected into the Chief on every cycle.                                                                                                     |
+| **The Librarian**        | The Chief Agent's role: reads the Spine, routes Builders to the exact Chapters needed.                                                                                                   |
+| **Task Force**           | A 3-round Steerer → Builder → Watchdog cycle for cross-domain features requiring an API contract.                                                                                        |
+| **Three Source Rules**   | The fundamental law in `backend/source_rules.py`. Commercial owns prices/SKUs. Official owns specs/media. Contextual owns reviews. No field may be set by a source that does not own it. |
