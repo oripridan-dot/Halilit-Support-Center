@@ -388,6 +388,30 @@ def cmd_status() -> None:
     print(
         f"  Factory agents : {'✅ present' if be_factory.exists() else '❌ missing'}")
 
+    mcp_cfg = ROOT / ".vscode" / "mcp.json"
+    print(
+        f"  VS Code MCP    : {'✅ .vscode/mcp.json present' if mcp_cfg.exists() else '⚠️  missing (.vscode/mcp.json)'}")
+
+
+def cmd_v0_design(description: str, component_type: str = "UIComponent") -> None:
+    """Generate a v0.dev-ready UI prompt (and optionally integrate output)."""
+    ensure_env()
+    log(f"V0 Designer activated — component: {component_type}")
+    sys.path.insert(0, str(ROOT))
+    from backend.factory.v0_agent import generate_v0_prompt  # noqa: PLC0415
+    import json as _json
+    result = generate_v0_prompt(description, component_type)
+    if result.get("status") == "success":
+        print("\n" + "─" * 60)
+        print("📋  V0 PROMPT — paste this into https://v0.dev")
+        print("─" * 60)
+        print(result["v0_prompt"])
+        print("─" * 60)
+        print("\n📌  NEXT STEPS:")
+        print(result["instructions"])
+    else:
+        log(f"❌ V0 design failed: {result.get('error', 'unknown')}")
+
 
 # ---------------------------------------------------------------------------
 # Entry Point
@@ -425,6 +449,10 @@ Level 9 — Feedback & Memory Loop:
 Level 10 — Autonomous Polish:
   grand_task_force ["prompt"]    Chief-driven end-to-end catalog + UI polish via DAG
                                  (omit prompt to use the canonical polish protocol)
+
+Agentic UI Design (v0 MCP):
+  v0_design "description"        Generate a v0.dev-ready prompt for a UI component
+  v0_design "description" type   With component type hint (e.g. ProductCard)
 
 Examples:
   python factory.py init
@@ -520,6 +548,13 @@ if __name__ == "__main__":
     elif command == "grand_task_force":
         gtf_prompt = sys.argv[2] if len(sys.argv) > 2 else ""
         cmd_grand_task_force(gtf_prompt)
+
+    elif command == "v0_design":
+        if len(sys.argv) < 3:
+            log('❌ Usage: python factory.py v0_design "description" [ComponentType]')
+            sys.exit(1)
+        v0_ctype = sys.argv[3] if len(sys.argv) > 3 else "UIComponent"
+        cmd_v0_design(sys.argv[2], v0_ctype)
 
     else:
         log(f"Unknown command: {command}")

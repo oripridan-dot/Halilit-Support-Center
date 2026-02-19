@@ -95,6 +95,7 @@ _ACTION_MAP = {
     "commit":     ("commit",     "👮 REPO AGENT",      "Staging and committing progress..."),
     "reflect":    ("reflect",    "🧠 MENTOR",          "Extracting lesson → updating LEARNED_GUIDELINES.md..."),
     "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
+    "v0_design":  ("v0_design",  "🎨 V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
 }
 
 
@@ -127,6 +128,8 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         # task has extra keys: id, goal, agents
         # args carries the goal; use tool-level dict keys if available
         return None  # handled by execute_task_force() below
+    if tool == "v0_design":
+        return factory + ["v0_design", args] if args else None
     return None  # 'explain' or unknown
 
 

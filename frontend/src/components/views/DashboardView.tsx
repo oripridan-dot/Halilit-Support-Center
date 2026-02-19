@@ -90,113 +90,107 @@ const useDashboardStats = () => {
                 throw new Error("Backend is down");
             }
             try {
-                const json = JSON.parse(text);
-                return json;
+              const data: DashboardStats = JSON.parse(text);
+              return data;
             } catch (error) {
-                throw new Error("Invalid JSON response");
+              console.error("Failed to parse dashboard stats", error);
+              throw new Error("Failed to fetch stats");
             }
+
         },
         staleTime: 30_000,
         retry: 0,
     });
 
-    let errorMsg: string | undefined = undefined;
-    if (query.error instanceof Error) {
-        errorMsg = query.error.message;
-    }
+    const stats = query.data;
+    const statsError = query.error;
+    const errorMsg = statsError?.message;
+    const refetch = query.refetch;
 
     return {
-        ...query,
+        stats,
+        statsError,
         errorMsg,
-        hasStats: !!query.data && !query.error,
+        refetch,
+        isLoading: query.isLoading,
     };
 };
 
-
 const DashboardView: React.FC = () => {
-  const { data: stats, isLoading, errorMsg, refetch, hasStats } = useDashboardStats();
+  const { stats, errorMsg, refetch, isLoading } = useDashboardStats();
   const { goToInventory, goToInventoryCfp, goToIngestionStatus } = useNavigationStore();
 
+  const hasStats = !!stats && !errorMsg;
+
   return (
-    <>
+    <div>
+      <h1 className="text-2xl font-bold mb-6">Mission Control</h1>
       {errorMsg && (
         <div
-          className="flex items-center gap-2 mb-6 px-4 py-3 bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
+          className="flex items-center gap-2 mb-6 px-4 py-3
+                  bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
         >
           <AlertTriangle size={14} className="text-amber-400 shrink-0" />
           <span className="text-amber-300 font-medium">Stats unavailable —</span>
           <span className="text-zinc-400 truncate">{errorMsg}</span>
           <button
             onClick={() => refetch()}
-            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 text-xs rounded-lg"
+            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600
+                       text-zinc-200 text-xs rounded-lg"
           >
             Retry
           </button>
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <MetricCard
           icon={Package}
           label="Total products"
-          value={hasStats ? stats?.total_products.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={hasStats ? stats.total_products.toLocaleString() : "—"}
           sub="Active SKUs"
           accent="blue"
           onClick={() => goToInventory()}
         />
         <MetricCard
           icon={PhoneCall}
-          label="Call for price"
-          value={hasStats ? stats?.calls_for_price.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
+          label="Calls for price"
+          value={hasStats ? stats.calls_for_price.toLocaleString() : "—"}
           sub="Missing IL price"
-          accent={hasStats && stats?.calls_for_price > 0 ? "amber" : "zinc"}
+          accent={hasStats && stats.calls_for_price > 0 ? "amber" : "zinc"}
           onClick={() => goToInventoryCfp()}
         />
         <MetricCard
           icon={Tag}
           label="Active brands"
-          value={hasStats ? stats?.top_brands_count.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={hasStats ? stats.top_brands_count.toLocaleString() : "—"}
           sub="Distinct brands in catalog"
           accent="green"
         />
         <MetricCard
           icon={RefreshCcw}
           label="Last ingestion run"
-          value={hasStats ? <LastRunStatus run={stats!.last_ingestion_run} /> : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={<LastRunStatus run={hasStats ? stats.last_ingestion_run : { status: "never", finished_at: null, product_count: null }} />}
           sub={
-            hasStats
-              ? stats?.last_ingestion_run.status === 'never'
-                ? 'No run recorded'
-                : `${stats?.last_ingestion_run.product_count?.toLocaleString()} products synced`
-              : undefined
+            hasStats && stats.last_ingestion_run.product_count
+              ? `${stats.last_ingestion_run.product_count.toLocaleString()} products synced`
+              : "No run recorded"
           }
           accent={
-            hasStats
-              ? stats?.last_ingestion_run.status === 'failed'
-                ? 'red'
-                : stats?.last_ingestion_run.status === 'running'
-                ? 'blue'
-                : 'zinc'
+            hasStats && stats.last_ingestion_run.status === 'failed'
+              ? 'red'
+              : stats && stats.last_ingestion_run.status === 'running'
+              ? 'blue'
               : 'zinc'
           }
         />
       </div>
 
-      <div className="mt-8 space-x-4">
-        <button
-          onClick={() => goToInventory()}
-          className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-zinc-100 rounded-lg text-sm"
-        >
-          Open Inventory Master
-        </button>
-        <button
-          onClick={() => goToIngestionStatus()}
-          className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-zinc-100 rounded-lg text-sm"
-        >
-          Data Pipeline
-        </button>
+      <div className="space-x-4">
+        <button onClick={() => goToInventory()} className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 transition-colors text-zinc-100 text-sm">Open Inventory Master</button>
+        <button onClick={() => goToIngestionStatus()} className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 transition-colors text-zinc-100 text-sm">Data Pipeline</button>
       </div>
-    </>
+    </div>
   );
 };
 

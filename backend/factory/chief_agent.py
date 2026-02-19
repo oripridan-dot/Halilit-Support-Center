@@ -56,6 +56,11 @@ TOOLS & PARALLELISM RULES:
 - 'task_force'  (Coordinator):Spins up a multi-agent Task-Force for cross-domain work. SEQUENTIAL 🔒
                               Creates a shared Blackboard and runs a 3-round cycle:
                               Steerer → Builder → Watchdog.
+- 'v0_design'   (V0 Designer):Generates a v0.dev-ready UI prompt from a plain-English  PARALLEL SAFE ✅
+                              description, enforcing Halilit architecture rules.
+                              args = "description of the component to design".
+                              If args starts with 'integrate:', integrates v0 output
+                              into the specified file path.
 - 'explain'     (None):       Plain-English answer; no queue.                          PARALLEL SAFE ✅
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
