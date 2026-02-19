@@ -26,6 +26,30 @@ SPECS_DIR = _ROOT / "specs"
 DATA_DIR = _BACKEND / "data"
 LOGS_DIR = _ROOT / "factory_logs"
 
+# ---------------------------------------------------------------------------
+# Chief Agent — lazy import so the module is usable without AI key for pure DAG runs
+# ---------------------------------------------------------------------------
+def _consult_chief(prompt: str, failure_context: str = "") -> dict:
+    """Lazy-import and call chief_agent.consult_chief to avoid circular deps."""
+    _factory_dir = _BACKEND / "factory"
+    if str(_factory_dir) not in sys.path:
+        sys.path.insert(0, str(_factory_dir))
+    from chief_agent import consult_chief  # noqa: PLC0415
+    return consult_chief(prompt, failure_context=failure_context)
+
+
+# ---------------------------------------------------------------------------
+# Grand Task Force — standard end-to-end catalog+UI polish prompt
+# ---------------------------------------------------------------------------
+GRAND_TASK_FORCE_PROMPT = (
+    "Chief, initiate a Grand Task Force to perfect the catalog presentation. "
+    "Step 1: Rebuild the data catalog to ensure zero broken prices or missing relationships. "
+    "Step 2: Have the Steerer audit InventoryView.tsx and ProductDetailView.tsx against the specs. "
+    "Step 3: Run Visual QA to ensure stock badges and accessories display perfectly. "
+    "Step 4: Have the Builder fix any visual or data-binding discrepancies. "
+    "Step 5: Commit the perfected state."
+)
+
 
 def log(message: str) -> None:
     print(f"🏭 [FACTORY]: {message}")
@@ -153,11 +177,86 @@ def run_agent_ui_build() -> bool:
     return False
 
 
+def run_grand_task_force(prompt: str = "") -> int:
+    """
+    Route a free-text prompt through the Chief Agent, convert its queue to a
+    DAG, and execute it.  Used by the 'grand_task_force' CLI command and the
+    Night Shift autonomous protocol.
+
+    Args:
+        prompt: Natural-language instruction.  Defaults to the canonical
+                GRAND_TASK_FORCE_PROMPT when empty.
+    Returns:
+        0 on full success, 1 if any DAG node failed.
+    """
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    effective_prompt = prompt.strip() or GRAND_TASK_FORCE_PROMPT
+
+    log(f"🚀 Grand Task Force activated.")
+    log(f"   Prompt : {effective_prompt[:120]}{'...' if len(effective_prompt) > 120 else ''}")
+
+    plan = _consult_chief(effective_prompt)
+    explanation = plan.get("explanation", "")
+    proposal    = plan.get("proposal", "")
+    queue       = plan.get("queue", [])
+
+    if explanation:
+        log(f"📋 Chief says: {explanation}")
+    if proposal:
+        log(f"📋 Plan      : {proposal}")
+
+    if not queue:
+        log("⚠️  Chief returned an empty queue — nothing to execute.")
+        log("   Check GEMINI_API_KEY and re-run with a more specific prompt.")
+        return 1
+
+    log(f"📊 Executing DAG with {len(queue)} task(s) from Chief...")
+    nodes   = build_dynamic_dag_from_queue(queue)
+    results = run_dag(nodes)
+
+    all_ok = all(r.success for r in results)
+    if all_ok:
+        log("✨ Grand Task Force Complete. Catalog & UI polished.")
+        return 0
+
+    failed = [r.label for r in results if not r.success]
+    log(f"⚠️  Grand Task Force halted. Failed tasks: {', '.join(failed)}")
+
+    # Recovery pass — ask the Chief for a fix plan
+    log("🔄 Entering Recovery Mode...")
+    failure_report = "\n".join(
+        f"FAILED: {r.label} — {r.error}" for r in results if not r.success
+    )
+    fix_plan  = _consult_chief("", failure_context=failure_report)
+    fix_queue = fix_plan.get("queue", [])
+    if fix_queue:
+        log(f"🛠  Recovery queue has {len(fix_queue)} task(s).")
+        fix_nodes   = build_dynamic_dag_from_queue(fix_queue)
+        fix_results = run_dag(fix_nodes)
+        all_ok = all(r.success for r in fix_results)
+        if all_ok:
+            log("✨ Recovery Complete. System stabilised.")
+            return 0
+    log("❌ Recovery did not fully succeed. Manual intervention may be needed.")
+    return 1
+
+
 def main() -> int:
     LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # If a free-text prompt is passed as the first positional argument,
+    # route through the Grand Task Force (Chief → DAG) pipeline.
+    # Flags like --rebuild are still honoured when no prompt is present.
+    args = sys.argv[1:]
+    non_flag_args = [a for a in args if not a.startswith("--")]
+
+    if non_flag_args:
+        prompt = " ".join(non_flag_args)
+        return run_grand_task_force(prompt)
+
     rebuild = "--rebuild" in sys.argv
 
-    # Build and execute the DAG
+    # Build and execute the standard DAG
     dag = build_standard_dag(rebuild=rebuild)
     results = run_dag(dag)
 
@@ -397,11 +496,13 @@ def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
     }
 
     if tool == "task_force":
-        tf_id   = task.get("id", "")
+        tf_id = task.get("id", "")
         tf_goal = task.get("goal", args)
-        agents  = ",".join(task.get("agents", ["steerer", "builder", "watchdog"]))
+        agents = ",".join(
+            task.get("agents", ["steerer", "builder", "watchdog"]))
         if not tf_id or not tf_goal:
-            log(f"⚠️  task_force skipped — missing 'id' or 'goal' in task: {task}")
+            log(
+                f"⚠️  task_force skipped — missing 'id' or 'goal' in task: {task}")
             return False
         cmd = [py, factory_script, "task_force", tf_id, tf_goal, agents]
     else:
@@ -414,7 +515,8 @@ def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
         log(f"❌ Tool '{tool}' failed (exit {result.returncode})")
-        tail = "\n".join((result.stdout + "\n" + result.stderr).strip().splitlines()[-20:])
+        tail = "\n".join(
+            (result.stdout + "\n" + result.stderr).strip().splitlines()[-20:])
         if tail:
             log(tail)
         return False
@@ -443,11 +545,11 @@ def build_dynamic_dag_from_queue(queue: list[dict]) -> list[DAGNode]:
     prev_sequential_id: str | None = None  # last barrier node id
 
     for idx, task in enumerate(queue):
-        tool        = task.get("tool", "unknown")
-        args        = task.get("args", "")
+        tool = task.get("tool", "unknown")
+        args = task.get("args", "")
         is_parallel = task.get("parallel", False)
-        label       = f"{tool.upper()} | {args}".strip(" |")
-        node_id     = f"task_{idx:02d}_{tool}"
+        label = f"{tool.upper()} | {args}".strip(" |")
+        node_id = f"task_{idx:02d}_{tool}"
 
         if is_parallel:
             # Parallel node: only depends on the previous sequential barrier

@@ -261,6 +261,35 @@ def cmd_reflect(context: str) -> None:
     )
 
 
+def cmd_grand_task_force(prompt: str = "") -> None:
+    """
+    Grand Task Force — end-to-end autonomous catalog + UI polish driven by
+    the Chief Agent.  Equivalent to calling factory_supervisor with a
+    natural-language prompt.
+    """
+    ensure_env()
+    log("Activating Grand Task Force (Chief → DAG → Execution)...")
+    env = {**os.environ, "PYTHONPATH": str(ROOT)}
+    supervisor = ROOT / "backend" / "factory_supervisor.py"
+    effective_prompt = prompt or (
+        "Chief, initiate a Grand Task Force to perfect the catalog presentation. "
+        "Step 1: Rebuild the data catalog to ensure zero broken prices or missing "
+        "relationships. "
+        "Step 2: Have the Steerer audit InventoryView.tsx and ProductDetailView.tsx "
+        "against the specs. "
+        "Step 3: Run Visual QA to ensure stock badges and accessories display perfectly. "
+        "Step 4: Have the Builder fix any visual or data-binding discrepancies. "
+        "Step 5: Commit the perfected state."
+    )
+    result = subprocess.run(
+        [sys.executable, str(supervisor), effective_prompt],
+        cwd=str(ROOT),
+        env=env,
+    )
+    if result.returncode != 0:
+        log("⚠️  Grand Task Force exited with errors — check logs above.")
+
+
 def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> None:
     """
     Task-Force Coordinator: spin up a multi-agent improvement cycle with a shared
@@ -386,6 +415,10 @@ Level 9 — Feedback & Memory Loop:
   reflect "failure context"      Mentor: extract lesson → append to docs/LEARNED_GUIDELINES.md
   task_force <id> "goal"         Coordinator: multi-agent Task Force (Steerer→Builder→Watchdog)
 
+Level 10 — Autonomous Polish:
+  grand_task_force ["prompt"]    Chief-driven end-to-end catalog + UI polish via DAG
+                                 (omit prompt to use the canonical polish protocol)
+
 Examples:
   python factory.py init
   python factory.py design "A SystemSettings view that lists scrapers and lets operators toggle them"
@@ -476,6 +509,10 @@ if __name__ == "__main__":
         tf_goal = sys.argv[3]
         tf_agents = sys.argv[4].split(",") if len(sys.argv) > 4 else None
         cmd_task_force(tf_id, tf_goal, tf_agents)
+
+    elif command == "grand_task_force":
+        gtf_prompt = sys.argv[2] if len(sys.argv) > 2 else ""
+        cmd_grand_task_force(gtf_prompt)
 
     else:
         log(f"Unknown command: {command}")
