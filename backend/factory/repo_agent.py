@@ -193,20 +193,20 @@ def commit_and_push(dry_run: bool = False) -> None:
     print(f"   Branch : {branch}")
     print(f"   Status : {status}")
 
-    # 1. Stage everything if nothing is staged yet
-    if status == "DIRTY":
-        print("   Staging all changes...")
-        if not dry_run:
-            _run_git(["add", "."], capture=False)
-    elif status == "CLEAN":
+    if status == "CLEAN":
         print("❌ Nothing to commit — working tree is clean.")
         return
+
+    # 1. Always stage everything (handles DIRTY, STAGED, or mixed states)
+    print("   Staging all changes...")
+    if not dry_run:
+        _run_git(["add", "-A"], capture=False)
 
     # 2. Get diff for message generation
     diff = get_git_diff(staged_only=True)
     if not diff:
-        # Fall back to full diff after staging
-        diff = get_git_diff(staged_only=False)
+        print("❌ No changes detected after staging.")
+        return
 
     if not diff:
         print("❌ No changes detected after staging.")
