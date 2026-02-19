@@ -249,8 +249,8 @@ def commit_and_push(dry_run: bool = False) -> None:
         if "non-fast-forward" in stderr or "rejected" in stderr:
             # Remote has diverged — pull with merge then retry
             print("   ↩️  Remote diverged. Pulling (merge) then retrying...")
-            pull = _run_git(["pull", "--no-rebase", "--no-edit",
-                             "-c", "commit.gpgsign=false"])
+            pull = _run_git(["-c", "commit.gpgsign=false",
+                             "pull", "--no-rebase", "--no-edit"])
             if pull.returncode == 0:
                 push_result = _run_git(["push"])
             if push_result.returncode != 0:
