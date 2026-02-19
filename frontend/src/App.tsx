@@ -1,132 +1,92 @@
-// frontend/src/App.tsx
-/**
- * UNIFIED DATA PIPELINE v8.5
- *
- * Three screens that share the same data source:
- * 1. GalaxyDashboard - Category browser
- * 2. SpectrumModule - Product spectrum (TierBar is integrated)
- * 3. ProductPage - Full product analysis
- *
- * All screens consume data from: useConductorCatalog (React Query)
- */
-import React, { lazy, Suspense } from "react";
-import { GlobalSearch } from "./components/GlobalSearch";
-import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
-import { Breadcrumbs } from "./components/ui/Breadcrumbs";
-import {
-  SpectrumSkeleton,
-  ProductPageSkeleton,
-  ProductGridSkeleton,
-} from "./components/ui/Skeleton";
+import React, { Suspense } from "react";
+import { LayoutDashboard, PackageSearch, Server } from "lucide-react";
 import { useNavigationStore } from "./store/navigationStore";
+import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
+import { GlobalSearch } from "./components/GlobalSearch";
 
-// Lazy load heavy views for code-splitting
-const GalaxyDashboard = lazy(() =>
-  import("./components/views/GalaxyDashboard").then((m) => ({
-    default: m.GalaxyDashboard,
-  })),
+// Strict Lazy Loading (Only professional views)
+const DashboardView = React.lazy(
+  () => import("./components/views/DashboardView"),
 );
-const SpectrumModule = lazy(() =>
-  import("./components/views/SpectrumModule").then((m) => ({
-    default: m.SpectrumModule,
-  })),
+const InventoryView = React.lazy(
+  () => import("./components/views/InventoryView"),
 );
-const ProductPage = lazy(() =>
-  import("./components/views/ProductPage").then((m) => ({
-    default: m.ProductPage,
-  })),
+const ProductDetailView = React.lazy(
+  () => import("./components/views/ProductDetailView"),
 );
-const CurationDashboard = lazy(() =>
-  import("./components/views/CurationDashboard").then((m) => ({
-    default: m.CurationDashboard,
-  })),
+const IngestionStatusView = React.lazy(
+  () => import("./components/views/IngestionStatusView"),
 );
 
 function App() {
-  // Extract strictly what we need
-  const { currentView, activeProductId } = useNavigationStore();
+  const { currentView, goToDashboard, goToInventory } = useNavigationStore();
 
   return (
     <GlobalErrorBoundary>
-      <div className="flex h-screen w-screen flex-col bg-black text-white font-sans overflow-hidden">
-        {/* Global Header — refined with breadcrumbs */}
-        <header className="h-14 bg-black/95 backdrop-blur-md border-b border-zinc-800/60 flex items-center justify-between px-6 z-50 relative shadow-lg shadow-black/50">
-          <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={() => useNavigationStore.getState().goToGalaxy()}
-              className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
-              title="Go to Dashboard"
-            >
-              <img
-                src="/assets/logos/halilit_logo.svg"
-                alt="Halilit"
-                className="h-6 w-auto"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-              <span className="text-zinc-600 text-[10px] font-mono tracking-[0.15em] uppercase">
-                Support Center
+      <div className="flex h-screen w-screen bg-black text-zinc-100 font-sans overflow-hidden">
+        {/* SIDEBAR */}
+        <aside className="w-64 border-r border-zinc-800 bg-zinc-950 flex flex-col">
+          <div className="h-16 flex items-center px-6 border-b border-zinc-800 gap-3">
+            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">
+              H
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-bold">Halilit SC</span>
+              <span className="text-[10px] text-zinc-500 tracking-widest">
+                OPERATOR CONSOLE
               </span>
+            </div>
+          </div>
+          <nav className="p-4 space-y-2">
+            <button
+              onClick={goToDashboard}
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${currentView === "DASHBOARD" ? "bg-zinc-900 text-blue-400" : "text-zinc-400 hover:text-white"}`}
+            >
+              <LayoutDashboard size={18} /> Overview
             </button>
-            <div className="h-5 w-px bg-zinc-800 mx-1" />
-            <Breadcrumbs />
-          </div>
-          <div className="flex-1 max-w-xl px-6 flex justify-end">
-            <GlobalSearch />
-          </div>
-        </header>
-
-        {/* Main Stage */}
-        <main className="flex-1 relative overflow-hidden">
-          {/* Screen 1: Galaxy Dashboard */}
-          {currentView === "GALAXY" && (
-            <div className="absolute inset-0 animate-fade-in">
-              <Suspense
-                fallback={
-                  <div className="p-8">
-                    <ProductGridSkeleton count={12} />
-                  </div>
-                }
-              >
-                <GalaxyDashboard />
-              </Suspense>
+            <button
+              onClick={goToInventory}
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${currentView === "INVENTORY" || currentView === "PRODUCT_DETAIL" ? "bg-zinc-900 text-blue-400" : "text-zinc-400 hover:text-white"}`}
+            >
+              <PackageSearch size={18} /> Inventory
+            </button>
+            <div className="pt-4 mt-4 border-t border-zinc-800">
+              <div className="flex items-center gap-3 px-3 text-zinc-500">
+                <Server size={16} />
+                <span className="text-xs">
+                  Factory Status:{" "}
+                  <span className="text-emerald-500">Online</span>
+                </span>
+              </div>
             </div>
-          )}
+          </nav>
+        </aside>
 
-          {/* Screen 2: Spectrum Module (includes TierBar/product spectrum) */}
-          {currentView === "SPECTRUM" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<SpectrumSkeleton />}>
-                <SpectrumModule />
-              </Suspense>
+        {/* MAIN STAGE */}
+        <div className="flex-1 flex flex-col min-w-0">
+          <header className="h-16 border-b border-zinc-800 bg-zinc-950 flex items-center justify-between px-8">
+            <div className="text-sm text-zinc-500">
+              System <span className="text-zinc-300">/ {currentView}</span>
             </div>
-          )}
-
-          {/* Screen 3: Product Page (Full Analysis View) */}
-          {currentView === "PRODUCT_PAGE" && activeProductId && (
-            <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
-              <Suspense fallback={<ProductPageSkeleton />}>
-                <ProductPage productId={activeProductId} />
-              </Suspense>
+            <div className="w-96">
+              <GlobalSearch />
             </div>
-          )}
-
-          {/* Screen 4: Curation Dashboard (Admin) */}
-          {currentView === "CURATION" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense
-                fallback={
-                  <div className="p-8">
-                    <ProductGridSkeleton count={6} />
-                  </div>
-                }
-              >
-                <CurationDashboard />
-              </Suspense>
-            </div>
-          )}
-        </main>
+          </header>
+          <main className="flex-1 overflow-auto bg-black relative">
+            <Suspense
+              fallback={
+                <div className="p-10 text-zinc-500 animate-pulse">
+                  Loading Factory Module...
+                </div>
+              }
+            >
+              {currentView === "DASHBOARD" && <DashboardView />}
+              {currentView === "INVENTORY" && <InventoryView />}
+              {currentView === "PRODUCT_DETAIL" && <ProductDetailView />}
+              {currentView === "INGESTION_STATUS" && <IngestionStatusView />}
+            </Suspense>
+          </main>
+        </div>
       </div>
     </GlobalErrorBoundary>
   );

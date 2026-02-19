@@ -28,3 +28,400 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+
+  # =========================================================================
+  # PostgreSQL - Result Backend & Task Persistence
+  # =========================================================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: halilit_postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/config/init_db.sql:/docker-entrypoint-initdb.d/01-init.sql
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-halilit_tasks}
+      POSTGRES_USER: ${POSTGRES_USER:-halilit_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secure_password_change_me}
+      # POSTGRES_INITDB_ARGS: "-c shared_buffers=256MB -c max_connections=100"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-halilit_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # =========================================================================
+  # Flower - Celery Monitoring Dashboard
+  # =========================================================================
+  flower:
+    image: mher/flower:2.0
+    container_name: halilit_flower
+    ports:
+      - "5555:5555"
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+      FLOWER_BASIC_AUTH: ${FLOWER_AUTH:-admin:flower_password_change_me}
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5555/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # =========================================================================
+  # Celery Worker - Harvest Queue
+  #
+  # Dedicated worker for CommercialScout (web scraping tasks)
+  # =========================================================================
+  worker_harvest:
+    build:
+      context: .
+      dockerfile: Dockerfile # See backend/Dockerfile
+    container_name: halilit_worker_harvest
+    command: >
+      celery -A backend.tasks worker
+      --loglevel=info
+      --concurrency=2
+      --queues=harvest
+      --time-limit=3600
+      --soft-time-limit=3400
+      --max-tasks-per-child=50
+      -n harvest_worker@%h
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+      PYTHONUNBUFFERED: "1"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    # Single concurrency to prevent rate limiting during scraping
+    # Increase if needed based on target website policies
+
+  # =========================================================================
+  # Celery Worker - Enrich Queue
+  #
+  # Dedicated workers for OfficialVerifier (agent processing with Gemini)
+  # =========================================================================
+  worker_enrich_1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_worker_enrich_1
+    command: >
+      celery -A backend.tasks worker
+      --loglevel=info
+      --concurrency=3
+      --queues=enrich
+      --time-limit=3600
+      --soft-time-limit=3400
+      --max-tasks-per-child=100
+      -n enrich_worker_1@%h
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+      PYTHONUNBUFFERED: "1"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  worker_enrich_2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_worker_enrich_2
+    command: >
+      celery -A backend.tasks worker
+      --loglevel=info
+      --concurrency=3
+      --queues=enrich
+      --time-limit=3600
+      --soft-time-limit=3400
+      --max-tasks-per-child=100
+      -n enrich_worker_2@%h
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+      PYTHONUNBUFFERED: "1"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  # =========================================================================
+  # Celery Worker - Validate Queue
+  #
+  # Dedicated worker for ExternalValidator (compliance auditing)
+  # =========================================================================
+  worker_validate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_worker_validate
+    command: >
+      celery -A backend.tasks worker
+      --loglevel=info
+      --concurrency=2
+      --queues=validate
+      --time-limit=3600
+      --soft-time-limit=3400
+      --max-tasks-per-child=100
+      -n validate_worker@%h
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+      PYTHONUNBUFFERED: "1"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  # =========================================================================
+  # Celery Worker - Learning Queue
+  #
+  # Dedicated worker for learning system (low priority background work)
+  # =========================================================================
+  worker_learn:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_worker_learn
+    command: >
+      celery -A backend.tasks worker
+      --loglevel=info
+      --concurrency=1
+      --queues=learn,feedback,default
+      --time-limit=7200
+      --soft-time-limit=7000
+      --max-tasks-per-child=50
+      -n learn_worker@%h
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+      CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+      PYTHONUNBUFFERED: "1"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    # Lower concurrency for background learning work
+
+  # =========================================================================
+  # FastAPI Server (Optional - if running via Docker)
+  # =========================================================================
+  # Uncomment to run FastAPI server in Docker alongside workers.
+  # PORT_BACKEND in .env (e.g. 8001) allows a second worktree to run without port conflict.
+  #
+  # api_server:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: halilit_api
+  #   ports:
+  #     - "${PORT_BACKEND:-8000}:8000"
+  #   volumes:
+  #     - ./backend/data:/app/backend/data  # Persist product_graph.json for fast restarts
+  #     - ./frontend/public/data:/app/frontend/public/data  # Golden list JSONs
+  #   command: >
+  #     uvicorn backend.server:app
+  #     --host 0.0.0.0
+  #     --port 8000
+  #     --reload
+  #   environment:
+  #     CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://redis:6379/0}
+  #     CELERY_RESULT_BACKEND: ${CELERY_RESULT_BACKEND:-redis://redis:6379/1}
+  #   depends_on:
+  #     redis:
+  #       condition: service_healthy
+  #   networks:
+  #     - halilit-network
+  #   restart: unless-stopped
+
+  # =========================================================================
+  # OpenClaw — Field Agent (Browser automation & Employee Concierge)
+  #
+  # RESTRICTED: Used only for official manufacturer spec verification and
+  # internal employee concierge. See backend/agent_skills/COMPLIANCE.md.
+  # Resource limits and security options prevent runaway usage.
+  # Enable with: docker-compose --profile openclaw up -d (or ./factory_reset.sh if OPENCLAW_URL set)
+  # =========================================================================
+  openclaw:
+    # Official image is published at ghcr.io/openclaw/openclaw; use that
+    # instead of the deprecated/openclaw Docker Hub namespace.
+    image: ghcr.io/openclaw/openclaw:latest
+    container_name: halilit-field-agent
+    ports:
+      # Map host PORT_OPENCLAW (default 3000) → gateway port 18789 inside container.
+      # The OpenClaw gateway listens on 18789 (WS + HTTP multiplex), not 3000.
+      - "${PORT_OPENCLAW:-3000}:18789"
+    volumes:
+      - ./backend/agent_skills:/root/.openclaw/skills
+    environment:
+      - OPENCLAW_API_KEY=${OPENCLAW_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - OLLAMA_HOST=${OLLAMA_HOST:-}
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - openclaw
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2G
+        reservations:
+          memory: 256M
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # =========================================================================
+  # MCP Servers (optional — enable with: docker-compose --profile mcp up -d)
+  # =========================================================================
+  mcp-catalog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_mcp_catalog
+    command: python3 backend/mcp/servers/catalog_db.py
+    ports:
+      - "8102:8102"
+    volumes:
+      - ./backend/data:/app/backend/data:ro
+      - ./frontend/public/data:/app/frontend/public/data:ro
+    environment:
+      MCP_CATALOG_PORT: "8102"
+      PYTHONUNBUFFERED: "1"
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - mcp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  mcp-web-search:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_mcp_web_search
+    command: python3 backend/mcp/servers/web_search.py
+    ports:
+      - "8100:8100"
+    environment:
+      MCP_SEARCH_PORT: "8100"
+      BRAVE_API_KEY: ${BRAVE_API_KEY:-}
+      SERPER_API_KEY: ${SERPER_API_KEY:-}
+      PYTHONUNBUFFERED: "1"
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - mcp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  mcp-image-tools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_mcp_image_tools
+    command: python3 backend/mcp/servers/image_tools.py
+    ports:
+      - "8101:8101"
+    environment:
+      MCP_IMAGE_PORT: "8101"
+      PYTHONUNBUFFERED: "1"
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - mcp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  redis_data:
+    driver: local
+  postgres_data:
+    driver: local
+
+networks:
+  halilit-network:
+    driver: bridge

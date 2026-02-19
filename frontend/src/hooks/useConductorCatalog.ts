@@ -40,6 +40,8 @@ export interface ProductRelationship {
     manually_curated: boolean;
     compatibility_notes: string;
     discovered_from: string;
+    sources_verified?: string[];
+    is_triple_checked?: boolean;
 }
 
 export interface ProductFamily {
@@ -83,6 +85,12 @@ export interface ConductorProduct {
     pros: string[];
     cons: string[];
     contextual_data: Record<string, any>;
+    /** Summary from 3+ trusted review sources (contextual pillar) */
+    review_synthesis_summary?: string;
+    /** Real-world insights from reviews (contextual pillar) */
+    real_world_insights?: string[];
+    /** Names/URLs of review sources (contextual pillar) */
+    review_sources?: string[];
     quality_score: number;
     data_status: 'COMPLETE' | 'GOOD' | 'PARTIAL' | 'MINIMAL';
     data_missing: string[];
@@ -101,6 +109,8 @@ export interface ConductorProduct {
     family_id: string | null;
     variant_key: string | null;
     variant_is_default: boolean | null;
+    /** IDs of related products (variants, accessories, alternatives) for neuron-hop without new API call */
+    relationship_ids?: string[];
 }
 
 export interface CatalogIndexes {
@@ -164,6 +174,9 @@ export interface ConductorCatalog {
     families?: Record<string, FamilyMeta>;
 }
 
+/** Catalog request timeout (first load can take 2–5 min with 7k+ products). */
+const CATALOG_FETCH_TIMEOUT_MS = 360_000;
+
 /**
  * Load unified Conductor catalog — the single data source for all 3 screens.
  */
@@ -171,23 +184,49 @@ export const useConductorCatalog = () => {
     const { data, isLoading, error, refetch } = useQuery<ConductorCatalog>({
         queryKey: ['conductor-catalog'],
         queryFn: async () => {
-            const response = await fetch('/api/conductor/catalog');
-            if (!response.ok) {
-                throw new Error(`Failed to load catalog: ${response.statusText}`);
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), CATALOG_FETCH_TIMEOUT_MS);
+            try {
+                const response = await fetch('/api/conductor/catalog', {
+                    signal: controller.signal,
+                });
+                clearTimeout(timeoutId);
+                if (response.status === 503) {
+                    const body = await response.json().catch(() => ({}));
+                    throw new Error(
+                        body?.error || 'Catalog is still building. Wait a minute and click Retry.'
+                    );
+                }
+                if (!response.ok) {
+                    throw new Error(`Failed to load catalog: ${response.status} ${response.statusText}`);
+                }
+                const catalog: ConductorCatalog = await response.json();
+                // Log catalog load in dev mode only
+                if (import.meta.env.DEV && import.meta.env.MODE === 'development') {
+                    // eslint-disable-next-line no-console
+                    console.log(
+                        `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
+                        `${catalog.metadata.brands.length} brands, ` +
+                        `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies, ` +
+                        `health: ${catalog.metadata.health_score ?? '?'}/100`
+                    );
+                }
+                return catalog;
+            } catch (err) {
+                clearTimeout(timeoutId);
+                if (err instanceof Error) {
+                    if (err.name === 'AbortError') {
+                        throw new Error(
+                            'Catalog request timed out. The first load can take 2–5 minutes. Click Retry.'
+                        );
+                    }
+                    throw err;
+                }
+                throw err;
             }
-            const catalog: ConductorCatalog = await response.json();
-            if (import.meta.env.DEV) {
-                console.log(
-                    `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
-                    `${catalog.metadata.brands.length} brands, ` +
-                    `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies, ` +
-                    `health: ${catalog.metadata.health_score ?? '?'}/100`
-                );
-            }
-            return catalog;
         },
-        staleTime: 5 * 60 * 1000,
-        gcTime: 10 * 60 * 1000,
+        staleTime: import.meta.env.DEV ? 0 : 5 * 60 * 1000, // Always refetch in dev mode
+        gcTime: import.meta.env.DEV ? 0 : 10 * 60 * 1000, // Don't cache in dev mode
         retry: 2,
         refetchOnWindowFocus: true,
         refetchOnReconnect: true,
@@ -311,34 +350,134 @@ export const useProductRelationships = (productId: string | null) => {
         const accessories: ConductorProduct[] = [];
         const compatible: ConductorProduct[] = [];
         const alternatives: ConductorProduct[] = [];
+        const seenAccessories = new Set<string>();
+        const seenCompatible = new Set<string>();
+        const seenAlternatives = new Set<string>();
+        const relationshipMeta: Record<string, { confidence: number; sources_verified: string[]; discovered_from?: string }> = {};
 
         for (const rel of rels) {
             const otherId = rel.source_id === productId ? rel.target_id : rel.source_id;
             const other = productMap.get(otherId);
             if (!other) continue;
 
+            const confidence = rel.confidence ?? 0;
+            const sources = rel.sources_verified ?? [];
+            const existing = relationshipMeta[otherId];
+            if (existing) {
+                existing.confidence = Math.max(existing.confidence, confidence);
+                existing.sources_verified = [...new Set([...existing.sources_verified, ...sources])];
+            } else {
+                relationshipMeta[otherId] = { confidence, sources_verified: sources, discovered_from: rel.discovered_from };
+            }
+
             switch (rel.relationship_type) {
                 case 'accessory_for':
-                    // Source is the accessory, target is the main product
-                    if (rel.target_id === productId) accessories.push(productMap.get(rel.source_id)!);
+                    if (rel.target_id === productId) {
+                        const acc = productMap.get(rel.source_id);
+                        if (acc && !seenAccessories.has(acc.id)) {
+                            seenAccessories.add(acc.id);
+                            accessories.push(acc);
+                        }
+                    }
                     break;
                 case 'compatible_with':
-                    compatible.push(other);
+                    if (!seenCompatible.has(otherId)) {
+                        seenCompatible.add(otherId);
+                        compatible.push(other);
+                    }
                     break;
                 case 'alternative_to':
-                    alternatives.push(other);
+                    if (!seenAlternatives.has(otherId)) {
+                        seenAlternatives.add(otherId);
+                        alternatives.push(other);
+                    }
                     break;
             }
         }
 
         return {
-            accessories: accessories.filter(Boolean),
-            compatible: compatible.filter(Boolean),
-            alternatives: alternatives.filter(Boolean),
+            accessories,
+            compatible,
+            alternatives,
             all: rels,
+            relationshipMeta,
         };
     }, [productId, indexes, products]);
 
     return { ...result, isLoading };
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SPECTRUM STAR (NEURON) VIEW — ModelGroups + relationships by spectrum
+// ═══════════════════════════════════════════════════════════════════════════
+
+export type ZoomLevel = 'galaxy' | 'constellation' | 'cluster' | 'star';
+
+export interface ModelVariation {
+    id: string;
+    name: string;
+    variation: string;
+    price: number;
+    price_eilat?: number;
+    tier?: string;
+    image_url?: string;
+    sources?: string[];
+    quality_score?: number;
+    data_status?: string;
+    specs?: Record<string, unknown>;
+    rating?: number;
+    family_id?: string | null;
+}
+
+export interface ModelGroup {
+    modelName: string;
+    modelKey: string;
+    brand: string;
+    family: string;
+    subCategory: string;
+    bodyType: string;
+    variations: ModelVariation[];
+    priceRange: { min: number; max: number; currency: string };
+    heroImage: string;
+    variationCount: number;
+    avgConfidence: number;
+}
+
+export interface SpectrumStarResponse {
+    spectrum_id: string;
+    model_groups: ModelGroup[];
+    relationships: Record<string, ProductRelationship[]>;
+    zoom_levels: ZoomLevel[];
+    product_count: number;
+}
+
+/**
+ * Fetch the neuron view for a spectrum: ModelGroups (nucleus + variations)
+ * and relationships (outer connections). Use for star-level (inner) and
+ * cluster-level (outer) display in the Spectrum Module.
+ */
+export const useSpectrumStar = (spectrumId: string | null) => {
+    const { data, isLoading, error, refetch } = useQuery<SpectrumStarResponse>({
+        queryKey: ['spectrumStar', spectrumId],
+        queryFn: async () => {
+            if (!spectrumId) throw new Error('No spectrum');
+            const res = await fetch(`/api/spectrum/${encodeURIComponent(spectrumId)}`);
+            if (!res.ok) throw new Error(res.statusText);
+            return res.json();
+        },
+        enabled: !!spectrumId,
+        staleTime: 5 * 60 * 1000,
+    });
+
+    return {
+        modelGroups: data?.model_groups ?? [],
+        relationships: data?.relationships ?? {},
+        zoomLevels: data?.zoom_levels ?? ['galaxy', 'constellation', 'cluster', 'star'],
+        productCount: data?.product_count ?? 0,
+        spectrumId: data?.spectrum_id ?? spectrumId ?? null,
+        isLoading,
+        error: error?.message ?? null,
+        refetch,
+    };
 };
 

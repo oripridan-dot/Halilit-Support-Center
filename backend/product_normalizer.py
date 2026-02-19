@@ -16,10 +16,12 @@ Key changes from v8:
 import json
 import logging
 import os
+import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from backend.catalog_validator import validate_product as _validate_product
+from backend.ingestion.visual_validator import reject_official_if_mismatch
 
 logger = logging.getLogger(__name__)
 
@@ -125,6 +127,7 @@ _CATEGORY_TO_SPECTRUM: Dict[str, str] = {
     "amplifiers & effects": "guitar-amps",
     "headphones & earphones": "studio-accessories",
     "cables & connectors": "cables",
+    "accessories & utility": "general-accessories",
 }
 
 # Brand-specific classification patterns (longest match wins)
@@ -397,7 +400,8 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "ampeg": "Ampeg", "amphion": "Amphion", "antigua": "Antigua",
     "arturia": "Arturia", "asm": "ASM", "adams": "Adams",
     "alesis": "Alesis",
-    "ashdown engineering": "Ashdown Engineering",
+    "ashdown": "Ashdown Engineering", "ashdown engineering": "Ashdown Engineering",
+    "ashdown-engineering": "Ashdown Engineering",
     "audio-technica": "Audio-Technica", "audio technica": "Audio-Technica",
     "austrian audio": "Austrian Audio", "avid": "Avid",
     "behringer": "Behringer", "bespeco": "Bespeco",
@@ -406,7 +410,7 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "breedlove guitars": "Breedlove", "breedlove": "Breedlove",
     "casio": "Casio", "clavia": "Clavia",
     "cordoba guitars": "Cordoba", "cordoba": "Cordoba",
-    "denon dj": "Denon DJ", "denon-dj": "Denon DJ",
+    "denon": "Denon", "denon dj": "Denon", "denon-dj": "Denon",
     "dixon": "Dixon", "drumdots": "DrumDots", "dw": "DW",
     "dynaudio": "Dynaudio",
     "eaw eastern acoustic works": "EAW", "eaw": "EAW",
@@ -420,12 +424,15 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "foxgear guitar effects and pedals": "FoxGear", "foxgear": "FoxGear",
     "fusion": "Fusion", "fzone": "FZone",
     "genelec": "Genelec", "gibson": "Gibson",
-    "gon bops percussion": "Gon Bops", "gon bops": "Gon Bops",
+    "gon bops": "Gon Bops", "gon bops percussion": "Gon Bops",
+    "gon-bops": "Gon Bops", "gon-bops-percussion": "Gon Bops",
     "guild": "Guild",
+    "halilit": "Halilit", "halilit expo": "Halilit", "halilit-expo": "Halilit",
     "headliner la equipment stands": "Headliner", "headliner": "Headliner",
     "headrush fx": "HeadRush", "headrush": "HeadRush",
     "heritage audio": "Heritage Audio", "hiwatt": "Hiwatt",
     "innovative percussion": "Innovative Percussion",
+    "innovative-percussion": "Innovative Percussion",
     "jasmine guitars": "Jasmine", "jasmine": "Jasmine",
     "keith mcmillen instruments kmi": "Keith McMillen", "keith mcmillen": "Keith McMillen",
     "krk systems": "KRK", "krk": "KRK",
@@ -434,7 +441,7 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "m audio": "M-Audio", "m-audio": "M-Audio",
     "mackie": "Mackie", "magma": "Magma",
     "maestro guitar pedals and effects": "Maestro", "maestro": "Maestro",
-    "marimba one": "Marimba One",
+    "marimba one": "Marimba One", "marimba-one": "Marimba One",
     "maton guitars": "Maton", "maton": "Maton",
     "maybach": "Maybach", "medeli": "Medeli",
     "mjc ironworks": "MJC Ironworks",
@@ -448,22 +455,25 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "playdifferently": "PLAYdifferently",
     "presonus": "PreSonus",
     "rapier 33 electric guitars": "Rapier", "rapier": "Rapier",
-    "rcf": "RCF", "regal tip": "Regal Tip",
-    "remo": "Remo", "rhythm tech": "Rhythm Tech",
-    "rode": "Rode", "rogers": "Rogers", "roland": "Roland",
-    "santos martinez": "Santos Martinez",
+    "rcf": "RCF", "regal tip": "Regal Tip", "regal-tip": "Regal Tip",
+    "remo": "Remo", "rhythm tech": "Rhythm Tech", "rhythm-tech": "Rhythm Tech",
+    "rode": "Rode", "rode x": "Rode", "rode-x": "Rode",
+    "rogers": "Rogers", "roger s": "Rogers", "roger-s": "Rogers",
+    "roland": "Roland",
+    "santos martinez": "Santos Martinez", "santos-martinez": "Santos Martinez",
     "sequential": "Sequential", "show": "Show",
     "shure": "Shure",
     "solar guitars": "Solar Guitars", "solar": "Solar Guitars",
     "sonarworks": "Sonarworks", "spector": "Spector",
-    "steinberg": "Steinberg",
+    "steinberg": "Steinberg", "teenage engineering": "Teenage Engineering",
+    "teenage-engineering": "Teenage Engineering",
     "studio logic": "Studiologic", "studiologic": "Studiologic",
-    "tombo": "Tombo", "topp pro": "Topp Pro",
+    "tombo": "Tombo", "topp pro": "Topp Pro", "topp-pro": "Topp Pro",
     "turkish": "Turkish",
-    "ultimate support": "Ultimate Support",
+    "ultimate support": "Ultimate Support", "ultimate-support": "Ultimate Support",
     "universal audio": "Universal Audio", "universal-audio": "Universal Audio",
     "v moda": "V-MODA", "v-moda": "V-MODA",
-    "vintage": "Vintage", "warm audio": "Warm Audio",
+    "vintage": "Vintage", "warm audio": "Warm Audio", "warm-audio": "Warm Audio",
     "washburn": "Washburn", "xotic": "Xotic", "xvive": "Xvive",
 }
 
@@ -624,6 +634,10 @@ def _extract_hero_image(p: dict) -> str:
     if isinstance(src, dict) and _is_valid_image(src.get("image")):
         return src["image"]
 
+    # Skeleton sync / inventory shape uses "thumbnail"
+    if _is_valid_image(p.get("thumbnail")):
+        return p["thumbnail"]
+
     return ""
 
 
@@ -635,6 +649,12 @@ def _collect_gallery(p: dict, hero_url: str) -> List[str]:
     if hero_url:
         gallery.append(hero_url)
         seen.add(hero_url)
+
+    # Include thumbnail (skeleton/inventory) if not already in gallery
+    thumb = p.get("thumbnail")
+    if _is_valid_image(thumb) and thumb not in seen:
+        gallery.append(thumb)
+        seen.add(thumb)
 
     for src_key in ("image_gallery", "official_images", "gallery_images"):
         for img in (p.get(src_key) or []):
@@ -702,9 +722,19 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     - Price = 0 is OK (shown as "Price on request")
     - No image is OK (gets empty string, frontend handles fallback)
     """
+    # Normalize product ID - handle different formats (halilit-123, 123, scraped-...)
     pid = p.get("id") or p.get("halilit_id") or p.get("sku")
     if not pid:
         return None
+
+    # Normalize ID format: if numeric, prefix with "halilit-"
+    pid_str = str(pid).strip()
+    if pid_str.isdigit():
+        pid_str = f"halilit-{pid_str}"
+    elif not pid_str.startswith(("halilit-", "scraped-", "openclaw-")):
+        # If it's a valid ID but not prefixed, assume halilit
+        if pid_str.replace("-", "").replace("_", "").isdigit():
+            pid_str = f"halilit-{pid_str.replace('-', '').replace('_', '')}"
 
     name = (
         p.get("name")
@@ -714,6 +744,9 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     ).strip()
     if not name:
         return None
+
+    # Commercial vs official image match: reject official data if images don't match same product
+    p = reject_official_if_mismatch(dict(p))
 
     raw_brand = (p.get("brand") or fallback_brand or "Unknown").strip()
     brand = _normalize_brand_name(raw_brand)
@@ -754,8 +787,8 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
             if isinstance(feat, dict) and feat.get("name") and feat.get("value"):
                 fname = feat["name"].strip()
                 fval = feat["value"].strip()
-                # Skip "Main Feature" entries — those go into features list, not specs
-                if fname.lower() in ("main feature", "feature"):
+                # Skip editorial/Halilit text — those are not official technical specs
+                if fname.lower() in ("main feature", "feature", "expert insight", "expert_insight"):
                     continue
                 # Handle duplicate keys by appending index
                 if fname in specs:
@@ -791,27 +824,62 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "the ultimate stage piano for professionals",
         "no description available",
     )
+    # Halilit commercial text markers: these strings appear in Halilit's page
+    # snippets (marketing copy) and must NEVER be treated as official brand data.
+    _HALILIT_COMMERCIAL_MARKERS = (
+        "משלוח חינם",          # "free shipping"
+        "ברכישה מהאתר",       # "when ordering from the site"
+        "הזמן עכשיו",          # "order now"
+        "קנה עכשיו",           # "buy now"
+        "www.halilit.com",
+        "halilit.co.il",
+    )
+
+    def _is_commercial_text(d: str) -> bool:
+        """Return True if the text contains Halilit commerce markers."""
+        if not d:
+            return False
+        return any(marker in d for marker in _HALILIT_COMMERCIAL_MARKERS)
 
     def _is_real_desc(d: str) -> bool:
         if not d or len(d.strip()) < 10:
             return False
+        if d.strip().lower() in _PLACEHOLDER_DESCRIPTIONS:
+            return False
+        if _is_commercial_text(d):
+            return False  # Commercial text is not a real official description
+        return True
+
+    def _is_real_desc_any(d: str) -> bool:
+        """Like _is_real_desc but allows commercial text (for fallback display)."""
+        if not d or len(d.strip()) < 10:
+            return False
         return d.strip().lower() not in _PLACEHOLDER_DESCRIPTIONS
 
-    raw_desc = p.get("official_description") or ""
-    if not _is_real_desc(raw_desc):
+    # official_description: only use if it's genuinely from an official brand source
+    # (not Halilit commerce copy — those were incorrectly stored there by older
+    # pipeline versions and are now demoted back to commercial).
+    raw_official = p.get("official_description") or ""
+    official_description_clean = raw_official if _is_real_desc(
+        raw_official) else ""
+
+    raw_desc = official_description_clean
+    if not raw_desc:
         raw_desc = p.get("description_long") or ""
     if not _is_real_desc(raw_desc):
         raw_desc = p.get("description") or ""
-    if not _is_real_desc(raw_desc):
-        raw_desc = p.get("page_description") or ""
-    if not _is_real_desc(raw_desc):
+    # Fallback to commercial sources (shown in UI but labeled correctly)
+    if not _is_real_desc_any(raw_desc):
+        raw_desc = p.get("description_commercial") or p.get(
+            "page_description") or ""
+    if not _is_real_desc_any(raw_desc):
         raw_desc = p.get("description_short") or ""
-    if not _is_real_desc(raw_desc):
+    if not _is_real_desc_any(raw_desc):
         raw_desc = ""
     description = raw_desc.strip()
 
     raw_short = p.get("description_short") or ""
-    if not _is_real_desc(raw_short):
+    if not _is_real_desc_any(raw_short):
         raw_short = ""
     description_short = (
         raw_short
@@ -844,14 +912,37 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     else:
         faq = []
 
-    # Reviews
+    # Reviews — combine from review_data, top-level contextual fields, and contextual_data blob
     review_data = p.get("review_data") or {}
     rating = review_data.get("aggregate_rating") or p.get(
         "average_rating") or 0
     review_count = review_data.get(
         "total_reviews") or len(p.get("reviews") or [])
-    pros = review_data.get("pros_and_cons", {}).get("pros") or []
-    cons = review_data.get("pros_and_cons", {}).get("cons") or []
+    pros = list(review_data.get("pros_and_cons", {}).get("pros") or [])
+    cons = list(review_data.get("pros_and_cons", {}).get("cons") or [])
+    # Merge contextual pillar fields (review_pros, review_cons) so all sources are combined
+    for x in (p.get("review_pros") or []):
+        if isinstance(x, str) and x.strip() and x.strip() not in pros:
+            pros.append(x.strip())
+    for x in (p.get("review_cons") or []):
+        if isinstance(x, str) and x.strip() and x.strip() not in cons:
+            cons.append(x.strip())
+    ctx_data = p.get("contextual_data") or {}
+    if isinstance(ctx_data, dict):
+        for x in (ctx_data.get("review_pros") or []):
+            if isinstance(x, str) and x.strip() and x.strip() not in pros:
+                pros.append(x.strip())
+        for x in (ctx_data.get("review_cons") or []):
+            if isinstance(x, str) and x.strip() and x.strip() not in cons:
+                cons.append(x.strip())
+        if not rating and ctx_data.get("average_rating"):
+            try:
+                rating = float(ctx_data["average_rating"])
+            except (TypeError, ValueError):
+                pass
+        if not review_count and (ctx_data.get("reviews") or ctx_data.get("review_sources")):
+            review_count = len(ctx_data.get("reviews") or []) or len(
+                ctx_data.get("review_sources") or [])
 
     # Quality score — use smart validator that scores on what the UI renders
     # (computed after the full dict is built, see below)
@@ -878,30 +969,58 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     contextual_data = p.get("contextual_data") or {}
     if not isinstance(contextual_data, dict):
         contextual_data = {}
-    # Merge in any review synthesis available
-    if p.get("review_synthesis") and isinstance(p["review_synthesis"], dict):
-        contextual_data.setdefault("review_synthesis", p["review_synthesis"])
+    # Merge in any review synthesis available (dict or string)
+    if p.get("review_synthesis"):
+        rs = p["review_synthesis"]
+        if isinstance(rs, dict) and "review_synthesis" not in contextual_data:
+            contextual_data.setdefault("review_synthesis", rs)
+        elif isinstance(rs, str) and rs.strip():
+            contextual_data.setdefault("review_synthesis", {"summary": rs})
+    # Flatten for UI: summary text, real-world insights, review sources
+    review_synthesis_summary = ""
+    if isinstance(contextual_data.get("review_synthesis"), dict):
+        rs = contextual_data["review_synthesis"]
+        review_synthesis_summary = (rs.get("summary") or rs.get(
+            "text") or "").strip() if isinstance(rs, dict) else ""
+    elif isinstance(contextual_data.get("review_synthesis"), str):
+        review_synthesis_summary = (
+            contextual_data["review_synthesis"] or "").strip()
+    real_world_insights = list(p.get("real_world_insights") or [])
+    if isinstance(contextual_data.get("real_world_insights"), list):
+        for i in contextual_data["real_world_insights"]:
+            if isinstance(i, str) and i.strip() and i.strip() not in real_world_insights:
+                real_world_insights.append(i.strip())
+    review_sources = list(p.get("review_sources") or [])
+    if isinstance(contextual_data.get("review_sources"), list):
+        for s in contextual_data["review_sources"]:
+            if isinstance(s, str) and s.strip() and s.strip() not in review_sources:
+                review_sources.append(s.strip())
+
+    # Per source_rules: official only when we have real official-scout data
+    has_official_specs = bool(
+        p.get("official_specs")
+        and isinstance(p["official_specs"], dict)
+        and any(v for v in (p["official_specs"] or {}).values() if v)
+    )
 
     # Sources — clearly track the three pillars
     sources = p.get("sources") or []
     if not sources:
         sources = []
-        if halilit_url:  # We have Halilit data
+        if halilit_url:
             sources.append("halilit")
-        if official_url:  # We have official brand data
-            sources.append("official")
-        elif specs and any(k not in ("sku",) for k in specs):
+        if official_url or has_official_specs or official_description_clean:
             sources.append("official")
         if contextual_data or rating > 0 or pros or cons:
             sources.append("contextual")
         if not sources:
             sources = ["halilit"]
 
-    # Data trust — provenance indicator per field
+    # Data trust — provenance per field (app rules)
     data_trust = {
         "price_source": "halilit" if price > 0 else "none",
-        "specs_source": "official" if specs and any(k not in ("sku",) for k in specs) else ("halilit" if specs else "none"),
-        "description_source": "official" if p.get("official_description") else ("halilit" if description else "none"),
+        "specs_source": "official" if has_official_specs else ("halilit" if specs else "none"),
+        "description_source": "official" if official_description_clean else ("halilit" if description else "none"),
         "image_source": "halilit" if image_url and "halilit" in image_url else ("official" if image_url else "none"),
         "review_source": "contextual" if rating > 0 else "none",
     }
@@ -910,7 +1029,7 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     search_text = f"{name} {brand} {raw_category} {raw_subcategory} {description_short}".lower()
 
     product_dict = {
-        "id": str(pid),
+        "id": pid_str,  # Use normalized ID
         "name": name,
         "brand": brand,
         "brand_logo": brand_logo,
@@ -937,6 +1056,9 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "pros": pros,
         "cons": cons,
         "contextual_data": contextual_data,
+        "review_synthesis_summary": review_synthesis_summary,
+        "real_world_insights": real_world_insights,
+        "review_sources": review_sources,
         "quality_score": 0,  # computed below
         "data_status": "MINIMAL",  # computed below
         "data_missing": [],  # computed below
@@ -965,32 +1087,137 @@ ENABLE_PRODUCT_GRAPH = os.environ.get(
     "ENABLE_PRODUCT_GRAPH", "true").lower() in ("1", "true", "yes")
 
 
-def build_catalog(data_dir: str, resolve: bool = True) -> dict:
+def build_catalog(
+    data_dir: str,
+    resolve: bool = True,
+    on_progress: Optional[Callable[[str, float, str], None]] = None,
+) -> dict:
     """
     Read all brand JSON files, normalize every product, optionally resolve
     missing data, and return a pre-indexed catalog with health metrics.
+    on_progress: optional callback (step, pct_0_to_1, message) for monitoring.
     """
     data_path = Path(data_dir)
     if not data_path.exists():
         logger.warning(f"Data directory not found: {data_dir}")
         return _empty_catalog()
 
-    excluded = {"index.json", "search_index.json", "search_index_min.json",
-                "galaxy_db.json", "package.json"}
+    def prog(step: str, pct: float, msg: str) -> None:
+        if on_progress:
+            on_progress(step, pct, msg)
+
+    # Note: `inventory.json` is a skeleton-sync artifact. We treat it as a
+    # *price overlay* (by id/url), not as a primary product source, to avoid
+    # duplicating products with mismatched ids and losing rich brand-file fields.
+    excluded = {
+        "index.json",
+        "search_index.json",
+        "search_index_min.json",
+        "galaxy_db.json",  # Metadata file, not a brand catalog
+        "package.json",
+        "inventory.json",  # Price overlay only, not primary source
+    }
+
+    json_files = [f for f in sorted(
+        data_path.glob("*.json")) if f.name not in excluded]
+    total_files = len(json_files)
+
+    prog("load", 0.0, "Loading brand files...")
+
+    # ── Skeleton inventory price overlay ─────────────────────────────────────
+    # Many Halilit product pages are blocked or omit price in JSON-LD.
+    # Listing pages (skeleton sync) usually carry the real price, so we use it
+    # to fill missing `price_il` for brand products.
+    inventory_price_by_id: Dict[str, float] = {}
+    inventory_price_by_url: Dict[str, float] = {}
+    inv_path = data_path / "inventory.json"
+    if inv_path.exists():
+        try:
+            inv = json.loads(inv_path.read_text("utf-8"))
+            inv_products = inv.get(
+                "products", []) if isinstance(inv, dict) else []
+            for ip in inv_products:
+                if not isinstance(ip, dict):
+                    continue
+                url = str(ip.get("halilit_url") or ip.get("url") or "").strip()
+                raw_price = ip.get("price") if ip.get(
+                    "price") is not None else ip.get("price_il")
+                try:
+                    price = float(raw_price) if raw_price is not None else 0.0
+                except (TypeError, ValueError):
+                    price = 0.0
+                if price <= 0:
+                    continue
+                if url:
+                    inventory_price_by_url[url] = price
+                    m = re.search(r"/items/(\d+)", url)
+                    if m:
+                        item_id = m.group(1)
+                        # Store both formats: "halilit-{id}" and just "{id}"
+                        inventory_price_by_id[f"halilit-{item_id}"] = price
+                        inventory_price_by_id[item_id] = price
+        except Exception as e:
+            logger.warning(f"Inventory overlay load failed: {e}")
 
     products_map: Dict[str, dict] = {}
     # Dedup by English model name within same brand to catch
     # duplicates across variant files (e.g., "adam audio.json" + "adam-audio.json")
     brand_model_map: Dict[str, str] = {}  # brand+model -> first product id
+    # normalized_name -> first product id (for cross-brand matching)
+    name_to_product_id: Dict[str, str] = {}
     brands_found: set = set()
+    # Optional graph hints coming from OpenClaw-consolidated brand catalogs
+    openclaw_families_meta: Dict[str, dict] = {}
+    openclaw_relationships_map: Dict[str, List[dict]] = {}
 
-    for json_file in sorted(data_path.glob("*.json")):
-        if json_file.name in excluded:
-            continue
-
+    for file_idx, json_file in enumerate(json_files):
+        if total_files > 0 and file_idx > 0 and file_idx % 25 == 0:
+            prog("load", 0.1 + 0.2 * (file_idx / total_files),
+                 f"{len(products_map)} products from {file_idx}/{total_files} files")
         try:
             with open(json_file, "r") as f:
                 file_data = json.load(f)
+
+            # Optional OpenClaw-consolidated extras (families, relationships) on a per-brand file
+            brand_identity = file_data.get(
+                "brand_identity") if isinstance(file_data, dict) else {}
+            brand_name_from_file = (brand_identity or {}).get("name") or ""
+            families = file_data.get("families") if isinstance(
+                file_data, dict) else []
+            relationships = file_data.get(
+                "relationships") if isinstance(file_data, dict) else []
+
+            # Map raw product ids → family_id for this brand (OpenClaw hint)
+            raw_id_to_family_id: Dict[str, str] = {}
+            if isinstance(families, list):
+                for fam in families:
+                    if not isinstance(fam, dict):
+                        continue
+                    fid = str(fam.get("family_id") or "").strip()
+                    if not fid:
+                        continue
+                    # Initialize or merge family metadata (brand-level graph hints)
+                    if fid not in openclaw_families_meta:
+                        openclaw_families_meta[fid] = {
+                            "id": fid,
+                            "family_name": fam.get("family_name") or "",
+                            "brand": fam.get("brand") or brand_name_from_file or "",
+                            "series": fam.get("series") or "",
+                            "hero_image": "",
+                            "variant_count": 0,
+                            "source": "openclaw",
+                        }
+                    variant_ids = fam.get("variant_ids") or []
+                    if isinstance(variant_ids, list):
+                        # Track max variant_count seen for this family across files (defensive)
+                        prev_count = int(openclaw_families_meta[fid].get(
+                            "variant_count", 0) or 0)
+                        openclaw_families_meta[fid]["variant_count"] = max(
+                            prev_count, len(variant_ids))
+                        for vid in variant_ids:
+                            if not vid:
+                                continue
+                            raw_id_to_family_id[str(vid)] = fid
 
             raw_products = (
                 file_data if isinstance(file_data, list)
@@ -999,22 +1226,102 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             )
 
             for raw in raw_products:
+                # Seed ID before normalization so we can map OpenClaw hints → normalized products
+                raw_pid = str(
+                    raw.get("halilit_id")
+                    or raw.get("id")
+                    or raw.get("sku")
+                    or ""
+                )
+
+                # Apply skeleton price overlay (only when missing/zero)
+                try:
+                    current_price = _extract_price(raw)
+                except Exception:
+                    current_price = 0.0
+                if current_price <= 0 and (inventory_price_by_id or inventory_price_by_url):
+                    raw_url = str(raw.get("halilit_url") or raw.get(
+                        "source_url") or "").strip()
+                    overlay_price = 0.0
+                    if raw_pid:
+                        # Try both "halilit-{id}" and just "{id}" formats
+                        overlay_price = inventory_price_by_id.get(raw_pid, 0.0)
+                        if overlay_price <= 0 and raw_pid.startswith("halilit-"):
+                            overlay_price = inventory_price_by_id.get(
+                                raw_pid.replace("halilit-", ""), 0.0)
+                        elif overlay_price <= 0 and not raw_pid.startswith("halilit-"):
+                            overlay_price = inventory_price_by_id.get(
+                                f"halilit-{raw_pid}", 0.0)
+                    if overlay_price <= 0 and raw_url:
+                        overlay_price = inventory_price_by_url.get(
+                            raw_url, 0.0)
+                    if overlay_price > 0:
+                        raw["price_il"] = overlay_price
+                        if not raw.get("price_eilat"):
+                            raw["price_eilat"] = round(overlay_price / 1.17, 2)
+
                 product = normalize_product(raw, fallback_brand=json_file.stem)
                 if not product:
                     continue
 
-                # Dedup: check for same brand + English model name
+                # Attach OpenClaw-provided family_id when available
+                if raw_pid and raw_pid in raw_id_to_family_id:
+                    product["family_id"] = raw_id_to_family_id[raw_pid]
+
+                # Dedup: check for same brand + English model name OR exact name match
                 eng_model = _extract_english_name(
                     product["name"]).lower().strip()
                 brand_key = _brand_dedup_key(product["brand"])
-                dedup_key = f"{brand_key}::{eng_model}" if eng_model else ""
+                normalized_name = product["name"].lower().strip()
 
+                # Create multiple dedup keys for better matching
+                dedup_key = f"{brand_key}::{eng_model}" if eng_model else ""
+                name_dedup_key = f"{brand_key}::{normalized_name}" if normalized_name else ""
+
+                # Check all dedup keys - use first match found
+                found_duplicate = False
+                matched_key = None
+                existing_id = None
+
+                # 1. Check brand+model key (most specific)
                 if dedup_key and dedup_key in brand_model_map:
-                    # Merge: keep whichever has higher quality, but merge missing fields
+                    matched_key = dedup_key
                     existing_id = brand_model_map[dedup_key]
+                    found_duplicate = True
+                # 2. Check brand+full name key
+                elif name_dedup_key and name_dedup_key in brand_model_map:
+                    matched_key = name_dedup_key
+                    existing_id = brand_model_map[name_dedup_key]
+                    found_duplicate = True
+                # 3. Check exact name match (handles "Other" brand or wrong brand assignment)
+                elif normalized_name and normalized_name in name_to_product_id:
+                    existing_id = name_to_product_id[normalized_name]
                     if existing_id in products_map:
                         existing = products_map[existing_id]
-                        if product["quality_score"] > existing["quality_score"]:
+                        existing_brand = existing.get("brand", "").lower()
+                        new_brand = product["brand"].lower()
+                        # Merge if brands are different (catches "Other" brand duplicates)
+                        if existing_brand != new_brand:
+                            found_duplicate = True
+                            matched_key = normalized_name  # Use normalized name as key
+
+                if found_duplicate and existing_id:
+                    # Merge: keep whichever has higher quality, but merge missing fields
+                    if existing_id in products_map:
+                        existing = products_map[existing_id]
+                        # When merging, prefer non-"Other" brand
+                        existing_brand = existing.get("brand", "").lower()
+                        new_brand = product["brand"].lower()
+                        prefer_existing = True
+
+                        # If existing has "Other" brand and new has real brand, prefer new
+                        if existing_brand == "other" and new_brand != "other":
+                            prefer_existing = False
+                        # If both have real brands, prefer higher quality score
+                        elif existing_brand != "other" and new_brand != "other":
+                            prefer_existing = product["quality_score"] <= existing["quality_score"]
+
+                        if not prefer_existing:
                             # New one is better — use it but keep any data the old one had
                             if not product["image_url"] and existing["image_url"]:
                                 product["image_url"] = existing["image_url"]
@@ -1022,7 +1329,14 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                                 product["description"] = existing["description"]
                             if not product["specs"] and existing["specs"]:
                                 product["specs"] = existing["specs"]
+                            if not product.get("price") and existing.get("price"):
+                                product["price"] = existing["price"]
+                            if not product.get("price_eilat") and existing.get("price_eilat"):
+                                product["price_eilat"] = existing["price_eilat"]
                             products_map[existing_id] = product
+                            # Update brand_model_map to point to new product
+                            if matched_key:
+                                brand_model_map[matched_key] = product["id"]
                         else:
                             # Existing is better — merge any new data into it
                             if not existing["image_url"] and product["image_url"]:
@@ -1031,20 +1345,75 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                                 existing["description"] = product["description"]
                             if not existing["specs"] and product["specs"]:
                                 existing["specs"] = product["specs"]
+                            if not existing.get("price") and product.get("price"):
+                                existing["price"] = product["price"]
+                            if not existing.get("price_eilat") and product.get("price_eilat"):
+                                existing["price_eilat"] = product["price_eilat"]
+                            # If existing has "Other" brand and new has real brand, update brand
+                            if existing_brand == "other" and new_brand != "other":
+                                existing["brand"] = product["brand"]
+                            # Propagate OpenClaw family hints into the better existing product
+                            if not existing.get("family_id") and product.get("family_id"):
+                                existing["family_id"] = product["family_id"]
                         continue
 
                 if product["id"] not in products_map:
                     products_map[product["id"]] = product
+                    # Register all dedup keys to catch duplicates from different angles
                     if dedup_key:
                         brand_model_map[dedup_key] = product["id"]
+                    if name_dedup_key and name_dedup_key != dedup_key:
+                        brand_model_map[name_dedup_key] = product["id"]
+                    # Register exact name for cross-brand matching (handles "Other" brand)
+                    if normalized_name and normalized_name not in name_to_product_id:
+                        name_to_product_id[normalized_name] = product["id"]
                     brands_found.add(product["brand"])
+                else:
+                    # If an existing product already occupies this ID, merge family_id if missing
+                    existing = products_map[product["id"]]
+                    if not existing.get("family_id") and product.get("family_id"):
+                        existing["family_id"] = product["family_id"]
+
+            # Incorporate OpenClaw relationships for this brand (optional, high-confidence hints)
+            if isinstance(relationships, list):
+                for rel in relationships:
+                    if not isinstance(rel, dict):
+                        continue
+                    src = str(rel.get("source_id") or "").strip()
+                    tgt = str(rel.get("target_id") or "").strip()
+                    rtype = str(rel.get("relationship_type")
+                                or "").strip().lower()
+                    if not src or not tgt or src == tgt:
+                        continue
+                    if rtype not in (
+                        "accessory_for",
+                        "alternative_to",
+                        "bundle_with",
+                        "compatible_with",
+                        "variant_of",
+                    ):
+                        continue
+                    rel_obj = {
+                        "source_id": src,
+                        "target_id": tgt,
+                        "relationship_type": rtype,
+                        "source": "openclaw",
+                    }
+                    # Attach relation to both endpoints so lookups by product_id are symmetric
+                    for pid in (src, tgt):
+                        bucket = openclaw_relationships_map.setdefault(pid, [])
+                        if rel_obj not in bucket:
+                            bucket.append(rel_obj)
         except Exception as e:
             logger.error(f"Error loading {json_file.name}: {e}")
 
     products = list(products_map.values())
+    prog("load", 0.3,
+         f"Loaded {len(products)} products from {total_files} files")
 
     # Smart resolution — auto-fill missing data using peer heuristics
     if resolve and products:
+        prog("resolve", 0.4, "Resolving catalog (peer heuristics)...")
         from backend.catalog_validator import resolve_catalog, validate_catalog
         products, resolve_summary = resolve_catalog(products)
         logger.info(
@@ -1059,6 +1428,8 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         -p["quality_score"],
     ))
 
+    prog("graph", 0.5, "Building product graph...")
+
     # ── Product Graph: Family & Relationship Discovery ──
     graph_indexes = {}
     graph_stats = {}
@@ -1067,18 +1438,29 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         try:
             from backend.product_graph import ProductGraph
             from backend.product_graph_store import get_graph_store
-
             # Build graph from flat products
             graph = ProductGraph.from_flat_products(products)
 
             # Load persisted families/relationships (curated data survives rebuilds)
             store = get_graph_store()
+            has_snapshot = store.has_json_snapshot()
             graph = store.load_graph_overlay(graph)
 
-            # Persist discovered graph back to JSON snapshot
-            store.export_json_snapshot(graph)
+            # CRITICAL: Skip expensive discovery on every load — use cached graph for instant startup.
+            # Discovery only runs on explicit GET /api/conductor/refresh.
+            if not has_snapshot:
+                logger.warning(
+                    "⚠️  Graph snapshot not found. Starting with EMPTY graph for fast load."
+                )
+                logger.warning(
+                    "👉 Call GET /api/conductor/refresh to trigger full relationship discovery."
+                )
+            else:
+                # Snapshot exists — use cached families/relationships, skip re-discovery.
+                # sync_relationship_ids_to_products populates each product from loaded graph edges.
+                graph.sync_relationship_ids_to_products()
 
-            # Merge graph data back into flat products
+            # Merge graph data back into flat products (family + variant + relationship_ids)
             for i, p in enumerate(products):
                 pid = p["id"]
                 if pid in graph.products:
@@ -1086,6 +1468,7 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                     p["family_id"] = cp.family_id
                     p["variant_key"] = cp.variant.variant_key if cp.variant else None
                     p["variant_is_default"] = cp.variant.is_default if cp.variant else None
+                    p["relationship_ids"] = list(cp.relationship_ids)
 
             # Build graph-specific indexes
             product_id_to_idx = {p["id"]: i for i, p in enumerate(products)}
@@ -1103,6 +1486,8 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                     "variant_count": len(fam.variant_ids),
                 }
 
+            prog(
+                "graph", 0.75, f"Graph: {graph_stats.get('total_families', 0)} families, {graph_stats.get('total_relationships', 0)} rels")
             logger.info(
                 f"Product graph: {graph_stats.get('total_families', 0)} families, "
                 f"{graph_stats.get('total_relationships', 0)} relationships, "
@@ -1112,12 +1497,16 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             logger.warning(f"Product graph discovery failed (non-fatal): {e}")
             graph_indexes = {"by_family": {}, "relationships": {}}
             graph_stats = {}
+            for p in products:
+                p.setdefault("relationship_ids", [])
+
     else:
         # Graph disabled — add empty fields for consistent shape
         for p in products:
             p["family_id"] = None
             p["variant_key"] = None
             p["variant_is_default"] = None
+            p["relationship_ids"] = []
 
     # Build indexes
     by_galaxy: Dict[str, List[int]] = {}
@@ -1140,9 +1529,16 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         spectrum_counts[sid] = spectrum_counts.get(sid, 0) + 1
         brand_counts[b] = brand_counts.get(b, 0) + 1
 
+    prog("index", 0.85, "Computing health metrics...")
+
+    prog("index", 0.85, "Computing health metrics...")
+
     # Catalog health metrics
     from backend.catalog_validator import validate_catalog as _validate_catalog
     health = _validate_catalog(products)
+
+    prog("done", 1.0,
+         f"Done: {len(products)} products, {len(brands_found)} brands")
 
     metadata = {
         "total_products": len(products),
@@ -1174,9 +1570,43 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         "by_spectrum": by_spectrum,
         "by_brand": by_brand,
     }
+
+    # Combine relationships from product graph (when enabled) with OpenClaw hints
+    combined_relationships: Dict[str, List[dict]] = {}
     if graph_indexes:
         all_indexes["by_family"] = graph_indexes.get("by_family", {})
-        all_indexes["relationships"] = graph_indexes.get("relationships", {})
+        base_rels = graph_indexes.get("relationships", {}) or {}
+        # Shallow copy to avoid mutating graph_indexes in-place
+        combined_relationships = {
+            pid: list(rels) for pid, rels in base_rels.items()
+        }
+
+    if openclaw_relationships_map:
+        if not combined_relationships:
+            combined_relationships = {}
+        for pid, rels in openclaw_relationships_map.items():
+            bucket = combined_relationships.setdefault(pid, [])
+            for r in rels:
+                if r not in bucket:
+                    bucket.append(r)
+
+    # Always include relationships index (even if empty) so frontend can check for relationships
+    if combined_relationships:
+        all_indexes["relationships"] = combined_relationships
+    elif graph_indexes and graph_indexes.get("relationships"):
+        # Fallback to graph indexes if no OpenClaw hints
+        all_indexes["relationships"] = graph_indexes["relationships"]
+    else:
+        # Always include relationships index (even if empty)
+        all_indexes["relationships"] = {}
+
+    # Prefer OpenClaw-provided family metadata when present; fall back to graph-only
+    if openclaw_families_meta:
+        if not families_meta:
+            families_meta = openclaw_families_meta
+        else:
+            for fid, meta in openclaw_families_meta.items():
+                families_meta.setdefault(fid, meta)
 
     return {
         "products": products,

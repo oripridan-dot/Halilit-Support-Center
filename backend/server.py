@@ -1,105 +1,273 @@
 """
-Halilit Support Center — Lean FastAPI Server (JIT Architecture v9)
+Halilit Support Center — JIT Architecture API Server
 
-Endpoints:
-  GET  /api/health                         — Health check
-  GET  /api/conductor/catalog              — Lightweight inventory catalog
-  GET  /api/conductor/taxonomy             — Category hierarchy
-  GET  /api/conductor/categories           — Category stats
-  POST /api/conductor/filter               — Filter products
-  GET  /api/conductor/refresh              — Force catalog rebuild
-  GET  /api/product/{id}/intelligence      — JIT product enrichment
-  GET  /api/product/{id}/compare/{other}   — JIT product comparison
-  POST /api/sync/inventory                 — Trigger skeleton sync
-  GET  /api/catalog/health                 — Catalog quality metrics
-  GET  /api/search                         — Text search
-  +    /api/spectrum/*                     — Spectrum model grouping
-  +    /api/curation/*                     — Product graph curation
+Lightweight FastAPI server that serves:
+  1. Skeleton inventory (pre-built catalog from frontend/public/data/)
+  2. JIT Intelligence endpoint (streams live product research via Gemini)
+  3. Static frontend assets
 """
 
+from fastapi.responses import StreamingResponse
+from fastapi.responses import Response, FileResponse, JSONResponse
+from backend import __version__
+from backend.unified_data_service import get_conductor_data_service
+from backend.product_normalizer import build_catalog
+import os
+import sys
+import logging
 import json
 import gzip
 import time
 import logging
 import asyncio
 import threading
+from contextlib import asynccontextmanager
 from pathlib import Path
 from datetime import datetime
-
-from fastapi import FastAPI, Request, Response
-from fastapi.responses import JSONResponse, FileResponse
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
+from backend.hierarchy import api as hierarchy_api
+from backend.memory_utils import (
+    start_memory_tracking,
+    log_memory_snapshot,
+    check_memory_limit,
+    cleanup_large_caches,
+)
 
-from backend.product_normalizer import build_catalog, GALAXIES
-
-# ── Logging ──
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-# ── Paths ──
-BASE_DIR = Path(__file__).parent
-FRONTEND_DIST = BASE_DIR.parent / "frontend" / "dist"
-FRONTEND_PUBLIC_DATA = BASE_DIR.parent / "frontend" / "public" / "data"
+# Disk cache: load pre-built catalog to avoid slow first build on restart
+CATALOG_CACHE_PATH = DATA_DIR / "catalog_cache.json.gz"
+CATALOG_CACHE_MAX_AGE_SEC = 86400  # 24 hours; rebuild if older
 
 # ── Server-side catalog cache ──
 _catalog_cache_json: bytes | None = None
 _catalog_cache_gzip: bytes | None = None
-_catalog_cache_dict: dict | None = None
+_catalog_cache_dict: dict | None = None  # Only keep dict when actively needed
 _catalog_cache_time: float = 0
+# mtime of catalog_cache.json.gz when we last loaded/wrote it
+_catalog_disk_mtime: float = 0
 _catalog_build_lock = threading.Lock()
-CATALOG_CACHE_TTL = 300  # 5 minutes
+# In dev, use short TTL so rebuild-catalog + refresh shows new data quickly
+_DEV = os.environ.get("HALILIT_DEV", "").lower() in ("1", "true", "yes")
+CATALOG_CACHE_TTL = 30 if _DEV else 300  # 30s dev, 5 min prod
 
-# Fields to strip from catalog response (never rendered by frontend)
-STRIP_FIELDS = {"contextual_data", "search_text", "subcategory", "currency"}
+# Fields to strip from products in the catalog response (keep contextual_data so UI can show review_synthesis, real_world_insights, review_sources)
+STRIP_FIELDS = {"search_text", "subcategory", "currency"}
+
+# Async refresh state (thread-safe) — non-blocking catalog rebuild
+_refresh_state: dict = {
+    "status": "idle",  # idle | running | complete | failed
+    "started_at": None,
+    "finished_at": None,
+    "product_count": None,
+    "brands_count": None,
+    "error": None,
+}
+_refresh_state_lock = threading.Lock()
+
+# Catalog build progress (thread-safe) — for first-load monitoring
+_build_progress: dict = {"status": "idle", "step": "",
+                         "pct": 0.0, "message": "", "elapsed_s": 0}
+_build_progress_lock = threading.Lock()
 
 # ── App ──
 app = FastAPI(title="Halilit Support Center", version="9.0-jit")
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# ═══════════════════════════════════════════════════════════════════════════
+# LIFESPAN (startup / shutdown)
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Startup and shutdown lifecycle."""
+    # Start memory tracking
+    start_memory_tracking()
+    log_memory_snapshot("startup")
+
+    try:
+        from backend.mcp.startup import init_mcp
+        await init_mcp()
+        logger.info("MCP: Ready")
+    except Exception as e:
+        logger.warning(f"MCP init failed: {e}")
+
+    log_memory_snapshot("after_mcp_init")
+
+    # Periodic memory check and cleanup
+    async def periodic_memory_check():
+        while True:
+            await asyncio.sleep(60)  # Check every minute
+            check_memory_limit()
+            cleanup_large_caches()
+
+    asyncio.create_task(periodic_memory_check())
+
+    yield
+
+    try:
+        from backend.mcp.startup import shutdown_mcp
+        await shutdown_mcp()
+        logger.info("MCP: Shutdown complete")
+    except Exception as e:
+        logger.warning(f"MCP shutdown: {e}")
+
+    log_memory_snapshot("shutdown")
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# APP SETUP
+# ═══════════════════════════════════════════════════════════════════════════
+
+app = FastAPI(title="Halilit Support Center API",
+              version=__version__, lifespan=lifespan)
+
+_origins = os.environ.get("CORS_ORIGINS", "*").strip()
+_cors_origins = _origins.split(",") if _origins else ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=_cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ── Sub-routers ──
+# ── MCP Router ──
 try:
-    from backend.api.spectrum_router import router as spectrum_router
-    app.include_router(spectrum_router, tags=["Spectrum"])
-    logger.info("✅ Spectrum endpoints registered")
-except Exception as e:
-    logger.warning(f"⚠️ Spectrum router: {e}")
+    from backend.api.mcp_router import router as mcp_router
+    app.include_router(mcp_router)
+    logger.info("MCP endpoints registered at /api/mcp")
 
-try:
-    from backend.api.curation_router import router as curation_router
-    app.include_router(curation_router, tags=["Product Graph Curation"])
-    logger.info("✅ Curation endpoints registered")
+    # Include hierarchy API router
+    app.include_router(hierarchy_api.router)
+    logger.info("Hierarchy endpoints registered at /api/hierarchy")
 except Exception as e:
-    logger.warning(f"⚠️ Curation router: {e}")
+    logger.warning(f"Failed to register MCP: {e}")
 
-try:
-    from backend.api.jit_router import router as jit_router
-    app.include_router(jit_router, tags=["JIT Intelligence"])
-    logger.info("✅ JIT Intelligence endpoints registered")
-except Exception as e:
-    logger.warning(f"⚠️ JIT router: {e}")
+# Paths
+FRONTEND_DIST = str(FRONTEND_DIR / "dist")
 
 
 # ═══════════════════════════════════════════════════════════════════════════
 # CATALOG CACHE
 # ═══════════════════════════════════════════════════════════════════════════
 
-def _build_catalog_cache():
-    """Build catalog and cache pre-serialized JSON + gzip. Thread-safe."""
-    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+def _invalidate_catalog_cache():
+    """Force next request to rebuild catalog (used after sync)."""
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time, _catalog_disk_mtime
     with _catalog_build_lock:
-        if _catalog_cache_json is not None and (time.time() - _catalog_cache_time) < CATALOG_CACHE_TTL:
-            return
-        t0 = time.time()
-        catalog = build_catalog(str(FRONTEND_PUBLIC_DATA))
+        _catalog_cache_json = None
+        _catalog_cache_gzip = None
+        _catalog_cache_dict = None
+        _catalog_cache_time = 0
+        _catalog_disk_mtime = 0
+        try:
+            if CATALOG_CACHE_PATH.exists():
+                CATALOG_CACHE_PATH.unlink()
+        except OSError:
+            pass
+
+
+def _load_catalog_from_disk() -> bool:
+    """Load pre-built catalog from disk. Returns True if loaded successfully.
+    Invalidates cache if it lacks relationship data (required for structured-items
+    accessory hierarchy: flybars/covers only under parent, not top-level cards).
+    """
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time, _catalog_disk_mtime
+    if not CATALOG_CACHE_PATH.exists():
+        return False
+    try:
+        age = time.time() - CATALOG_CACHE_PATH.stat().st_mtime
+        if age > CATALOG_CACHE_MAX_AGE_SEC:
+            return False
+        with gzip.open(CATALOG_CACHE_PATH, "rb") as f:
+            json_bytes = f.read()
+        catalog = json.loads(json_bytes.decode("utf-8"))
+        rels = catalog.get("indexes", {}).get("relationships", {})
+        if not rels or not isinstance(rels, dict):
+            logger.info(
+                "Catalog disk cache has no relationship index — invalidating so "
+                "structured-items hierarchy (accessory-only families) can apply."
+            )
+            try:
+                CATALOG_CACHE_PATH.unlink()
+            except OSError:
+                pass
+            return False
+        gzip_bytes = gzip.compress(json_bytes, compresslevel=6)
+        _catalog_cache_json = json_bytes
+        _catalog_cache_gzip = gzip_bytes
         _catalog_cache_dict = catalog
+        _catalog_cache_time = time.time()
+        _catalog_disk_mtime = CATALOG_CACHE_PATH.stat().st_mtime
+        n = catalog.get("metadata", {}).get("total_products", 0)
+        logger.info(
+            f"Catalog: loaded from disk ({n} products, {len(json_bytes)//1024}KB)")
+        return True
+    except Exception as e:
+        logger.warning(f"Catalog disk cache load failed: {e}")
+        return False
+
+# ═══════════════════════════════════════════════════════════════════════════
+# CATALOG CACHE
+# ═══════════════════════════════════════════════════════════════════════════
+
+def _build_catalog_cache():
+    """Build catalog and cache. Uses disk cache if fresh, else builds from scratch.
+    If catalog_cache.json.gz was updated on disk (e.g. by conductor rebuild-catalog),
+    we reload it so the UI sees new data without restarting the server.
+    """
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time, _catalog_disk_mtime
+    with _catalog_build_lock:
+        now = time.time()
+        if _catalog_cache_json is not None and (now - _catalog_cache_time) < CATALOG_CACHE_TTL:
+            # In-memory cache valid — but if disk file was updated (e.g. rebuild-catalog), reload
+            if CATALOG_CACHE_PATH.exists():
+                disk_mtime = CATALOG_CACHE_PATH.stat().st_mtime
+                if disk_mtime > _catalog_disk_mtime:
+                    _catalog_cache_json = None
+                    _catalog_cache_gzip = None
+                    _catalog_cache_dict = None
+                    _catalog_cache_time = 0
+                    _catalog_disk_mtime = 0
+                    logger.info(
+                        "Catalog disk file updated — will reload on next use")
+            if _catalog_cache_json is not None:
+                return
+        # Fast path: load from disk cache
+        if _load_catalog_from_disk():
+            return
+        # Slow path: full build with progress reporting
+        t0 = time.time()
+
+        def on_progress(step: str, pct: float, msg: str) -> None:
+            with _build_progress_lock:
+                _build_progress["status"] = "building"
+                _build_progress["step"] = step
+                _build_progress["pct"] = pct
+                _build_progress["message"] = msg
+                _build_progress["elapsed_s"] = int(time.time() - t0)
+
+        with _build_progress_lock:
+            _build_progress["status"] = "building"
+            _build_progress["step"] = "start"
+            _build_progress["pct"] = 0.0
+            _build_progress["message"] = "Building catalog..."
+            _build_progress["elapsed_s"] = 0
+
+        catalog = build_catalog(
+            str(FRONTEND_PUBLIC_DATA),
+            resolve=False,
+            on_progress=on_progress,
+        )
+
+        with _build_progress_lock:
+            _build_progress["status"] = "idle"
+            _build_progress["pct"] = 1.0
 
         for p in catalog["products"]:
             for field in STRIP_FIELDS:
@@ -112,16 +280,32 @@ def _build_catalog_cache():
 
         _catalog_cache_json = json_bytes
         _catalog_cache_gzip = gzip_bytes
+        # Only keep dict in memory if memory is available (will rebuild from JSON when needed)
+        mem_check = check_memory_limit()
+        if mem_check:
+            _catalog_cache_dict = catalog
+        else:
+            _catalog_cache_dict = None  # Free memory, will rebuild from JSON when needed
+            logger.info(
+                "Memory limit high — keeping catalog dict out of memory")
         _catalog_cache_time = time.time()
         ms = int((time.time() - t0) * 1000)
 
-        meta = catalog["metadata"]
+        log_memory_snapshot("after_catalog_build")
+
+        # Persist for fast restarts
+        try:
+            DATA_DIR.mkdir(parents=True, exist_ok=True)
+            with gzip.open(CATALOG_CACHE_PATH, "wb", compresslevel=6) as f:
+                f.write(json_bytes)
+            _catalog_disk_mtime = CATALOG_CACHE_PATH.stat().st_mtime
+        except OSError as e:
+            logger.warning(f"Could not write catalog cache: {e}")
+
         logger.info(
-            f"✅ Catalog: {meta['total_products']} products, "
-            f"{len(meta['brands'])} brands, "
-            f"health: {meta.get('health_score', '?')}/100 "
-            f"({ms}ms, {len(json_bytes)//1024}KB → {len(gzip_bytes)//1024}KB gzip)"
-        )
+            f"Catalog: {catalog['metadata']['total_products']} products, "
+            f"{len(catalog['metadata']['brands'])} brands "
+            f"(built in {build_ms}ms, {len(json_bytes)//1024}KB)")
 
 
 def _startup_catalog_build():
@@ -131,35 +315,118 @@ def _startup_catalog_build():
         logger.error(f"Startup catalog build failed: {e}")
 
 
+def _run_refresh_background():
+    """Run catalog refresh in background thread. Updates _refresh_state when done."""
+    global _refresh_state
+    with _refresh_state_lock:
+        _refresh_state["status"] = "running"
+        _refresh_state["started_at"] = datetime.now().isoformat()
+        _refresh_state["finished_at"] = None
+        _refresh_state["product_count"] = None
+        _refresh_state["brands_count"] = None
+        _refresh_state["error"] = None
+    try:
+        _invalidate_catalog_cache()
+        service = get_conductor_data_service()
+        service._catalog_cache = None
+        service._cache_timestamp = None
+        _build_catalog_cache()
+        meta = _catalog_cache_dict.get(
+            "metadata", {}) if _catalog_cache_dict else {}
+        with _refresh_state_lock:
+            _refresh_state["status"] = "complete"
+            _refresh_state["finished_at"] = datetime.now().isoformat()
+            _refresh_state["product_count"] = meta.get("total_products", 0)
+            _refresh_state["brands_count"] = len(meta.get("brands", []))
+        logger.info(
+            f"Background refresh complete: {_refresh_state['product_count']} products")
+    except Exception as e:
+        logger.error(f"Background refresh failed: {e}")
+        with _refresh_state_lock:
+            _refresh_state["status"] = "failed"
+            _refresh_state["finished_at"] = datetime.now().isoformat()
+            _refresh_state["error"] = str(e)
+
+
 _startup_thread = threading.Thread(target=_startup_catalog_build, daemon=True)
 _startup_thread.start()
-
-
-def _get_catalog() -> dict:
-    """Get cached catalog dict, rebuilding if expired."""
-    global _catalog_cache_dict, _catalog_cache_time
-    if _catalog_cache_dict is None or (time.time() - _catalog_cache_time) > CATALOG_CACHE_TTL:
-        _build_catalog_cache()
-    if _catalog_cache_dict is None:
-        _startup_thread.join(timeout=60)
-    return _catalog_cache_dict or {"products": [], "metadata": {}, "indexes": {}}
 
 
 # ═══════════════════════════════════════════════════════════════════════════
 # API ENDPOINTS
 # ═══════════════════════════════════════════════════════════════════════════
 
+# ═══════════════════════════════════════════════════════════════════════════
+# API ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════
+
 @app.get("/api/health")
-async def health():
-    return {"status": "healthy", "version": "9.0-jit", "service": "Halilit Support Center"}
+async def health_check():
+    return {
+        "status": "healthy",
+        "version": __version__,
+        "service": "Halilit Support Center",
+        "architecture": "JIT",
+    }
+
+
+@app.get("/api/dashboard/stats")
+async def get_dashboard_stats():
+    """Operator Dashboard key metrics: total products, calls-for-price count,
+    last ingestion run status, distinct brands count."""
+    global _catalog_cache_json, _catalog_cache_dict, _catalog_cache_time
+    try:
+        now = time.time()
+        # Use cached dict if available; otherwise parse from JSON bytes
+        if _catalog_cache_dict is not None and (now - _catalog_cache_time) <= CATALOG_CACHE_TTL:
+            catalog = _catalog_cache_dict
+        elif _catalog_cache_json is not None:
+            catalog = json.loads(_catalog_cache_json.decode("utf-8"))
+        else:
+            loop = asyncio.get_event_loop()
+            await loop.run_in_executor(None, _build_catalog_cache)
+            if _catalog_cache_json is None:
+                return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+            catalog = json.loads(_catalog_cache_json.decode("utf-8"))
+
+        products = catalog.get("products", [])
+        total = len(products)
+        cfp = sum(1 for p in products if not p.get("price"))
+        brands = len({p.get("brand", "") for p in products if p.get("brand")})
+
+        with _refresh_state_lock:
+            refresh = dict(_refresh_state)
+
+        last_run: dict = {"status": "never",
+                          "finished_at": None, "product_count": None}
+        if refresh.get("finished_at"):
+            last_run = {
+                "status": refresh.get("status", "unknown"),
+                "finished_at": refresh["finished_at"],
+                "product_count": refresh.get("product_count"),
+            }
+        elif refresh.get("status") == "running":
+            last_run = {"status": "running",
+                        "finished_at": None, "product_count": None}
+
+        return {
+            "total_products": total,
+            "calls_for_price": cfp,
+            "top_brands_count": brands,
+            "last_ingestion_run": last_run,
+        }
+    except Exception as e:
+        logger.error(f"Dashboard stats error: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 
 @app.get("/api/conductor/catalog")
 async def get_conductor_catalog(request: Request):
-    """Primary data endpoint — pre-indexed inventory catalog with gzip support."""
+    """Single source of truth — pre-indexed catalog from skeleton inventory."""
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_time
     try:
-        if _catalog_cache_json is None or (time.time() - _catalog_cache_time) > CATALOG_CACHE_TTL:
+        now = time.time()
+        if _catalog_cache_json is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
             loop = asyncio.get_event_loop()
             await loop.run_in_executor(None, _build_catalog_cache)
 
@@ -169,279 +436,341 @@ async def get_conductor_catalog(request: Request):
         if _catalog_cache_json is None:
             return JSONResponse(status_code=503, content={"error": "Catalog still building"})
 
-        accept = request.headers.get("accept-encoding", "")
-        if "gzip" in accept and _catalog_cache_gzip:
-            return Response(content=_catalog_cache_gzip, media_type="application/json",
-                            headers={"Content-Encoding": "gzip"})
+        accept_encoding = request.headers.get("accept-encoding", "")
+        if "gzip" in accept_encoding and _catalog_cache_gzip is not None:
+            return Response(
+                content=_catalog_cache_gzip,
+                media_type="application/json",
+                headers={"Content-Encoding": "gzip"},
+            )
+
+        return Response(content=_catalog_cache_json, media_type="application/json")
 
         return Response(content=_catalog_cache_json, media_type="application/json")
     except Exception as e:
-        logger.error(f"Catalog error: {e}")
+        logger.error(f"Failed to generate catalog: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+# Legacy endpoints — redirect to conductor catalog
+@app.get("/api/galaxy-view")
+async def galaxy_view(request: Request):
+    return await get_conductor_catalog(request)
+
+
+@app.get("/api/catalog")
+async def get_catalog(request: Request):
+    return await get_conductor_catalog(request)
+
+
+# ── Removed endpoints (Out of Scope per OPERATOR_CONSOLE_SPEC.md) ─────────────
+# Galaxy, Spectrum, Arena, VisualGrouping views have been frozen and removed.
+# These stubs return 410 Gone so callers get a clear signal instead of a 404.
+
+@app.get("/api/spectrum/{spectrum_id}")
+async def get_spectrum_star_view(spectrum_id: str):
+    """Removed — Spectrum views are out of scope per OPERATOR_CONSOLE_SPEC.md."""
+    return JSONResponse(status_code=410, content={"error": "Spectrum views removed. Use /api/conductor/catalog."})
+
+
+@app.get("/api/structured-items")
+async def get_structured_items():
+    """Removed — Structured items endpoint is out of scope per OPERATOR_CONSOLE_SPEC.md."""
+    return JSONResponse(status_code=410, content={"error": "Structured-items removed. Use /api/conductor/catalog."})
+
+
+@app.post("/api/visual-grouping/suggest")
+async def post_visual_grouping_suggest(request: Request):
+    """Removed — Visual grouping is out of scope per OPERATOR_CONSOLE_SPEC.md."""
+    return JSONResponse(status_code=410, content={"error": "Visual-grouping removed. Use /api/conductor/catalog."})
+
+
+@app.get("/api/catalog/health")
+async def get_catalog_health():
+    """Catalog health metrics."""
+    try:
+        from backend.catalog_validator import validate_catalog
+
+        global _catalog_cache_dict, _catalog_cache_time, _catalog_cache_json
+        now = time.time()
+        if _catalog_cache_dict is not None and (now - _catalog_cache_time) <= CATALOG_CACHE_TTL:
+            catalog = _catalog_cache_dict
+        elif _catalog_cache_json is not None:
+            # Rebuild from JSON if dict not in memory
+            catalog = json.loads(_catalog_cache_json.decode("utf-8"))
+        else:
+            loop = asyncio.get_event_loop()
+            catalog = await loop.run_in_executor(
+                None, build_catalog, str(FRONTEND_PUBLIC_DATA))
+        health = validate_catalog(catalog["products"])
+        return health
+    except Exception as e:
+        logger.error(f"Failed to get catalog health: {e}")
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
 @app.get("/api/conductor/taxonomy")
-async def get_taxonomy():
-    """Category hierarchy from GALAXIES taxonomy."""
-    catalog = _get_catalog()
-    brands = sorted(catalog.get("metadata", {}).get("brands", []))
-
-    categories = []
-    for galaxy in GALAXIES:
-        categories.append({
-            "id": galaxy["id"],
-            "name": galaxy["label"],
-            "subcategories": [{"id": s["id"], "name": s["label"]} for s in galaxy.get("spectrums", [])],
-        })
-
-    return {
-        "universal_categories": categories,
-        "all_brands": brands,
-        "pricing_tiers": ["entry", "mid", "pro", "flagship", "legacy"],
-        "total_products": len(catalog.get("products", [])),
-        "timestamp": datetime.now().isoformat(),
-    }
+async def get_conductor_taxonomy():
+    """Get the taxonomy schema."""
+    try:
+        service = get_conductor_data_service()
+        return service.get_taxonomy_schema()
+    except Exception as e:
+        return {"error": str(e)}
 
 
 @app.post("/api/conductor/filter")
-async def filter_products(filters: dict):
-    """Filter products by brand, category, price range, tier, search query."""
-    catalog = _get_catalog()
-    products = catalog.get("products", [])
-    applied = {}
+async def filter_conductor_products(filters: dict):
+    """Filter products by brand, category, price, etc."""
+    try:
+        service = get_conductor_data_service()
+        return service.filter_products(filters)
+    except Exception as e:
+        return {"error": str(e), "products": []}
 
-    if "brand" in filters:
-        vals = [filters["brand"]] if isinstance(
-            filters["brand"], str) else filters["brand"]
-        lower = [v.lower() for v in vals]
-        products = [p for p in products if p.get("brand", "").lower() in lower]
-        applied["brand"] = filters["brand"]
 
-    if "category" in filters:
-        vals = [filters["category"]] if isinstance(
-            filters["category"], str) else filters["category"]
-        lower = [v.lower() for v in vals]
-        products = [p for p in products if p.get("galaxy_id", "").lower() in lower
-                    or p.get("spectrum_id", "").lower() in lower]
-        applied["category"] = filters["category"]
-
-    if "search_query" in filters:
-        q = filters["search_query"].lower()
-        products = [p for p in products if q in (p.get("search_text") or
-                    f"{p.get('name','')} {p.get('brand','')}").lower()]
-        applied["search_query"] = filters["search_query"]
-
-    if "pricing_tier" in filters:
-        tiers = [filters["pricing_tier"]] if isinstance(
-            filters["pricing_tier"], str) else filters["pricing_tier"]
-        products = [p for p in products if p.get("tier") in tiers]
-        applied["pricing_tier"] = filters["pricing_tier"]
-
-    if "min_price" in filters:
-        mp = float(filters["min_price"])
-        products = [p for p in products if (p.get("price") or 0) >= mp]
-        applied["min_price"] = mp
-
-    if "max_price" in filters:
-        mp = float(filters["max_price"])
-        products = [p for p in products if 0 < (p.get("price") or 0) <= mp]
-        applied["max_price"] = mp
-
-    return {"products": products, "filters_applied": applied, "total_results": len(products)}
+@app.get("/api/conductor/build/status")
+async def get_catalog_build_status():
+    """Poll catalog build progress during first load. Returns status, pct (0-1), message, elapsed_s."""
+    with _build_progress_lock:
+        return dict(_build_progress)
 
 
 @app.get("/api/conductor/categories")
-async def get_categories():
-    """Category summary with product counts, brands, avg prices."""
-    catalog = _get_catalog()
-    cats: dict = {}
-    for p in catalog.get("products", []):
-        cat = p.get("galaxy_id") or "uncategorized"
-        if cat not in cats:
-            cats[cat] = {"name": cat, "count": 0,
-                         "brands": set(), "prices": []}
-        cats[cat]["count"] += 1
-        cats[cat]["brands"].add(p.get("brand", "Unknown"))
-        price = p.get("price") or 0
-        if price > 0:
-            cats[cat]["prices"].append(price)
+async def get_conductor_categories():
+    """Category summary for navigation."""
+    try:
+        service = get_conductor_data_service()
+        return service.get_category_summary()
+    except Exception as e:
+        return {"error": str(e), "categories": []}
 
-    result = []
-    for c in cats.values():
-        prices = c["prices"]
-        result.append({
-            "name": c["name"],
-            "product_count": c["count"],
-            "brands": sorted(c["brands"]),
-            "avg_price": round(sum(prices) / len(prices), 2) if prices else 0,
-        })
-    return {"categories": sorted(result, key=lambda x: x["product_count"], reverse=True)}
+
+@app.get("/api/conductor/subcategories")
+async def get_conductor_subcategories(include_brands: bool = False):
+    """
+    Subcategory summary:
+    - product_count per subcategory
+    - brand_count (distinct brands) per subcategory
+    - optionally include explicit brand list (include_brands=true)
+    """
+    try:
+        service = get_conductor_data_service()
+        return service.get_subcategory_summary(include_brands=include_brands)
+    except Exception as e:
+        return {"error": str(e), "subcategories": []}
 
 
 @app.get("/api/conductor/refresh")
-async def refresh_catalog():
-    """Force rebuild of catalog cache."""
-    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
-    _catalog_cache_json = None
-    _catalog_cache_gzip = None
-    _catalog_cache_dict = None
-    _catalog_cache_time = 0
-    _build_catalog_cache()
-    meta = (_catalog_cache_dict or {}).get("metadata", {})
+async def refresh_conductor_catalog(block: bool = False):
+    """
+    Trigger catalog refresh. By default returns immediately (async).
+    - block=true: Wait for completion (legacy behavior; can freeze API for 30s+).
+    - block=false: Start background refresh, return immediately. Poll /api/conductor/refresh/status.
+    """
+    with _refresh_state_lock:
+        is_running = _refresh_state["status"] == "running"
+
+    if is_running:
+        return {
+            "status": "running",
+            "message": "Refresh already in progress. Poll /api/conductor/refresh/status",
+        }
+
+    if block:
+        try:
+            _invalidate_catalog_cache()
+            service = get_conductor_data_service()
+            service._catalog_cache = None
+            service._cache_timestamp = None
+            _build_catalog_cache()
+            meta = _catalog_cache_dict.get(
+                "metadata", {}) if _catalog_cache_dict else {}
+            return {
+                "status": "refreshed",
+                "product_count": meta.get("total_products", 0),
+                "brands": len(meta.get("brands", [])),
+                "timestamp": meta.get("timestamp", datetime.now().isoformat()),
+            }
+        except Exception as e:
+            logger.error(f"Refresh failed: {e}")
+            return {"error": str(e), "status": "failed"}
+
+    # Non-blocking: start background thread and return immediately
+    thread = threading.Thread(target=_run_refresh_background, daemon=True)
+    thread.start()
     return {
-        "status": "refreshed",
-        "product_count": meta.get("total_products", 0),
-        "brands": len(meta.get("brands", [])),
-        "health_score": meta.get("health_score"),
+        "status": "started",
+        "message": "Refresh in progress. Poll GET /api/conductor/refresh/status for progress.",
     }
 
 
-@app.get("/api/catalog/health")
-async def catalog_health():
-    """Catalog quality metrics."""
-    try:
-        from backend.catalog_validator import validate_catalog
-        loop = asyncio.get_event_loop()
-        catalog = await loop.run_in_executor(None, build_catalog, str(FRONTEND_PUBLIC_DATA))
-        return validate_catalog(catalog["products"])
-    except Exception as e:
-        logger.error(f"Health check error: {e}")
-        return JSONResponse(status_code=500, content={"error": str(e)})
-
-
-@app.get("/api/search")
-async def search_products(q: str = ""):
-    """Search across catalog products."""
-    if not q or len(q) < 2:
-        return {"query": q, "results": [], "total_results": 0}
-
-    catalog = _get_catalog()
-    q_lower = q.lower()
-    results = []
-    for p in catalog.get("products", []):
-        text = (p.get("search_text")
-                or f"{p.get('name','')} {p.get('brand','')} {p.get('description','')}").lower()
-        if q_lower in text:
-            results.append(p)
-            if len(results) >= 50:
-                break
-
-    return {"query": q, "total_results": len(results), "results": results}
+@app.get("/api/conductor/refresh/status")
+async def refresh_conductor_status():
+    """Poll refresh progress. Returns status (idle|running|complete|failed) and result when done."""
+    with _refresh_state_lock:
+        state = dict(_refresh_state)
+    result = {"status": state["status"]}
+    if state["status"] == "complete":
+        result["product_count"] = state["product_count"]
+        result["brands"] = state["brands_count"]
+        result["finished_at"] = state["finished_at"]
+    elif state["status"] == "failed":
+        result["error"] = state["error"]
+        result["finished_at"] = state["finished_at"]
+    elif state["status"] == "running":
+        result["started_at"] = state["started_at"]
+    return result
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# JIT INTELLIGENCE ENDPOINTS
+# BATCH IMAGE LOOKUP — lightweight endpoint for focus-zone enrichment
+# Checks JIT cache for images without triggering full JIT pipeline.
 # ═══════════════════════════════════════════════════════════════════════════
 
-@app.get("/api/product/{product_id}/intelligence")
-async def get_product_intelligence(product_id: str):
+
+@app.post("/api/batch-image-lookup")
+async def batch_image_lookup(request: Request):
     """
-    JIT product enrichment — fetches live data from brand sites,
-    trusted review sources, and returns a fully enriched product.
-    Cached for 7 days server-side.
+    Look up cached images for a batch of product IDs.
+    Returns {product_id: image_url} for any products that have images
+    in the JIT cache. Does NOT trigger new scraping — purely cache lookup.
+
+    This endpoint supports the zoom-lens focus-zone enrichment:
+    when the user zooms into a price range, the frontend can request
+    images for visible products that lack them.
     """
     try:
-        from backend.jit_cache import get_cached_intelligence, cache_intelligence
-        from backend.jit_agent import ProductSynthesizer
+        body = await request.json()
+        product_ids = body.get("product_ids", [])
+        if not isinstance(product_ids, list) or len(product_ids) > 200:
+            return JSONResponse(
+                status_code=400,
+                content={"error": "product_ids must be a list of max 200 IDs"},
+            )
 
-        # Check cache first
-        cached = get_cached_intelligence(product_id)
-        if cached:
-            return cached
+        from backend.jit_agent import _read_cache
 
-        # Find product in catalog
-        catalog = _get_catalog()
-        product = None
-        for p in catalog.get("products", []):
-            if p.get("id") == product_id:
-                product = p
-                break
+        results: dict[str, str] = {}
+        for pid in product_ids:
+            cached = _read_cache(pid)
+            if cached:
+                # Check for images in the cached JIT data
+                snap = cached.get("snap", {})
+                official = cached.get("official_specs", {})
+                thumbnail = snap.get("thumbnail", "")
+                official_images = official.get("images", [])
 
-        if not product:
-            return JSONResponse(status_code=404, content={"error": f"Product '{product_id}' not found"})
+                if official_images:
+                    results[pid] = official_images[0]
+                elif thumbnail and thumbnail.startswith("http"):
+                    results[pid] = thumbnail
 
-        # Run JIT synthesis
-        synthesizer = ProductSynthesizer()
-        enriched = await synthesizer.synthesize(product)
+        return {"images": results, "found": len(results), "requested": len(product_ids)}
 
-        # Cache result
-        cache_intelligence(product_id, enriched)
-
-        return enriched
-
-    except ImportError:
-        return JSONResponse(status_code=501, content={"error": "JIT agent not yet configured"})
     except Exception as e:
-        logger.error(f"JIT intelligence error for {product_id}: {e}")
-        return JSONResponse(status_code=500, content={"error": str(e)})
-
-
-@app.get("/api/product/{product_id}/compare/{other_id}")
-async def compare_products(product_id: str, other_id: str):
-    """JIT comparison of two products — specs, pricing, reviews side by side."""
-    try:
-        from backend.jit_agent import ProductSynthesizer
-
-        catalog = _get_catalog()
-        products_map = {p["id"]: p for p in catalog.get("products", [])}
-
-        if product_id not in products_map:
-            return JSONResponse(status_code=404, content={"error": f"Product '{product_id}' not found"})
-        if other_id not in products_map:
-            return JSONResponse(status_code=404, content={"error": f"Product '{other_id}' not found"})
-
-        synthesizer = ProductSynthesizer()
-        comparison = await synthesizer.compare(products_map[product_id], products_map[other_id])
-        return comparison
-
-    except ImportError:
-        return JSONResponse(status_code=501, content={"error": "JIT agent not yet configured"})
-    except Exception as e:
-        logger.error(f"Comparison error: {e}")
-        return JSONResponse(status_code=500, content={"error": str(e)})
-
-
-@app.post("/api/sync/inventory")
-async def sync_inventory():
-    """Trigger skeleton inventory sync from Halilit.com."""
-    try:
-        from backend.skeleton_sync import run_skeleton_sync
-        loop = asyncio.get_event_loop()
-        result = await loop.run_in_executor(None, run_skeleton_sync)
-
-        # Refresh catalog cache after sync
-        global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
-        _catalog_cache_json = None
-        _catalog_cache_gzip = None
-        _catalog_cache_dict = None
-        _catalog_cache_time = 0
-
-        return {"status": "synced", **result}
-    except ImportError:
-        return JSONResponse(status_code=501, content={"error": "Skeleton sync not yet configured"})
-    except Exception as e:
-        logger.error(f"Inventory sync error: {e}")
+        logger.error(f"Batch image lookup failed: {e}")
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# FRONTEND ROUTING (SPA)
+# PRODUCT SEARCH (OpenClaw / Employee Concierge)
 # ═══════════════════════════════════════════════════════════════════════════
 
-if FRONTEND_DIST.exists():
+@app.get("/api/products/search")
+async def products_search(q: str = ""):
+    """
+    Search products by name, brand, or model. Used by OpenClaw skills and
+    employee concierge (WhatsApp/Telegram) to look up price, stock, and specs.
+    """
+    if not q or len(q.strip()) < 2:
+        return {"products": [], "total": 0}
+    try:
+        service = get_conductor_data_service()
+        result = service.filter_products({"search_query": q.strip()})
+        products = result.get("products", [])[:20]
+        # Minimal payload for chat/OpenClaw: id, name, brand, price
+        out = [
+            {
+                "id": p.get("halilit_id"),
+                "product_name": p.get("product_name"),
+                "brand": p.get("brand"),
+                "price_il": p.get("price_il"),
+            }
+            for p in products
+        ]
+        return {"products": out, "total": result.get("total_results", len(out))}
+    except Exception as e:
+        logger.warning("products/search failed: %s", e)
+        return {"products": [], "total": 0, "error": str(e)}
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# JIT INTELLIGENCE ENDPOINT
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+@app.post("/api/jit/product/{product_id}")
+async def jit_product_intelligence(product_id: str):
+    """
+    Stream live JIT intelligence for a product via SSE.
+    First request ~5s (live Gemini research), subsequent instant (7-day cache).
+
+    Events: status, snap, official_specs, verdict, field_notes, exploration, complete
+    """
+    try:
+        from backend.jit_agent import stream_product_intelligence
+
+        return StreamingResponse(
+            stream_product_intelligence(product_id),
+            media_type="text/event-stream",
+            headers={
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "X-Accel-Buffering": "no",
+            },
+        )
+    except Exception as e:
+        logger.error(f"JIT stream failed for {product_id}: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"error": f"JIT intelligence failed: {str(e)}"},
+        )
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# STATIC FILES & FRONTEND
+# ═══════════════════════════════════════════════════════════════════════════
+
+if os.path.exists(str(FRONTEND_PUBLIC_DATA)):
+    app.mount("/data", StaticFiles(directory=str(FRONTEND_PUBLIC_DATA)), name="data")
+    logger.info(f"Serving /data from {FRONTEND_PUBLIC_DATA}")
+
+# Mount images directory if it exists (for locally cached product images)
+IMAGES_DIR = DATA_DIR / "images"
+if IMAGES_DIR.exists():
+    app.mount("/images", StaticFiles(directory=str(IMAGES_DIR)), name="images")
+    logger.info(f"Serving /images from {IMAGES_DIR}")
+
+# Mount frontend public assets (for placeholder images, etc.)
+# Only mount if dist doesn't exist (dist takes precedence)
+if not os.path.exists(FRONTEND_DIST):
+    FRONTEND_ASSETS = FRONTEND_DIR / "public" / "assets"
+    if FRONTEND_ASSETS.exists():
+        app.mount(
+            "/assets", StaticFiles(directory=str(FRONTEND_ASSETS)), name="assets")
+        logger.info(f"Serving /assets from {FRONTEND_ASSETS}")
+
+if os.path.exists(FRONTEND_DIST):
     app.mount(
         "/assets", StaticFiles(directory=str(FRONTEND_DIST / "assets")), name="assets")
 
-    if FRONTEND_PUBLIC_DATA.exists():
-        app.mount(
-            "/data", StaticFiles(directory=str(FRONTEND_PUBLIC_DATA)), name="data")
-
     @app.get("/{catchall:path}")
-    async def serve_spa(catchall: str):
-        file_path = FRONTEND_DIST / catchall
-        if file_path.exists() and file_path.is_file():
-            return FileResponse(str(file_path))
-        return FileResponse(str(FRONTEND_DIST / "index.html"))
+    async def serve_react_app(catchall: str):
+        file_path = os.path.join(FRONTEND_DIST, catchall)
+        if os.path.exists(file_path) and os.path.isfile(file_path):
+            return FileResponse(file_path)
+        return FileResponse(os.path.join(FRONTEND_DIST, "index.html"))
 else:
     logger.warning(f"Frontend build not found at {FRONTEND_DIST}")
 

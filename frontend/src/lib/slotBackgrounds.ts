@@ -1,251 +1,227 @@
 /**
  * Slot Background Mappings
- * Maps product categories to contextual background images for the Showcase Slot
- * and the ContextualResponse "Mini World" component.
+ * Maps product categories to contextual background images for:
+ *   1. Galaxy Dashboard category slots
+ *   2. Product Cockpit contextual backgrounds
+ *   3. Contextual Response wrappers
  *
- * Performance: All images are static assets served from /assets/bg/.
- * The `overlayColor` field enables per-category tinting when reusing base images.
- *
- * Path: frontend/src/lib/slotBackgrounds.ts
+ * Each config includes an overlayColor for brand-tinted glassmorphism.
  */
 
 export interface BackgroundConfig {
-    imageUrl: string;
-    fallbackGradient: string;
-    label: string;
-    /** Optional CSS color to tint the overlay — lets reused images feel distinct */
-    overlayColor?: string;
+  imageUrl: string;
+  fallbackGradient: string;
+  overlayColor: string; // Tint color for glassmorphism overlay (rgba)
+  label: string;
 }
 
 const BACKGROUNDS: Record<string, BackgroundConfig> = {
-    // ─── GUITARS ───
-    'electric-guitars': {
-        imageUrl: '/assets/bg/stage-amps-blur.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #2a1a0a 0%, #1a0a00 50%, #4a3a2a 100%)',
-        label: 'Stage & Amps',
-    },
-    'acoustic-guitars': {
-        imageUrl: '/assets/bg/luthier-wood-shop.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #3a2a1a 0%, #2a1a0a 50%, #1a0a00 100%)',
-        label: 'Luthier Workshop',
-    },
-    'bass-guitars': {
-        imageUrl: '/assets/bg/bass-rig-dark.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a2a 0%, #0a0a1a 50%, #2a1a1a 100%)',
-        label: 'Bass Rig',
-    },
-
-    // ─── DRUMS & PERCUSSION ───
-    'drums': {
-        imageUrl: '/assets/bg/drum-stage-lights.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #2a1a3a 0%, #1a0a2a 50%, #3a1a2a 100%)',
-        label: 'Stage Lights',
-    },
-    'percussion': {
-        imageUrl: '/assets/bg/drum-stage-lights.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #3a1a0a 0%, #2a0a0a 50%, #3a2a0a 100%)',
-        label: 'Percussion Studio',
-        overlayColor: '#3a1a0a',
-    },
-
-    // ─── KEYS ───
-    'keys': {
-        imageUrl: '/assets/bg/concert-hall.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a2a1a 100%)',
-        label: 'Concert Hall',
-    },
-    'synth': {
-        imageUrl: '/assets/bg/modular-synth-wall.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a2a 0%, #0a1a2a 50%, #1a0a1a 100%)',
-        label: 'Modular Synth',
-    },
-
-    // ─── STUDIO & RECORDING ───
-    'studio': {
-        imageUrl: '/assets/bg/studio-mixing-desk.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a1a0a 100%)',
-        label: 'Studio Desk',
-    },
-    'headphones': {
-        imageUrl: '/assets/bg/studio-mixing-desk.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #0a1a2a 0%, #000000 50%, #1a2a3a 100%)',
-        label: 'Listening Lounge',
-        overlayColor: '#0a1a2a',
-    },
-    'vocal': {
-        imageUrl: '/assets/bg/vocal-booth.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a2a 100%)',
-        label: 'Vocal Booth',
-    },
-
-    // ─── LIVE & DJ ───
-    'live': {
-        imageUrl: '/assets/bg/outdoor-festival-crowd.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a0a0a 0%, #0a0a1a 50%, #2a1a1a 100%)',
-        label: 'Festival Stage',
-    },
-    'dj': {
-        imageUrl: '/assets/bg/outdoor-festival-crowd.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #2a0a2a 0%, #1a0a1a 50%, #3a0a3a 100%)',
-        label: 'Club Booth',
-        overlayColor: '#4a0a4a',
-    },
-
-    // ─── WIND & EDUCATION ───
-    'wind': {
-        imageUrl: '/assets/bg/concert-hall.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a2a 0%, #0a0a1a 50%, #1a1a1a 100%)',
-        label: 'Concert Stage',
-        overlayColor: '#1a1a2a',
-    },
-    'education': {
-        imageUrl: '/assets/bg/general-store-blur.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #2a1a0a 0%, #1a1a1a 50%, #0a0a2a 100%)',
-        label: 'Classroom',
-        overlayColor: '#1a1a2a',
-    },
-
-    // ─── DEFAULT ───
-    'default': {
-        imageUrl: '/assets/bg/general-store-blur.jpg',
-        fallbackGradient: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
-        label: 'Showroom',
-    },
+  // Electric Guitars — Stage & Amps
+  "electric-guitars": {
+    imageUrl: "/assets/bg/stage-amps-blur.jpg",
+    fallbackGradient: "linear-gradient(135deg, #2a1a0a 0%, #1a0a00 50%, #4a3a2a 100%)",
+    overlayColor: "rgba(255, 120, 20, 0.08)",
+    label: "Stage & Amps",
+  },
+  // Acoustic Guitars — Luthier Workshop
+  "acoustic-guitars": {
+    imageUrl: "/assets/bg/luthier-wood-shop.jpg",
+    fallbackGradient: "linear-gradient(135deg, #3a2a1a 0%, #2a1a0a 50%, #1a0a00 100%)",
+    overlayColor: "rgba(210, 170, 100, 0.08)",
+    label: "Luthier Workshop",
+  },
+  // Bass Guitars — Dark Rig
+  "bass-guitars": {
+    imageUrl: "/assets/bg/bass-rig-dark.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a2a 0%, #0a0a1a 50%, #2a1a1a 100%)",
+    overlayColor: "rgba(60, 100, 200, 0.08)",
+    label: "Bass Rig",
+  },
+  // Drums & Percussion — Stage Lights
+  drums: {
+    imageUrl: "/assets/bg/drum-stage-lights.jpg",
+    fallbackGradient: "linear-gradient(135deg, #2a1a3a 0%, #1a0a2a 50%, #3a1a2a 100%)",
+    overlayColor: "rgba(180, 60, 200, 0.08)",
+    label: "Stage Lights",
+  },
+  // Piano & Keys — Concert Hall
+  keys: {
+    imageUrl: "/assets/bg/concert-hall.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a2a1a 100%)",
+    overlayColor: "rgba(200, 160, 60, 0.08)",
+    label: "Concert Hall",
+  },
+  // Synthesizers — Modular Wall
+  synth: {
+    imageUrl: "/assets/bg/modular-synth-wall.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a2a 0%, #0a1a2a 50%, #1a0a1a 100%)",
+    overlayColor: "rgba(0, 200, 255, 0.08)",
+    label: "Modular Synth",
+  },
+  // Studio & Recording — Mixing Desk
+  studio: {
+    imageUrl: "/assets/bg/studio-mixing-desk.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #2a1a0a 100%)",
+    overlayColor: "rgba(60, 120, 200, 0.06)",
+    label: "Studio Desk",
+  },
+  // Microphones — Vocal Booth
+  vocal: {
+    imageUrl: "/assets/bg/vocal-booth.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a2a 100%)",
+    overlayColor: "rgba(200, 160, 80, 0.08)",
+    label: "Vocal Booth",
+  },
+  // PA & Live Sound — Festival
+  live: {
+    imageUrl: "/assets/bg/outdoor-festival-crowd.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a0a0a 0%, #0a0a1a 50%, #2a1a1a 100%)",
+    overlayColor: "rgba(255, 60, 60, 0.06)",
+    label: "Festival Stage",
+  },
+  // Percussion (distinct from drums kit)
+  percussion: {
+    imageUrl: "/assets/bg/drum-stage-lights.jpg",
+    fallbackGradient: "linear-gradient(135deg, #2a1a1a 0%, #1a0a1a 50%, #3a2a1a 100%)",
+    overlayColor: "rgba(200, 100, 40, 0.08)",
+    label: "Percussion Stage",
+  },
+  // Piano (standalone, not general keys)
+  piano: {
+    imageUrl: "/assets/bg/concert-hall.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a0a 0%, #0a0a0a 50%, #2a2a1a 100%)",
+    overlayColor: "rgba(180, 140, 40, 0.08)",
+    label: "Grand Piano Hall",
+  },
+  // Headphones
+  headphones: {
+    imageUrl: "/assets/bg/studio-mixing-desk.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a2a 0%, #0a0a1a 50%, #1a1a1a 100%)",
+    overlayColor: "rgba(100, 100, 200, 0.08)",
+    label: "Studio Session",
+  },
+  // DJ Equipment
+  dj: {
+    imageUrl: "/assets/bg/outdoor-festival-crowd.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a0a2a 0%, #0a0a1a 50%, #2a1a2a 100%)",
+    overlayColor: "rgba(200, 0, 255, 0.08)",
+    label: "DJ Stage",
+  },
+  // Default fallback
+  default: {
+    imageUrl: "/assets/bg/general-store-blur.jpg",
+    fallbackGradient: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)",
+    overlayColor: "rgba(100, 100, 100, 0.06)",
+    label: "General Store",
+  },
 };
 
 /**
- * Get background configuration based on category
- * Returns both image URL and fallback gradient
- * 
- * Uses explicit mapping to ensure no "green default" leaks unless absolutely necessary.
+ * Get background configuration based on category ID.
+ * Uses explicit switch for known IDs, then fuzzy fallback.
  */
 export const getContextBackground = (categoryId: string): BackgroundConfig => {
-    // 1. Explicit ID Mapping (Primary Strategy)
-    switch (categoryId) {
-        // --- GUITARS ---
-        case 'electric-guitars':
-        case 'guitar-amps':
-        case 'guitar-pedals':
-            return BACKGROUNDS['electric-guitars'];
+  switch (categoryId) {
+    // --- GUITARS ---
+    case "electric-guitars":
+    case "guitar-amps":
+    case "guitar-pedals":
+      return BACKGROUNDS["electric-guitars"];
 
-        case 'acoustic-guitars':
-        case 'folk-instruments':
-        case 'guitar-accessories':
-        case 'ukuleles':
-            return BACKGROUNDS['acoustic-guitars'];
+    case "acoustic-guitars":
+    case "folk-instruments":
+    case "guitar-accessories":
+      return BACKGROUNDS["acoustic-guitars"];
 
-        case 'bass-guitars':
-            return BACKGROUNDS['bass-guitars'];
+    case "bass-guitars":
+      return BACKGROUNDS["bass-guitars"];
 
-        // --- DRUMS & PERCUSSION ---
-        case 'acoustic-drums':
-        case 'electronic-drums':
-        case 'cymbals':
-        case 'snares':
-        case 'sticks-heads':
-        case 'drum-hardware':
-            return BACKGROUNDS['drums'];
+    // --- DRUMS ---
+    case "acoustic-drums":
+    case "electronic-drums":
+    case "cymbals":
+    case "snares":
+    case "sticks-heads":
+    case "drum-hardware":
+      return BACKGROUNDS["drums"];
 
-        case 'percussion':
-        case 'hand-percussion':
-        case 'bongos':
-        case 'cajons':
-        case 'congas':
-        case 'shakers':
-        case 'tambourines':
-            return BACKGROUNDS['percussion'];
+    case "percussion":
+      return BACKGROUNDS["percussion"];
 
-        // --- KEYS ---
-        case 'stage-pianos':
-        case 'digital-pianos':
-        case 'keys-accessories':
-            return BACKGROUNDS['keys'];
+    // --- KEYS ---
+    case "stage-pianos":
+    case "keys-accessories":
+      return BACKGROUNDS["keys"];
 
-        case 'synthesizers':
-        case 'midi-controllers':
-        case 'grooveboxes':
-        case 'eurorack':
-            return BACKGROUNDS['synth'];
+    case "piano":
+    case "digital-piano":
+      return BACKGROUNDS["piano"];
 
-        // --- STUDIO ---
-        case 'audio-interfaces':
-        case 'studio-monitors':
-        case 'outboard-gear':
-        case 'software-plugins':
-            return BACKGROUNDS['studio'];
+    case "synthesizers":
+    case "midi-controllers":
+    case "grooveboxes":
+    case "eurorack":
+      return BACKGROUNDS["synth"];
 
-        case 'headphones':
-        case 'in-ear-monitors':
-            return BACKGROUNDS['headphones'];
+    // --- STUDIO ---
+    case "audio-interfaces":
+    case "studio-monitors":
+    case "outboard-gear":
+    case "software-plugins":
+      return BACKGROUNDS["studio"];
 
-        case 'studio-microphones':
-        case 'studio-accessories':
-        case 'live-mics':
-            return BACKGROUNDS['vocal'];
+    case "studio-microphones":
+    case "studio-accessories":
+    case "live-mics":
+      return BACKGROUNDS["vocal"];
 
-        // --- LIVE & DJ ---
-        case 'pa-systems':
-        case 'live-mixers':
-        case 'lighting':
-        case 'live-accessories':
-        case 'wireless-systems':
-            return BACKGROUNDS['live'];
+    case "headphones":
+    case "studio-headphones":
+      return BACKGROUNDS["headphones"];
 
-        case 'dj-equipment':
-        case 'dj-controllers':
-        case 'turntables':
-            return BACKGROUNDS['dj'];
+    // --- LIVE ---
+    case "pa-systems":
+    case "live-mixers":
+    case "lighting":
+    case "live-accessories":
+      return BACKGROUNDS["live"];
 
-        // --- WIND & EDUCATION ---
-        case 'wind-instruments':
-        case 'brass':
-        case 'woodwind':
-        case 'harmonicas':
-        case 'recorders':
-            return BACKGROUNDS['wind'];
+    case "dj-equipment":
+    case "dj":
+      return BACKGROUNDS["dj"];
 
-        case 'education':
-        case 'classroom':
-        case 'orff-instruments':
-        case 'boomwhackers':
-            return BACKGROUNDS['education'];
+    // --- UTILITY ---
+    case "power-supplies":
+      return BACKGROUNDS["electric-guitars"];
 
-        // --- UTILITY ---
-        case 'power-supplies':
-            return BACKGROUNDS['electric-guitars'];
+    case "cables":
+    case "cases-bags":
+    case "stands":
+      return BACKGROUNDS["default"];
 
-        case 'cables':
-        case 'cases-bags':
-        case 'stands':
-            return BACKGROUNDS['default'];
-
-        default: {
-            // 2. Fallback to fuzzy matching if exact ID not found
-            const cat = categoryId.toLowerCase();
-
-            // DJ/Controller (before generic "controller" match)
-            if (cat.includes('dj') || (cat.includes('controller') && !cat.includes('midi'))) return BACKGROUNDS['dj'];
-            // Headphones
-            if (cat.includes('headphone') || cat.includes('in-ear')) return BACKGROUNDS['headphones'];
-            // Percussion (warm tint)
-            if (cat.includes('percussion') || cat.includes('bongo') || cat.includes('cajon') || cat.includes('shaker')) return BACKGROUNDS['percussion'];
-            // Wind
-            if (cat.includes('wind') || cat.includes('brass') || cat.includes('woodwind') || cat.includes('harmonica') || cat.includes('recorder')) return BACKGROUNDS['wind'];
-            // Education
-            if (cat.includes('education') || cat.includes('classroom') || cat.includes('orff') || cat.includes('boomwhack')) return BACKGROUNDS['education'];
-
-            // Broad categories
-            if (cat.includes('guitar')) return BACKGROUNDS['electric-guitars'];
-            if (cat.includes('bass')) return BACKGROUNDS['bass-guitars'];
-            if (cat.includes('drum') || cat.includes('cymbal')) return BACKGROUNDS['drums'];
-            if (cat.includes('piano') || cat.includes('keys')) return BACKGROUNDS['keys'];
-            if (cat.includes('synth') || cat.includes('eurorack') || cat.includes('keyboard')) return BACKGROUNDS['synth'];
-            if (cat.includes('studio') || cat.includes('monitor') || cat.includes('interface')) return BACKGROUNDS['studio'];
-            if (cat.includes('mic') || cat.includes('vocal')) return BACKGROUNDS['vocal'];
-            if (cat.includes('pa') || cat.includes('live') || cat.includes('mixer') || cat.includes('speaker') || cat.includes('wireless')) return BACKGROUNDS['live'];
-
-            return BACKGROUNDS['default'];
-        }
+    default: {
+      // Fuzzy fallback
+      const cat = categoryId.toLowerCase();
+      if (cat.includes("guitar")) return BACKGROUNDS["electric-guitars"];
+      if (cat.includes("bass")) return BACKGROUNDS["bass-guitars"];
+      if (cat.includes("drum")) return BACKGROUNDS["drums"];
+      if (cat.includes("percuss")) return BACKGROUNDS["percussion"];
+      if (cat.includes("piano")) return BACKGROUNDS["piano"];
+      if (cat.includes("keys") || cat.includes("keyboard")) return BACKGROUNDS["keys"];
+      if (cat.includes("synth")) return BACKGROUNDS["synth"];
+      if (cat.includes("headphone")) return BACKGROUNDS["headphones"];
+      if (cat.includes("studio") || cat.includes("monitor")) return BACKGROUNDS["studio"];
+      if (cat.includes("mic")) return BACKGROUNDS["vocal"];
+      if (cat.includes("dj")) return BACKGROUNDS["dj"];
+      if (cat.includes("pa") || cat.includes("live")) return BACKGROUNDS["live"];
+      return BACKGROUNDS["default"];
     }
+  }
 };
 
+/**
+ * Get background for a product's category (for Contextual Response wrapper).
+ */
+export const getProductBackground = (categoryHint: string): BackgroundConfig => {
+  return getContextBackground(categoryHint);
+};

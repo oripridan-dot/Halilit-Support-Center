@@ -43,7 +43,7 @@ THE THREE SOURCES AND THEIR STRICT BOUNDARIES
    RULE: Must fetch from AT LEAST 3 well-trusted review websites
    RULE: Each review must be SPECIFIC to the exact product (not generic)
    RULE: Sources must be reputable (SoundOnSound, MusicRadar, Sweetwater,
-         Thomann, YouTube reviewers, Reddit, GearPage, etc.)
+         YouTube reviewers, Reddit, GearPage, etc.)
    RULE: Does NOT change specs, prices, or product identity
    REQUIRES: Golden List from Commercial Scout
 
@@ -161,7 +161,7 @@ MIN_REVIEW_SOURCES = 3
 # Well-known trusted review sources
 TRUSTED_REVIEW_SOURCES: Set[str] = {
     "soundonsound.com", "musicradar.com", "sweetwater.com",
-    "thomann.de", "youtube.com", "reddit.com",
+    "youtube.com", "reddit.com",
     "gearslutz.com", "gearpage.net", "premierguitar.com",
     "guitarworld.com", "keyboardmag.com", "attackmagazine.com",
     "synthtopia.com", "sonicstate.com", "bonedo.de",
@@ -577,6 +577,30 @@ def cross_validate_product(commercial_data: Dict[str, Any],
             "severity": "CRITICAL",
         })
 
+    # Cross-check: Commercial vs official image match (same product?)
+    commercial_hero = (commercial_data.get("image_url") or "").strip()
+    official_images = official_data.get("official_images") or official_data.get("images") or []
+    official_hero = ""
+    if official_images:
+        first = official_images[0]
+        official_hero = (first.get("url") if isinstance(first, dict) else first) or ""
+    if commercial_hero and official_hero:
+        try:
+            from backend.ingestion.visual_validator import validate_commercial_official_match
+            match_result = validate_commercial_official_match(commercial_hero, official_hero)
+            if not match_result.get("match"):
+                conflicts.append({
+                    "type": "IMAGE_MISMATCH",
+                    "similarity": match_result.get("similarity", 0),
+                    "severity": "CRITICAL",
+                })
+                resolution_notes.append(
+                    "Commercial and official hero images do not match the same product; "
+                    "reject official images/specs for this product (visual validation)."
+                )
+        except Exception as e:
+            logging.getLogger("source_rules").warning("Visual match check failed: %s", e)
+
     is_consistent = len(
         [c for c in conflicts if c.get("severity") == "CRITICAL"]) == 0
 
@@ -664,7 +688,7 @@ YOUR RESPONSIBILITIES:
 3. Each review must be SPECIFIC to the exact product (not generic brand reviews)
 
 TRUSTED SOURCES (examples):
-SoundOnSound, MusicRadar, Sweetwater, Thomann, YouTube (verified reviewers),
+SoundOnSound, MusicRadar, Sweetwater, YouTube (verified reviewers),
 Reddit (r/synthesizers, r/guitar, etc.), GearPage, Premier Guitar,
 Guitar World, Keyboard Magazine, Reverb.com, Bonedo, Amazona, AudioFanzine
 

@@ -105,6 +105,10 @@ class GraphStore:
                 backup_path.rename(snapshot_path)
             raise
 
+    def has_json_snapshot(self) -> bool:
+        """Check if a graph snapshot exists (fast, no parse)."""
+        return (GRAPH_DATA_DIR / "product_graph.json").exists()
+
     def import_json_snapshot(self) -> Optional[Dict[str, Any]]:
         """
         Load the graph snapshot from JSON.
@@ -160,6 +164,13 @@ class GraphStore:
         # Load relationships
         for rel_data in snapshot.get("relationships", []):
             try:
+                # Backfill sources_verified from discovered_from for old snapshots
+                if not rel_data.get("sources_verified"):
+                    df = rel_data.get("discovered_from", "") or ""
+                    if "pattern" in df or "spectrum" in df or "tier" in df:
+                        rel_data = {**rel_data, "sources_verified": ["pattern"]}
+                    elif df:
+                        rel_data = {**rel_data, "sources_verified": [df]}
                 rel = ProductRelationship(**rel_data)
                 # Only keep relationships where both products exist
                 if rel.source_id in graph.products and rel.target_id in graph.products:
@@ -221,15 +232,18 @@ class GraphStore:
             await conn.execute("DELETE FROM product_relationships")
 
             for rel in graph.relationships:
+                sources_json = json.dumps(rel.sources_verified)
                 await conn.execute("""
                     INSERT INTO product_relationships
                         (source_product_id, target_product_id, relationship_type,
                          confidence, ai_discovered, manually_curated,
-                         compatibility_notes, bidirectional, created_at)
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW())
+                         compatibility_notes, discovered_from, sources_verified,
+                         bidirectional, created_at)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9::jsonb, $10, NOW())
                 """, rel.source_id, rel.target_id, rel.relationship_type.value,
                                    rel.confidence, rel.ai_discovered, rel.manually_curated,
-                                   rel.compatibility_notes,
+                                   rel.compatibility_notes, rel.discovered_from or "",
+                                   sources_json,
                                    rel.direction == RelationshipDirection.BIDIRECTIONAL)
                 counts["relationships"] += 1
 
@@ -289,6 +303,9 @@ class GraphStore:
             )
             for row in rows:
                 try:
+                    sv = row.get("sources_verified")
+                    if sv is not None and not isinstance(sv, list):
+                        sv = list(sv) if sv else []
                     rel = ProductRelationship(
                         source_id=row["source_product_id"],
                         target_id=row["target_product_id"],
@@ -298,6 +315,8 @@ class GraphStore:
                         ai_discovered=row["ai_discovered"],
                         manually_curated=row["manually_curated"],
                         compatibility_notes=row.get("compatibility_notes", ""),
+                        discovered_from=row.get("discovered_from") or "",
+                        sources_verified=sv or [],
                         direction=(RelationshipDirection.BIDIRECTIONAL
                                    if row.get("bidirectional") else
                                    RelationshipDirection.UNIDIRECTIONAL),
@@ -324,91 +343,6 @@ class GraphStore:
                 await conn.close()
 
         return graph
-
-    # ═══════════════════════════════════════════════════════════════════
-    # CURATION OPERATIONS (for the curation API)
-    # ═══════════════════════════════════════════════════════════════════
-
-    def add_curated_relationship(self, graph: ProductGraph,
-                                 source_id: str, target_id: str,
-                                 rel_type: RelationshipType,
-                                 notes: str = "") -> ProductRelationship:
-        """Add a manually curated relationship."""
-        rel = ProductRelationship(
-            source_id=source_id,
-            target_id=target_id,
-            relationship_type=rel_type,
-            confidence=1.0,
-            ai_discovered=False,
-            manually_curated=True,
-            compatibility_notes=notes,
-        )
-        graph.add_relationship(rel)
-        # Persist immediately
-        self.export_json_snapshot(graph)
-        return rel
-
-    def confirm_relationship(self, graph: ProductGraph,
-                             source_id: str, target_id: str,
-                             rel_type: RelationshipType) -> bool:
-        """Confirm an AI-discovered relationship (sets manually_curated=True)."""
-        for rel in graph.relationships:
-            if (rel.source_id == source_id and rel.target_id == target_id
-                    and rel.relationship_type == rel_type):
-                rel.manually_curated = True
-                rel.confidence = max(rel.confidence, 0.95)
-                rel.updated_at = datetime.utcnow().isoformat()
-                self.export_json_snapshot(graph)
-                return True
-        return False
-
-    def reject_relationship(self, graph: ProductGraph,
-                            source_id: str, target_id: str,
-                            rel_type: RelationshipType) -> bool:
-        """Reject and remove a relationship."""
-        removed = graph.remove_relationship(source_id, target_id, rel_type)
-        if removed:
-            self.export_json_snapshot(graph)
-        return removed
-
-    def get_pending_relationships(self, graph: ProductGraph) -> List[Dict[str, Any]]:
-        """Get all AI-discovered relationships that need human review."""
-        _unknown = CanonicalProduct(id="", name="Unknown", brand="Unknown")
-        pending = []
-        for rel in graph.relationships:
-            if rel.needs_review:
-                source = graph.products.get(rel.source_id, _unknown)
-                target = graph.products.get(rel.target_id, _unknown)
-                pending.append({
-                    **rel.model_dump(),
-                    "source_name": source.name,
-                    "target_name": target.name,
-                    "source_brand": source.brand,
-                    "target_brand": target.brand,
-                    "source_image": source.image_url or "",
-                    "target_image": target.image_url or "",
-                })
-        return sorted(pending, key=lambda x: -x["confidence"])
-
-    def get_curation_stats(self, graph: ProductGraph) -> Dict[str, Any]:
-        """Coverage metrics for the curation dashboard."""
-        stats = graph.get_graph_stats()
-        total_products = len(graph.products)
-
-        stats["family_coverage_pct"] = round(
-            100 * stats["products_in_families"] / max(total_products, 1), 1
-        )
-
-        products_with_accessories = set()
-        for rel in graph.relationships:
-            if rel.relationship_type == RelationshipType.ACCESSORY_FOR:
-                products_with_accessories.add(rel.target_id)
-        stats["products_with_accessories"] = len(products_with_accessories)
-        stats["accessory_coverage_pct"] = round(
-            100 * len(products_with_accessories) / max(total_products, 1), 1
-        )
-
-        return stats
 
 
 # ═══════════════════════════════════════════════════════════════════════════

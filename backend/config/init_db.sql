@@ -198,6 +198,7 @@ CREATE TABLE IF NOT EXISTS product_relationships (
     manually_curated BOOLEAN DEFAULT false,
     compatibility_notes TEXT,
     discovered_from TEXT,
+    sources_verified JSONB DEFAULT '[]',
     bidirectional BOOLEAN DEFAULT false,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

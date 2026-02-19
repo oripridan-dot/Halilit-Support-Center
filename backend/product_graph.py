@@ -48,6 +48,22 @@ class RelationshipDirection(str, Enum):
     BIDIRECTIONAL = "bidirectional"     # A ↔ B (variants, alternatives)
 
 
+# Confidence by source priority (Official → Commercial → Contextual → Spectrum)
+CONFIDENCE_WEIGHTS: Dict[str, float] = {
+    "official": 1.0,    # ProductFamily / official_url overlap — hard links
+    "commercial": 0.9,   # ACCESSORY_FOR from catalog
+    "contextual": 0.7,   # Real-world insights, reviews
+    "spectrum": 0.5,     # ALTERNATIVE_TO heuristic, same spectrum/tier
+}
+
+# Confidence by relationship source (Official → Commercial → Contextual → Spectrum)
+CONFIDENCE_BY_SOURCE: Dict[str, float] = {
+    "official": 1.0,
+    "commercial": 0.9,
+    "contextual": 0.7,
+    "spectrum": 0.5,
+}
+
 # Default directionality per relationship type
 RELATIONSHIP_DEFAULTS: Dict[RelationshipType, RelationshipDirection] = {
     RelationshipType.VARIANT_OF: RelationshipDirection.BIDIRECTIONAL,
@@ -88,12 +104,20 @@ class ProductRelationship(BaseModel):
                                      description="Why these products are related")
     discovered_from: str = Field(default="",
                                  description="Which source/page revealed this relationship")
+    # Triple-check: which sources verified this relationship (commercial, official, contextual, pattern/heuristic)
+    sources_verified: List[str] = Field(default_factory=list,
+                                       description="Sources that support this edge for cross-validation")
 
     # Timestamps
     created_at: str = Field(
         default_factory=lambda: datetime.utcnow().isoformat())
     updated_at: str = Field(
         default_factory=lambda: datetime.utcnow().isoformat())
+
+    @property
+    def is_triple_checked(self) -> bool:
+        """True when at least two sources have verified this relationship."""
+        return len(self.sources_verified) >= 2
 
     @property
     def is_confirmed(self) -> bool:
@@ -301,6 +325,7 @@ class CanonicalProduct(BaseModel):
             "family_id": self.family_id,
             "variant_key": self.variant.variant_key if self.variant else None,
             "variant_is_default": self.variant.is_default if self.variant else None,
+            "relationship_ids": list(self.relationship_ids),
         }
         return flat
 
@@ -354,6 +379,7 @@ class CanonicalProduct(BaseModel):
             search_text=flat.get("search_text", ""),
             family_id=flat.get("family_id"),
             variant=variant,
+            relationship_ids=flat.get("relationship_ids") or [],
         )
 
 
@@ -401,6 +427,26 @@ class ProductGraph(BaseModel):
             if rel.direction == RelationshipDirection.BIDIRECTIONAL:
                 self._rel_by_source.setdefault(rel.target_id, []).append(idx)
                 self._rel_by_target.setdefault(rel.source_id, []).append(idx)
+
+    def sync_relationship_ids_to_products(self) -> None:
+        """
+        CPG sync: populate each CanonicalProduct.relationship_ids from the graph edges.
+        Call after all discovery phases (official → commercial → contextual → spectrum)
+        so every product's relationship_ids list is populated and the frontend can
+        "hop" from neuron to neuron without new API calls.
+        """
+        for pid, product in self.products.items():
+            rels = self.get_relationships_for(pid)
+            other_ids: List[str] = []
+            for r in rels:
+                other = r.target_id if r.source_id == pid else r.source_id
+                if other != pid and other not in other_ids:
+                    other_ids.append(other)
+            product.relationship_ids = other_ids
+        logger.debug(
+            "Synced relationship_ids to %d products",
+            len(self.products),
+        )
 
     # ── Query Methods ──
 
@@ -490,14 +536,21 @@ class ProductGraph(BaseModel):
             )
             relationship.direction = default_dir
 
-        # Deduplicate: skip if same source+target+type already exists
+        # Deduplicate: merge if same source+target+type already exists
         for existing in self.relationships:
             if (existing.source_id == relationship.source_id
                     and existing.target_id == relationship.target_id
                     and existing.relationship_type == relationship.relationship_type):
-                # Update confidence if new one is higher
-                if relationship.confidence > existing.confidence:
-                    existing.confidence = relationship.confidence
+                # Merge sources_verified (union) and bump confidence
+                for src in relationship.sources_verified:
+                    if src not in existing.sources_verified:
+                        existing.sources_verified.append(src)
+                existing.confidence = max(
+                    existing.confidence,
+                    relationship.confidence,
+                    min(1.0, 0.5 + 0.2 * len(existing.sources_verified)),
+                )
+                existing.updated_at = datetime.utcnow().isoformat()
                 return
 
         self.relationships.append(relationship)
@@ -541,7 +594,7 @@ class ProductGraph(BaseModel):
         # Relationship index (per product)
         # Index under BOTH source and target so either side can look up the rel
         for rel in self.relationships:
-            rel_dict = rel.model_dump()
+            rel_dict = {**rel.model_dump(), "is_triple_checked": rel.is_triple_checked}
             relationships_map.setdefault(rel.source_id, []).append(rel_dict)
             # Always index the target side too — product pages need to find
             # e.g., what accessories exist for them (target of accessory_for)
@@ -558,6 +611,7 @@ class ProductGraph(BaseModel):
         """Summary statistics for metadata."""
         confirmed = sum(1 for r in self.relationships if r.is_confirmed)
         pending = sum(1 for r in self.relationships if r.needs_review)
+        triple_checked = sum(1 for r in self.relationships if r.is_triple_checked)
         type_counts = {}
         for r in self.relationships:
             type_counts[r.relationship_type.value] = type_counts.get(
@@ -572,6 +626,7 @@ class ProductGraph(BaseModel):
             "total_relationships": len(self.relationships),
             "confirmed_relationships": confirmed,
             "pending_review": pending,
+            "triple_checked_relationships": triple_checked,
             "products_in_families": products_in_families,
             "products_without_family": len(self.products) - products_in_families,
             "relationship_type_counts": type_counts,

@@ -1,9 +1,10 @@
 /**
  * Halilit Support Center — Unified Types (JIT Architecture v9)
  *
- * Simplified types: no more auto-generated pipeline types.
- * ConductorProduct (from useConductorCatalog) is the canonical product shape.
- * EnrichedProduct extends it with JIT intelligence data.
+ * This is the SINGLE source of truth for all TypeScript types.
+ * Types are aligned with the backend pipeline output format.
+ *
+ * Types auto-generated from backend data models.
  */
 
 // ============================================

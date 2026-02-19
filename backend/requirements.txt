@@ -12,5 +12,12 @@ httpx>=0.27.0
 requests>=2.31.0
 trafilatura>=1.6.0
 
-# Media
-Pillow>=10.0.0
+# Factory agents (Builder: spec -> code)
+openai>=1.0.0
+
+# Memory monitoring
+psutil>=5.9.0
+
+# Testing
+pytest>=7.0.0
+pytest-asyncio>=0.23.0

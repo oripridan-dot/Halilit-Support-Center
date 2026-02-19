@@ -1,89 +1,108 @@
 """
-Trusted Sources — The "Golden Circle" of authoritative review sources.
+TRUSTED SOURCES — The Golden Circle
 
-Only these domains are allowed to be cited by the JIT agent.
-Organized by credibility tier:
-  Tier 1: Professional editorial reviews (Sound On Sound, MusicRadar, etc.)
-  Tier 2: Retailer authority reviews (Sweetwater, Thomann)
-  Tier 3: Community & data sources (Gearspace, Equipboard, Reddit)
+Whitelist of world-class review sites trusted for contextual intelligence.
+These are the ONLY external sources the JIT agent may consult.
+
+Per Source Rules: Contextual data requires 3+ independent trusted sources.
 """
 
-from dataclasses import dataclass, field
+from typing import List, Dict
 
+# ═══════════════════════════════════════════════════════════════════════════
+# THE GOLDEN CIRCLE — Trusted Review Domains
+# ═══════════════════════════════════════════════════════════════════════════
 
-@dataclass
-class TrustedSource:
-    domain: str
-    name: str
-    tier: int  # 1=professional, 2=retailer, 3=community
-    logo_key: str  # for frontend logo lookup
-    search_label: str  # human-friendly label
-
-
-# ── The Golden Circle ──
-
-TRUSTED_SOURCES: list[TrustedSource] = [
-    # Tier 1 — Professional Editorial
-    TrustedSource("soundonsound.com", "Sound On Sound",
-                  1, "sos", "Sound On Sound"),
-    TrustedSource("musicradar.com", "MusicRadar",
-                  1, "musicradar", "MusicRadar"),
-    TrustedSource("attackmagazine.com", "Attack Magazine",
-                  1, "attack", "Attack Magazine"),
-    TrustedSource("sonicstate.com", "Sonic State",
-                  1, "sonicstate", "Sonic State"),
-    TrustedSource("mixonline.com", "Mix Magazine", 1, "mix", "Mix Magazine"),
-    TrustedSource("musictech.com", "MusicTech", 1, "musictech", "MusicTech"),
-
-    # Tier 2 — Retailer Authority
-    TrustedSource("sweetwater.com", "Sweetwater",
-                  2, "sweetwater", "Sweetwater"),
-    TrustedSource("thomann.de", "Thomann", 2, "thomann", "Thomann"),
-
-    # Tier 3 — Community & Data
-    TrustedSource("equipboard.com", "Equipboard",
-                  3, "equipboard", "Equipboard"),
-    TrustedSource("modulargrid.net", "ModularGrid",
-                  3, "modulargrid", "ModularGrid"),
-    TrustedSource("gearspace.com", "Gearspace", 3, "gearspace", "Gearspace"),
-    TrustedSource("reddit.com", "Reddit", 3, "reddit", "Reddit"),
+TRUSTED_SOURCES: List[Dict[str, str]] = [
+    {
+        "name": "Sound On Sound",
+        "domain": "soundonsound.com",
+        "logo": "/assets/trusted/soundonsound.png",
+        "specialty": "In-depth studio & instrument reviews",
+    },
+    {
+        "name": "MusicRadar",
+        "domain": "musicradar.com",
+        "logo": "/assets/trusted/musicradar.png",
+        "specialty": "Guitar, keys, drums, and production reviews",
+    },
+    {
+        "name": "Sweetwater",
+        "domain": "sweetwater.com",
+        "logo": "/assets/trusted/sweetwater.png",
+        "specialty": "Detailed product specs and expert reviews",
+    },
+    {
+        "name": "Attack Magazine",
+        "domain": "attackmagazine.com",
+        "logo": "/assets/trusted/attack.png",
+        "specialty": "Electronic music production and DJ gear",
+    },
+    {
+        "name": "Sonic State",
+        "domain": "sonicstate.com",
+        "logo": "/assets/trusted/sonicstate.png",
+        "specialty": "Synths, studio gear, and production tech",
+    },
+    {
+        "name": "Equipboard",
+        "domain": "equipboard.com",
+        "logo": "/assets/trusted/equipboard.png",
+        "specialty": "What gear do famous musicians use",
+    },
+    {
+        "name": "Reverb",
+        "domain": "reverb.com",
+        "logo": "/assets/trusted/reverb.png",
+        "specialty": "Market pricing and community reviews",
+    },
+    {
+        "name": "Gearslutz / Gearspace",
+        "domain": "gearspace.com",
+        "logo": "/assets/trusted/gearspace.png",
+        "specialty": "Professional audio community forums",
+    },
+    {
+        "name": "Bonedo",
+        "domain": "bonedo.de",
+        "logo": "/assets/trusted/bonedo.png",
+        "specialty": "German music gear reviews (detailed tests)",
+    },
 ]
 
-# Quick lookup
-TRUSTED_DOMAINS = {s.domain for s in TRUSTED_SOURCES}
-TRUSTED_BY_DOMAIN = {s.domain: s for s in TRUSTED_SOURCES}
+# Quick lookup sets
+TRUSTED_DOMAINS = {s["domain"] for s in TRUSTED_SOURCES}
+TRUSTED_NAMES = {s["name"] for s in TRUSTED_SOURCES}
 
 
-def get_search_site_filter(tiers: list[int] | None = None) -> str:
+def get_trusted_domains() -> List[str]:
+    """Return list of trusted domains for site-restricted search."""
+    return [s["domain"] for s in TRUSTED_SOURCES]
+
+
+def build_site_restricted_query(product_name: str, max_sites: int = 6) -> str:
     """
-    Build a Google/Serper site: filter string for trusted sources.
-
-    Args:
-        tiers: Optional list of tiers to include. None = all tiers.
-
-    Returns:
-        String like "site:soundonsound.com OR site:musicradar.com OR ..."
+    Build a Google-style site-restricted search query.
+    Example: "Roland FP-30X review site:soundonsound.com OR site:sweetwater.com ..."
     """
-    sources = TRUSTED_SOURCES
-    if tiers:
-        sources = [s for s in sources if s.tier in tiers]
-    return " OR ".join(f"site:{s.domain}" for s in sources)
+    domains = get_trusted_domains()[:max_sites]
+    site_parts = " OR ".join(f"site:{d}" for d in domains)
+    return f"{product_name} review ({site_parts})"
 
 
-def get_review_search_query(product_name: str, tiers: list[int] | None = None) -> str:
-    """Build a complete search query for trusted reviews of a product."""
-    site_filter = get_search_site_filter(tiers or [1, 2])
-    return f'({site_filter}) "{product_name}" review'
-
-
-def is_trusted_url(url: str) -> bool:
-    """Check if a URL belongs to a trusted source."""
-    return any(domain in url for domain in TRUSTED_DOMAINS)
-
-
-def identify_source(url: str) -> TrustedSource | None:
-    """Identify which trusted source a URL belongs to."""
-    for domain, source in TRUSTED_BY_DOMAIN.items():
-        if domain in url:
+def get_source_info(domain_or_name: str) -> Dict[str, str]:
+    """Get info for a trusted source by domain or name."""
+    domain_or_name_lower = domain_or_name.lower()
+    for source in TRUSTED_SOURCES:
+        if (
+            source["domain"].lower() in domain_or_name_lower
+            or source["name"].lower() in domain_or_name_lower
+        ):
             return source
-    return None
+    return {"name": domain_or_name, "domain": "", "logo": "", "specialty": ""}
+
+
+def is_trusted_domain(url: str) -> bool:
+    """Check if a URL belongs to a trusted source."""
+    url_lower = url.lower()
+    return any(domain in url_lower for domain in TRUSTED_DOMAINS)

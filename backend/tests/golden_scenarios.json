@@ -1,0 +1,65 @@
+[
+  {
+    "id": "roland-fp30x-accessory",
+    "description": "Roland FP-30X MUST have Roland KSC-70 as a verified accessory",
+    "product_identifier": { "sku_or_name": "Roland FP-30X", "brand": "Roland" },
+    "required_relationship": {
+      "type": "accessory",
+      "target_identifier": {
+        "sku_or_name": "Roland KSC-70",
+        "brand": "Roland"
+      },
+      "verified": true
+    }
+  },
+  {
+    "id": "nord-piano5-category",
+    "description": "Nord Piano 5 88 MUST be in canonical category 'Pianos' with subcategory 'Stage Piano'",
+    "product_identifier": { "sku_or_name": "Nord Piano 5 88", "brand": "Nord" },
+    "required_taxonomy": {
+      "canonical_category": "Pianos",
+      "canonical_subcategory": "Stage Piano"
+    }
+  },
+  {
+    "id": "moog-grandmother-dark-tier",
+    "description": "Moog Grandmother Dark Series MUST be classified as tier 'pro' or 'flagship'",
+    "product_identifier": {
+      "sku_or_name": "Moog Grandmother Dark Series",
+      "brand": "Moog"
+    },
+    "required_fields": {
+      "tier": ["pro", "flagship"]
+    }
+  },
+  {
+    "id": "product-must-have-price",
+    "description": "Any product with a Halilit URL MUST have a non-zero IL price set by commercial source",
+    "rule": "ALL products with halilit_url MUST have price > 0 OR be explicitly flagged calls_for_price=true",
+    "source_requirement": "commercial"
+  },
+  {
+    "id": "no-ai-generated-price",
+    "description": "NO product may have data_trust.price_source = 'estimated' in the shipped catalog",
+    "rule": "ALL products MUST have data_trust.price_source IN ('halilit', 'none')",
+    "source_requirement": "commercial"
+  },
+  {
+    "id": "roland-fp30x-alternative",
+    "description": "Roland FP-30X SHOULD have at least one alternative (e.g., Yamaha P-125 or similar)",
+    "product_identifier": { "sku_or_name": "Roland FP-30X", "brand": "Roland" },
+    "required_relationship": {
+      "type": "alternative",
+      "target_identifier": { "brand": "Yamaha" },
+      "verified": false,
+      "required": false,
+      "note": "At least one alternative should exist from a competing brand"
+    }
+  },
+  {
+    "id": "product-image-source",
+    "description": "NO product may have data_trust.image_source = 'none' if a halilit_url is present",
+    "rule": "ALL products with halilit_url MUST have data_trust.image_source IN ('halilit', 'official')",
+    "source_requirement": "commercial"
+  }
+]
