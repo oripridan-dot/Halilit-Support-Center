@@ -787,8 +787,8 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
             if isinstance(feat, dict) and feat.get("name") and feat.get("value"):
                 fname = feat["name"].strip()
                 fval = feat["value"].strip()
-                # Skip "Main Feature" entries — those go into features list, not specs
-                if fname.lower() in ("main feature", "feature"):
+                # Skip editorial/Halilit text — those are not official technical specs
+                if fname.lower() in ("main feature", "feature", "expert insight", "expert_insight"):
                     continue
                 # Handle duplicate keys by appending index
                 if fname in specs:

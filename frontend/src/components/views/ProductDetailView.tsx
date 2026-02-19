@@ -9,7 +9,16 @@ import {
   useProductRelationships,
 } from "../../hooks/useConductorCatalog";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
-import { ArrowLeft, Copy, Check, FileText, ExternalLink } from "lucide-react";
+import {
+  ArrowLeft,
+  Copy,
+  Check,
+  FileText,
+  ExternalLink,
+  Loader2,
+  ThumbsUp,
+  ThumbsDown,
+} from "lucide-react";
 import { ProductRelations } from "../cockpit/ProductRelations";
 import type { RelatedProduct } from "../cockpit/ProductRelations";
 
@@ -50,7 +59,8 @@ const ProductDetailView: React.FC = () => {
   const priceEilat = product?.price_eilat ?? jitState.snap?.price_eilat ?? 0;
   const imageUrl =
     product?.image_url || jitState.snap?.thumbnail || PLACEHOLDER_IMAGE;
-  const stock = (product as { stock?: number })?.stock ?? 1;
+  const stock: number | null =
+    (product as { stock?: number | null })?.stock ?? null;
   const specsRecord = useMemo(() => {
     const fromJit = jitState.officialSpecs?.specs as
       | Record<string, unknown>
@@ -65,6 +75,14 @@ const ProductDetailView: React.FC = () => {
     product?.description ||
     (jitState.officialSpecs as { description?: string } | null)?.description ||
     "";
+
+  const pros: string[] = (product as { pros?: string[] })?.pros ?? [];
+  const cons: string[] = (product as { cons?: string[] })?.cons ?? [];
+
+  const isJitStreaming =
+    jitState.phase === "snap" ||
+    jitState.phase === "intel" ||
+    jitState.phase === "wisdom";
 
   const fileLinks = useMemo(() => {
     const links: { label: string; url: string }[] = [];
@@ -230,6 +248,13 @@ const ProductDetailView: React.FC = () => {
       ? "bg-red-950/30 border-red-900/30"
       : "bg-zinc-900 border-zinc-800";
 
+  const stockBadge =
+    stock === null
+      ? { dot: "bg-zinc-500", label: "Unknown", cls: "text-zinc-400" }
+      : stock === 0
+        ? { dot: "bg-red-500", label: "Out of Stock", cls: "text-red-400" }
+        : { dot: "bg-green-500", label: "In Stock", cls: "text-green-400" };
+
   return (
     <div className="flex flex-col h-full bg-zinc-950">
       {/* Header Zone */}
@@ -247,17 +272,22 @@ const ProductDetailView: React.FC = () => {
             <img
               src={imageUrl}
               alt=""
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain transition-opacity"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
+                (e.target as HTMLImageElement).style.opacity = "0.2";
               }}
             />
           </div>
 
           <div className="flex-1 min-w-0">
-            <span className="inline-block px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20 mb-2">
+            <button
+              type="button"
+              onClick={() => goToInventory(displayBrand)}
+              className="inline-block px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider border border-blue-500/20 mb-2 hover:bg-blue-500/20 transition-colors focus-visible:ring-2 focus-visible:ring-blue-500"
+              title={`View all ${displayBrand} products`}
+            >
               {displayBrand}
-            </span>
+            </button>
             <h1 className="text-3xl font-bold text-white mb-2 tracking-tight">
               {displayName}
             </h1>
@@ -268,13 +298,22 @@ const ProductDetailView: React.FC = () => {
               IL Price
             </span>
             <span className="text-3xl font-mono font-medium text-white">
-              ₪{priceIl != null ? Number(priceIl).toLocaleString() : "N/A"}
+              {priceIl ? (
+                `₪${Number(priceIl).toLocaleString()}`
+              ) : (
+                <span className="text-amber-400 text-lg">Call for Price</span>
+              )}
             </span>
             <span className="text-xs text-zinc-500">Eilat</span>
             <span className="text-sm font-mono text-zinc-400">
-              ₪
-              {priceEilat != null ? Number(priceEilat).toLocaleString() : "N/A"}
+              {priceEilat ? `₪${Number(priceEilat).toLocaleString()}` : "—"}
             </span>
+            <div className="flex items-center gap-1.5 mt-1">
+              <span className={`w-2 h-2 rounded-full ${stockBadge.dot}`} />
+              <span className={`text-xs font-medium ${stockBadge.cls}`}>
+                {stockBadge.label}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -311,15 +350,30 @@ const ProductDetailView: React.FC = () => {
             )}
             {quoteToast ? "Quote ready" : "Generate Quote PDF"}
           </button>
-          {product?.official_url && (
+          {product?.official_url ? (
             <a
               href={product.official_url}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-sm focus-visible:ring-2 focus-visible:ring-blue-500"
             >
               <ExternalLink size={16} aria-hidden /> Open Official Page
             </a>
+          ) : (
+            <button
+              type="button"
+              disabled
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-zinc-900 text-zinc-600 text-sm cursor-not-allowed opacity-40"
+              title="No official page available"
+            >
+              <ExternalLink size={16} aria-hidden /> Open Official Page
+            </button>
+          )}
+          {isJitStreaming && (
+            <span className="flex items-center gap-1.5 text-xs text-zinc-500 animate-pulse">
+              <Loader2 size={12} className="animate-spin" aria-hidden />
+              Fetching intelligence…
+            </span>
           )}
         </div>
 
@@ -368,40 +422,90 @@ const ProductDetailView: React.FC = () => {
           )}
 
           {activeTab === "specs" && (
-            <section>
-              <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-zinc-800">
-                Technical data
-              </h3>
-              {Object.keys(specsRecord).length > 0 ? (
-                <dl className="grid grid-cols-1 gap-y-2">
-                  {Object.entries(specsRecord).map(([key, val]) => (
-                    <div
-                      key={key}
-                      className="grid grid-cols-3 gap-4 py-2 border-b border-zinc-900"
-                    >
-                      <dt className="text-sm font-medium text-zinc-500">
-                        {key}
-                      </dt>
-                      <dd className="col-span-2 text-sm text-zinc-300">
-                        {val !== null && val !== undefined ? String(val) : "—"}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              ) : displayDescription ? (
-                <div className="space-y-4">
-                  <p className="text-zinc-300 leading-relaxed text-sm whitespace-pre-line">
-                    {displayDescription}
+            <section className="space-y-8">
+              {/* Technical Specs */}
+              <div>
+                <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-zinc-800">
+                  Technical Specifications
+                </h3>
+                {Object.keys(specsRecord).length > 0 ? (
+                  <dl className="grid grid-cols-1 gap-y-2">
+                    {Object.entries(specsRecord).map(([key, val]) => (
+                      <div
+                        key={key}
+                        className="grid grid-cols-3 gap-4 py-2 border-b border-zinc-900 even:bg-zinc-900/30"
+                      >
+                        <dt className="text-sm font-medium text-zinc-500">
+                          {key}
+                        </dt>
+                        <dd className="col-span-2 text-sm text-zinc-300">
+                          {val !== null && val !== undefined
+                            ? String(val)
+                            : "—"}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : (
+                  <p className="text-zinc-500 italic text-sm">
+                    Official specifications not yet fetched. Run intelligence on
+                    this product.
                   </p>
-                  <p className="text-xs text-zinc-600 italic">
-                    Technical specifications not yet fetched from official brand
-                    page.
-                  </p>
+                )}
+              </div>
+
+              {/* Pros & Cons from Trusted Reviews */}
+              {(pros.length > 0 || cons.length > 0) && (
+                <div>
+                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-zinc-800">
+                    Real-World Insights
+                    <span className="ml-2 text-[10px] font-normal text-zinc-600 normal-case tracking-normal">
+                      from trusted reviews
+                    </span>
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {pros.length > 0 && (
+                      <div>
+                        <h4 className="flex items-center gap-1.5 text-xs font-semibold text-green-400 uppercase tracking-wider mb-3">
+                          <ThumbsUp size={12} aria-hidden /> Pros
+                        </h4>
+                        <ul className="space-y-2">
+                          {pros.map((pro, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-zinc-300"
+                            >
+                              <span className="text-green-500 mt-0.5 flex-shrink-0">
+                                +
+                              </span>
+                              {pro}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {cons.length > 0 && (
+                      <div>
+                        <h4 className="flex items-center gap-1.5 text-xs font-semibold text-red-400 uppercase tracking-wider mb-3">
+                          <ThumbsDown size={12} aria-hidden /> Cons
+                        </h4>
+                        <ul className="space-y-2">
+                          {cons.map((con, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-zinc-300"
+                            >
+                              <span className="text-red-500 mt-0.5 flex-shrink-0">
+                                −
+                              </span>
+                              {con}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              ) : (
-                <p className="text-zinc-500 italic">
-                  No technical specifications available.
-                </p>
               )}
             </section>
           )}
@@ -430,7 +534,7 @@ const ProductDetailView: React.FC = () => {
                         <a
                           href={url}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="flex items-center gap-1.5 text-blue-400 hover:underline focus-visible:ring-2 focus-visible:ring-blue-500 rounded text-sm"
                         >
                           <ExternalLink size={12} aria-hidden /> {label}
