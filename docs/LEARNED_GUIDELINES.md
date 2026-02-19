@@ -23,3 +23,9 @@ Each entry is structured as:
 ## Guidelines
 
 _(No lessons recorded yet. The Reflect Agent will populate this section as the system self-heals.)_
+
+### [2026-02-19] Catalog Build Failure
+**Symptom:** Product catalog build process failed unexpectedly.
+**Root Cause:** A transient network issue interrupted data synchronization.
+**Fix:** Implemented retry logic for catalog data synchronization.
+**Lesson:** ALWAYS implement retry mechanisms for transient errors.

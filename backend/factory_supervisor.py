@@ -29,6 +29,8 @@ LOGS_DIR = _ROOT / "factory_logs"
 # ---------------------------------------------------------------------------
 # Chief Agent — lazy import so the module is usable without AI key for pure DAG runs
 # ---------------------------------------------------------------------------
+
+
 def _consult_chief(prompt: str, failure_context: str = "") -> dict:
     """Lazy-import and call chief_agent.consult_chief to avoid circular deps."""
     _factory_dir = _BACKEND / "factory"
@@ -197,8 +199,8 @@ def run_grand_task_force(prompt: str = "") -> int:
 
     plan = _consult_chief(effective_prompt)
     explanation = plan.get("explanation", "")
-    proposal    = plan.get("proposal", "")
-    queue       = plan.get("queue", [])
+    proposal = plan.get("proposal", "")
+    queue = plan.get("queue", [])
 
     if explanation:
         log(f"📋 Chief says: {explanation}")
@@ -211,7 +213,7 @@ def run_grand_task_force(prompt: str = "") -> int:
         return 1
 
     log(f"📊 Executing DAG with {len(queue)} task(s) from Chief...")
-    nodes   = build_dynamic_dag_from_queue(queue)
+    nodes = build_dynamic_dag_from_queue(queue)
     results = run_dag(nodes)
 
     all_ok = all(r.success for r in results)
@@ -227,11 +229,11 @@ def run_grand_task_force(prompt: str = "") -> int:
     failure_report = "\n".join(
         f"FAILED: {r.label} — {r.error}" for r in results if not r.success
     )
-    fix_plan  = _consult_chief("", failure_context=failure_report)
+    fix_plan = _consult_chief("", failure_context=failure_report)
     fix_queue = fix_plan.get("queue", [])
     if fix_queue:
         log(f"🛠  Recovery queue has {len(fix_queue)} task(s).")
-        fix_nodes   = build_dynamic_dag_from_queue(fix_queue)
+        fix_nodes = build_dynamic_dag_from_queue(fix_queue)
         fix_results = run_dag(fix_nodes)
         all_ok = all(r.success for r in fix_results)
         if all_ok:
@@ -477,35 +479,70 @@ def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
 
     Maps the Chief's tool names to `factory.py` CLI commands.
     Returns True on success (exit-code 0), False on failure.
+
+    Routing notes:
+      • 'build'  (no args OR free-text args)  → conductor_main.py rebuild-catalog
+      • 'build'  (args ends with .md)          → factory.py build <spec_path>
+      • 'implement' (args = spec .md path)     → factory.py build <spec_path>
+      • 'task_force'                            → factory.py task_force <id> <goal>
+                                                  auto-generates id when absent
     """
+    import uuid as _uuid
+
     task = task or {}
     py = sys.executable
     factory_script = str(_ROOT / "factory.py")
+    conductor_script = str(_BACKEND / "conductor_main.py")
 
-    _tool_cmd_map: dict[str, list[str]] = {
-        "design":    [py, factory_script, "design", args] if args else [],
-        "implement": [py, factory_script, "build", args] if args else [],
-        "build":     [py, factory_script, "build"],
-        "heal":      [py, factory_script, "heal"],
-        "diagnose":  [py, factory_script, "diagnose"],
-        "steer":     [py, factory_script, "steer"],
-        "doc":       [py, factory_script, "doc"],
-        "optimize":  [py, factory_script, "optimize", args] if args else [],
-        "commit":    [py, factory_script, "commit"],
-        "reflect":   [py, factory_script, "reflect", args or "(no context)"],
-    }
+    # ---------------------------------------------------------------------------
+    # 'build' — catalog rebuild vs. spec materialisation
+    # ---------------------------------------------------------------------------
+    if tool == "build":
+        if args and args.strip().endswith(".md"):
+            # Looks like a spec path → materialise code
+            cmd = [py, factory_script, "build", args.strip()]
+        else:
+            # Data rebuild — run conductor rebuild-catalog
+            log("   🗄  Routing 'build' → conductor rebuild-catalog")
+            result = subprocess.run(
+                [py, conductor_script, "rebuild-catalog"],
+                cwd=str(_BACKEND),
+                capture_output=True,
+                text=True,
+            )
+            if result.returncode != 0:
+                log(f"❌ Tool 'build' (catalog rebuild) failed (exit {result.returncode})")
+                tail = "\n".join(
+                    (result.stdout + "\n" + result.stderr).strip().splitlines()[-20:])
+                if tail:
+                    log(tail)
+                return False
+            return True
 
-    if tool == "task_force":
-        tf_id = task.get("id", "")
-        tf_goal = task.get("goal", args)
-        agents = ",".join(
-            task.get("agents", ["steerer", "builder", "watchdog"]))
-        if not tf_id or not tf_goal:
-            log(
-                f"⚠️  task_force skipped — missing 'id' or 'goal' in task: {task}")
-            return False
+    # ---------------------------------------------------------------------------
+    # 'task_force' — multi-agent coordinator
+    # ---------------------------------------------------------------------------
+    elif tool == "task_force":
+        tf_id   = task.get("id", "") or _uuid.uuid4().hex[:8]
+        tf_goal = task.get("goal", "") or args or "Improve the system"
+        agents  = ",".join(task.get("agents", ["steerer", "builder", "watchdog"]))
         cmd = [py, factory_script, "task_force", tf_id, tf_goal, agents]
+
+    # ---------------------------------------------------------------------------
+    # Standard tool map
+    # ---------------------------------------------------------------------------
     else:
+        _tool_cmd_map: dict[str, list[str]] = {
+            "design":    [py, factory_script, "design", args] if args else [],
+            "implement": [py, factory_script, "build", args] if args else [],
+            "heal":      [py, factory_script, "heal"],
+            "diagnose":  [py, factory_script, "diagnose"],
+            "steer":     [py, factory_script, "steer"],
+            "doc":       [py, factory_script, "doc"],
+            "optimize":  [py, factory_script, "optimize", args] if args else [],
+            "commit":    [py, factory_script, "commit"],
+            "reflect":   [py, factory_script, "reflect", args or "(no context)"],
+        }
         cmd = _tool_cmd_map.get(tool, [])
 
     if not cmd:
