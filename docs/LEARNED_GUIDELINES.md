@@ -107,3 +107,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** `FixReport` object was instantiated without 'fixes'.
 **Fix:** Added initialization of the 'fixes' attribute.
 **Lesson:** ALWAYS initialize all object attributes explicitly.
+
+### [2026-02-20] Missing Attribute Causes Crash
+**Symptom:** Code crashed due to missing attribute.
+**Root Cause:** `fixes` attribute was missing.
+**Fix:** Added the missing `fixes` attribute.
+**Lesson:** ALWAYS validate object attribute existence.
