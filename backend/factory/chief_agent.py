@@ -112,6 +112,11 @@ RULES:
 - For 'explain', use a single queue item with "args" containing the answer text.
 - For 'reflect', the "args" MUST be a short description of the failure/lesson context.
 - Sequential tasks act as BARRIERS: all parallel tasks before them must finish first.
+- **UI VALIDATE RULE:** After ANY batch of 'implement' tasks that touch frontend specs
+  (specs/interface/ or component files), you MUST queue a sequential 'ui_validate' task
+  immediately after the parallel batch closes, before 'diagnose' or 'commit'. This catches
+  Vite runtime import errors that 'diagnose' (tsc/eslint) silently misses.
+  Example: parallel implements → 'ui_validate' (sequential) → 'diagnose' → 'commit'.
 
 RECOVERY MODE (triggered when FAILURE REPORT is present):
 - Read the error output carefully. Identify the root cause.

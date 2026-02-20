@@ -71,3 +71,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Unknown.
 **Fix:** Not documented.
 **Lesson:** ALWAYS provide detailed failure context when calling 'reflect'.
+
+### [2026-02-20] Check Error Logs Diligently
+**Symptom:** Build failed without clear reason.
+**Root Cause:** Insufficiently analyzed error logs.
+**Fix:** Manually checked error logs to diagnose issue.
+**Lesson:** ALWAYS carefully analyze error logs.

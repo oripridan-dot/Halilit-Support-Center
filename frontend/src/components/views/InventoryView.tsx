@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import { Product, formatPrice } from "../../types";
 import { PackageOpen } from "lucide-react";
@@ -39,7 +38,6 @@ const StockBadge: React.FC<StockBadgeProps> = ({ stock }) => {
 const PAGE_SIZE = 50;
 
 const InventoryView: React.FC = () => {
-  const navigate = useNavigate();
   const { products, isLoading, error, refetch } = useConductorCatalog();
   const { searchQuery, initialCfpFilter, setSearchQuery, goToProduct } =
     useNavigationStore();

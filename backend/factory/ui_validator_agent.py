@@ -174,18 +174,30 @@ def validate_ui(run_build: bool = True) -> dict:
         build_passed, build_output = run_vite_build()
 
         if not build_passed:
-            # Extract the meaningful error lines (skip stack traces & blank lines)
-            error_lines = [
-                ln.strip() for ln in build_output.splitlines()
-                if ln.strip() and any(
-                    kw in ln for kw in (
-                        "error", "Error", "ERROR",
-                        "Failed to resolve", "Cannot find",
-                        "does not provide an export", "Module not found",
-                    )
-                )
-            ]
-            build_error_lines = error_lines[:20]  # cap to avoid noise
+            # Extract meaningful errors: include lines after "error during build:"
+            # and lines containing known error keywords
+            lines = build_output.splitlines()
+            error_lines = []
+            capture_next = 0
+            for ln in lines:
+                stripped = ln.strip()
+                if not stripped:
+                    continue
+                if "error during build" in stripped.lower():
+                    error_lines.append(stripped)
+                    capture_next = 3  # capture the next 3 lines for context
+                    continue
+                if capture_next > 0:
+                    error_lines.append(stripped)
+                    capture_next -= 1
+                    continue
+                if any(kw in ln for kw in (
+                    "Failed to resolve", "Cannot find",
+                    "does not provide an export", "Module not found",
+                    "[vite]", "[rollup]",
+                )):
+                    error_lines.append(stripped)
+            build_error_lines = error_lines[:20]
             print(
                 f"  ❌ Vite build FAILED — {len(build_error_lines)} error line(s):")
             for ln in build_error_lines:
