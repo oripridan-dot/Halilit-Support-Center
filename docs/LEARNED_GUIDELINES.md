@@ -101,3 +101,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Undetermined compilation error.
 **Fix:** Triggered automated healing process.
 **Lesson:** ALWAYS automate build error recovery.
+
+### [2026-02-20] Initialize All Object Attributes
+**Symptom:** `ui_validator_agent.py` crashed due to missing attribute.
+**Root Cause:** `FixReport` object was instantiated without 'fixes'.
+**Fix:** Added initialization of the 'fixes' attribute.
+**Lesson:** ALWAYS initialize all object attributes explicitly.
