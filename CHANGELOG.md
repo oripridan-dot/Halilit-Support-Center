@@ -1,3 +1,11 @@
+## [v4.1] — 2026-02-20
+### v4.1
+
+- [feat] Added get_relevant_lore function using vector memory to agent_core.py
+- [feat] Added support for embedding and cosine similarity for finding relevant lessons from LEARNED_GUIDELINES.md.
+- [fix] Improved graceful fallback to full text read if embedding API is unavailable in get_relevant_lore.
+- [chore] Formatted mcp_servers.json for readability and changed web-search enabled status to true.
+
 ## [v9.7.1] — 2026-02-20
 
 ### Cleanup & Hardening
