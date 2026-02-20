@@ -1,49 +1,43 @@
 ## Overview
 
-The Halilit Support Center application is a data-driven dashboard for managing product information. It provides views for product inventory, detailed product information, and a dashboard for monitoring key metrics. The application uses a FastAPI backend to serve data and a React frontend built with TypeScript. The backend includes agents for data processing, specification generation, and living documentation, supporting a "Dark Factory" development approach.
+The Halilit Support Center is a web application designed as a dense, data-forward console for managing product information and providing real-time intelligence. The frontend offers views for dashboard, inventory, and product details. The backend provides a FastAPI server that serves data and facilitates JIT (Just-In-Time) product intelligence.
 
 ## Frontend Views
 
-*   **DashboardView**: `/` (via `DASHBOARD` in `navigationStore`), displays dashboard statistics, including total products, calls for price, top brands count, and last ingestion run status. Uses `useDashboardStats` hook.
-*   **InventoryView**: `/inventory` (via `INVENTORY` in `navigationStore`), displays a data table of product inventory. Uses `useConductorCatalog` hook.
-*   **ProductDetailView**: Dynamically routed via `PRODUCT_DETAIL` in `navigationStore`, displays detailed information about a specific product. Uses `useConductorCatalog` and `useJITIntelligence` hooks.
-*   **Ingestion Status View**: `/ingestion` (via `INGESTION_STATUS` in `navigationStore`). Not explicitly rendered in the provided code, but referenced by the `navigationStore`.
-*   **Explorer View**: `/explorer` (via `EXPLORER` in `navigationStore`). Not explicitly rendered in the provided code, but referenced by the `navigationStore`.
+*   **DashboardView**: Renders a dark console with dashboard statistics. Uses `/api/dashboard/stats` to fetch data.
+*   **InventoryView**: Displays a searchable inventory of products. Uses `useConductorCatalog` hook. Filterable by search text, product name, and brand.
+*   **ProductDetailView**: Displays detailed information about a product, including responsive images.
 
 ## Hooks & State
 
-*   `useDashboardStats`: Fetches dashboard statistics from `/api/dashboard/stats`. Returns an object of type `DashboardStats`.
-*   `useConductorCatalog`: Fetches product catalog data from `/api/conductor/catalog`. Returns `ConductorProduct` data.
-*   `useJITIntelligence`: Manages the JIT (Just-In-Time) intelligence pipeline for product data. Returns data related to product intelligence.  Uses the `JITPhase` type for status.
-*   `useDebounceValue`: Debounces a value.
-*   `navigationStore`: (`src/store/navigationStore.ts`) Manages the application's navigation state.
-    *   `currentView`: `ViewType` (DASHBOARD, INVENTORY, PRODUCT\_DETAIL, INGESTION\_STATUS, EXPLORER).
-    *   `activeProductId`: `string | null`.
-    *   `searchQuery`: `string | null`.
-    *   `initialCfpFilter`: `boolean | null`.
+*   **`useConductorCatalog`**: Fetches and provides product data from the `/api/conductor/catalog` endpoint. Returns an object with `products`, `isLoading`, and `error` properties.
+*   **`useDebounceValue`**: Debounces a value to prevent excessive updates.
+*   **`useNavigationStore`**: Manages the application's navigation state, including the current view (`DASHBOARD`, `INVENTORY`, `PRODUCT_DETAIL`, `INGESTION_STATUS`, `EXPLORER`), the active product ID, search query, and a flag for an initial call-for-price filter.
+*   **`useJITIntelligence`**: Manages the Just-In-Time intelligence phases: `idle`, `snap`, `intel`, `wisdom`, `complete`, `error`.
 
 ## Backend API
 
-*   `/api/dashboard/stats`: (GET) Returns dashboard statistics (e.g. `total_products`, `calls_for_price`).
-*   `/api/conductor/catalog`: (GET) Returns the product catalog data.
-*   `/`: Serves static frontend assets.
+*   `/api/dashboard/stats` (GET): Returns dashboard statistics in the format of `DashboardStats`.
+*   `/api/conductor/catalog` (GET): Returns product catalog data.
+*   `/api/jit/product/{product_id}` (GET): Returns JIT intelligence data for a product.
 
 ## Data Pipeline
 
-1.  A scraper (not shown in the snapshot) fetches product data.
-2.  The `product_normalizer.py` normalizes the raw data into a consistent format, producing a flat product shape and pre-computing indices.
-3.  The normalized data is used to build the catalog.
-4.  The frontend fetches the catalog data via the `/api/conductor/catalog` endpoint.
+1.  A scraper (not shown in this snapshot) collects product data.
+2.  The `product_normalizer.py` normalizes the product data into a consistent format.
+3.  The normalized data is used to build a catalog.
+4.  The catalog is served by the `/api/conductor/catalog` endpoint and consumed by the frontend.
 
 ## Factory Agents
 
-*   `steerer_agent.py`: Identifies critical gaps in product specifications and generates new or updated specs.
-*   `scribe_agent.py`: Generates and updates documentation based on the codebase.
-*   `spec_writer.py`: Translates plain text descriptions into detailed Markdown specifications.
-*   `builder_agent.py`: Materializes code from specifications.
+*   `steerer_agent.py`: Identifies gaps in existing specifications and generates new or updated specs.
+*   `scribe_agent.py`: Reads the codebase and regenerates documentation.
+*   `spec_writer.py`: Translates human intent into Markdown specifications.
+*   `builder_agent.py`: Materializes code from a spec.
 
 ## Key Conventions
 
-*   **Imports**: Uses `lucide-react` for icons, `@tanstack/react-query` for data fetching, and `zustand` for state management.
-*   **Product Data**:  The `ConductorProduct` type is the canonical product shape.
-*   **Source Rules**: All data must come from one of three authorized sources.
+*   **Imports**: Standard React and TypeScript imports, along with `lucide-react` for icons and `@tanstack/react-query` for data fetching.
+*   **Naming**: Component names are PascalCase. Files are named consistently.
+*   **Tailwind**: The application uses Tailwind CSS for styling.
+*   **Source Rules**: All data must come from one of three authorized sources (not specified in the code).
