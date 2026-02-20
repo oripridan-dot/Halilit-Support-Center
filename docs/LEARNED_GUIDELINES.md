@@ -131,3 +131,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** The API response schema lacked the expected 'fixes' attribute.
 **Fix:** Added the missing 'fixes' attribute to the FixReport.
 **Lesson:** ALWAYS validate API response schemas.
+
+### [2026-02-20] Missing Attribute Handler
+**Symptom:** Code failed due to missing attribute.
+**Root Cause:** `fixes` attribute was not present.
+**Fix:** Added a handler for the missing attribute.
+**Lesson:** ALWAYS handle potentially missing attributes.

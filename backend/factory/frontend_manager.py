@@ -1,0 +1,316 @@
+"""
+FRONTEND MANAGER — Level 6 Hierarchical Sub-Swarm (backend/factory/frontend_manager.py)
+========================================================================================
+The absolute master of React, Tailwind, and Vite within the Dark Factory.
+
+Level 6 Architecture role:
+  - The Chief DELEGATES frontend work here via {"tool": "delegate_frontend", ...}
+  - This manager plans and executes a LOCALIZED sub-swarm that only speaks React.
+  - The Chief never sees TypeScript; it only sees the delegation result.
+
+Sub-swarm execution order:
+  1. Read the intent spec / instruction
+  2. Query LLM to produce a frontend-specific task queue (synthesize → patch/implement → validate)
+  3. Execute tasks using ast_patcher (surgical patches) or factory.py build (full impl)
+  4. Return a structured result dict to the caller (nexus.py)
+
+Key tools available to this manager:
+  - patch_component: ast_patcher.apply_patch() — surgical, no full-file rewrite
+  - synthesize:      factory.py synthesize — Ribosome translates Genome → Directive
+  - implement:       factory.py build <spec> — full spec-driven implementation
+  - ui_validate:     factory.py ui_validate — Vite build + import integrity check
+"""
+
+from __future__ import annotations
+
+import sys
+import json
+import re
+import subprocess
+import time
+from pathlib import Path
+
+_FACTORY_DIR = Path(__file__).resolve().parent
+_ROOT = _FACTORY_DIR.parent.parent
+
+sys.path.insert(0, str(_FACTORY_DIR))
+from agent_core import query_llm  # noqa: E402
+from ast_patcher import apply_patch, apply_patch_batch  # noqa: E402
+
+
+# ---------------------------------------------------------------------------
+# SYSTEM PROMPT — Hyper-focused on React / Tailwind / Vite
+# ---------------------------------------------------------------------------
+SYSTEM_PROMPT = """
+You are the FRONTEND MANAGER — the absolute Master of React, TypeScript, Tailwind CSS, and Vite for the Halilit Support Center Dark Factory.
+
+IDENTITY: You are NOT a general-purpose engineer. You ONLY know about:
+  - React 18 + TypeScript 5 component architecture
+  - Tailwind CSS 3.4 dark-theme UI (slate-900/800/700 palette, blue-500 accents)
+  - Vite 5 build system, ESM imports, fast HMR
+  - Zustand 5 (app state) + React Query 5 (server state)
+  - Framer Motion animations
+  - Halilit component hierarchy: App.tsx → views/ (Dashboard, Inventory, ProductDetail) → cockpit/
+  - Three Source Rules: never display synthetic/mock data in UI
+
+WHAT YOU DO:
+  1. Receive a HIGH-LEVEL intent (e.g., "Add 300ms debounce to GlobalSearch")
+  2. Break it into the smallest possible surgical operations
+  3. Output a JSON task queue for your sub-swarm
+
+TOOLS & RULES:
+- 'patch_component': PREFERRED for changes < 30 lines. Uses ast_patcher — no full-file rewrite.
+  args: {"file": "relative/path.tsx", "search": "exact anchor code", "replace": "new code"}
+  ONLY use when you can identify the EXACT anchor block in the target file.
+- 'implement': For new components or large rewrites where patch is insufficient.
+  args: spec file path (e.g. "specs/interface/02_inventory_grid.md")
+- 'synthesize': For Genome-driven phenotype synthesis BEFORE implement.
+  args: genome YAML path (e.g. "specs/genomes/search_bar.yaml")
+- 'ui_validate': MANDATORY after any patch_component or implement that touches frontend.
+  args: "" or "--no-build"
+
+ANTI-PATTERNS (never do these):
+  - Do NOT generate full 400-line component rewrites when a 5-line patch works
+  - Do NOT invent file paths — only use files you KNOW exist
+  - Do NOT skip ui_validate — it catches Vite runtime errors tsc/eslint miss
+  - Do NOT import Three.js, GalaxyDashboard, or any 3D libraries
+
+OUTPUT FORMAT (JSON ONLY — no markdown fences):
+{
+  "thought": "What is the minimal change needed?",
+  "explanation": "Plain-English plan — jargon-free.",
+  "queue": [
+    {"tool": "patch_component", "args": {"file": "frontend/src/components/GlobalSearch.tsx", "search": "const DEBOUNCE_MS = 0;", "replace": "const DEBOUNCE_MS = 300;"}, "parallel": false},
+    {"tool": "ui_validate",     "args": "",                                                                                                                                        "parallel": false}
+  ]
+}
+
+RULES:
+- ALWAYS end the queue with a 'ui_validate' task.
+- Prefer 'patch_component' over 'implement' whenever the target block is identifiable.
+- If the intent requires a NEW spec (no spec file exists), prepend a note in "thought" — but still try to patch_component for simple changes.
+- Set "parallel": false for all tasks in this sub-swarm (sub-swarm runs sequentially).
+"""
+
+
+# ---------------------------------------------------------------------------
+# Context builder — reads the relevant frontend files to give the LLM ground truth
+# ---------------------------------------------------------------------------
+
+def _build_frontend_context(intent_spec: str) -> str:
+    """Builds a minimal context string for the LLM to ground its plan."""
+    lines: list[str] = []
+    lines.append("=== FRONTEND FILE INVENTORY ===")
+
+    views_dir = _ROOT / "frontend" / "src" / "components" / "views"
+    cockpit_dir = _ROOT / "frontend" / "src" / "components" / "cockpit"
+    hooks_dir = _ROOT / "frontend" / "src" / "hooks"
+    components_dir = _ROOT / "frontend" / "src" / "components"
+
+    for d in [views_dir, cockpit_dir, hooks_dir]:
+        if d.exists():
+            files = sorted(d.glob("*.tsx")) + sorted(d.glob("*.ts"))
+            lines.append(f"\n{d.relative_to(_ROOT)}/:")
+            for f in files:
+                lines.append(f"  - {f.name}")
+
+    # Surface top-level components
+    if components_dir.exists():
+        top_files = sorted(components_dir.glob("*.tsx"))
+        if top_files:
+            lines.append(f"\ncomponents/ (top-level):")
+            for f in top_files:
+                lines.append(f"  - {f.name}")
+
+    lines.append(f"\n=== INTENT ===\n{intent_spec}")
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Sub-swarm planner
+# ---------------------------------------------------------------------------
+
+def _plan_frontend_queue(intent_spec: str) -> list[dict]:
+    """Asks the Frontend Manager LLM to plan a task queue for the given intent."""
+    context = _build_frontend_context(intent_spec)
+    user_prompt = (
+        f"{context}\n\n"
+        f"Plan the minimal frontend task queue to satisfy this intent. "
+        f"Respond ONLY with the JSON object."
+    )
+
+    raw = query_llm(SYSTEM_PROMPT, user_prompt,
+                    temperature=0.3, model_tier="smart")
+    if not raw:
+        return []
+
+    raw = raw.strip()
+    raw = re.sub(r"^```(?:json)?\s*", "", raw)
+    raw = re.sub(r"\s*```$", "", raw)
+
+    try:
+        json_match = re.search(r"\{.*\}", raw, re.DOTALL)
+        if json_match:
+            parsed = json.loads(json_match.group(0))
+            plan_explanation = parsed.get("explanation", "")
+            if plan_explanation:
+                print(f"   📋 Frontend Manager plan: {plan_explanation}")
+            return parsed.get("queue", [])
+    except json.JSONDecodeError:
+        pass
+    return []
+
+
+# ---------------------------------------------------------------------------
+# Task executor
+# ---------------------------------------------------------------------------
+
+def _execute_patch_component(args: dict) -> dict:
+    """Executes a patch_component task using ast_patcher."""
+    file_path = args.get("file", "")
+    search_block = args.get("search", "")
+    replace_block = args.get("replace", "")
+
+    if not all([file_path, search_block, replace_block]):
+        return {
+            "tool": "patch_component",
+            "success": False,
+            "summary": "❌ [patch_component] Missing required args: file, search, replace",
+            "error_output": f"Got: {args}",
+        }
+
+    ok = apply_patch(file_path, search_block, replace_block)
+    return {
+        "tool": "patch_component",
+        "args": file_path,
+        "success": ok,
+        "summary": f"{'✅' if ok else '❌'} [patch_component] {Path(file_path).name}",
+        "error_output": "" if ok else f"Anchor not found in {file_path}",
+    }
+
+
+def _execute_factory_cmd(tool: str, args: str) -> dict:
+    """Runs a factory.py command (implement, synthesize, ui_validate)."""
+    py = sys.executable
+    factory = [py, str(_ROOT / "factory.py")]
+
+    cmd_map = {
+        "implement":  factory + ["build", args] if args else None,
+        "synthesize": factory + ["synthesize", args] if args else None,
+        "ui_validate": factory + ["ui_validate"] + (["--no-build"] if args == "--no-build" else []),
+    }
+
+    cmd = cmd_map.get(tool)
+    if cmd is None:
+        return {
+            "tool": tool, "args": args, "success": False,
+            "summary": f"⚠️  [{tool}] No command available",
+            "error_output": "",
+        }
+
+    start = time.time()
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        elapsed = round(time.time() - start, 2)
+        ok = result.returncode == 0
+        combined = (result.stdout + "\n" + result.stderr).strip()
+        tail = "\n".join(combined.splitlines()[-30:]) if combined else ""
+        return {
+            "tool": tool, "args": args, "success": ok,
+            "summary": f"{'✅' if ok else '❌'} [{tool.upper()} {args}] ({elapsed}s)",
+            "error_output": tail if not ok else "",
+        }
+    except Exception as exc:
+        return {
+            "tool": tool, "args": args, "success": False,
+            "summary": f"❌ [{tool.upper()}] Exception: {exc}",
+            "error_output": str(exc),
+        }
+
+
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+
+def run_frontend_swarm(intent_spec: str) -> dict:
+    """
+    Executes a localized frontend sub-swarm for the given intent.
+
+    Called by nexus.py when the Chief routes a 'delegate_frontend' task.
+
+    Args:
+        intent_spec: High-level spec/intent string (e.g., the content of a spec
+                     file, or a plain-English instruction for a surgical patch).
+
+    Returns:
+        {
+            "success": bool,
+            "tasks_run": int,
+            "failures": list[dict],
+            "summary": str,
+        }
+    """
+    print(f"\n   🎨 [FRONTEND MANAGER] Planning sub-swarm for intent...")
+    print(f"   {intent_spec[:120]}{'...' if len(intent_spec) > 120 else ''}")
+
+    queue = _plan_frontend_queue(intent_spec)
+    if not queue:
+        return {
+            "success": False,
+            "tasks_run": 0,
+            "failures": [],
+            "summary": "❌ [FRONTEND MANAGER] LLM returned empty queue.",
+        }
+
+    print(f"   ⚡ Frontend sub-swarm: {len(queue)} task(s) queued")
+
+    failures: list[dict] = []
+    tasks_run = 0
+
+    for task in queue:
+        tool = task.get("tool", "")
+        args = task.get("args", "")
+        print(f"\n   → [{tool.upper()}] {str(args)[:80]}")
+
+        if tool == "patch_component":
+            # args can be a dict (from JSON queue) or string
+            patch_args = args if isinstance(args, dict) else {}
+            result = _execute_patch_component(patch_args)
+        else:
+            str_args = args if isinstance(args, str) else str(args)
+            result = _execute_factory_cmd(tool, str_args)
+
+        print(f"   {result['summary']}")
+        tasks_run += 1
+
+        if not result.get("success", False):
+            failures.append(result)
+            # Stop on first failure — don't validate broken code
+            print(
+                f"   ⛔ Frontend sub-swarm halted at step {tasks_run} due to failure.")
+            break
+
+    ok = len(failures) == 0
+    summary = (
+        f"✅ [FRONTEND MANAGER] {tasks_run} task(s) completed successfully."
+        if ok
+        else f"❌ [FRONTEND MANAGER] {len(failures)} failure(s) in {tasks_run} task(s)."
+    )
+    print(f"\n   {summary}")
+    return {
+        "success": ok,
+        "tasks_run": tasks_run,
+        "failures": failures,
+        "summary": summary,
+    }
+
+
+# ---------------------------------------------------------------------------
+# CLI test mode
+# ---------------------------------------------------------------------------
+if __name__ == "__main__":
+    import sys as _sys
+    intent = " ".join(_sys.argv[1:]) if len(
+        _sys.argv) > 1 else "Add 300ms debounce to GlobalSearch input"
+    result = run_frontend_swarm(intent)
+    print(f"\nResult: {json.dumps(result, indent=2)}")
