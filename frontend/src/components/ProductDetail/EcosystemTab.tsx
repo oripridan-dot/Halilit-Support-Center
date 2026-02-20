@@ -86,22 +86,22 @@ const EcosystemTab: React.FC<Props> = ({ productId }) => {
               <div className="flex space-x-4 overflow-x-auto">
                 {data.related_products.map((product) => (
                   <div key={product.product_id} className="w-64 flex-shrink-0 border rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out">
-                    <button onClick={() => handleProductClick(product.product_id)} className="w-full h-full">
-                      {product.image_url && (
-                        <img src={product.image_url} alt={product.name} className="w-full h-40 object-cover rounded-t-lg" />
-                      )}
-                      <div className="p-4">
-                        <h3 className="text-md font-medium mb-1">{product.name}</h3>
-                        <p className="text-gray-700 dark:text-gray-300 text-sm">{product.description}</p>
-                      </div>
-                    </button>
+                    <img src={product.image_url} alt={product.name} className="w-full h-40 object-cover rounded-t-lg" />
+                    <div className="p-4">
+                      <h3 className="text-md font-semibold mb-1">{product.name}</h3>
+                      <p className="text-sm text-gray-700">{product.description}</p>
+                      <button
+                        onClick={() => handleProductClick(product.product_id)}
+                        className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                      >
+                        View Details
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="bg-amber-100 border border-amber-400 text-amber-700 px-4 py-3 rounded relative" role="alert">
-                <span className="block sm:inline">No related products found</span>
-              </div>
+              <p className="text-gray-500">No related products found</p>
             )}
           </section>
 
@@ -111,22 +111,19 @@ const EcosystemTab: React.FC<Props> = ({ productId }) => {
               <div className="flex space-x-4 overflow-x-auto">
                 {data.integrations.map((integration) => (
                   <div key={integration.integration_id} className="w-64 flex-shrink-0 border rounded-lg shadow-md hover:shadow-lg transition duration-200 ease-in-out">
-                    <a href={integration.integration_url} target="_blank" rel="noopener noreferrer" className="w-full h-full">
-                      {integration.logo_url && (
-                        <img src={integration.logo_url} alt={integration.name} className="w-full h-40 object-cover rounded-t-lg" />
-                      )}
-                      <div className="p-4">
-                        <h3 className="text-md font-medium mb-1">{integration.name}</h3>
-                        <p className="text-gray-700 dark:text-gray-300 text-sm">{integration.description}</p>
-                      </div>
-                    </a>
+                    <img src={integration.logo_url} alt={integration.name} className="w-full h-40 object-contain rounded-t-lg bg-white p-2" />
+                    <div className="p-4">
+                      <h3 className="text-md font-semibold mb-1">{integration.name}</h3>
+                      <p className="text-sm text-gray-700">{integration.description}</p>
+                      <a href={integration.integration_url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        View Integration
+                      </a>
+                    </div>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="bg-amber-100 border border-amber-400 text-amber-700 px-4 py-3 rounded relative" role="alert">
-                <span className="block sm:inline">No integrations found</span>
-              </div>
+              <p className="text-gray-500">No integrations found</p>
             )}
           </section>
         </>

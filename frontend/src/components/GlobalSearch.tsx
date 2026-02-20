@@ -91,23 +91,21 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
         let searchResults: SearchResult[] = [];
 
         if (exactMatch) {
-          searchResults = [exactMatch];
-          const otherResults = Array.from(productMapRef.current.values())
-            .filter(
-              (product) =>
-                product.id.toUpperCase() !== trimmed.toUpperCase() &&
-                (product.name.toLowerCase().includes(trimmed.toLowerCase()) ||
-                  product.brand.toLowerCase().includes(trimmed.toLowerCase())),
-            )
-            .slice(0, maxResults - 1);
-          searchResults = searchResults.concat(otherResults);
-        } else {
-           searchResults = Array.from(productMapRef.current.values()).filter(
-            (product) =>
-              product.name.toLowerCase().includes(trimmed.toLowerCase()) ||
-              product.brand.toLowerCase().includes(trimmed.toLowerCase()),
-          ).slice(0, maxResults);
+          searchResults.push(exactMatch);
         }
+
+        const searchTerm = trimmed.toLowerCase();
+        const otherResults = Array.from(productMapRef.current.values())
+          .filter(
+            (product) =>
+              product.name.toLowerCase().includes(searchTerm) ||
+              product.brand.toLowerCase().includes(searchTerm) ||
+              product.id.toLowerCase().includes(searchTerm)
+          )
+          .filter(product => product.id.toUpperCase() !== trimmed.toUpperCase());
+        
+        searchResults = searchResults.concat(otherResults.slice(0, maxResults - (exactMatch ? 1 : 0)));
+
 
         setResults(searchResults);
         setError(null);
@@ -119,18 +117,18 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       } finally {
         setLoading(false);
       }
-    }, 250);
+    }, 200);
 
     return () => {
       clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [query, maxResults]);
+  }, [query, maxResults, reloadToken]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
-    setIsOpen(true);
     setSelectedIndex(-1);
+    setIsOpen(true);
   };
 
   const handleInputFocus = () => {
@@ -138,16 +136,18 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   };
 
   const handleInputBlur = () => {
-    // Blur handler to prevent immediate closing when clicking on the dropdown
+    // Delay the closing of the dropdown to allow for click events on the results
     setTimeout(() => {
       setIsFocused(false);
-      if (!wrapperRef.current?.contains(document.activeElement)) {
+      if (!isFocused) {
         setIsOpen(false);
       }
-    }, 100);
+    }, 150);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!isOpen) return;
+
     if (e.key === "ArrowDown") {
       e.preventDefault();
       setSelectedIndex((prevIndex) =>
@@ -157,10 +157,11 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       e.preventDefault();
       setSelectedIndex((prevIndex) => Math.max(prevIndex - 1, -1));
     } else if (e.key === "Enter") {
+      e.preventDefault();
       if (selectedIndex >= 0 && selectedIndex < results.length) {
-        handleResultSelect(results[selectedIndex].id);
-      } else if (results.length > 0) {
-        handleResultSelect(results[0].id);
+        handleResultClick(results[selectedIndex].id);
+      } else if (results.length === 1) {
+        handleResultClick(results[0].id);
       }
     } else if (e.key === "Escape") {
       setIsOpen(false);
@@ -168,79 +169,23 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
     }
   };
 
-  const handleResultSelect = (id: string) => {
-    onSelect?.(id);
-    setSearchQuery(query); // For navigation store
-    goToProduct(id);
-    setIsOpen(false);
-    setQuery("");
-  };
-
-  const handleClear = () => {
+  const handleResultClick = (id: string) => {
+    if (onSelect) {
+      onSelect(id);
+    } else {
+      goToProduct(id);
+    }
     setQuery("");
     setIsOpen(false);
     setSelectedIndex(-1);
   };
 
-  const renderResults = () => {
-    if (loading) {
-      return (
-        <div className="px-3 py-2 text-zinc-400 text-sm">Loading...</div>
-      );
-    }
-
-    if (error) {
-      return (
-        <div className="px-3 py-2 text-red-500 text-sm">
-          {error}
-          <button
-            onClick={handleRetry}
-            className="ml-2 text-blue-400 hover:underline"
-          >
-            Retry
-          </button>
-        </div>
-      );
-    }
-
-    if (!results.length && query.trim().length >= 2) {
-      return (
-        <div className="px-3 py-2 text-zinc-400 text-sm">No results found.</div>
-      );
-    }
-
-    return results.slice(0, maxResults).map((result, index) => (
-      <button
-        key={result.id}
-        onClick={() => handleResultSelect(result.id)}
-        className={`px-3 py-2 text-sm text-left w-full hover:bg-zinc-800 focus-visible:bg-zinc-800 outline-none ${selectedIndex === index ? "bg-zinc-800" : "bg-transparent"
-          }`}
-        tabIndex={-1}
-        role="option"
-        aria-selected={selectedIndex === index}
-      >
-        <div className="flex items-center gap-2">
-          {result.image_url && (
-            <img
-              src={result.image_url}
-              alt={result.name}
-              className="w-6 h-6 rounded object-cover"
-            />
-          )}
-          <span>
-            {result.name} ({result.brand})
-          </span>
-        </div>
-      </button>
-    ));
-  };
+  const resultCount = results.length;
 
   return (
     <div
       ref={wrapperRef}
       className={`relative w-full ${className}`}
-      onFocus={() => setIsFocused(true)}
-      onBlur={handleInputBlur}
     >
       <div className="relative">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -249,29 +194,70 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
         <input
           ref={inputRef}
           type="text"
-          className="w-full rounded-md border border-zinc-700 bg-zinc-900 text-sm text-zinc-100 placeholder:text-zinc-500 pl-10 pr-10 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
-          placeholder="Search products..."
           value={query}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
           onKeyDown={handleKeyDown}
-          autoComplete="off"
+          placeholder="Search products..."
+          className="w-full rounded-md border border-zinc-700 bg-zinc-800 py-2 pl-10 pr-3 text-sm placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-colors"
         />
-        {query && (
+        {query.length > 0 && (
           <button
-            onClick={handleClear}
+            onClick={() => {
+              setQuery("");
+              setIsOpen(false);
+            }}
             className="absolute inset-y-0 right-0 flex items-center pr-3"
           >
             <X className="w-5 h-5 text-zinc-400" />
           </button>
         )}
       </div>
+
       {isOpen && (
-        <div
-          className="absolute z-10 mt-1 w-full bg-zinc-900 rounded-md border border-zinc-700 shadow-md overflow-hidden focus-within:ring-2 ring-blue-500"
-          role="listbox"
-        >
-          {renderResults()}
+        <div className="absolute z-10 mt-2 w-full overflow-hidden rounded-md bg-zinc-900 shadow-md ring-1 ring-zinc-700 focus:outline-none">
+          {loading && (
+            <div className="px-4 py-2 text-sm text-zinc-400">Loading...</div>
+          )}
+          {error && (
+            <div className="px-4 py-2 text-sm text-red-500">
+              {error}
+              <button
+                onClick={handleRetry}
+                className="ml-2 text-xs text-blue-400 hover:underline"
+              >
+                Retry
+              </button>
+            </div>
+          )}
+          {!loading && !error && results.length === 0 && query.trim().length > 1 && (
+            <div className="px-4 py-2 text-sm text-zinc-400">
+              No results found.
+            </div>
+          )}
+          {!loading &&
+            !error &&
+            results.map((result, index) => (
+              <button
+                key={result.id}
+                onClick={() => handleResultClick(result.id)}
+                className={`flex w-full items-center justify-between px-4 py-2 text-sm hover:bg-zinc-700 focus:bg-zinc-700 focus:outline-none ${
+                  selectedIndex === index ? "bg-zinc-700" : ""
+                }`}
+                tabIndex={index === selectedIndex ? 0 : -1}
+              >
+                <div className="flex flex-col">
+                  <span>{result.name}</span>
+                  <span className="text-xs text-zinc-400">{result.brand}</span>
+                </div>
+              </button>
+            ))}
+          {!loading && !error && results.length > 0 && (
+            <div className="px-4 py-2 text-sm text-zinc-400">
+              {resultCount} {resultCount === 1 ? "result" : "results"}
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -19,36 +19,47 @@ const ProductTile: React.FC<Props> = ({ product }) => {
   const isUnconfirmedStock = stock === null || stock === undefined;
   const isCallForPrice = price === null || price === 0;
 
-  const borderClass = isOutOfStock ? 'border-red-500' : isUnconfirmedStock ? 'border-amber-500' : '';
-  const badgePositionClass = 'absolute top-0 right-0';
-  const badgeCommonClasses = 'px-2 py-1 rounded-md text-xs';
+  const borderColor = isOutOfStock ? 'border-red-500' : isUnconfirmedStock ? 'border-amber-500' : '';
+  const hasIndicators = isOutOfStock || isUnconfirmedStock || isCallForPrice;
+
 
   return (
-    <div className={`relative border rounded-md shadow-md ${borderClass}`}>
-      {isOutOfStock && (
-        <div className={`${badgePositionClass} bg-red-500 text-white ${badgeCommonClasses}`}>
-          OUT OF STOCK
+    <div className={`relative border rounded-md shadow-md ${borderColor}`}>
+      {/* Badges */}
+      {(isOutOfStock || isUnconfirmedStock) && (
+        <div className="absolute top-0 right-0 p-2">
+          {isOutOfStock && (
+            <span className="bg-red-500 text-white px-2 py-1 rounded-md text-xs">
+              OUT OF STOCK
+            </span>
+          )}
+          {isUnconfirmedStock && (
+            <span className="bg-amber-500 text-gray-800 px-2 py-1 rounded-md text-xs">
+              UNCONFIRMED
+            </span>
+          )}
         </div>
       )}
-      {isUnconfirmedStock && !isOutOfStock && (
-        <div className={`${badgePositionClass} bg-amber-500 text-gray-800 ${badgeCommonClasses}`}>
-          UNCONFIRMED
-        </div>
-      )}
-      <div className="p-4">
-        <img
-          src={product.image_url || '/placeholder.png'}
-          alt={product.name}
-          className="w-full h-48 object-cover mb-2"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = '/placeholder.png';
-          }}
-        />
-        <h3 className="text-lg font-semibold">{product.name}</h3>
+
+      {/* Product Image */}
+      {/* Placeholder image handling should be in a separate spec/component, this spec focuses on the indicators */}
+      <img
+        src={product.image_url || '/placeholder.png'}
+        alt={product.name}
+        className="w-full h-48 object-cover rounded-t-md"
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = '/placeholder.png';
+        }}
+      />
+
+      <div className="p-2">
+        <h3 className="text-lg font-medium">{product.name}</h3>
+
+        {/* Price or Call for Price */}
         {isCallForPrice ? (
-          <div className="text-red-500">Call for Price</div>
+          <p className="text-red-500">Call for Price</p>
         ) : (
-          <div className="text-gray-700">${price !== null ? price.toFixed(2) : ''}</div>
+          <p className="font-bold">${price?.toFixed(2)}</p>
         )}
       </div>
     </div>
