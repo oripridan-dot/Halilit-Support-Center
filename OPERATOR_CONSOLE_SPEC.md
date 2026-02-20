@@ -41,7 +41,7 @@ This document is the **Source of Truth** for what the Halilit Support Center Ope
 - **Behavior:** Build must satisfy `specs/behavior/01_search_scenarios.md` (manual or Playwright).
 - **Data:** Build must pass golden scenarios in `backend/tests/golden_scenarios.json` when validating the catalog artifact.
 
-## Level 5 Workflow
+## Level 6 Workflow
 
 1. **You** update a spec (e.g. `specs/interface/02_inventory_grid.md`).
 2. **You** prompt: "Read the spec. Rewrite [component] to satisfy the spec. Produce the code artifact."

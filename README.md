@@ -1,4 +1,4 @@
-# Halilit Support Center — Operator Console `v9.7.3 · Ribosome`
+# Halilit Support Center — Operator Console `v9.7.4 · Level 6`
 
 JIT (Just-in-Time) product intelligence platform for musical instruments. Catalog + product graph from the Conductor pipeline; on-demand AI intelligence via Gemini 2.0 Flash.
 
@@ -58,7 +58,7 @@ Specs (source of truth for UI and data): **[specs/](specs/)**
 
 ---
 
-## Bio-Swarm — Algorithmic Biology (v9.7.2)
+## Bio-Swarm — Algorithmic Biology (v9.7.4)
 
 | Component           | File                                 | Purpose                                                                                                     |
 | ------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
@@ -79,4 +79,4 @@ Current VIABLE genomes: `base_cell`, `product_explorer` (100/100), `inventory_gr
 
 ---
 
-**Operator Console** · Spec-driven · Bio-Swarm v9.7.2 · [docs/](docs/)
+**Operator Console** · Spec-driven · Bio-Swarm v9.7.4 · [docs/](docs/)

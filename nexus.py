@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-THE CHIEF: PROJECT NEXUS â nexus.py  (v4.1 â Chief Edition)
+THE CHIEF: PROJECT NEXUS â nexus.py  (v4.2 â Level 6 Edition)
 ============================================================
 Massively Parallel AI Engineering Console for the Dark Factory.
 
-v4.1 changes:
+v4.2 changes:
   â¢ mentor_insight from Chief is now displayed after every briefing.
   â¢ fitness tool added to action map with proper icon.
-  â¢ Version aligned with project v9.7.2.
+  â¢ Version aligned with project v9.7.4.
 
 Features:
   â¢ Chief now outputs a TASK QUEUE instead of a single action.
@@ -99,8 +99,8 @@ def print_header() -> None:
     os.system("cls" if os.name == "nt" else "clear")
     print(f"{CYAN}{BOLD}")
     print("ââââââââââââââââââââââââââââââââââââââââââââââââ")
-    print("â   THE CHIEF â PROJECT NEXUS  v4.1            â")
-    print("â   Chief Edition Â· Dark Factory Â· v9.7.2     â")
+    print("â   THE CHIEF â PROJECT NEXUS  v4.2            â")
+    print("â   Chief Edition Â· Dark Factory Â· v9.7.4     â")
     print("ââââââââââââââââââââââââââââââââââââââââââââââââ")
     print(RESET)
 
