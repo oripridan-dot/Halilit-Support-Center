@@ -1,7 +1,6 @@
-```typescript
 // Contract: Enforce Backend Pagination and Remove galaxy_db.json
 
-export const CONDUCTOR_CATALOG_ENDPOINT = '/api/conductor/catalog';
+export const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
 export interface ConductorProduct {
   id: string;
@@ -21,7 +20,7 @@ export interface PaginatedCatalogResponse {
   pageSize: number;
 }
 
-export interface ConductorCatalogParams {
+export interface CatalogParams {
   page?: number;
   pageSize?: number;
   searchQuery?: string;
@@ -29,4 +28,5 @@ export interface ConductorCatalogParams {
   category?: string;
   brand?: string;
 }
-```
+
+export type CatalogResponse = PaginatedCatalogResponse;

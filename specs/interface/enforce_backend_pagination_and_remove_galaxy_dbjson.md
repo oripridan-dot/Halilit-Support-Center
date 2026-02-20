@@ -30,42 +30,51 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
     *   Uses `react-query` to manage the fetching and caching of paginated data. Displays a skeleton while loading.
 6.  **Filtering and Sorting Parameters:** The `useConductorCatalog` hook must pass the filter and sort state as parameters to the API endpoint.
 7.  **Error Handling:** Maintain existing error handling for API requests, displaying error messages to the user if the data cannot be fetched. Render a "retry" banner on API failure.
-8. **Image Fallback:** Implement image fallback logic. If `product.image_url` is missing or fails to load, use `/placeholder.png`. This logic should use the existing `ImageWithFallback` component.
-9. **Hook Return Values:** Ensure that the `useConductorCatalog` hook returns the following values: `data: {products, metadata}`, `isLoading`, `error`, `refetch`.
-   - `products` is the array of `ConductorProduct` for the current page.
-   - `metadata` is an object containing:
-      - `totalItems`: the total number of products in the catalog.
-      - `totalPages`: the total number of pages.
-      - `currentPage`: the current page number.
-      - `pageSize`: the number of products per page.
+8. **Image Fallback:** Implement image fallback logic. If `product.image_url` is missing or fails to load, use `/placeholder.png`. This logic should use the existing `<ImageWithFallback>` component.
+9. **Skeleton Loading State:** While the data is loading, display a skeleton loading state to improve user experience. This skeleton should mimic the layout of the inventory grid.
 
 ## Behavior Scenarios
 
 1.  **Scenario:** Initial Load
-    *   Input: `page = 1`, `pageSize = 25`, no search query, no filters.
-    *   Outcome: The `useConductorCatalog` hook fetches the first page of 25 products from the `/api/conductor/catalog` endpoint.
-    *   Outcome: A skeleton loader is displayed while the data is loading.
-    *   Outcome: The hook returns the `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
+    *   Input: `page = 1`, `pageSize = 25`, no filters or sorting applied.
+    *   Outcome: The `useConductorCatalog` hook fetches the first page of products from the API. A skeleton loading state is displayed while the data is being fetched.
 2.  **Scenario:** User Navigates to Page 3
-    *   Input: `page = 3`, `pageSize = 25`, no search query, no filters.
-    *   Outcome: The `useConductorCatalog` hook fetches the third page of 25 products from the `/api/conductor/catalog` endpoint.
-    *   Outcome: The hook returns the `products` array, `totalItems`, `totalPages`, `currentPage = 3`, and `pageSize = 25` from the API response.
-3.  **Scenario:** User Applies a Search Query
-    *   Input: `page = 1`, `pageSize = 25`, `searchQuery = "Roland"`, no filters.
-    *   Outcome: The `useConductorCatalog` hook fetches the first page of 25 products matching the search query "Roland" from the `/api/conductor/catalog` endpoint.
-    *   Outcome: The hook returns the filtered `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
-4.  **Scenario:** API Request Fails
-    *   Input: The `/api/conductor/catalog` endpoint returns an error (e.g., 500 Internal Server Error).
-    *   Outcome: The `useConductorCatalog` hook returns an `error` object.
-    *   Outcome: An error message is displayed to the user.
-    *   Outcome: A "retry" banner is rendered, allowing the operator to manually refetch.
-5.  **Scenario:** Image Loading Fails
-    *   Input: One or more `product.image_url` values in the returned data are invalid or return a 404 error.
-    *   Outcome: The `ImageWithFallback` component displays the `/placeholder.png` image for those products.
-6. **Scenario:** Hook successfully fetches the catalog data
-    *   Input: The `/api/conductor/catalog` endpoint returns successfully.
-    *   Outcome: The `useConductorCatalog` hook returns an object with the structure `{ data: { products, metadata }, isLoading, error, refetch }`.
+    *   Input: `page = 3`, `pageSize = 25`.
+    *   Outcome: The `useConductorCatalog` hook fetches the third page of products from the API.
+3.  **Scenario:** API Request Fails
+    *   Input: The `/api/conductor/catalog` endpoint returns an error.
+    *   Outcome: The `useConductorCatalog` hook displays an error message to the user.
+4. **Scenario:** Image URL is broken
+    *   Input: A `ConductorProduct` has a broken `image_url`.
+    *   Outcome: The `ImageWithFallback` component renders `/placeholder.png`.
+
+## Stitch UI Prompt
+```text
+// Target Component: useConductorCatalog Hook Consumer
+// Description: This prompt is to help implement a skeleton loading state for a component that uses the `useConductorCatalog` hook and displays data in a grid format.
+// Desired Layout:  A grid layout mimicking the data, displaying rectangular placeholders for images, text, etc.
+// Visual Style: Dark mode, Tailwind CSS, slate-900 background, skeleton placeholders should be a lighter shade of gray (e.g., zinc-700).
+// Component Hierarchy:  The main component using the `useConductorCatalog` hook is wrapped in a container. Inside this container, create a grid of skeleton items.
+// Data Slots:  N/A (Skeleton loading state, no actual data).
+// Spacing and Padding:  Use Tailwind CSS classes (e.g., `p-4`, `gap-4`) to create consistent spacing.
+// Placeholder Styles:  Each placeholder element should be a rectangular div with a rounded corner.
+// Example Code (Tailwind CSS):
+<div className="grid grid-cols-4 gap-4 p-4"> //Container for skeleton
+  <div className="bg-zinc-700 rounded-md h-48 w-full"></div> //Placeholder for image
+  <div className="bg-zinc-700 rounded-md h-8 w-3/4"></div> //Placeholder for text
+  <div className="bg-zinc-700 rounded-md h-6 w-1/2"></div> //Placeholder for text
+  //...repeat the placeholder elements as necessary
+</div>
+//Instructions:
+//1.  Generate React TSX code for a component that consumes the `useConductorCatalog` hook.
+//2.  Implement a skeleton loading state using rectangular placeholder elements.
+//3.  Use Tailwind CSS classes.
+//4. Make sure the skeleton placeholders look good with dark theme, slate-900
+```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
+- Verify that `frontend/public/data/galaxy_db.json` no longer exists.
+- Manually verify that the inventory grid loads the first page of results by default and that navigating pages updates the grid correctly.
+- Manually verify that skeleton loading is displayed while the data is loading.
