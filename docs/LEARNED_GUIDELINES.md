@@ -95,3 +95,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Missing or misnamed import statement.
 **Fix:** Corrected import statements in the frontend.
 **Lesson:** ALWAYS verify imports after code changes.
+
+### [2026-02-20] Fix Build Automatically
+**Symptom:** TypeScript build failed.
+**Root Cause:** Undetermined compilation error.
+**Fix:** Triggered automated healing process.
+**Lesson:** ALWAYS automate build error recovery.
