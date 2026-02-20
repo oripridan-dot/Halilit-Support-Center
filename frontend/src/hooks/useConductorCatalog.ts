@@ -1,12 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import {
-  CATALOG_ENDPOINT,
-  ConductorProduct,
-  ConductorCatalogResponse,
-  PaginatedCatalogResponse,
-} from './implement_backend_pagination_for_catalog_data_in_useconducto.schema';
+import { CATALOG_ENDPOINT, ConductorProduct, PaginatedCatalogResponse, ConductorCatalogResponse } from '../hooks/implement_backend_pagination_for_catalog_data_in_useconducto.schema';
 
-interface UseConductorCatalogProps {
+interface UseConductorCatalogParams {
   page?: number;
   pageSize?: number;
   searchQuery?: string;
@@ -22,58 +17,41 @@ const useConductorCatalog = ({
   sortBy = '',
   category = '',
   brand = '',
-}: UseConductorCatalogProps): ConductorCatalogResponse => {
-  const queryKey = [
-    'conductorCatalog',
-    page,
-    pageSize,
+}: UseConductorCatalogParams = {}) => {
+  const params = new URLSearchParams({
+    page: String(page),
+    pageSize: String(pageSize),
     searchQuery,
     sortBy,
     category,
     brand,
-  ];
+  });
 
-  const {
-    data,
-    isLoading,
-    error,
-    refetch,
-  } = useQuery<PaginatedCatalogResponse, any>({
-    queryKey,
-    queryFn: async () => {
-      const params = new URLSearchParams({
-        page: page.toString(),
-        pageSize: pageSize.toString(),
-        searchQuery,
-        sortBy,
-        category,
-        brand,
-      });
-      const url = `${CATALOG_ENDPOINT}?${params.toString()}`;
+  const url = `${CATALOG_ENDPOINT}?${params.toString()}`;
+
+  const { data, isLoading, error, refetch } = useQuery<ConductorCatalogResponse, Error>(
+    ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
+    async () => {
       const response = await fetch(url);
-
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+      return response.json() as Promise<ConductorCatalogResponse>;
+    }
+  );
 
-      const jsonData: ConductorCatalogResponse = await response.json();
-
-      if (!jsonData || !jsonData.data || !jsonData.data.products || jsonData.data.totalItems === undefined || jsonData.data.totalPages === undefined || jsonData.data.currentPage === undefined || jsonData.data.pageSize === undefined) {
-          throw new Error("Invalid data format from API");
-      }
-
-      return jsonData.data;
-    },
-    retry: (failureCount, error) => {
-        if (error && (error.message.includes('500') || error.message.includes('503'))) {
-            return failureCount < 3;
-        }
-        return false;
-    },
-  });
+  const products = data?.data?.products || [];
+  const totalItems = data?.data?.totalItems || 0;
+  const totalPages = data?.data?.totalPages || 0;
+  const currentPage = data?.data?.currentPage || 1;
+  const currentPageSize = data?.data?.pageSize || 25;
 
   return {
-    data: data || { products: [], totalItems: 0, totalPages: 0, currentPage: 1, pageSize: 25 },
+    products,
+    totalItems,
+    totalPages,
+    currentPage,
+    pageSize: currentPageSize,
     isLoading,
     error,
     refetch,
