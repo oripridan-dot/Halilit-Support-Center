@@ -4,19 +4,20 @@
 export const INVENTORY_SEARCH_ENDPOINT = '/api/inventory/search';
 
 export interface InventorySearchRequest {
-    searchQuery?: string;
+  searchQuery?: string;
+  cfpFilter?: boolean;
 }
 
 export interface InventoryItem {
-    id: string;
-    name: string;
-    description: string;
-    sku: string;
-    // ... other properties
+  id: string;
+  name: string;
+  description: string;
+  sku: string;
+  // ... other properties
 }
 
 export interface InventorySearchResponse {
-    items: InventoryItem[];
-    totalCount: number;
+  items: InventoryItem[];
+  totalCount: number;
 }
 ```
