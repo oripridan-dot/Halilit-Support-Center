@@ -1,33 +1,35 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useQuery } from 'react-query';
-import { InventorySearchRequest, InventorySearchResponse, InventoryItem, INVENTORY_SEARCH_ENDPOINT } from '../../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema';
+import { InventorySearchRequest, InventorySearchResponse, INVENTORY_SEARCH_ENDPOINT } from '../../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema';
 import { useDebouncedValue } from '../../hooks/useDebouncedValue';
 import { useNavigationStore } from '../../stores/navigationStore';
 
 interface UseThrottledValueProps<T> {
-  value: T;
-  delay: number;
+    value: T;
+    delay: number;
 }
 
 const useThrottledValue = <T>({ value, delay }: UseThrottledValueProps<T>): T => {
-  const [throttledValue, setThrottledValue] = useState<T>(value);
-  const lastExecuted = useRef<number>(0);
+    const [throttledValue, setThrottledValue] = useState<T>(value);
+    const timeoutRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    const now = Date.now();
-    if (now - lastExecuted.current >= delay) {
-      lastExecuted.current = now;
-      setThrottledValue(value);
-    } else {
-      const timeoutId = setTimeout(() => {
-        lastExecuted.current = Date.now();
-        setThrottledValue(value);
-      }, delay - (now - lastExecuted.current));
-      return () => clearTimeout(timeoutId);
-    }
-  }, [value, delay]);
+    useEffect(() => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => {
+            setThrottledValue(value);
+            timeoutRef.current = null;
+        }, delay);
 
-  return throttledValue;
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, [value, delay]);
+
+    return throttledValue;
 };
 
 
@@ -71,7 +73,7 @@ const InventoryView = () => {
                 placeholder="Search by SKU, Brand, or Name..."
                 value={filterText}
                 onChange={(e) => setFilterText(e.target.value)}
-                className="bg-slate-800 text-zinc-300 border border-zinc-700 rounded px-4 py-2 w-full mb-4"
+                className="bg-slate-800 text-zinc-300 border border-zinc-700 rounded px-4 py-2 w-full mb-4 focus:outline-blue-500"
             />
             <div className="flex items-center mb-4">
                 <label htmlFor="cfpFilter" className="text-zinc-200 mr-2">
@@ -86,36 +88,21 @@ const InventoryView = () => {
                 />
             </div>
 
-            {isLoading && <p className="text-zinc-200">Loading...</p>}
+            {isLoading && <p className="text-zinc-300">Loading inventory...</p>}
             {isError && <p className="text-red-500">Error: {error?.message}</p>}
-            {!isLoading && !isError && inventoryData && (
-                <div className="overflow-x-auto">
-                    <table className="table-auto w-full">
-                        <thead>
-                            <tr className="bg-slate-700">
-                                <th className="px-4 py-2 text-left text-zinc-200">SKU</th>
-                                <th className="px-4 py-2 text-left text-zinc-200">Product Name</th>
-                                <th className="px-4 py-2 text-left text-zinc-200">Brand</th>
-                                <th className="px-4 py-2 text-left text-zinc-200">Price</th>
-                                <th className="px-4 py-2 text-left text-zinc-200">Stock Level</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {inventoryData.items.map((product) => (
-                                <tr key={product.id} className="bg-slate-900">
-                                    <td className="px-4 py-2 text-zinc-200">{product.sku}</td>
-                                    <td className="px-4 py-2 text-zinc-200">{product.name}</td>
-                                    <td className="px-4 py-2 text-zinc-200">{product.description}</td>
-                                    <td className="px-4 py-2 text-zinc-200">{product.price}</td>
-                                    <td className="px-4 py-2 text-zinc-200">{product.stock}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-            )}
             {inventoryData && inventoryData.items.length === 0 && !isLoading && !isError && (
-                <p className="text-zinc-200">No products found.</p>
+                <p className="text-zinc-300">No inventory items found.</p>
+            )}
+            {inventoryData && inventoryData.items.length > 0 && (
+                <div className="text-zinc-300">
+                    {inventoryData.items.map((item) => (
+                        <div key={item.id} className="border-b border-zinc-700 py-2">
+                            <p>Name: {item.name}</p>
+                            <p>SKU: {item.sku}</p>
+                            <p>Description: {item.description}</p>
+                        </div>
+                    ))}
+                </div>
             )}
         </div>
     );

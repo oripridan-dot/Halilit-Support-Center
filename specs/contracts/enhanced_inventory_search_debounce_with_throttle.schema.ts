@@ -5,7 +5,6 @@ export const INVENTORY_SEARCH_ENDPOINT = '/api/inventory/search';
 
 export interface InventorySearchRequest {
   searchQuery?: string;
-  cfpFilter?: boolean;
 }
 
 export interface InventoryItem {
