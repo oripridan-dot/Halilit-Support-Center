@@ -1,3 +1,8 @@
+## [v4.1] — 2026-02-20
+- [docs] Updated formatting of architecture documentation.
+- [docs] Added sub-bullets to `navigationStore` properties in the architecture documentation.
+- [docs] Fixed typo in `scribe_agent.py` documentation.
+
 ]633;E;echo "Done";b1a91c9c-92f8-4225-8ab1-161450d4a232]633;C## [v9.7.3 — Ribosome] — 2026-02-20
 
 - [branch] Branched from v9.7.1 → v9.7.3 · Ribosome
