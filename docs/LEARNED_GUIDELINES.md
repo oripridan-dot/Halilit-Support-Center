@@ -119,3 +119,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** FixReport objects lacked a default 'fixes' attribute.
 **Fix:** Initialized the 'fixes' attribute in FixReport.
 **Lesson:** ALWAYS initialize data object attributes.
+
+### [2026-02-20] Check Attribute Existence
+**Symptom:** AttributeError occurred when accessing 'fixes'.
+**Root Cause:** 'fixes' attribute missing in FixReport object.
+**Fix:** Added a check for attribute existence.
+**Lesson:** ALWAYS check object attributes exist.
