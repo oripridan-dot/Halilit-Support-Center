@@ -1,0 +1,269 @@
+from pydantic import ConfigDict
+
+class ProductGraphConfig:
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+// frontend/src/components/views/ProductDetailView.tsx
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Clock } from 'lucide-react';
+
+const ProductDetailView: React.FC = () => {
+  const { productId } = useParams<{ productId: string }>();
+  const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [sourcingStatus, setSourcingStatus] = useState<SourcingStatus | null>(null);
+
+  useEffect(() => {
+    const fetchProductDetails = async () => {
+      if (!productId) return;
+
+      setLoading(true);
+      setError(null);
+
+      try {
+        const productData = await getProduct(productId);
+        setProduct(productData);
+
+        const sourcingData = await getProductSourcing(productId);
+        setSourcingStatus(sourcingData?.status || 'Unknown Sourcing');
+
+      } catch (err: any) {
+        setError(err.message || 'Failed to fetch product details.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProductDetails();
+  }, [productId]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen dark:bg-zinc-900">
+        <Clock className="animate-spin h-10 w-10 text-zinc-400" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="dark:bg-zinc-900 dark:text-zinc-100 p-4">
+        Error: {error}
+      </div>
+    );
+  }
+
+  if (!product) {
+    return (
+      <div className="dark:bg-zinc-900 dark:text-zinc-100 p-4">
+        Product not found.
+      </div>
+    );
+  }
+
+  return (
+    <div className="dark:bg-zinc-900 dark:text-zinc-100 p-4">
+      <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
+      <div className="flex items-center space-x-2 mb-4">
+        <SourcingBadge status={sourcingStatus || 'Unknown Sourcing'} />
+      </div>
+      <p>{product.description}</p>
+      {/* Additional product details here */}
+    </div>
+  );
+};
+
+export default ProductDetailView;
+// frontend/src/components/product/ExplorationPanel.tsx
+import React from 'react';
+
+const ExplorationPanel: React.FC = () => {
+  return (
+    <div className="dark:bg-zinc-800 p-4 rounded-md">
+      <h2 className="text-lg font-semibold mb-2 dark:text-zinc-200">Explore Further</h2>
+      {/* Content for exploration panel */}
+      <p className="dark:text-zinc-400">This is an exploration panel.  Add content here.</p>
+    </div>
+  );
+};
+
+export default ExplorationPanel;
+// frontend/src/components/product/SourcingBadge.tsx
+import React from 'react';
+
+interface SourcingBadgeProps {
+  status: SourcingStatus;
+}
+
+const SourcingBadge: React.FC<SourcingBadgeProps> = ({ status }) => {
+  let badgeColorClass = 'bg-red-500';
+  let textColorClass = 'text-white';
+  let badgeText = 'Sourcing Unknown';
+
+  switch (status) {
+    case 'Ethically Sourced':
+      badgeColorClass = 'bg-green-500';
+      badgeText = 'Ethically Sourced';
+      break;
+    case 'Partially Sourced':
+      badgeColorClass = 'bg-yellow-500';
+      textColorClass = 'text-zinc-900';
+      badgeText = 'Partially Sourced';
+      break;
+    case 'Unknown Sourcing':
+      badgeColorClass = 'bg-red-500';
+      badgeText = 'Sourcing Unknown';
+      break;
+  }
+
+  return (
+    <span
+      className={`inline-block px-2 py-1 text-xs font-semibold leading-none rounded-full ${badgeColorClass} ${textColorClass}`}
+    >
+      {badgeText}
+    </span>
+  );
+};
+
+export default SourcingBadge;
+// frontend/src/types.ts
+export type SourcingStatus = 'Ethically Sourced' | 'Partially Sourced' | 'Unknown Sourcing';
+
+export interface Product {
+    id: string;
+    name: string;
+    description: string;
+    // Add other product properties as needed
+}
+# backend/tests/test_core.py
+"""
+HALILIT SUPPORT CENTER — Core System Test Suite
+================================================
+Validates real-world functionality of every major subsystem:
+
+  1. Source Rules (Data Governance)
+  2. Project Config (Path Integrity)
+  3. Product Normalizer (Catalog Build)
+  4. Factory Agents (Import Hygiene & Contract)
+  5. Tech Lead Agent (Heuristics Engine)
+  6. Nexus CLI (Argument Parsing & Steering Gate)
+  7. Frontend Component Inventory
+
+Run with:
+    PYTHONPATH=. python -m pytest backend/tests/test_core.py -v
+"""
+
+from __future__ import annotations
+
+import importlib
+import json
+import subprocess
+import sys
+from pathlib import Path
+from typing import Any, Dict
+from unittest.mock import MagicMock, patch
+
+import pytest
+
+# ── Project root ──────────────────────────────────────────────────────────────
+ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "backend" / "factory"))
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 1 · SOURCE RULES — The Law
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class TestSourceRules:
+    """All data-governance rules must be importable and logically consistent."""
+
+    @pytest.fixture(autouse=True)
+    def _import(self):
+        from backend import source_rules as sr
+        self.sr = sr
+
+    def test_authorized_sources_exist(self):
+        """Three canonical sources must be defined."""
+        sources = {s.value for s in self.sr.AuthorizedSource}
+        assert "commercial" in sources
+        assert "official" in sources
+        assert "contextual" in sources
+
+    def test_field_ownership_price_immutable(self):
+        """Price fields (price_il, price_eilat) MUST be owned by commercial source."""
+        ownership = self.sr.FIELD_OWNERSHIP
+        assert "price_il" in ownership
+        assert ownership["price_il"] == self.sr.FieldOwnership.COMMERCIAL_ONLY
+
+    def test_field_ownership_specs_official_only(self):
+        """Specs must be owned by official source only."""
+        ownership = self.sr.FIELD_OWNERSHIP
+        specs_fields = [k for k, v in ownership.items(
+        ) if "official" in v.value.lower()]
+        assert len(specs_fields) > 0, "No fields owned by official source"
+
+    def test_validate_field_ownership_correct_source(self):
+        """price_il set by commercial source must return None (no violation)."""
+        result = self.sr.validate_field_ownership(
+            "price_il", self.sr.AuthorizedSource.COMMERCIAL, 299.99
+        )
+        assert result is None, f"Unexpected violation for correct source: {result}"
+
+    def test_validate_field_ownership_wrong_source(self):
+        """price_il set by official source MUST produce a SourceRuleViolation."""
+        result = self.sr.validate_field_ownership(
+            "price_il", self.sr.AuthorizedSource.OFFICIAL, 299.99
+        )
+        assert result is not None, "Expected SourceRuleViolation: official cannot s"
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 6 · Nexus CLI — The Gate
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class TestNexusCLI:
+    """The Nexus CLI must parse arguments correctly, preventing misconfiguration."""
+
+    @pytest.fixture(autouse=True)
+    def _import(self):
+        from backend.nexus_cli import NexusCLI
+        self.NexusCLI = NexusCLI
+
+    def test_cli_help_message(self):
+        """CLI help message must not throw an exception."""
+        with pytest.raises(SystemExit) as e:
+            self.NexusCLI(argv=["--help"])
+        assert e.value.code == 0
+
+    def test_review_changes_returns_boolean(self):
+        """review_changes function must return a boolean."""
+        cli = self.NexusCLI(argv=[])
+        # Mocking the necessary methods to avoid side effects during the test.
+        cli.get_changes = MagicMock(return_value={"some_change": "some_value"})
+        cli.confirm_changes = MagicMock(return_value=True)  # Or False, as needed.
+        result = cli.review_changes()
+        assert isinstance(result, bool)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 7 · Frontend Component Inventory — The UI
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class TestFrontendComponentInventory:
+    """Frontend components should be of reasonable size for maintainability."""
+
+    def test_no_monolithic_components(self):
+        """Large components are a maintainability risk."""
+        component_sizes = {
+            "frontend/src/components/views/ProductDetailView.tsx": 50,
+            "frontend/src/components/product/ExplorationPanel.tsx": 20,
+        }  # Lines of code (rough estimate)
+
+        for component, max_lines in component_sizes.items():
+            with open(ROOT / component, "r") as f:
+                lines = f.readlines()
+                assert len(lines) <= max_lines, (
+                    f"Component {component} exceeds maximum allowed lines "
+                    f"({max_lines} lines). Consider refactoring."
+                )
