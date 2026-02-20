@@ -217,7 +217,8 @@ def evaluate_frontend_feature(
 
 
 # ---------------------------------------------------------------------------
-# Diagnostics (unchanged from v1)
+# ---------------------------------------------------------------------------
+# Diagnostics (Level 5 — tsc + eslint + pytest + vitest)
 # ---------------------------------------------------------------------------
 
 def _run_tsc() -> dict:
@@ -247,7 +248,6 @@ def _run_eslint() -> dict:
         text=True,
     )
     combined = (result.stdout + "\n" + result.stderr).strip()
-    # Exit code 2 with no lintable files is not a real failure
     if result.returncode != 0:
         no_files = any(phrase in combined for phrase in [
             "all of the files matching", "No files matching",
@@ -263,13 +263,72 @@ def _run_eslint() -> dict:
     return {"status": "PASS", "source": "eslint", "log": ""}
 
 
+def _run_pytest() -> dict:
+    """Run pytest if backend test files are found. Returns SKIP if none found."""
+    tests_dir = ROOT_DIR / "backend" / "tests"
+    test_files = list(tests_dir.glob("test_*.py")
+                      ) if tests_dir.exists() else []
+    if not test_files:
+        return {"status": "SKIP", "source": "pytest", "log": "No test files found."}
+    print(f"   🧪  Running pytest ({len(test_files)} file(s))...")
+    result = subprocess.run(
+        ["python", "-m", "pytest", str(tests_dir), "-v", "--tb=short", "-q"],
+        cwd=str(ROOT_DIR),
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+    if result.returncode != 0:
+        return {
+            "status": "FAIL",
+            "source": "pytest",
+            "log": (result.stdout + "\n" + result.stderr).strip()[:3000],
+        }
+    return {"status": "PASS", "source": "pytest", "log": ""}
+
+
+def _run_vitest() -> dict:
+    """Run pnpm test --run (Vitest) if frontend test files are found. SKIP if none."""
+    test_dirs = [
+        ROOT_DIR / "frontend" / "tests",
+        ROOT_DIR / "frontend" / "src",
+    ]
+    test_files = []
+    for d in test_dirs:
+        if d.exists():
+            test_files.extend(d.rglob("*.test.ts"))
+            test_files.extend(d.rglob("*.test.tsx"))
+            test_files.extend(d.rglob("*.spec.ts"))
+            test_files.extend(d.rglob("*.spec.tsx"))
+    if not test_files:
+        return {"status": "SKIP", "source": "vitest", "log": "No test files found."}
+    print(f"   🧪  Running Vitest ({len(test_files)} file(s))...")
+    result = subprocess.run(
+        ["pnpm", "test", "--run"],
+        cwd=str(FRONTEND_DIR),
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+    if result.returncode != 0:
+        return {
+            "status": "FAIL",
+            "source": "vitest",
+            "log": (result.stdout + "\n" + result.stderr).strip()[:3000],
+        }
+    return {"status": "PASS", "source": "vitest", "log": ""}
+
+
 def run_diagnostics() -> dict:
-    """Run all checks; return the first failure found, or a PASS record."""
+    """Run all checks (tsc, eslint, pytest, vitest); return first failure or PASS."""
     print("🩺 Watchdog scanning system health...")
 
-    for checker in [_run_tsc, _run_eslint]:
+    for checker in [_run_tsc, _run_eslint, _run_pytest, _run_vitest]:
         result = checker()
         tool = result["source"]
+        if result["status"] == "SKIP":
+            print(f"   ⏭️  {tool} — skipped (no test files)")
+            continue
         if result["status"] == "FAIL":
             print(f"   ❌ {tool} — issues detected")
             return result
@@ -419,244 +478,6 @@ if __name__ == "__main__":
                 _gatekeeper_section += f"\n**Reason:**\n{verdict.reason}\n\n**Required Fix:**\n{verdict.remedy}\n"
             _bb_path.write_text(_bb_text.rstrip() +
                                 _gatekeeper_section, encoding="utf-8")
-            print(f"   Verdict written → {_bb_path.name}")
-
-            sys.exit(0 if verdict.approved else 1)
-
-    # Default: run standard diagnostics / prescription cycle
-    healthy = run_watchdog()
-    sys.exit(0 if healthy else 1)
-
-
-# ---------------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------------
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-FRONTEND_DIR = ROOT_DIR / "frontend"
-REPAIRS_DIR = ROOT_DIR / "specs" / "repairs"
-FIX_SPEC_PATH = REPAIRS_DIR / "current_fix.md"
-
-# ---------------------------------------------------------------------------
-# Prompt
-# ---------------------------------------------------------------------------
-SYSTEM_PROMPT = """
-You are the FACTORY WATCHDOG.
-Your job is to analyze error logs and generate a concise "Fix Specification".
-You do NOT write code. You write structured instructions for the Builder Agent.
-Be concrete: name the exact file, interface, or function that must change.
-"""
-
-
-# ---------------------------------------------------------------------------
-# Diagnostics
-# ---------------------------------------------------------------------------
-
-def _run_tsc() -> dict:
-    """Run `pnpm tsc --noEmit` in the frontend directory."""
-    result = subprocess.run(
-        ["pnpm", "exec", "tsc", "--noEmit"],
-        cwd=str(FRONTEND_DIR),
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode != 0:
-        return {
-            "status": "FAIL",
-            "source": "Frontend TypeScript Compiler (tsc)",
-            "log": (result.stdout + "\n" + result.stderr).strip(),
-        }
-    return {"status": "PASS", "source": "tsc", "log": ""}
-
-
-def _run_eslint() -> dict:
-    """Run ESLint on JS/JSX files only (TSC handles TypeScript).
-    Treats exit-code 2 with 'no files' / 'all ignored' as a clean pass."""
-    result = subprocess.run(
-        ["pnpm", "exec", "eslint", "src/**/*.{js,jsx}", "--max-warnings", "0"],
-        cwd=str(FRONTEND_DIR),
-        capture_output=True,
-        text=True,
-    )
-    combined = (result.stdout + "\n" + result.stderr).strip()
-    # Exit code 2 with no lintable files is not a real failure
-    if result.returncode != 0:
-        no_files = any(phrase in combined for phrase in [
-            "all of the files matching", "No files matching",
-            "no files", "file patterns",
-        ])
-        if no_files:
-            return {"status": "PASS", "source": "eslint", "log": ""}
-        return {
-            "status": "FAIL",
-            "source": "Frontend ESLint",
-            "log": combined,
-        }
-    return {"status": "PASS", "source": "eslint", "log": ""}
-
-
-def run_diagnostics() -> dict:
-    """Run all checks; return the first failure found, or a PASS record."""
-    print("🩺 Watchdog scanning system health...")
-
-    for checker in [_run_tsc, _run_eslint]:
-        result = checker()
-        tool = result["source"]
-        if result["status"] == "FAIL":
-            print(f"   ❌ {tool} — issues detected")
-            return result
-        print(f"   ✅ {tool} — OK")
-
-    return {"status": "PASS", "source": "all", "log": "System Nominal"}
-
-
-# ---------------------------------------------------------------------------
-# Prescription
-# ---------------------------------------------------------------------------
-
-def diagnose_and_prescribe(error_report: dict) -> str | None:
-    """Ask the LLM to convert a raw error log into a structured Fix Spec."""
-    print(f"🚨 Error detected in: {error_report['source']}. Analyzing...")
-
-    log_excerpt = error_report["log"][:4000]  # stay within context window
-
-    prompt = f"""
-DIAGNOSTIC REPORT
-=================
-Source : {error_report['source']}
-
-Raw Log:
-{log_excerpt}
-
-TASK
-====
-1. Identify every file causing the error.
-2. For each file write a "Repair Spec" section that tells the Builder Agent
-   EXACTLY what type, interface, function, or import to change/add/remove.
-3. Be specific (e.g. "Add `stock_status: StockStatus` to the `Product`
-   interface in `frontend/src/types/index.ts`").
-
-OUTPUT FORMAT (Markdown)
-========================
-# Fix: [Short descriptive title]
-
-## Affected Files
-- `path/to/file.ts` — one-line reason
-
-## Repair Instructions
-### `path/to/file.ts`
-- [ ] Bullet describing the exact change needed
-- [ ] …
-
-(Repeat per file if multiple files are broken)
-"""
-
-    # Diagnosing errors is structured and specific — fast tier handles it well
-    return query_llm(SYSTEM_PROMPT, prompt, model_tier="fast")
-
-
-# ---------------------------------------------------------------------------
-# Entry Point
-# ---------------------------------------------------------------------------
-
-def run_watchdog() -> bool:
-    """
-    Execute a full watchdog cycle.
-    Returns True if the system is healthy, False if a fix spec was written.
-    """
-    REPAIRS_DIR.mkdir(parents=True, exist_ok=True)
-
-    report = run_diagnostics()
-
-    if report["status"] == "PASS":
-        # Remove stale fix spec if it exists from a previous run
-        if FIX_SPEC_PATH.exists():
-            FIX_SPEC_PATH.unlink()
-        print("✅ System is Healthy. No improvements needed.")
-        return True
-
-    prescription = diagnose_and_prescribe(report)
-
-    if prescription:
-        save_artifact(str(FIX_SPEC_PATH), prescription)
-        print(f"🩹 Fix Prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
-        print("   Run `python factory.py heal` to apply.")
-        return False
-    else:
-        print("❌ Watchdog failed to analyse the error — check API key and logs.")
-        return False
-
-
-if __name__ == "__main__":
-    import os as _os
-
-    # ------------------------------------------------------------------
-    # GATEKEEPER MODE: triggered when TF_BLACKBOARD env is set.
-    # Runs the Gatekeeper quality review (Pillar 4) and augments it with a
-    # Playwright visual screenshot via the visual_qa module.
-    # ------------------------------------------------------------------
-    _bb = _os.environ.get("TF_BLACKBOARD", "").strip()
-    if _bb:
-        _bb_path = Path(_bb)
-        if _bb_path.exists():
-            print("🛡️  Gatekeeper mode activated (Task Force Round 3)...")
-
-            _bb_text = _bb_path.read_text(encoding="utf-8")
-
-            # Extract goal from first "**Goal:** ..." line
-            import re as _re
-            _goal_m = _re.search(r"\*\*Goal:\*\*\s*(.+)", _bb_text)
-            _original_prompt = _goal_m.group(
-                1).strip() if _goal_m else "(unknown goal)"
-
-            # Spec context = full blackboard (grows as agents write)
-            _spec_text = _bb_text[:3000]
-
-            # Extract builder code from "## Round 2" section if present
-            _code_section = _re.search(
-                r"##\s+Round 2.*?$(.*?)(?=^##|\Z)",
-                _bb_text, _re.DOTALL | _re.MULTILINE
-            )
-            _code_text = _code_section.group(
-                1).strip() if _code_section else ""
-
-            # ── Visual QA (Playwright + Gemini vision) ─────────────────
-            _screenshot_desc = ""
-            try:
-                sys.path.insert(0, str(Path(__file__).resolve().parent))
-                from visual_qa import capture_and_describe as _cap
-                print("📸  Attempting visual QA (Playwright screenshot)...")
-                _screenshot_desc = _cap(
-                    url="http://localhost:5173",
-                    spec_text=_spec_text,
-                )
-                if _screenshot_desc.startswith("[visual_qa:"):
-                    print(f"   ℹ️  {_screenshot_desc}")
-                else:
-                    print("   ✅ Screenshot captured and analysed.")
-            except Exception as _vqa_err:
-                print(f"   ⚠️  Visual QA unavailable: {_vqa_err}")
-
-            verdict = gatekeeper_review(
-                original_prompt=_original_prompt,
-                spec_text=_spec_text,
-                code_text=_code_text,
-                screenshot_description=_screenshot_desc,
-            )
-
-            # Write verdict back to blackboard
-            _status_line = "✅ APPROVED" if verdict.approved else "❌ REJECTED"
-            _gatekeeper_section = (
-                f"\n\n---\n## Round 3 — Gatekeeper Verdict\n\n"
-                f"**Status:** {_status_line}\n"
-            )
-            if not verdict.approved:
-                _gatekeeper_section += (
-                    f"\n**Reason:**\n{verdict.reason}\n\n"
-                    f"**Required Fix:**\n{verdict.remedy}\n"
-                )
-            _bb_path.write_text(
-                _bb_text.rstrip() + _gatekeeper_section, encoding="utf-8"
-            )
             print(f"   Verdict written → {_bb_path.name}")
 
             sys.exit(0 if verdict.approved else 1)

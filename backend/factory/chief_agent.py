@@ -71,6 +71,14 @@ TOOLS & PARALLELISM RULES:
                               and writes Evolution Proposals to specs/strategy/evolution/.
                               Use on demand to refresh the tool landscape awareness.
                               No args required.
+- 'sandbox'     (Sandbox):    Runs build+verify pipeline directly on a spec file.        SEQUENTIAL 🔒
+                              Triggers inner_loop: LLM generates → tsc/lint/vite build →
+                              self-heals up to 5 rounds. Use when you need guaranteed
+                              green-build output, or after 'implement' fails ui_validate.
+                              args = spec file path (e.g. "specs/interface/02_inventory_grid.md").
+                              SANDBOX MAKEOVER: If the Chief wants to rebuild a component
+                              from scratch with a clean verified state, queue 'sandbox'
+                              directly. It replaces the stale Stitch/human-input workflow.
 - 'explain'     (None):       Plain-English answer; no queue.                          PARALLEL SAFE ✅
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):

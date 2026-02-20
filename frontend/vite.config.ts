@@ -10,6 +10,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  test: {
+    // Exclude Playwright e2e specs — they are not Vitest tests
+    exclude: ['tests/e2e/**', '**/node_modules/**'],
+    environment: 'jsdom',
+  },
   server: {
     proxy: {
       '/api': {

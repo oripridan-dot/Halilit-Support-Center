@@ -14,7 +14,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import { useConductorCatalog } from "../../hooks/useConductorCatalog";
+import { useConductorCatalog, useProductRelationships } from "../../hooks/useConductorCatalog";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
 import { useNavigationStore } from "../../store/navigationStore";
 
@@ -269,21 +269,17 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const specsRecord: Record<string, unknown> =
     jitSpecs && Object.keys(jitSpecs).length > 0 ? jitSpecs : catalogSpecs;
 
-  // Relationships from product graph
-  const relIds = product?.relationship_ids ?? [];
-  const relProducts: RelatedProduct[] =
-    products
-      ?.filter((p) => relIds.includes(p.id))
-      .map((p) => ({
-        id: p.id,
-        name: p.name,
-        price: p.price ?? undefined,
-        image_url: p.image_url,
-      })) ?? [];
+  // Typed relationships from the product graph index
+  const { accessories: graphAccessories, alternatives: graphAlternatives, compatible: graphCompatible } =
+    useProductRelationships(activeProductId ?? null);
 
-  // Simplified relationship categorisation (by relationship_ids only — no graph data in this view)
-  const accessories = relProducts.slice(0, Math.ceil(relProducts.length / 2));
-  const alternatives = relProducts.slice(Math.ceil(relProducts.length / 2));
+  const toRelatedProduct = (p: { id: string; name: string; price?: number | null; image_url?: string }) =>
+    ({ id: p.id, name: p.name, price: p.price ?? undefined, image_url: p.image_url }) as RelatedProduct;
+
+  const accessories = graphAccessories.map(toRelatedProduct);
+  const alternatives = graphAlternatives.map(toRelatedProduct);
+  const compatible = graphCompatible.map(toRelatedProduct);
+  const relProducts = [...accessories, ...alternatives, ...compatible];
 
   // ── Actions ──────────────────────────────────────────────────────────────────
   const handleCopySpecs = () => {
@@ -551,6 +547,22 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
                         <RelatedProductCard
                           key={item.id}
                           item={item}
+                          onSelect={() => goToProduct(item.id)}
+                        />
+                      ))}
+                    </MiniSection>
+                  )}
+                  {compatible.length > 0 && (
+                    <MiniSection
+                      title="Compatible"
+                      count={compatible.length}
+                    >
+                      {compatible.map((item) => (
+                        <RelatedProductCard
+                          key={item.id}
+                          item={item}
+                          badge="Compatible"
+                          badgeColor="bg-blue-950/30 text-blue-400 border-blue-900/30"
                           onSelect={() => goToProduct(item.id)}
                         />
                       ))}

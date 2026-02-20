@@ -1,7 +1,6 @@
 import sys
 import re
 import subprocess
-import requests
 from pathlib import Path
 
 # Project root (backend/factory -> backend -> root)
@@ -9,22 +8,28 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # Import from same package
 try:
-    from agent_core import query_llm, save_artifact, get_project_context, build_dynamic_context
+    from agent_core import (
+        query_llm, save_artifact, get_project_context,
+        build_dynamic_context, get_relevant_lore,
+    )
     from sandbox_executor import inner_loop, parse_verification_commands
     from ui_validator_agent import validate_ui
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from agent_core import query_llm, save_artifact, get_project_context, build_dynamic_context
+    from agent_core import (
+        query_llm, save_artifact, get_project_context,
+        build_dynamic_context, get_relevant_lore,
+    )
     from sandbox_executor import inner_loop, parse_verification_commands
     from ui_validator_agent import validate_ui
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-MAX_RETRIES = 3
+MAX_RETRIES = 5   # Level 5: more self-healing rounds
 
 SYSTEM_PROMPT = """
-You are the FACTORY BUILDER AGENT (Level 6 — Self-Healing).
+You are the FACTORY BUILDER AGENT (Level 5 — Autonomous Self-Healing).
 Your goal: Implement the Spec strictly while adhering to the Project Architecture.
 
 RULES:
@@ -35,6 +40,12 @@ RULES:
 5. SYNTAX. Use TypeScript/React for frontend (functional components + hooks), Python 3.11+ for backend.
 6. SELF-HEAL. If you receive an ERROR LOG, analyse it carefully and rewrite the code to fix every listed error.
    Do NOT repeat the same mistake. Check every import path, every type name, every hook signature.
+7. FRONTEND IMPORTS. Always use relative imports from the project structure shown in context.
+   NEVER use react-router-dom, react-toastify, swr, axios, @emotion, styled-components, or any
+   library not present in the project's package.json. Icon imports MUST come from lucide-react only.
+8. Dark mode Tailwind only — classes from the dark zinc/slate palette. No inline styles unless unavoidable.
+9. CONTRACT FIRST. If a matching API contract exists in specs/contracts/, you MUST use its types
+   exactly — do not invent endpoint paths or response shapes.
 """
 
 CRITIC_PROMPT = """
@@ -140,6 +151,30 @@ CODE TO REVIEW:
 # Main
 # ---------------------------------------------------------------------------
 
+def _load_contracts(domain: str, queries: list[str]) -> str:
+    """
+    Phase 2 — API Contract Enforcement.
+    Scans specs/contracts/ for any .schema.ts or .openapi.json files
+    relevant to the current domain/queries and injects them into context.
+    """
+    contracts_dir = PROJECT_ROOT / "specs" / "contracts"
+    if not contracts_dir.exists():
+        return ""
+    blocks: list[str] = []
+    for contract_file in sorted(contracts_dir.glob("*")):
+        if contract_file.suffix in (".ts", ".json", ".md"):
+            stem = contract_file.stem.lower()
+            # Include if any query keyword matches the contract name
+            if any(q.lower()[:10] in stem or stem in q.lower() for q in queries):
+                content = contract_file.read_text(encoding="utf-8")
+                blocks.append(
+                    f"--- API CONTRACT: {contract_file.name} ---\n{content}\n"
+                )
+    if blocks:
+        return "=== BINDING API CONTRACTS (follow these types exactly) ===\n" + "\n".join(blocks)
+    return ""
+
+
 def build_component(spec_path: str) -> None:
     spec_file = Path(spec_path)
     if not spec_file.exists():
@@ -153,112 +188,75 @@ def build_component(spec_path: str) -> None:
     full_path = _extract_target(spec_content, spec_file)
 
     # =========================================================================
-    # THE STITCH PIPELINE (Frontend)
+    # SHARED CONTEXT DISCOVERY (both frontend and backend)
     # =========================================================================
-    if domain == "frontend" and full_path:
-        print(f"\n🎨 [STITCH UI WORKFLOW INITIATED]")
-        print(
-            f"The Architect has designed a frontend component: {full_path.name}")
-        print(f"\n👉 ACTION REQUIRED:")
-        print(f"   1. Open Google Stitch (stitch.withgoogle.com) or Lovable/v0.")
-        print(f"   2. Copy the '## Stitch UI Prompt' from {spec_file.name}.")
-        print(f"   3. Generate the UI and paste the raw React/TSX code into:")
-        print(f"      {full_path.relative_to(PROJECT_ROOT)}")
-
-        input("\nPress ENTER when the raw UI code is saved in the file...")
-
-        print("\n⚙️  Routing to UI Bridge MCP for Logic Integration...")
-        payload = {
-            "jsonrpc": "2.0",
-            "id": 1,
-            "method": "tools/call",
-            "params": {
-                "name": "integrate_lovable_code",
-                "arguments": {
-                    "file_path": str(full_path),
-                    "create_backup": True
-                }
-            }
-        }
-        try:
-            resp = requests.post("http://localhost:8200/mcp",
-                                 json=payload, timeout=120)
-            data = resp.json()
-            if "error" in data:
-                print(f"❌ UI Bridge Error: {data['error']['message']}")
-            else:
-                print(f"✅ UI Bridge Success: {data['result']['message']}")
-
-                # Step 1: TypeScript type check
-                passed, err = _run_tsc()
-                if not passed:
-                    print("⚠️ TypeScript errors detected after integration:")
-                    print(err)
-                else:
-                    print("✅ TypeScript verification passed!")
-                    # Step 2: UI Validator — import scan + Vite build
-                    print("\n🔬 Running UI Validator (import scan + Vite build)...")
-                    validation = validate_ui(run_build=True)
-                    if not validation["passed"]:
-                        print(
-                            f"\n❌ UI Validation FAILED: {validation['summary']}")
-                        if validation["import_errors"]:
-                            print("   Broken imports:")
-                            for e in validation["import_errors"]:
-                                print(f"     • {e}")
-                        if validation["build_errors"]:
-                            print("   Vite build errors:")
-                            for e in validation["build_errors"]:
-                                print(f"     • {e}")
-                        print("\n💡 Fix the issues above and re-run the build.")
-                    else:
-                        print(
-                            "✅ UI Validation passed — import scan + Vite build clean.")
-        except Exception as e:
-            print(
-                f"❌ Failed to reach UI Bridge (is backend/mcp/servers/ui_bridge.py running?): {e}")
-        return
-
-    # =========================================================================
-    # THE STANDARD PIPELINE (Backend / Logic)
-    # =========================================================================
-
-    # --- Dynamic Context Discovery (Pillar 1) --------------------------------
-    # Extract meaningful search queries from the spec title and component path
-    _title_match = re.search(r"#\s+Spec:\s*(.+)", spec_content)
+    _title_match = re.search(r"#\s+(?:Spec[:\s]+)?(.+)", spec_content)
     _comp_match = re.search(
-        r"\*{0,2}(?:Target|Component):?\*{0,2}\s*`?([^`\n*#]+)`?", spec_content, re.IGNORECASE)
+        r'\*{0,2}(?:Target|Component):?\*{0,2}\s*`?([^`\n*#]+)`?',
+        spec_content, re.IGNORECASE
+    )
     discovery_queries: list[str] = []
     if _title_match:
         discovery_queries.append(_title_match.group(1).strip())
     if _comp_match:
-        # e.g. "frontend/src/components/views/InventoryView.tsx" → "InventoryView"
         comp_name = Path(_comp_match.group(1).strip()).stem
         discovery_queries.append(comp_name)
 
-    if discovery_queries:
-        print(f"🔎  Discovering context for: {discovery_queries}...")
-        dynamic_ctx = build_dynamic_context(discovery_queries)
-    else:
-        print(f"📥 Loading {domain} context (static fallback)...")
-        dynamic_ctx = get_project_context(domain)
+    print(f"🔎  Discovering context for: {discovery_queries}...")
+    dynamic_ctx = build_dynamic_context(
+        discovery_queries) if discovery_queries else get_project_context(domain)
+
+    # Phase 2: inject matching API contracts
+    contracts_ctx = _load_contracts(domain, discovery_queries)
+
+    # Phase 3: inject relevant past lessons (vector-filtered lore)
+    task_desc = " ".join(discovery_queries) or (domain + " implementation")
+    lore = get_relevant_lore(task_desc, top_k=5)
+    lore_block = (
+        f"\n## RELEVANT PAST LESSONS (apply these to avoid repeated mistakes)\n{lore}\n"
+        if lore else ""
+    )
 
     context = dynamic_ctx
+    if contracts_ctx:
+        context = contracts_ctx + "\n\n" + context
+    if lore_block:
+        context = lore_block + "\n\n" + context
 
-    # --- Closure: the builder_fn passed to inner_loop -------------------------
-    # State shared across inner-loop rounds
+    # =========================================================================
+    # AUTONOMOUS PIPELINE (Level 5 — no human input)
+    # Applies to BOTH frontend and backend. The Stitch/Lovable human-in-the-
+    # loop gate is replaced by direct LLM generation + inner_loop self-healing.
+    # =========================================================================
+
+    if not full_path:
+        print("❌ Could not determine output file path from spec. Add a 'Component:' field.")
+        return
+
+    print(f"\n🏭 [{domain.upper()} BUILD — AUTONOMOUS LEVEL 5]")
+    print(f"   Target: {full_path.relative_to(PROJECT_ROOT)}")
+
+    # Ensure verification commands from the spec are present; for frontend
+    # inject tsc + lint + vite build if the spec has none
+    spec_with_checks = spec_content
+    if domain == "frontend" and "## Verification Commands" not in spec_content:
+        spec_with_checks = spec_content.rstrip() + (
+            "\n\n## Verification Commands\n"
+            "- `pnpm tsc --noEmit`\n"
+            "- `pnpm run lint`\n"
+        )
+
+    # Shared state for the inner-loop closure
     _state: dict = {"critic_issues": None}
 
     def _builder_fn(spec_text: str, error_feedback: str | None) -> bool:
         """
         Called by inner_loop on each round.
-        Generates code, runs critic review, writes to disk.
-        Returns True if code was written, False if LLM returned nothing.
+        Generates the complete file, runs critic review, writes to disk.
         """
         attempt_label = "⚡  Generating code" if error_feedback is None else "🩹  Self-healing"
         print(f"{attempt_label}...")
 
-        # Build feedback block from sandbox errors + previous critic issues
         feedback_parts: list[str] = []
         if error_feedback:
             feedback_parts.append(
@@ -273,9 +271,10 @@ def build_component(spec_path: str) -> None:
             f"--- SPECIFICATION TO IMPLEMENT ---\n{spec_text}\n\n"
             f"{feedback_block}\n\n"
             f"--- TASK ---\n"
-            "Write the COMPLETE file content for the target file defined in the spec.\n"
-            "Ensure all imports are relative to the project structure in the context above.\n"
-            "Output ONLY raw code — no markdown fences, no commentary."
+            "Write the COMPLETE file content for the target component defined in the spec.\n"
+            "Ensure ALL imports are relative to the project structure shown in context above.\n"
+            "For frontend: functional React component, strict TypeScript, Tailwind CSS dark theme.\n"
+            "Output ONLY raw code — no markdown fences, no commentary, no explanation."
         )
 
         raw_output = query_llm(SYSTEM_PROMPT, prompt, model_tier="fast")
@@ -285,37 +284,42 @@ def build_component(spec_path: str) -> None:
 
         clean_code = _strip_fences(raw_output)
 
-        # Critic gate (before touching disk)
+        # Critic gate
         critic_ok, critic_issues = _critic_review(
             clean_code, spec_text, context)
         _state["critic_issues"] = None
         if not critic_ok:
-            print(f"⚠️   Critic rejected the code.")
+            print(f"⚠️   Critic rejected the code — feeding issues back into next round.")
             _state["critic_issues"] = critic_issues
-            # Write anyway so inner_loop can run verification (which will also fail
-            # and provide real compiler errors)
 
-        if full_path:
-            save_artifact(str(full_path), clean_code)
-        else:
-            print("⚠️  Target path not found in Spec. Printing to stdout:")
-            print(clean_code)
-            return False
-
+        save_artifact(str(full_path), clean_code)
         return True
 
-    # --- Run the autonomous inner loop (Pillar 3) ----------------------------
+    # Run the autonomous self-healing inner loop
     passed = inner_loop(
-        spec_text=spec_content,
+        spec_text=spec_with_checks,
         builder_fn=_builder_fn,
         max_rounds=MAX_RETRIES,
         verbose=True,
     )
 
     if passed:
-        rel = full_path.relative_to(
-            PROJECT_ROOT) if full_path else spec_file.name
+        rel = full_path.relative_to(PROJECT_ROOT)
         print(f"✅  Verified & Approved: {rel}")
+        # Post-build UI validation for frontend (catches Vite runtime import errors)
+        if domain == "frontend":
+            print("\n🔬 Running UI Validator (import scan + Vite build)...")
+            validation = validate_ui(run_build=True)
+            if not validation["passed"]:
+                print(f"\n⚠️  UI Validation issues detected:")
+                for e in (validation.get("import_errors", []) + validation.get("build_errors", [])):
+                    print(f"     • {e}")
+                print("  Passing errors back to self-healer for one final round...")
+                error_msg = "\n".join(
+                    validation.get("import_errors", []) + validation.get("build_errors", []))
+                _builder_fn(spec_with_checks, error_msg)
+            else:
+                print("✅ UI Validation passed — import scan + Vite build clean.")
     else:
         print(
             "❌  Could not auto-heal after max retries. Last build saved — review manually.")
