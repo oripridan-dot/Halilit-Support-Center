@@ -125,3 +125,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** 'fixes' attribute missing in FixReport object.
 **Fix:** Added a check for attribute existence.
 **Lesson:** ALWAYS check object attributes exist.
+
+### [2026-02-20] Validate API Response Schemas
+**Symptom:** UI validation failed due to missing 'fixes' attribute.
+**Root Cause:** The API response schema lacked the expected 'fixes' attribute.
+**Fix:** Added the missing 'fixes' attribute to the FixReport.
+**Lesson:** ALWAYS validate API response schemas.
