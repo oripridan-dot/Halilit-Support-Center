@@ -28,3 +28,7 @@ To debounce the search input in the Inventory Master, improving performance and 
 4. **Scenario:** User navigates to the inventory screen with a pre-filled search term.
     *   **Precondition:** `navigationStore.searchQuery` is set to "Fender".
     *   **Outcome:** After 150ms of loading, the Inventory grid is filtered to "Fender".
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

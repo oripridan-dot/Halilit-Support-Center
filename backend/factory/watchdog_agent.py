@@ -157,6 +157,65 @@ Respond with VERDICT: APPROVED or VERDICT: REJECTED (with REASON and REMEDY).
     return GatekeeperVerdict(approved=False, reason=reason, remedy=remedy)
 
 
+def evaluate_frontend_feature(
+    spec_text: str,
+    original_prompt: str = "",
+    code_text: str = "",
+    url: str = "http://localhost:5173",
+    hint: str = "",
+) -> GatekeeperVerdict:
+    """
+    One-call quality gate for a frontend feature build.
+
+    Pillar 4 + Multi-Modal Eyes:
+      1. Captures a Playwright screenshot and describes it via Gemini vision.
+      2. Feeds the visual description into the Gatekeeper review alongside
+         the spec and generated code.
+      3. Returns the verdict; callers check `.approved` and use `.as_feedback()`
+         to inject rejection context back into the Builder.
+
+    Args:
+        spec_text:       The spec (markdown) that the Builder was supposed to implement.
+        original_prompt: The user's original natural-language request (for intent check).
+        code_text:       The Builder's generated code (optional but enriches the review).
+        url:             The local dev-server URL to screenshot.
+        hint:            Extra guidance passed to the visual QA prompt
+                         (e.g. "Check if the comparison matrix is visible").
+
+    Returns:
+        GatekeeperVerdict — approved=True means the feature passed all gates.
+    """
+    # ── Step 1: Visual QA (screenshot + Gemini vision) ───────────────────────
+    screenshot_description = ""
+    try:
+        _factory_dir = Path(__file__).resolve().parent
+        import sys as _sys
+        if str(_factory_dir) not in _sys.path:
+            _sys.path.insert(0, str(_factory_dir))
+        from visual_qa import capture_and_describe  # noqa: PLC0415
+        print("📸  [evaluate_frontend_feature] Capturing visual QA screenshot...")
+        screenshot_description = capture_and_describe(
+            url=url,
+            spec_text=spec_text,
+            hint=hint or "Verify the UI matches the spec layout and token requirements.",
+        )
+        if screenshot_description.startswith("[visual_qa:"):
+            print(f"   ℹ️  {screenshot_description}")
+            screenshot_description = ""  # treat as missing rather than noise
+        else:
+            print("   ✅ Screenshot captured and analysed.")
+    except Exception as _err:
+        print(f"   ⚠️  Visual QA unavailable: {_err}")
+
+    # ── Step 2: Gatekeeper review ─────────────────────────────────────────────
+    return gatekeeper_review(
+        original_prompt=original_prompt or spec_text[:200],
+        spec_text=spec_text,
+        code_text=code_text,
+        screenshot_description=screenshot_description,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Diagnostics (unchanged from v1)
 # ---------------------------------------------------------------------------

@@ -25,3 +25,8 @@ Define rules for product relationships: Accessories, Compatible, Bundles, Altern
   - **Outcome:** "Verified Accessories" section empty. "Alternatives" may be populated from rules.
 - **Scenario:** Golden scenario missing in artifact.
   - **Outcome:** Build fails. Compliance report lists missing scenario.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
+- `pytest backend/tests/ -x -q`

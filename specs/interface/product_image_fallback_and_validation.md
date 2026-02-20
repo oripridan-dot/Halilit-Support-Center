@@ -28,3 +28,6 @@ To ensure that no broken image links appear in the Halilit Support Center, enhan
 4.  **Scenario:** The image at `image_url` for Product D initially fails to load due to a network issue.
     *   **Outcome:** A dark placeholder image is displayed. The system MAY retry loading the image later.
 
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

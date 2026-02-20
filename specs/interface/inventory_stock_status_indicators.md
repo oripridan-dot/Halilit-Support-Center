@@ -35,3 +35,7 @@ To visually communicate product stock status in the Inventory Master, enabling o
 5.  **Scenario:** The `stock` property is missing (implicitly `undefined`).
     *   **Outcome:** The Inventory grid row has an amber border.
     *   **Outcome:** The Inventory grid row displays an "UNCONFIRMED" badge.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

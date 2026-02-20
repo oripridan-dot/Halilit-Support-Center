@@ -1,60 +1,163 @@
-# Halilit Support Center — Application Architecture
+# Architecture — Halilit Support Center v9.7.1 (Chief)
 
-## The Level 5 Autonomous Factory Loop (v9.7.0)
-
-1. **The Blackboard (Task Force):** Cross-domain features share a localized markdown file (`specs/temp/task_force_X.md`) for agents to collaborate on API contracts.
-2. **Ephemeral Sandboxes:** The Supervisor spins up isolated Docker containers. Code is compiled and tested *before* it is returned to the user.
-3. **Multi-Modal Verification:** Playwright tests are executed, and the Watchdog agent reviews DOM state and screenshots via Gemini 2.0 Flash vision tools.
-4. **Auto-Rollback:** `repo_agent.py` branches before execution and automatically reverts if the improvement cycle fails to produce passing code within 5 rounds.
-5. **Persistent Memory:** The Reflect Agent appends root causes of healed failures to `docs/LEARNED_GUIDELINES.md`. Every subsequent agent call receives this file injected into its context automatically via `get_project_context()`.
+> **Last updated:** 2026-02-20  
+> **Branch:** v9.7.0 → merging to `main` as v9.7.1
 
 ---
 
 ## Overview
 
-The Halilit Support Center is a JIT product intelligence platform for musical instruments. It features a Dashboard, Inventory grid, and Product Detail view. The application uses a FastAPI backend and a React + TypeScript frontend. The backend includes a JIT intelligence engine (SSE streaming), a Dark Factory agent suite for autonomous development, and a Conductor CLI for the data pipeline.
+Halilit Support Center is a JIT (Just-in-Time) product intelligence platform for musical instrument inventory. The UI is a React/TypeScript "Operator Console" served by a FastAPI backend and a real-time Gemini-driven intelligence pipeline.
+
+Architecture pattern: **Spec-Driven Dark Factory** — markdown specs in `specs/` are the sole source of intent; agents materialise them into code. No code is written without a spec.
+
+---
+
+## Repository Layout (v9.7.1 — clean)
+
+\`\`\`
+Halilit-Support-Center/
+├── backend/                     # Python 3.11+ FastAPI server + pipeline
+│   ├── server.py                # FastAPI routes: catalog, JIT, MCP
+│   ├── conductor_main.py        # CLI: dev, skeleton-sync, rebuild, enrich, server
+│   ├── product_normalizer.py    # build_catalog() → normalized products + graph
+│   ├── product_graph.py         # ProductGraph: families, relationships
+│   ├── product_graph_store.py   # JSON snapshot persistence
+│   ├── jit_agent.py             # SSE-streamed live product intelligence (Gemini)
+│   ├── unified_data_service.py  # Brand sync engine
+│   ├── source_rules.py          # ⚠️ THE LAW — Three Source Rules (read first!)
+│   ├── factory/                 # AI agents: builder, chief, scribe, watchdog, etc.
+│   ├── ingestion/               # Scrapers, data_models, relationship discovery
+│   ├── hierarchy/               # Product hierarchy: models, service, API, validation
+│   ├── mcp/                     # MCP servers (catalog_db, ui_bridge, web_search, …)
+│   ├── api/                     # mcp_router (FastAPI)
+│   ├── scripts/                 # One-shot ops: enrich, scrape, index, inspect
+│   ├── services/                # improvement_cycle, product_image_validation
+│   ├── config/                  # init_db.sql, mcp_servers.json
+│   └── data/                    # graph/, ingestion/, jit_cache/ (gitignored)
+│
+├── frontend/                    # React 18 + Vite + TypeScript
+│   └── src/
+│       ├── App.tsx              # Shell: sidebar + 3-view router
+│       ├── components/
+│       │   ├── views/           # DashboardView, InventoryView, ProductDetailView, IngestionStatusView
+│       │   ├── cockpit/         # ProductRelations, VerdictCard, TrustedConsensus, FieldNotes, ExplorationDock
+│       │   ├── ProductDetail/   # EcosystemTab, JITBadge, ProductImageCarousel, SourcingBadge
+│       │   ├── GlobalSearch.tsx
+│       │   ├── ImageWithFallback.tsx
+│       │   ├── ProductImage.tsx
+│       │   ├── ProductTile.tsx
+│       │   └── ui/              # GlobalErrorBoundary
+│       ├── hooks/               # useConductorCatalog, useJITIntelligence, useDebounce[Value], useImageRefresh, useValidateHeroImage
+│       ├── store/               # navigationStore (Zustand)
+│       ├── lib/                 # brandLogoHelper, categoryConsolidator, smartTags, universalCategories, …
+│       ├── styles/              # brandThemes, design-tokens
+│       └── types/               # index.ts (canonical), generated.ts, componentUtils.ts
+│
+├── specs/
+│   ├── interface/               # ← CANONICAL UI SPECS (34 files as of v9.7.1)
+│   │   ├── 01_operator_dashboard.md
+│   │   ├── 02_inventory_grid.md
+│   │   └── 03_product_intelligence.md  ← primary three; rest are feature specs
+│   ├── data_pipeline/           # Ingestion rules, relationship logic
+│   ├── behavior/                # Playwright test scenarios
+│   ├── 01_data/                 # Data compliance, halilit_api, official_scout
+│   └── strategy/                # master_plan.md
+│
+├── docs/                        # Developer documentation
+├── nexus.py                     # Nexus Swarm Console — parallel agent orchestrator
+├── factory.py                   # Master Factory Controller CLI
+├── OPERATOR_CONSOLE_SPEC.md     # Master spec — operators approve outcomes not code
+└── CHANGELOG.md
+\`\`\`
+
+**Removed in v9.7.1 (cleanup):**
+- Root `src/` directory — 8 orphaned components never connected to the Vite build
+- Root `services/` — exact duplicate of `backend/catalog_organizer.py`
+- `start_console.sh` — legacy startup script superseded by `factory.py start`
+- `backend/scripts/archive/` — 3 archived one-off scripts
+- 10 duplicate spec files (shorter dash-named variants superseded by fuller named equivalents)
+
+---
 
 ## Frontend Views
 
-- **DashboardView**: Dashboard statistics — total products, calls for price, top brands, last ingestion status.
-- **InventoryView**: Filterable product grid with out-of-stock and unconfirmed visual cues.
-- **ProductDetailView**: Full product cockpit — specs, media gallery, JIT intelligence stream, product relations.
-- **IngestionStatusView**: Live ingestion run telemetry.
+| View | State Key | Purpose |
+|---|---|---|
+| `DashboardView` | `DASHBOARD` | Metrics: total products, CFP items, top brands, last ingestion |
+| `InventoryView` | `INVENTORY` | Filterable/searchable product grid with stock & CFP indicators |
+| `ProductDetailView` | `PRODUCT_DETAIL` | Full product card: image, sourcing badges, JIT badge, tabs (Ecosystem, Specs, History) |
+| `IngestionStatusView` | `INGESTION_STATUS` | Live pipeline ingestion progress |
 
-## Hooks & State
+---
 
-- **useConductorCatalog**: Fetches the product catalog from `/api/conductor/catalog` via React Query.
-- **useJITIntelligence**: Manages JIT phases (`idle → snap → intel → wisdom → complete`); returns `signal_chain` and `cheat_sheet` for the cockpit UI.
-- **navigationStore** (Zustand): App-wide navigation state — current view, active product ID, search query, call-for-price filter.
+## Hooks
 
-## Backend API
+| Hook | Purpose |
+|---|---|
+| `useConductorCatalog` | Fetches `/api/conductor/catalog` (React Query) |
+| `useJITIntelligence` | SSE-streams live Gemini intelligence per product |
+| `useDebounce` / `useDebounceValue` | Debounces search inputs (≤150ms per SLA) |
+| `useImageRefresh` | Triggers hero image re-validation |
+| `useValidateHeroImage` | Validates hero image URL liveness |
 
-- `GET /api/conductor/catalog` — Serves the normalized product catalog.
-- `GET /api/jit/{product_id}` — SSE stream for JIT product intelligence.
-- `GET /api/hierarchy/*` — Product hierarchy endpoints.
-- `POST /api/cycles/*` — Improvement Cycle lifecycle (start, advance, stream via SSE).
+---
 
-## Data Pipeline
+## Backend API endpoints
 
-1. **Commercial Ingest** (`halilit_page_scraper`): Pulls Golden List, prices, SKUs from Halilit.com.
-2. **Product Normalizer** (`product_normalizer.py`): Transforms raw data → canonical `Product` shape; runs the graph pipeline (official → commercial → contextual → spectrum).
-3. **ProductGraph** (`product_graph.py`): Families, relationships, spectrum IDs.
-4. **JIT Agent** (`jit_agent.py`): On-demand intelligence via Gemini 2.0 Flash; 7-day file cache.
+| Method | Path | Purpose |
+|---|---|---|
+| GET | `/api/conductor/catalog` | Full normalized product catalog |
+| GET | `/api/health` | Service health check |
+| GET | `/api/jit/{product_id}` (SSE) | Live product intelligence stream |
+| GET/POST | `/api/hierarchy/*` | Product hierarchy management |
+| `*` | `/mcp/*` | MCP tool bridge |
 
-## Factory Agents
+---
 
-- **chief_agent.py**: The Supervisor — accepts plain-English commands, outputs a parallel task queue.
-- **builder_agent.py**: Materializes code from a specification file.
-- **steerer_agent.py**: Identifies spec gaps; generates or updates specs.
-- **watchdog_agent.py**: Reviews code/DOM against spec; multi-modal (screenshot + Gemini vision).
-- **reflect_agent.py**: Appends root-cause lessons to `docs/LEARNED_GUIDELINES.md`.
-- **scribe_agent.py**: Regenerates documentation from the live codebase.
-- **repo_agent.py**: Git operations (branch, commit, rollback).
-- **sandbox_executor.py**: Compiles and tests code in an ephemeral environment before promotion.
+## Data Pipeline (Three Source Rules)
+
+All product data flows through `backend/source_rules.py`. Three authorized sources only:
+
+1. **Commercial** (Halilit.com) → Golden List, prices (IL + Eilat), SKUs
+2. **Official** (Brand pages) → Titles, descriptions, specs, media
+3. **Contextual** (3+ trusted review sites) → Pros/cons, ratings, real-world use
+
+**Zero tolerance for synthetic/mock/AI-generated data presented as real.**
+
+Pipeline stages: `skeleton-sync` → `commercial-ingest` → `official-enrich` → `contextual-enrich` → `catalog-build` → `graph-build`.
+
+---
+
+## Factory Agents (`backend/factory/`)
+
+| Agent | File | Role |
+|---|---|---|
+| Builder | `builder_agent.py` | Materialises specs → code |
+| Chief | `chief_agent.py` | Strategic planner, produces task queue for Nexus |
+| Watchdog | `watchdog_agent.py` | Scans & auto-repairs compilation errors (up to 3 cycles) |
+| Scribe | `scribe_agent.py` | Regenerates ARCHITECTURE.md and docs |
+| Steerer | `steerer_agent.py` | Identifies spec gaps, generates new/updated specs |
+| Optimizer | `optimizer_agent.py` | Refactors source files for readability & typing |
+| Repo Agent | `repo_agent.py` | Semantic git commits + changelog |
+| Reflect | `reflect_agent.py` | Records lessons to `docs/LEARNED_GUIDELINES.md` |
+| UI Validator | `ui_validator_agent.py` | Vite build + import verification |
+| V0 Agent | `v0_agent.py` | Generates v0.dev-ready UI prompts |
+
+---
+
+## Nexus Swarm Console (`nexus.py`)
+
+Orchestrates agents in **parallel batches** separated by **sequential barriers**. Pre-flight validation guards prevent dispatching `optimize` tasks to non-existent files (anti-hallucination, added v9.7.1).
+
+Chief outputs a JSON task queue → Nexus executes it using `ThreadPoolExecutor` for parallel tasks and sequential barriers for `commit`, `heal`, `build`, `doc`.
+
+---
 
 ## Key Conventions
 
-- **Source Rules** (`backend/source_rules.py`): All data from Commercial, Official, or Contextual sources only. Zero tolerance for synthetic data.
-- **Spec is Law**: No code is written without a corresponding spec in `specs/interface/` or `specs/data_pipeline/`.
-- **Types**: Canonical frontend types in `frontend/src/types/index.ts`.
-- **Styling**: Tailwind CSS dark theme — `slate-900`, `blue-500`, design tokens in `frontend/src/styles/design-tokens.css`.
+- **Imports**: `lucide-react` for icons; `@tanstack/react-query` for server state; `zustand` for app state
+- **Styling**: Tailwind CSS, dark theme (slate-900, blue-500 palette)
+- **Types**: Always import from `frontend/src/types/index.ts` (canonical)
+- **No empty files**: Every file must be ≥100 bytes
+- **Spec first**: Never write code without a spec in `specs/`

@@ -17,6 +17,13 @@ from pathlib import Path
 
 # --- PATHS ---
 ROOT = Path(__file__).resolve().parent
+
+# Load .env early so GEMINI_API_KEY is available for all subcommands
+try:
+    from dotenv import load_dotenv as _load_dotenv
+    _load_dotenv(ROOT / ".env")
+except ImportError:
+    pass  # python-dotenv optional; rely on shell env if not installed
 FRONTEND = ROOT / "frontend"
 BACKEND = ROOT / "backend"
 SPECS = ROOT / "specs"
@@ -156,6 +163,18 @@ def cmd_diagnose() -> None:
     )
 
 
+def cmd_ui_validate(skip_build: bool = False) -> None:
+    """UI Validator: scan imports + run Vite build to catch runtime errors."""
+    log("Activating UI Validator Agent...")
+    agent = FACTORY / "ui_validator_agent.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    args = [sys.executable, str(agent)]
+    if skip_build:
+        args.append("--no-build")
+    result = subprocess.run(args, cwd=str(ROOT), env=env)
+    sys.exit(result.returncode)
+
+
 def cmd_heal(max_cycles: int = 3) -> None:
     """Autonomous fix loop: Watchdog -> Builder -> Watchdog (up to max_cycles)."""
     ensure_env()
@@ -261,6 +280,35 @@ def cmd_reflect(context: str) -> None:
     )
 
 
+def cmd_grand_task_force(prompt: str = "") -> None:
+    """
+    Grand Task Force — end-to-end autonomous catalog + UI polish driven by
+    the Chief Agent.  Equivalent to calling factory_supervisor with a
+    natural-language prompt.
+    """
+    ensure_env()
+    log("Activating Grand Task Force (Chief → DAG → Execution)...")
+    env = {**os.environ, "PYTHONPATH": str(ROOT)}
+    supervisor = ROOT / "backend" / "factory_supervisor.py"
+    effective_prompt = prompt or (
+        "Chief, initiate a Grand Task Force to perfect the catalog presentation. "
+        "Step 1: Rebuild the data catalog to ensure zero broken prices or missing "
+        "relationships. "
+        "Step 2: Have the Steerer audit InventoryView.tsx and ProductDetailView.tsx "
+        "against the specs. "
+        "Step 3: Run Visual QA to ensure stock badges and accessories display perfectly. "
+        "Step 4: Have the Builder fix any visual or data-binding discrepancies. "
+        "Step 5: Commit the perfected state."
+    )
+    result = subprocess.run(
+        [sys.executable, str(supervisor), effective_prompt],
+        cwd=str(ROOT),
+        env=env,
+    )
+    if result.returncode != 0:
+        log("⚠️  Grand Task Force exited with errors — check logs above.")
+
+
 def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> None:
     """
     Task-Force Coordinator: spin up a multi-agent improvement cycle with a shared
@@ -352,6 +400,30 @@ def cmd_status() -> None:
     print(
         f"  Factory agents : {'✅ present' if be_factory.exists() else '❌ missing'}")
 
+    mcp_cfg = ROOT / ".vscode" / "mcp.json"
+    print(
+        f"  VS Code MCP    : {'✅ .vscode/mcp.json present' if mcp_cfg.exists() else '⚠️  missing (.vscode/mcp.json)'}")
+
+
+def cmd_v0_design(description: str, component_type: str = "UIComponent") -> None:
+    """Generate a v0.dev-ready UI prompt (and optionally integrate output)."""
+    ensure_env()
+    log(f"V0 Designer activated — component: {component_type}")
+    sys.path.insert(0, str(ROOT))
+    from backend.factory.v0_agent import generate_v0_prompt  # noqa: PLC0415
+    import json as _json
+    result = generate_v0_prompt(description, component_type)
+    if result.get("status") == "success":
+        print("\n" + "─" * 60)
+        print("📋  V0 PROMPT — paste this into https://v0.dev")
+        print("─" * 60)
+        print(result["v0_prompt"])
+        print("─" * 60)
+        print("\n📌  NEXT STEPS:")
+        print(result["instructions"])
+    else:
+        log(f"❌ V0 design failed: {result.get('error', 'unknown')}")
+
 
 # ---------------------------------------------------------------------------
 # Entry Point
@@ -385,6 +457,14 @@ Level 8 — Professional Standards:
 Level 9 — Feedback & Memory Loop:
   reflect "failure context"      Mentor: extract lesson → append to docs/LEARNED_GUIDELINES.md
   task_force <id> "goal"         Coordinator: multi-agent Task Force (Steerer→Builder→Watchdog)
+
+Level 10 — Autonomous Polish:
+  grand_task_force ["prompt"]    Chief-driven end-to-end catalog + UI polish via DAG
+                                 (omit prompt to use the canonical polish protocol)
+
+Agentic UI Design (v0 MCP):
+  v0_design "description"        Generate a v0.dev-ready prompt for a UI component
+  v0_design "description" type   With component type hint (e.g. ProductCard)
 
 Examples:
   python factory.py init
@@ -437,6 +517,10 @@ if __name__ == "__main__":
     elif command == "status":
         cmd_status()
 
+    elif command == "ui_validate":
+        skip = "--no-build" in sys.argv
+        cmd_ui_validate(skip_build=skip)
+
     elif command == "diagnose":
         cmd_diagnose()
 
@@ -476,6 +560,18 @@ if __name__ == "__main__":
         tf_goal = sys.argv[3]
         tf_agents = sys.argv[4].split(",") if len(sys.argv) > 4 else None
         cmd_task_force(tf_id, tf_goal, tf_agents)
+
+    elif command == "grand_task_force":
+        gtf_prompt = sys.argv[2] if len(sys.argv) > 2 else ""
+        cmd_grand_task_force(gtf_prompt)
+
+    elif command == "v0_design":
+        if len(sys.argv) < 3:
+            log(
+                '❌ Usage: python factory.py v0_design "description" [ComponentType]')
+            sys.exit(1)
+        v0_ctype = sys.argv[3] if len(sys.argv) > 3 else "UIComponent"
+        cmd_v0_design(sys.argv[2], v0_ctype)
 
     else:
         log(f"Unknown command: {command}")

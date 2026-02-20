@@ -14,6 +14,7 @@ import json
 import logging
 import math
 import os
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -46,6 +47,42 @@ else:
 
 # Known placeholder hashes or signatures could be added here
 PLACEHOLDER_TEXTS = ["placeholder", "image not available", "no image"]
+
+# ---------------------------------------------------------------------------
+# Persistent URL validation cache — avoids re-fetching images across runs
+# ---------------------------------------------------------------------------
+_VALIDATION_CACHE_PATH = Path(__file__).resolve(
+).parent.parent / "data" / "jit_cache" / "image_validation_cache.json"
+_VALIDATION_CACHE_TTL = 7 * 24 * 3600  # 7 days in seconds
+_validation_cache: Optional[Dict[str, Any]] = None  # loaded lazily
+
+
+def _load_validation_cache() -> Dict[str, Any]:
+    global _validation_cache
+    if _validation_cache is not None:
+        return _validation_cache
+    try:
+        if _VALIDATION_CACHE_PATH.exists():
+            _validation_cache = json.loads(
+                _VALIDATION_CACHE_PATH.read_text(encoding="utf-8"))
+            return _validation_cache
+    except Exception:
+        pass
+    _validation_cache = {}
+    return _validation_cache
+
+
+def _save_validation_cache(cache: Dict[str, Any]) -> None:
+    try:
+        _VALIDATION_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        cutoff = time.time() - _VALIDATION_CACHE_TTL
+        pruned = {k: v for k, v in cache.items() if v.get("ts", 0) > cutoff}
+        _VALIDATION_CACHE_PATH.write_text(
+            json.dumps(pruned, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+    except Exception as exc:
+        logger.warning("visual_validator: could not save cache — %s", exc)
+
 
 # Log once which key source we use (so user can confirm we're not using GOOGLE_API_KEY)
 _gemini_key_logged = False
@@ -439,6 +476,11 @@ def validate_hero_candidates(
     Try each candidate URL in order; return the first that passes quality checks.
     Used by the ingestion pipeline to reject placeholders and low-quality images at the source.
 
+    Performance:
+    - When INGESTION_SKIP_VISUAL_VALIDATION=1: no fetching at all — first URL wins.
+    - Otherwise: results are cached on disk (7-day TTL) keyed by URL.  A URL
+      that passed on a previous run is accepted immediately without re-fetching.
+
     Returns:
         (accepted_hero_url or None, gallery_order [hero first then rest], validation_results)
     """
@@ -446,6 +488,10 @@ def validate_hero_candidates(
         if candidate_urls:
             return candidate_urls[0], candidate_urls, []
         return None, [], []
+
+    cache = _load_validation_cache()
+    now = time.time()
+    cache_dirty = False
 
     validator = get_visual_validator()
     results: List[Dict[str, Any]] = []
@@ -455,6 +501,24 @@ def validate_hero_candidates(
     for url in candidate_urls:
         if not url:
             continue
+
+        # ── Cache hit: skip network fetch entirely ────────────────────────
+        cached_entry = cache.get(url)
+        if cached_entry and now - cached_entry.get("ts", 0) < _VALIDATION_CACHE_TTL:
+            quality = cached_entry["result"]
+            quality["url"] = url
+            quality["_cached"] = True
+            results.append(quality)
+            if quality.get("status") == "pass":
+                accepted = url
+                rest = [u for u in candidate_urls if u != url and u]
+                logger.debug("Ingestion: cache HIT (pass) for %s", url[:70])
+                break
+            rest.append(url)
+            logger.debug("Ingestion: cache HIT (fail) for %s", url[:70])
+            continue
+
+        # ── Cache miss: fetch and validate ───────────────────────────────
         img_bytes, _ = validator.fetch_image_sync(url)
         if not img_bytes:
             results.append({"url": url, "status": "fetch_failed"})
@@ -463,6 +527,12 @@ def validate_hero_candidates(
         quality = validator.validate_quality(img_bytes, purpose=purpose)
         quality["url"] = url
         results.append(quality)
+
+        # Persist result (pass or fail) so the next run is instant
+        cache[url] = {"result": {k: v for k,
+                                 v in quality.items() if k != "url"}, "ts": now}
+        cache_dirty = True
+
         if quality.get("status") == "pass":
             accepted = url
             rest = [u for u in candidate_urls if u != url and u]
@@ -474,6 +544,9 @@ def validate_hero_candidates(
             quality.get("score"),
             (brand or "") + " " + (product_name or ""),
         )
+
+    if cache_dirty:
+        _save_validation_cache(cache)
 
     if accepted:
         gallery_order = [accepted] + rest

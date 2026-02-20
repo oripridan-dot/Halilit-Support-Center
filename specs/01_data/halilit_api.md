@@ -40,3 +40,8 @@ Get full JIT intelligence (specs, verdict, field notes) for a product by ID. Use
 Get visual signal-chain / connectivity advice for a product. Uses the same JIT stream; the `visual_intel` event contains signal chain and cheat sheet data.
 
 **Request:** Same as `get_jit_intelligence` — the SSE stream includes a `visual_intel` event.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
+- `pytest backend/tests/ -x -q`

@@ -278,3 +278,7 @@ JIT intelligence (`useJITIntelligence`) streams progressively via SSE. The UI sh
 - [ ] JIT streaming error shown inline, does not crash
 - [ ] Related product cards are clickable via `() => goToProduct(item.id)`
 - [ ] History tab shows placeholder (not empty, not an error)
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

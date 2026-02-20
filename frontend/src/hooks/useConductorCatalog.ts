@@ -105,6 +105,8 @@ export interface ConductorProduct {
         review_source: 'contextual' | 'none';
     };
     search_text: string;
+    /** Inventory count from commercial source (Halilit); null = unknown */
+    stock?: number | null;
     // ── Product Graph fields (additive) ──
     family_id: string | null;
     variant_key: string | null;

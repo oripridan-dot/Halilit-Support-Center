@@ -29,3 +29,7 @@ Define deterministic rules for product pricing display and sort order. The opera
 ## Validation (Golden)
 - Any artifact (catalog, grid data) that violates the above must fail compliance.
 - Compliance report must list: "Products missing price", "Products with invalid price".
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

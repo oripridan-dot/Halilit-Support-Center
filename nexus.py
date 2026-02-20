@@ -88,6 +88,7 @@ _ACTION_MAP = {
     "implement":  ("build",      "🔨 BUILDER",         "Translating specs to code..."),
     "build":      ("build",      "⚙️  CONDUCTOR",      "Rebuilding the product catalog..."),
     "heal":       ("heal",       "🚑 WATCHDOG",        "Diagnosing and auto-repairing (up to 3 cycles)..."),
+    "ui_validate": ("ui_validate", "🖥️  UI VALIDATOR",   "Scanning imports + Vite build check..."),
     "diagnose":   ("diagnose",   "🔍 WATCHDOG SCAN",   "Scanning for errors — no auto-fix..."),
     "steer":      ("steer",      "🧭 STRATEGIST",      "Analysing master plan..."),
     "doc":        ("doc",        "📝 SCRIBE",          "Regenerating ARCHITECTURE.md..."),
@@ -95,6 +96,7 @@ _ACTION_MAP = {
     "commit":     ("commit",     "👮 REPO AGENT",      "Staging and committing progress..."),
     "reflect":    ("reflect",    "🧠 MENTOR",          "Extracting lesson → updating LEARNED_GUIDELINES.md..."),
     "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
+    "v0_design":  ("v0_design",  "🎨 V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
 }
 
 
@@ -111,6 +113,8 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["build"]
     if tool == "heal":
         return factory + ["heal"]
+    if tool == "ui_validate":
+        return factory + ["ui_validate"] + (["--no-build"] if args == "--no-build" else [])
     if tool == "diagnose":
         return factory + ["diagnose"]
     if tool == "steer":
@@ -127,6 +131,8 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         # task has extra keys: id, goal, agents
         # args carries the goal; use tool-level dict keys if available
         return None  # handled by execute_task_force() below
+    if tool == "v0_design":
+        return factory + ["v0_design", args] if args else None
     return None  # 'explain' or unknown
 
 
@@ -150,6 +156,16 @@ def run_process(task: dict) -> dict:
     """
     tool = task["tool"]
     args = task.get("args", "")
+
+    # Pre-flight: verify the file exists before dispatching optimize
+    if tool == "optimize" and args:
+        target_path = ROOT / args
+        if not target_path.exists():
+            msg = (f"❌ [OPTIMIZE] Skipped — file does not exist: {args}\n"
+                   f"   The Chief hallucinated this path. Only optimize real files.")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [OPTIMIZE {args}] File not found — skipped",
+                    "error_output": msg}
 
     # task_force uses a special command builder
     if tool == "task_force":
@@ -204,6 +220,16 @@ def execute_sequential(task: dict) -> dict:
             print(f"   ID     : {task.get('id', 'auto')}")
             print(f"   Goal   : {goal}")
             print(f"   Agents : {', '.join(tf_agents)}")
+
+    # Pre-flight: verify the file exists before dispatching optimize
+    if tool == "optimize" and args:
+        target_path = ROOT / args
+        if not target_path.exists():
+            print(f"\n❌ [OPTIMIZE] File not found — skipped: {args}")
+            print(f"   The Chief hallucinated this path. Only optimize real files.")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [OPTIMIZE {args}] File not found — skipped",
+                    "error_output": f"File does not exist: {args}"}
 
     cmd = _build_task_force_cmd(
         task) if tool == "task_force" else _build_cmd(tool, args)

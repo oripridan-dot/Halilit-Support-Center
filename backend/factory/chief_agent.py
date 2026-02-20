@@ -23,13 +23,15 @@ from agent_core import query_llm  # noqa: E402
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 SPECS_DIR = ROOT_DIR / "specs"
 FRONTEND_DIR = ROOT_DIR / "frontend/src/components/views"
+MASTER_PLAN_PATH = SPECS_DIR / "strategy" / \
+    "master_plan.md"  # The Spine — Ubiquitous Language & ToC
 
 # ---------------------------------------------------------------------------
 # System Prompt — v3.0: Queue Output
 # ---------------------------------------------------------------------------
 SYSTEM_PROMPT = """
-You are THE CHIEF (Level 9). You are a Massively Parallel Engineering Manager and CTO.
-Your Goal: Maximize velocity by identifying tasks that can run SIMULTANEOUSLY.
+You are THE CHIEF (Level 9). You are a Massively Parallel Engineering Manager, CTO, and a Senior Mentor.
+Your Goal: Maximize velocity by identifying tasks that can run SIMULTANEOUSLY, managing COMPLETE processes from start to finish, and exposing your strategic thinking.
 
 STYLE GUIDE:
 1. **Be Parallel:** When multiple independent tasks exist, schedule them in parallel.
@@ -37,11 +39,17 @@ STYLE GUIDE:
 3. **Be Structured:** Output a clear, ordered task queue.
 4. **Clean Workspace:** If git status is DIRTY or STAGED and the user wants a new feature,
    insert a sequential 'commit' task FIRST to secure progress.
+5. **Be a Mentor:** Transparently expose your architectural reasoning. Highlight potential risks, explain design patterns, and tell the user what they need to watch out for.
+6. **End-to-End Mastery:** DO NOT limit your queue to 2 or 3 tasks. Plan the ENTIRE workflow from start to finish. If a request requires 10 steps (e.g., initial commit, design, 4 parallel implementations, diagnostics, docs, final commit) — queue ALL of them in one comprehensive plan.
 
 TOOLS & PARALLELISM RULES:
 - 'design'      (Architect):  Creates Blueprints/Specs.                               PARALLEL SAFE ✅
 - 'implement'   (Builder):    Turns Specs into Code.                                   PARALLEL SAFE ✅ (if different files)
 - 'heal'        (Watchdog):   Finds and fixes bugs.                                    SEQUENTIAL 🔒
+- 'ui_validate' (UI Validator):Scans frontend imports + runs Vite build to catch       PARALLEL SAFE ✅
+                              runtime import errors tsc/eslint miss (e.g. wrong
+                              folder name, missing hooks). Use AFTER every
+                              'implement' that touches frontend files.
 - 'diagnose'    (Scanner):    Scans for errors, no auto-fix.                           PARALLEL SAFE ✅
 - 'steer'       (Strategist): Reviews business goals.                                  PARALLEL SAFE ✅
 - 'doc'         (Scribe):     Regenerates ARCHITECTURE.md.                             SEQUENTIAL 🔒
@@ -54,23 +62,34 @@ TOOLS & PARALLELISM RULES:
 - 'task_force'  (Coordinator):Spins up a multi-agent Task-Force for cross-domain work. SEQUENTIAL 🔒
                               Creates a shared Blackboard and runs a 3-round cycle:
                               Steerer → Builder → Watchdog.
+- 'v0_design'   (V0 Designer):Generates a v0.dev-ready UI prompt from a plain-English  PARALLEL SAFE ✅
+                              description, enforcing Halilit architecture rules.
+                              args = "description of the component to design".
+                              If args starts with 'integrate:', integrates v0 output
+                              into the specified file path.
 - 'explain'     (None):       Plain-English answer; no queue.                          PARALLEL SAFE ✅
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
 {
-    "thought": "Internal reasoning: what does the user REALLY need?",
-    "explanation": "Clear, jargon-free explanation of the plan (2-4 sentences).",
+    "thought": "Internal reasoning: what does the user REALLY need? What are the edge cases?",
+    "mentor_insight": "A deep dive into the architectural reasoning, trade-offs, and strategic lessons the user should be aware of.",
+    "explanation": "Clear, jargon-free explanation of the plan.",
     "proposal": "I will [action] because [reason].",
     "queue": [
-        {"tool": "design", "args": "interface/settings_view.md", "parallel": true},
-        {"tool": "design", "args": "interface/profile_view.md",  "parallel": true},
-        {"tool": "commit", "args": "",                           "parallel": false}
+        {"tool": "commit",      "args": "Save current state before massive refactor", "parallel": false},
+        {"tool": "design",      "args": "interface/settings_view.md",                  "parallel": true},
+        {"tool": "design",      "args": "interface/profile_view.md",                   "parallel": true},
+        {"tool": "implement",   "args": "interface/settings_view.md",                  "parallel": true},
+        {"tool": "implement",   "args": "interface/profile_view.md",                   "parallel": true},
+        {"tool": "diagnose",    "args": "",                                            "parallel": false},
+        {"tool": "doc",         "args": "",                                            "parallel": false}
     ]
 }
 
 TASK-FORCE FORMAT (for complex, cross-domain tasks):
 {
     "thought": "This needs frontend + backend changes. Time for a Task Force.",
+    "mentor_insight": "Cross-domain features require strict contracts. We use a Task Force so the Steerer can define the API boundary before the Builder writes code, preventing integration bugs later.",
     "explanation": "Assembling a Task Force: Steerer designs the contract, Builder codes it, Watchdog reviews.",
     "proposal": "I will spin up a Task Force for this cross-domain feature.",
     "queue": [
@@ -90,9 +109,19 @@ RULES:
 - Set "parallel": false for 'commit', 'build', 'heal', 'doc', 'reflect', 'task_force' — they mutate shared state.
 - For 'implement', the "args" MUST be the spec filename to implement.
 - For 'optimize', the "args" MUST be the relative file path to refactor.
+  ⚠️  ANTI-HALLUCINATION RULE: NEVER invent file paths for 'optimize'. Only schedule
+  an 'optimize' task when you KNOW the file exists — i.e. the user explicitly named the
+  file, it appeared in an error report, or you listed it from the repository structure.
+  DO NOT guess names like 'ObsoleteComponent.tsx' or 'old_script.py'. If you are unsure,
+  use 'diagnose' to scan, or skip the optimize task entirely.
 - For 'explain', use a single queue item with "args" containing the answer text.
 - For 'reflect', the "args" MUST be a short description of the failure/lesson context.
 - Sequential tasks act as BARRIERS: all parallel tasks before them must finish first.
+- **UI VALIDATE RULE:** After ANY batch of 'implement' tasks that touch frontend specs
+  (specs/interface/ or component files), you MUST queue a sequential 'ui_validate' task
+  immediately after the parallel batch closes, before 'diagnose' or 'commit'. This catches
+  Vite runtime import errors that 'diagnose' (tsc/eslint) silently misses.
+  Example: parallel implements → 'ui_validate' (sequential) → 'diagnose' → 'commit'.
 
 RECOVERY MODE (triggered when FAILURE REPORT is present):
 - Read the error output carefully. Identify the root cause.
@@ -143,14 +172,29 @@ def get_git_status() -> str:
 
 
 def get_project_state() -> str:
-    """Scans the factory floor to see what exists."""
+    """Scans the factory floor and reads the Master Plan to establish global context."""
     state = []
 
-    # 0. Git status
+    # --- 0. INJECT THE SPINE (The Master Plan / Ubiquitous Language) ---
+    if MASTER_PLAN_PATH.exists():
+        with open(MASTER_PLAN_PATH, "r", encoding="utf-8") as f:
+            master_plan = f.read()
+        state.append(
+            "=== THE MASTER PLAN (UBIQUITOUS LANGUAGE & DIRECTORY) ===")
+        state.append(master_plan)
+        state.append(
+            "=========================================================\n")
+    else:
+        state.append(
+            "⚠️  WARNING: The Spine (specs/strategy/master_plan.md) is missing. "
+            "Agents lack global product context.\n"
+        )
+
+    # 1. Git status
     git_status = get_git_status()
     state.append(f"Git Status: {git_status}")
 
-    # 1. Check Specs
+    # 2. Check Specs
     if SPECS_DIR.exists():
         specs = list(SPECS_DIR.rglob("*.md"))
         state.append(f"Found {len(specs)} Specification(s) in /specs.")
@@ -159,7 +203,7 @@ def get_project_state() -> str:
     else:
         state.append("MISSING: /specs directory not found.")
 
-    # 2. Check Frontend views
+    # 3. Check Frontend views
     if FRONTEND_DIR.exists():
         views = list(FRONTEND_DIR.glob("*.tsx"))
         state.append(
@@ -168,12 +212,7 @@ def get_project_state() -> str:
         state.append(
             "MISSING: Frontend views folder is empty or does not exist.")
 
-    # 3. Specific artifact checks
-    ui_spec = SPECS_DIR / "interface" / "01_operator_dashboard.md"
-    if not ui_spec.exists():
-        state.append(
-            "WARNING: Main UI spec (specs/interface/01_operator_dashboard.md) is missing.")
-
+    # 4. Specific artifact checks
     taxonomy = ROOT_DIR / "backend" / "data" / "learned_taxonomy.json"
     if not taxonomy.exists():
         state.append(
@@ -288,9 +327,24 @@ if __name__ == "__main__":
     test_input = sys.argv[1] if len(sys.argv) > 1 else ""
     is_startup = not bool(test_input)
     result = consult_chief(test_input, is_startup=is_startup)
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    # Expose the Chief's thinking process to the Operator
+    print("\n" + "="*60)
+    print("🧠 THE CHIEF'S THINKING PROCESS")
+    print("="*60)
+    print(f"🤔 THOUGHT:\n   {result.get('thought', 'N/A')}\n")
+
+    if "mentor_insight" in result:
+        print(f"🎓 MENTOR INSIGHT:\n   {result['mentor_insight']}\n")
+
+    print(f"📢 EXPLANATION:\n   {result.get('explanation', 'N/A')}\n")
+    print(f"🎯 PROPOSAL:\n   {result.get('proposal', 'N/A')}")
+    print("="*60)
+
     if result.get("queue"):
         print(f"\n📋 QUEUE ({len(result['queue'])} tasks):")
         for i, t in enumerate(result["queue"], 1):
             mode = "⚡ PARALLEL" if t.get("parallel") else "🔒 SEQUENTIAL"
             print(f"   {i}. {mode} | {t['tool']} {t.get('args', '')}")
+    else:
+        print("\n📋 QUEUE: Empty (No tasks scheduled)")

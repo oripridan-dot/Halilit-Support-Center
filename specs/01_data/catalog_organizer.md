@@ -93,3 +93,8 @@ You SHOULD also include **optional** `families` and `relationships` sections so 
 
 - Output must be valid JSON only. No markdown, no explanation outside the JSON.
 - Do not add or infer data from external sources.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
+- `pytest backend/tests/ -x -q`

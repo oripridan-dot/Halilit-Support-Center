@@ -23,3 +23,8 @@
 - Prioritize pages with "Product" in the URL.
 - Only navigate within the brand_domain provided by the system (no arbitrary URLs or external links).
 - Do not submit forms, log in, or perform any account or payment actions.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
+- `pytest backend/tests/ -x -q`
