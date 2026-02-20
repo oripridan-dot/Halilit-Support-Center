@@ -4,15 +4,17 @@ import { useDebounceValue } from '../../hooks/useDebounceValue';
 import { useNavigationStore } from '../../store/navigationStore';
 
 const InventoryView: React.FC = () => {
-  const searchQuery = useNavigationStore((s) => s.searchQuery);
-  const [filterText, setFilterText] = useState<string>(searchQuery ?? '');
+  const { searchQuery: initialSearchQuery } = useNavigationStore((s) => ({
+    searchQuery: s.searchQuery,
+  }));
+  const [filterText, setFilterText] = useState<string>(initialSearchQuery ?? '');
   const debouncedFilter = useDebounceValue(filterText, 150);
 
   const { data, isLoading, error } = useConductorCatalog({ searchQuery: debouncedFilter });
 
   useEffect(() => {
-    setFilterText(searchQuery ?? '');
-  }, [searchQuery]);
+    setFilterText(initialSearchQuery ?? '');
+  }, [initialSearchQuery]);
 
   const products: ConductorProduct[] = data?.products ?? [];
   const filtered = debouncedFilter
