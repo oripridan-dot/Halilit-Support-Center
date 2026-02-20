@@ -77,7 +77,7 @@ const InventoryView = () => {
             />
             <div className="flex items-center mb-4">
                 <label htmlFor="cfpFilter" className="text-zinc-200 mr-2">
-                    Call for Price Only
+                    Include CfP
                 </label>
                 <input
                     type="checkbox"
@@ -91,15 +91,15 @@ const InventoryView = () => {
             {isLoading && <p className="text-zinc-300">Loading inventory...</p>}
             {isError && <p className="text-red-500">Error: {error?.message}</p>}
             {inventoryData && inventoryData.items.length === 0 && !isLoading && !isError && (
-                <p className="text-zinc-300">No inventory items found.</p>
+                <p className="text-zinc-300">No inventory found.</p>
             )}
             {inventoryData && inventoryData.items.length > 0 && (
-                <div className="text-zinc-300">
+                <div className="text-zinc-200">
+                    {/* Render inventory data here */}
                     {inventoryData.items.map((item) => (
-                        <div key={item.id} className="border-b border-zinc-700 py-2">
+                        <div key={item.id} className="p-2 border-b border-zinc-700">
                             <p>Name: {item.name}</p>
-                            <p>SKU: {item.sku}</p>
-                            <p>Description: {item.description}</p>
+                            {/* Display other item properties as needed */}
                         </div>
                     ))}
                 </div>

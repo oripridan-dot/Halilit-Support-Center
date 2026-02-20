@@ -1,19 +1,20 @@
 # Spec: Enhanced Inventory Search Debounce with Throttle
 
-**Version:** 1.3
+**Version:** 1.4
 **Component:** `frontend/src/components/views/InventoryView.tsx`
 
 ## Purpose
-To enhance the search input debounce in the Inventory Master, improving performance and reducing unnecessary API calls. This directly addresses the "Speed of Service" business goal by integrating a throttling mechanism for improved efficiency and ensuring the initial state is preserved.
+To enhance the search input debounce in the Inventory Master, improving performance and reducing unnecessary API calls. This directly addresses the "Speed of Service" business goal by integrating a throttling mechanism for improved efficiency and ensuring the initial state is preserved. This enhancement will leverage a dedicated, well-tested `useDebounce` hook and implement a throttling mechanism.
 
 ## Requirements
 1.  **Debounce Input:** The `filterText` state variable, which is updated by the search input field, MUST be debounced.
 2.  **Debounce Time:** The debounce time MUST be set to a maximum of 150 milliseconds.
 3.  **Throttling:** Implement a throttling mechanism to prevent excessive API calls during rapid typing, with a throttle time of 300ms. The debounced value should only be processed if a certain time (300ms) has passed since the last API call.
 4.  **Preserve Initial State:** The `initialCfpFilter` and `searchQuery` from the `navigationStore` must be applied after the debounced search is applied so the initial search term is not lost.
-5.  **Implementation:** Use `useDebouncedValue` hook for debouncing. Implement a separate throttling mechanism using `useRef` and `setTimeout` within a custom hook (e.g., `useThrottledValue`).
+5.  **Implementation:** Use a pre-built, tested `useDebounce` hook that accepts both a value and a delay.
 6.  **API Call Trigger:** The API call to `useConductorCatalog` with the `searchQuery` parameter MUST only be triggered after both the debounced value changes and the throttle time has elapsed.
 7.  **No Intermediate Updates:** The Inventory grid MUST NOT re-render with intermediate filter values before the debounce and throttle times have elapsed.
+8.  **Existing Code Integrity:** Any modifications must retain the existing functionality and styling of the InventoryView component.
 
 ## Behavior Scenarios
 1.  **Scenario:** User types "Roland" quickly in the search input.
@@ -23,35 +24,35 @@ To enhance the search input debounce in the Inventory Master, improving performa
     -   **Outcome:** The Inventory grid updates only once, 150ms after the paste action is complete, AND 300ms since the last API call.
 3.  **Scenario:** User clears the search input.
     -   **Outcome:** After 150ms, AND 300ms since the last API call, the Inventory grid updates to show the full inventory.
-4.  **Scenario:** User navigates to the inventory screen with a pre-filled search term.
-    -   **Precondition:** `navigationStore.searchQuery` is set to "Fender".
-    -   **Outcome:** After 150ms of loading, AND 300ms since the last API call, the Inventory grid is filtered to "Fender".
+4.  **Scenario:** User navigates to the inventory screen with a pre-filled search term and CfP filter.
+    -   **Precondition:** `navigationStore.searchQuery` is set to "Fender" and `navigationStore.initialCfpFilter` is `true`.
+    -   **Outcome:** After 150ms of loading, the Inventory grid is filtered to "Fender" with the CfP filter applied.
+5.  **Scenario:** Rapid typing with a rate faster than 300ms
+    -   **Action:** The user types with a rate of 1 character every 100ms, for a total of 5 characters.
+    -   **Outcome:** After the initial 150ms debounce, the API is called. The subsequent keystrokes do NOT trigger API calls until 300ms have passed since the last API call.
 
 ## Stitch UI Prompt
 ```text
-// Target Component: InventoryView (specifically the search input)
-// Description: Modify the search input in InventoryView to incorporate both debounce and throttle.
-
-// Layout: The InventoryView uses a Flexbox layout for the search input and other filters. The search input should be positioned at the top, spanning the full width available.
-
-// Visual Style:
-// - Dark mode: Use Tailwind CSS classes to maintain the dark theme.
-// - Input field: slate-900 background, slate-300 text, rounded corners, a subtle border, and appropriate padding.
-// - Focus state: A blue-500 outline on focus.
-
-// Component Hierarchy:
-// - The search input is a direct child of a div element using Flexbox.
-// - Ensure proper spacing between the search input and other elements using Tailwind CSS margin or padding classes.
-
+// Target Component: InventoryView.tsx (search input)
+// Description: Modify the search input within the InventoryView component to integrate debouncing and throttling to improve performance.
+// Layout: The search input is typically located within a header or filter section of the InventoryView.
+// Visual Style: Adhere to the existing dark theme of the Halilit Support Center (slate-900 background, blue-500 accents). The search input should have a similar style to other inputs in the application (rounded corners, dark background, light text).
+//
 // Data Slots:
-// - The search input's value is bound to the `filterText` state variable.
-// - The placeholder text is "Search by SKU, Brand, or Name".
-
+// - searchInputValue: string (The current value of the search input). This value is updated as the user types.
+//
 // Instructions:
-// 1. Implement debouncing using a custom hook (useDebouncedValue) with a debounce time of 150ms.
-// 2. Implement throttling using useRef and setTimeout within a custom hook (useThrottledValue) with a throttle time of 300ms.
-// 3. Ensure that the API call to useConductorCatalog with the searchQuery parameter is only triggered after both the debounced value changes and the throttle time has elapsed.
-// 4. Apply the initialCfpFilter and searchQuery from the navigationStore after the debounced search is applied to maintain initial state.
+// 1.  Locate the search input element within the InventoryView component.
+// 2.  Wrap the search input's `onChange` event handler with a debouncing function that waits 150ms after the last keystroke before updating the `filterText` state variable. This hook is already available: useDebounce(value, delay)
+// 3. Implement a throttling mechanism using `useRef` and `setTimeout` to limit API calls to once every 300ms.
+// 4.  Ensure that the initial state of the search input (taken from `navigationStore.searchQuery` and `navigationStore.initialCfpFilter`) is correctly applied.
+// 5. Maintain existing Tailwind CSS classes.
+// Component Hierarchy:
+// InventoryView
+//  |- Header/Filter Section
+//   |- Search Input (modified)
+// Spacing: Maintain existing spacing around the search input.
+
 ```
 
 ## Verification Commands

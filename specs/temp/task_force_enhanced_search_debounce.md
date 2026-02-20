@@ -1,6 +1,6 @@
 # Task-Force Blackboard: enhanced_search_debounce
 
-**Goal:** Integrate efficient debounce/throttle library in Inventory Search
+**Goal:** Integrate Efficient Debounce/Throttle Library as per 2026-02-22_proposal_enhanced_search_debounce.md
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-The implemented code is missing. I cannot assess if the implementation fulfills the requirements without code to review.
+No code was provided for review. The Builder failed to implement the specified task.
 
 **Required Fix:**
-Provide the implemented code for review.
+The Builder must implement the debounce/throttle library integration as specified in the original user request and the 2026-02-22_proposal_enhanced_search_debounce.md document, then provide the implemented code.
