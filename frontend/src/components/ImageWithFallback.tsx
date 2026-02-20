@@ -10,7 +10,7 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText
 
     return (
         <div className="bg-slate-900">
-            <img
+            <img loading="lazy"
                 src={imageUrl || "/placeholder.png"}
                 alt={defaultAltText}
                 onError={(e) => {
