@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useConductorCatalog } from '../../hooks/useConductorCatalog';
 import { useDebounce } from '../../hooks/useDebounce';
 import { InventoryItem, InventorySearchResponse } from '../../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema';
-import { navigationStore } from '../../stores/navigationStore';
+import { navigationStore } from '../../store/navigationStore';
 
 interface InventoryViewProps {}
 

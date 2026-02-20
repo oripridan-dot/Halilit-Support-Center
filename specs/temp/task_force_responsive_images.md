@@ -1,6 +1,6 @@
 # Task-Force Blackboard: responsive_images
 
-**Goal:** Integrate next-gen image optimization to improve image loading and fallback handling.
+**Goal:** Integrate responsive image CDN with AVIF support
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- The task cannot be completed because the implemented code is missing.
+No code was provided for review.
 
 **Required Fix:**
-The Builder must provide the implemented code for review.
+Provide the implemented code for review.

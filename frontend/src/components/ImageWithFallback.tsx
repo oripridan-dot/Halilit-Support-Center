@@ -1,84 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface ImageWithFallbackProps {
   imageUrl: string | null | undefined;
   altText: string;
-  placeholderImageUrl?: string;
-  className?: string;
 }
 
-const generateSrcSet = (
-  baseUrl: string,
-  width: number,
-  format: 'avif' | 'webp' | 'jpeg'
-): string => {
-  try {
-    const cdnUrl = new URL(baseUrl);
-    const params = new URLSearchParams(cdnUrl.search);
-    params.set('f', 'auto'); // Let CDN handle the format, which should negotiate AVIF
-    params.set('q', 'auto');
-    params.set('w', width.toString());
+const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText }) => {
+  const placeholderImage = '/placeholder.png';
+  const cdnBaseUrl = 'https://cdn.example.com';
 
-    return `${cdnUrl.origin}${cdnUrl.pathname}?${params.toString()} ${width}w`;
-  } catch (error) {
-    console.error('Error generating srcSet URL:', error);
-    return ''; // Or return a default value, or handle the error appropriately
-  }
-};
-
-
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
-  imageUrl,
-  altText,
-  placeholderImageUrl = '/placeholder.png',
-  className,
-}) => {
-  const [error, setError] = useState(false);
-
-  const handleImageError = () => {
-    setError(true);
-    console.error('Image loading failed for URL:', imageUrl);
+  const generateCdnUrl = (width: number, format: 'avif' | 'webp' | 'jpg') => {
+    if (!imageUrl) {
+      return null;
+    }
+    return `${cdnBaseUrl}/${imageUrl}?width=${width}&format=${format}&quality=auto`;
   };
 
-  useEffect(() => {
-    setError(false);
-  }, [imageUrl]);
-
-  if (!imageUrl || error) {
-    return (
-      <div className={`bg-slate-900 ${className}`}>
-        <img src={placeholderImageUrl} alt={altText} className="object-cover w-full h-full" />
-      </div>
-    );
+  if (!imageUrl) {
+    return <img src={placeholderImage} alt={altText} className="w-full h-full object-cover" />;
   }
 
-  const smallAvif = generateSrcSet(imageUrl, 320, 'avif');
-  const mediumAvif = generateSrcSet(imageUrl, 640, 'avif');
-  const largeAvif = generateSrcSet(imageUrl, 1024, 'avif');
+  const smallAvifUrl = generateCdnUrl(320, 'avif');
+  const mediumAvifUrl = generateCdnUrl(640, 'avif');
+  const largeAvifUrl = generateCdnUrl(1024, 'avif');
 
-  const smallWebp = generateSrcSet(imageUrl, 320, 'webp');
-  const mediumWebp = generateSrcSet(imageUrl, 640, 'webp');
-  const largeWebp = generateSrcSet(imageUrl, 1024, 'webp');
+  const smallWebpUrl = generateCdnUrl(320, 'webp');
+  const mediumWebpUrl = generateCdnUrl(640, 'webp');
+  const largeWebpUrl = generateCdnUrl(1024, 'webp');
 
-  const fallbackJpeg = generateSrcSet(imageUrl, 640, 'jpeg'); // Use medium size for fallback
+  const fallbackJpegUrl = generateCdnUrl(1024, 'jpg');
 
 
   return (
     <picture>
-      {smallAvif && <source srcSet={smallAvif} type="image/avif" media="(max-width: 320px)" />}
-      {mediumAvif && <source srcSet={mediumAvif} type="image/avif" media="(max-width: 640px)" />}
-      {largeAvif && <source srcSet={largeAvif} type="image/avif" media="(min-width: 641px)" />}
+      {smallAvifUrl && <source srcSet={smallAvifUrl} type="image/avif" media="(max-width: 320px)" />}
+      {mediumAvifUrl && <source srcSet={mediumAvifUrl} type="image/avif" media="(max-width: 640px)" />}
+      {largeAvifUrl && <source srcSet={largeAvifUrl} type="image/avif" media="(min-width: 641px)" />}
 
-      {smallWebp && <source srcSet={smallWebp} type="image/webp" media="(max-width: 320px)" />}
-      {mediumWebp && <source srcSet={mediumWebp} type="image/webp" media="(max-width: 640px)" />}
-      {largeWebp && <source srcSet={largeWebp} type="image/webp" media="(min-width: 641px)" />}
+      {smallWebpUrl && <source srcSet={smallWebpUrl} type="image/webp" media="(max-width: 320px)" />}
+      {mediumWebpUrl && <source srcSet={mediumWebpUrl} type="image/webp" media="(max-width: 640px)" />}
+      {largeWebpUrl && <source srcSet={largeWebpUrl} type="image/webp" media="(min-width: 641px)" />}
 
       <img
-        src={fallbackJpeg}
+        src={fallbackJpegUrl || placeholderImage}
         alt={altText}
         loading="lazy"
-        className={`object-cover w-full h-full ${className}`}
-        onError={handleImageError}
+        className="w-full h-full object-cover"
+        onError={(e) => {
+          if (e.target) {
+            e.target.src = placeholderImage;
+          }
+        }}
       />
     </picture>
   );
