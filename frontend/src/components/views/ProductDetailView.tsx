@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigationStore } from '@/stores/navigationStore';
-import { useConductorCatalog } from '@/hooks/useConductorCatalog';
-import {
-  ExternalLink,
-  Check,
-  Loader2,
-} from 'lucide-react';
-import ImageWithFallback from '@/components/common/ImageWithFallback';
-import ProductImageCarousel from '@/components/ProductDetail/ProductImageCarousel';
-import EcosystemTab from '@/components/ProductDetail/EcosystemTab';
-import JITBadge from '@/components/ProductDetail/JITBadge';
-import { useJITIntelligence } from '@/hooks/useJITIntelligence';
-import { ConductorProduct } from '@/types/catalog';
-import { ProductBadge } from '@/components/common/ProductBadge';
-import ResponsiveImage from '@/components/ResponsiveImage/ResponsiveImage';
+import React, { useState, useEffect } from "react";
+import { useNavigationStore } from "@/store/navigationStore";
+import { useConductorCatalog } from "@/hooks/useConductorCatalog";
+import { ExternalLink, Check, Loader2 } from "lucide-react";
+import ImageWithFallback from "@/components/common/ImageWithFallback";
+import ProductImageCarousel from "@/components/ProductDetail/ProductImageCarousel";
+import EcosystemTab from "@/components/ProductDetail/EcosystemTab";
+import JITBadge from "@/components/ProductDetail/JITBadge";
+import { useJITIntelligence } from "@/hooks/useJITIntelligence";
+import { ConductorProduct } from "@/types/catalog";
+import { ProductBadge } from "@/components/common/ProductBadge";
+import ResponsiveImage from "@/components/ResponsiveImage/ResponsiveImage";
 
 const ProductDetailView: React.FC = () => {
   const { products } = useConductorCatalog();
