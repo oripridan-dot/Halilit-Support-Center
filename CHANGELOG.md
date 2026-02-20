@@ -1,4 +1,22 @@
 ## [v4.1] — 2026-02-20
+- [feat] Introduced `useConductorCatalog` hook for fetching and managing product data.
+- [feat] Defined canonical `ConductorProduct` interface.
+- [feat] Added `ProductRelationship` and `ProductFamily` interfaces for product relationships.
+- [feat] Added types for relationship types (e.g., `variant_of`).
+- [refactor] Replaced `useState` and `useEffect` with `@tanstack/react-query` for data fetching.
+- [feat] Added more detailed comments to the hook explaining its purpose and data structure.
+- [feat] Introduced `RelationshipType` enum for product relationships.
+- [feat] Included `ProductFamily` interface.
+- [feat] Added `useMemo` hook to memoize data.
+- [feat] Added `search_text` to `ConductorProduct`.
+- [feat] Added `stock` (inventory count) to `ConductorProduct`.
+- [feat] Added product graph fields (`family_id`, `variant_key`, `variant_is_default`) to `ConductorProduct`.
+- [feat] Added `relationships` to `ConductorProduct`.
+- [feat] Added `family` to the return type.
+- [feat] Added `is_bundle_product` to `ConductorProduct`.
+- [feat] Added more product contextual data fields like `review_synthesis_summary`, `real_world_insights`, `review_sources` to `ConductorProduct`.
+
+## [v4.1] — 2026-02-20
 ### Added
 - [feat] Added `DAILY_BRIEFING.md` containing daily status reports.
 - [feat] Added `HEARTBEAT.md` containing factory status information.

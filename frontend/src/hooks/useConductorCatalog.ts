@@ -1,73 +1,485 @@
-import { useState, useEffect } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { useSearchParams } from 'react-router-dom';
+/**
+ * useConductorCatalog v10.0
+ *
+ * PRIMARY HOOK for all frontend data loading.
+ *
+ * All product data is fetched from /api/conductor/catalog.
+ * The backend normalizer v10 pre-indexes the catalog:
+ *   - products[]  — flat array of canonical product shapes
+ *   - indexes     — by_galaxy, by_spectrum, by_brand (product index maps)
+ *   - metadata    — galaxy_counts, spectrum_counts, brand_counts, galaxies
+ *
+ * Frontend does ZERO classification — all galaxy/spectrum assignment
+ * is done once at normalization time in the backend.
+ */
 
-interface UseConductorCatalogProps {
-  page?: number;
-  pageSize?: number;
-  searchQuery?: string;
-  initialCfpFilter?: string;
+import { useQuery } from '@tanstack/react-query';
+import { useMemo } from 'react';
+
+/**
+ * Canonical product shape — matches backend product_normalizer.normalize_product() exactly.
+ * Every field is guaranteed present; no fallback chains needed.
+ */
+// ── Product Graph Types ──
+
+export type RelationshipType =
+    | 'variant_of'
+    | 'accessory_for'
+    | 'compatible_with'
+    | 'successor_of'
+    | 'bundle_with'
+    | 'alternative_to';
+
+export interface ProductRelationship {
+    source_id: string;
+    target_id: string;
+    relationship_type: RelationshipType;
+    direction: 'unidirectional' | 'bidirectional';
+    confidence: number;
+    ai_discovered: boolean;
+    manually_curated: boolean;
+    compatibility_notes: string;
+    discovered_from: string;
+    sources_verified?: string[];
+    is_triple_checked?: boolean;
 }
 
-const defaultPageSize = 25;
+export interface ProductFamily {
+    id: string;
+    brand: string;
+    family_name: string;
+    series: string;
+    generation: number | null;
+    product_line: string;
+    variant_ids: string[];
+    accessory_ids: string[];
+    hero_image: string;
+    description: string;
+}
 
-const fetchCatalogData = async (page: number, pageSize: number, searchQuery?: string, initialCfpFilter?: string): Promise<PaginatedCatalogResponse> => {
-  const params = new URLSearchParams({
-    page: String(page),
-    pageSize: String(pageSize),
-  });
+export interface ConductorProduct {
+    id: string;
+    name: string;
+    brand: string;
+    brand_logo: string;
+    galaxy_id: string;
+    spectrum_id: string;
+    category: string;
+    subcategory: string;
+    price: number;
+    price_eilat: number;
+    currency: string;
+    tier: string;
+    market_price_estimate: number;
+    market_price_peers: number;
+    image_url: string;
+    image_gallery: string[];
+    description: string;
+    description_short: string;
+    specs: Record<string, any>;
+    features: string[];
+    faq: Array<{ question: string; answer: string }>;
+    audiences: string[];
+    rating: number;
+    review_count: number;
+    pros: string[];
+    cons: string[];
+    contextual_data: Record<string, any>;
+    /** Summary from 3+ trusted review sources (contextual pillar) */
+    review_synthesis_summary?: string;
+    /** Real-world insights from reviews (contextual pillar) */
+    real_world_insights?: string[];
+    /** Names/URLs of review sources (contextual pillar) */
+    review_sources?: string[];
+    quality_score: number;
+    data_status: 'COMPLETE' | 'GOOD' | 'PARTIAL' | 'MINIMAL';
+    data_missing: string[];
+    halilit_url: string;
+    official_url: string;
+    sources: string[];
+    data_trust: {
+        price_source: 'halilit' | 'official' | 'estimated' | 'none';
+        specs_source: 'halilit' | 'official' | 'none';
+        description_source: 'halilit' | 'official' | 'synthesized' | 'none';
+        image_source: 'halilit' | 'official' | 'none';
+        review_source: 'contextual' | 'none';
+    };
+    search_text: string;
+    /** Inventory count from commercial source (Halilit); null = unknown */
+    stock?: number | null;
+    // ── Product Graph fields (additive) ──
+    family_id: string | null;
+    variant_key: string | null;
+    variant_is_default: boolean | null;
+    /** IDs of related products (variants, accessories, alternatives) for neuron-hop without new API call */
+    relationship_ids?: string[];
+}
 
-  if (searchQuery) {
-    params.append('searchQuery', searchQuery);
-  }
+export interface CatalogIndexes {
+    by_galaxy: Record<string, number[]>;
+    by_spectrum: Record<string, number[]>;
+    by_brand: Record<string, number[]>;
+    // Product Graph indexes
+    by_family?: Record<string, number[]>;
+    relationships?: Record<string, ProductRelationship[]>;
+}
 
-  if (initialCfpFilter) {
-    params.append('cfpFilter', initialCfpFilter);
-  }
+export interface GraphStats {
+    total_families: number;
+    total_relationships: number;
+    confirmed_relationships: number;
+    pending_review: number;
+    products_in_families: number;
+    products_without_family: number;
+    relationship_type_counts: Record<string, number>;
+}
 
-  const url = `${CATALOG_ENDPOINT}?${params.toString()}`;
-  const response = await fetch(url);
+export interface GalaxyDef {
+    id: string;
+    label: string;
+    spectrums: { id: string; label: string }[];
+}
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch catalog data: ${response.status}`);
-  }
+export interface CatalogMetadata {
+    total_products: number;
+    brands: string[];
+    galaxy_counts: Record<string, number>;
+    spectrum_counts: Record<string, number>;
+    brand_counts: Record<string, number>;
+    galaxies: GalaxyDef[];
+    source: string;
+    cache_ttl_seconds: number;
+    timestamp?: string;
+    // Health metrics from catalog validator
+    health_score?: number;
+    health_status?: 'COMPLETE' | 'GOOD' | 'PARTIAL' | 'MINIMAL';
+    status_counts?: Record<string, number>;
+    field_coverage?: Record<string, number>;
+    top_issues?: string[];
+    // Product Graph metrics
+    graph_stats?: GraphStats;
+}
 
-  return response.json() as Promise<PaginatedCatalogResponse>;
+export interface FamilyMeta {
+    id: string;
+    family_name: string;
+    brand: string;
+    series: string;
+    hero_image: string;
+    variant_count: number;
+}
+
+export interface ConductorCatalog {
+    products: ConductorProduct[];
+    indexes: CatalogIndexes;
+    metadata: CatalogMetadata;
+    families?: Record<string, FamilyMeta>;
+}
+
+/** Catalog request timeout (first load can take 2–5 min with 7k+ products). */
+const CATALOG_FETCH_TIMEOUT_MS = 360_000;
+
+/**
+ * Load unified Conductor catalog — the single data source for all 3 screens.
+ */
+export const useConductorCatalog = () => {
+    const { data, isLoading, error, refetch } = useQuery<ConductorCatalog>({
+        queryKey: ['conductor-catalog'],
+        queryFn: async () => {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), CATALOG_FETCH_TIMEOUT_MS);
+            try {
+                const response = await fetch('/api/conductor/catalog', {
+                    signal: controller.signal,
+                });
+                clearTimeout(timeoutId);
+                if (response.status === 503) {
+                    const body = await response.json().catch(() => ({}));
+                    throw new Error(
+                        body?.error || 'Catalog is still building. Wait a minute and click Retry.'
+                    );
+                }
+                if (!response.ok) {
+                    throw new Error(`Failed to load catalog: ${response.status} ${response.statusText}`);
+                }
+                const catalog: ConductorCatalog = await response.json();
+                // Log catalog load in dev mode only
+                if (import.meta.env.DEV && import.meta.env.MODE === 'development') {
+                    // eslint-disable-next-line no-console
+                    console.log(
+                        `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
+                        `${catalog.metadata.brands.length} brands, ` +
+                        `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies, ` +
+                        `health: ${catalog.metadata.health_score ?? '?'}/100`
+                    );
+                }
+                return catalog;
+            } catch (err) {
+                clearTimeout(timeoutId);
+                if (err instanceof Error) {
+                    if (err.name === 'AbortError') {
+                        throw new Error(
+                            'Catalog request timed out. The first load can take 2–5 minutes. Click Retry.'
+                        );
+                    }
+                    throw err;
+                }
+                throw err;
+            }
+        },
+        staleTime: import.meta.env.DEV ? 0 : 5 * 60 * 1000, // Always refetch in dev mode
+        gcTime: import.meta.env.DEV ? 0 : 10 * 60 * 1000, // Don't cache in dev mode
+        retry: 2,
+        refetchOnWindowFocus: true,
+        refetchOnReconnect: true,
+    });
+
+    return {
+        catalog: data || null,
+        products: data?.products || [],
+        indexes: data?.indexes || { by_galaxy: {}, by_spectrum: {}, by_brand: {} },
+        metadata: data?.metadata || null,
+        families: data?.families || {},
+        isLoading,
+        error: error ? (error as Error).message : null,
+        refetch,
+        totalProducts: data?.metadata.total_products || 0,
+        brands: data?.metadata.brands || [],
+        galaxyCounts: data?.metadata.galaxy_counts || {},
+        spectrumCounts: data?.metadata.spectrum_counts || {},
+        galaxies: data?.metadata.galaxies || [],
+        graphStats: data?.metadata.graph_stats || null,
+    };
 };
 
-const useConductorCatalog = ({ page = 1, pageSize = defaultPageSize, searchQuery, initialCfpFilter }: UseConductorCatalogProps = {}) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+/**
+ * Get products for a specific galaxy using pre-computed indexes.
+ * O(1) lookup — no iteration or regex classification.
+ */
+export const useProductsByGalaxy = (galaxyId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
 
-  const {
-    data,
-    isLoading,
-    error,
-    refetch,
-  } = useQuery<PaginatedCatalogResponse, Error>(
-    ['catalog', page, pageSize, searchQuery, initialCfpFilter],
-    () => fetchCatalogData(page, pageSize, searchQuery, initialCfpFilter),
-    {
-      keepPreviousData: true,
-    }
-  );
+    const galaxyProducts = useMemo(() => {
+        if (!galaxyId || !indexes.by_galaxy[galaxyId]) return products;
+        return indexes.by_galaxy[galaxyId].map(idx => products[idx]).filter(Boolean);
+    }, [galaxyId, indexes, products]);
 
-  useEffect(() => {
-    if (searchQuery !== undefined || initialCfpFilter !== undefined) {
-      refetch();
-    }
-  }, [searchQuery, initialCfpFilter, refetch]);
-
-
-  return {
-    products: data?.products || [],
-    totalItems: data?.totalItems || 0,
-    totalPages: data?.totalPages || 0,
-    currentPage: data?.currentPage || page,
-    pageSize: data?.pageSize || pageSize,
-    isLoading,
-    error,
-    refetch,
-  };
+    return {
+        products: galaxyProducts,
+        count: galaxyProducts.length,
+        isLoading,
+    };
 };
 
-export default useConductorCatalog;
+/**
+ * Get products for a specific spectrum using pre-computed indexes.
+ */
+export const useProductsBySpectrum = (spectrumId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const spectrumProducts = useMemo(() => {
+        if (!spectrumId || !indexes.by_spectrum[spectrumId]) return [];
+        return indexes.by_spectrum[spectrumId].map(idx => products[idx]).filter(Boolean);
+    }, [spectrumId, indexes, products]);
+
+    return {
+        products: spectrumProducts,
+        count: spectrumProducts.length,
+        isLoading,
+    };
+};
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PRODUCT GRAPH HOOKS — Family & Relationship Awareness
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Get all products in the same family as a given product.
+ * O(1) index lookup.
+ */
+export const useProductFamily = (familyId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const familyProducts = useMemo(() => {
+        if (!familyId || !indexes.by_family?.[familyId]) return [];
+        return indexes.by_family[familyId].map(idx => products[idx]).filter(Boolean);
+    }, [familyId, indexes, products]);
+
+    return {
+        products: familyProducts,
+        count: familyProducts.length,
+        isLoading,
+    };
+};
+
+/**
+ * Get all variants in the same family as this product (excludes self).
+ */
+export const useProductVariants = (productId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const variants = useMemo(() => {
+        if (!productId) return [];
+        const product = products.find(p => p.id === productId);
+        if (!product?.family_id || !indexes.by_family?.[product.family_id]) return [];
+        return indexes.by_family[product.family_id]
+            .map(idx => products[idx])
+            .filter(p => p && p.id !== productId);
+    }, [productId, indexes, products]);
+
+    return {
+        variants,
+        count: variants.length,
+        isLoading,
+    };
+};
+
+/**
+ * Get all relationships for a product from the pre-computed index.
+ */
+export const useProductRelationships = (productId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const result = useMemo(() => {
+        if (!productId || !indexes.relationships?.[productId]) {
+            return { accessories: [], compatible: [], alternatives: [], all: [] };
+        }
+
+        const rels = indexes.relationships[productId];
+        const productMap = new Map(products.map(p => [p.id, p]));
+
+        const accessories: ConductorProduct[] = [];
+        const compatible: ConductorProduct[] = [];
+        const alternatives: ConductorProduct[] = [];
+        const seenAccessories = new Set<string>();
+        const seenCompatible = new Set<string>();
+        const seenAlternatives = new Set<string>();
+        const relationshipMeta: Record<string, { confidence: number; sources_verified: string[]; discovered_from?: string }> = {};
+
+        for (const rel of rels) {
+            const otherId = rel.source_id === productId ? rel.target_id : rel.source_id;
+            const other = productMap.get(otherId);
+            if (!other) continue;
+
+            const confidence = rel.confidence ?? 0;
+            const sources = rel.sources_verified ?? [];
+            const existing = relationshipMeta[otherId];
+            if (existing) {
+                existing.confidence = Math.max(existing.confidence, confidence);
+                existing.sources_verified = [...new Set([...existing.sources_verified, ...sources])];
+            } else {
+                relationshipMeta[otherId] = { confidence, sources_verified: sources, discovered_from: rel.discovered_from };
+            }
+
+            switch (rel.relationship_type) {
+                case 'accessory_for':
+                    if (rel.target_id === productId) {
+                        const acc = productMap.get(rel.source_id);
+                        if (acc && !seenAccessories.has(acc.id)) {
+                            seenAccessories.add(acc.id);
+                            accessories.push(acc);
+                        }
+                    }
+                    break;
+                case 'compatible_with':
+                    if (!seenCompatible.has(otherId)) {
+                        seenCompatible.add(otherId);
+                        compatible.push(other);
+                    }
+                    break;
+                case 'alternative_to':
+                    if (!seenAlternatives.has(otherId)) {
+                        seenAlternatives.add(otherId);
+                        alternatives.push(other);
+                    }
+                    break;
+            }
+        }
+
+        return {
+            accessories,
+            compatible,
+            alternatives,
+            all: rels,
+            relationshipMeta,
+        };
+    }, [productId, indexes, products]);
+
+    return { ...result, isLoading };
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SPECTRUM STAR (NEURON) VIEW — ModelGroups + relationships by spectrum
+// ═══════════════════════════════════════════════════════════════════════════
+
+export type ZoomLevel = 'galaxy' | 'constellation' | 'cluster' | 'star';
+
+export interface ModelVariation {
+    id: string;
+    name: string;
+    variation: string;
+    price: number;
+    price_eilat?: number;
+    tier?: string;
+    image_url?: string;
+    sources?: string[];
+    quality_score?: number;
+    data_status?: string;
+    specs?: Record<string, unknown>;
+    rating?: number;
+    family_id?: string | null;
+}
+
+export interface ModelGroup {
+    modelName: string;
+    modelKey: string;
+    brand: string;
+    family: string;
+    subCategory: string;
+    bodyType: string;
+    variations: ModelVariation[];
+    priceRange: { min: number; max: number; currency: string };
+    heroImage: string;
+    variationCount: number;
+    avgConfidence: number;
+}
+
+export interface SpectrumStarResponse {
+    spectrum_id: string;
+    model_groups: ModelGroup[];
+    relationships: Record<string, ProductRelationship[]>;
+    zoom_levels: ZoomLevel[];
+    product_count: number;
+}
+
+/**
+ * Fetch the neuron view for a spectrum: ModelGroups (nucleus + variations)
+ * and relationships (outer connections). Use for star-level (inner) and
+ * cluster-level (outer) display in the Spectrum Module.
+ */
+export const useSpectrumStar = (spectrumId: string | null) => {
+    const { data, isLoading, error, refetch } = useQuery<SpectrumStarResponse>({
+        queryKey: ['spectrumStar', spectrumId],
+        queryFn: async () => {
+            if (!spectrumId) throw new Error('No spectrum');
+            const res = await fetch(`/api/spectrum/${encodeURIComponent(spectrumId)}`);
+            if (!res.ok) throw new Error(res.statusText);
+            return res.json();
+        },
+        enabled: !!spectrumId,
+        staleTime: 5 * 60 * 1000,
+    });
+
+    return {
+        modelGroups: data?.model_groups ?? [],
+        relationships: data?.relationships ?? {},
+        zoomLevels: data?.zoom_levels ?? ['galaxy', 'constellation', 'cluster', 'star'],
+        productCount: data?.product_count ?? 0,
+        spectrumId: data?.spectrum_id ?? spectrumId ?? null,
+        isLoading,
+        error: error?.message ?? null,
+        refetch,
+    };
+};
+

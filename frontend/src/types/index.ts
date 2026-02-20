@@ -45,17 +45,6 @@ export interface BrandIdentity {
   categories?: string[];
 }
 
-/** Brand identity metadata */
-export interface BrandIdentity {
-    id?: string;
-    name?: string;
-    logo_url?: string | null;
-    website?: string | null;
-    description?: string | null;
-    brand_colors?: { primary?: string; secondary?: string };
-    categories?: string[];
-}
-
 /** Product image structure */
 export interface ProductImage {
     url: string;
@@ -239,11 +228,6 @@ export interface JITStreamState {
     durationMs: number;
 }
 
-/** Format a product's IL price as a localized currency string. */
-export function formatPrice(product: Product): string {
-    const price = product.price_il ?? product.pricing?.price_il;
-    if (price == null) return 'Call for Price';
-    return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS' }).format(price);
 /** Format IL price for display */
 export function formatPrice(product: Product): string {
   const price = product.price;

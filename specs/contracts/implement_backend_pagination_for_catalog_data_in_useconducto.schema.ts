@@ -1,15 +1,11 @@
-```typescript
 // Contract: Implement Backend Pagination for Catalog Data in `useConductorCatalog`
 
-// Endpoint path
 export const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
-// Shared types
 export interface ConductorProduct {
-  [key: string]: any; // represents an arbitrary product shape.  The backend defines the shape.
+  [key: string]: any; // Define the actual properties of a ConductorProduct
 }
 
-// Response type
 export interface PaginatedCatalogResponse {
   products: ConductorProduct[];
   totalItems: number;
@@ -17,4 +13,12 @@ export interface PaginatedCatalogResponse {
   currentPage: number;
   pageSize: number;
 }
-```
+
+export interface CatalogRequestParams {
+  page?: number;
+  pageSize?: number;
+  searchQuery?: string;
+  [key: string]: any; // Allows for other potential query params, such as sorting
+}
+
+export type CatalogResponse = PaginatedCatalogResponse;
