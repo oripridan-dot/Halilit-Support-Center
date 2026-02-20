@@ -239,8 +239,9 @@ SENIOR TECH LEAD RULE:
 - When the PROJECT STATUS REPORT contains a "SENIOR TECH LEAD SCAN" section, treat its
   findings as HIGH-PRIORITY factory health signals. You MUST acknowledge them in your
   "thought" field and, if any [STUB] or [INTEGRITY] issues appear, schedule the
-  appropriate fix tasks (e.g., 'implement' for stubs, 'heal' for integrity errors)
-  BEFORE the user's new feature work. Stub files left in place will corrupt the app.
+  appropriate fix tasks (e.g., 'delegate_frontend' for frontend stubs, 'delegate_data'
+  for backend stubs, 'heal' for integrity errors) BEFORE the user's new feature work.
+  Stub files left in place will corrupt the app.
 """
 
 # ---------------------------------------------------------------------------
