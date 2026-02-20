@@ -154,19 +154,21 @@ export function useJITIntelligence(productId: string | null) {
     }
   }, [productId]);
 
-  // Connect when productId changes
+  // Genome: MemoryPhenotype — explicit cancel for STRICT_JIT assertion.
+  const cancelStream = useCallback(() => {
+    abortRef.current?.abort();
+    if (reconnectTimeoutRef.current) {
+      clearTimeout(reconnectTimeoutRef.current);
+    }
+  }, []);
+
+  // Connect when productId changes; cancel SSE on unmount.
   useEffect(() => {
     connect();
+    return cancelStream; // Cleanup: aborts SSE AbortController on unmount
+  }, [connect, cancelStream]);
 
-    return () => {
-      abortRef.current?.abort();
-      if (reconnectTimeoutRef.current) {
-        clearTimeout(reconnectTimeoutRef.current);
-      }
-    };
-  }, [connect]);
-
-  return state;
+  return { ...state, cancelStream };
 }
 
 /**

@@ -12,6 +12,7 @@ import {
   BookOpen,
   Clock,
   ChevronRight,
+  Lock,
 } from "lucide-react";
 
 import {
@@ -81,8 +82,13 @@ const SkeletonPulse: React.FC<SkeletonPulseProps> = ({ className = "" }) => (
   <div className={`bg-zinc-900 rounded animate-pulse ${className}`} />
 );
 
+// Pure loading skeleton — NO mock data, only animated placeholder shapes.
 const SkeletonHeader = () => (
-  <div className="p-6 flex gap-6">
+  <div
+    role="status"
+    aria-label="Loading product data…"
+    className="p-6 flex gap-6"
+  >
     <SkeletonPulse className="w-48 h-40 rounded-xl shrink-0" />
     <div className="flex-1 space-y-3 pt-1">
       <SkeletonPulse className="h-6 w-64" />
@@ -94,6 +100,7 @@ const SkeletonHeader = () => (
       <SkeletonPulse className="h-4 w-24" />
       <SkeletonPulse className="h-4 w-16" />
     </div>
+    <span className="sr-only">Loading product data…</span>
   </div>
 );
 
@@ -183,7 +190,62 @@ const MiniSection: React.FC<MiniSectionProps> = ({
   </div>
 );
 
-// ── TabButton ──────────────────────────────────────────────────────────────────
+// ── SourceBadge ────────────────────────────────────────────────────────────────
+// Genome trait: SourceBadgePhenotype — three visually distinct source types.
+// When available=false → greyed-out + lock icon (RENDERED_PARTIAL state).
+type DataSourceType = "COMMERCIAL" | "OFFICIAL" | "CONTEXTUAL";
+
+const SOURCE_STYLES: Record<
+  DataSourceType,
+  { available: string; label: string }
+> = {
+  COMMERCIAL: {
+    available:
+      "bg-emerald-950/40 text-emerald-400 border-emerald-800/50",
+    label: "Commercial",
+  },
+  OFFICIAL: {
+    available: "bg-blue-950/40 text-blue-400 border-blue-800/50",
+    label: "Official",
+  },
+  CONTEXTUAL: {
+    available: "bg-amber-950/40 text-amber-400 border-amber-800/50",
+    label: "Contextual",
+  },
+};
+
+interface SourceBadgeProps {
+  source: DataSourceType;
+  available?: boolean;
+}
+
+const SourceBadge: React.FC<SourceBadgeProps> = ({
+  source,
+  available = true,
+}) => {
+  const style = SOURCE_STYLES[source];
+  if (!available) {
+    return (
+      <span
+        title={`${style.label} source unavailable`}
+        className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded border
+          bg-zinc-900/60 text-zinc-600 border-zinc-800 opacity-60 cursor-default select-none"
+      >
+        <Lock size={9} className="shrink-0" />
+        {style.label}
+      </span>
+    );
+  }
+  return (
+    <span
+      className={`inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded border select-none ${style.available}`}
+    >
+      {style.label}
+    </span>
+  );
+};
+
+// ── TabButton ───────────────────────────────────────────────────────────────────
 interface TabButtonProps {
   active: boolean;
   onClick: () => void;
@@ -210,7 +272,13 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const { activeProductId, goBack, goToInventory, goToProduct } =
     useNavigationStore();
   const { products, isLoading: catalogLoading } = useConductorCatalog();
-  const jitState = useJITIntelligence(activeProductId ?? "");
+  // Genome: MemoryPhenotype — cancelStream aborts SSE connection on unmount (STRICT_JIT).
+  const { cancelStream: cancelJITStream, ...jitState } = useJITIntelligence(activeProductId ?? "");
+
+  // STRICT_JIT: cancel SSE stream when component unmounts or product changes.
+  React.useEffect(() => {
+    return () => { cancelJITStream(); };
+  }, [cancelJITStream]);
   const [activeTab, setActiveTab] = useState<
     "ecosystem" | "specifications" | "history"
   >("ecosystem");
@@ -323,6 +391,17 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     jitState.phase === "intel" ||
     jitState.phase === "wisdom";
 
+  // ── Source availability (RENDERED vs RENDERED_PARTIAL) ──────────────────────
+  // Each badge maps to one of the Three Authorized Data Sources (source_rules.py).
+  // Unavailable = lock icon + greyed-out (RENDERED_PARTIAL genome state).
+  const srcCommercial = !!product; // Halilit catalog = commercial source
+  const srcOfficial =
+    !!product?.official_url || Object.keys(specsRecord).length > 0; // brand page
+  const srcContextual = jitState.phase === "complete"; // 3+ trusted review sites
+  const isRenderedPartial =
+    srcCommercial && (!srcOfficial || !srcContextual) &&
+    (jitState.phase === "error" || jitState.phase === "complete" || jitState.phase === "idle");
+
   return (
     <div className="flex flex-col h-full overflow-hidden">
       {toast && <Toast msg={toast} />}
@@ -388,6 +467,20 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
                   </span>
                 )}
               </div>
+
+              {/* Source badges — RENDERED or RENDERED_PARTIAL (genome assertion) */}
+              {(srcCommercial || jitState.phase !== "idle") && (
+                <div className="flex items-center gap-1.5 mt-2.5" aria-label="Data sources">
+                  <SourceBadge source="COMMERCIAL" available={srcCommercial} />
+                  <SourceBadge source="OFFICIAL" available={srcOfficial} />
+                  <SourceBadge source="CONTEXTUAL" available={srcContextual} />
+                  {isRenderedPartial && (
+                    <span className="text-[10px] text-zinc-600 ml-1 italic">
+                      Partial data
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Pricing */}
