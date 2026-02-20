@@ -1,43 +1,44 @@
 ## Overview
 
-The Halilit Support Center is a web application designed as a dense, data-forward console for managing product information and providing real-time intelligence. The frontend offers views for dashboard, inventory, and product details. The backend provides a FastAPI server that serves data and facilitates JIT (Just-In-Time) product intelligence.
+The Halilit Support Center application is a web-based dashboard for managing product information and performing real-time product intelligence. It features a dark-themed interface with data-forward displays, inventory management, and a product detail view. The application uses a FastAPI backend to serve data and an AI-powered JIT (Just-In-Time) Intelligence engine for real-time product research.
 
 ## Frontend Views
 
-*   **DashboardView**: Renders a dark console with dashboard statistics. Uses `/api/dashboard/stats` to fetch data.
-*   **InventoryView**: Displays a searchable inventory of products. Uses `useConductorCatalog` hook. Filterable by search text, product name, and brand.
-*   **ProductDetailView**: Displays detailed information about a product, including responsive images.
+*   **DashboardView**: Renders the main dashboard, displaying key statistics. Accessed via the `DASHBOARD` view state.
+*   **InventoryView**: Displays a searchable list of products. Accessed via the `INVENTORY` view state.
+*   **ProductDetailView**: Displays detailed information for a specific product. Accessed via the `PRODUCT_DETAIL` view state and `activeProductId` state.
 
 ## Hooks & State
 
-*   **`useConductorCatalog`**: Fetches and provides product data from the `/api/conductor/catalog` endpoint. Returns an object with `products`, `isLoading`, and `error` properties.
-*   **`useDebounceValue`**: Debounces a value to prevent excessive updates.
-*   **`useNavigationStore`**: Manages the application's navigation state, including the current view (`DASHBOARD`, `INVENTORY`, `PRODUCT_DETAIL`, `INGESTION_STATUS`, `EXPLORER`), the active product ID, search query, and a flag for an initial call-for-price filter.
-*   **`useJITIntelligence`**: Manages the Just-In-Time intelligence phases: `idle`, `snap`, `intel`, `wisdom`, `complete`, `error`.
+*   **`useDashboardStats`**: Fetches and returns dashboard statistics. Returns a `DashboardStats` object with properties like `total_products`, `calls_for_price`, and `last_ingestion_run`.
+*   **`useConductorCatalog`**: Fetches product data from the backend. Returns product data and loading/error states. Returns `ConductorProduct[]`.
+*   **`useDebounceValue`**: Debounces a value, preventing rapid updates.
+*   **`useJITIntelligence`**: Manages the JIT (Just-In-Time) Intelligence process, returning data based on the current phase. Returns JIT phase and associated data, including `signal_chain` and `cheat_sheet`.
+*   **`useNavigationStore`**: Manages the application's navigation state. Returns the `currentView`, `activeProductId`, `searchQuery`, `initialCfpFilter`, and navigation actions like `goToDashboard` and `goToProductDetail`.
 
 ## Backend API
 
-*   `/api/dashboard/stats` (GET): Returns dashboard statistics in the format of `DashboardStats`.
-*   `/api/conductor/catalog` (GET): Returns product catalog data.
-*   `/api/jit/product/{product_id}` (GET): Returns JIT intelligence data for a product.
+*   `/api/dashboard/stats`: (GET) Returns `DashboardStats` data.
+*   `/api/conductor/catalog`: (GET) Returns product catalog data.
+*   `/api/jit/product/{product_id}`: (GET) Triggers and streams JIT Intelligence data for a given product ID.
 
 ## Data Pipeline
 
-1.  A scraper (not shown in this snapshot) collects product data.
-2.  The `product_normalizer.py` normalizes the product data into a consistent format.
-3.  The normalized data is used to build a catalog.
-4.  The catalog is served by the `/api/conductor/catalog` endpoint and consumed by the frontend.
+1.  **Scraping**: Not directly visible in this code snapshot.
+2.  **Normalization**: The `product_normalizer.py` module processes scraped product data. Products are transformed into a canonical shape and indexed.
+3.  **Catalog**: The normalized product data is built into a catalog.
+4.  **Frontend**: The frontend fetches data from the `/api/conductor/catalog` and `/api/dashboard/stats` endpoints.
 
 ## Factory Agents
 
-*   `steerer_agent.py`: Identifies gaps in existing specifications and generates new or updated specs.
-*   `scribe_agent.py`: Reads the codebase and regenerates documentation.
-*   `spec_writer.py`: Translates human intent into Markdown specifications.
-*   `builder_agent.py`: Materializes code from a spec.
+*   `builder_agent.py`: Materializes code from a specification.
+*   `steerer_agent.py`: Identifies gaps in existing specifications and generates new or updated specifications.
+*   `scribe_agent.py`: Generates and updates documentation.
+*   `spec_writer.py`: Translates human intent into detailed Markdown specifications.
 
 ## Key Conventions
 
-*   **Imports**: Standard React and TypeScript imports, along with `lucide-react` for icons and `@tanstack/react-query` for data fetching.
-*   **Naming**: Component names are PascalCase. Files are named consistently.
-*   **Tailwind**: The application uses Tailwind CSS for styling.
-*   **Source Rules**: All data must come from one of three authorized sources (not specified in the code).
+*   **Imports**: Uses `lucide-react` for icons, `@tanstack/react-query` for data fetching, and `zustand` for state management.
+*   **Naming**: Uses PascalCase for React component names (e.g., `DashboardView`) and camelCase for variables (e.g., `searchQuery`).
+*   **Tailwind**: Uses Tailwind CSS for styling (e.g., `bg-zinc-900`, `min-h-screen`, `p-4`).
+*   **Source Rules**: Enforced by `backend/source_rules.py`, dictating that all data must come from authorized sources.
