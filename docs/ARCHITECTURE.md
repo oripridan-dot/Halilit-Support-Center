@@ -1,47 +1,54 @@
 ```markdown
-# Halilit Support Center — Architecture Overview
+# Halilit Support Center — Architecture
 
-This application provides a support center for Halilit products, featuring a dashboard, inventory management, and detailed product information. It leverages a FastAPI backend for data serving and a React frontend for the user interface, with real-time product intelligence powered by Gemini.
+## Overview
+
+The Halilit Support Center is a web application designed to provide product information and support. It features a dashboard, inventory, and product detail views, leveraging data fetched from a backend API and enriched by a JIT (Just-In-Time) Intelligence engine. The application utilizes React for the frontend, a FastAPI backend, and various hooks and stores for data management and navigation.
 
 ## Frontend Views
 
-*   **DashboardView:** `/` Displays dashboard statistics and metrics. Renders `MetricCard` components.
-*   **InventoryView:** `/inventory` Displays a list of products. Includes search functionality and filters.
-*   **ProductDetailView:** (via `PRODUCT_DETAIL` navigation state). Displays detailed information about a single product, including sourcing and JIT (Just-In-Time) intelligence data.
+*   **DashboardView**: Renders a dashboard with key metrics.
+    *   State: Accessed via the `DASHBOARD` view type in `useNavigationStore`.
+    *   Renders: Metric cards displaying product counts, calls for price, top brands, and last ingestion run status.
+*   **InventoryView**: Displays a product inventory with filtering and search capabilities.
+    *   State: Accessed via the `INVENTORY` view type in `useNavigationStore`.
+    *   Renders: A list of products, search input, and filter controls.
+*   **ProductDetailView**: Shows detailed information about a specific product.
+    *   State: Accessed via the `PRODUCT_DETAIL` view type in `useNavigationStore`, activated by clicking on a product from the `InventoryView`.
+    *   Renders: Product details, including sourcing badges, JIT badges, product name, brand, price, and image.
 
 ## Hooks & State
 
-*   `useConductorCatalog`: Fetches product catalog data from the backend. Returns `products`, `isLoading`, and `error`.
-*   `useJITIntelligence`: Fetches and processes JIT intelligence for a specific product. Returns `jitState`.
-*   `useDebounceValue`: (in `InventoryView`) Debounces a value.
-*   `useNavigationStore`: Manages application navigation state. Returns `currentView`, `activeProductId`, `searchQuery`, `initialCfpFilter`, and navigation functions like `goToInventory`.
+*   `useConductorCatalog`: Fetches product data from the `/api/conductor/catalog` endpoint.
+    *   Returns: `products`, `isLoading`, `error`, `refetch`.  Also used to fetch data for a single product.
+*   `useJITIntelligence`: Manages the JIT (Just-In-Time) Intelligence process for product data enrichment.
+    *   Returns: `jitState`
+*   `useDebounceValue`: (From `InventoryView.tsx`) Debounces a value, likely for search input.
+*   `useNavigationStore`: Manages the application's navigation state.
+    *   Returns: `currentView`, `activeProductId`, `searchQuery`, `initialCfpFilter`, `goToDashboard`, `goToInventory`, `goToProduct`.
 
 ## Backend API
 
-*   `GET /api/conductor/catalog`: Returns the product catalog data.
-*   `/`: Serves static frontend assets.
-*   `/docs`: Serves FastAPI documentation.
+*   `/api/conductor/catalog`: (GET) Serves the product catalog data.  Returns a pre-indexed catalog: `products[]`, `indexes` (by_galaxy, by_spectrum, by_brand), and `metadata` (galaxy_counts, spectrum_counts, brand_counts, galaxies).
 
 ## Data Pipeline
 
-1.  **Scraping:** (Not shown in code) Data is collected from various sources.
-2.  **Normalization:** The `product_normalizer.py` module processes scraped data to produce a canonical product shape.
-3.  **Catalog:** The normalized product data is built into a catalog.
-4.  **Frontend:** The frontend consumes the catalog data to render the views.
+1.  **Scraping:** (Implied, not directly visible in the code) External data sources are scraped (e.g., product pages).
+2.  **Normalization:** The `product_normalizer.py` module processes and normalizes the scraped product data into a consistent, flat format.
+3.  **Catalog:** The normalized data is built into a catalog.
+4.  **Frontend:** The frontend consumes the catalog data via the `/api/conductor/catalog` endpoint and the JIT Intelligence data.
 
 ## Factory Agents
 
-*   `steerer_agent.py`: Identifies critical gaps in the system and generates new or updated specifications.
-*   `scribe_agent.py`: Generates living documentation based on the codebase.
-*   `spec_writer.py`: Translates human intent into specifications.
-*   `builder_agent.py`: Materializes code from a specification.
+*   `backend/factory/builder_agent.py`: Materializes code from a specification.
+*   `backend/factory/steerer_agent.py`: Identifies gaps in existing specifications and generates new or updated specifications.
+*   `backend/factory/scribe_agent.py`: Regenerates the `docs/ARCHITECTURE.md` file based on the codebase.
+*   `backend/factory/spec_writer.py`: Translates human intent into detailed specifications.
 
 ## Key Conventions
 
-*   **Imports:** Uses `lucide-react` for icons.
-*   **Naming:**
-    *   `MetricCardProps` defines the interface for metric cards in the dashboard.
-    *   `StockBadgeProps` defines the interface for stock badges in the inventory view.
-*   **Tailwind:** Uses Tailwind CSS for styling. Includes accent colors: `blue`, `amber`, `green`, `red`, and `zinc`.
-*   **Source Rules:** Enforced by `source_rules.py`. All data must come from authorized sources; no synthesis is allowed.
+*   **Imports**: Uses `lucide-react` for icons.
+*   **Price Formatting**: Uses the `formatPrice` function from `./src/types`.
+*   **Source Rules:** Enforced by `backend/source_rules.py`, dictating that all data must originate from authorized sources.
+*   **Tailwind**:  Uses Tailwind CSS for styling, with custom accent color tokens (`blue`, `amber`, `green`, `red`, `zinc`).
 ```
