@@ -306,9 +306,9 @@ def build_component(spec_path: str) -> None:
         # names, missing hook files, and JSX generic arrow syntax without
         # burning LLM tokens.  Fixes are printed so they appear in logs.
         fix_report = fix_imports(target_file=full_path)
-        if fix_report.fixes:
-            print(f"🔧  SmartImportFixer applied {len(fix_report.fixes)} fix(es):")
-            for fix in fix_report.fixes:
+        if fix_report.fixes_applied:
+            print(f"🔧  SmartImportFixer applied {len(fix_report.fixes_applied)} fix(es):")
+            for fix in fix_report.fixes_applied:
                 print(f"     • [{fix.kind}] {fix.description}")
         return True
 
@@ -338,9 +338,10 @@ def build_component(spec_path: str) -> None:
                 # JSX generic arrow fn syntax) across all touched files.
                 print("\n🔧  Running SmartImportFixer on full src tree...")
                 full_fix_report = fix_imports()  # scans entire frontend/src
-                if full_fix_report.fixes:
-                    print(f"   Applied {len(full_fix_report.fixes)} deterministic fix(es):")
-                    for fix in full_fix_report.fixes:
+                fix_report = full_fix_report
+                if fix_report.fixes_applied:
+                    print(f"   Applied {len(fix_report.fixes_applied)} deterministic fix(es):")
+                    for fix in fix_report.fixes_applied:
                         print(f"     • [{fix.kind}] {fix.description}")
                     # Re-validate after deterministic fixes
                     print("\n🔬 Re-validating after SmartImportFixer...")
