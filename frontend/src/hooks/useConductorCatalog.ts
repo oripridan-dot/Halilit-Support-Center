@@ -6,14 +6,14 @@ import {
   ConductorCatalogParams,
   PaginatedCatalogResponse,
 
-interface UseConductorCatalogProps {
-  page?: number;
-  pageSize?: number;
-  searchQuery?: string;
-  sortBy?: string;
-  category?: string;
-  brand?: string;
-}
+  interface UseConductorCatalogProps {
+    page?: number;
+    pageSize?: number;
+    searchQuery?: string;
+    sortBy?: string;
+    category?: string;
+    brand?: string;
+  }
 
 const useConductorCatalog = ({
   page = 1,
