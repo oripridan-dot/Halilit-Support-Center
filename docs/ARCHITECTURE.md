@@ -1,54 +1,63 @@
-```markdown
-# Halilit Support Center — Architecture
-
 ## Overview
 
-The Halilit Support Center is a web application designed to provide product information and support. It features a dashboard, inventory, and product detail views, leveraging data fetched from a backend API and enriched by a JIT (Just-In-Time) Intelligence engine. The application utilizes React for the frontend, a FastAPI backend, and various hooks and stores for data management and navigation.
+The Halilit Support Center is a web application designed to provide product information and support. It features a dashboard, inventory view, and product detail view, along with a backend API that serves product data and facilitates live product intelligence. The application uses a "Dark Factory" approach, with automated agents for code generation, documentation, and strategic planning.
 
 ## Frontend Views
 
-*   **DashboardView**: Renders a dashboard with key metrics.
-    *   State: Accessed via the `DASHBOARD` view type in `useNavigationStore`.
-    *   Renders: Metric cards displaying product counts, calls for price, top brands, and last ingestion run status.
-*   **InventoryView**: Displays a product inventory with filtering and search capabilities.
-    *   State: Accessed via the `INVENTORY` view type in `useNavigationStore`.
-    *   Renders: A list of products, search input, and filter controls.
-*   **ProductDetailView**: Shows detailed information about a specific product.
-    *   State: Accessed via the `PRODUCT_DETAIL` view type in `useNavigationStore`, activated by clicking on a product from the `InventoryView`.
-    *   Renders: Product details, including sourcing badges, JIT badges, product name, brand, price, and image.
+*   **DashboardView:**
+    *   Route/State: `DASHBOARD`
+    *   Renders: Summary metrics (total products, calls for price, top brands, last ingestion run status) and metric cards.
+*   **InventoryView:**
+    *   Route/State: `INVENTORY`
+    *   Renders: A list of products with filters and search functionality.
+*   **ProductDetailView:**
+    *   Route/State: `PRODUCT_DETAIL`
+    *   Renders: Detailed product information, including sourcing badges and JIT badges.
 
 ## Hooks & State
 
-*   `useConductorCatalog`: Fetches product data from the `/api/conductor/catalog` endpoint.
-    *   Returns: `products`, `isLoading`, `error`, `refetch`.  Also used to fetch data for a single product.
-*   `useJITIntelligence`: Manages the JIT (Just-In-Time) Intelligence process for product data enrichment.
-    *   Returns: `jitState`
-*   `useDebounceValue`: (From `InventoryView.tsx`) Debounces a value, likely for search input.
-*   `useNavigationStore`: Manages the application's navigation state.
-    *   Returns: `currentView`, `activeProductId`, `searchQuery`, `initialCfpFilter`, `goToDashboard`, `goToInventory`, `goToProduct`.
+*   **`useConductorCatalog`**:
+    *   Purpose: Fetches and provides product catalog data.
+    *   Return Shape: Undefined in the code snapshot.
+*   **`useJITIntelligence`**:
+    *   Purpose: Retrieves Just-In-Time (JIT) intelligence data for a product.
+    *   Return Shape: `jitState` (containing product information)
+*   **`useDebounceValue`**:
+    *   Purpose: Debounces a value, likely used for the search input in `InventoryView`.
+    *   Return Shape: Undefined in the code snapshot.
+*   **`useNavigationStore`**:
+    *   Purpose: Manages the application's navigation state.
+    *   Return Shape:
+        *   `currentView`: The current view type (`DASHBOARD`, `INVENTORY`, `PRODUCT_DETAIL`, `INGESTION_STATUS`).
+        *   `activeProductId`: The ID of the currently active product.
+        *   `searchQuery`: The current search query.
+        *   `initialCfpFilter`:  Whether the Call-for-Price filter is active.
+        *   `goToDashboard`: Function to navigate to the dashboard.
+        *   `goToInventory`: Function to navigate to the inventory, with optional search query.
+        *   `goToProduct`: Function to navigate to a product detail view.
+        *   `goToIngestionStatus`: Function to navigate to the ingestion status.
 
 ## Backend API
 
-*   `/api/conductor/catalog`: (GET) Serves the product catalog data.  Returns a pre-indexed catalog: `products[]`, `indexes` (by_galaxy, by_spectrum, by_brand), and `metadata` (galaxy_counts, spectrum_counts, brand_counts, galaxies).
+*   `/api/conductor/catalog`: (GET) Returns product catalog data.
 
 ## Data Pipeline
 
-1.  **Scraping:** (Implied, not directly visible in the code) External data sources are scraped (e.g., product pages).
-2.  **Normalization:** The `product_normalizer.py` module processes and normalizes the scraped product data into a consistent, flat format.
-3.  **Catalog:** The normalized data is built into a catalog.
-4.  **Frontend:** The frontend consumes the catalog data via the `/api/conductor/catalog` endpoint and the JIT Intelligence data.
+1.  A scraper (not shown in the code snapshot) collects product data.
+2.  The `product_normalizer.py` normalizes the data, creating a consistent product shape and pre-computing galaxy and spectrum IDs.
+3.  The normalized data forms the product catalog, indexed for efficient searching and filtering.
+4.  The frontend consumes the catalog data to render the views.
 
 ## Factory Agents
 
-*   `backend/factory/builder_agent.py`: Materializes code from a specification.
-*   `backend/factory/steerer_agent.py`: Identifies gaps in existing specifications and generates new or updated specifications.
-*   `backend/factory/scribe_agent.py`: Regenerates the `docs/ARCHITECTURE.md` file based on the codebase.
-*   `backend/factory/spec_writer.py`: Translates human intent into detailed specifications.
+*   **`backend/factory/builder_agent.py`**: Materializes code from a specification.
+*   **`backend/factory/steerer_agent.py`**: Identifies gaps in product specs and generates new or updated specifications.
+*   **`backend/factory/scribe_agent.py`**: Generates and updates documentation based on the codebase.
+*   **`backend/factory/spec_writer.py`**: Translates user intent into detailed Markdown specifications.
 
 ## Key Conventions
 
-*   **Imports**: Uses `lucide-react` for icons.
-*   **Price Formatting**: Uses the `formatPrice` function from `./src/types`.
-*   **Source Rules:** Enforced by `backend/source_rules.py`, dictating that all data must originate from authorized sources.
-*   **Tailwind**:  Uses Tailwind CSS for styling, with custom accent color tokens (`blue`, `amber`, `green`, `red`, `zinc`).
-```
+*   **Imports**: Uses `lucide-react` for icons and `@tanstack/react-query` for data fetching.
+*   **Naming**: No specific naming conventions are explicitly defined in the provided code.
+*   **Tailwind Theme Tokens**: Uses Tailwind CSS with custom colors defined in `MetricCard` component.
+*   **Source Rules**: All data must come from one of three authorized sources, with no data synthesis allowed.

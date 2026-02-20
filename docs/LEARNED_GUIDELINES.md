@@ -77,3 +77,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Insufficiently analyzed error logs.
 **Fix:** Manually checked error logs to diagnose issue.
 **Lesson:** ALWAYS carefully analyze error logs.
+
+### [2026-02-20] Remove Obsolete Code/Docs
+**Symptom:** Code/documentation was obsolete or outdated.
+**Root Cause:** Failure to remove/update outdated artifacts.
+**Fix:** Removed/updated obsolete code and documentation.
+**Lesson:** ALWAYS remove obsolete code/documentation promptly.
