@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-20
+- [feat] Added `tech_lead_context` to `consult_chief` function, enabling integration with the Senior Tech Lead Agent.
+- [feat] Senior Tech Lead's findings are now treated as high-priority health signals. The Chief Agent acknowledges them in its "thought" field and schedules fix tasks.
+- [fix]  Critical error handling in `build_component`. The build will exit now with a FATAL error if the output file path is not found in the spec file to prevent silent failures.
+- [refactor] Updated `consult_chief` to inject Senior Tech Lead context into the prompt.
+
+## [v4.1] — 2026-02-20
 - [feat] Added critical rules for using 'task_force' vs 'implement', emphasizing when to use each for feature implementation.
 - [feat] Defined a generative pipeline for new features using 'design', 'implement', 'ui_validate', and 'commit'.
 - [docs] Updated documentation to clarify the use of 'implement' and 'optimize' tasks, including rules for their 'args'.

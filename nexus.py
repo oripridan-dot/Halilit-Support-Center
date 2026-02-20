@@ -90,6 +90,103 @@ def print_header() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Senior Tech Lead helpers
+# ---------------------------------------------------------------------------
+
+def _get_senior_insight() -> str:
+    """
+    Calls the Tech Lead Agent's fast heuristics scan and returns a compact
+    findings string to inject into the Chief's planning context.
+
+    Never raises — returns an empty string on failure so we degrade gracefully.
+    """
+    try:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        from tech_lead_agent import get_insights_for_chief  # noqa: PLC0415
+        return get_insights_for_chief(include_stubs=True)
+    except Exception as exc:
+        return f"(Senior scan unavailable: {exc})"
+
+
+def _detect_placeholder_files() -> list[str]:
+    """
+    Lightweight post-swarm stub detector.  Scans recently modified TS/TSX/PY
+    files (last 5 minutes) for placeholder patterns and returns a list of
+    plain-text issue strings.
+
+    This catches cases where the Builder quietly returns stub code without
+    raising a compile error — e.g. `export {};` or `<p>Placeholder…</p>`.
+    """
+    import time as _time
+    import re as _re
+
+    stub_patterns = [
+        _re.compile(r'Placeholder for .* [Ii]mplementation'),
+        _re.compile(r'<p>Placeholder'),
+        _re.compile(r'// Implement .* here'),
+    ]
+    # A file that is ONLY `export {};` (possibly with whitespace/comments)
+    only_export_empty = _re.compile(
+        r"^\s*(//[^\n]*)?\s*export\s*\{\s*\}\s*;?\s*$", _re.DOTALL
+    )
+
+    cutoff = _time.time() - 300  # 5 minutes
+    ignore_dirs = {".venv", "node_modules", "__pycache__", ".git"}
+    search_roots = [ROOT / "frontend" / "src", ROOT / "backend"]
+    issues: list[str] = []
+
+    for root in search_roots:
+        if not root.exists():
+            continue
+        for path in root.rglob("*"):
+            if any(part in ignore_dirs for part in path.parts):
+                continue
+            if path.suffix not in (".ts", ".tsx", ".py") or not path.is_file():
+                continue
+            try:
+                if path.stat().st_mtime < cutoff:
+                    continue
+                size = path.stat().st_size
+            except OSError:
+                continue
+
+            rel = str(path.relative_to(ROOT))
+
+            # Critically small (skip __init__ and d.ts)
+            if size < 120 and path.name not in ("__init__.py", "vite-env.d.ts"):
+                issues.append(
+                    f"STUB_DETECTED: {rel} is only {size} bytes — likely an empty "
+                    f"stub written by the Builder.\n"
+                    f"  Fix: queue 'implement' for the spec that owns this file."
+                )
+                continue
+
+            # Content patterns
+            try:
+                content = path.read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                continue
+
+            if only_export_empty.match(content):
+                issues.append(
+                    f"STUB_DETECTED: {rel} contains only `export {{}}` — "
+                    f"the Builder generated an empty module.\n"
+                    f"  Fix: queue 'implement' for the spec that owns this file."
+                )
+                continue
+
+            for pat in stub_patterns:
+                if pat.search(content):
+                    issues.append(
+                        f"STUB_DETECTED: placeholder pattern in {rel}.\n"
+                        f"  Fix: queue 'implement' for the spec that owns this file."
+                    )
+                    break
+
+    return issues
+
+
+# ---------------------------------------------------------------------------
 # Single-task factory executor (used by both sequential and parallel paths)
 # ---------------------------------------------------------------------------
 
@@ -554,9 +651,17 @@ def main() -> None:
     print(f"{BOLD}ð PROJECT NEXUS: SWARM EDITION ONLINE{RESET}")
     print("---------------------------------------")
 
-    print(f"\n{DIM}ð§  Analyzing Project State...{RESET}")
     initial_input = args.instruction or ""
-    plan = consult_chief(initial_input, is_startup=not bool(initial_input))
+    # --- Senior Tech Lead pre-flight scan ---
+    print(f"{DIM}\U0001f454  Senior Tech Lead scanning factory floor...{RESET}")
+    _senior_context = _get_senior_insight()
+    if _senior_context and "unavailable" not in _senior_context:
+        print(f"\n{MAGENTA}\U0001f4cb SENIOR SCAN FINDINGS:{RESET}")
+        for _line in _senior_context.splitlines():
+            if _line.strip():
+                print(f"   {DIM}{_line}{RESET}")
+    plan = consult_chief(initial_input, is_startup=not bool(initial_input),
+                         tech_lead_context=_senior_context)
 
     print(f"\n{GREEN}{BOLD}CHIEF'S BRIEFING:{RESET}")
     type_writer(plan.get("explanation", "(no explanation)"))
@@ -627,6 +732,21 @@ def main() -> None:
                     plan = {"queue": []}
                     hr()
 
+                    # --- Post-swarm: stub/placeholder detection ---
+                    _stubs = _detect_placeholder_files()
+                    if _stubs:
+                        print(f"\n{YELLOW}\u26a0\ufe0f  STUB DETECTOR: {len(_stubs)} placeholder file(s) found after swarm:{RESET}")
+                        for _s in _stubs:
+                            print(f"   {RED}\u2022 {_s.splitlines()[0]}{RESET}")
+                            if len(_s.splitlines()) > 1:
+                                print(f"     {DIM}{_s.splitlines()[1]}{RESET}")
+                        # Treat stubs as failures so the Chief auto-recovers
+                        failures = failures + [
+                            {"tool": "implement", "args": _stub_line.split(": ", 1)[1].split(" —")[0] if ": " in _stub_line else "unknown",
+                             "success": False, "summary": f"\u26a0\ufe0f [STUB] {_stub_line.splitlines()[0]}", "error_output": _stub_line}
+                            for _stub_line in _stubs
+                        ]
+
                     # --- Post-swarm: auto-mode still needs a final gate pass ---
                     if not failures:
                         if auto_mode:
@@ -686,11 +806,14 @@ def main() -> None:
                             f"FAILED: {f['tool']} {f.get('args', '')}\n{f.get('error_output', '')}"
                             for f in failures
                         )
+                        # Fresh Senior scan gives Chief live factory health during recovery
+                        _recovery_senior = _get_senior_insight()
                         print(
-                            f"\n{YELLOW}ð Consulting Chief for recovery plan...{RESET}")
+                            f"\n{YELLOW}\U0001f504 Consulting Chief for recovery plan...{RESET}")
                         plan = consult_chief(
                             "", is_startup=False,
-                            failure_context=failure_report
+                            failure_context=failure_report,
+                            tech_lead_context=_recovery_senior,
                         )
                         print(f"\n{RED}{BOLD}CHIEF RECOVERY PLAN:{RESET}")
                         type_writer(
@@ -734,9 +857,23 @@ def main() -> None:
             if user_input.lower() in ("exit", "quit", "q", ":q"):
                 break
 
+            # ---- 'senior' shortcut: print Tech Lead report on demand ----
+            if user_input.lower() in ("senior", "scan", "tech lead", "tl"):
+                print(f"\n{MAGENTA}\U0001f454 Requesting Senior Tech Lead Scan...{RESET}")
+                _tl_report = _get_senior_insight()
+                if _tl_report and "unavailable" not in _tl_report:
+                    for _tl_line in _tl_report.splitlines():
+                        print(f"   {_tl_line}")
+                else:
+                    print(f"   {GREEN}\u2705 Factory is clean — no issues detected.{RESET}")
+                hr()
+                continue
+
             # ---- Consult Chief with new input ----
             print(f"\n{DIM}Chief is planning logistics...{RESET}")
-            plan = consult_chief(user_input, is_startup=False)
+            _fresh_senior = _get_senior_insight()
+            plan = consult_chief(user_input, is_startup=False,
+                                 tech_lead_context=_fresh_senior)
 
             hr()
             print(f"\n{GREEN}{BOLD}CHIEF >{RESET}")

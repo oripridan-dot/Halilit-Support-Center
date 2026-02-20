@@ -3,11 +3,11 @@ id: genome_product_explorer
 version: "1.0.0"
 type: UI_Cell
 fitness_goal: ZERO_CLICK_DISCOVERY
+target_path: frontend/src/components/views/ExplorerView.tsx
 extends: genome_base_cell
 
 # ─────────────────────────────────────────────
 # PRODUCT EXPLORER GENOME
-# Target: frontend/src/components/views/ProductDetailView.tsx
 # ─────────────────────────────────────────────
 
 environment:

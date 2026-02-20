@@ -213,6 +213,13 @@ MEMORY RULE:
 - Before planning any task, assume that docs/LEARNED_GUIDELINES.md has been injected
   into every agent's context automatically. You do NOT need to route agents to read it;
   it is already there. Your job is only to WRITE to it via 'reflect' after failures.
+
+SENIOR TECH LEAD RULE:
+- When the PROJECT STATUS REPORT contains a "SENIOR TECH LEAD SCAN" section, treat its
+  findings as HIGH-PRIORITY factory health signals. You MUST acknowledge them in your
+  "thought" field and, if any [STUB] or [INTEGRITY] issues appear, schedule the
+  appropriate fix tasks (e.g., 'implement' for stubs, 'heal' for integrity errors)
+  BEFORE the user's new feature work. Stub files left in place will corrupt the app.
 """
 
 # ---------------------------------------------------------------------------
@@ -371,26 +378,33 @@ def get_project_state() -> str:
 # ---------------------------------------------------------------------------
 
 def consult_chief(user_input: str, is_startup: bool = False,
-                  failure_context: str = "") -> dict:
+                  failure_context: str = "",
+                  tech_lead_context: str = "") -> dict:
     """
     Takes a plain-English user request (or a startup trigger) and returns
     a structured task queue plan.
 
     Args:
-        user_input:       Plain-English instruction from the operator.
-        is_startup:       True when called on first boot (no user input yet).
-        failure_context:  Raw error output from failed tasks. When provided,
-                          the Chief enters Recovery Mode and produces a fix plan.
+        user_input:         Plain-English instruction from the operator.
+        is_startup:         True when called on first boot (no user input yet).
+        failure_context:    Raw error output from failed tasks. When provided,
+                            the Chief enters Recovery Mode and produces a fix plan.
+        tech_lead_context:  LLM-free heuristics report from the Senior Tech Lead
+                            Agent. Injected into context so the Chief factors in
+                            live factory health before planning.
 
     Returns a dict with keys: thought, explanation, proposal, queue.
     The 'queue' is a list of {"tool", "args", "parallel"} dicts.
     """
     project_state = get_project_state()
 
+    senior_block = ""
+    if tech_lead_context and tech_lead_context.strip():
+        senior_block = f"\n{tech_lead_context}\n"
+
     context_prompt = f"""
 --- PROJECT STATUS REPORT ---
-{project_state}
------------------------------
+{project_state}{senior_block}-----------------------------
 """
 
     if failure_context:

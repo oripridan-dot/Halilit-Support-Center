@@ -350,6 +350,90 @@ class FactoryHeuristics:
                         f"updated code and regenerate the affected component."
                     )
 
+    # --- 8. Placeholder / Stub Detection ------------------------------------
+
+    def check_placeholder_stubs(self, since_minutes: int = 60) -> None:
+        """
+        Scans recently modified frontend and backend files for placeholder
+        patterns — the kind the builder agent produces when it runs out of
+        context or receives an empty spec.
+
+        Patterns flagged:
+          • TypeScript file whose entire content is just `export {};`
+          • React component that only renders a <p>Placeholder… or similar
+          • Any non-config file under 120 bytes that ends in .ts/.tsx/.py
+          • File containing the literal string "Placeholder for … Implementation"
+          • Empty types/index.ts (canonical type hub)
+        """
+        import time as _time
+
+        stub_patterns = [
+            re.compile(r'Placeholder for .* [Ii]mplementation'),
+            re.compile(r'<p>Placeholder'),
+            re.compile(r'// Implement .* here'),
+            re.compile(r"^\s*export\s*\{\s*\}\s*;?\s*$", re.MULTILINE),
+        ]
+
+        cutoff = _time.time() - (since_minutes * 60)
+        search_roots = [
+            ROOT_DIR / "frontend" / "src",
+            ROOT_DIR / "backend",
+        ]
+        ignore_dirs = {".venv", "node_modules", "__pycache__", ".git"}
+
+        for root in search_roots:
+            if not root.exists():
+                continue
+            for path in root.rglob("*"):
+                # Skip irrelevant dirs/files
+                if any(part in ignore_dirs for part in path.parts):
+                    continue
+                if path.suffix not in (".ts", ".tsx", ".py"):
+                    continue
+                if not path.is_file():
+                    continue
+                try:
+                    mtime = path.stat().st_mtime
+                    size = path.stat().st_size
+                except OSError:
+                    continue
+
+                # Only files modified recently (or always check tiny files)
+                is_recent = mtime >= cutoff
+                rel = str(path.relative_to(ROOT_DIR))
+
+                # Rule 1: Critically small non-config file
+                if size < 120 and is_recent:
+                    # Allow __init__.py files to be tiny
+                    if path.name not in ("__init__.py", "vite-env.d.ts"):
+                        self.issues.append(
+                            f"[STUB] Suspiciously small file ({size} bytes): {rel}. "
+                            f"Likely an empty stub left by the Builder. Needs regeneration."
+                        )
+                    continue  # no need to read content
+
+                if not is_recent:
+                    continue  # skip older files for performance
+
+                try:
+                    content = path.read_text(
+                        encoding="utf-8", errors="replace")
+                except OSError:
+                    continue
+
+                # Skip detector files to prevent false positives
+                if path.name in ("tech_lead_agent.py",):
+                    continue
+                # Rule 2: Pattern matches
+                for pat in stub_patterns:
+                    if pat.search(content):
+                        self.issues.append(
+                            f"[STUB] Placeholder pattern detected in {rel}. "
+                            f"The Builder generated stub code. "
+                            f"Queue 'implement' with the correct spec to regenerate."
+                        )
+                        break
+
     # --- Full Scan ----------------------------------------------------------
 
     def run_full_scan(self) -> str:
@@ -361,6 +445,7 @@ class FactoryHeuristics:
         self.check_pending_evolution()
         self.check_backend_integrity()
         self.check_spec_drift()
+        self.check_placeholder_stubs()
 
         if not self.issues:
             return "✅ No critical heuristics flagged. The factory is clean."
@@ -414,6 +499,39 @@ def generate_morning_briefing() -> None:
         out_path = ROOT_DIR / "DAILY_BRIEFING.md"
         out_path.write_text(fallback, encoding="utf-8")
         print("⚠️  LLM unavailable. Raw heuristics written to DAILY_BRIEFING.md.")
+
+
+def get_insights_for_chief(include_stubs: bool = True) -> str:
+    """
+    Fast, LLM-free heuristics scan designed to be called inline by the Chief
+    Agent before planning.  Returns a compact plain-text summary of issues so
+    the Chief can factor them into its task queue without a full LLM round-trip.
+
+    This is intentionally lightweight — it runs in < 1 second and never blocks
+    the Nexus event loop.
+
+    Returns an empty string when the factory is clean.
+    """
+    scanner = FactoryHeuristics()
+    # Run only the fast, filesystem-based checks (skip spec-drift which calls git)
+    scanner.check_memory_traps()
+    scanner.check_ghost_directories()
+    scanner.check_react_code_smells()
+    scanner.check_backend_integrity()
+    scanner.check_pending_evolution()
+    if include_stubs:
+        scanner.check_placeholder_stubs(since_minutes=120)
+
+    if not scanner.issues:
+        return ""
+
+    lines = [
+        f"=== SENIOR TECH LEAD SCAN ({len(scanner.issues)} issue(s) detected) ===",
+    ]
+    for i, issue in enumerate(scanner.issues, 1):
+        lines.append(f"  {i}. {issue}")
+    lines.append("=== END SENIOR SCAN ===")
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":

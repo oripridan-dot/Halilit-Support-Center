@@ -234,8 +234,9 @@ def build_component(spec_path: str) -> None:
     # =========================================================================
 
     if not full_path:
-        print("❌ Could not determine output file path from spec. Add a 'Component:' field.")
-        return
+        print(
+            f"❌ CRITICAL FATAL: Target path missing in {spec_file.name}. Code generation aborted to prevent silent failure.")
+        sys.exit(1)
 
     print(f"\n🏭 [{domain.upper()} BUILD — AUTONOMOUS LEVEL 5]")
     print(f"   Target: {full_path.relative_to(PROJECT_ROOT)}")

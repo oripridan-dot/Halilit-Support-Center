@@ -192,7 +192,7 @@ def generate_synthesis_directive(genome: dict, env_context: str) -> str:
     """
     genome_id = genome.get("id", "unknown")
     target_line = genome.get(
-        "target", "(target not specified in genome — infer from id)")
+        "target_path", genome.get("target", "(target not specified in genome — infer from id)"))
 
     states_text = _format_states(genome)
     traits_text = _format_traits(genome)
@@ -411,9 +411,13 @@ def synthesize(genome_path: Path, verify_file: Path | None = None) -> Path:
     print("⚗️  Generating Synthesis Directive (LLM protein folding)...")
     directive = generate_synthesis_directive(genome, env_context)
 
+    target = genome.get("target_path", genome.get("target", ""))
     out_path = _SYNTH_DIR / f"synthesis_{genome_id}.md"
-    out_path.write_text(directive, encoding="utf-8")
+    header = f"**Component:** {target}\n\n" if target else ""
+    out_path.write_text(header + directive, encoding="utf-8")
     print(f"✅ Synthesis Directive written → {out_path.relative_to(_ROOT)}")
+    if target:
+        print(f"   ↳ Target path injected: {target}")
 
     if verify_file and verify_file.exists():
         print(
