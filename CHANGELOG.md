@@ -1,4 +1,11 @@
 ## [v4.1] — 2026-02-20
+- [feat] Added ImageCDNIntegration component and integrated it into the App component.
+- [fix] Disabled GPG signing in `commit_and_push` function to avoid failures in dev containers.
+- [fix] Corrected the commit command in `review_changes` to disable GPG signing.
+- [feat] Added openpgp format config to allow for ambiguous git author commits to succeed.
+- [refactor] Updated print messages in `review_changes` to use more appropriate icons.
+
+## [v4.1] — 2026-02-20
 ## v4.1
 
 - [feat] Added `auto_mode` parameter to `execute_swarm` function.

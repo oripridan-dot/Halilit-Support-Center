@@ -307,12 +307,16 @@ def review_changes(auto_mode: bool = False) -> bool:
     subprocess.run(["git", "status", "-s"])
 
     if auto_mode:
-        print(f"\n{CYAN}â¡ [AUTO] Changes auto-approved and committed.{RESET}")
+        print(f"\n{CYAN}⚡ [AUTO] Changes auto-approved and committed.{RESET}")
         subprocess.run(["git", "add", "."])
-        subprocess.run([
-            "git", "commit", "-m",
-            "chore: automated batch execution approved"
-        ])
+        subprocess.run(["git", "config", "--local", "commit.gpgsign", "false"])
+        r = subprocess.run([
+            "git", "-c", "commit.gpgsign=false",
+            "commit", "--no-gpg-sign", "-m", "chore: automated batch execution approved"
+        ], capture_output=True, text=True)
+        if r.returncode != 0:
+            print(f"{RED}❌ Commit failed: {(r.stdout + r.stderr).strip()}{RESET}")
+            return False
         return True
 
     while True:
@@ -325,11 +329,19 @@ def review_changes(auto_mode: bool = False) -> bool:
 
         if decision in ("", "y", "yes"):
             subprocess.run(["git", "add", "."])
-            subprocess.run([
-                "git", "commit", "-m",
-                "chore: automated batch execution approved"
-            ])
-            print(f"{GREEN}â Changes committed.{RESET}")
+            subprocess.run(["git", "config", "--local",
+                           "commit.gpgsign", "false"])
+            r= subprocess.run([
+                "git", "-c", "commit.gpgsign=false",
+                "commit", "--no-gpg-sign", "-m", "chore: automated batch execution approved"
+            ], capture_output=True, text=True)
+            if r.returncode != 0:
+                err = (r.stdout + r.stderr).strip()
+                print(f"{RED}❌ Commit failed:\n   {err}{RESET}")
+                print(f"{YELLOW}↩  Reverting to avoid stuck state...{RESET}")
+                subprocess.run(["git", "restore", "."])
+                return False
+            print(f"{GREEN}✅ Changes committed.{RESET}")
             return True
 
         elif decision == "diff":

@@ -196,7 +196,10 @@ def commit_and_push(dry_run: bool = False) -> None:
     if status == "CLEAN":
         print("❌ Nothing to commit — working tree is clean.")
         return
-
+    # Disable GPG/SSH commit signing for this repo session
+    # (Codespace managed signing fails with 403 when the git author is ambiguous)
+    _run_git(["config", "--local", "commit.gpgsign", "false"])
+    _run_git(["config", "--local", "gpg.format", "openpgp"])
     # 1. Always stage everything (handles DIRTY, STAGED, or mixed states)
     print("   Staging all changes...")
     if not dry_run:
@@ -235,7 +238,8 @@ def commit_and_push(dry_run: bool = False) -> None:
         return
 
     # 5. Commit (disable GPG signing — avoids failures in dev containers)
-    result = _run_git(["-c", "commit.gpgsign=false", "commit", "-m", msg])
+    result = _run_git(["-c", "commit.gpgsign=false", "commit",
+                       "--no-gpg-sign", "-m", msg])
     if result.returncode != 0:
         combined = (result.stdout + "\n" + result.stderr).strip()
         print(f"❌ Commit failed:\n{combined}")
