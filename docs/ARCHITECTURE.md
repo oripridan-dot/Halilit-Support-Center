@@ -1,83 +1,49 @@
 ## Overview
 
-The Halilit Support Center is a web application designed as a data-forward console for managing product information and inventory. It features a dark, dense user interface inspired by Vercel and Linear, with a focus on providing power-user tools for product management and real-time intelligence.
+The Halilit Support Center application is a data-driven dashboard for managing product information. It provides views for product inventory, detailed product information, and a dashboard for monitoring key metrics. The application uses a FastAPI backend to serve data and a React frontend built with TypeScript. The backend includes agents for data processing, specification generation, and living documentation, supporting a "Dark Factory" development approach.
 
 ## Frontend Views
 
-- **DashboardView**: `/` or `DASHBOARD` state. Displays key statistics about products, calls, brands, and ingestion status. Uses data fetched from `/api/dashboard/stats`.
-- **InventoryView**: `/inventory` or `INVENTORY` state. A dense data table for viewing and managing product inventory. Uses data fetched via `useConductorCatalog`.
-- **ProductDetailView**: `/product/:id` or `PRODUCT_DETAIL` state. Shows detailed information about a single product, including pricing, stock, and related information. Uses `useConductorCatalog` and `useProductRelationships`.
+*   **DashboardView**: `/` (via `DASHBOARD` in `navigationStore`), displays dashboard statistics, including total products, calls for price, top brands count, and last ingestion run status. Uses `useDashboardStats` hook.
+*   **InventoryView**: `/inventory` (via `INVENTORY` in `navigationStore`), displays a data table of product inventory. Uses `useConductorCatalog` hook.
+*   **ProductDetailView**: Dynamically routed via `PRODUCT_DETAIL` in `navigationStore`, displays detailed information about a specific product. Uses `useConductorCatalog` and `useJITIntelligence` hooks.
+*   **Ingestion Status View**: `/ingestion` (via `INGESTION_STATUS` in `navigationStore`). Not explicitly rendered in the provided code, but referenced by the `navigationStore`.
+*   **Explorer View**: `/explorer` (via `EXPLORER` in `navigationStore`). Not explicitly rendered in the provided code, but referenced by the `navigationStore`.
 
 ## Hooks & State
 
-- `useDashboardStats`: Fetches dashboard statistics from `/api/dashboard/stats`. Returns an object of type `DashboardStats`.
-- `useConductorCatalog`: Fetches product catalog data from `/api/conductor/catalog`. Returns an array of `ConductorProduct` (type not shown).
-- `useJITIntelligence`: Manages the JIT (Just-In-Time) intelligence process. Returns data of type `VerdictData`, `ReviewSource`, `FieldNotesData`, and `ExplorationPath`.
-- `useDebounceValue`: (From `InventoryView.tsx`) Debounces a value.
-- `navigationStore`: (`src/store/navigationStore.ts`) A `zustand` store managing the application's navigation state.
-  - `currentView`: `DASHBOARD`, `INVENTORY`, `PRODUCT_DETAIL`, `INGESTION_STATUS`, or `EXPLORER`.
-  - `activeProductId`: `string | null`.
-  - `searchQuery`: `string | null`.
-  - `initialCfpFilter`: `boolean | null`.
+*   `useDashboardStats`: Fetches dashboard statistics from `/api/dashboard/stats`. Returns an object of type `DashboardStats`.
+*   `useConductorCatalog`: Fetches product catalog data from `/api/conductor/catalog`. Returns `ConductorProduct` data.
+*   `useJITIntelligence`: Manages the JIT (Just-In-Time) intelligence pipeline for product data. Returns data related to product intelligence.  Uses the `JITPhase` type for status.
+*   `useDebounceValue`: Debounces a value.
+*   `navigationStore`: (`src/store/navigationStore.ts`) Manages the application's navigation state.
+    *   `currentView`: `ViewType` (DASHBOARD, INVENTORY, PRODUCT\_DETAIL, INGESTION\_STATUS, EXPLORER).
+    *   `activeProductId`: `string | null`.
+    *   `searchQuery`: `string | null`.
+    *   `initialCfpFilter`: `boolean | null`.
 
 ## Backend API
 
-- `/api/dashboard/stats` (GET): Returns dashboard statistics.
-- `/api/conductor/catalog` (GET): Returns product catalog data.
-- `/` (serves static frontend assets)
-- `/api/jit/product/{product_id}` (GET): Returns JIT intelligence data for a product.
+*   `/api/dashboard/stats`: (GET) Returns dashboard statistics (e.g. `total_products`, `calls_for_price`).
+*   `/api/conductor/catalog`: (GET) Returns the product catalog data.
+*   `/`: Serves static frontend assets.
 
 ## Data Pipeline
 
-1.  A scraper (not shown in the code) collects product data.
-2.  `product_normalizer.py` normalizes product data into a consistent format.
-3.  The normalized data is used to build a catalog.
-4.  The frontend fetches data from the `/api/conductor/catalog` endpoint and `/api/dashboard/stats`.
+1.  A scraper (not shown in the snapshot) fetches product data.
+2.  The `product_normalizer.py` normalizes the raw data into a consistent format, producing a flat product shape and pre-computing indices.
+3.  The normalized data is used to build the catalog.
+4.  The frontend fetches the catalog data via the `/api/conductor/catalog` endpoint.
 
 ## Factory Agents
 
-- `steerer_agent.py`: Identifies critical gaps in the product specs and generates/updates them.
-- `scribe_agent.py`: Regenerates documentation to reflect the current codebase.
-- `spec_writer.py`: Translates human intent into detailed Markdown specifications.
-- `builder_agent.py`: Materializes code from a specification.
-- `chief_agent.py`: Orchestrates the swarm — delegates to builder, optimizer, watchdog, and Bio-Swarm tools.
-- `tech_lead_agent.py`: Validates output quality before promotion.
-
-## Bio-Swarm — Algorithmic Biology (v9.7.2)
-
-### Genome Specs (`specs/genomes/`)
-
-DNA-like YAML files defining component fitness. Each genome has:
-
-- **States** — FSM nodes with `visual_hint`, `required`, and `transitions`
-- **Traits** — typed, inheritable behavioural traits (e.g. `SourceBadgePhenotype`, `StreamingPhenotype`)
-- **Phenotype_Assertions** — testable correctness properties verified by the Ribosome
-- **`extends`** — inherits from a parent genome (e.g. `base_cell`)
-
-### Ribosome (`backend/factory/ribosome.py`)
-
-Genome Interpreter Engine:
-
-1. Loads and resolves genome YAML (inheritance, env context)
-2. Calls LLM to fold genome into a **Synthesis Directive** (`specs/temp/synthesis_genome_*.md`)
-3. Runs **PhenotypeVerifier** — LLM checks all assertions against real code; VIABLE ≥ 80/100
-
-### Mutation Engine (`backend/factory/mutation_engine.py`)
-
-Genetic Feedback Loop — OODA cycle:
-
-- **Observe**: scans `factory_logs/` for agent execution records
-- **Orient**: scores agents 0–1 (`FitnessLedger` at `backend/data/genome/fitness_ledger.json`)
-- **Decide**: agents below `MUTATION_THRESHOLD=0.65` get micro-heuristic injections
-- **Act**: appends evolved rules to `docs/LEARNED_GUIDELINES.md`
-
-### OODA Integration
-
-`nexus.py` captures `_SESSION_START_TS` at boot and calls `_run_ooda_mutation_cycle()` after every successful swarm batch, creating a continuous improvement feedback loop.
+*   `steerer_agent.py`: Identifies critical gaps in product specifications and generates new or updated specs.
+*   `scribe_agent.py`: Generates and updates documentation based on the codebase.
+*   `spec_writer.py`: Translates plain text descriptions into detailed Markdown specifications.
+*   `builder_agent.py`: Materializes code from specifications.
 
 ## Key Conventions
 
-- **Imports**: Uses `lucide-react` for icons.
-- **Naming**: Uses `PascalCase` for React components.
-- **Tailwind**: Uses Tailwind CSS classes extensively.
-- **Source Rules**: Enforced by `backend/source_rules.py`. Data must come from authorized sources, with no data synthesis.
+*   **Imports**: Uses `lucide-react` for icons, `@tanstack/react-query` for data fetching, and `zustand` for state management.
+*   **Product Data**:  The `ConductorProduct` type is the canonical product shape.
+*   **Source Rules**: All data must come from one of three authorized sources.

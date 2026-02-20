@@ -205,9 +205,8 @@ def commit_and_push(dry_run: bool = False) -> None:
     # 2. Get diff for message generation
     diff = get_git_diff(staged_only=True)
     if not diff:
-        print("❌ No changes detected after staging.")
-        return
-
+        # Nothing staged yet — try unstaged
+        diff = get_git_diff(staged_only=False)
     if not diff:
         print("❌ No changes detected after staging.")
         return
@@ -221,32 +220,38 @@ def commit_and_push(dry_run: bool = False) -> None:
 
     print(f"   ✅ Commit: {msg}")
 
+    # 4. Write changelog NOW (before the commit) so it gets staged with everything
+    tag = get_current_version_tag() or "unreleased"
+    changelog_entry = generate_changelog_entry(diff, tag)
+    if not dry_run:
+        update_changelog(tag, changelog_entry)
+        # Re-stage after writing changelog so it's included in the commit
+        _run_git(["add", "-A"], capture=False)
+
     if dry_run:
         print("\n[DRY RUN] Would have committed with the above message.")
         print("[DRY RUN] Changelog entry:")
-        tag = get_current_version_tag() or "v0.0.1"
-        entry = generate_changelog_entry(diff, tag)
-        print(entry)
+        print(changelog_entry)
         return
 
-    # 4. Commit (disable GPG signing — avoids failures in dev containers)
+    # 5. Commit (disable GPG signing — avoids failures in dev containers)
     result = _run_git(["-c", "commit.gpgsign=false", "commit", "-m", msg])
     if result.returncode != 0:
         combined = (result.stdout + "\n" + result.stderr).strip()
         print(f"❌ Commit failed:\n{combined}")
         return
 
-    # 5. Update changelog with the current tag
-    tag = get_current_version_tag() or "unreleased"
-    changelog_entry = generate_changelog_entry(diff, tag)
-    update_changelog(tag, changelog_entry)
-
-    # 6. Push — resilient: merge-pull fallback → force-with-lease
+    # 6. Push — resilient: no-upstream → set-upstream, diverged → merge/force-with-lease
     print("   Pushing to origin...")
     push_result = _run_git(["push"])
     if push_result.returncode != 0:
         stderr = push_result.stderr.strip()
-        if "non-fast-forward" in stderr or "rejected" in stderr:
+        if "no upstream branch" in stderr or "has no upstream" in stderr or "set-upstream" in stderr:
+            # Branch is new — publish it automatically
+            print(f"   🔗 No upstream set — publishing branch '{branch}'...")
+            push_result = _run_git(
+                ["push", "--set-upstream", "origin", branch])
+        elif "non-fast-forward" in stderr or "rejected" in stderr:
             # Remote has diverged — pull with merge then retry
             print("   ↩️  Remote diverged. Pulling (merge) then retrying...")
             pull = _run_git(["-c", "commit.gpgsign=false",
@@ -258,8 +263,10 @@ def commit_and_push(dry_run: bool = False) -> None:
                 print("   ⚡ Merge didn't resolve — force-pushing (with lease)...")
                 push_result = _run_git(["push", "--force-with-lease"])
         if push_result.returncode != 0:
-            print("   ⚠️  Push failed — no upstream or permission denied.")
+            # Commit succeeded — push is optional. Warn but don't treat as failure.
+            print("   ⚠️  Push failed (no remote access or permission denied).")
             print(f"      ({push_result.stderr.strip()})")
+            print("   ✅ Commit saved locally — push when origin is available.")
             return
     print("✅ Code synced to repository.")
 

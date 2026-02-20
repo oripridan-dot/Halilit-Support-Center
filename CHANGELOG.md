@@ -1,4 +1,25 @@
 ## [v4.1] — 2026-02-20
+## v4.1
+
+- [feat] Added `auto_mode` parameter to `execute_swarm` function.
+- [refactor] Updated `commit_and_push` function to add the changelog to the commit, before the commit is made.
+- [refactor] Improved resilience of the `push` operation in `commit_and_push`. Added handling for new branches and diverged branches.
+
+## [v4.1] — 2026-02-20
+## v4.1
+
+- [feat] Updated date formatting in `DashboardView.tsx`.
+- [refactor] Replaced `ACCENT_MAP` with inline styling in `DashboardView.tsx`.
+- [docs] Updated architecture documentation formatting.
+- [docs] Added sub-bullets to `navigationStore` properties in architecture documentation.
+- [feat] Added conductor and JIT product image sources to `ProductTile.tsx`.
+- [feat] Added badges to `ProductTile.tsx` to indicate image source.
+- [refactor] Added `auto_mode` parameter to `execute_swarm` function.
+- [feat] Added a new `Size` file containing helper components.
+- [feat] Added evolution proposal: Efficient Debounce/Throttle Library.
+- [feat] Added evolution proposal: Next-gen Image CDN with AVIF support.
+
+## [v4.1] — 2026-02-20
 ```
 ## [v4.1]
 
