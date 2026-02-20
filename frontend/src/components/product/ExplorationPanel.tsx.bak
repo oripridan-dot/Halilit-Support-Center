@@ -242,11 +242,11 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
    * @param stepIndex - The index of the step.
    */
   const toggleStep = useCallback((sectionIndex: number, stepIndex: number): void => {
-    const stepKey = `${sectionIndex}-${stepIndex}`;
-    setCheckedSteps(prevCheckedSteps => {
-      const nextCheckedSteps = new Set(prevCheckedSteps);
-      nextCheckedSteps.has(stepKey) ? nextCheckedSteps.delete(stepKey) : nextCheckedSteps.add(stepKey);
-      return nextCheckedSteps;
+    const key = `${sectionIndex}-${stepIndex}`;
+    setCheckedSteps(prev => {
+      const next = new Set(prev);
+      next.has(key) ? next.delete(key) : next.add(key);
+      return next;
     });
   }, []);
 
