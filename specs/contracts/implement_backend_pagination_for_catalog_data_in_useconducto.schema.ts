@@ -1,24 +1,34 @@
-```typescript
 // Contract: Implement Backend Pagination for Catalog Data in `useConductorCatalog`
 
-export const CATALOG_ENDPOINT = '/api/conductor/catalog';
+// Endpoint
+export const CATALOG_ENDPOINT = "/api/conductor/catalog";
 
+// Request (Query Parameters)
+export interface CatalogRequestParams {
+    page?: number;
+    pageSize?: number;
+    searchQuery?: string;
+    sortBy?: string;
+    category?: string;
+    brand?: string;
+}
+
+// Shared Types
 export interface ConductorProduct {
-  [key: string]: any; // Allow any properties for flexibility
+    id: string;
+    name: string;
+    description: string;
+    imageUrl: string;
+    brand: string;
+    category: string;
+    price: number;
 }
 
+// Response
 export interface PaginatedCatalogResponse {
-  products: ConductorProduct[];
-  totalItems: number;
-  totalPages: number;
-  currentPage: number;
-  pageSize: number;
+    products: ConductorProduct[];
+    totalItems: number;
+    totalPages: number;
+    currentPage: number;
+    pageSize: number;
 }
-
-export interface ConductorCatalogResponse {
-  data: PaginatedCatalogResponse;
-  isLoading: boolean;
-  error: any;
-  refetch: () => void;
-}
-```

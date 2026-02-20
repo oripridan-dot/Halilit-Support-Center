@@ -1,8 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
+import { useState } from 'react';
 import {
-  CONDUCTOR_CATALOG_ENDPOINT,
+  CATALOG_ENDPOINT,
+  CatalogRequestParams,
   PaginatedCatalogResponse,
   ConductorProduct,
+} from '../hooks/implement_backend_pagination_for_catalog_data_in_useconducto.schema';
 
 interface UseConductorCatalogProps {
   page?: number;
@@ -21,48 +24,57 @@ const useConductorCatalog = ({
   category = '',
   brand = '',
 }: UseConductorCatalogProps) => {
-  const params = new URLSearchParams({
-    page: String(page),
-    pageSize: String(pageSize),
+  const [error, setError] = useState<string | null>(null);
+
+  const params: CatalogRequestParams = {
+    page,
+    pageSize,
     searchQuery,
     sortBy,
     category,
     brand,
-  });
-
-  const url = `${CONDUCTOR_CATALOG_ENDPOINT}?${params.toString()}`;
+  };
 
   const {
     data,
     isLoading,
-    error,
-    refetch,
-  } = useQuery<PaginatedCatalogResponse, any>({
-    queryKey: ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
+    isError,
+  } = useQuery<PaginatedCatalogResponse, Error>({
+    queryKey: ['catalog', params],
     queryFn: async () => {
-      const response = await fetch(url);
+      const url = new URL(CATALOG_ENDPOINT, window.location.origin);
+      Object.entries(params).forEach(([key, value]) => {
+        if (value !== '' && value !== undefined) {
+          url.searchParams.append(key, String(value));
+        }
+      });
+      const response = await fetch(url.toString());
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.json();
     },
+    onError: (err: Error) => {
+      setError(err.message);
+    },
   });
 
-  const products = data?.products || [];
+  const products: ConductorProduct[] = data?.products || [];
   const totalItems = data?.totalItems || 0;
   const totalPages = data?.totalPages || 0;
   const currentPage = data?.currentPage || 1;
-  const currentPageSize = data?.pageSize || 25;
+  const pageSize = data?.pageSize || 25;
 
   return {
     products,
     totalItems,
     totalPages,
     currentPage,
-    pageSize: currentPageSize,
+    pageSize,
     isLoading,
+    isError,
     error,
-    refetch,
   };
 };
 
