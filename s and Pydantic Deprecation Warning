@@ -1,0 +1,161 @@
+import React, { useState, useEffect, useRef } from "react";
+import { Boxes } from "lucide-react";
+
+// Inline SourceBadge — lightweight; no external dependency needed here
+const SOURCE_COLORS: Record<string, string> = {
+  COMMERCIAL: "bg-green-900 text-green-300 border-green-600",
+  OFFICIAL: "bg-blue-900 text-blue-300 border-blue-600",
+  CONTEXTUAL: "bg-amber-900 text-amber-300 border-amber-600",
+};
+function SourceBadge({
+  type,
+  label,
+  unavailable,
+}: {
+  type: string;
+  label: string;
+  unavailable?: boolean;
+}) {
+  const colors =
+    SOURCE_COLORS[type] ?? "bg-zinc-800 text-zinc-400 border-zinc-600";
+  return (
+    <span
+      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded border text-xs font-semibold ${colors} ${unavailable ? "opacity-40" : ""}`}
+    >
+      {unavailable && <span title="Source unavailable">🔒</span>}
+      {label}
+    </span>
+  );
+}
+
+interface ExplorerViewProps {
+  // Add any necessary props here
+}
+
+enum PricingTier {
+  ENTRY = "ENTRY",
+  MID = "MID",
+  PRO = "PRO",
+  FLAGSHIP = "FLAGSHIP",
+  LEGACY = "LEGACY",
+}
+
+enum DataSourceConfidence {
+  OFFICIAL = "OFFICIAL",
+  TRUSTED = "TRUSTED",
+  COMMERCIAL = "COMMERCIAL",
+  USER = "USER",
+  INFERRED = "INFERRED",
+}
+
+interface IngestionProductDraft {
+  id: string;
+  name: string;
+  brand: string;
+  description: string;
+  price: number;
+  pricing_tier: PricingTier;
+  data_source_confidence: DataSourceConfidence;
+  // ... other properties
+}
+
+const ExplorerView: React.FC<ExplorerViewProps> = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [product, setProduct] = useState<ConductorProduct | null>(null);
+  const [jitComputing, setJitComputing] = useState(false);
+  const [rendered, setRendered] = useState(false);
+  const [renderedPartial, setRenderedPartial] = useState(false);
+  const [relatedOpen, setRelatedOpen] = useState(false);
+  const [streamingText, setStreamingText] = useState("");
+  const sseRef = useRef<EventSource | null>(null);
+
+  const handleProductSelect = (selectedProduct: ConductorProduct) => {
+    setProduct(selectedProduct);
+    setIsLoading(false); // Assuming immediate transition
+    setJitComputing(true);
+    setRendered(false);
+    setRenderedPartial(false);
+    setStreamingText("");
+
+    // Start SSE stream
+    const eventSource = new EventSource(
+      `/api/product/${selectedProduct.id}/jit`,
+    ); // Replace with your actual endpoint
+    sseRef.current = eventSource;
+
+    eventSource.onopen = () => {
+      console.log("SSE connection opened");
+    };
+
+    eventSource.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.type === "text") {
+          setStreamingText((prevText) => prevText + data.content);
+        }
+      } catch (e: any) {
+        console.error("SSE message parsing error:", e);
+        setError("Error processing product data.");
+      }
+    };
+
+    eventSource.onerror = (error) => {
+      console.error("SSE error:", error);
+      setError("Error connecting to product data stream.");
+      setIsLoading(false);
+      setJitComputing(false);
+    };
+  };
+
+
+  useEffect(() => {
+    return () => {
+      if (sseRef.current) {
+        sseRef.current.close();
+        console.log("SSE connection closed");
+      }
+    };
+  }, []);
+
+  return (
+    <div className="dark:bg-zinc-900 min-h-screen p-4">
+      <GlobalErrorBoundary>
+        <h1 className="text-2xl dark:text-zinc-100 font-semibold mb-4">
+          <Boxes className="inline-block mr-2" size={24} />
+          Product Explorer
+        </h1>
+
+        {/* Placeholder for product selection - integrate with GlobalSearch or similar */}
+        {/* <GlobalSearch onSelect={handleProductSelect} /> */}
+
+        {product && (
+          <div className="dark:text-zinc-100">
+            <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
+            {/* Display product details here */}
+          </div>
+        )}
+
+        {/* Loading and Error States */}
+        {isLoading && (
+          <div className="dark:text-zinc-400">
+            <p>Loading product data...</p>
+          </div>
+        )}
+        {error && (
+          <div className="text-red-500">
+            <p>Error: {error}</p>
+          </div>
+        )}
+
+        {jitComputing && (
+          <div className="mt-4">
+            <ResearchAnimation streamingText={streamingText} />
+          </div>
+        )}
+      </GlobalErrorBoundary>
+    </div>
+  );
+};
+
+export default ExplorerView;
