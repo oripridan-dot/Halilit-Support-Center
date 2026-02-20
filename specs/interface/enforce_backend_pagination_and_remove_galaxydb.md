@@ -1,11 +1,11 @@
 # Spec: Enforce Backend Pagination and Remove GalaxyDB
 
-**Version:** 1.6
+**Version:** 1.7
 **Component:** `frontend/src/hooks/useConductorCatalog.ts`
 
 ## Purpose
 
-Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API. This version incorporates image fallback using a shared component.
+Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API. This version enforces default parameters for pagination.
 
 ## Requirements
 
@@ -29,92 +29,35 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
     *   Fetches data from the paginated `/api/conductor/catalog` endpoint using the provided parameters.
     *   Returns the `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
     *   Uses `react-query` to manage the fetching and caching of paginated data.
-
-6.  **Image Fallback Component:** Create (if not exists) and use the `ImageWithFallback` component to display product images with a fallback mechanism.
-
-7.  **Error Handling:** Maintain existing error handling for API requests, displaying error messages to the user if the data cannot be fetched.
+6.  **Default Parameter Handling:** The `useConductorCatalog` hook must explicitly set default values for `page` and `pageSize` when constructing the API request if those values are undefined. This ensures the backend always receives pagination parameters.
 
 ## Behavior Scenarios
 
-1.  **Scenario:** Initial Load
-    *   Input: `page = 1`, `pageSize = 25`, no search query, default sorting.
-    *   Outcome: The hook fetches the first page of catalog data from the backend and returns 25 products (or less if fewer than 25 products exist). The total number of items, total pages, current page, and page size are also returned.
+1.  **Scenario:** Initial Load - No Parameters Specified
+    *   Input: The `useConductorCatalog` hook is called without any parameters.
+    *   Outcome: The hook fetches data from `/api/conductor/catalog?page=1&pageSize=25`.
+    *   Outcome: The hook returns the first page of products (up to 25 items).
 
-2.  **Scenario:** User Navigates to Next Page
-    *   Input: `page = 2`, `pageSize = 25`, no search query, default sorting.
-    *   Outcome: The hook fetches the second page of catalog data from the backend and returns 25 products (or less if fewer than 25 products exist). The total number of items, total pages, current page, and page size are also returned.
+2.  **Scenario:** Page Parameter Specified
+    *   Input: The `useConductorCatalog` hook is called with `page = 3`.
+    *   Outcome: The hook fetches data from `/api/conductor/catalog?page=3&pageSize=25`.
+    *   Outcome: The hook returns the third page of products (up to 25 items).
 
-3.  **Scenario:** User Performs a Search
-    *   Input: `page = 1`, `pageSize = 25`, `searchQuery = "keyboard"`, default sorting.
-    *   Outcome: The hook fetches the first page of search results from the backend and returns 25 products (or less if fewer than 25 products match the search query). The total number of matching items, total pages, current page, and page size are also returned.
+3.  **Scenario:** PageSize Parameter Specified
+    *   Input: The `useConductorCatalog` hook is called with `pageSize = 50`.
+    *   Outcome: The hook fetches data from `/api/conductor/catalog?page=1&pageSize=50`.
+    *   Outcome: The hook returns the first page of products (up to 50 items).
 
-4. **Scenario: API Error**
-    * Input: The `/api/conductor/catalog` endpoint returns a 500 error.
-    * Outcome: The hook returns an error object, and the UI displays an appropriate error message to the user.
+4.  **Scenario:** Both Page and PageSize Parameters Specified
+    *   Input: The `useConductorCatalog` hook is called with `page = 2` and `pageSize = 10`.
+    *   Outcome: The hook fetches data from `/api/conductor/catalog?page=2&pageSize=10`.
+    *   Outcome: The hook returns the second page of products (up to 10 items).
 
-## Stitch UI Prompt
-```text
-// Component: useConductorCatalog
-// Description: React hook that fetches and provides access to a paginated product catalog from a backend API.  Includes filtering, sorting, and pagination support.  Should NOT attempt to read any local files.
-
-// Layout: This is NOT a visual component. It is a React Hook with pagination and filtering logic.
-// Visual Style: N/A
-
-// Data Slots:
-//  - page: number (current page number)
-//  - pageSize: number (number of items per page)
-//  - searchQuery: string (search query)
-//  - sortBy: string (field to sort by)
-//  - category: string (category filter)
-//  - brand: string (brand filter)
-//  - products: ConductorProduct[] (array of product objects)
-//  - totalItems: number (total number of items in the catalog)
-//  - totalPages: number (total number of pages in the catalog)
-//  - isLoading: boolean (indicates if the data is currently being fetched)
-//  - error: any (contains any error that occurred during the data fetch)
-
-//  ConductorProduct interface:
-//   - id: string;
-//   - name: string;
-//   - brand: string;
-//   - brand_logo?: string;
-//   - galaxy_id?: string;
-//   - spectrum_id?: string;
-//   - category?: string;
-//   - price?: number;
-//   - price_eilat?: number;
-//   - tier?: string;
-//   - image_url?: string;
-//   - image_gallery?: string[];
-//   - description?: string;
-//   - description_short?: string;
-//   - specs?: Record<string, unknown>;
-//   - features?: string[];
-//   - rating?: number;
-//   - review_count?: number;
-//   - pros?: string[];
-//   - cons?: string[];
-//   - quality_score?: number;
-//   - data_status?: string;
-//   - data_missing?: string[];
-//   - halilit_url?: string;
-//   - official_url?: string;
-//   - sources?: string[];
-//   - family_id?: string | null;
-//   - variant_key?: string | null;
-//   - relationship_ids?: string[];
-
-// Instructions:
-//  - Implement a React hook using @tanstack/react-query to fetch paginated product catalog data from the /api/conductor/catalog endpoint.
-//  - Accept optional parameters for page, pageSize, searchQuery, sortBy, category, and brand.
-//  - Construct the API URL with the appropriate query parameters.
-//  - Handle loading and error states.
-//  - Return the products array, totalItems, totalPages, currentPage, pageSize, isLoading, error, and refetch from the hook.
-//  - Ensure that the hook does NOT attempt to read or import the galaxy_db.json file.
-```
+5.  **Scenario:** Search Query, Sort, Filter, and Pagination Parameters Specified
+    *   Input: The `useConductorCatalog` hook is called with `page = 3`, `pageSize = 15`, `searchQuery = "keyboard"`, `sortBy = "price"`, `category = "Musical Instruments"`, and `brand = "Roland"`.
+    *   Outcome: The hook fetches data from `/api/conductor/catalog?page=3&pageSize=15&searchQuery=keyboard&sortBy=price&category=Musical%20Instruments&brand=Roland`.
+    *   Outcome: The hook returns the third page of "keyboard" products (up to 15 items), sorted by price, filtered by "Musical Instruments" category and "Roland" brand.
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
-- (Manual test): Verify that `galaxy_db.json` is physically deleted from the `frontend/public/data` directory.
-- (Manual test): Verify that the Inventory Grid and Product Detail pages load correctly with data fetched from the backend API. Verify that filtering, sorting, and pagination work as expected.

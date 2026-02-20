@@ -51,3 +51,12 @@ export interface PaginatedCatalogResponse {
     currentPage: number;
     pageSize: number;
 }
+
+export interface CatalogRequestParams {
+    page?: number;
+    pageSize?: number;
+    searchQuery?: string;
+    sortBy?: string;
+    category?: string;
+    brand?: string;
+}

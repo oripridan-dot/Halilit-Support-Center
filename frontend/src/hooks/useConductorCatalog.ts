@@ -5,7 +5,9 @@ import {
   CatalogRequestParams,
   PaginatedCatalogResponse,
   ConductorProduct,
-} from '../hooks/implement_backend_pagination_for_catalog_data_in_useconducto.schema';
+} from './implement_backend_pagination_for_catalog_data_in_useconducto.schema';
+
+export type { ConductorProduct };
 
 interface UseConductorCatalogProps {
   page?: number;
@@ -16,9 +18,9 @@ interface UseConductorCatalogProps {
   brand?: string;
 }
 
-const useConductorCatalog = ({
+export const useConductorCatalog = ({
   page = 1,
-  pageSize = 25,
+  pageSize: pageSizeProp = 25,
   searchQuery = '',
   sortBy = '',
   category = '',
@@ -28,7 +30,7 @@ const useConductorCatalog = ({
 
   const params: CatalogRequestParams = {
     page,
-    pageSize,
+    pageSize: pageSizeProp,
     searchQuery,
     sortBy,
     category,
@@ -51,12 +53,11 @@ const useConductorCatalog = ({
       const response = await fetch(url.toString());
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const msg = `HTTP error! status: ${response.status}`;
+        setError(msg);
+        throw new Error(msg);
       }
       return response.json();
-    },
-    onError: (err: Error) => {
-      setError(err.message);
     },
   });
 
@@ -64,7 +65,7 @@ const useConductorCatalog = ({
   const totalItems = data?.totalItems || 0;
   const totalPages = data?.totalPages || 0;
   const currentPage = data?.currentPage || 1;
-  const pageSize = data?.pageSize || 25;
+  const pageSize = data?.pageSize || pageSizeProp;
 
   return {
     products,
@@ -79,3 +80,48 @@ const useConductorCatalog = ({
 };
 
 export default useConductorCatalog;
+
+// ─── Stub hooks (awaiting implementation) ───────────────────────────────────
+// These are re-exported from hooks/index.ts; stubs keep the barrel valid.
+
+export const useProductsByGalaxy = (_galaxyId?: string) => ({
+  products: [] as ConductorProduct[],
+  isLoading: false,
+  isError: false,
+});
+
+export const useProductsBySpectrum = (_spectrumId?: string) => ({
+  products: [] as ConductorProduct[],
+  isLoading: false,
+  isError: false,
+});
+
+export const useProductRelationships = (_productId?: string) => ({
+  relationships: [],
+  isLoading: false,
+  isError: false,
+});
+
+export const useProductFamily = (_familyId?: string) => ({
+  family: null,
+  isLoading: false,
+  isError: false,
+});
+
+export const useProductVariants = (_productId?: string) => ({
+  variants: [] as ConductorProduct[],
+  isLoading: false,
+  isError: false,
+});
+
+export const useConductorProductsByCategory = (_category?: string) => ({
+  products: [] as ConductorProduct[],
+  isLoading: false,
+  isError: false,
+});
+
+export const useSpectrumStar = (_spectrumId?: string) => ({
+  star: null,
+  isLoading: false,
+  isError: false,
+});
