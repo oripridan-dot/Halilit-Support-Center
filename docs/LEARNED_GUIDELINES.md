@@ -89,3 +89,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Unknown internal agent interactions led to errors.
 **Fix:** Corrected underlying inner agents system errors.
 **Lesson:** ALWAYS rigorously test inner-agent interactions.
+
+### [2026-02-20] Missing Import Prevents Build
+**Symptom:** UI validation failed during build process.
+**Root Cause:** Missing or misnamed import statement.
+**Fix:** Corrected import statements in the frontend.
+**Lesson:** ALWAYS verify imports after code changes.

@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """
-THE CHIEF: PROJECT NEXUS — nexus.py  (v4.0 — Chief Edition)
+THE CHIEF: PROJECT NEXUS â nexus.py  (v4.1 â Chief Edition)
 ============================================================
 Massively Parallel AI Engineering Console for the Dark Factory.
 
+v4.1 changes:
+  â¢ mentor_insight from Chief is now displayed after every briefing.
+  â¢ fitness tool added to action map with proper icon.
+  â¢ Version aligned with project v9.7.2.
+
 Features:
-  • Chief now outputs a TASK QUEUE instead of a single action.
-  • Independent tasks run in PARALLEL via ThreadPoolExecutor.
-  • Sequential barriers (commit, heal, build) wait for all parallel
+  â¢ Chief now outputs a TASK QUEUE instead of a single action.
+  â¢ Independent tasks run in PARALLEL via ThreadPoolExecutor.
+  â¢ Sequential barriers (commit, heal, build) wait for all parallel
     tasks before executing.
 
 Start with:
@@ -55,10 +60,10 @@ ROOT = Path(__file__).resolve().parent
 def print_box(text: str, color: str = CYAN) -> None:
     """Prints text wrapped inside a Unicode box."""
     lines = textwrap.wrap(text, width=70)
-    print(color + "┌" + "─" * 72 + "┐")
+    print(color + "â" + "â" * 72 + "â")
     for line in lines:
-        print(f"│ {line:<70} │")
-    print("└" + "─" * 72 + "┘" + RESET)
+        print(f"â {line:<70} â")
+    print("â" + "â" * 72 + "â" + RESET)
 
 
 def type_writer(text: str, speed: float = 0.006) -> None:
@@ -71,16 +76,16 @@ def type_writer(text: str, speed: float = 0.006) -> None:
 
 
 def hr() -> None:
-    print(f"{DIM}{'─' * 52}{RESET}")
+    print(f"{DIM}{'â' * 52}{RESET}")
 
 
 def print_header() -> None:
     os.system("cls" if os.name == "nt" else "clear")
     print(f"{CYAN}{BOLD}")
-    print("╔══════════════════════════════════════════════╗")
-    print("║   THE CHIEF — PROJECT NEXUS  v4.0            ║")
-    print("║   Chief Edition · Dark Factory               ║")
-    print("╚══════════════════════════════════════════════╝")
+    print("ââââââââââââââââââââââââââââââââââââââââââââââââ")
+    print("â   THE CHIEF â PROJECT NEXUS  v4.1            â")
+    print("â   Chief Edition Â· Dark Factory Â· v9.7.2     â")
+    print("ââââââââââââââââââââââââââââââââââââââââââââââââ")
     print(RESET)
 
 
@@ -89,23 +94,24 @@ def print_header() -> None:
 # ---------------------------------------------------------------------------
 
 _ACTION_MAP = {
-    "design":     ("build",      "🏗️  ARCHITECT",      "Drafting new blueprints..."),
-    "implement":  ("build",      "🔨 BUILDER",         "Translating specs to code..."),
-    "build":      ("build",      "⚙️  CONDUCTOR",      "Rebuilding the product catalog..."),
-    "heal":       ("heal",       "🚑 WATCHDOG",        "Diagnosing and auto-repairing (up to 3 cycles)..."),
-    "ui_validate": ("ui_validate", "🖥️  UI VALIDATOR",   "Scanning imports + Vite build check..."),
-    "diagnose":   ("diagnose",   "🔍 WATCHDOG SCAN",   "Scanning for errors — no auto-fix..."),
-    "steer":      ("steer",      "🧭 STRATEGIST",      "Analysing master plan..."),
-    "doc":        ("doc",        "📝 SCRIBE",          "Regenerating ARCHITECTURE.md..."),
-    "optimize":   ("optimize",   "✨ OPTIMIZER",        "Refactoring file..."),
-    "commit":     ("commit",     "👮 REPO AGENT",      "Staging and committing progress..."),
-    "reflect":    ("reflect",    "🧠 MENTOR",          "Extracting lesson → updating LEARNED_GUIDELINES.md..."),
-    "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
-    "v0_design":  ("v0_design",  "🎨 V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
-    "scout":      ("scout",      "🔭 SCOUT",           "Scanning for new tools → writing Evolution Proposals..."),
-    "synthesize": ("synthesize", "🧬 RIBOSOME",       "Translating Genome → Synthesis Directive (protein folding)..."),
-    "mutate":     ("mutate",     "🧫 MUTATION ENGINE", "Analysing fitness logs → evolving agent DNA..."),
-    "fitness":    ("fitness",    "📊 FITNESS LEDGER", "Printing per-agent fitness scores and generation counts..."),
+    "design":     ("build",      "ðï¸  ARCHITECT",      "Drafting new blueprints..."),
+    "implement":  ("build",      "ð¨ BUILDER",         "Translating specs to code..."),
+    "build":      ("build",      "âï¸  CONDUCTOR",      "Rebuilding the product catalog..."),
+    "heal":       ("heal",       "ð WATCHDOG",        "Diagnosing and auto-repairing (up to 3 cycles)..."),
+    "ui_validate": ("ui_validate", "ð¥ï¸  UI VALIDATOR",   "Scanning imports + Vite build check..."),
+    "diagnose":   ("diagnose",   "ð WATCHDOG SCAN",   "Scanning for errors â no auto-fix..."),
+    "sandbox":    ("sandbox",    "ðï¸  SANDBOX",        "Inner-loop: generate â tsc/lint/vite â self-heal (5 rounds)..."),
+    "steer":      ("steer",      "ð§­ STRATEGIST",      "Analysing master plan..."),
+    "doc":        ("doc",        "ð SCRIBE",          "Regenerating ARCHITECTURE.md..."),
+    "optimize":   ("optimize",   "â¨ OPTIMIZER",        "Refactoring file..."),
+    "commit":     ("commit",     "ð® REPO AGENT",      "Staging and committing progress..."),
+    "reflect":    ("reflect",    "ð§  MENTOR",          "Extracting lesson â updating LEARNED_GUIDELINES.md..."),
+    "task_force": ("task_force", "âï¸  TASK FORCE",     "Assembling multi-agent Task Force (SteererâBuilderâWatchdog)..."),
+    "v0_design":  ("v0_design",  "ð¨ V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
+    "scout":      ("scout",      "ð­ SCOUT",           "Scanning for new tools â writing Evolution Proposals..."),
+    "synthesize": ("synthesize", "ð§¬ RIBOSOME",       "Translating Genome â Synthesis Directive (protein folding)..."),
+    "mutate":     ("mutate",     "ð§« MUTATION ENGINE", "Analysing fitness logs â evolving agent DNA..."),
+    "fitness":    ("fitness",    "ð FITNESS LEDGER",  "Printing per-agent fitness scores and generation counts..."),
 }
 
 
@@ -182,10 +188,10 @@ def run_process(task: dict) -> dict:
     if tool == "optimize" and args:
         target_path = ROOT / args
         if not target_path.exists():
-            msg = (f"❌ [OPTIMIZE] Skipped — file does not exist: {args}\n"
+            msg = (f"â [OPTIMIZE] Skipped â file does not exist: {args}\n"
                    f"   The Chief hallucinated this path. Only optimize real files.")
             return {"tool": tool, "args": args, "success": False,
-                    "summary": f"❌ [OPTIMIZE {args}] File not found — skipped",
+                    "summary": f"â [OPTIMIZE {args}] File not found â skipped",
                     "error_output": msg}
 
     # task_force uses a special command builder
@@ -204,7 +210,7 @@ def run_process(task: dict) -> dict:
         duration = round(time.time() - start_time, 2)
         success = result.returncode == 0
         label = f"{tool.upper()} {args}".strip()
-        status = "✅" if success else "❌"
+        status = "â" if success else "â"
         # Combine stdout+stderr for failure context (last 40 lines avoids noise)
         combined = (result.stdout + "\n" + result.stderr).strip()
         tail = "\n".join(combined.splitlines()[-40:]) if combined else ""
@@ -217,7 +223,7 @@ def run_process(task: dict) -> dict:
         }
     except Exception as e:
         return {"tool": tool, "args": args, "success": False,
-                "summary": f"❌ [{tool.upper()}] Exception: {e}",
+                "summary": f"â [{tool.upper()}] Exception: {e}",
                 "error_output": str(e)}
 
 
@@ -246,10 +252,10 @@ def execute_sequential(task: dict) -> dict:
     if tool == "optimize" and args:
         target_path = ROOT / args
         if not target_path.exists():
-            print(f"\n❌ [OPTIMIZE] File not found — skipped: {args}")
+            print(f"\nâ [OPTIMIZE] File not found â skipped: {args}")
             print(f"   The Chief hallucinated this path. Only optimize real files.")
             return {"tool": tool, "args": args, "success": False,
-                    "summary": f"❌ [OPTIMIZE {args}] File not found — skipped",
+                    "summary": f"â [OPTIMIZE {args}] File not found â skipped",
                     "error_output": f"File does not exist: {args}"}
 
     cmd = _build_task_force_cmd(
@@ -264,7 +270,7 @@ def execute_sequential(task: dict) -> dict:
         label = f"{tool.upper()} {args}".strip()
         return {
             "tool": tool, "args": args, "success": success,
-            "summary": f"{'✅' if success else '❌'} [{label}]",
+            "summary": f"{'â' if success else 'â'} [{label}]",
             "error_output": "\n".join(proc.stderr.splitlines()[-40:]) if proc.stderr and not success else "",
         }
     else:
@@ -283,8 +289,8 @@ def review_changes(auto_mode: bool = False) -> bool:
     Human-on-the-Loop gate: display modified files, let the Operator
     approve, inspect, or reject before the next task batch runs.
 
-    Returns True  → changes accepted (and committed).
-    Returns False → changes reverted via git restore.
+    Returns True  â changes accepted (and committed).
+    Returns False â changes reverted via git restore.
     """
     # Quick-exit: no tracked changes means nothing to review
     status = subprocess.run(
@@ -292,16 +298,16 @@ def review_changes(auto_mode: bool = False) -> bool:
         capture_output=True, text=True
     )
     if not status.stdout.strip():
-        print(f"\n{DIM}✔ No working-tree changes detected — gate passed.{RESET}")
+        print(f"\n{DIM}â No working-tree changes detected â gate passed.{RESET}")
         return True
 
-    print(f"\n{BOLD}{YELLOW}{'─' * 52}")
-    print("🛑  STEERING GATE — REVIEW MODIFICATIONS")
-    print(f"{'─' * 52}{RESET}")
+    print(f"\n{BOLD}{YELLOW}{'â' * 52}")
+    print("ð  STEERING GATE â REVIEW MODIFICATIONS")
+    print(f"{'â' * 52}{RESET}")
     subprocess.run(["git", "status", "-s"])
 
     if auto_mode:
-        print(f"\n{CYAN}⚡ [AUTO] Changes auto-approved and committed.{RESET}")
+        print(f"\n{CYAN}â¡ [AUTO] Changes auto-approved and committed.{RESET}")
         subprocess.run(["git", "add", "."])
         subprocess.run([
             "git", "commit", "-m",
@@ -323,7 +329,7 @@ def review_changes(auto_mode: bool = False) -> bool:
                 "git", "commit", "-m",
                 "chore: automated batch execution approved"
             ])
-            print(f"{GREEN}✅ Changes committed.{RESET}")
+            print(f"{GREEN}â Changes committed.{RESET}")
             return True
 
         elif decision == "diff":
@@ -332,14 +338,14 @@ def review_changes(auto_mode: bool = False) -> bool:
             continue
 
         elif decision in ("n", "no", "reject"):
-            print(f"{YELLOW}↩  Reverting all uncommitted changes...{RESET}")
+            print(f"{YELLOW}â©  Reverting all uncommitted changes...{RESET}")
             subprocess.run(["git", "restore", "."])
             subprocess.run(["git", "clean", "-fd"])
-            print(f"{RED}✖ Changes rejected and reverted.{RESET}")
+            print(f"{RED}â Changes rejected and reverted.{RESET}")
             return False
 
         else:
-            print(f"{DIM}  Options: Y · n · diff · reject{RESET}")
+            print(f"{DIM}  Options: Y Â· n Â· diff Â· reject{RESET}")
 
 
 # ---------------------------------------------------------------------------
@@ -349,16 +355,16 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
     Parallel Execution Engine.
 
     Strategy:
-      • Accumulate consecutive parallel=True tasks into a batch.
-      • When a parallel=False task appears (or queue ends), flush the batch
+      â¢ Accumulate consecutive parallel=True tasks into a batch.
+      â¢ When a parallel=False task appears (or queue ends), flush the batch
         via ThreadPoolExecutor, then run the sequential task interactively.
-      • After EVERY batch (parallel or sequential) the HOTL Steering Gate fires:
+      â¢ After EVERY batch (parallel or sequential) the HOTL Steering Gate fires:
         the Operator can approve, inspect diff, or reject+revert before the
         next batch starts.
 
     Returns a list of failed task result dicts (empty if all succeeded).
     """
-    print(f"\n{BOLD}🚀 MOBILIZING FACTORY SWARM...{RESET}")
+    print(f"\n{BOLD}ð MOBILIZING FACTORY SWARM...{RESET}")
 
     batch: list[dict] = []
     failures: list[dict] = []
@@ -369,7 +375,7 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
             return
         count = len(batch)
         print(
-            f"\n{CYAN}⚡ Executing parallel batch ({count} agent{'s' if count > 1 else ''})...{RESET}")
+            f"\n{CYAN}â¡ Executing parallel batch ({count} agent{'s' if count > 1 else ''})...{RESET}")
         with ThreadPoolExecutor(max_workers=min(count, 8)) as executor:
             futures = {executor.submit(run_process, t): t for t in batch}
             for future in as_completed(futures):
@@ -378,11 +384,11 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
                 if not res["success"]:
                     failures.append(res)
         batch.clear()
-        # ── HOTL STEERING GATE — fires after every parallel batch ──
+        # ââ HOTL STEERING GATE â fires after every parallel batch ââ
         if not auto_mode:
             approved = review_changes(auto_mode=False)
             if not approved:
-                print(f"{RED}❌ Batch rejected by Operator. Halting queue.{RESET}")
+                print(f"{RED}â Batch rejected by Operator. Halting queue.{RESET}")
                 halted[0] = True
 
     for task in queue:
@@ -395,27 +401,28 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
             if halted[0]:
                 break
             print(
-                f"\n{YELLOW}🔒 Sequential task: {task['tool']} {task.get('args', '')}...{RESET}")
+                f"\n{YELLOW}ð Sequential task: {task['tool']} {task.get('args', '')}...{RESET}")
             res = execute_sequential(task)
             if not res.get("success", True):
                 failures.append(res)
-            # ── HOTL STEERING GATE — fires after every sequential task ──
+            # ââ HOTL STEERING GATE â fires after every sequential task ââ
             if not auto_mode:
                 approved = review_changes(auto_mode=False)
                 if not approved:
-                    print(f"{RED}❌ Sequential task rejected by Operator. Halting queue.{RESET}")
+                    print(
+                        f"{RED}â Sequential task rejected by Operator. Halting queue.{RESET}")
                     halted[0] = True
 
     flush_batch()
     if halted[0]:
-        print(f"\n{YELLOW}⏹  Swarm halted at Operator's Steering Gate.{RESET}")
+        print(f"\n{YELLOW}â¹  Swarm halted at Operator's Steering Gate.{RESET}")
     else:
-        print(f"\n{GREEN}🏁 All objectives complete.{RESET}")
+        print(f"\n{GREEN}ð All objectives complete.{RESET}")
     return failures
 
 
 # ---------------------------------------------------------------------------
-# OODA Mutation Cycle — called automatically after every successful batch
+# OODA Mutation Cycle â called automatically after every successful batch
 # ---------------------------------------------------------------------------
 
 def _run_ooda_mutation_cycle() -> None:
@@ -458,10 +465,10 @@ def _run_ooda_mutation_cycle() -> None:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
-    # ---- CLI flags (Phase 4 — Auto-Pilot) ----------------------------------
+    # ---- CLI flags (Phase 4 â Auto-Pilot) ----------------------------------
     parser = argparse.ArgumentParser(
         prog="nexus.py",
-        description="THE CHIEF: Project Nexus — Massively Parallel AI Engineering Console",
+        description="THE CHIEF: Project Nexus â Massively Parallel AI Engineering Console",
     )
     parser.add_argument(
         "--auto",
@@ -493,7 +500,7 @@ def main() -> None:
         try:
             from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
         except ImportError as exc:
-            print(f"{RED}Error: Could not load Tech Lead Agent — {exc}{RESET}")
+            print(f"{RED}Error: Could not load Tech Lead Agent â {exc}{RESET}")
             sys.exit(1)
         generate_morning_briefing()
         sys.exit(0)
@@ -504,12 +511,12 @@ def main() -> None:
 
     if auto_mode:
         print(
-            f"{YELLOW}{BOLD}⚡ AUTO-PILOT ENGAGED — plans execute without confirmation.{RESET}")
+            f"{YELLOW}{BOLD}â¡ AUTO-PILOT ENGAGED â plans execute without confirmation.{RESET}")
     if dry_run:
         print(
-            f"{CYAN}{BOLD}💤 DRY-RUN MODE — tasks will be printed but NOT executed.{RESET}")
+            f"{CYAN}{BOLD}ð¤ DRY-RUN MODE â tasks will be printed but NOT executed.{RESET}")
 
-    # Kill Switch — abort after this many consecutive failures
+    # Kill Switch â abort after this many consecutive failures
     KILL_SWITCH_THRESHOLD = 3
     consecutive_failures: int = 0
 
@@ -526,25 +533,28 @@ def main() -> None:
     try:
         from chief_agent import consult_chief  # noqa: PLC0415
     except ImportError as exc:
-        print(f"{RED}Error: Could not load Chief Agent — {exc}{RESET}")
+        print(f"{RED}Error: Could not load Chief Agent â {exc}{RESET}")
         print("  Make sure backend/factory/chief_agent.py exists.")
         sys.exit(1)
 
     # ---- Startup -----------------------------------------------------------
     print_header()
-    print(f"{BOLD}🔗 PROJECT NEXUS: SWARM EDITION ONLINE{RESET}")
+    print(f"{BOLD}ð PROJECT NEXUS: SWARM EDITION ONLINE{RESET}")
     print("---------------------------------------")
 
-    print(f"\n{DIM}🧠 Analyzing Project State...{RESET}")
+    print(f"\n{DIM}ð§  Analyzing Project State...{RESET}")
     initial_input = args.instruction or ""
     plan = consult_chief(initial_input, is_startup=not bool(initial_input))
 
     print(f"\n{GREEN}{BOLD}CHIEF'S BRIEFING:{RESET}")
     type_writer(plan.get("explanation", "(no explanation)"))
-
+    mentor_insight = plan.get("mentor_insight", "")
+    if mentor_insight:
+        print(f"\n{MAGENTA}{BOLD}🎓 MENTOR INSIGHT:{RESET}")
+        type_writer(mentor_insight, speed=0.004)
     proposal = plan.get("proposal", "")
     if proposal:
-        print(f"\n{YELLOW}👉 RECOMMENDATION: {proposal}{RESET}")
+        print(f"\n{YELLOW}ð RECOMMENDATION: {proposal}{RESET}")
 
     hr()
 
@@ -555,10 +565,10 @@ def main() -> None:
             queue = plan.get("queue", [])
 
             if queue:
-                print(f"\n{YELLOW}📋 ACTION PLAN:{RESET}")
+                print(f"\n{YELLOW}ð ACTION PLAN:{RESET}")
                 for i, task in enumerate(queue, 1):
-                    mode = f"{CYAN}⚡ PARALLEL {RESET}" if task.get(
-                        "parallel") else f"{YELLOW}🔒 SEQUENTIAL{RESET}"
+                    mode = f"{CYAN}â¡ PARALLEL {RESET}" if task.get(
+                        "parallel") else f"{YELLOW}ð SEQUENTIAL{RESET}"
                     args_label = task.get("args", "")
                     print(
                         f"   {i}. {mode} | {BOLD}{task['tool'].upper()}{RESET} {args_label}")
@@ -587,7 +597,7 @@ def main() -> None:
                 if auto_mode:
                     confirm = "y"
                     print(
-                        f"\n{CYAN}⚡ [AUTO] Executing {len(queue)} task(s)...{RESET}")
+                        f"\n{CYAN}â¡ [AUTO] Executing {len(queue)} task(s)...{RESET}")
                 else:
                     try:
                         confirm = input(
@@ -612,7 +622,7 @@ def main() -> None:
                             # run one final commit to lock the full swarm result.
                             review_changes(auto_mode=True)
                         consecutive_failures = 0
-                        # ── OODA MUTATION CYCLE (runs silently after each successful batch) ──
+                        # ââ OODA MUTATION CYCLE (runs silently after each successful batch) ââ
                         _run_ooda_mutation_cycle()
                         continue
                     # --- Kill Switch: abort after N consecutive failures ---
@@ -620,14 +630,14 @@ def main() -> None:
                         consecutive_failures += 1
                         if consecutive_failures >= KILL_SWITCH_THRESHOLD:
                             print(
-                                f"\n{RED}{BOLD}🛑 KILL SWITCH TRIGGERED:{RESET}{RED} "
+                                f"\n{RED}{BOLD}ð KILL SWITCH TRIGGERED:{RESET}{RED} "
                                 f"{consecutive_failures} consecutive failure batch(es). "
                                 f"Halting Auto-Pilot to prevent runaway loops.{RESET}"
                             )
                             print(
                                 f"  Last failures:\n"
                                 + "\n".join(
-                                    f"    • {f['tool']} {f.get('args', '')}"
+                                    f"    â¢ {f['tool']} {f.get('args', '')}"
                                     for f in failures
                                 )
                             )
@@ -641,7 +651,7 @@ def main() -> None:
                                     _fh.write(
                                         f"\n[{_dt.datetime.now().isoformat()}] KILL SWITCH TRIGGERED\n"
                                         + "\n".join(
-                                            f"  FAILED: {f['tool']} {f.get('args','')} — {f.get('error_output','')[:300]}"
+                                            f"  FAILED: {f['tool']} {f.get('args','')} â {f.get('error_output','')[:300]}"
                                             for f in failures
                                         ) + "\n"
                                     )
@@ -665,7 +675,7 @@ def main() -> None:
                             for f in failures
                         )
                         print(
-                            f"\n{YELLOW}🔄 Consulting Chief for recovery plan...{RESET}")
+                            f"\n{YELLOW}ð Consulting Chief for recovery plan...{RESET}")
                         plan = consult_chief(
                             "", is_startup=False,
                             failure_context=failure_report
@@ -676,6 +686,11 @@ def main() -> None:
                         thought = plan.get("thought", "")
                         if thought:
                             print(f"  {DIM}[Reasoning: {thought}]{RESET}")
+                        mentor_insight = plan.get("mentor_insight", "")
+                        if mentor_insight:
+                            print(
+                                f"\n{MAGENTA}{BOLD}🎓 RECOVERY INSIGHT:{RESET}")
+                            type_writer(mentor_insight, speed=0.004)
                         hr()
 
                     continue
@@ -691,11 +706,11 @@ def main() -> None:
                     user_input = confirm
 
             else:
-                # No pending queue — free-form input
+                # No pending queue â free-form input
                 if auto_mode:
                     # Auto-Pilot with empty queue: nothing to do, exit gracefully
                     print(
-                        f"\n{GREEN}✅ [AUTO] Queue exhausted. Nexus shutting down.{RESET}")
+                        f"\n{GREEN}â [AUTO] Queue exhausted. Nexus shutting down.{RESET}")
                     break
                 try:
                     user_input = input(f"\n{BOLD}YOU > {RESET}").strip()
@@ -718,10 +733,13 @@ def main() -> None:
             thought = plan.get("thought", "")
             if thought:
                 print(f"  {DIM}[Reasoning: {thought}]{RESET}")
-
+            mentor_insight = plan.get("mentor_insight", "")
+            if mentor_insight:
+                print(f"\n{MAGENTA}{BOLD}🎓 MENTOR INSIGHT:{RESET}")
+                type_writer(mentor_insight, speed=0.004)
             next_proposal = plan.get("proposal", "")
             if next_proposal:
-                print(f"\n{YELLOW}👉 PROPOSAL: {next_proposal}{RESET}")
+                print(f"\n{YELLOW}ð PROPOSAL: {next_proposal}{RESET}")
 
             hr()
 

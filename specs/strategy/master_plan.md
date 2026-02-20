@@ -1,6 +1,6 @@
-# Strategic Master Plan — Halilit Support Center v9.7.0
+# Strategic Master Plan — Halilit Support Center v9.7.2
 
-**Version:** 2.0 · Dark Factory (Librarian Architecture)
+**Version:** 2.1 · Dark Factory (Librarian Architecture)
 **Owner:** Operator
 **Purpose:** The Spine of the Library. Injected into the Chief Agent on every cycle to provide global product context, Ubiquitous Language, and a Chapter Directory. The Chief uses this file to route agents to the exact specs they need — nothing more, nothing less.
 
@@ -93,11 +93,15 @@ Granular specs for individual features. Always implement against the parent Chap
 
 **Goal 2 — Zero Broken Images**
 
-- `specs/interface/product_detail_-_hero_image_validation_service.md`
-- `specs/interface/product_detail_-_image_fallback_implementation.md`
-- `specs/interface/product_detail_-_image_sourcing.md`
+- `specs/interface/product_detail_hero_image_validation_service.md`
+- `specs/interface/product_detail_image_fallback_implementation.md`
+- `specs/interface/product_detail_image_sourcing_and_display.md`
 - `specs/interface/product_image_fallback_and_validation.md`
 - `specs/interface/product_tile_-_image_validation_and_fallback.md`
+- `specs/interface/product_tile_-_image_sourcing_badges.md`
+- `specs/interface/product_tile_image_sourcing_badges.md`
+- `specs/interface/product_tile_-_jit_thumbnail_image.md`
+- `specs/interface/productimage_-_imagewithfallback_component.md`
 - `specs/interface/image_refresh_service.md`
 
 **Goal 3 — Aggressive Out-of-Stock Signaling**
@@ -116,17 +120,18 @@ Granular specs for individual features. Always implement against the parent Chap
 **Goal 5 — Pricing Clarity**
 
 - `specs/pricing_logic.md`
-- `specs/interface/product_detail_-_side-by-side_pricing.md`
 - `specs/interface/product_detail_side_by_side_pricing_component.md`
 - `specs/interface/copy_sku_button_for_product_detail_page.md`
-- `specs/interface/product_detail_-_copy_sku_button.md`
 
 **Cross-Cutting Features**
 
-- `specs/interface/product_detail_-_sourcing_badge.md` — Data trust / sourcing badges
+- `specs/interface/product_detail_sourcing_badge.md` — Data trust / sourcing badges
+- `specs/interface/product_sourcing_badge_component.md` — Reusable sourcing badge component
 - `specs/interface/sourcing_badge_data_trust.md`
-- `specs/interface/product_detail_-_dynamic_jit_badge_updates.md` — JIT streaming
-- `specs/interface/product_detail_-_halilit_url_button.md`
+- `specs/interface/product_detail_dynamic_jit_badge_updates.md` — JIT streaming
+- `specs/interface/product_detail_halilit_url_button.md`
+- `specs/interface/product_tile_-_navigation_on_click.md`
+- `specs/interface/04_natural_explorer_ux.md` — Natural Explorer UX
 
 ### Book 5 — Infrastructure & Fixes
 
@@ -137,6 +142,15 @@ Repair specs and internal service improvements.
 - `specs/interface/improvement_process_cycle_backend_service.md`
 - `specs/interface/refactor_product_detail_view.md`
 - `specs/interface/halilit_api_fetching_machine_status.md`
+
+### Book 6 — Agent & System Evolution
+
+Specs that govern the factory agents themselves and data ingestion infrastructure.
+
+- `specs/interface/agent_autonomy_improvements.md` — Agent self-healing and autonomy rules
+- `specs/interface/catalog_organizer_service.md` — Catalog organizer pipeline service
+- `specs/interface/data_ingestion_rules_engine.md` — Ingestion rules engine
+- `specs/interface/data_pipeline_relationship_logic.md` — Relationship graph pipeline
 
 ---
 
@@ -199,4 +213,4 @@ The Task Force:
 
 **Generation:** 1 (The Pioneers)
 **Started:** February 2026
-**Status:** Active — MVP complete, Evolution Protocol bootstrapped.
+**Status:** Active — v9.7.2 — Product intelligence views live, Evolution Protocol bootstrapped.

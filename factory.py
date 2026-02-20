@@ -1,5 +1,5 @@
 """
-MASTER FACTORY CONTROLLER — Halilit Support Center v9.7.0 Chief
+MASTER FACTORY CONTROLLER — Halilit Support Center v9.7.2 Chief
 Unified CLI for the full development lifecycle.
 
 Commands:

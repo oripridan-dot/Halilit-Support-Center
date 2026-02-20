@@ -1,9 +1,14 @@
 """
-THE CHIEF — Strategic Partner Agent v4.0 (backend/factory/chief_agent.py)
+THE CHIEF — Strategic Partner Agent v4.1 (backend/factory/chief_agent.py)
 
-Massively Parallel Engineering Manager with Failure Recovery.
+Massively Parallel Engineering Manager with Failure Recovery and full v9.7.2 awareness.
 Outputs a TASK QUEUE enabling the Nexus Swarm Console to execute
 independent tasks simultaneously and auto-recover from failures.
+
+v4.1 changes:
+ - Project state scanner now categorises interface specs (canonical vs feature-level).
+ - Recovery mode escalates from heal → implement → sandbox automatically.
+ - Spec inventory injected into Chief context for precise routing.
 """
 
 import sys
@@ -30,8 +35,17 @@ MASTER_PLAN_PATH = SPECS_DIR / "strategy" / \
 # System Prompt — v3.0: Queue Output
 # ---------------------------------------------------------------------------
 SYSTEM_PROMPT = """
-You are THE CHIEF (Level 9). You are a Massively Parallel Engineering Manager, CTO, and a Senior Mentor.
+You are THE CHIEF (Level 9) for Halilit Support Center v9.7.2 Dark Factory.
+You are a Massively Parallel Engineering Manager, CTO, and a Senior Mentor.
 Your Goal: Maximize velocity by identifying tasks that can run SIMULTANEOUSLY, managing COMPLETE processes from start to finish, and exposing your strategic thinking.
+
+ARCHITECTURE GROUND TRUTH (v9.7.2):
+- Frontend: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Views: Dashboard, Inventory, ProductDetail.
+- Backend: Python 3.11+ FastAPI + Gemini 2.0 Flash. Conductor CLI for data pipeline.
+- Three Source Rules: Commercial (Halilit) owns prices/SKUs. Official (Brand) owns specs/media. Contextual (Reviews) owns reviews.
+- ZERO synthetic/mock/AI-generated data. Incomplete data > fake data.
+- All product data flows from /api/conductor/catalog. JIT intelligence is SSE-streamed, never stored as ground truth.
+- Specs live in specs/interface/ (canonical: 01-03 + feature specs). See Master Plan for exact Chapter routing.
 
 STYLE GUIDE:
 1. **Be Parallel:** When multiple independent tasks exist, schedule them in parallel.
@@ -90,6 +104,12 @@ TOOLS & PARALLELISM RULES:
                               from scratch with a clean verified state, queue 'sandbox'
                               directly. It replaces the stale Stitch/human-input workflow.
 - 'explain'     (None):       Plain-English answer; no queue.                          PARALLEL SAFE ✅
+
+SPEC PATH RESOLUTION RULE:
+  When routing to a spec, ALWAYS use the EXACT filename listed in the Project Status Report
+  under 'Interface Specs'. Do NOT invent or guess filenames. If the user asks for a feature
+  that maps to an existing spec, use that spec's path from the list. If no spec exists yet,
+  queue a 'design' task to create one FIRST.
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
 {
@@ -157,9 +177,13 @@ RULES:
 
 RECOVERY MODE (triggered when FAILURE REPORT is present):
 - Read the error output carefully. Identify the root cause.
-- Prefer 'heal' for TypeScript/Python compilation errors.
-- Prefer 'implement' (with the affected spec) for logic/runtime errors.
-- Prefer 'optimize' for import or lint errors in a known file.
+- **ESCALATION LADDER (self-resolving, no human needed):**
+  Level 1: `heal`         → For TypeScript/Python compile errors (auto-patches code).
+  Level 2: `implement`    → For logic/runtime errors (re-implements from spec).
+  Level 3: `sandbox`      → Escalate here only when implement fails ui_validate after Level 2.
+                            Use the spec path that maps to the failing component.
+  NEVER skip levels — always start at Level 1 and only escalate if that level fails.
+- Prefer 'optimize' for import or lint errors in a single known file.
 - Always explain the root cause clearly in "explanation".
 - Never re-run a task that already succeeded.
 - If the error is a missing API key or network failure, use 'explain' to advise the user.
@@ -246,20 +270,51 @@ def get_project_state() -> str:
     git_status = get_git_status()
     state.append(f"Git Status: {git_status}")
 
-    # 2. Check Specs
-    if SPECS_DIR.exists():
-        specs = list(SPECS_DIR.rglob("*.md"))
-        state.append(f"Found {len(specs)} Specification(s) in /specs.")
-        for f in sorted(specs):
-            state.append(f"  - {f.relative_to(ROOT_DIR)}")
+    # 2. Check Specs — categorised for better Chief routing
+    interface_specs_dir = SPECS_DIR / "interface"
+    if interface_specs_dir.exists():
+        canonical = ["01_operator_dashboard.md", "02_inventory_grid.md",
+                     "03_product_intelligence.md", "04_natural_explorer_ux.md"]
+        all_iface = sorted(interface_specs_dir.glob("*.md"))
+        canon_found = [s for s in all_iface if s.name in canonical]
+        feature_specs = [s for s in all_iface if s.name not in canonical]
+        state.append(
+            f"\nInterface Specs \u2014 CANONICAL ({len(canon_found)}/4):")
+        for s in canon_found:
+            state.append(f"  ✓ specs/interface/{s.name}")
+        missing_canon = [n for n in canonical
+                         if not (interface_specs_dir / n).exists()]
+        for m in missing_canon:
+            state.append(f"  ⚠ MISSING: specs/interface/{m}")
+        state.append(
+            f"\nInterface Specs \u2014 FEATURE LEVEL ({len(feature_specs)} specs):")
+        for s in feature_specs:
+            state.append(f"  - specs/interface/{s.name}")
     else:
-        state.append("MISSING: /specs directory not found.")
+        state.append("MISSING: specs/interface directory not found.")
+
+    other_spec_dirs = ["data_pipeline", "01_data", "behavior", "repairs"]
+    for sdir in other_spec_dirs:
+        sd = SPECS_DIR / sdir
+        if sd.exists():
+            files = list(sd.glob("*.md"))
+            if files:
+                state.append(f"\nSpecs \u2014 {sdir}/ ({len(files)} files):")
+                for f in sorted(files):
+                    state.append(f"  - specs/{sdir}/{f.name}")
 
     # 3. Check Frontend views
     if FRONTEND_DIR.exists():
         views = list(FRONTEND_DIR.glob("*.tsx"))
+        cockpit_dir = FRONTEND_DIR.parent / "cockpit"
+        cockpit_files = list(cockpit_dir.glob(
+            "*.tsx")) if cockpit_dir.exists() else []
         state.append(
-            f"Found {len(views)} Frontend View(s): {[v.name for v in views]}")
+            f"\nFrontend Views ({len(views)}): {[v.name for v in views]}")
+        if cockpit_files:
+            state.append(
+                f"Frontend Cockpit components ({len(cockpit_files)}): "
+                f"{[c.name for c in cockpit_files]}")
     else:
         state.append(
             "MISSING: Frontend views folder is empty or does not exist.")
@@ -272,6 +327,26 @@ def get_project_state() -> str:
     else:
         state.append(
             "Backend data artifacts present (learned_taxonomy.json exists).")
+
+    # 5. Factory health check
+    fitness_ledger = ROOT_DIR / "backend" / \
+        "data" / "genome" / "fitness_ledger.json"
+    if fitness_ledger.exists():
+        try:
+            import json as _json
+            ledger = _json.loads(fitness_ledger.read_text(encoding="utf-8"))
+            agents = ledger.get("agents", {})
+            if agents:
+                low_fitness = [(a, round(d.get("score", 1.0), 2))
+                               for a, d in agents.items()
+                               if d.get("score", 1.0) < 0.75]
+                if low_fitness:
+                    state.append(
+                        f"\n⚠️  LOW-FITNESS AGENTS (consider scheduling 'mutate'): "
+                        + ", ".join(f"{a}({s})" for a, s in low_fitness)
+                    )
+        except Exception:
+            pass
 
     return "\n".join(state)
 
