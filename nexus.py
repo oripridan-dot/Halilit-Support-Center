@@ -262,6 +262,74 @@ def execute_sequential(task: dict) -> dict:
 # ---------------------------------------------------------------------------
 # Swarm execution engine
 # ---------------------------------------------------------------------------
+# HOTL Steering Gate
+# ---------------------------------------------------------------------------
+
+def review_changes(auto_mode: bool = False) -> bool:
+    """
+    Human-on-the-Loop gate: display modified files, let the Operator
+    approve, inspect, or reject before the next task batch runs.
+
+    Returns True  → changes accepted (and committed).
+    Returns False → changes reverted via git restore.
+    """
+    # Quick-exit: no tracked changes means nothing to review
+    status = subprocess.run(
+        ["git", "status", "--porcelain"],
+        capture_output=True, text=True
+    )
+    if not status.stdout.strip():
+        print(f"\n{DIM}✔ No working-tree changes detected — gate passed.{RESET}")
+        return True
+
+    print(f"\n{BOLD}{YELLOW}{'─' * 52}")
+    print("🛑  STEERING GATE — REVIEW MODIFICATIONS")
+    print(f"{'─' * 52}{RESET}")
+    subprocess.run(["git", "status", "-s"])
+
+    if auto_mode:
+        print(f"\n{CYAN}⚡ [AUTO] Changes auto-approved and committed.{RESET}")
+        subprocess.run(["git", "add", "."])
+        subprocess.run([
+            "git", "commit", "-m",
+            "chore: automated batch execution approved"
+        ])
+        return True
+
+    while True:
+        try:
+            decision = input(
+                f"\n{BOLD}Approve changes? [{GREEN}Y{RESET}{BOLD}/n/diff/reject]{RESET}: "
+            ).strip().lower()
+        except (KeyboardInterrupt, EOFError):
+            decision = "n"
+
+        if decision in ("", "y", "yes"):
+            subprocess.run(["git", "add", "."])
+            subprocess.run([
+                "git", "commit", "-m",
+                "chore: automated batch execution approved"
+            ])
+            print(f"{GREEN}✅ Changes committed.{RESET}")
+            return True
+
+        elif decision == "diff":
+            subprocess.run(["git", "diff"])
+            # Loop back to let the operator decide after reviewing the diff
+            continue
+
+        elif decision in ("n", "no", "reject"):
+            print(f"{YELLOW}↩  Reverting all uncommitted changes...{RESET}")
+            subprocess.run(["git", "restore", "."])
+            subprocess.run(["git", "clean", "-fd"])
+            print(f"{RED}✖ Changes rejected and reverted.{RESET}")
+            return False
+
+        else:
+            print(f"{DIM}  Options: Y · n · diff · reject{RESET}")
+
+
+# ---------------------------------------------------------------------------
 
 def execute_swarm(queue: list[dict]) -> list[dict]:
     """
@@ -332,12 +400,29 @@ def main() -> None:
         help="Dry Run: show the Chief's plan but do NOT dispatch any tasks.",
     )
     parser.add_argument(
+        "--briefing",
+        action="store_true",
+        help="Tech Lead morning audit: run heuristics scan, write DAILY_BRIEFING.md, and exit.",
+    )
+    parser.add_argument(
         "instruction",
         nargs="?",
         default="",
         help="Optional: initial instruction passed straight to the Chief.",
     )
     args = parser.parse_args()
+
+    # ---- Tech Lead Briefing intercept (runs before any swarm logic) --------
+    if args.briefing:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
+        except ImportError as exc:
+            print(f"{RED}Error: Could not load Tech Lead Agent — {exc}{RESET}")
+            sys.exit(1)
+        generate_morning_briefing()
+        sys.exit(0)
+    # ------------------------------------------------------------------------
 
     auto_mode: bool = args.auto
     dry_run: bool = args.dry_run
@@ -445,6 +530,15 @@ def main() -> None:
                     plan = {"queue": []}
                     hr()
 
+                    # --- HOTL Steering Gate (post-swarm review) -----------
+                    if not failures:
+                        accepted = review_changes(auto_mode=auto_mode)
+                        if not accepted:
+                            print(
+                                f"\n{YELLOW}Changes reverted. Provide a new instruction "
+                                f"or adjust your spec and re-run.{RESET}")
+                        consecutive_failures = 0
+                        continue
                     # --- Kill Switch: abort after N consecutive failures ---
                     if failures:
                         consecutive_failures += 1
@@ -507,8 +601,6 @@ def main() -> None:
                         if thought:
                             print(f"  {DIM}[Reasoning: {thought}]{RESET}")
                         hr()
-                    else:
-                        consecutive_failures = 0  # reset on clean run
 
                     continue
 

@@ -149,7 +149,7 @@ except Exception as e:
     logger.warning(f"Failed to register MCP: {e}")
 
 # Paths
-FRONTEND_DIST = str(FRONTEND_DIR / "dist")
+FRONTEND_DIST = FRONTEND_DIR / "dist"
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -215,6 +215,7 @@ def _load_catalog_from_disk() -> bool:
 # ═══════════════════════════════════════════════════════════════════════════
 # CATALOG CACHE
 # ═══════════════════════════════════════════════════════════════════════════
+
 
 def _build_catalog_cache():
     """Build catalog and cache. Uses disk cache if fresh, else builds from scratch.

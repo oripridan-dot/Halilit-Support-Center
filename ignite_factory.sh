@@ -21,14 +21,42 @@ if [ -z "$GEMINI_API_KEY" ] && [ -z "$GOOGLE_API_KEY" ]; then
 fi
 
 echo ""
-echo "🏭  DARK FACTORY — IGNITION SEQUENCE"
-echo "========================================"
+echo "================================================================="
+echo "⚙️  BOOTING HALILIT SUPPORT CENTER FACTORY"
+echo "================================================================="
 
-# --- Activate venv if present ---
-if [ -f ".venv/bin/activate" ]; then
+# --- Activate venv if not already active ----------------------------------
+if [ -f ".venv/bin/activate" ] && [ -z "$VIRTUAL_ENV" ]; then
     source .venv/bin/activate
     echo "✅  Virtual environment activated (.venv)"
 fi
+
+# --- Tech Lead Morning Audit -----------------------------------------------
+echo ""
+echo "────────────────────────────────────────"
+echo "👔  Tech Lead: Static Analysis Audit"
+echo "────────────────────────────────────────"
+python nexus.py --briefing
+
+# --- Terminal Dashboard: Print Critical Section ----------------------------
+if [ -f "DAILY_BRIEFING.md" ]; then
+    echo ""
+    echo "================================================================="
+    echo "🚨  TECH LEAD DAILY BRIEFING — CRITICALS"
+    echo "================================================================="
+    # Print lines from the CRITICAL section until the MAJOR section begins
+    awk '/🔴 CRITICAL/{flag=1; print; next} /🟠 MAJOR/{flag=0} flag' DAILY_BRIEFING.md
+    echo "================================================================="
+    echo "👉  Read DAILY_BRIEFING.md for the full report and copy-paste commands."
+    echo ""
+fi
+
+# Ask operator to continue before handing off to Nexus
+read -rp "Press ENTER to continue with the ignition sequence..."
+
+echo ""
+echo "🏭  DARK FACTORY — IGNITION SEQUENCE"
+echo "========================================"
 
 # 1. Scaffold folders --------------------------------------------------------
 echo ""
