@@ -1,137 +1,184 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useDebounceValue } from '../../hooks/useDebounceValue';
+import React from 'react';
+import { useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { ArrowUpDown } from 'lucide-react';
+import { useDebounce } from '../../hooks/useDebounce';
 import { useNavigationStore } from '../../store/navigationStore';
 import { useConductorCatalog } from '../../hooks/useConductorCatalog';
-import type { ConductorProduct } from '../../hooks/useConductorCatalog';
+import { ConductorProduct } from '../../types';
 
-// ── Inline throttle hook (no external dep required) ──────────────────────────
+const InventoryView = () => {
+  const { data: products, isLoading, isError } = useConductorCatalog();
+  const [searchText, setSearchText] = React.useState('');
+  const debouncedSearchText = useDebounce(searchText, 300);
+  const goToProduct = useNavigationStore((state) => state.goToProduct);
 
-interface ThrottleProps<T> {
-    value: T;
-    delay: number;
-}
+  const handleRowClick = (productId: string) => {
+    goToProduct(productId);
+  };
 
-function useThrottledValue<T,>({ value, delay }: ThrottleProps<T>): T {
-    const [throttled, setThrottled] = useState<T>(value);
-    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const filteredProducts = useMemo(() => {
+    if (!products) {
+      return [];
+    }
+    return products.filter((product) => {
+      const searchTerm = debouncedSearchText.toLowerCase();
+      return (
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.brand?.toLowerCase().includes(searchTerm)
+      );
+    });
+  }, [products, debouncedSearchText]);
 
-    useEffect(() => {
-        if (timerRef.current) clearTimeout(timerRef.current);
-        timerRef.current = setTimeout(() => {
-            setThrottled(value);
-            timerRef.current = null;
-        }, delay);
-        return () => {
-            if (timerRef.current) clearTimeout(timerRef.current);
-        };
-    }, [value, delay]);
+  const sortedProducts = useMemo(() => {
+    if (!filteredProducts) {
+      return [];
+    }
 
-    return throttled;
-}
+    const sortProducts = (a: ConductorProduct, b: ConductorProduct) => {
+      // Prioritize In Stock
+      if ((b.stock ?? 0) > 0 && (a.stock ?? 0) <= 0) return 1;
+      if ((a.stock ?? 0) > 0 && (b.stock ?? 0) <= 0) return -1;
 
-// ─────────────────────────────────────────────────────────────────────────────
+      // Prioritize Call for Price within In Stock
+      if ((a.stock ?? 0) > 0 && (b.stock ?? 0) > 0) {
+        if ((a.price === null || a.price === 0) && (b.price !== null && b.price !== 0)) return 1;
+        if ((b.price === null || b.price === 0) && (a.price !== null && a.price !== 0)) return -1;
+      }
 
-const InventoryView: React.FC = () => {
-    const { searchQuery: initialSearchQuery, initialCfpFilter } = useNavigationStore();
-    const [filterText, setFilterText] = useState<string>(initialSearchQuery ?? '');
-    const [cfpFilter, setCfpFilter] = useState<boolean>(initialCfpFilter ?? false);
+      // Prioritize Unconfirmed after In Stock
+      if ((b.stock ?? null) === null && (a.stock ?? 0) > 0) return 1;
+      if ((a.stock ?? null) === null && (b.stock ?? 0) > 0) return -1;
 
-    const debouncedFilter = useDebounceValue(filterText, 150);
-    const throttledFilter = useThrottledValue({ value: debouncedFilter, delay: 300 });
+      // Prioritize Out of Stock Last
+      if ((a.stock ?? 0) === 0 && (b.stock ?? 0) !== 0) return 1;
+      if ((b.stock ?? 0) === 0 && (a.stock ?? 0) !== 0) return -1;
 
+       // Sort CFP after in-stock, before out of stock.
+       if ((a.stock ?? 0) === 0 && (b.price ?? 1) > 0) return 1;
+       if ((b.stock ?? 0) === 0 && (a.price ?? 1) > 0) return -1;
 
-    // Sync navigation store's searchQuery on mount only
-    useEffect(() => {
-        if (initialSearchQuery && !filterText) {
-            setFilterText(initialSearchQuery);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+      return a.id.localeCompare(b.id);
+    };
 
-    // Canonical catalog from backend
-    const { products, isLoading, error } = useConductorCatalog();
-    const isError = !!error;
+    return [...filteredProducts].sort(sortProducts);
+  }, [filteredProducts]);
 
-    // Client-side filter over the full catalog — fast, no extra fetch
-    const filtered: ConductorProduct[] = React.useMemo(() => {
-        if (!products) return [];
-        const q = throttledFilter.toLowerCase();
-        return products.filter((p) => {
-            if (cfpFilter && p.price !== null && p.price !== undefined) return false;
-            if (!q) return true;
-            return (
-                p.name?.toLowerCase().includes(q) ||
-                p.brand?.toLowerCase().includes(q) ||
-                p.sku?.toLowerCase().includes(q)
-            );
-        });
-    }, [products, throttledFilter, cfpFilter]);
-
+  if (isLoading) {
     return (
-        <div className="bg-slate-900 min-h-screen p-4">
-            {/* Search bar */}
-            <input
-                type="text"
-                placeholder="Search by SKU, Brand, or Name…"
-                value={filterText}
-                onChange={(e) => setFilterText(e.target.value)}
-                className="bg-slate-800 text-zinc-300 border border-zinc-700 rounded px-4 py-2 w-full mb-4 focus:outline-none focus:border-blue-500"
-            />
-
-            {/* CfP filter */}
-            <div className="flex items-center mb-4 gap-2">
-                <input
-                    type="checkbox"
-                    id="cfpFilter"
-                    checked={cfpFilter}
-                    onChange={(e) => setCfpFilter(e.target.checked)}
-                    className="accent-blue-500"
-                />
-                <label htmlFor="cfpFilter" className="text-zinc-300 text-sm cursor-pointer">
-                    Show Call-for-Price only
-                </label>
-            </div>
-
-            {/* States */}
-            {isLoading && <p className="text-zinc-400 text-sm">Loading inventory…</p>}
-            {isError && (
-                <p className="text-red-400 text-sm">
-                    Error: {error ?? 'Failed to load catalog'}
-                </p>
-            )}
-            {!isLoading && !isError && filtered.length === 0 && (
-                <p className="text-zinc-500 text-sm">No products match your search.</p>
-            )}
-
-            {/* Product list */}
-            {filtered.length > 0 && (
-                <div className="divide-y divide-zinc-800">
-                    {filtered.map((item) => (
-                        <div key={item.id} className="py-3 px-2 flex items-center gap-4">
-                            {item.image_url && (
-                                <img
-                                    src={item.image_url}
-                                    alt={item.name}
-                                    className="w-12 h-12 object-contain rounded bg-slate-800"
-                                />
-                            )}
-                            <div className="flex-1 min-w-0">
-                                <p className="text-zinc-100 font-medium truncate">{item.name}</p>
-                                <p className="text-zinc-500 text-xs">{item.brand}</p>
-                            </div>
-                            <div className="text-right shrink-0">
-                                {item.price != null ? (
-                                    <p className="text-blue-400 font-semibold">₪{item.price}</p>
-                                ) : (
-                                    <p className="text-amber-500 text-sm font-medium">CfP</p>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+      <div className="flex items-center justify-center h-full">
+        Loading...
+      </div>
     );
+  }
+
+  if (isError) {
+    return (
+      <div className="flex items-center justify-center h-full text-red-500">
+        Error loading products.
+      </div>
+    );
+  }
+
+  if (!products || products.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full text-zinc-400">
+        No products found.
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-full overflow-x-auto">
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Search by name or brand"
+          className="w-full px-4 py-2 text-zinc-900 placeholder-zinc-400 bg-zinc-100 rounded-md dark:bg-zinc-700 dark:text-zinc-100 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+      </div>
+      <table className="min-w-full divide-y divide-zinc-700">
+        <thead className="bg-zinc-800">
+          <tr>
+            <th
+              scope="col"
+              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-300"
+            >
+              <div className="flex items-center">
+                Product Name
+                <ArrowUpDown className="w-4 h-4 ml-2" />
+              </div>
+            </th>
+            <th
+              scope="col"
+              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-300"
+            >
+              Brand
+            </th>
+            <th
+              scope="col"
+              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-300"
+            >
+              Price (IL)
+            </th>
+            <th
+              scope="col"
+              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-300"
+            >
+              Price (Eilat)
+            </th>
+            <th
+              scope="col"
+              className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-300"
+            >
+              Stock Status
+            </th>
+          </tr>
+        </thead>
+        <tbody className="bg-zinc-900 divide-y divide-zinc-700">
+          {sortedProducts.map((product) => (
+            <tr
+              key={product.id}
+              className={`hover:bg-zinc-800 cursor-pointer ${
+                (product.stock === 0) && 'border-red-500 border-2' ||
+                (product.stock === null || product.stock === undefined) && 'border-amber-500 border-2' ||
+                ''
+              }`}
+              onClick={() => handleRowClick(product.id)}
+            >
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-zinc-200">
+                {product.name}
+                {(product.stock === 0) && (
+                  <span className="ml-2 px-2 py-1 text-xs font-bold leading-none text-white bg-red-500 rounded-full">
+                    OUT OF STOCK
+                  </span>
+                )}
+                {(product.stock === null || product.stock === undefined) && (
+                  <span className="ml-2 px-2 py-1 text-xs font-bold leading-none text-zinc-900 bg-amber-500 rounded-full">
+                    UNCONFIRMED
+                  </span>
+                )}
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-400">{product.brand}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-200">
+                {product.price !== null && product.price !== 0 ? `₪${product.price.toFixed(2)}` : 'Call for Price'}
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-200">{product.price_eilat !== null ? `₪${product.price_eilat.toFixed(2)}` : '-'}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-zinc-200">
+                {(product.stock !== null && product.stock !== undefined) ? (
+                  product.stock > 0 ? 'In Stock' : 'Out of Stock'
+                ) : (
+                  'Unconfirmed'
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default InventoryView;
