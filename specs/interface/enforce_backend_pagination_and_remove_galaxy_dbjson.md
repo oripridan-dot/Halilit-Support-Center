@@ -1,11 +1,10 @@
 # Spec: Enforce Backend Pagination and Remove galaxy_db.json
-
-**Version:** 1.8
+**Version:** 1.9
 **Component:** `frontend/src/hooks/useConductorCatalog.ts`
 
 ## Purpose
 
-Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API and includes image validation with fallback.
+Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API, includes image validation with fallback, and ensures loading states are handled correctly.
 
 ## Requirements
 
@@ -28,29 +27,34 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
     *   Accepts optional `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` parameters with default values of `1`, `25`, `''`, `''`, `''`, and `''` respectively.
     *   Fetches data from the paginated `/api/conductor/catalog` endpoint using the provided parameters.
     *   Returns the `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
-    *   Uses `react-query` to manage the fetching and caching of paginated data.
+    *   Uses `react-query` to manage the fetching and caching of paginated data. Displays a skeleton while loading.
 6.  **Filtering and Sorting Parameters:** The `useConductorCatalog` hook must pass the filter and sort state as parameters to the API endpoint.
-7.  **Error Handling:** Maintain existing error handling for API requests, displaying error messages to the user if the data cannot be fetched.
-8. **Image Fallback:** Implement image fallback logic. If `product.image_url` is missing or fails to load, use `/placeholder.png`.
+7.  **Error Handling:** Maintain existing error handling for API requests, displaying error messages to the user if the data cannot be fetched. Render a "retry" banner on API failure.
+8. **Image Fallback:** Implement image fallback logic. If `product.image_url` is missing or fails to load, use `/placeholder.png`. This logic should use the existing `ImageWithFallback` component.
 
 ## Behavior Scenarios
 
 1.  **Scenario:** Initial Load
     *   Input: `page=1`, `pageSize=25`, no other parameters.
-    *   Outcome: The hook fetches the first 25 products from the backend API. The total number of items and pages are also returned.
-2.  **Scenario:** Navigating to the Next Page
+    *   Outcome: The hook fetches the first 25 products from the backend API. The total number of items and pages are also returned. The UI displays a loading skeleton during the initial load.
+2.  **Scenario:** Subsequent Page Load
     *   Input: `page=2`, `pageSize=25`.
-    *   Outcome: The hook fetches the next 25 products from the backend API.
-3.  **Scenario:** Applying a Filter
-    *   Input: `searchQuery="Roland"`, `page=1`, `pageSize=25`.
-    *   Outcome: The hook fetches the first 25 products that match the search query "Roland". The total number of matching items and pages are also returned.
-4.  **Scenario:** Applying a Sort
-    *   Input: `sortBy="price"`, `page=1`, `pageSize=25`.
-    *   Outcome: The hook fetches the first 25 products sorted by price.
-5.  **Scenario:** Image Fallback
-    * Input: A product has `image_url: null`.
-    * Outcome: The product tile or detail view displays the `/placeholder.png` image.
+    *   Outcome: The hook fetches the next 25 products from the backend API. The UI updates to display the new products.
+3.  **Scenario:** Filtering
+    *   Input: `searchQuery="keyboard"`.
+    *   Outcome: The hook fetches the first page of products that match the search query from the backend API.
+4.  **Scenario:** Sorting
+    *   Input: `sortBy="price"`.
+    *   Outcome: The hook fetches the first page of products sorted by price from the backend API.
+5.  **Scenario:** Image Load Failure
+    *   Input: A product has a broken `image_url`.
+    *   Outcome: The `ImageWithFallback` component displays `/placeholder.png`.
+6. **Scenario:** API Failure
+    * Input: API returns a 500 status.
+    * Outcome: A retry banner appears in the UI, offering the operator a chance to refresh the catalog.
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
+- Ensure `galaxy_db.json` no longer exists in `frontend/public/data`.
+- Manually verify the UI displays paginated data correctly.
