@@ -1,0 +1,53 @@
+---
+id: genome_base_cell
+version: "1.0.0"
+type: UI_Cell
+fitness_goal: ZERO_CRASH_RENDER
+
+# ─────────────────────────────────────────────
+# BASE GENOME — All UI cells inherit from here
+# Every UI_Cell must implement these foundational traits.
+# ─────────────────────────────────────────────
+
+States:
+  LOADING:
+    description: Async data is in flight. Render a skeleton/pulse.
+    visual_hint: "animate-pulse bg-slate-700 rounded"
+    required: true
+  ERROR:
+    description: Network or parse failure. Render actionable error.
+    visual_hint: "border border-red-500 text-red-400 bg-red-900/10 rounded p-4"
+    required: true
+  EMPTY:
+    description: Success response but zero data. Render empty-state prompt.
+    visual_hint: "text-slate-400 italic text-center py-12"
+    required: true
+  READY:
+    description: Data successfully hydrated. Render primary content.
+    visual_hint: "opacity-100 transition-opacity duration-300"
+    required: true
+
+Traits:
+  ColorPhenotype:
+    type: string
+    value: HSC_DARK_MODE
+    description: "Dark mode slate/zinc palette. Source: design-tokens.css"
+    inheritable: true
+
+  AccessibilityPhenotype:
+    type: bool
+    value: true
+    description: "aria-labels on interactive elements; keyboard nav."
+    inheritable: true
+
+  ErrorBoundaryPhenotype:
+    type: bool
+    value: true
+    description: "Wrap in GlobalErrorBoundary or local try/catch."
+    inheritable: true
+
+Phenotype_Assertions:
+  - "LOADING state must render before any async resolution"
+  - "ERROR state must show a human-readable message, not a stack trace"
+  - "EMPTY state must never show a blank white/dark void"
+  - "READY state must be the only state that renders live data"

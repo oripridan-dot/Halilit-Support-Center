@@ -71,6 +71,16 @@ TOOLS & PARALLELISM RULES:
                               and writes Evolution Proposals to specs/strategy/evolution/.
                               Use on demand to refresh the tool landscape awareness.
                               No args required.
+- 'synthesize'  (Ribosome):   Translates a Genome YAML into a framework-agnostic        PARALLEL SAFE ✅
+                              Synthesis Directive for the Builder. Use BEFORE 'implement'
+                              when a genome exists in specs/genomes/. The directive lands
+                              in specs/temp/synthesis_{genome_id}.md which the Builder reads.
+                              args = path to genome YAML (e.g. "specs/genomes/product_explorer.yaml").
+                              GENOME WORKFLOW: synthesize → implement → ui_validate → phenotype verify.
+- 'mutate'      (Mutation     Runs the Genetic Feedback Loop: scans factory_logs, updates SEQUENTIAL 🔒
+                 Engine):     Fitness Ledger, and mutates under-performing agent DNA.
+                              Only needed when you want to force a mutation outside the
+                              automatic post-batch OODA cycle. args = "" or "--force".
 - 'sandbox'     (Sandbox):    Runs build+verify pipeline directly on a spec file.        SEQUENTIAL 🔒
                               Triggers inner_loop: LLM generates → tsc/lint/vite build →
                               self-heals up to 5 rounds. Use when you need guaranteed

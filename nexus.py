@@ -23,6 +23,10 @@ import argparse
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# Bio-Swarm: record session start time so Mutation Engine only analyses
+# logs from the current session (not all historical logs).
+_SESSION_START_TS: float = time.time()
+
 try:
     from dotenv import load_dotenv
     load_dotenv(Path(__file__).resolve().parent / ".env")
@@ -99,6 +103,9 @@ _ACTION_MAP = {
     "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
     "v0_design":  ("v0_design",  "🎨 V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
     "scout":      ("scout",      "🔭 SCOUT",           "Scanning for new tools → writing Evolution Proposals..."),
+    "synthesize": ("synthesize", "🧬 RIBOSOME",       "Translating Genome → Synthesis Directive (protein folding)..."),
+    "mutate":     ("mutate",     "🧫 MUTATION ENGINE", "Analysing fitness logs → evolving agent DNA..."),
+    "fitness":    ("fitness",    "📊 FITNESS LEDGER", "Printing per-agent fitness scores and generation counts..."),
 }
 
 
@@ -141,6 +148,12 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["v0_design", args] if args else None
     if tool == "scout":
         return factory + ["scout"]
+    if tool == "synthesize":
+        return factory + ["synthesize", args] if args else None
+    if tool == "mutate":
+        return factory + ["mutate"] + (["--force"] if args == "--force" else [])
+    if tool == "fitness":
+        return factory + ["fitness"]
     return None  # 'explain' or unknown
 
 
@@ -379,6 +392,45 @@ def execute_swarm(queue: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# OODA Mutation Cycle — called automatically after every successful batch
+# ---------------------------------------------------------------------------
+
+def _run_ooda_mutation_cycle() -> None:
+    """
+    Bio-Swarm OODA hook: silently runs the Mutation Engine after each
+    successful Swarm batch so the system evolves before going idle.
+
+    Mutations are only applied when a fitness score drops below the threshold.
+    The result is printed in a compact summary block.
+    """
+    try:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        from mutation_engine import run_mutation_cycle  # noqa: PLC0415
+
+        print(
+            f"\n{DIM}\u2500 Bio-Swarm \u2500 running post-batch OODA cycle \u2500{RESET}")
+        results = run_mutation_cycle(
+            since_ts=_SESSION_START_TS,
+            force_mutate=False,
+            verbose=False,
+        )
+        if results:
+            print(f"{MAGENTA}{BOLD}\ud83e\uddeb MUTATIONS APPLIED THIS BATCH:{RESET}")
+            for r in results:
+                print(
+                    f"   \u2022 {BOLD}{r.agent}{RESET} \u2192 Gen {r.generation}  "
+                    f"({r.target})  confidence={r.confidence}"
+                )
+                print(f"     Heuristic: {DIM}{r.heuristic[:100]}{RESET}")
+        else:
+            print(
+                f"{DIM}   \u2713 All agents above fitness threshold. No mutations needed.{RESET}")
+    except Exception as exc:
+        # Never crash Nexus due to mutation engine error
+        print(f"{DIM}   (OODA mutation cycle skipped: {exc}){RESET}")
+
+
+# ---------------------------------------------------------------------------
 # Main REPL
 # ---------------------------------------------------------------------------
 
@@ -538,6 +590,8 @@ def main() -> None:
                                 f"\n{YELLOW}Changes reverted. Provide a new instruction "
                                 f"or adjust your spec and re-run.{RESET}")
                         consecutive_failures = 0
+                        # ── OODA MUTATION CYCLE (runs silently after each successful batch) ──
+                        _run_ooda_mutation_cycle()
                         continue
                     # --- Kill Switch: abort after N consecutive failures ---
                     if failures:
