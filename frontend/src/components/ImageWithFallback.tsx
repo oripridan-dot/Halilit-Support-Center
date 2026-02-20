@@ -1,75 +1,76 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-interface ImageWithFallbackProps {
-  imageUrl?: string;
-  altText: string;
-  cdnBaseUrl?: string;
-  dataTrust?: { source: string; };
-  className?: string;
+interface DataTrust {
+  source?: string;
+  provider?: string;
+  [key: string]: any;
 }
 
-const placeholderImage = '/placeholder.png'; // Assuming placeholder image is in public folder
+interface ImageWithFallbackProps {
+  imageUrl: string | null | undefined;
+  altText: string;
+  dataTrust?: DataTrust;
+}
 
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
-  imageUrl,
-  altText,
-  cdnBaseUrl,
-  dataTrust,
-  className,
-}) => {
-  const [imageSrc, setImageSrc] = useState<string | undefined>(imageUrl || placeholderImage);
-  const [isError, setIsError] = useState(false);
+const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText, dataTrust }) => {
+  const sizes = '(max-width: 320px) 320px, (max-width: 640px) 640px, 1024px';
+  const placeholderSrc = '/placeholder.png'; // Assuming placeholder.png is in the public directory
 
-  const generateSrcSet = (url: string | undefined, width: number, format: string) => {
-    if (!url || !cdnBaseUrl) return undefined;
-    const encodedImageUrl = encodeURIComponent(url);
-    return `${cdnBaseUrl}${encodedImageUrl}?format=${format}&width=${width} ${width}w`;
-  };
+  const generateSrcSet = (width: number, format: 'avif' | 'webp' | 'jpg') => {
+    if (!imageUrl) return '';
 
-  const handleImageError = () => {
-    setIsError(true);
-    setImageSrc(placeholderImage);
-  };
-
-  useEffect(() => {
-    if (imageUrl) {
-        setImageSrc(imageUrl);
-        setIsError(false); // Reset error state when imageUrl changes
-    } else {
-        setImageSrc(placeholderImage);
-        setIsError(false);
+    let formatParam = '';
+    switch (format) {
+      case 'avif':
+        formatParam = 'f_auto,q_auto';
+        break;
+      case 'webp':
+        formatParam = 'f_webp,q_auto';
+        break;
+      case 'jpg':
+        formatParam = 'f_jpg,q_auto';
+        break;
+      default:
+        formatParam = 'f_auto,q_auto';
     }
-  }, [imageUrl]);
 
-  const finalAltText = dataTrust ? `${altText} - Source: ${dataTrust.source}` : altText;
+    return `${imageUrl}?${formatParam},w_${width} ${width}w`;
+  };
+
+  const getAltText = () => {
+    if (dataTrust && dataTrust.source) {
+      return `${altText} (Source: ${dataTrust.source})`;
+    }
+    return altText;
+  };
 
   if (!imageUrl) {
     return (
-      <img
-        src={placeholderImage}
-        alt={finalAltText}
-        className={`bg-gray-800 ${className}`}
-        loading="lazy"
-      />
+      <div className="bg-slate-900 w-full h-full flex items-center justify-center">
+        <img src={placeholderSrc} alt={altText} className="object-cover" loading="lazy" />
+      </div>
     );
   }
 
   return (
     <picture>
       <source
-        srcSet={generateSrcSet(imageUrl, 600, 'avif')}
+        srcSet={`${generateSrcSet(320, 'avif')}, ${generateSrcSet(640, 'avif')}, ${generateSrcSet(1024, 'avif')}`}
         type="image/avif"
       />
       <source
-        srcSet={generateSrcSet(imageUrl, 600, 'webp')}
+        srcSet={`${generateSrcSet(320, 'webp')}, ${generateSrcSet(640, 'webp')}, ${generateSrcSet(1024, 'webp')}`}
         type="image/webp"
       />
       <img
-        src={imageSrc}
-        alt={finalAltText}
-        className={`bg-gray-800 ${className}`}
-        onError={handleImageError}
+        src={`${imageUrl}?f_jpg,q_auto`}
+        srcSet={`${generateSrcSet(320, 'jpg')}, ${generateSrcSet(640, 'jpg')}, ${generateSrcSet(1024, 'jpg')}`}
+        alt={getAltText()}
         loading="lazy"
+        sizes={sizes}
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = placeholderSrc;
+        }}
       />
     </picture>
   );

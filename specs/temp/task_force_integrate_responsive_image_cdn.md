@@ -1,6 +1,6 @@
 # Task-Force Blackboard: integrate_responsive_image_cdn
 
-**Goal:** Integrate Next-gen Image CDN with AVIF support from proposal_responsive_image_generation to improve image loading and fallback
+**Goal:** Integrate next-gen image CDN with AVIF support for improved image loading and quality
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,9 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- No implemented code was provided for review.
+- The "IMPLEMENTED CODE" section is empty, so there's nothing to review.
+- The API Contracts and Blockers/Escalations sections are also empty.
+- The UI State screenshot is unavailable.
 
 **Required Fix:**
-Provide the implemented code for review before I can make a decision.
+Builder must populate the "IMPLEMENTED CODE" section with the code they wrote, and the Steerer, Builder, and Watchdog must populate their respective sections with relevant information. UI State must be captured to prove functionality.
