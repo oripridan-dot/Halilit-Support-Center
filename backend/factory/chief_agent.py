@@ -109,6 +109,11 @@ RULES:
 - Set "parallel": false for 'commit', 'build', 'heal', 'doc', 'reflect', 'task_force' — they mutate shared state.
 - For 'implement', the "args" MUST be the spec filename to implement.
 - For 'optimize', the "args" MUST be the relative file path to refactor.
+  ⚠️  ANTI-HALLUCINATION RULE: NEVER invent file paths for 'optimize'. Only schedule
+  an 'optimize' task when you KNOW the file exists — i.e. the user explicitly named the
+  file, it appeared in an error report, or you listed it from the repository structure.
+  DO NOT guess names like 'ObsoleteComponent.tsx' or 'old_script.py'. If you are unsure,
+  use 'diagnose' to scan, or skip the optimize task entirely.
 - For 'explain', use a single queue item with "args" containing the answer text.
 - For 'reflect', the "args" MUST be a short description of the failure/lesson context.
 - Sequential tasks act as BARRIERS: all parallel tasks before them must finish first.

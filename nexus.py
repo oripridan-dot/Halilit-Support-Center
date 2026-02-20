@@ -157,6 +157,16 @@ def run_process(task: dict) -> dict:
     tool = task["tool"]
     args = task.get("args", "")
 
+    # Pre-flight: verify the file exists before dispatching optimize
+    if tool == "optimize" and args:
+        target_path = ROOT / args
+        if not target_path.exists():
+            msg = (f"❌ [OPTIMIZE] Skipped — file does not exist: {args}\n"
+                   f"   The Chief hallucinated this path. Only optimize real files.")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [OPTIMIZE {args}] File not found — skipped",
+                    "error_output": msg}
+
     # task_force uses a special command builder
     if tool == "task_force":
         cmd = _build_task_force_cmd(task)
@@ -210,6 +220,16 @@ def execute_sequential(task: dict) -> dict:
             print(f"   ID     : {task.get('id', 'auto')}")
             print(f"   Goal   : {goal}")
             print(f"   Agents : {', '.join(tf_agents)}")
+
+    # Pre-flight: verify the file exists before dispatching optimize
+    if tool == "optimize" and args:
+        target_path = ROOT / args
+        if not target_path.exists():
+            print(f"\n❌ [OPTIMIZE] File not found — skipped: {args}")
+            print(f"   The Chief hallucinated this path. Only optimize real files.")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [OPTIMIZE {args}] File not found — skipped",
+                    "error_output": f"File does not exist: {args}"}
 
     cmd = _build_task_force_cmd(
         task) if tool == "task_force" else _build_cmd(tool, args)

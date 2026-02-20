@@ -83,3 +83,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Failure to remove/update outdated artifacts.
 **Fix:** Removed/updated obsolete code and documentation.
 **Lesson:** ALWAYS remove obsolete code/documentation promptly.
+
+### [2026-02-20] Inner Agents Stability Needed
+**Symptom:** Inner agents system experienced unspecified issues.
+**Root Cause:** Unknown internal agent interactions led to errors.
+**Fix:** Corrected underlying inner agents system errors.
+**Lesson:** ALWAYS rigorously test inner-agent interactions.

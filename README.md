@@ -1,4 +1,4 @@
-# Halilit Support Center — Operator Console `v9.7.0 · Chief`
+# Halilit Support Center — Operator Console `v9.7.1 · Chief`
 
 JIT (Just-in-Time) product intelligence platform for musical instruments. Catalog + product graph from the Conductor pipeline; on-demand AI intelligence via Gemini 2.0 Flash.
 

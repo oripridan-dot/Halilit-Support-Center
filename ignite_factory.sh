@@ -1,7 +1,7 @@
 #!/bin/bash
 # =============================================================================
 # DARK FACTORY — IGNITION SEQUENCE
-# Halilit Support Center v9.6.1
+# Halilit Support Center v9.7.1
 #
 # Builds all three UI views from their specs, then boots the full app.
 # Requires: GEMINI_API_KEY (or GOOGLE_API_KEY) to be exported.

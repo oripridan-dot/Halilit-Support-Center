@@ -1,6 +1,6 @@
-VERSION=9.7.0
-RELEASE_TAG=v9.7.0-chief
-BUILD_DATE=2026-02-19
+VERSION=9.7.1
+RELEASE_TAG=v9.7.1-chief
+BUILD_DATE=2026-02-20
 BRANCH=main
 STATUS=production-ready
 ARCHITECTURE=spec-driven-operator-console
