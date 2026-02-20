@@ -1,35 +1,34 @@
+```typescript
 // Contract: Enhanced Inventory Search Debounce with Throttle
 
-// Endpoint: useConductorCatalog (assumed from context, path not explicitly defined)
+// Endpoint Path
+const INVENTORY_SEARCH_ENDPOINT = "/api/inventory/search";
 
-interface ConductorCatalogItem {
-  // Define properties based on actual response, e.g.:
-  id: string;
-  name: string;
-  // ... other properties
+// Request Body Type (adjust as needed, example is provided)
+interface InventorySearchRequest {
+  searchQuery?: string;
+  // other filter parameters as needed
+  [key: string]: any;
 }
 
-interface ConductorCatalogResponse {
-  items: ConductorCatalogItem[];
+// Response Type (adjust as needed, example is provided)
+interface InventoryItem {
+  id: string;
+  name: string;
+  description: string;
+  sku: string;
+  // other properties
+  [key: string]: any;
+}
+
+interface InventorySearchResponse {
+  items: InventoryItem[];
   totalCount: number;
 }
 
-// Request body is implicitly defined by the searchQuery parameter in the useConductorCatalog hook
-// which is assumed to be a string. No explicit request body is sent.
-
-type InventorySearchQuery = string | null | undefined;
-
-
-// navigationStore types (assumed from context)
-interface NavigationStore {
+// Shared Sub-types (if any, adjust as needed)
+interface FilterParams {
+    initialCfpFilter?: string;
     searchQuery?: string;
-    initialCfpFilter?: boolean;
 }
-
-// type for useDebounce hook
-type UseDebounceHook<T> = (value: T, delay: number) => T;
-
-// Define the type for the useConductorCatalog hook, assuming it takes a search query
-// and returns the ConductorCatalogResponse
-
-type UseConductorCatalogHook = (searchQuery: InventorySearchQuery) => ConductorCatalogResponse;
+```

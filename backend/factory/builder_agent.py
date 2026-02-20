@@ -15,6 +15,7 @@ try:
     from sandbox_executor import inner_loop, parse_verification_commands
     from ui_validator_agent import validate_ui
     from context_discovery import hydrate_context
+    from smart_import_fixer import fix_imports
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from agent_core import (
@@ -24,6 +25,7 @@ except ImportError:
     from sandbox_executor import inner_loop, parse_verification_commands
     from ui_validator_agent import validate_ui
     from context_discovery import hydrate_context
+    from smart_import_fixer import fix_imports
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -298,6 +300,16 @@ def build_component(spec_path: str) -> None:
             _state["critic_issues"] = critic_issues
 
         save_artifact(str(full_path), clean_code)
+
+        # ── Phase 0: Deterministic mechanical fixer ──────────────────────
+        # Runs BEFORE verification — fixes out-of-src imports, wrong dir
+        # names, missing hook files, and JSX generic arrow syntax without
+        # burning LLM tokens.  Fixes are printed so they appear in logs.
+        fix_report = fix_imports(target_file=full_path)
+        if fix_report.fixes:
+            print(f"🔧  SmartImportFixer applied {len(fix_report.fixes)} fix(es):")
+            for fix in fix_report.fixes:
+                print(f"     • [{fix.kind}] {fix.description}")
         return True
 
     # Run the autonomous self-healing inner loop
@@ -319,10 +331,31 @@ def build_component(spec_path: str) -> None:
                 print(f"\n⚠️  UI Validation issues detected:")
                 for e in (validation.get("import_errors", []) + validation.get("build_errors", [])):
                     print(f"     • {e}")
-                print("  Passing errors back to self-healer for one final round...")
-                error_msg = "\n".join(
-                    validation.get("import_errors", []) + validation.get("build_errors", []))
-                _builder_fn(spec_with_checks, error_msg)
+
+                # ── Phase 1: Deterministic fixer on the WHOLE src tree ───────
+                # Runs before the LLM to auto-fix mechanical import issues
+                # (wrong dir names, out-of-src paths, missing generated.ts,
+                # JSX generic arrow fn syntax) across all touched files.
+                print("\n🔧  Running SmartImportFixer on full src tree...")
+                full_fix_report = fix_imports()  # scans entire frontend/src
+                if full_fix_report.fixes:
+                    print(f"   Applied {len(full_fix_report.fixes)} deterministic fix(es):")
+                    for fix in full_fix_report.fixes:
+                        print(f"     • [{fix.kind}] {fix.description}")
+                    # Re-validate after deterministic fixes
+                    print("\n🔬 Re-validating after SmartImportFixer...")
+                    validation = validate_ui(run_build=True)
+                else:
+                    print("   No deterministic fixes applicable.")
+
+                if not validation["passed"]:
+                    # Phase 2: only call LLM if mechanical fixes weren't enough
+                    print("  Passing remaining errors to LLM self-healer for one final round...")
+                    error_msg = "\n".join(
+                        validation.get("import_errors", []) + validation.get("build_errors", []))
+                    _builder_fn(spec_with_checks, error_msg)
+                else:
+                    print("✅ SmartImportFixer resolved all issues — LLM round skipped.")
             else:
                 print("✅ UI Validation passed — import scan + Vite build clean.")
     else:

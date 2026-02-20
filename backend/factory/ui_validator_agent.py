@@ -38,6 +38,11 @@ import sys
 from pathlib import Path
 from typing import NamedTuple
 
+try:
+    from smart_import_fixer import fix_imports as _smart_fix
+except ImportError:
+    _smart_fix = None  # type: ignore[assignment]
+
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 FRONTEND_DIR = ROOT_DIR / "frontend"
 SRC_DIR = FRONTEND_DIR / "src"
@@ -162,6 +167,23 @@ def validate_ui(run_build: bool = True) -> dict:
         print(f"  ❌ {len(import_error_msgs)} broken import(s) found:")
         for msg in import_error_msgs:
             print(f"     • {msg}")
+
+        # ── Auto-fix pass: deterministic mechanical repair ────────────────
+        if _smart_fix is not None:
+            print("  🔧  SmartImportFixer: attempting deterministic repair...")
+            fix_report = _smart_fix()  # scans & patches entire frontend/src
+            if fix_report.fixes:
+                print(f"     Applied {len(fix_report.fixes)} fix(es) — re-scanning...")
+                raw_errors = scan_imports(SRC_DIR)  # re-scan after fixes
+                import_error_msgs = [e.reason for e in raw_errors]
+                if import_error_msgs:
+                    print(f"  ❌ {len(import_error_msgs)} import(s) remain after auto-fix:")
+                    for msg in import_error_msgs:
+                        print(f"     • {msg}")
+                else:
+                    print("  ✅ SmartImportFixer resolved all import errors.")
+            else:
+                print("     No deterministic fixes found — LLM heal required.")
     else:
         print("  ✅ All relative imports resolve to real files.")
 
