@@ -354,6 +354,10 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const [toast, setToast] = useState<string | null>(null);
   const [copiedSpecs, setCopiedSpecs] = useState(false);
 
+  /**
+   * Displays a toast message for a short duration.
+   * @param msg The message to display.
+   */
   const showToast = useCallback((msg: string) => {
     setToast(msg);
     setTimeout(() => setToast(null), 1600);
@@ -361,13 +365,13 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
 
   // ── Resolve product ──────────────────────────────────────────────────────────
   const product = products?.find((p) => p.id === activeProductId) ?? null;
-  const notFound =
+  const productNotFound =
     !catalogLoading &&
     products !== undefined &&
     !product &&
     jitState.phase === "error";
 
-  if (!activeProductId || notFound) {
+  if (!activeProductId || productNotFound) {
     return (
       <div className="p-8 max-w-md">
         <p className="text-2xl font-bold text-zinc-400 mb-2">
@@ -410,11 +414,16 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     jitSpecs && Object.keys(jitSpecs).length > 0 ? jitSpecs : catalogSpecs;
 
   // Typed relationships from the product graph index
+  interface RelatedProducts {
+    accessories: RelatedProduct[];
+    alternatives: RelatedProduct[];
+    compatible: RelatedProduct[];
+  }
   const {
     accessories: graphAccessories,
     alternatives: graphAlternatives,
     compatible: graphCompatible,
-  } = useProductRelationships(activeProductId ?? null);
+  }: RelatedProducts = useProductRelationships(activeProductId ?? null);
 
   const toRelatedProduct = (p: {
     id: string;
@@ -433,8 +442,10 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const compatible = graphCompatible.map(toRelatedProduct);
   const relatedProducts = [...accessories, ...alternatives, ...compatible];
 
-  // ── Actions ──────────────────────────────────────────────────────────────────
-  const handleCopySpecs = () => {
+  /**
+   * Copies the product specifications to the clipboard.
+   */
+  const handleCopySpecs = (): void => {
     const lines = Object.entries(specsRecord)
       .map(([key, value]) => `${key}: ${value}`)
       .join("\n");

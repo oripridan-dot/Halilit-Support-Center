@@ -16,7 +16,7 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText
                 onError={(e) => {
                     (e.target as HTMLImageElement).src = "/placeholder.png";
                 }}
-                className="object-contain"
+                className="object-cover w-full h-full"
                 loading="lazy"
             />
         </div>

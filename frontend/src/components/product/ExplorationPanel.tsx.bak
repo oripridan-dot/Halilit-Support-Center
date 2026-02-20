@@ -44,8 +44,7 @@ interface GuideStep {
    CONSTANTS
    ═══════════════════════════════════════════════════════ */
 
-/** Maps exploration types to user-friendly labels */
-const EXPLORATION_TYPE_LABELS: Record<string, string> = {
+const TYPE_LABELS: Record<string, string> = {
   setup: "Setup Guide",
   artists: "Artist Spotlight",
   issues: "Field Notes & Known Issues",
@@ -54,8 +53,7 @@ const EXPLORATION_TYPE_LABELS: Record<string, string> = {
   compare: "Comparison",
 };
 
-/** Maps exploration types to corresponding icons */
-const EXPLORATION_TYPE_ICONS: Record<string, string> = {
+const TYPE_ICONS: Record<string, string> = {
   setup: "\ud83d\udee0\ufe0f",
   artists: "\ud83c\udfa7",
   issues: "\u26a0\ufe0f",
@@ -64,13 +62,11 @@ const EXPLORATION_TYPE_ICONS: Record<string, string> = {
   compare: "\u2694\ufe0f",
 };
 
-/** Keys to exclude when unwrapping results */
 const META_KEYS = new Set([
   "product_id", "action_type", "topic", "format",
   "product", "guideType", "guide_type",
 ]);
 
-/** Maps section names to corresponding icons */
 const SECTION_ICONS: Record<string, string> = {
   unboxing: "\ud83d\udce6", box: "\ud83d\udce6", whats_in: "\ud83d\udce6", "what's": "\ud83d\udce6",
   setup: "\u2699\ufe0f", physical: "\ud83d\udccf", placement: "\ud83d\udccf", position: "\ud83d\udccf",
@@ -85,16 +81,10 @@ const SECTION_ICONS: Record<string, string> = {
   advanced: "\ud83c\udfaf", basics: "\ud83d\udcd6",
 };
 
-/**
- * Retrieves the appropriate icon for a given section name.
- *
- * @param {string} name - The name of the section.
- * @returns {string} The corresponding icon, or a default icon if not found.
- */
 function getSectionIcon(name: string): string {
-  const normalizedName = name.toLowerCase().replace(/[\s-]/g, "_");
-  for (const [pattern, icon] of Object.entries(SECTION_ICONS)) {
-    if (normalizedName.includes(pattern)) return icon;
+  const n = name.toLowerCase().replace(/[\s-]/g, "_");
+  for (const [pat, ico] of Object.entries(SECTION_ICONS)) {
+    if (n.includes(pat)) return ico;
   }
   return "\u25b8";
 }
@@ -103,18 +93,12 @@ function getSectionIcon(name: string): string {
    MAIN COMPONENT
    ═══════════════════════════════════════════════════════ */
 
-/**
- * ExplorationPanel component.
- *
- * @param {ExplorationPanelProps} props - The component props.
- * @returns {JSX.Element} The rendered component.
- */
 export const ExplorationPanel: React.FC<ExplorationPanelProps> = ({
   result, onClose, brandColor = "#3b82f6",
 }) => {
   const topic = result.topic || result.action_type;
-  const label = EXPLORATION_TYPE_LABELS[topic] || "Exploration";
-  const icon = EXPLORATION_TYPE_ICONS[topic] || "\ud83d\udd0d";
+  const label = TYPE_LABELS[topic] || "Exploration";
+  const icon = TYPE_ICONS[topic] || "\ud83d\udd0d";
 
   // Detect if this is a structured setup guide
   const isSetupGuide = useMemo(() => {
@@ -189,7 +173,7 @@ interface SetupGuideViewProps {
 
 const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }) => {
   const totalSteps = useMemo(
-    () => guide.sections.reduce((sum, section) => sum + (section.steps?.length || 0), 0),
+    () => guide.sections.reduce((sum, s) => sum + (s.steps?.length || 0), 0),
     [guide.sections],
   );
   const [checkedSteps, setCheckedSteps] = useState<Set<string>>(() => new Set());
@@ -312,10 +296,10 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }) =>
 
         {/* Sections */}
         <div className="px-6 py-5 space-y-8">
-          {guide.sections.map((section, sectionIndex) => (
+          {guide.sections.map((section, sIdx) => (
             <div
-              key={sectionIndex}
-              ref={el => { sectionRefs.current[sectionIndex] = el; }}
+              key={sIdx}
+              ref={el => { sectionRefs.current[sIdx] = el; }}
             >
               {/* Section header */}
               <div className="flex items-center gap-3 mb-4">
@@ -334,7 +318,7 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }) =>
                   </span>
                 </div>
                 <SectionProgress
-                  completed={section.steps?.filter((_, stepIndex) => checkedSteps.has(`${sectionIndex}-${stepIndex}`)).length || 0}
+                  completed={section.steps?.filter((_, si) => checkedSteps.has(`${sIdx}-${si}`)).length || 0}
                   total={section.steps?.length || 0}
                   brandColor={brandColor}
                 />
@@ -350,17 +334,17 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }) =>
                   />
 
                   <div className="space-y-1">
-                    {section.steps.map((step, stepIndex) => {
-                      const stepKey = `${sectionIndex}-${stepIndex}`;
+                    {section.steps.map((step, stIdx) => {
+                      const stepKey = `${sIdx}-${stIdx}`;
                       const isChecked = checkedSteps.has(stepKey);
 
                       return (
                         <StepCard
-                          key={stepIndex}
+                          key={stIdx}
                           step={step}
-                          stepNumber={step.step ?? stepIndex + 1}
+                          stepNumber={step.step ?? stIdx + 1}
                           isChecked={isChecked}
-                          onToggle={() => toggleStep(sectionIndex, stepIndex)}
+                          onToggle={() => toggleStep(sIdx, stIdx)}
                           brandColor={brandColor}
                         />
                       );
@@ -447,35 +431,31 @@ const StepCard: React.FC<StepCardProps> = ({ step, stepNumber, isChecked, onTogg
    SECTION PROGRESS RING
    ═══════════════════════════════════════════════════════ */
 
-interface SectionProgressProps {
-  completed: number;
-  total: number;
-  brandColor: string;
-}
-
-const SectionProgress: React.FC<SectionProgressProps> = ({ completed, total, brandColor }) => {
+const SectionProgress: React.FC<{
+  completed: number; total: number; brandColor: string;
+}> = ({ completed, total, brandColor }) => {
   if (total === 0) return null;
-  const percentage = Math.round((completed / total) * 100);
-  const radius = 12;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (percentage / 100) * circumference;
+  const pct = Math.round((completed / total) * 100);
+  const r = 12;
+  const c = 2 * Math.PI * r;
+  const offset = c - (pct / 100) * c;
 
   return (
     <div className="relative w-8 h-8 flex items-center justify-center">
       <svg width={30} height={30} className="rotate-[-90deg]">
-        <circle cx={15} cy={15} r={radius} fill="none" stroke="rgb(51 65 85 / 0.3)" strokeWidth={2.5} />
+        <circle cx={15} cy={15} r={r} fill="none" stroke="rgb(51 65 85 / 0.3)" strokeWidth={2.5} />
         <circle
-          cx={15} cy={15} r={radius} fill="none"
+          cx={15} cy={15} r={r} fill="none"
           stroke={completed === total ? "#34d399" : brandColor}
           strokeWidth={2.5}
           strokeLinecap="round"
-          strokeDasharray={circumference}
+          strokeDasharray={c}
           strokeDashoffset={offset}
           className="transition-all duration-500"
         />
       </svg>
       <span className="absolute text-[8px] font-bold tabular-nums" style={{ color: completed === total ? "#34d399" : brandColor }}>
-        {percentage}%
+        {pct}%
       </span>
     </div>
   );
@@ -485,12 +465,9 @@ const SectionProgress: React.FC<SectionProgressProps> = ({ completed, total, bra
    GENERIC VIEW — For non-setup-guide explorations
    ═══════════════════════════════════════════════════════ */
 
-interface GenericViewProps {
-  data: unknown;
-  brandColor: string;
-}
-
-const GenericView: React.FC<GenericViewProps> = ({ data, brandColor }) => (
+const GenericView: React.FC<{
+  data: unknown; brandColor: string;
+}> = ({ data, brandColor }) => (
   <RenderValue value={data} brandColor={brandColor} depth={0} />
 );
 
@@ -498,78 +475,37 @@ const GenericView: React.FC<GenericViewProps> = ({ data, brandColor }) => (
    HELPERS
    ═══════════════════════════════════════════════════════ */
 
-/**
- * Unwraps the result content, handling different data structures.
- *
- * @param {ExplorationResult} result - The exploration result.
- * @returns {unknown} The unwrapped content.
- */
 function unwrapResult(result: ExplorationResult): unknown {
-  if (result.content && Array.isArray(result.content) && result.content.length === 1 && typeof result.content[0] === "object") {
+  if (result.content && Array.isArray(result.content) && result.content.length === 1 && typeof result.content[0] === "object")
     return result.content[0];
-  }
-
   if (result.content !== undefined) return result.content;
-
   const clean: Record<string, unknown> = {};
-  for (const [key, value] of Object.entries(result)) {
-    if (!META_KEYS.has(key)) clean[key] = value;
-  }
+  for (const [k, v] of Object.entries(result)) if (!META_KEYS.has(k)) clean[k] = v;
   return clean;
 }
 
-/**
- * Formats a label by replacing underscores with spaces,
- * converting camel case to separate words, and capitalizing each word.
- *
- * @param {string} key - The label to format.
- * @returns {string} The formatted label.
- */
 function formatLabel(key: string): string {
-  return key
-    .replace(/_/g, " ")
-    .replace(/([a-z])([A-Z])/g, "$1 $2")
-    .replace(/\b\w/g, char => char.toUpperCase());
+  return key.replace(/_/g, " ").replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\b\w/g, c => c.toUpperCase());
 }
 
-/**
- * Checks if a value is a primitive type (string, number, or boolean).
- *
- * @param {unknown} value - The value to check.
- * @returns {boolean} True if the value is a primitive type, false otherwise.
- */
-function isPrimitive(value: unknown): value is string | number | boolean {
-  return typeof value === "string" || typeof value === "number" || typeof value === "boolean";
+function isPrimitive(v: unknown): v is string | number | boolean {
+  return typeof v === "string" || typeof v === "number" || typeof v === "boolean";
 }
 
-/** Keys that might indicate a title field */
 const TITLE_KEYS = new Set([
   "title", "scenarioName", "scenario_name", "name", "label",
   "instruction", "heading", "section_title", "sectionTitle",
 ]);
 
-/** Keys that might indicate a tip/note field */
 const TIP_KEYS = new Set([
   "tip", "tips", "pro_tip", "proTip", "pro_tips",
   "note", "notes", "warning", "caution", "important",
 ]);
 
-/**
- * Checks if a given key is considered a "tip" key.
- *
- * @param {string} key - The key to check.
- * @returns {boolean} True if the key is a tip key, false otherwise.
- */
-function isTipKey(key: string): boolean {
-  return TIP_KEYS.has(key.toLowerCase().replace(/[\s-]/g, "_"));
+function isTipKey(k: string): boolean {
+  return TIP_KEYS.has(k.toLowerCase().replace(/[\s-]/g, "_"));
 }
 
-/**
- * Extracts a title and its key from an object.
- *
- * @param {Record<string, unknown>} obj - The object to extract from.
- * @returns {[string | null, string | null]} An array containing the key and value of the title, or null if not found.
- */
 function getTitleFromObj(obj: Record<string, unknown>): [string | null, string | null] {
   const key = Object.keys(obj).find(k => TITLE_KEYS.has(k));
   return key ? [key, String(obj[key])] : [null, null];
@@ -579,14 +515,9 @@ function getTitleFromObj(obj: Record<string, unknown>): [string | null, string |
    RECURSIVE VALUE RENDERER (for generic explorations)
    ═══════════════════════════════════════════════════════ */
 
-interface RenderValueProps {
-  value: unknown;
-  brandColor: string;
-  depth: number;
-  label?: string;
-}
-
-const RenderValue: React.FC<RenderValueProps> = ({ value, brandColor, depth, label }) => {
+const RenderValue: React.FC<{
+  value: unknown; brandColor: string; depth: number; label?: string;
+}> = ({ value, brandColor, depth, label }) => {
   if (value === null || value === undefined) return null;
 
   // String
@@ -661,16 +592,10 @@ const RenderValue: React.FC<RenderValueProps> = ({ value, brandColor, depth, lab
   return <span className="text-xs text-zinc-400">{String(value)}</span>;
 };
 
-interface RenderCardProps {
-  obj: Record<string, unknown>;
-  brandColor: string;
-  depth: number;
-  index?: number;
-  total?: number;
-}
-
 /** Card renderer for object values */
-const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, total }) => {
+const RenderCard: React.FC<{
+  obj: Record<string, unknown>; brandColor: string; depth: number; index?: number; total?: number;
+}> = ({ obj, brandColor, depth, index, total }) => {
   const [titleKey, title] = getTitleFromObj(obj);
   const sectionIcon = title ? getSectionIcon(title) : "\u25b8";
   const contentKeys = Object.keys(obj).filter(k => k !== titleKey && !META_KEYS.has(k));
@@ -693,19 +618,19 @@ const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, 
       )}
       <div className="px-4 py-3 space-y-2">
         {contentKeys.map(k => {
-          const value = obj[k];
-          if (isTipKey(k) && typeof value === "string") {
+          const val = obj[k];
+          if (isTipKey(k) && typeof val === "string") {
             return (
               <div key={k} className="flex items-start gap-2.5 bg-amber-500/[0.06] border border-amber-500/15 rounded-xl px-4 py-3">
                 <span className="text-amber-400 text-sm mt-0.5 shrink-0">{"\ud83d\udca1"}</span>
                 <div>
                   <span className="text-[9px] font-bold text-amber-400/70 uppercase tracking-widest">Pro Tip</span>
-                  <p className="text-xs text-amber-200/80 leading-relaxed mt-0.5">{value}</p>
+                  <p className="text-xs text-amber-200/80 leading-relaxed mt-0.5">{val}</p>
                 </div>
               </div>
             );
           }
-          return <RenderValue key={k} value={value} brandColor={brandColor} depth={depth + 1} label={isPrimitive(value) ? k : undefined} />;
+          return <RenderValue key={k} value={val} brandColor={brandColor} depth={depth + 1} label={isPrimitive(val) ? k : undefined} />;
         })}
       </div>
     </div>

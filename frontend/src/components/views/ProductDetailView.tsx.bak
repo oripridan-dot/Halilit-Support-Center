@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import {
   ArrowLeft,
   Copy,
@@ -21,22 +21,38 @@ import {
 } from "../../hooks/useConductorCatalog";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
 import { useNavigationStore } from "../../store/navigationStore";
+import { Product } from "../../types";
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
-function fmtPrice(n: number | null | undefined): string {
-  if (n == null || n === 0) return "—";
-  return `₪${n.toLocaleString()}`;
+/**
+ * Formats a number as a Shekel currency string.
+ * Returns "—" if the number is null, undefined, or 0.
+ */
+function formatShekel(amount: number | null | undefined): string {
+  if (amount == null || amount === 0) return "—";
+  return `₪${amount.toLocaleString()}`;
 }
 
-function isCfp(price: number | null | undefined): boolean {
+/**
+ * Checks if a price is "Call for Price" (CFP).
+ * @param price The price to check.
+ * @returns True if the price is CFP (null, undefined, or 0), false otherwise.
+ */
+function isCallForPrice(price: number | null | undefined): boolean {
   return price == null || price === 0;
 }
 
 // ── StockDot ───────────────────────────────────────────────────────────────────
 interface StockDotProps {
+  /** The stock level of the product. */
   stock?: number | null;
 }
+
+/**
+ * Displays a colored dot indicating the stock status of a product.
+ * Green for in stock, red for out of stock, and grey for unknown.
+ */
 const StockDot: React.FC<StockDotProps> = ({ stock }) => {
   if (stock === 0)
     return (
@@ -62,8 +78,13 @@ const StockDot: React.FC<StockDotProps> = ({ stock }) => {
 
 // ── Toast ──────────────────────────────────────────────────────────────────────
 interface ToastProps {
+  /** The message to display in the toast. */
   msg: string;
 }
+
+/**
+ * Displays a temporary toast message at the bottom right of the screen.
+ */
 const Toast: React.FC<ToastProps> = ({ msg }) => (
   <div
     className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2.5 rounded-xl
@@ -76,13 +97,20 @@ const Toast: React.FC<ToastProps> = ({ msg }) => (
 
 // ── Skeleton ───────────────────────────────────────────────────────────────────
 interface SkeletonPulseProps {
+  /** Optional CSS class names to apply to the skeleton. */
   className?: string;
 }
+
+/**
+ * A pulsing skeleton placeholder for loading content.
+ */
 const SkeletonPulse: React.FC<SkeletonPulseProps> = ({ className = "" }) => (
   <div className={`bg-zinc-900 rounded animate-pulse ${className}`} />
 );
 
-// Pure loading skeleton — NO mock data, only animated placeholder shapes.
+/**
+ * A skeleton header component for when product data is loading.
+ */
 const SkeletonHeader = () => (
   <div
     role="status"
@@ -106,17 +134,30 @@ const SkeletonHeader = () => (
 
 // ── RelatedProductCard ─────────────────────────────────────────────────────────
 interface RelatedProduct {
+  /** The ID of the related product. */
   id: string;
+  /** The name of the related product. */
   name: string;
+  /** The price of the related product. */
   price?: number;
+  /** The URL of the related product's image. */
   image_url?: string;
 }
+
 interface RelatedProductCardProps {
+  /** The related product item to display. */
   item: RelatedProduct;
+  /** An optional badge to display on the card. */
   badge?: string;
+  /** The color of the badge. */
   badgeColor?: string;
+  /** A callback function to execute when the card is selected. */
   onSelect: () => void;
 }
+
+/**
+ * A card component for displaying a related product.
+ */
 const RelatedProductCard: React.FC<RelatedProductCardProps> = ({
   item,
   badge,
@@ -170,10 +211,17 @@ const RelatedProductCard: React.FC<RelatedProductCardProps> = ({
 
 // ── MiniSection ────────────────────────────────────────────────────────────────
 interface MiniSectionProps {
+  /** The title of the mini section. */
   title: string;
+  /** The count to display in the mini section's badge. */
   count: number;
+  /** The content of the mini section. */
   children: React.ReactNode;
 }
+
+/**
+ * A section component with a title and a badge displaying a count.
+ */
 const MiniSection: React.FC<MiniSectionProps> = ({
   title,
   count,
@@ -215,10 +263,15 @@ const SOURCE_STYLES: Record<
 };
 
 interface SourceBadgeProps {
+  /** The data source type. */
   source: DataSourceType;
+  /** Whether the data source is available. */
   available?: boolean;
 }
 
+/**
+ * A badge component indicating the source of data (Commercial, Official, Contextual).
+ */
 const SourceBadge: React.FC<SourceBadgeProps> = ({
   source,
   available = true,
@@ -247,10 +300,17 @@ const SourceBadge: React.FC<SourceBadgeProps> = ({
 
 // ── TabButton ───────────────────────────────────────────────────────────────────
 interface TabButtonProps {
+  /** Whether the tab button is currently active. */
   active: boolean;
+  /** A callback function to execute when the tab button is clicked. */
   onClick: () => void;
+  /** The content of the tab button. */
   children: React.ReactNode;
 }
+
+/**
+ * A button component for a tab in a tabbed interface.
+ */
 const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children }) => (
   <button
     onClick={onClick}
@@ -268,17 +328,26 @@ const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children }) => (
 
 interface ProductDetailViewProps {}
 
+/**
+ * Displays detailed information about a selected product,
+ * including its specifications, related products, and history.
+ */
 const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const { activeProductId, goBack, goToInventory, goToProduct } =
     useNavigationStore();
   const { products, isLoading: catalogLoading } = useConductorCatalog();
   // Genome: MemoryPhenotype — cancelStream aborts SSE connection on unmount (STRICT_JIT).
-  const { cancelStream: cancelJITStream, ...jitState } = useJITIntelligence(activeProductId ?? "");
+  const { cancelStream: cancelJITStream, ...jitState } = useJITIntelligence(
+    activeProductId ?? ""
+  );
 
   // STRICT_JIT: cancel SSE stream when component unmounts or product changes.
-  React.useEffect(() => {
-    return () => { cancelJITStream(); };
+  useEffect(() => {
+    return () => {
+      cancelJITStream();
+    };
   }, [cancelJITStream]);
+
   const [activeTab, setActiveTab] = useState<
     "ecosystem" | "specifications" | "history"
   >("ecosystem");
@@ -335,7 +404,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const displayStock = product?.stock;
 
   // Specs: JIT wins if non-empty
-  const jitSpecs = jitState.officialSpecs?.specs;
+  const jitSpecs = jitState.delivery?.specs;
   const catalogSpecs = product?.specs ?? {};
   const specsRecord: Record<string, unknown> =
     jitSpecs && Object.keys(jitSpecs).length > 0 ? jitSpecs : catalogSpecs;
@@ -352,28 +421,29 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     name: string;
     price?: number | null;
     image_url?: string;
-  }) =>
-    ({
-      id: p.id,
-      name: p.name,
-      price: p.price ?? undefined,
-      image_url: p.image_url,
-    }) as RelatedProduct;
+  }): RelatedProduct => ({
+    id: p.id,
+    name: p.name,
+    price: p.price ?? undefined,
+    image_url: p.image_url,
+  });
 
   const accessories = graphAccessories.map(toRelatedProduct);
   const alternatives = graphAlternatives.map(toRelatedProduct);
   const compatible = graphCompatible.map(toRelatedProduct);
-  const relProducts = [...accessories, ...alternatives, ...compatible];
+  const relatedProducts = [...accessories, ...alternatives, ...compatible];
 
   // ── Actions ──────────────────────────────────────────────────────────────────
   const handleCopySpecs = () => {
     const lines = Object.entries(specsRecord)
-      .map(([k, v]) => `${k}: ${v}`)
+      .map(([key, value]) => `${key}: ${value}`)
       .join("\n");
+
     if (!lines) {
       showToast("No specs to copy");
       return;
     }
+
     navigator.clipboard.writeText(lines).then(() => {
       setCopiedSpecs(true);
       showToast("Specs copied to clipboard ✓");
@@ -388,8 +458,8 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
 
   const isStreaming =
     jitState.phase === "snap" ||
-    jitState.phase === "intel" ||
-    jitState.phase === "wisdom";
+    jitState.phase === "promise" ||
+    jitState.phase === "deliver";
 
   // ── Source availability (RENDERED vs RENDERED_PARTIAL) ──────────────────────
   // Each badge maps to one of the Three Authorized Data Sources (source_rules.py).
@@ -399,8 +469,11 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     !!product?.official_url || Object.keys(specsRecord).length > 0; // brand page
   const srcContextual = jitState.phase === "complete"; // 3+ trusted review sites
   const isRenderedPartial =
-    srcCommercial && (!srcOfficial || !srcContextual) &&
-    (jitState.phase === "error" || jitState.phase === "complete" || jitState.phase === "idle");
+    srcCommercial &&
+    (!srcOfficial || !srcContextual) &&
+    (jitState.phase === "error" ||
+      jitState.phase === "complete" ||
+      jitState.phase === "idle");
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
@@ -444,7 +517,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
                   <div className="flex items-center gap-1.5 mt-1 shrink-0">
                     <Loader2 size={11} className="animate-spin text-blue-400" />
                     <span className="text-[10px] text-blue-400">
-                      {jitState.statusMessage || "Loading intelligence…"}
+                      {jitState.promise?.message || "Loading intelligence…"}
                     </span>
                   </div>
                 )}
@@ -470,7 +543,10 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
 
               {/* Source badges — RENDERED or RENDERED_PARTIAL (genome assertion) */}
               {(srcCommercial || jitState.phase !== "idle") && (
-                <div className="flex items-center gap-1.5 mt-2.5" aria-label="Data sources">
+                <div
+                  className="flex items-center gap-1.5 mt-2.5"
+                  aria-label="Data sources"
+                >
                   <SourceBadge source="COMMERCIAL" available={srcCommercial} />
                   <SourceBadge source="OFFICIAL" available={srcOfficial} />
                   <SourceBadge source="CONTEXTUAL" available={srcContextual} />
@@ -485,7 +561,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
 
             {/* Pricing */}
             <div className="shrink-0 pt-1 min-w-[140px]">
-              {isCfp(displayPrice) ? (
+              {isCallForPrice(displayPrice) ? (
                 <div>
                   <span className="text-[28px] font-bold text-amber-400 leading-none">
                     Call for Price
@@ -505,11 +581,11 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
               ) : (
                 <div>
                   <div className="text-[28px] font-bold text-zinc-100 leading-none">
-                    {fmtPrice(displayPrice)}
+                    {formatShekel(displayPrice)}
                   </div>
                   {displayEilat && (
                     <div className="text-sm text-zinc-500 mt-0.5">
-                      Eilat: {fmtPrice(displayEilat)}
+                      Eilat: {formatShekel(displayEilat)}
                     </div>
                   )}
                 </div>
@@ -623,7 +699,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
           {/* Ecosystem Tab */}
           {activeTab === "ecosystem" && (
             <div className="max-w-2xl">
-              {relProducts.length === 0 ? (
+              {relatedProducts.length === 0 ? (
                 <div className="flex flex-col items-center gap-3 py-12">
                   <Package size={24} className="text-zinc-800" />
                   <p className="text-sm text-zinc-600">

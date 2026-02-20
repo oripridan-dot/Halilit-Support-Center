@@ -51,6 +51,22 @@ DIM = "\033[2m"
 RESET = "\033[0m"
 
 ROOT = Path(__file__).resolve().parent
+_FACTORY_DIR = ROOT / "backend" / "factory"
+
+
+# ---------------------------------------------------------------------------
+# Janitor — lazy import so nexus.py loads even without the factory package
+# ---------------------------------------------------------------------------
+
+def _metabolic_flush() -> None:
+    """Call janitor_agent.metabolic_flush() if the module is available."""
+    try:
+        if str(_FACTORY_DIR) not in sys.path:
+            sys.path.insert(0, str(_FACTORY_DIR))
+        from janitor_agent import metabolic_flush  # noqa: PLC0415
+        metabolic_flush(silent=False)
+    except Exception as exc:  # noqa: BLE001
+        print(f"{DIM}⚠️  Metabolic flush skipped: {exc}{RESET}")
 
 
 # ---------------------------------------------------------------------------
@@ -414,6 +430,7 @@ def review_changes(auto_mode: bool = False) -> bool:
         if r.returncode != 0:
             print(f"{RED}❌ Commit failed: {(r.stdout + r.stderr).strip()}{RESET}")
             return False
+        _metabolic_flush()
         return True
 
     while True:
@@ -439,6 +456,7 @@ def review_changes(auto_mode: bool = False) -> bool:
                 subprocess.run(["git", "restore", "."])
                 return False
             print(f"{GREEN}✅ Changes committed.{RESET}")
+            _metabolic_flush()
             return True
 
         elif decision == "diff":

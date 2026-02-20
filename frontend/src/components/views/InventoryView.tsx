@@ -1,124 +1,169 @@
-import React, { useState, useEffect } from 'react';
-import { useConductorCatalog, ConductorProduct } from '../../hooks/useConductorCatalog';
-import { useDebounce } from '../../hooks/useDebounce';
-import { navigationStore } from '../../store/navigationStore';
+import React from 'react';
+import { useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { useDebounce } from 'use-debounce';
+import { CheckCircleIcon, XCircleIcon } from 'lucide-react';
+import { useNavigationStore } from '../../store/navigationStore';
+import { ConductorProduct } from '../../types';
+import { fetchProducts } from '../../api/products';
 
-interface InventoryViewProps {}
+const InventoryView: React.FC = () => {
+  const { goToProduct } = useNavigationStore();
+  const [searchTerm, setSearchTerm] = React.useState<string>('');
+  const [debouncedSearchTerm] = useDebounce(searchTerm, 300);
 
-const InventoryView: React.FC<InventoryViewProps> = () => {
-  const [filterText, setFilterText] = useState<string>('');
-  const debouncedFilterText = useDebounce(filterText, 150);
-  const { initialCfpFilter, searchQuery } = navigationStore.getState();
-
-  const { data, isLoading, error } = useConductorCatalog();
-
-  useEffect(() => {
-    if (searchQuery) {
-      setFilterText(searchQuery);
-    } else if (initialCfpFilter) {
-      setFilterText(initialCfpFilter);
-    }
-  }, []);
-
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFilterText(event.target.value);
-  };
-
-  const products: ConductorProduct[] = data?.products ?? [];
-  const filtered = debouncedFilterText
-    ? products.filter(p =>
-        p.search_text?.toLowerCase().includes(debouncedFilterText.toLowerCase()) ||
-        p.name?.toLowerCase().includes(debouncedFilterText.toLowerCase()) ||
-        p.brand?.toLowerCase().includes(debouncedFilterText.toLowerCase())
-      )
-    : products;
-
-  return (
-    <div className="bg-zinc-900 min-h-screen p-4">
-      <input
-        type="text"
-        placeholder="Search..."
-        value={filterText}
-        onChange={handleSearchChange}
-        className="dark:bg-zinc-800 dark:text-zinc-100 rounded-md p-2 w-full mb-4"
-      />
-
-      {isLoading && <p className="text-zinc-400">Loading...</p>}
-      {error && <p className="text-red-500">Error loading inventory.</p>}
-
-      {!isLoading && !error && filtered.length === 0 && (
-        <p className="text-zinc-400">No items found.</p>
-      )}
-
-      {filtered.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filtered.map((item: ConductorProduct) => (
-            <div key={item.id} className="dark:bg-zinc-800 rounded-md p-4">
-              <h3 className="text-zinc-100 font-semibold">{item.name}</h3>
-              <p className="text-zinc-400 text-sm">{item.brand}</p>
-              <p className="text-zinc-400 text-sm">{item.description_short || item.description}</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default InventoryView;
-
-interface InventoryViewProps {}
-
-const InventoryView: React.FC<InventoryViewProps> = () => {
-  const [filterText, setFilterText] = useState<string>('');
-  const debouncedFilterText = useDebounce(filterText, 150);
-  const { initialCfpFilter, searchQuery } = navigationStore.getState();
-
-  const { data, isLoading, isError } = useConductorCatalog({
-    searchQuery: debouncedFilterText,
+  const { data: products, isLoading, isError } = useQuery({
+    queryKey: ['products', debouncedSearchTerm],
+    queryFn: () => fetchProducts(debouncedSearchTerm),
+    staleTime: 5000,
   });
 
-  useEffect(() => {
-    if (searchQuery) {
-      setFilterText(searchQuery);
-    } else if (initialCfpFilter) {
-      setFilterText(initialCfpFilter);
+  const sortedProducts = useMemo(() => {
+    if (!products) {
+      return [];
     }
-  }, []);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFilterText(event.target.value);
+    return [...products].sort((a, b) => {
+      const stockA = a.stock === null ? 1 : a.stock === 0 ? 2 : 0;
+      const stockB = b.stock === null ? 1 : b.stock === 0 ? 2 : 0;
+
+      if (stockA !== stockB) {
+        return stockA - stockB;
+      }
+
+      const priceA = a.price === null || a.price === 0 ? 1 : 0;
+      const priceB = b.price === null || b.price === 0 ? 1 : 0;
+
+      if (priceA !== priceB) {
+        return priceA - priceB;
+      }
+
+      return (a.id || '').localeCompare(b.id || '');
+    });
+  }, [products]);
+
+  const renderStockStatus = (product: ConductorProduct) => {
+    if (product.stock === 0) {
+      return (
+        <div className="absolute top-0 right-0 p-1 bg-red-500 text-white text-xs font-bold rounded-bl-md z-10">
+          OUT OF STOCK
+        </div>
+      );
+    }
+    if (product.stock === null || product.stock === undefined) {
+      return (
+        <div className="absolute top-0 right-0 p-1 bg-amber-500 text-zinc-900 text-xs font-bold rounded-bl-md z-10">
+          UNCONFIRMED
+        </div>
+      );
+    }
+    return null;
   };
 
+  const renderCallForPrice = (product: ConductorProduct) => {
+    if (product.price === null || product.price === 0) {
+      return (
+        <div className="absolute top-0 right-0 p-1 bg-amber-500 text-zinc-900 text-xs font-bold rounded-bl-md z-10">
+          Call for Price
+        </div>
+      );
+    }
+    return null;
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        Loading...
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="flex items-center justify-center h-full text-red-500">
+        Error loading products.
+      </div>
+    );
+  }
+
+  if (!products || products.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full text-zinc-400">
+        No products found.
+      </div>
+    );
+  }
 
   return (
-    <div className="bg-zinc-900 min-h-screen p-4">
+    <div className="p-4">
       <input
         type="text"
-        placeholder="Search..."
-        value={filterText}
-        onChange={handleSearchChange}
-        className="dark:bg-zinc-800 dark:text-zinc-100 rounded-md p-2 w-full mb-4"
+        placeholder="Search products..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="w-full p-2 mb-4 text-zinc-900 rounded-md shadow-md dark:bg-zinc-700 dark:text-white"
       />
-
-      {isLoading && <p className="text-zinc-400">Loading...</p>}
-      {isError && <p className="text-red-500">Error loading inventory.</p>}
-
-      {data && data.items && data.items.length === 0 && !isLoading && !isError && (
-        <p className="text-zinc-400">No items found.</p>
-      )}
-
-      {data && data.items && data.items.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {data.items.map((item: InventoryItem) => (
-            <div key={item.id} className="dark:bg-zinc-800 rounded-md p-4">
-              <h3 className="text-zinc-100 font-semibold">{item.name}</h3>
-              <p className="text-zinc-400">{item.description}</p>
-              <p className="text-zinc-400">SKU: {item.sku}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm text-left rtl:text-right text-zinc-400 dark:text-zinc-400">
+          <thead className="text-xs uppercase bg-zinc-700 dark:bg-zinc-700 text-zinc-400 dark:text-zinc-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                Name
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Brand
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Price
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Stock
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedProducts.map((product) => (
+              <tr
+                key={product.id}
+                className={`bg-zinc-800 border-b border-zinc-700 dark:bg-zinc-800 dark:border-zinc-700 hover:bg-zinc-700 cursor-pointer relative ${
+                  product.stock === 0
+                    ? 'border-red-500'
+                    : product.stock === null || product.stock === undefined
+                    ? 'border-amber-500'
+                    : ''
+                }`}
+                onClick={() => goToProduct(product.id)}
+              >
+                <td className="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
+                  {product.name}
+                  {renderStockStatus(product)}
+                  {renderCallForPrice(product)}
+                </td>
+                <td className="px-6 py-4">{product.brand}</td>
+                <td className="px-6 py-4">
+                  {product.price !== null ? `₪${product.price.toFixed(2)}` : 'Call for Price'}
+                </td>
+                <td className="px-6 py-4">
+                  {product.stock !== null && product.stock !== undefined
+                    ? product.stock
+                    : 'Unconfirmed'}
+                </td>
+                <td className="px-6 py-4">
+                  {product.data_status === 'active' ? (
+                    <CheckCircleIcon className="w-4 h-4 text-green-500" />
+                  ) : (
+                    <XCircleIcon className="w-4 h-4 text-red-500" />
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
