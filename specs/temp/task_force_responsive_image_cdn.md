@@ -1,6 +1,6 @@
 # Task-Force Blackboard: responsive_image_cdn
 
-**Goal:** Integrate Next-gen Image CDN with AVIF support to address 'Zero Broken Images' goal, and ecosystem component issue
+**Goal:** Integrate Next-gen Image CDN with AVIF support as per 2026-02-22_proposal_responsive_image_generation.md
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,8 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- No code was provided. The 'IMPLEMENTED CODE' section is marked as "(pending — Builder will populate this)".
-- The UI State is unavailable, but this is secondary to the missing code.
+*   The implemented code is missing. I cannot evaluate the code against the specification.
 
 **Required Fix:**
-The Builder agent must provide the implemented code for review. Once the code is available, re-evaluate against the SPEC and user's original request.
+*   Provide the implemented code so that I can assess its compliance with the specification and user's original intent.
