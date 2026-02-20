@@ -36,13 +36,13 @@ export type OptimizedProduct = ConductorProduct;
 
 /** BrandIdentity - brand metadata */
 export interface BrandIdentity {
-  id?: string;
-  name?: string;
-  logo_url?: string | null;
-  website?: string | null;
-  description?: string | null;
-  brand_colors?: { primary?: string; secondary?: string };
-  categories?: string[];
+    id?: string;
+    name?: string;
+    logo_url?: string | null;
+    website?: string | null;
+    description?: string | null;
+    brand_colors?: { primary?: string; secondary?: string };
+    categories?: string[];
 }
 
 /** Product image structure */
@@ -230,51 +230,51 @@ export interface JITStreamState {
 
 /** Format IL price for display */
 export function formatPrice(product: Product): string {
-  const price = product.price;
-  if (!price || price === 0) return 'Call for Price';
-  return new Intl.NumberFormat('he-IL', {
-    style: 'currency',
-    currency: 'ILS',
-    maximumFractionDigits: 0,
-  }).format(price);
+    const price = product.price;
+    if (!price || price === 0) return 'Call for Price';
+    return new Intl.NumberFormat('he-IL', {
+        style: 'currency',
+        currency: 'ILS',
+        maximumFractionDigits: 0,
+    }).format(price);
 }
 
 /** Format Eilat price for display */
 export function formatPriceEilat(product: Product): string {
-  const price = product.price_eilat;
-  if (!price || price === 0) return 'Call for Price';
-  return new Intl.NumberFormat('he-IL', {
-    style: 'currency',
-    currency: 'ILS',
-    maximumFractionDigits: 0,
-  }).format(price);
+    const price = product.price_eilat;
+    if (!price || price === 0) return 'Call for Price';
+    return new Intl.NumberFormat('he-IL', {
+        style: 'currency',
+        currency: 'ILS',
+        maximumFractionDigits: 0,
+    }).format(price);
 }
 
 /**
  * Get product tier color
  */
 export function getTierColor(tier: PricingTier): string {
-  const colors: Record<string, string> = {
-    entry: '#F59E0B',   // Bronze
-    mid: '#9CA3AF',     // Silver
-    pro: '#FBBF24',     // Gold
-    flagship: '#60A5FA', // Diamond/Blue
-    legacy: '#4B5563'   // Grey
-  };
-  return colors[tier] || colors.entry;
+    const colors: Record<string, string> = {
+        entry: '#F59E0B',   // Bronze
+        mid: '#9CA3AF',     // Silver
+        pro: '#FBBF24',     // Gold
+        flagship: '#60A5FA', // Diamond/Blue
+        legacy: '#4B5563'   // Grey
+    };
+    return colors[tier] || colors.entry;
 }
 
 /** Filter products by tier */
 export function filterByTier(products: Product[], tier: PricingTier): Product[] {
-  return products.filter(p => p.tier === tier);
+    return products.filter(p => p.tier === tier);
 }
 
 /** Search products by text (uses pre-built search_text index or name/brand fallback) */
 export function searchProducts(products: Product[], query: string): Product[] {
-  const q = query.toLowerCase();
-  return products.filter(p =>
-    p.search_text?.toLowerCase().includes(q) ||
-    p.name?.toLowerCase().includes(q) ||
-    p.brand?.toLowerCase().includes(q)
-  );
+    const q = query.toLowerCase();
+    return products.filter(p =>
+        p.search_text?.toLowerCase().includes(q) ||
+        p.name?.toLowerCase().includes(q) ||
+        p.brand?.toLowerCase().includes(q)
+    );
 }

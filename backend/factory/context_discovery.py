@@ -23,6 +23,13 @@ from pathlib import Path
 from typing import Iterator
 
 try:
+    from backend.factory.hippocampus import swarm_memory as _swarm_memory
+    _HIPPOCAMPUS_AVAILABLE = True
+except Exception:  # noqa: BLE001
+    _HIPPOCAMPUS_AVAILABLE = False
+    _swarm_memory = None  # type: ignore[assignment]
+
+try:
     import yaml
     _YAML_AVAILABLE = True
 except ImportError:
@@ -339,6 +346,49 @@ def hydrate_context(spec_path: str | Path) -> str:
     hydrated.append(intent_body)
 
     return "\n".join(hydrated)
+
+
+# ---------------------------------------------------------------------------
+# Vector Memory — Hippocampus integration
+# ---------------------------------------------------------------------------
+
+def dynamic_vector_discovery(task_intent: str) -> str:
+    """
+    Semantic Vector DB recall replacing brute-force file scanning.
+
+    Queries the Hippocampus (ChromaDB) for memory fragments whose *embedded
+    meaning* best matches the task intent.  Falls back to an informational
+    string if the Hippocampus is offline or empty.
+
+    Architecture role: Gap 1 remediation — prevents Context Collapse by
+    returning only the 2-3 most relevant code fragments instead of loading
+    the full repository into the prompt.
+
+    Args:
+        task_intent: Natural-language description of the agent's current task
+                     (e.g. "Update the search debounce logic in GlobalSearch").
+
+    Returns:
+        A formatted context block ready to inject into an LLM prompt,
+        or a fallback warning string if no relevant memories exist.
+    """
+    if not _HIPPOCAMPUS_AVAILABLE or _swarm_memory is None:
+        return "⚠️ Hippocampus unavailable. Falling back to text-search context discovery."
+
+    memories = _swarm_memory.recall(task_intent)
+
+    if not memories:
+        return "⚠️ Hippocampus empty. No memories encoded yet — relying on default context..."
+
+    context_block = "=== 🧠 HIPPOCAMPUS RECALL (VECTOR MEMORY) ===\n"
+    for mem in memories:
+        context_block += f"\n--- 📄 {mem['filepath']} ---\n"
+        context_block += f"Purpose: {mem['description']}\n"
+        # Truncate individual fragments to keep the prompt razor-sharp
+        context_block += f"Code Snippet:\n{mem['content'][:2000]}\n"
+
+    context_block += "\n=== END HIPPOCAMPUS RECALL ===\n"
+    return context_block
 
 
 # ---------------------------------------------------------------------------

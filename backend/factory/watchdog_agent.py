@@ -319,6 +319,45 @@ def _run_vitest() -> dict:
     return {"status": "PASS", "source": "vitest", "log": ""}
 
 
+def run_unit_tests(target_file: str = "") -> bool:
+    """
+    Executes physical Vitest unit tests in the frontend workspace.
+
+    Called by the Frontend Manager during TDD State 3 (Red Phase) and
+    State 5 (Green Phase) to verify React component logic.
+
+    Args:
+        target_file: If provided, runs only the tests matching that filename.
+                     Pass an empty string to run the full test suite.
+
+    Returns:
+        True if all tests pass (Green), False if any test fails (Red).
+    """
+    print(f"🐕 Watchdog: Sniffing logic in {target_file if target_file else 'all components'}...")
+
+    cmd = ["pnpm", "test", "--", "--run", "--passWithNoTests"]
+    if target_file:
+        # Vitest accepts a filename filter as the last positional argument
+        cmd.append(Path(target_file).name)
+
+    result = subprocess.run(
+        cmd,
+        cwd=str(FRONTEND_DIR),
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+
+    if result.returncode == 0:
+        print("   ✅ Watchdog confirms: Tests passed (Green Phase).")
+        return True
+
+    print("   ❌ Watchdog detected failures (Red Phase):")
+    # Print the last 15 lines to avoid console flood
+    print("\n".join(result.stdout.splitlines()[-15:]))
+    return False
+
+
 def run_diagnostics() -> dict:
     """Run all checks (tsc, eslint, pytest, vitest); return first failure or PASS."""
     print("🩺 Watchdog scanning system health...")
