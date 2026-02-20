@@ -23,95 +23,15 @@ import { useJITIntelligence } from "../../hooks/useJITIntelligence";
 import { useNavigationStore } from "../../store/navigationStore";
 import { Product } from "../../types";
 
-// ── Type Definitions ─────────────────────────────────────────────────────────
-
-/** Represents a related product. */
-interface RelatedProduct {
-  id: string;
-  name: string;
-  price?: number;
-  image_url?: string;
-}
-
-/** Properties for the StockDot component. */
-interface StockDotProps {
-  /** The stock level of the product. */
-  stock?: number | null;
-}
-
-/** Properties for the Toast component. */
-interface ToastProps {
-  /** The message to display in the toast. */
-  msg: string;
-}
-
-/** Properties for the SkeletonPulse component. */
-interface SkeletonPulseProps {
-  /** Optional CSS class names to apply to the skeleton. */
-  className?: string;
-}
-
-/** Properties for the RelatedProductCard component. */
-interface RelatedProductCardProps {
-  /** The related product item to display. */
-  item: RelatedProduct;
-  /** An optional badge to display on the card. */
-  badge?: string;
-  /** The color of the badge. */
-  badgeColor?: string;
-  /** A callback function to execute when the card is selected. */
-  onSelect: () => void;
-}
-
-/** Properties for the MiniSection component. */
-interface MiniSectionProps {
-  /** The title of the mini section. */
-  title: string;
-  /** The count to display in the mini section's badge. */
-  count: number;
-  /** The content of the mini section. */
-  children: React.ReactNode;
-}
-
-type DataSourceType = "COMMERCIAL" | "OFFICIAL" | "CONTEXTUAL";
-
-/** Properties for the SourceBadge component. */
-interface SourceBadgeProps {
-  /** The data source type. */
-  source: DataSourceType;
-  /** Whether the data source is available. */
-  available?: boolean;
-}
-
-/** Properties for the TabButton component. */
-interface TabButtonProps {
-  /** Whether the tab button is currently active. */
-  active: boolean;
-  /** A callback function to execute when the tab button is clicked. */
-  onClick: () => void;
-  /** The content of the tab button. */
-  children: React.ReactNode;
-}
-
-/**
- * Properties for the ProductDetailView component.
- * Currently empty, but included for potential future expansion.
- */
-interface ProductDetailViewProps {}
-
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
 /**
  * Formats a number as a Shekel currency string.
- * Returns "Call for Price" if the number is null, undefined, or 0.
- * @param amount The amount to format.
- * @returns The formatted price string.
+ * Returns "—" if the number is null, undefined, or 0.
  */
 function formatShekel(amount: number | null | undefined): string {
-  if (amount == null || amount === 0) return "Call for Price";
-  return `₪${amount.toLocaleString("he-IL", {
-    maximumFractionDigits: 0,
-  })}`;
+  if (amount == null || amount === 0) return "—";
+  return `₪${amount.toLocaleString()}`;
 }
 
 /**
@@ -124,6 +44,10 @@ function isCallForPrice(price: number | null | undefined): boolean {
 }
 
 // ── StockDot ───────────────────────────────────────────────────────────────────
+interface StockDotProps {
+  /** The stock level of the product. */
+  stock?: number | null;
+}
 
 /**
  * Displays a colored dot indicating the stock status of a product.
@@ -153,6 +77,10 @@ const StockDot: React.FC<StockDotProps> = ({ stock }) => {
 };
 
 // ── Toast ──────────────────────────────────────────────────────────────────────
+interface ToastProps {
+  /** The message to display in the toast. */
+  msg: string;
+}
 
 /**
  * Displays a temporary toast message at the bottom right of the screen.
@@ -168,6 +96,10 @@ const Toast: React.FC<ToastProps> = ({ msg }) => (
 );
 
 // ── Skeleton ───────────────────────────────────────────────────────────────────
+interface SkeletonPulseProps {
+  /** Optional CSS class names to apply to the skeleton. */
+  className?: string;
+}
 
 /**
  * A pulsing skeleton placeholder for loading content.
@@ -201,6 +133,27 @@ const SkeletonHeader = () => (
 );
 
 // ── RelatedProductCard ─────────────────────────────────────────────────────────
+interface RelatedProduct {
+  /** The ID of the related product. */
+  id: string;
+  /** The name of the related product. */
+  name: string;
+  /** The price of the related product. */
+  price?: number;
+  /** The URL of the related product's image. */
+  image_url?: string;
+}
+
+interface RelatedProductCardProps {
+  /** The related product item to display. */
+  item: RelatedProduct;
+  /** An optional badge to display on the card. */
+  badge?: string;
+  /** The color of the badge. */
+  badgeColor?: string;
+  /** A callback function to execute when the card is selected. */
+  onSelect: () => void;
+}
 
 /**
  * A card component for displaying a related product.
@@ -257,6 +210,14 @@ const RelatedProductCard: React.FC<RelatedProductCardProps> = ({
 );
 
 // ── MiniSection ────────────────────────────────────────────────────────────────
+interface MiniSectionProps {
+  /** The title of the mini section. */
+  title: string;
+  /** The count to display in the mini section's badge. */
+  count: number;
+  /** The content of the mini section. */
+  children: React.ReactNode;
+}
 
 /**
  * A section component with a title and a badge displaying a count.
@@ -280,6 +241,7 @@ const MiniSection: React.FC<MiniSectionProps> = ({
 // ── SourceBadge ────────────────────────────────────────────────────────────────
 // Genome trait: SourceBadgePhenotype — three visually distinct source types.
 // When available=false → greyed-out + lock icon (RENDERED_PARTIAL state).
+type DataSourceType = "COMMERCIAL" | "OFFICIAL" | "CONTEXTUAL";
 
 const SOURCE_STYLES: Record<
   DataSourceType,
@@ -299,6 +261,13 @@ const SOURCE_STYLES: Record<
     label: "Contextual",
   },
 };
+
+interface SourceBadgeProps {
+  /** The data source type. */
+  source: DataSourceType;
+  /** Whether the data source is available. */
+  available?: boolean;
+}
 
 /**
  * A badge component indicating the source of data (Commercial, Official, Contextual).
@@ -330,6 +299,14 @@ const SourceBadge: React.FC<SourceBadgeProps> = ({
 };
 
 // ── TabButton ───────────────────────────────────────────────────────────────────
+interface TabButtonProps {
+  /** Whether the tab button is currently active. */
+  active: boolean;
+  /** A callback function to execute when the tab button is clicked. */
+  onClick: () => void;
+  /** The content of the tab button. */
+  children: React.ReactNode;
+}
 
 /**
  * A button component for a tab in a tabbed interface.
@@ -348,6 +325,8 @@ const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children }) => (
 );
 
 // ── ProductDetailView ──────────────────────────────────────────────────────────
+
+interface ProductDetailViewProps {}
 
 /**
  * Displays detailed information about a selected product,
@@ -373,7 +352,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     "ecosystem" | "specifications" | "history"
   >("ecosystem");
   const [toast, setToast] = useState<string | null>(null);
-  const [specsCopied, setSpecsCopied] = useState(false);
+  const [copiedSpecs, setCopiedSpecs] = useState(false);
 
   /**
    * Displays a toast message for a short duration.
@@ -477,9 +456,9 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     }
 
     navigator.clipboard.writeText(lines).then(() => {
-      setSpecsCopied(true);
+      setCopiedSpecs(true);
       showToast("Specs copied to clipboard ✓");
-      setTimeout(() => setSpecsCopied(false), 1600);
+      setTimeout(() => setCopiedSpecs(false), 1600);
     });
   };
 
@@ -645,7 +624,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
               bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:border-zinc-700
               transition-all"
           >
-            {specsCopied ? (
+            {copiedSpecs ? (
               <Check size={12} className="text-emerald-400" />
             ) : (
               <Copy size={12} />
@@ -805,7 +784,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
               ) : (
                 <table className="w-full border-collapse text-sm">
                   <tbody>
-                    {Object.entries(specsRecord).map(([key, value], idx) => (
+                    {Object.entries(specsRecord).map(([key, val], idx) => (
                       <tr
                         key={key}
                         className={idx % 2 === 0 ? "bg-zinc-900/20" : ""}
@@ -814,7 +793,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
                           {key}
                         </td>
                         <td className="py-2 px-3 text-xs text-zinc-300">
-                          {String(value ?? "—")}
+                          {String(val ?? "—")}
                         </td>
                       </tr>
                     ))}

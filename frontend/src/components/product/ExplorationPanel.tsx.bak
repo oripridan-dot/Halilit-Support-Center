@@ -20,79 +20,24 @@ import type { ExplorationResult } from "../../hooks/useExploration";
    TYPES
    ═══════════════════════════════════════════════════════ */
 
-/** Props for the ExplorationPanel component */
 interface ExplorationPanelProps {
   result: ExplorationResult;
   onClose: () => void;
   brandColor?: string;
 }
 
-/** Represents a section within a setup guide */
 interface GuideSection {
   title: string;
   steps: GuideStep[];
   [key: string]: unknown;
 }
 
-/** Represents a step within a guide section */
 interface GuideStep {
   step: number;
   title: string;
   instruction: string;
   tip?: string;
   [key: string]: unknown;
-}
-
-/** Props for the SetupGuideView component */
-interface SetupGuideViewProps {
-  guide: GuideData;
-  brandColor: string;
-}
-
-/** Data structure for a setup guide */
-interface GuideData {
-  title: string;
-  overview: string;
-  sections: GuideSection[];
-}
-
-/** Props for the StepCard component */
-interface StepCardProps {
-  step: GuideStep;
-  stepNumber: number;
-  isChecked: boolean;
-  onToggle: () => void;
-  brandColor: string;
-}
-
-/** Props for the SectionProgress component */
-interface SectionProgressProps {
-  completed: number;
-  total: number;
-  brandColor: string;
-}
-
-/** Props for the GenericView component */
-interface GenericViewProps {
-  data: unknown;
-  brandColor: string;
-}
-
-/** Props for the RenderValue component */
-interface RenderValueProps {
-  value: unknown;
-  brandColor: string;
-  depth: number;
-  label?: string;
-}
-
-/** Props for the RenderCard component */
-interface RenderCardProps {
-  obj: Record<string, unknown>;
-  brandColor: string;
-  depth: number;
-  index?: number;
-  total?: number;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -166,7 +111,7 @@ function getSectionIcon(name: string): string {
  */
 export const ExplorationPanel: React.FC<ExplorationPanelProps> = ({
   result, onClose, brandColor = "#3b82f6",
-}): JSX.Element => {
+}) => {
   const topic = result.topic || result.action_type;
   const label = EXPLORATION_TYPE_LABELS[topic] || "Exploration";
   const icon = EXPLORATION_TYPE_ICONS[topic] || "\ud83d\udd0d";
@@ -237,7 +182,12 @@ export const ExplorationPanel: React.FC<ExplorationPanelProps> = ({
    SETUP GUIDE VIEW — Premium guided layout
    ═══════════════════════════════════════════════════════ */
 
-const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): JSX.Element => {
+interface SetupGuideViewProps {
+  guide: { title: string; overview: string; sections: GuideSection[] };
+  brandColor: string;
+}
+
+const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }) => {
   const totalSteps = useMemo(
     () => guide.sections.reduce((sum, section) => sum + (section.steps?.length || 0), 0),
     [guide.sections],
@@ -249,11 +199,6 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
   const completedCount = checkedSteps.size;
   const progressPct = totalSteps > 0 ? Math.round((completedCount / totalSteps) * 100) : 0;
 
-  /**
-   * Toggles the checked state of a step within a section.
-   * @param sectionIdx - The index of the section.
-   * @param stepIdx - The index of the step.
-   */
   const toggleStep = useCallback((sectionIdx: number, stepIdx: number) => {
     const key = `${sectionIdx}-${stepIdx}`;
     setCheckedSteps(prev => {
@@ -263,10 +208,6 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
     });
   }, []);
 
-  /**
-   * Scrolls to a specific section within the guide.
-   * @param idx - The index of the section to scroll to.
-   */
   const scrollToSection = useCallback((idx: number) => {
     sectionRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "start" });
     setActiveSectionIdx(idx);
@@ -439,7 +380,15 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
    STEP CARD
    ═══════════════════════════════════════════════════════ */
 
-const StepCard: React.FC<StepCardProps> = ({ step, stepNumber, isChecked, onToggle, brandColor }): JSX.Element => {
+interface StepCardProps {
+  step: GuideStep;
+  stepNumber: number;
+  isChecked: boolean;
+  onToggle: () => void;
+  brandColor: string;
+}
+
+const StepCard: React.FC<StepCardProps> = ({ step, stepNumber, isChecked, onToggle, brandColor }) => {
   const extraKeys = Object.keys(step).filter(
     k => !["step", "title", "instruction", "tip", "step_number", "stepNumber"].includes(k)
   );
@@ -498,7 +447,13 @@ const StepCard: React.FC<StepCardProps> = ({ step, stepNumber, isChecked, onTogg
    SECTION PROGRESS RING
    ═══════════════════════════════════════════════════════ */
 
-const SectionProgress: React.FC<SectionProgressProps> = ({ completed, total, brandColor }): JSX.Element | null => {
+interface SectionProgressProps {
+  completed: number;
+  total: number;
+  brandColor: string;
+}
+
+const SectionProgress: React.FC<SectionProgressProps> = ({ completed, total, brandColor }) => {
   if (total === 0) return null;
   const percentage = Math.round((completed / total) * 100);
   const radius = 12;
@@ -530,7 +485,12 @@ const SectionProgress: React.FC<SectionProgressProps> = ({ completed, total, bra
    GENERIC VIEW — For non-setup-guide explorations
    ═══════════════════════════════════════════════════════ */
 
-const GenericView: React.FC<GenericViewProps> = ({ data, brandColor }): JSX.Element => (
+interface GenericViewProps {
+  data: unknown;
+  brandColor: string;
+}
+
+const GenericView: React.FC<GenericViewProps> = ({ data, brandColor }) => (
   <RenderValue value={data} brandColor={brandColor} depth={0} />
 );
 
@@ -619,7 +579,14 @@ function getTitleFromObj(obj: Record<string, unknown>): [string | null, string |
    RECURSIVE VALUE RENDERER (for generic explorations)
    ═══════════════════════════════════════════════════════ */
 
-const RenderValue: React.FC<RenderValueProps> = ({ value, brandColor, depth, label }): JSX.Element | null => {
+interface RenderValueProps {
+  value: unknown;
+  brandColor: string;
+  depth: number;
+  label?: string;
+}
+
+const RenderValue: React.FC<RenderValueProps> = ({ value, brandColor, depth, label }) => {
   if (value === null || value === undefined) return null;
 
   // String
@@ -694,8 +661,16 @@ const RenderValue: React.FC<RenderValueProps> = ({ value, brandColor, depth, lab
   return <span className="text-xs text-zinc-400">{String(value)}</span>;
 };
 
+interface RenderCardProps {
+  obj: Record<string, unknown>;
+  brandColor: string;
+  depth: number;
+  index?: number;
+  total?: number;
+}
+
 /** Card renderer for object values */
-const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, total }): JSX.Element => {
+const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, total }) => {
   const [titleKey, title] = getTitleFromObj(obj);
   const sectionIcon = title ? getSectionIcon(title) : "\u25b8";
   const contentKeys = Object.keys(obj).filter(k => k !== titleKey && !META_KEYS.has(k));
@@ -727,3 +702,12 @@ const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, 
                   <span className="text-[9px] font-bold text-amber-400/70 uppercase tracking-widest">Pro Tip</span>
                   <p className="text-xs text-amber-200/80 leading-relaxed mt-0.5">{value}</p>
                 </div>
+              </div>
+            );
+          }
+          return <RenderValue key={k} value={value} brandColor={brandColor} depth={depth + 1} label={isPrimitive(value) ? k : undefined} />;
+        })}
+      </div>
+    </div>
+  );
+};

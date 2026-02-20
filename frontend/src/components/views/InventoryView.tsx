@@ -1,22 +1,32 @@
-import React from 'react';
-import { useMemo } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { useDebounce } from 'use-debounce';
-import { CheckCircleIcon, XCircleIcon } from 'lucide-react';
-import { useNavigationStore } from '../../store/navigationStore';
-import { ConductorProduct } from '../../types';
-import { fetchProducts } from '../../api/products';
+import React, { useState, useEffect, useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useDebounceValue } from "../../hooks/useDebounceValue";
+import { CheckCircleIcon, XCircleIcon } from "lucide-react";
+import { useNavigationStore } from "../../store/navigationStore";
+import { ConductorProduct } from "../../types";
+import { fetchProducts } from "../../api/products";
 
 const InventoryView: React.FC = () => {
-  const { goToProduct } = useNavigationStore();
-  const [searchTerm, setSearchTerm] = React.useState<string>('');
-  const [debouncedSearchTerm] = useDebounce(searchTerm, 300);
+  const { initialCfpFilter, searchQuery, goToProduct } = useNavigationStore();
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [debouncedSearchTerm] = useDebounceValue(searchTerm, 150);
 
-  const { data: products, isLoading, isError } = useQuery({
-    queryKey: ['products', debouncedSearchTerm],
+  useEffect(() => {
+    if (searchQuery) {
+      setSearchTerm(searchQuery);
+    }
+  }, [searchQuery]);
+
+  const {
+    data: products,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["products", debouncedSearchTerm],
     queryFn: () => fetchProducts(debouncedSearchTerm),
     staleTime: 5000,
   });
+
 
   const sortedProducts = useMemo(() => {
     if (!products) {
@@ -38,7 +48,7 @@ const InventoryView: React.FC = () => {
         return priceA - priceB;
       }
 
-      return (a.id || '').localeCompare(b.id || '');
+      return (a.id || "").localeCompare(b.id || "");
     });
   }, [products]);
 
@@ -71,11 +81,10 @@ const InventoryView: React.FC = () => {
     return null;
   };
 
+
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-full">
-        Loading...
-      </div>
+      <div className="flex items-center justify-center h-full">Loading...</div>
     );
   }
 
@@ -95,6 +104,7 @@ const InventoryView: React.FC = () => {
     );
   }
 
+
   return (
     <div className="p-4">
       <input
@@ -102,67 +112,29 @@ const InventoryView: React.FC = () => {
         placeholder="Search products..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full p-2 mb-4 text-zinc-900 rounded-md shadow-md dark:bg-zinc-700 dark:text-white"
+        className="w-full p-2 mb-4 text-zinc-900 bg-zinc-100 rounded-md dark:bg-zinc-700 dark:text-zinc-100"
       />
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm text-left rtl:text-right text-zinc-400 dark:text-zinc-400">
-          <thead className="text-xs uppercase bg-zinc-700 dark:bg-zinc-700 text-zinc-400 dark:text-zinc-400">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-                Name
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Brand
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Price
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Stock
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {sortedProducts.map((product) => (
-              <tr
-                key={product.id}
-                className={`bg-zinc-800 border-b border-zinc-700 dark:bg-zinc-800 dark:border-zinc-700 hover:bg-zinc-700 cursor-pointer relative ${
-                  product.stock === 0
-                    ? 'border-red-500'
-                    : product.stock === null || product.stock === undefined
-                    ? 'border-amber-500'
-                    : ''
-                }`}
-                onClick={() => goToProduct(product.id)}
-              >
-                <td className="px-6 py-4 font-medium text-white whitespace-nowrap dark:text-white">
-                  {product.name}
-                  {renderStockStatus(product)}
-                  {renderCallForPrice(product)}
-                </td>
-                <td className="px-6 py-4">{product.brand}</td>
-                <td className="px-6 py-4">
-                  {product.price !== null ? `₪${product.price.toFixed(2)}` : 'Call for Price'}
-                </td>
-                <td className="px-6 py-4">
-                  {product.stock !== null && product.stock !== undefined
-                    ? product.stock
-                    : 'Unconfirmed'}
-                </td>
-                <td className="px-6 py-4">
-                  {product.data_status === 'active' ? (
-                    <CheckCircleIcon className="w-4 h-4 text-green-500" />
-                  ) : (
-                    <XCircleIcon className="w-4 h-4 text-red-500" />
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {sortedProducts.map((product) => (
+          <div
+            key={product.id}
+            className="relative p-4 border rounded-md dark:border-zinc-700 hover:shadow-md transition duration-200 ease-in-out dark:bg-zinc-800"
+            onClick={() => goToProduct(product.id)}
+          >
+            {renderStockStatus(product)}
+            {renderCallForPrice(product)}
+            <img
+              src={product.image_url}
+              alt={product.name}
+              className="w-full h-40 object-contain mb-2"
+            />
+            <h3 className="text-zinc-100 font-semibold truncate">{product.name}</h3>
+            <p className="text-zinc-400 text-sm truncate">{product.description_short}</p>
+            <div className="mt-2 flex items-center justify-between">
+              <span className="text-zinc-100 font-bold">${product.price}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

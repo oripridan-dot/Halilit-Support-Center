@@ -431,7 +431,7 @@ def review_changes(auto_mode: bool = False) -> bool:
             print(f"{RED}❌ Commit failed: {(r.stdout + r.stderr).strip()}{RESET}")
             return False
         _metabolic_flush()
-        return True
+        rn True
 
     while True:
         try:
@@ -447,7 +447,7 @@ def review_changes(auto_mode: bool = False) -> bool:
                            "commit.gpgsign", "false"])
             r= subprocess.run([
                 "git", "-c", "commit.gpgsign=false",
-                "commit", "--no-gpg-sign", "-m", "chore: automated batch execution approved"
+                 "commit", "--no-gpg-sign", "-m", "chore: automated batch execution approved"
             ], capture_output=True, text=True)
             if r.returncode != 0:
                 err = (r.stdout + r.stderr).strip()
@@ -457,7 +457,7 @@ def review_changes(auto_mode: bool = False) -> bool:
                 return False
             print(f"{GREEN}✅ Changes committed.{RESET}")
             _metabolic_flush()
-            return True
+        return True
 
         elif decision == "diff":
             subprocess.run(["git", "diff"])
@@ -755,9 +755,11 @@ def main() -> None:
                     if _stubs:
                         print(f"\n{YELLOW}\u26a0\ufe0f  STUB DETECTOR: {len(_stubs)} placeholder file(s) found after swarm:{RESET}")
                         for _s in _stubs:
-                            print(f"   {RED}\u2022 {_s.splitlines()[0]}{RESET}")
+                            pr
+                            int(f"   {RED}\u2022 {_s.splitlines()[0]}{RESET}")
                             if len(_s.splitlines()) > 1:
-                                print(f"     {DIM}{_s.splitlines()[1]}{RESET}")
+                                pr
+                                int(f"     {DIM}{_s.splitlines()[1]}{RESET}")
                         # Treat stubs as failures so the Chief auto-recovers
                         failures = failures + [
                             {"tool": "implement", "args": _stub_line.split(": ", 1)[1].split(" —")[0] if ": " in _stub_line else "unknown",
@@ -880,13 +882,15 @@ def main() -> None:
                 print(f"\n{MAGENTA}\U0001f454 Requesting Senior Tech Lead Scan...{RESET}")
                 _tl_report = _get_senior_insight()
                 if _tl_report and "unavailable" not in _tl_report:
-                    for _tl_line in _tl_report.splitlines():
+                    fo
+                    r _tl_line in _tl_report.splitlines():
                         print(f"   {_tl_line}")
                 else:
                     print(f"   {GREEN}\u2705 Factory is clean — no issues detected.{RESET}")
                 hr()
                 continue
 
+                        
             # ---- Consult Chief with new input ----
             print(f"\n{DIM}Chief is planning logistics...{RESET}")
             _fresh_senior = _get_senior_insight()

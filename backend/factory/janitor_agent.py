@@ -31,7 +31,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 # How many days of AI-cache and log files to keep
 CACHE_TTL_DAYS = 7
-LOG_TTL_DAYS   = 14
+LOG_TTL_DAYS = 14
 
 # Directories that are safe to wipe entirely on each flush
 TEMP_DIRS: list[Path] = [
@@ -113,7 +113,8 @@ def metabolic_flush(dry_run: bool = False, silent: bool = False) -> int:
                 total_cleared += _remove(file, dry_run, silent)
                 flushed += 1
         if flushed and not silent:
-            print(f"   📂 {temp_dir.relative_to(ROOT_DIR)}: {flushed} temp file(s) cleared")
+            print(
+                f"   📂 {temp_dir.relative_to(ROOT_DIR)}: {flushed} temp file(s) cleared")
 
     # ── 2. Builder backup files in frontend/src  ─────────────────────────────
     frontend_src = ROOT_DIR / "frontend" / "src"
@@ -166,7 +167,8 @@ def metabolic_flush(dry_run: bool = False, silent: bool = False) -> int:
     if not silent:
         if total_cleared > 0 or dry_run:
             verb = "would remove" if dry_run else "removed"
-            print(f"\n✅  Flush complete — {total_cleared} waste artifact(s) {verb}.")
+            print(
+                f"\n✅  Flush complete — {total_cleared} waste artifact(s) {verb}.")
         else:
             print("\n✨  System is clean. No metabolic waste found.")
         print("=" * 60 + "\n")
@@ -179,7 +181,7 @@ def metabolic_flush(dry_run: bool = False, silent: bool = False) -> int:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    _dry  = "--dry-run" in sys.argv or "-n" in sys.argv
-    _sil  = "--silent"  in sys.argv or "-s" in sys.argv
+    _dry = "--dry-run" in sys.argv or "-n" in sys.argv
+    _sil = "--silent" in sys.argv or "-s" in sys.argv
     count = metabolic_flush(dry_run=_dry, silent=_sil)
     sys.exit(0)

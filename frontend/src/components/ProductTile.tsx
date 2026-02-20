@@ -71,6 +71,7 @@ const ProductTile: React.FC<Props> = ({ product }) => {
         onError={(e) => {
           (e.target as HTMLImageElement).src = '/placeholder.png';
         }}
+        loading="lazy"
       />
 
       <div className="p-2">

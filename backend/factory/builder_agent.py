@@ -307,7 +307,8 @@ def build_component(spec_path: str) -> None:
         # burning LLM tokens.  Fixes are printed so they appear in logs.
         fix_report = fix_imports(target_file=full_path)
         if fix_report.fixes_applied:
-            print(f"🔧  SmartImportFixer applied {len(fix_report.fixes_applied)} fix(es):")
+            print(
+                f"🔧  SmartImportFixer applied {len(fix_report.fixes_applied)} fix(es):")
             for fix in fix_report.fixes_applied:
                 print(f"     • [{fix.kind}] {fix.description}")
         return True
@@ -340,7 +341,8 @@ def build_component(spec_path: str) -> None:
                 full_fix_report = fix_imports()  # scans entire frontend/src
                 fix_report = full_fix_report
                 if fix_report.fixes_applied:
-                    print(f"   Applied {len(fix_report.fixes_applied)} deterministic fix(es):")
+                    print(
+                        f"   Applied {len(fix_report.fixes_applied)} deterministic fix(es):")
                     for fix in fix_report.fixes_applied:
                         print(f"     • [{fix.kind}] {fix.description}")
                     # Re-validate after deterministic fixes
@@ -351,7 +353,8 @@ def build_component(spec_path: str) -> None:
 
                 if not validation["passed"]:
                     # Phase 2: only call LLM if mechanical fixes weren't enough
-                    print("  Passing remaining errors to LLM self-healer for one final round...")
+                    print(
+                        "  Passing remaining errors to LLM self-healer for one final round...")
                     error_msg = "\n".join(
                         validation.get("import_errors", []) + validation.get("build_errors", []))
                     _builder_fn(spec_with_checks, error_msg)
