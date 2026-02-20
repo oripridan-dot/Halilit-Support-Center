@@ -14,6 +14,7 @@ trafilatura>=1.6.0
 
 # Factory agents (Builder: spec -> code)
 openai>=1.0.0
+PyYAML>=6.0
 
 # Memory monitoring
 psutil>=5.9.0

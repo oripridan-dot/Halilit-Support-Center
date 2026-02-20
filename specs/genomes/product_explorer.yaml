@@ -1,0 +1,95 @@
+---
+id: genome_product_explorer
+version: "1.0.0"
+type: UI_Cell
+fitness_goal: ZERO_CLICK_DISCOVERY
+extends: genome_base_cell
+
+# ─────────────────────────────────────────────
+# PRODUCT EXPLORER GENOME
+# Target: frontend/src/components/views/ProductDetailView.tsx
+# ─────────────────────────────────────────────
+
+environment:
+  - backend/ingestion/data_models.py
+  - frontend/src/types/index.ts
+  - frontend/src/hooks/useJITIntelligence.ts
+  - backend/source_rules.py
+
+States:
+  NULL:
+    description: "No product selected. Catalog absent or navigation not yet occurred."
+    transitions:
+      - trigger: "User selects a product from Inventory grid"
+        next: JIT_COMPUTING
+    visual_hint: "Centered prompt: 'Select a product to begin' with CatalogIcon"
+    required: true
+
+  JIT_COMPUTING:
+    description: "Product selected. JIT intelligence streaming via SSE."
+    transitions:
+      - trigger: "SSE stream closes successfully"
+        next: RENDERED
+      - trigger: "SSE timeout or network error after 10s"
+        next: RENDERED_PARTIAL
+    visual_hint: "Animated gradient border pulse on the product card. Streaming text appears token-by-token."
+    required: true
+
+  RENDERED:
+    description: "All three sources hydrated. Full product intelligence visible."
+    visual_hint: "Source badges: COMMERCIAL (green), OFFICIAL (blue), CONTEXTUAL (amber)"
+    required: true
+
+  RENDERED_PARTIAL:
+    description: "Only subset of sources available. Missing sources shown as locked badges."
+    visual_hint: "Greyed-out source badge with lock icon and tooltip: 'Source unavailable'"
+    required: true
+
+  RELATED_OPEN:
+    description: "ExplorationDock expanded. Product relations panel active."
+    transitions:
+      - trigger: "User closes dock"
+        next: RENDERED
+    visual_hint: "Side panel slides in from right, 320px width"
+    required: false
+
+Traits:
+  EcosystemAwareness:
+    type: bool
+    value: true
+    description: "Verified Accessories and Compatible Products must be visually flagged (e.g. verified badge)."
+    inheritable: false
+
+  ColorPhenotype:
+    type: string
+    value: HSC_DARK_MODE
+    inheritable: true
+
+  MemoryPhenotype:
+    type: string
+    value: STRICT_JIT
+    description: "Destroy off-screen nodes. Never cache more than one product's JIT data in RAM."
+    inheritable: false
+
+  SourceBadgePhenotype:
+    type: enum
+    value: ["COMMERCIAL", "OFFICIAL", "CONTEXTUAL"]
+    description: "Each data source gets a distinct color badge. Commercial=green, Official=blue, Contextual=amber."
+    inheritable: false
+
+  StreamingPhenotype:
+    type: bool
+    value: true
+    description: "JIT text streams token-by-token using SSE. No polling."
+    inheritable: false
+
+Mutations_Allowed:
+  - Layout_Density: Variable
+  - Badge_Position: Variable
+
+Phenotype_Assertions:
+  - "JIT_COMPUTING state must show streaming text, not a spinner"
+  - "RENDERED_PARTIAL must clearly differentiate available vs unavailable sources"
+  - "SourceBadgePhenotype: all three badge types must be visually distinct"
+  - "STRICT_JIT: component must call cleanup on unmount to cancel SSE streams"
+  - "ZERO TOLERANCE: no synthetic/mock data in any render state"

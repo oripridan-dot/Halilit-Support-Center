@@ -23,6 +23,10 @@ import argparse
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# Bio-Swarm: record session start time so Mutation Engine only analyses
+# logs from the current session (not all historical logs).
+_SESSION_START_TS: float = time.time()
+
 try:
     from dotenv import load_dotenv
     load_dotenv(Path(__file__).resolve().parent / ".env")
@@ -99,6 +103,9 @@ _ACTION_MAP = {
     "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
     "v0_design":  ("v0_design",  "🎨 V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
     "scout":      ("scout",      "🔭 SCOUT",           "Scanning for new tools → writing Evolution Proposals..."),
+    "synthesize": ("synthesize", "🧬 RIBOSOME",       "Translating Genome → Synthesis Directive (protein folding)..."),
+    "mutate":     ("mutate",     "🧫 MUTATION ENGINE", "Analysing fitness logs → evolving agent DNA..."),
+    "fitness":    ("fitness",    "📊 FITNESS LEDGER", "Printing per-agent fitness scores and generation counts..."),
 }
 
 
@@ -141,6 +148,12 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["v0_design", args] if args else None
     if tool == "scout":
         return factory + ["scout"]
+    if tool == "synthesize":
+        return factory + ["synthesize", args] if args else None
+    if tool == "mutate":
+        return factory + ["mutate"] + (["--force"] if args == "--force" else [])
+    if tool == "fitness":
+        return factory + ["fitness"]
     return None  # 'explain' or unknown
 
 
@@ -262,6 +275,74 @@ def execute_sequential(task: dict) -> dict:
 # ---------------------------------------------------------------------------
 # Swarm execution engine
 # ---------------------------------------------------------------------------
+# HOTL Steering Gate
+# ---------------------------------------------------------------------------
+
+def review_changes(auto_mode: bool = False) -> bool:
+    """
+    Human-on-the-Loop gate: display modified files, let the Operator
+    approve, inspect, or reject before the next task batch runs.
+
+    Returns True  → changes accepted (and committed).
+    Returns False → changes reverted via git restore.
+    """
+    # Quick-exit: no tracked changes means nothing to review
+    status = subprocess.run(
+        ["git", "status", "--porcelain"],
+        capture_output=True, text=True
+    )
+    if not status.stdout.strip():
+        print(f"\n{DIM}✔ No working-tree changes detected — gate passed.{RESET}")
+        return True
+
+    print(f"\n{BOLD}{YELLOW}{'─' * 52}")
+    print("🛑  STEERING GATE — REVIEW MODIFICATIONS")
+    print(f"{'─' * 52}{RESET}")
+    subprocess.run(["git", "status", "-s"])
+
+    if auto_mode:
+        print(f"\n{CYAN}⚡ [AUTO] Changes auto-approved and committed.{RESET}")
+        subprocess.run(["git", "add", "."])
+        subprocess.run([
+            "git", "commit", "-m",
+            "chore: automated batch execution approved"
+        ])
+        return True
+
+    while True:
+        try:
+            decision = input(
+                f"\n{BOLD}Approve changes? [{GREEN}Y{RESET}{BOLD}/n/diff/reject]{RESET}: "
+            ).strip().lower()
+        except (KeyboardInterrupt, EOFError):
+            decision = "n"
+
+        if decision in ("", "y", "yes"):
+            subprocess.run(["git", "add", "."])
+            subprocess.run([
+                "git", "commit", "-m",
+                "chore: automated batch execution approved"
+            ])
+            print(f"{GREEN}✅ Changes committed.{RESET}")
+            return True
+
+        elif decision == "diff":
+            subprocess.run(["git", "diff"])
+            # Loop back to let the operator decide after reviewing the diff
+            continue
+
+        elif decision in ("n", "no", "reject"):
+            print(f"{YELLOW}↩  Reverting all uncommitted changes...{RESET}")
+            subprocess.run(["git", "restore", "."])
+            subprocess.run(["git", "clean", "-fd"])
+            print(f"{RED}✖ Changes rejected and reverted.{RESET}")
+            return False
+
+        else:
+            print(f"{DIM}  Options: Y · n · diff · reject{RESET}")
+
+
+# ---------------------------------------------------------------------------
 
 def execute_swarm(queue: list[dict]) -> list[dict]:
     """
@@ -311,6 +392,45 @@ def execute_swarm(queue: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# OODA Mutation Cycle — called automatically after every successful batch
+# ---------------------------------------------------------------------------
+
+def _run_ooda_mutation_cycle() -> None:
+    """
+    Bio-Swarm OODA hook: silently runs the Mutation Engine after each
+    successful Swarm batch so the system evolves before going idle.
+
+    Mutations are only applied when a fitness score drops below the threshold.
+    The result is printed in a compact summary block.
+    """
+    try:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        from mutation_engine import run_mutation_cycle  # noqa: PLC0415
+
+        print(
+            f"\n{DIM}\u2500 Bio-Swarm \u2500 running post-batch OODA cycle \u2500{RESET}")
+        results = run_mutation_cycle(
+            since_ts=_SESSION_START_TS,
+            force_mutate=False,
+            verbose=False,
+        )
+        if results:
+            print(f"{MAGENTA}{BOLD}\ud83e\uddeb MUTATIONS APPLIED THIS BATCH:{RESET}")
+            for r in results:
+                print(
+                    f"   \u2022 {BOLD}{r.agent}{RESET} \u2192 Gen {r.generation}  "
+                    f"({r.target})  confidence={r.confidence}"
+                )
+                print(f"     Heuristic: {DIM}{r.heuristic[:100]}{RESET}")
+        else:
+            print(
+                f"{DIM}   \u2713 All agents above fitness threshold. No mutations needed.{RESET}")
+    except Exception as exc:
+        # Never crash Nexus due to mutation engine error
+        print(f"{DIM}   (OODA mutation cycle skipped: {exc}){RESET}")
+
+
+# ---------------------------------------------------------------------------
 # Main REPL
 # ---------------------------------------------------------------------------
 
@@ -332,12 +452,29 @@ def main() -> None:
         help="Dry Run: show the Chief's plan but do NOT dispatch any tasks.",
     )
     parser.add_argument(
+        "--briefing",
+        action="store_true",
+        help="Tech Lead morning audit: run heuristics scan, write DAILY_BRIEFING.md, and exit.",
+    )
+    parser.add_argument(
         "instruction",
         nargs="?",
         default="",
         help="Optional: initial instruction passed straight to the Chief.",
     )
     args = parser.parse_args()
+
+    # ---- Tech Lead Briefing intercept (runs before any swarm logic) --------
+    if args.briefing:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
+        except ImportError as exc:
+            print(f"{RED}Error: Could not load Tech Lead Agent — {exc}{RESET}")
+            sys.exit(1)
+        generate_morning_briefing()
+        sys.exit(0)
+    # ------------------------------------------------------------------------
 
     auto_mode: bool = args.auto
     dry_run: bool = args.dry_run
@@ -445,6 +582,17 @@ def main() -> None:
                     plan = {"queue": []}
                     hr()
 
+                    # --- HOTL Steering Gate (post-swarm review) -----------
+                    if not failures:
+                        accepted = review_changes(auto_mode=auto_mode)
+                        if not accepted:
+                            print(
+                                f"\n{YELLOW}Changes reverted. Provide a new instruction "
+                                f"or adjust your spec and re-run.{RESET}")
+                        consecutive_failures = 0
+                        # ── OODA MUTATION CYCLE (runs silently after each successful batch) ──
+                        _run_ooda_mutation_cycle()
+                        continue
                     # --- Kill Switch: abort after N consecutive failures ---
                     if failures:
                         consecutive_failures += 1
@@ -507,8 +655,6 @@ def main() -> None:
                         if thought:
                             print(f"  {DIM}[Reasoning: {thought}]{RESET}")
                         hr()
-                    else:
-                        consecutive_failures = 0  # reset on clean run
 
                     continue
 

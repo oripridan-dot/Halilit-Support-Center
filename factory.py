@@ -439,6 +439,50 @@ def cmd_scout() -> None:
 
 
 # ---------------------------------------------------------------------------
+# Bio-Swarm — Genome / Ribosome / Mutation Engine
+# ---------------------------------------------------------------------------
+
+def cmd_synthesize(genome_path: str, verify_file: str = "") -> None:
+    """
+    Ribosome: translate a Genome YAML into a Builder synthesis directive.
+    Optionally verify phenotype assertions against a compiled output file.
+    """
+    ensure_env()
+    log(f"🧬 Activating Ribosome (Genome Interpreter)...")
+    ribosome = FACTORY / "ribosome.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    args = [sys.executable, str(ribosome), genome_path]
+    if verify_file:
+        args += ["--verify", verify_file]
+    subprocess.run(args, cwd=str(ROOT), env=env)
+
+
+def cmd_mutate(force: bool = False) -> None:
+    """
+    Mutation Engine: analyse factory_logs → update Fitness Ledger → mutate
+    under-performing agents' DNA (LEARNED_GUIDELINES.md or SYSTEM_PROMPT).
+    """
+    ensure_env()
+    log("🧫 Activating Mutation Engine (Genetic Feedback Loop)...")
+    mutation_engine = FACTORY / "mutation_engine.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    args = [sys.executable, str(mutation_engine)]
+    if force:
+        args.append("--force-mutate")
+    subprocess.run(args, cwd=str(ROOT), env=env)
+
+
+def cmd_fitness_report() -> None:
+    """Print the Fitness Ledger — per-agent scores, generations, mutation counts."""
+    mutation_engine = FACTORY / "mutation_engine.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    subprocess.run(
+        [sys.executable, str(mutation_engine), "--report"],
+        cwd=str(ROOT), env=env,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Entry Point
 # ---------------------------------------------------------------------------
 HELP = """
@@ -478,6 +522,13 @@ Level 10 — Autonomous Polish:
 Evolutionary AI:
   scout                          Scout: scan for new tools → write Evolution Proposals
                                  Proposals land in specs/strategy/evolution/ for Chief review
+
+Bio-Swarm — Algorithmic Biology:
+  synthesize <genome.yaml>       Ribosome: translate a Genome YAML → synthesis directive
+  synthesize <genome.yaml> <file>  + verify phenotype assertions against compiled file
+  mutate                         Mutation Engine: analyse logs → evolve agent DNA
+  mutate --force                 Force mutation even if fitness is above threshold
+  fitness                        Print Fitness Ledger report (per-agent scores)
 
 Agentic UI Design (v0 MCP):
   v0_design "description"        Generate a v0.dev-ready prompt for a UI component
@@ -580,6 +631,21 @@ if __name__ == "__main__":
 
     elif command == "scout":
         cmd_scout()
+
+    elif command == "synthesize":
+        if len(sys.argv) < 3:
+            log(
+                "❌ Usage: python factory.py synthesize <genome_path> [verify_file]")
+            sys.exit(1)
+        verify_arg = sys.argv[3] if len(sys.argv) > 3 else ""
+        cmd_synthesize(sys.argv[2], verify_arg)
+
+    elif command == "mutate":
+        force_arg = "--force" in sys.argv
+        cmd_mutate(force=force_arg)
+
+    elif command == "fitness":
+        cmd_fitness_report()
 
     elif command == "grand_task_force":
         gtf_prompt = sys.argv[2] if len(sys.argv) > 2 else ""

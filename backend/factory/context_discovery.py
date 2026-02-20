@@ -22,6 +22,12 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterator
 
+try:
+    import yaml
+    _YAML_AVAILABLE = True
+except ImportError:
+    _YAML_AVAILABLE = False
+
 # ---------------------------------------------------------------------------
 # Root introspection
 # ---------------------------------------------------------------------------
@@ -212,6 +218,127 @@ def build_dynamic_context(
 
     parts.append("--- END CONTEXT ---\n")
     return "\n".join(parts)
+
+
+# ---------------------------------------------------------------------------
+# Holographic Spec — Hydration Engine
+# ---------------------------------------------------------------------------
+
+def parse_holographic_spec(spec_path: str | Path) -> dict:
+    """
+    Parses a Markdown spec file, extracting YAML frontmatter and the main body.
+
+    Returns a dict with two keys:
+      - ``metadata``: parsed YAML dict (empty dict for legacy specs without frontmatter)
+      - ``content``:  the Markdown body after the closing ``---``
+
+    Falls back gracefully for any spec that does not yet have YAML frontmatter.
+    """
+    spec_file = Path(spec_path)
+    if not spec_file.exists():
+        return {"metadata": {}, "content": ""}
+
+    raw_text = spec_file.read_text(encoding="utf-8")
+
+    # Match YAML frontmatter between --- delimiters
+    match = re.match(r"^---\n(.*?)\n---\n(.*)", raw_text, re.DOTALL)
+    if match:
+        yaml_text = match.group(1)
+        body = match.group(2)
+        if _YAML_AVAILABLE:
+            try:
+                metadata = yaml.safe_load(yaml_text) or {}
+                return {"metadata": metadata, "content": body.strip()}
+            except yaml.YAMLError as exc:
+                print(f"⚠️  YAML parse error in {spec_file.name}: {exc}")
+        else:
+            # PyYAML not installed — attempt a minimal key-value parse
+            print("⚠️  PyYAML not available; using raw spec body.")
+        return {"metadata": {}, "content": body.strip()}
+
+    # Legacy spec — no YAML frontmatter
+    return {"metadata": {}, "content": raw_text}
+
+
+def hydrate_context(spec_path: str | Path) -> str:
+    """
+    Hydration Engine: turns a Holographic Spec into a rich, real-time context
+    block ready to be injected into an LLM prompt.
+
+    Pipeline
+    --------
+    1. Parse YAML frontmatter (governance, dependencies / api_contracts,
+       ui_dependencies, golden_scenarios_validation).
+    2. Inject governance directives as **CRITICAL DIRECTIVES**.
+    3. Fetch the live file content of every declared dependency and embed it.
+    4. Append the spec intent body.
+
+    Falls back transparently for legacy specs: returns the raw Markdown text.
+    """
+    spec_file = Path(spec_path)
+    print(f"🌊 Hydrating Holographic Spec: {spec_file.name}...")
+
+    parsed = parse_holographic_spec(spec_path)
+    metadata: dict = parsed.get("metadata", {})
+    intent_body: str = parsed.get("content", "")
+
+    hydrated: list[str] = []
+
+    # ── 1. Governance Rules ────────────────────────────────────────────────
+    governance: list[str] = metadata.get("governance", [])
+    if governance:
+        hydrated.append("=" * 56)
+        hydrated.append("🏛️  GOVERNANCE RULES — STRICTLY ENFORCED")
+        hydrated.append("=" * 56)
+        for rule in governance:
+            hydrated.append(f"  • {rule}")
+        hydrated.append("=" * 56 + "\n")
+
+    # ── 2. Hydrate all dependency categories ──────────────────────────────
+    # Merge keys that all represent live file dependencies
+    dep_groups: list[tuple[str, list[str]]] = [
+        ("API CONTRACTS",              metadata.get("api_contracts", [])),
+        ("LIVE DEPENDENCIES",          metadata.get("dependencies", [])),
+        ("UI DEPENDENCIES",            metadata.get("ui_dependencies", [])),
+        ("GOLDEN SCENARIOS VALIDATION", metadata.get(
+            "golden_scenarios_validation", [])),
+    ]
+
+    any_deps = any(deps for _, deps in dep_groups)
+    if any_deps:
+        hydrated.append("=" * 56)
+        hydrated.append("🔗 REAL-TIME CODEBASE STATE (fetched at build time)")
+        hydrated.append("=" * 56)
+
+        for group_label, deps in dep_groups:
+            if not deps:
+                continue
+            hydrated.append(f"\n[ {group_label} ]")
+            for dep in deps:
+                dep_path = _PROJECT_ROOT / dep
+                if dep_path.exists():
+                    raw = dep_path.read_text(
+                        encoding="utf-8", errors="replace")
+                    # Cap very large files to avoid prompt bloat
+                    if len(raw) > 15_000:
+                        raw = raw[:15_000] + \
+                            "\n... [CONTENT TRUNCATED — file exceeds 15 000 chars] ..."
+                    hydrated.append(f"\n--- 📄  {dep} ---")
+                    hydrated.append(raw)
+                else:
+                    hydrated.append(
+                        f"\n--- ⚠️  WARNING: declared dependency not found: {dep} ---"
+                    )
+
+        hydrated.append("\n" + "=" * 56 + "\n")
+
+    # ── 3. Spec Intent ────────────────────────────────────────────────────
+    hydrated.append("=" * 56)
+    hydrated.append("🎯 SPECIFICATION INTENT")
+    hydrated.append("=" * 56)
+    hydrated.append(intent_body)
+
+    return "\n".join(hydrated)
 
 
 # ---------------------------------------------------------------------------

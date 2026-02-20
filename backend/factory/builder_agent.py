@@ -14,6 +14,7 @@ try:
     )
     from sandbox_executor import inner_loop, parse_verification_commands
     from ui_validator_agent import validate_ui
+    from context_discovery import hydrate_context
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from agent_core import (
@@ -22,6 +23,7 @@ except ImportError:
     )
     from sandbox_executor import inner_loop, parse_verification_commands
     from ui_validator_agent import validate_ui
+    from context_discovery import hydrate_context
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -182,7 +184,9 @@ def build_component(spec_path: str) -> None:
         return
 
     print(f"📖 Reading Spec: {spec_file.name}...")
-    spec_content = spec_file.read_text(encoding="utf-8")
+    # === HOLOGRAPHIC SPEC: Use Hydration Engine (YAML deps + live code injection) ===
+    spec_content = hydrate_context(spec_path)
+    # ================================================================================
 
     domain = _detect_domain(spec_content)
     full_path = _extract_target(spec_content, spec_file)

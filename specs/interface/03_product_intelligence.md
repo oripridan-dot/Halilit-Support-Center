@@ -1,6 +1,28 @@
+---
+id: hsc_spec_product_intelligence
+domain: operator_console
+status: active
+version: "2.1-holographic"
+governance:
+  - ZERO_CLICK_ECOSYSTEM_AWARENESS # UI must surface relations without user clicks
+  - JIT_LOADING_STRICT # Never load full taxonomy into client memory
+  - HSC_DESIGN_TOKENS_ONLY # No arbitrary hex codes — use Tailwind scale tokens
+  - THREE_SOURCE_RULES_ENFORCED # Commercial/Official/Contextual boundaries must hold
+api_contracts:
+  - backend/ingestion/data_models.py # Python source of truth for Product entity
+  - frontend/src/hooks/useJITIntelligence.ts # SSE streaming data contract
+  - frontend/src/hooks/useConductorCatalog.ts # Catalog data-fetching contract
+ui_dependencies:
+  - frontend/src/types/index.ts # Canonical frontend types
+  - frontend/src/store/navigationStore.ts # Navigation state (goToProduct, goToInventory, goBack)
+golden_scenarios_validation: []
+triggers_update_in:
+  - specs/interface/02_inventory_grid.md
+---
+
 # Spec 03 — Product Intelligence View
 
-**Version:** 2.0 · Chief v9.7.0
+**Version:** 2.1 · Chief v9.7.1 (Holographic)
 **Component:** `frontend/src/components/views/ProductDetailView.tsx`
 **Route state:** `currentView === 'PRODUCT_DETAIL'`, `activeProductId: string`
 **Data sources:** `useConductorCatalog` (catalog), `useJITIntelligence` (SSE stream), `useProductRelationships` (graph)

@@ -1,0 +1,7 @@
+Phenotype Score: 100/100
+  ✅ JIT_COMPUTING state must show streaming text, not a spinner
+  ✅ RENDERED_PARTIAL must clearly differentiate available vs unavailable sources
+  ✅ SourceBadgePhenotype: all three badge types must be visually distinct
+  ✅ STRICT_JIT: component must call cleanup on unmount to cancel SSE streams
+  ✅ ZERO TOLERANCE: no synthetic/mock data in any render state
+PHENOTYPE: VIABLE

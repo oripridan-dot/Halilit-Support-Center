@@ -1,0 +1,420 @@
+"""
+TECH LEAD AGENT — Heuristics Engine
+=====================================
+Static analysis engine that scans the repository for technical debt,
+architectural smells, and data-pipeline risks at factory boot time.
+
+Generates DAILY_BRIEFING.md with categorized findings and
+copy-paste Chief commands for every flagged issue.
+
+Usage (standalone):
+    python backend/factory/tech_lead_agent.py
+
+Usage (via nexus.py):
+    python nexus.py --briefing
+"""
+
+import os
+import re
+import subprocess
+from pathlib import Path
+from datetime import datetime
+from typing import List
+
+try:
+    import yaml
+    _YAML_AVAILABLE = True
+except ImportError:
+    _YAML_AVAILABLE = False
+
+# Relative-import fallback for both direct execution and package import
+try:
+    from agent_core import query_llm
+except ImportError:
+    from .agent_core import query_llm
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+FRONTEND_COMPONENTS_DIR = ROOT_DIR / "frontend" / "src" / "components"
+SPECS_DIR = ROOT_DIR / "specs"
+
+# ---------------------------------------------------------------------------
+# SYSTEM PROMPT
+# ---------------------------------------------------------------------------
+SYSTEM_PROMPT = """
+You are the PRINCIPAL ENGINEER and TECH LEAD (Level 9) of the Halilit Support Center Dark Factory.
+Your job is to analyze the raw heuristic data provided by the file system scanner and generate a professional DAILY_BRIEFING.md for the Operator.
+
+Categorize your findings STRICTLY into:
+🔴 CRITICAL: Rate-limit risks, massive memory traps (>5 MB client-side JSON), or systemic UI/State bugs.
+🟠 MAJOR: Architecture smells, overgrown React components (>300 lines), hardcoded CSS colors, or pending Evolution Proposals.
+🟡 MINOR: Code hygiene, dead ghost folders, duplicate configs.
+
+OUTPUT RULES:
+1. Output MUST be pure Markdown. Do NOT wrap the output in triple-backtick code fences.
+2. Under each issue, you MUST provide a "Suggested Chief Command" — an exact, copy-paste prompt the Operator can hand to the Chief to fix it immediately via a Task Force.
+3. Keep the tone authoritative, concise, and highly technical.
+4. If no issues exist in a category, write "No issues detected." under that heading.
+5. Always end with a "Factory Status" summary line.
+"""
+
+
+# ---------------------------------------------------------------------------
+# HEURISTICS ENGINE
+# ---------------------------------------------------------------------------
+
+class FactoryHeuristics:
+    """Static analysis engine for the Halilit Support Center repository."""
+
+    def __init__(self) -> None:
+        self.issues: List[str] = []
+
+    # --- 1. Memory Traps ----------------------------------------------------
+
+    def check_memory_traps(self) -> None:
+        """Flags large data files that risk freezing the React client."""
+        taxonomy = ROOT_DIR / "backend" / "data" / "learned_taxonomy.json"
+        if taxonomy.exists():
+            size_mb = taxonomy.stat().st_size / (1024 * 1024)
+            if size_mb > 3.0:
+                self.issues.append(
+                    f"[DATA] learned_taxonomy.json is dangerously large "
+                    f"({size_mb:.2f} MB). High risk of React client memory "
+                    f"freeze. Needs JIT routing."
+                )
+        else:
+            self.issues.append(
+                "[DATA] learned_taxonomy.json is MISSING. "
+                "The frontend catalog will be empty."
+            )
+
+        # Also check catalog JSON blobs in public/data
+        public_data = ROOT_DIR / "frontend" / "public" / "data"
+        if public_data.exists():
+            for json_file in public_data.glob("*.json"):
+                try:
+                    size_mb = json_file.stat().st_size / (1024 * 1024)
+                    if size_mb > 5.0:
+                        self.issues.append(
+                            f"[DATA] {json_file.name} in frontend/public/data "
+                            f"is {size_mb:.2f} MB — exceeds 5 MB client-side "
+                            f"threshold. Must be paginated or lazy-loaded."
+                        )
+                except OSError:
+                    pass
+
+    # --- 2. Ghost Directories -----------------------------------------------
+
+    def check_ghost_directories(self) -> None:
+        """Flags populated deprecated folders that pollute the AI context window."""
+        candidates = [
+            "backend/scripts/archive",
+            "specs/temp",
+            "specs/repairs",
+        ]
+        for rel in candidates:
+            target = ROOT_DIR / rel
+            if target.exists():
+                try:
+                    children = list(target.iterdir())
+                except PermissionError:
+                    continue
+                non_readme = [c for c in children if c.name.upper()
+                              != "README.MD"]
+                if non_readme:
+                    self.issues.append(
+                        f"[HYGIENE] Ghost directory populated: '{rel}' "
+                        f"({len(non_readme)} file(s)). This will cause the "
+                        f"Context Discovery AI to hallucinate deprecated logic."
+                    )
+
+        # Flag .backup.* files left behind by automated patchers
+        backup_files = [
+            f for f in ROOT_DIR.rglob("*.backup.*")
+            if ".venv" not in str(f) and "node_modules" not in str(f)
+        ]
+        if backup_files:
+            names = [str(f.relative_to(ROOT_DIR)) for f in backup_files[:5]]
+            self.issues.append(
+                f"[HYGIENE] Found {len(backup_files)} .backup.* artifact(s): "
+                f"{names}. These ghost files pollute AI context — delete them."
+            )
+
+    # --- 3. Duplicate Configs -----------------------------------------------
+
+    def check_duplicate_configs(self) -> None:
+        """Flags multiple .cursorrules files that cause conflicting AI rules."""
+        rules = list(ROOT_DIR.rglob(".cursorrules"))
+        if len(rules) > 1:
+            paths = [str(p.relative_to(ROOT_DIR)) for p in rules]
+            self.issues.append(
+                f"[CONFIG] Found {len(rules)} .cursorrules files: {paths}. "
+                f"Keep only the root-level copy to prevent conflicting AI rules."
+            )
+
+        # Also flag multiple tailwind configs (common after v0/Stitch merges)
+        tw_configs = list(ROOT_DIR.rglob("tailwind.config.*"))
+        tw_in_root_or_frontend = [
+            p for p in tw_configs
+            if ".venv" not in str(p) and "node_modules" not in str(p)
+        ]
+        if len(tw_in_root_or_frontend) > 1:
+            paths = [str(p.relative_to(ROOT_DIR))
+                     for p in tw_in_root_or_frontend]
+            self.issues.append(
+                f"[CONFIG] Found {len(tw_in_root_or_frontend)} tailwind.config files: "
+                f"{paths}. Only the frontend copy is valid."
+            )
+
+    # --- 4. React Code Smells -----------------------------------------------
+
+    def check_react_code_smells(self) -> None:
+        """Scans for monolithic components and design-token violations."""
+        if not FRONTEND_COMPONENTS_DIR.exists():
+            self.issues.append(
+                "[ARCHITECTURE] frontend/src/components/ directory not found. "
+                "The component tree may be missing.",
+            )
+            return
+
+        # Tailwind arbitrary-value hex color: text-[#rrggbb] or bg-[#rrggbb]
+        hex_regex = re.compile(
+            r'(?:text|bg|border|ring|fill|stroke)-\[#[0-9a-fA-F]{3,6}\]'
+        )
+
+        for tsx_file in FRONTEND_COMPONENTS_DIR.rglob("*.tsx"):
+            try:
+                content = tsx_file.read_text(
+                    encoding="utf-8", errors="replace")
+            except OSError:
+                continue  # Skip unreadable files safely
+
+            lines = content.splitlines()
+            rel_path = tsx_file.relative_to(ROOT_DIR)
+
+            # Check 1: Monolithic component (>350 lines)
+            if len(lines) > 350:
+                self.issues.append(
+                    f"[ARCHITECTURE] Monolithic Component: {tsx_file.name} "
+                    f"is {len(lines)} lines ({rel_path}). "
+                    f"Needs refactoring into focused sub-components."
+                )
+
+            # Check 2: Hardcoded hex colors (v0/Stitch design-system violations)
+            hex_matches = hex_regex.findall(content)
+            if hex_matches:
+                unique_hex = sorted(set(hex_matches))
+                self.issues.append(
+                    f"[UI] Design-System Violation in {tsx_file.name}: "
+                    f"Found raw hex colors {unique_hex}. "
+                    f"Must be converted to Tailwind scale tokens (e.g., text-slate-900)."
+                )
+
+            # Check 3: TODO/FIXME markers (unresolved debt)
+            todo_count = len(re.findall(
+                r'//\s*(TODO|FIXME|HACK|XXX)', content))
+            if todo_count >= 3:
+                self.issues.append(
+                    f"[HYGIENE] {tsx_file.name} has {todo_count} unresolved "
+                    f"TODO/FIXME markers. Needs triage."
+                )
+
+    # --- 5. Pending Evolution Proposals ------------------------------------
+
+    def check_pending_evolution(self) -> None:
+        """Checks if the Scout agent has queued unreviewed evolution proposals."""
+        evo_dir = SPECS_DIR / "strategy" / "evolution"
+        if evo_dir.exists():
+            proposals = [
+                p.name for p in evo_dir.glob("*.md") if p.name.upper() != "README.MD"
+            ]
+            if proposals:
+                self.issues.append(
+                    f"[EVOLUTION] Tech Scout has {len(proposals)} pending proposal(s) "
+                    f"awaiting Chief review: {', '.join(proposals)}"
+                )
+
+    # --- 6. Backend Integrity Checks ---------------------------------------
+
+    def check_backend_integrity(self) -> None:
+        """Verifies critical backend files are present and non-empty."""
+        critical_files = [
+            "backend/source_rules.py",
+            "backend/server.py",
+            "backend/product_normalizer.py",
+            "backend/jit_agent.py",
+        ]
+        for rel in critical_files:
+            path = ROOT_DIR / rel
+            if not path.exists():
+                self.issues.append(
+                    f"[INTEGRITY] MISSING critical backend file: {rel}. "
+                    f"The factory cannot start without it."
+                )
+            else:
+                try:
+                    if path.stat().st_size < 100:
+                        self.issues.append(
+                            f"[INTEGRITY] {rel} is suspiciously small "
+                            f"({path.stat().st_size} bytes). Likely empty or stub."
+                        )
+                except OSError:
+                    pass
+
+    # --- 7. Spec Drift Detection (Holographic Specs) -----------------------
+
+    def check_spec_drift(self) -> None:
+        """
+        Compares recently changed code files against the ``api_contracts``,
+        ``dependencies``, ``ui_dependencies``, and ``golden_scenarios_validation``
+        arrays declared in every spec's YAML frontmatter.
+
+        Flags a 🟠 MAJOR warning for each spec whose declared dependencies were
+        modified in the last 48 hours, indicating potential spec-to-code drift.
+        """
+        if not _YAML_AVAILABLE:
+            self.issues.append(
+                "[SPEC DRIFT] PyYAML is not installed — cannot run spec-drift detection. "
+                "Run `pip install PyYAML` to enable this heuristic."
+            )
+            return
+
+        # ── 1. Ask Git for files touched in the last 48 hours ────────────────
+        try:
+            result = subprocess.run(
+                ["git", "log", "--name-only",
+                    "--pretty=format:", "--since=48 hours ago"],
+                cwd=str(ROOT_DIR),
+                capture_output=True,
+                text=True,
+                timeout=15,
+            )
+            recently_changed: set[str] = {
+                line.strip()
+                for line in result.stdout.splitlines()
+                if line.strip()
+            }
+        except (subprocess.TimeoutExpired, FileNotFoundError):
+            return  # Git not available or timed out — skip silently
+
+        if not recently_changed:
+            return  # Nothing changed recently
+
+        # ── 2. Scan all spec files for YAML frontmatter ───────────────────────
+        spec_dirs: list[Path] = [
+            SPECS_DIR / "interface",
+            SPECS_DIR / "data_pipeline",
+        ]
+        dep_keys = (
+            "api_contracts",
+            "dependencies",
+            "ui_dependencies",
+            "golden_scenarios_validation",
+        )
+
+        for spec_dir in spec_dirs:
+            if not spec_dir.exists():
+                continue
+            for spec_file in sorted(spec_dir.glob("*.md")):
+                try:
+                    raw = spec_file.read_text(encoding="utf-8")
+                except OSError:
+                    continue
+
+                import re as _re
+                fm_match = _re.match(r"^---\n(.*?)\n---", raw, _re.DOTALL)
+                if not fm_match:
+                    continue  # legacy spec without frontmatter — skip
+
+                try:
+                    metadata: dict = yaml.safe_load(fm_match.group(1)) or {}
+                except yaml.YAMLError:
+                    continue
+
+                # Collect all declared dependency paths from this spec
+                declared: list[str] = []
+                for key in dep_keys:
+                    declared.extend(metadata.get(key, []))
+
+                # Check overlap with recently-changed files
+                drifted = [d for d in declared if d in recently_changed]
+                if drifted:
+                    spec_rel = spec_file.relative_to(ROOT_DIR)
+                    spec_id = metadata.get("id", spec_file.stem)
+                    files_str = ", ".join(f"`{d}`" for d in drifted)
+                    self.issues.append(
+                        f"[SPEC DRIFT] 🟠 MAJOR — Schema Drift Detected in `{spec_rel}` "
+                        f"(id: {spec_id}). "
+                        f"The following declared dependencies were modified in the last 48 h: "
+                        f"{files_str}. "
+                        f"Suggestion: queue Chief to audit this spec's intent against the "
+                        f"updated code and regenerate the affected component."
+                    )
+
+    # --- Full Scan ----------------------------------------------------------
+
+    def run_full_scan(self) -> str:
+        print("👔  Tech Lead is running static analysis on the factory floor...")
+        self.check_memory_traps()
+        self.check_ghost_directories()
+        self.check_duplicate_configs()
+        self.check_react_code_smells()
+        self.check_pending_evolution()
+        self.check_backend_integrity()
+        self.check_spec_drift()
+
+        if not self.issues:
+            return "✅ No critical heuristics flagged. The factory is clean."
+
+        return "\n".join(f"- {issue}" for issue in self.issues)
+
+
+# ---------------------------------------------------------------------------
+# BRIEFING GENERATOR
+# ---------------------------------------------------------------------------
+
+def generate_morning_briefing() -> None:
+    """
+    Runs the full heuristics scan, sends results to the LLM Tech Lead,
+    and writes DAILY_BRIEFING.md to the project root.
+    """
+    scanner = FactoryHeuristics()
+    raw_data = scanner.run_full_scan()
+
+    prompt = (
+        f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+        f"RAW HEURISTICS DATA:\n{raw_data}\n\n"
+        f"Generate the DAILY_BRIEFING.md based strictly on this data."
+    )
+
+    print("🧠  Tech Lead is compiling the daily briefing...")
+    briefing_content = query_llm(SYSTEM_PROMPT, prompt, model_tier="smart")
+
+    if briefing_content:
+        # Strip AI markdown fences if hallucinated
+        content = briefing_content.strip()
+        if content.startswith("```markdown"):
+            content = content[11:].strip()
+            if content.endswith("```"):
+                content = content[:-3].strip()
+        elif content.startswith("```"):
+            content = content[3:].strip()
+            if content.endswith("```"):
+                content = content[:-3].strip()
+
+        out_path = ROOT_DIR / "DAILY_BRIEFING.md"
+        out_path.write_text(content, encoding="utf-8")
+        print(f"✅  DAILY_BRIEFING.md compiled → {out_path}")
+    else:
+        # Fallback: write the raw scan data so the operator isn't left blind
+        fallback = (
+            f"# Daily Briefing — {datetime.now().strftime('%Y-%m-%d')}\n\n"
+            f"> ⚠️  LLM unreachable. Raw scan data below.\n\n"
+            f"{raw_data}\n"
+        )
+        out_path = ROOT_DIR / "DAILY_BRIEFING.md"
+        out_path.write_text(fallback, encoding="utf-8")
+        print("⚠️  LLM unavailable. Raw heuristics written to DAILY_BRIEFING.md.")
+
+
+if __name__ == "__main__":
+    generate_morning_briefing()

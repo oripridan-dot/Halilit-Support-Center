@@ -117,7 +117,8 @@ def fetch_official_page(url: str, timeout: int = 10) -> Dict[str, Any]:
         if _SEMANTIC_AVAILABLE:
             nd = sniff_next_data(html)
             if nd:
-                logger.info("[API-FIRST] __NEXT_DATA__ found on official page: %s", url)
+                logger.info(
+                    "[API-FIRST] __NEXT_DATA__ found on official page: %s", url)
                 if nd.get("image_url"):
                     result["image_url"] = nd["image_url"]
                 if nd.get("description"):
@@ -168,7 +169,8 @@ def fetch_official_page(url: str, timeout: int = 10) -> Dict[str, Any]:
                         url, len(result["specs"]),
                     )
                 else:
-                    _write_dlq(url, "Gemini returned no data for official page")
+                    _write_dlq(
+                        url, "Gemini returned no data for official page")
 
         return result
     except requests.exceptions.Timeout:

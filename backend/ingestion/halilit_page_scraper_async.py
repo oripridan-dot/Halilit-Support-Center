@@ -79,14 +79,14 @@ def _get_rate_limit_semaphore():
 class AsyncHalilitPageScraper:
     """
     Async version of HalilitPageScraper using httpx for concurrent requests.
-    
+
     Much faster than sync version - can scrape 50+ products simultaneously.
     """
 
     def __init__(self, timeout: float = None):
         """
         Initialize async scraper.
-        
+
         Args:
             timeout: Request timeout in seconds (default: REQUEST_TIMEOUT)
         """
@@ -101,7 +101,8 @@ class AsyncHalilitPageScraper:
                 headers=HEADERS,
                 timeout=self.timeout,
                 follow_redirects=True,
-                limits=httpx.Limits(max_keepalive_connections=50, max_connections=100),
+                limits=httpx.Limits(
+                    max_keepalive_connections=50, max_connections=100),
             )
 
     async def close(self):
@@ -126,77 +127,78 @@ class AsyncHalilitPageScraper:
     async def _get(self, url: str, retries: int = 2) -> Optional[str]:
         """
         Make async GET request with rate limiting and retry logic.
-        
+
         Returns HTML text or None if failed.
         """
         await self._ensure_client()
         semaphore = _get_rate_limit_semaphore()
-        
+
         for attempt in range(retries + 1):
             async with semaphore:
                 try:
                     resp = await self.client.get(url)
                     self._request_count += 1
-                    
+
                     if resp.status_code != 200:
                         if attempt < retries:
                             await asyncio.sleep(1)
                             continue
                         logger.warning(f"HTTP {resp.status_code} for {url}")
                         return None
-                    
+
                     html = resp.text
-                    
+
                     # Check for anti-bot page
                     if self._is_anti_bot_page(html):
                         if attempt < retries:
                             wait = (attempt + 1) * 1  # 1s, 2s backoff
-                            logger.debug(f"Anti-bot detected for {url}, retry in {wait}s...")
+                            logger.debug(
+                                f"Anti-bot detected for {url}, retry in {wait}s...")
                             await asyncio.sleep(wait)
                             continue
                         logger.debug(f"Anti-bot blocked: {url}")
                         return None
-                    
+
                     return html
-                    
+
                 except httpx.RequestError as e:
                     logger.warning(f"Request failed for {url}: {e}")
                     if attempt < retries:
                         await asyncio.sleep(1)
                         continue
                     return None
-        
+
         return None
 
     async def _get_discovery(self, url: str) -> Optional[str]:
         """GET for discovery pages (brands, sitemap) with longer timeout."""
         await self._ensure_client()
         semaphore = _get_rate_limit_semaphore()
-        
+
         for attempt in range(DISCOVERY_RETRIES):
             async with semaphore:
                 try:
                     resp = await self.client.get(url, timeout=DISCOVERY_TIMEOUT)
                     self._request_count += 1
-                    
+
                     if resp.status_code != 200:
                         if attempt < DISCOVERY_RETRIES - 1:
                             await asyncio.sleep(DISCOVERY_RETRY_BACKOFF)
                         continue
-                    
+
                     html = resp.text
                     if self._is_anti_bot_page(html):
                         if attempt < DISCOVERY_RETRIES - 1:
                             await asyncio.sleep(DISCOVERY_RETRY_BACKOFF)
                         continue
-                    
+
                     return html
-                    
+
                 except httpx.RequestError as e:
                     logger.warning(f"Discovery request failed for {url}: {e}")
                     if attempt < DISCOVERY_RETRIES - 1:
                         await asyncio.sleep(DISCOVERY_RETRY_BACKOFF)
-        
+
         return None
 
     def _extract_total_results(self, soup: BeautifulSoup) -> int:
@@ -245,7 +247,7 @@ class AsyncHalilitPageScraper:
 
         # Extract price - try multiple methods
         price = 0.0
-        
+
         # Method 1: Try price selectors
         price_el = item.select_one(
             ".price, .price-new, .current-price, .price_value, .item_price"
@@ -267,7 +269,7 @@ class AsyncHalilitPageScraper:
                         price = float(digits)
                     except ValueError:
                         price = 0.0
-        
+
         # Method 2: Try data attributes
         if price == 0:
             for attr in ["data-price", "data-item-price"]:
@@ -279,7 +281,7 @@ class AsyncHalilitPageScraper:
                             break
                     except (ValueError, TypeError):
                         continue
-        
+
         # Method 3: Search entire item text for price pattern
         if price == 0:
             item_text = item.get_text()
@@ -311,7 +313,7 @@ class AsyncHalilitPageScraper:
     async def scrape_product_page(self, url: str) -> Optional[Dict[str, Any]]:
         """
         Scrape a single product page asynchronously.
-        
+
         Returns same format as sync version.
         """
         if not url or not url.startswith("http"):
@@ -388,11 +390,14 @@ class AsyncHalilitPageScraper:
             # ── Stage 2: Gemini Semantic Fallback ────────────────────────
             # JSON-LD is missing (SPA, JS-heavy, theme change). Pass the
             # rendered HTML to Gemini Structured Output — no CSS selectors.
-            logger.info("[SEMANTIC] No JSON-LD on %s — trying Gemini extraction", url)
+            logger.info(
+                "[SEMANTIC] No JSON-LD on %s — trying Gemini extraction", url)
             markdown = html_to_markdown(html)
-            semantic = extract_with_gemini(markdown) if len(markdown) > 100 else None
+            semantic = extract_with_gemini(
+                markdown) if len(markdown) > 100 else None
             if not semantic:
-                logger.debug("[SEMANTIC] Gemini extraction yielded nothing for %s", url)
+                logger.debug(
+                    "[SEMANTIC] Gemini extraction yielded nothing for %s", url)
                 return None
             item_id_match = re.search(r"/items/(\d+)", url)
             halilit_id = (
@@ -443,7 +448,8 @@ class AsyncHalilitPageScraper:
             dom_features = self._extract_features_from_dom(soup)
             if dom_features:
                 product["features"] = dom_features
-                logger.debug(f"Extracted {len(dom_features)} features from DOM")
+                logger.debug(
+                    f"Extracted {len(dom_features)} features from DOM")
 
         # Extract description
         page_description = ""
@@ -521,7 +527,7 @@ class AsyncHalilitPageScraper:
             # Last resort: try extracting from URL or other sources
             # Some products might have price in structured data we missed
             pass
-        
+
         result = {
             "halilit_id": halilit_id,
             "product_name": full_name,
@@ -659,7 +665,8 @@ class AsyncHalilitPageScraper:
         if len(markdown) > 100:
             semantic = extract_with_gemini(markdown)
             if semantic and semantic.get("price", 0) > 0:
-                logger.debug("[SEMANTIC] Price extracted via Gemini: %s", semantic["price"])
+                logger.debug(
+                    "[SEMANTIC] Price extracted via Gemini: %s", semantic["price"])
                 return float(semantic["price"])
 
         return 0.0
@@ -683,10 +690,12 @@ class AsyncHalilitPageScraper:
         for feat in semantic.get("features", []):
             if isinstance(feat, str) and ":" in feat:
                 parts = feat.split(":", 1)
-                features.append({"name": parts[0].strip(), "value": parts[1].strip()})
+                features.append(
+                    {"name": parts[0].strip(), "value": parts[1].strip()})
             elif isinstance(feat, str):
                 features.append({"name": feat, "value": ""})
-        logger.debug("[SEMANTIC] Extracted %d features via Gemini", len(features))
+        logger.debug(
+            "[SEMANTIC] Extracted %d features via Gemini", len(features))
         return features[:50]
 
     def _extract_description_from_dom(self, soup: BeautifulSoup) -> str:
@@ -711,7 +720,8 @@ class AsyncHalilitPageScraper:
         semantic = extract_with_gemini(markdown)
         if semantic and semantic.get("description"):
             desc = semantic["description"].strip()
-            logger.debug("[SEMANTIC] Description extracted via Gemini (%d chars)", len(desc))
+            logger.debug(
+                "[SEMANTIC] Description extracted via Gemini (%d chars)", len(desc))
             return desc
         return ""
 
@@ -724,7 +734,7 @@ class AsyncHalilitPageScraper:
     ) -> List[Dict[str, Any]]:
         """
         Full async pipeline: scrape brand listing → scrape all product pages concurrently.
-        
+
         This is MUCH faster than sync version - scrapes 50+ products simultaneously.
         """
         skip_existing_urls = skip_existing_urls or set()
@@ -745,7 +755,8 @@ class AsyncHalilitPageScraper:
         if MAX_PRODUCTS_PER_BRAND > 0:
             to_scrape = to_scrape[:MAX_PRODUCTS_PER_BRAND]
 
-        logger.info(f"  Scraping {len(to_scrape)} product pages concurrently...")
+        logger.info(
+            f"  Scraping {len(to_scrape)} product pages concurrently...")
 
         # Phase 2: Scrape all product pages concurrently
         tasks = [self.scrape_product_page(item["url"]) for item in to_scrape]
@@ -755,7 +766,8 @@ class AsyncHalilitPageScraper:
         failed = 0
         for i, result in enumerate(results):
             if isinstance(result, Exception):
-                logger.warning(f"  Failed to scrape {to_scrape[i]['url']}: {result}")
+                logger.warning(
+                    f"  Failed to scrape {to_scrape[i]['url']}: {result}")
                 failed += 1
             elif result:
                 # Merge with listing data
@@ -790,11 +802,13 @@ class AsyncHalilitPageScraper:
         max_page_from_dom = self._extract_max_page(soup)
         expected_pages = max(
             max_page_from_dom,
-            (total_results + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE if total_results > 0 else 1
+            (total_results + ITEMS_PER_PAGE -
+             1) // ITEMS_PER_PAGE if total_results > 0 else 1
         )
         expected_pages = min(expected_pages, MAX_SEARCH_PAGES)
 
-        logger.info(f"  📊 Brand group: {total_results} total products, {expected_pages} pages")
+        logger.info(
+            f"  📊 Brand group: {total_results} total products, {expected_pages} pages")
 
         # Parse page 1
         items, new_count = self._parse_listing_page(soup, brand, seen_urls)
@@ -813,7 +827,8 @@ class AsyncHalilitPageScraper:
                 if isinstance(html, Exception) or not html:
                     continue
                 soup = BeautifulSoup(html, "html.parser")
-                items, new_count = self._parse_listing_page(soup, brand, seen_urls)
+                items, new_count = self._parse_listing_page(
+                    soup, brand, seen_urls)
                 all_items.extend(items)
 
         logger.info(f"  ✅ Brand group listing: {len(all_items)} products")
@@ -836,7 +851,8 @@ class AsyncHalilitPageScraper:
         total_results = self._extract_total_results(soup)
         max_page_from_dom = self._extract_max_page(soup)
         expected_pages = min(
-            max(max_page_from_dom, (total_results + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE if total_results > 0 else 1),
+            max(max_page_from_dom, (total_results + ITEMS_PER_PAGE - 1) //
+                ITEMS_PER_PAGE if total_results > 0 else 1),
             MAX_SEARCH_PAGES
         )
 
@@ -900,18 +916,21 @@ class AsyncHalilitPageScraper:
 
         # CRITICAL: Always prefer listing price if it exists (listing prices are more reliable)
         listing_price = listing.get("price", 0.0)
-        page_price = page_data.get("price_il", 0.0) or page_data.get("price", 0.0)
-        
+        page_price = page_data.get(
+            "price_il", 0.0) or page_data.get("price", 0.0)
+
         if listing_price > 0:
             # Use listing price if it's valid, or if page price is 0
             if page_price == 0 or listing_price > 0:
                 page_data["price_il"] = listing_price
                 page_data["price_eilat"] = round(listing_price / 1.17, 2)
-                logger.debug(f"Using listing price: {listing_price} (page price was {page_price})")
+                logger.debug(
+                    f"Using listing price: {listing_price} (page price was {page_price})")
         elif page_price > 0:
             # Only use page price if listing price is missing
             page_data["price_il"] = page_price
-            page_data["price_eilat"] = round(page_price / 1.17, 2) if page_price > 0 else 0.0
+            page_data["price_eilat"] = round(
+                page_price / 1.17, 2) if page_price > 0 else 0.0
 
         # Fill image gaps from listing
         if not page_data.get("image_url") and listing.get("image_url"):

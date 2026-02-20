@@ -8,6 +8,58 @@
 - [refactor] Replaced direct image tags in EcosystemTab with ImageWithFallback component for improved error handling.
 - [feat] Added a new navigation item for Explorer view.
 - [feat] Added handling for Explorer view in navigation store.
+- [feat] Added resilient extraction using API-first and Gemini semantic fallback in `halilit_page_scraper_async.py`.
+- [feat] Added holographic spec hydration engine.
+- [feat] Added YAML frontmatter parsing.
+- [refactor] Updated `build_component` to use the hydration engine.
+- [feat] Added Catalog Explorer view.
+- [feat] Added Telescope icon for Explorer navigation.
+- [feat] Added navigation to Explorer view.
+- [feat] Added Explorer view to the navigation sidebar.
+- [feat] Added new contract `product_detail_-_accessory_recommendations.schema.ts`.
+- [feat] Added new interface spec `product_detail_-_accessory_recommendations.md`.
+
+## [v4.1] — 2026-02-20
+## v4.1
+
+- [feat] Added Catalog Explorer view.
+- [feat] Added Telescope icon for Explorer navigation.
+- [feat] Added navigation to Explorer view.
+- [feat] Added Explorer view to the navigation sidebar.
+- [fix] Fixed error handling in EcosystemTab component.
+- [feat] Added ImageWithFallback component.
+- [refactor] Replaced direct image tags in EcosystemTab with ImageWithFallback component for improved error handling.
+- [feat] Added a new navigation item for Explorer view.
+- [feat] Added handling for Explorer view in navigation store.
+- [feat] Added resilient extraction using API-first and Gemini semantic fallback in `halilit_page_scraper_async.py`.
+- [feat] Added holographic spec hydration engine.
+- [feat] Added YAML frontmatter parsing.
+- [refactor] Updated `build_component` to use the hydration engine.
+
+## [v4.1] — 2026-02-20
+## v4.1
+
+- [feat] Added Catalog Explorer view.
+- [feat] Added Telescope icon for Explorer navigation.
+- [feat] Added navigation to Explorer view.
+- [feat] Added Explorer view to the navigation sidebar.
+- [fix] Fixed error handling in EcosystemTab component.
+- [feat] Added ImageWithFallback component.
+- [refactor] Replaced direct image tags in EcosystemTab with ImageWithFallback component for improved error handling.
+- [feat] Added a new navigation item for Explorer view.
+- [feat] Added handling for Explorer view in navigation store.
+- [feat] Added resilient extraction using API-first and Gemini semantic fallback in `halilit_page_scraper_async.py`.
+
+## [v4.1] — 2026-02-20
+- [feat] Added Catalog Explorer view.
+- [feat] Added Telescope icon for Explorer navigation.
+- [feat] Added navigation to Explorer view.
+- [feat] Added Explorer view to the navigation sidebar.
+- [fix] Fixed error handling in EcosystemTab component.
+- [feat] Added ImageWithFallback component.
+- [refactor] Replaced direct image tags in EcosystemTab with ImageWithFallback component for improved error handling.
+- [feat] Added a new navigation item for Explorer view.
+- [feat] Added handling for Explorer view in navigation store.
 
 ## [v4.1] — 2026-02-20
 ## [v4.1]

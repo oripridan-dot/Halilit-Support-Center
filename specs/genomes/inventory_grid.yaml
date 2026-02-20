@@ -1,0 +1,83 @@
+---
+id: genome_inventory_grid
+version: "1.0.0"
+type: UI_Cell
+fitness_goal: MAX_SCAN_VELOCITY
+extends: genome_base_cell
+
+# ─────────────────────────────────────────────
+# INVENTORY GRID GENOME
+# Target: frontend/src/components/views/InventoryView.tsx
+# ─────────────────────────────────────────────
+
+environment:
+  - frontend/src/hooks/useConductorCatalog.ts
+  - frontend/src/types/index.ts
+  - frontend/src/store/navigationStore.ts
+
+States:
+  LOADING:
+    description: "Catalog fetch in progress."
+    visual_hint: "Grid of 12 skeleton cards with animate-pulse"
+    required: true
+
+  SEARCH_ACTIVE:
+    description: "User has typed into the search bar. Grid filters in real-time."
+    transitions:
+      - trigger: "Search cleared"
+        next: READY
+      - trigger: "Result count = 0"
+        next: NO_RESULTS
+    visual_hint: "Active filter chip appears above grid. Result count badge."
+    required: true
+
+  NO_RESULTS:
+    description: "Search returned zero matches."
+    visual_hint: "Empty state with search icon and 'No products match' text"
+    required: true
+
+  READY:
+    description: "Full catalog rendered in filterable, sortable grid."
+    visual_hint: "Card grid with image, brand, title, price, quality score badge"
+    required: true
+
+Traits:
+  GridDensityPhenotype:
+    type: enum
+    value: ["COMPACT", "COMFORTABLE", "SPACIOUS"]
+    description: "Default COMFORTABLE (4 cols on xl). Operator can switch."
+    inheritable: false
+
+  QualityScorePhenotype:
+    type: bool
+    value: true
+    description: "Each card must display a quality score badge (0-100). Color: green >80, amber 50-80, red <50."
+    inheritable: false
+
+  PricePhenotype:
+    type: string
+    value: DUAL_PRICE
+    description: "Show both IL price and Eilat price if they differ. Commercial source only."
+    inheritable: false
+
+  SearchPhenotype:
+    type: string
+    value: REAL_TIME_CLIENT
+    description: "Client-side fuzzy search on brand+title+sku. No server round-trip."
+    inheritable: false
+
+  SortPhenotype:
+    type: enum
+    value: ["QUALITY_DESC", "PRICE_ASC", "ALPHA_ASC", "BRAND_ASC"]
+    description: "Default sort: QUALITY_DESC. Persist selection in sessionStorage."
+    inheritable: false
+
+Mutations_Allowed:
+  - GridDensityPhenotype: Variable
+  - SortPhenotype: Variable
+
+Phenotype_Assertions:
+  - "Search must filter visually within 16ms (no re-fetch)"
+  - "Quality score badge colors must follow the three-tier threshold"
+  - "DUAL_PRICE: only show Eilat price if it differs from IL price"
+  - "NEVER invent prices — only render prices from Commercial source"
