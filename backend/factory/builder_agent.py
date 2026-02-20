@@ -1,6 +1,7 @@
 import sys
 import re
 import subprocess
+import requests
 from pathlib import Path
 
 # Project root (backend/factory -> backend -> root)
@@ -10,10 +11,12 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 try:
     from agent_core import query_llm, save_artifact, get_project_context, build_dynamic_context
     from sandbox_executor import inner_loop, parse_verification_commands
+    from ui_validator_agent import validate_ui
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from agent_core import query_llm, save_artifact, get_project_context, build_dynamic_context
     from sandbox_executor import inner_loop, parse_verification_commands
+    from ui_validator_agent import validate_ui
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -147,6 +150,78 @@ def build_component(spec_path: str) -> None:
     spec_content = spec_file.read_text(encoding="utf-8")
 
     domain = _detect_domain(spec_content)
+    full_path = _extract_target(spec_content, spec_file)
+
+    # =========================================================================
+    # THE STITCH PIPELINE (Frontend)
+    # =========================================================================
+    if domain == "frontend" and full_path:
+        print(f"\n🎨 [STITCH UI WORKFLOW INITIATED]")
+        print(
+            f"The Architect has designed a frontend component: {full_path.name}")
+        print(f"\n👉 ACTION REQUIRED:")
+        print(f"   1. Open Google Stitch (stitch.withgoogle.com) or Lovable/v0.")
+        print(f"   2. Copy the '## Stitch UI Prompt' from {spec_file.name}.")
+        print(f"   3. Generate the UI and paste the raw React/TSX code into:")
+        print(f"      {full_path.relative_to(PROJECT_ROOT)}")
+
+        input("\nPress ENTER when the raw UI code is saved in the file...")
+
+        print("\n⚙️  Routing to UI Bridge MCP for Logic Integration...")
+        payload = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "tools/call",
+            "params": {
+                "name": "integrate_lovable_code",
+                "arguments": {
+                    "file_path": str(full_path),
+                    "create_backup": True
+                }
+            }
+        }
+        try:
+            resp = requests.post("http://localhost:8200/mcp",
+                                 json=payload, timeout=120)
+            data = resp.json()
+            if "error" in data:
+                print(f"❌ UI Bridge Error: {data['error']['message']}")
+            else:
+                print(f"✅ UI Bridge Success: {data['result']['message']}")
+
+                # Step 1: TypeScript type check
+                passed, err = _run_tsc()
+                if not passed:
+                    print("⚠️ TypeScript errors detected after integration:")
+                    print(err)
+                else:
+                    print("✅ TypeScript verification passed!")
+                    # Step 2: UI Validator — import scan + Vite build
+                    print("\n🔬 Running UI Validator (import scan + Vite build)...")
+                    validation = validate_ui(run_build=True)
+                    if not validation["passed"]:
+                        print(
+                            f"\n❌ UI Validation FAILED: {validation['summary']}")
+                        if validation["import_errors"]:
+                            print("   Broken imports:")
+                            for e in validation["import_errors"]:
+                                print(f"     • {e}")
+                        if validation["build_errors"]:
+                            print("   Vite build errors:")
+                            for e in validation["build_errors"]:
+                                print(f"     • {e}")
+                        print("\n💡 Fix the issues above and re-run the build.")
+                    else:
+                        print(
+                            "✅ UI Validation passed — import scan + Vite build clean.")
+        except Exception as e:
+            print(
+                f"❌ Failed to reach UI Bridge (is backend/mcp/servers/ui_bridge.py running?): {e}")
+        return
+
+    # =========================================================================
+    # THE STANDARD PIPELINE (Backend / Logic)
+    # =========================================================================
 
     # --- Dynamic Context Discovery (Pillar 1) --------------------------------
     # Extract meaningful search queries from the spec title and component path
@@ -169,7 +244,6 @@ def build_component(spec_path: str) -> None:
         dynamic_ctx = get_project_context(domain)
 
     context = dynamic_ctx
-    full_path = _extract_target(spec_content, spec_file)
 
     # --- Closure: the builder_fn passed to inner_loop -------------------------
     # State shared across inner-loop rounds

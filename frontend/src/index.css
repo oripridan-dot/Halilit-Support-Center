@@ -1,9 +1,11 @@
+/* Inter — Stitch-style professional sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Design tokens */
+@import "./styles/design-tokens.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Import design tokens */
-@import './styles/design-tokens.css';
 
 /* ===== STUDIO DARK PALETTE ===== */
 :root {

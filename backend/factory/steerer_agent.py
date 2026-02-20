@@ -64,6 +64,17 @@ OUTPUT RULES — follow exactly:
 - Do NOT wrap your output in markdown fences (no ``` blocks around the whole file).
 - Output ONLY the spec file — no preamble, no explanation, no commentary.
 
+**NEW RULE: STITCH UI PROMPT (FRONTEND ONLY)**
+If the target component is a Frontend UI view (.tsx), you MUST include a dedicated
+section called "## Stitch UI Prompt" immediately before "## Verification Commands".
+This section must contain a highly detailed prompt meant to be copy-pasted into
+Google Stitch (or Lovable/v0).
+- Define the layout (e.g., Bento Grid, Flexbox, CSS Grid).
+- Define the visual style (Dark mode, Tailwind CSS, slate-900 background, blue-500 accents).
+- Define "Data Slots" with placeholders (do NOT hardcode real product names or prices).
+- Describe component hierarchy and spacing clearly so Stitch can produce pixel-perfect code.
+- Reference the exact Tailwind color tokens used in the rest of the Operator Console.
+
 **MANDATORY SECTION — every spec MUST end with:**
 
 ## Verification Commands

@@ -207,7 +207,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const { activeProductId, goBack, goToInventory, goToProduct } =
     useNavigationStore();
   const { products, isLoading: catalogLoading } = useConductorCatalog();
-  const jitState = useJITIntelligence(activeProductId ?? "");
+  const { jitState } = useJITIntelligence(activeProductId ?? "");
   const [activeTab, setActiveTab] = useState<
     "ecosystem" | "specifications" | "history"
   >("ecosystem");

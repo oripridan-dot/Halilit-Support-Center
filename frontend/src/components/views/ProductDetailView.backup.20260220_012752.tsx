@@ -1,3 +1,7 @@
+/**
+ * ProductDetailView — Product Intelligence  (Spec 03 v2.0 · Stitch redesign)
+ * Full implementation: catalog data → JIT streaming → Ecosystem/Specs/History tabs
+ */
 import React, { useState, useCallback } from "react";
 import {
   ArrowLeft,
@@ -13,7 +17,6 @@ import {
   Clock,
   ChevronRight,
 } from "lucide-react";
-
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
 import { useNavigationStore } from "../../store/navigationStore";
@@ -30,10 +33,7 @@ function isCfp(price: number | null | undefined): boolean {
 }
 
 // ── StockDot ───────────────────────────────────────────────────────────────────
-interface StockDotProps {
-  stock?: number | null;
-}
-const StockDot: React.FC<StockDotProps> = ({ stock }) => {
+const StockDot: React.FC<{ stock?: number | null }> = ({ stock }) => {
   if (stock === 0)
     return (
       <>
@@ -57,10 +57,7 @@ const StockDot: React.FC<StockDotProps> = ({ stock }) => {
 };
 
 // ── Toast ──────────────────────────────────────────────────────────────────────
-interface ToastProps {
-  msg: string;
-}
-const Toast: React.FC<ToastProps> = ({ msg }) => (
+const Toast: React.FC<{ msg: string }> = ({ msg }) => (
   <div
     className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2.5 rounded-xl
     bg-zinc-900 border border-zinc-700 text-sm text-zinc-200 shadow-xl animate-fade-in"
@@ -71,12 +68,9 @@ const Toast: React.FC<ToastProps> = ({ msg }) => (
 );
 
 // ── Skeleton ───────────────────────────────────────────────────────────────────
-interface SkeletonPulseProps {
-  className?: string;
-}
-const SkeletonPulse: React.FC<SkeletonPulseProps> = ({ className = "" }) => (
-  <div className={`bg-zinc-900 rounded animate-pulse ${className}`} />
-);
+const SkeletonPulse: React.FC<{ className?: string }> = ({
+  className = "",
+}) => <div className={`bg-zinc-900 rounded animate-pulse ${className}`} />;
 
 const SkeletonHeader = () => (
   <div className="p-6 flex gap-6">
@@ -101,13 +95,12 @@ interface RelatedProduct {
   price?: number;
   image_url?: string;
 }
-interface RelatedProductCardProps {
+const RelatedProductCard: React.FC<{
   item: RelatedProduct;
   badge?: string;
   badgeColor?: string;
   onSelect: () => void;
-}
-const RelatedProductCard: React.FC<RelatedProductCardProps> = ({
+}> = ({
   item,
   badge,
   badgeColor = "bg-emerald-950/30 text-emerald-400 border-emerald-900/30",
@@ -159,16 +152,11 @@ const RelatedProductCard: React.FC<RelatedProductCardProps> = ({
 );
 
 // ── MiniSection ────────────────────────────────────────────────────────────────
-interface MiniSectionProps {
+const MiniSection: React.FC<{
   title: string;
   count: number;
   children: React.ReactNode;
-}
-const MiniSection: React.FC<MiniSectionProps> = ({
-  title,
-  count,
-  children,
-}) => (
+}> = ({ title, count, children }) => (
   <div className="mb-6">
     <div className="flex items-center gap-2 mb-3">
       <span className="text-xs font-semibold text-zinc-400">{title}</span>
@@ -181,12 +169,11 @@ const MiniSection: React.FC<MiniSectionProps> = ({
 );
 
 // ── TabButton ──────────────────────────────────────────────────────────────────
-interface TabButtonProps {
+const TabButton: React.FC<{
   active: boolean;
   onClick: () => void;
   children: React.ReactNode;
-}
-const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children }) => (
+}> = ({ active, onClick, children }) => (
   <button
     onClick={onClick}
     className={`px-4 py-2 text-sm font-medium transition-all border-b-2 ${
@@ -200,14 +187,11 @@ const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children }) => (
 );
 
 // ── ProductDetailView ──────────────────────────────────────────────────────────
-
-interface ProductDetailViewProps {}
-
-const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
+const ProductDetailView: React.FC = () => {
   const { activeProductId, goBack, goToInventory, goToProduct } =
     useNavigationStore();
   const { products, isLoading: catalogLoading } = useConductorCatalog();
-  const jitState = useJITIntelligence(activeProductId ?? "");
+  const { jitState } = useJITIntelligence(activeProductId ?? "");
   const [activeTab, setActiveTab] = useState<
     "ecosystem" | "specifications" | "history"
   >("ecosystem");
@@ -256,7 +240,8 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
   const displayBrand = product?.brand ?? jitState.snap?.brand ?? "—";
   const displayPrice = product?.price ?? jitState.snap?.price;
   const displayEilat = product?.price_eilat ?? jitState.snap?.price_eilat;
-  const displayImage = product?.image_url ?? "/placeholder.png";
+  const displayImage =
+    product?.image_url ?? jitState.snap?.thumbnail ?? "/placeholder.png";
   const displaySku = product?.id ?? activeProductId;
   const displayCategory = product?.subcategory ?? product?.category;
   const displayOfficialUrl = product?.official_url;

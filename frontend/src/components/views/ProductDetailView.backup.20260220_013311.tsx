@@ -201,13 +201,11 @@ const TabButton: React.FC<TabButtonProps> = ({ active, onClick, children }) => (
 
 // ── ProductDetailView ──────────────────────────────────────────────────────────
 
-interface ProductDetailViewProps {}
-
-const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
+const ProductDetailView: React.FC = () => {
   const { activeProductId, goBack, goToInventory, goToProduct } =
     useNavigationStore();
   const { products, isLoading: catalogLoading } = useConductorCatalog();
-  const jitState = useJITIntelligence(activeProductId ?? "");
+  const { jitState } = useJITIntelligence(activeProductId ?? "");
   const [activeTab, setActiveTab] = useState<
     "ecosystem" | "specifications" | "history"
   >("ecosystem");
