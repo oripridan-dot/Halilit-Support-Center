@@ -1,6 +1,6 @@
 # Spec: Enhanced Inventory Search Debounce with Throttle
 
-**Version:** 1.0
+**Version:** 1.1
 **Component:** `frontend/src/components/views/InventoryView.tsx`
 
 ## Purpose
@@ -20,71 +20,54 @@ To enhance the search input debounce in the Inventory Master, improving performa
     -   **Outcome:** The Inventory grid does not update with each keystroke.
     -   **Outcome:** After 150ms of inactivity, and 300ms since last api call, the Inventory grid updates to show results for "Roland".
 2.  **Scenario:** User pastes a long SKU into the search input.
-    -   **Outcome:** The Inventory grid updates only once, 150ms after the paste action is complete, if 300ms have elapsed since the last API call.
+    -   **Outcome:** The Inventory grid updates only once, 150ms after the paste action is complete, and 300ms since last api call.
 3.  **Scenario:** User clears the search input.
-    -   **Outcome:** After 150ms, and 300ms since last api call, the Inventory grid updates to show the full inventory.
-4.  **Scenario:** User navigates to the inventory screen with a pre-filled search term.
-    -   **Precondition:** `navigationStore.searchQuery` is set to "Fender".
-    -   **Outcome:** After 150ms of loading, the Inventory grid is filtered to "Fender".
-5. **Scenario:** API call takes longer than the throttle time.
-    - **Precondition:** The API is delayed due to network conditions.
-    - **Outcome:** The next debounced value is not processed until the previous API call returns, ensuring API calls are not made faster than the throttle time.
+    -   **Outcome:** After 150ms of inactivity, and 300ms since last api call, the Inventory grid updates to show the full inventory.
+4.  **Scenario:** Initial state with CFP filter enabled. User types "Roland" quickly in the search input.
+    -   **Precondition:** `navigationStore.initialCfpFilter` is set to `true`.
+    -   **Outcome:** The Inventory grid loads with the initial CFP filter enabled.
+    -   **Outcome:** The Inventory grid does not update with each keystroke.
+    -   **Outcome:** After 150ms of inactivity, and 300ms since last api call, the Inventory grid updates to show results for "Roland" with the CFP filter still enabled.
+5.  **Scenario:** User navigates to the inventory screen with a pre-filled search term.
+    *   **Precondition:** `navigationStore.searchQuery` is set to "Fender".
+    *   **Outcome:** After 150ms of loading, and 300ms since the component mounted, the Inventory grid is filtered to "Fender".
 
 ## Stitch UI Prompt
-```text
-// Target Component: InventoryView
-// Description: A React component for displaying and filtering a product inventory grid.
-// Layout: Bento Grid with a search input and a table displaying product information.
-// Visual Style: Dark mode, Tailwind CSS, slate-900 background, blue-500 accents.
+
+```
+// Component: InventoryView (search input)
+// Goal: Generate Tailwind CSS + React code for a search input field inside the InventoryView
+//       that integrates debouncing (150ms) and throttling (300ms) to reduce API calls.
+
+// Layout:
+// - Use a Flexbox layout to position the search input.
+// - Add clear button at the end of the search input using lucide-react XCircle icon.
+
+// Style:
+// - Dark mode (slate-900 background, blue-500 accents).
+// - Use Tailwind CSS classes for styling.
+// - Input field: rounded corners, padding, dark text color.
+
 // Data Slots:
-// - Product Rows: Each row displays product information (name, brand, price, stock) based on the filtered catalog data. Use placeholder data for now.
-// - Search Input: A text input field for filtering the product list by name, brand, or SKU.
-// - Brand Filter Dropdown: A dropdown to filter by brand.
-// - Category Filter Dropdown: A dropdown to filter by category.
-// - CfP Toggle: A toggle to filter by Call for Price items only.
+// - `placeholder`: "Search inventory..."
+// - `searchValue`: [Current search string] (Controlled component).
+// - Ensure accessibility (aria-label).
+
 // Component Hierarchy:
-// - InventoryView (root)
-//   - Search Input
-//   - Brand Filter Dropdown
-//   - Category Filter Dropdown
-//   - CfP Toggle
-//   - Product Table
-//     - Table Header (sortable columns)
-//     - Table Rows (product data)
-// Spacing: Use Tailwind CSS spacing utilities (e.g., p-4, m-2, space-x-2, space-y-2) for consistent spacing between elements.  Use dark mode Tailwind color tokens for consistent styling (e.g. slate-900, blue-500, zinc-700). Ensure accessibility by providing labels for form elements.
-// Functionality: Implement debounced search and throttle API calls.
+// Flexbox Container
+//   Input Field
+//   Clear Button (Conditional rendering if searchValue is not empty)
 
-// Search Input:
-// - Use the Search icon from lucide-react inside the search input.
-// - Placeholder text: "Search products..."
-// - Styling: Use Tailwind CSS for styling, including rounded corners, dark background, and appropriate text color.
+// Spacing: Use Tailwind spacing classes (e.g., `mx-2`, `my-1`) for consistent spacing.
 
-// Dropdowns:
-// - Use the Select component from react-select for brand and category filters.
-// - Placeholder text: "Select Brand..." and "Select Category..."
-// - Styling: Use Tailwind CSS for styling, including rounded corners, dark background, and appropriate text color.
-
-// CfP Toggle:
-// - Use a simple checkbox input for the CfP toggle.
-// - Label: "Call for Price Only"
-// - Styling: Use Tailwind CSS for styling, including rounded corners, dark background, and appropriate text color.
-
-// Product Table:
-// - Use a simple HTML table to display product information.
-// - Columns: Name, Brand, Price, Stock
-// - Styling: Use Tailwind CSS for styling, including striped rows, dark background, and appropriate text color.
-// - Implement sorting for each column (Name, Brand, Price) using ChevronUp and ChevronDown icons from lucide-react.
-// - Implement a "Call for Price" indicator with a Phone icon from lucide-react for products with a price of null or 0.
-// - Implement Stock badges for "In Stock", "Out of Stock", and "Unknown" stock status. Use Package icon from lucide-react in the badge.
-
-// Data Slots:
-// - Each product row should have the following data slots:
-//   - Product Name: "Product Name Placeholder"
-//   - Brand: "Brand Name Placeholder"
-//   - Price: "₪999.99"
-//   - Stock: "In Stock", "Out of Stock", or "Unknown"
-
-// Use Tailwind color tokens (e.g., slate-900, blue-500, zinc-700) for consistent styling.
+// Special Instructions:
+// - Implement debouncing using a custom hook with setTimeout.
+// - Implement throttling using a useRef and setTimeout.
+// - Use a state variable called `filterText` to store the current search input value.
+// - The `onChange` event handler should update the `filterText` state.
+// - The API call to `useConductorCatalog` with the `searchQuery` parameter should only be triggered
+//   after both the debounced value changes and the throttle time has elapsed.
+// - Preserve initial state (`navigationStore.initialCfpFilter` and `navigationStore.searchQuery`).
 ```
 
 ## Verification Commands
