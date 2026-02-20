@@ -225,6 +225,7 @@ _ACTION_MAP = {
     "synthesize": ("synthesize", "ð§¬ RIBOSOME",       "Translating Genome â Synthesis Directive (protein folding)..."),
     "mutate":     ("mutate",     "ð§« MUTATION ENGINE", "Analysing fitness logs â evolving agent DNA..."),
     "fitness":    ("fitness",    "ð FITNESS LEDGER",  "Printing per-agent fitness scores and generation counts..."),
+    "repair":     ("repair",     "🛠️  REPAIR SERVICE", "Running immune-response pipeline: import fixer → tsc → lint → vite → janitor..."),
 }
 
 

@@ -42,7 +42,7 @@ interface StockDotProps {
 /** Properties for the Toast component. */
 interface ToastProps {
   /** The message to display in the toast. */
-  message: string;
+  msg: string;
 }
 
 /** Properties for the SkeletonPulse component. */
@@ -99,9 +99,6 @@ interface TabButtonProps {
  */
 interface ProductDetailViewProps {}
 
-/** Represents the possible tabs in the product detail view. */
-type ProductDetailTab = "ecosystem" | "specifications" | "history";
-
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
 /**
@@ -136,20 +133,20 @@ const StockDot: React.FC<StockDotProps> = ({ stock }) => {
   if (stock === 0)
     return (
       <>
-        <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />
+        <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />{" "}
         <span className="text-red-400 text-sm">Out of Stock</span>
       </>
     );
   if (stock == null)
     return (
       <>
-        <span className="w-2 h-2 rounded-full bg-zinc-600 inline-block" />
+        <span className="w-2 h-2 rounded-full bg-zinc-600 inline-block" />{" "}
         <span className="text-zinc-500 text-sm">Unknown</span>
       </>
     );
   return (
     <>
-      <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
+      <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />{" "}
       <span className="text-emerald-400 text-sm">In Stock</span>
     </>
   );
@@ -160,13 +157,13 @@ const StockDot: React.FC<StockDotProps> = ({ stock }) => {
 /**
  * Displays a temporary toast message at the bottom right of the screen.
  */
-const Toast: React.FC<ToastProps> = ({ message }) => (
+const Toast: React.FC<ToastProps> = ({ msg }) => (
   <div
     className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2.5 rounded-xl
     bg-zinc-900 border border-zinc-700 text-sm text-zinc-200 shadow-xl animate-fade-in"
   >
     <Check size={13} className="text-emerald-400" />
-    {message}
+    {msg}
   </div>
 );
 
@@ -372,8 +369,10 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     };
   }, [cancelJITStream]);
 
-  const [activeTab, setActiveTab] = useState<ProductDetailTab>("ecosystem");
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<
+    "ecosystem" | "specifications" | "history"
+  >("ecosystem");
+  const [toast, setToast] = useState<string | null>(null);
   const [specsCopied, setSpecsCopied] = useState(false);
 
   /**
@@ -381,8 +380,8 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
    * @param msg The message to display.
    */
   const showToast = useCallback((msg: string) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 1600);
+    setToast(msg);
+    setTimeout(() => setToast(null), 1600);
   }, []);
 
   // ── Resolve product ──────────────────────────────────────────────────────────
@@ -510,7 +509,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
 
   return (
     <div className="flex flex-col h-full overflow-hidden">
-      {toastMessage && <Toast message={toastMessage} />}
+      {toast && <Toast msg={toast} />}
 
       {/* ── Back ── */}
       <div className="px-6 pt-5 pb-1 shrink-0">
