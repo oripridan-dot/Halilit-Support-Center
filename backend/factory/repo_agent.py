@@ -385,6 +385,34 @@ def merge_feature_branch(feature_branch: str, base_branch: str = "v9.7.0") -> bo
     return True
 
 
+def merge_and_cleanup(branch_name: str, success: bool) -> None:
+    """
+    TDD State Machine gate: merges on success, or trashes the branch on failure,
+    then restores the workspace.
+
+    This is the canonical interface used by the Frontend Manager's 6-state loop.
+    It wraps merge_feature_branch() and rollback_branch() into a single call
+    matching the blueprint signature: merge_and_cleanup(branch, success).
+
+    Args:
+        branch_name: The feature/evo branch to act on.
+        success:     True → squash-merge into current base. False → delete & restore.
+    """
+    base = get_current_branch()
+    if base == branch_name:
+        # Already on the feature branch — detect the actual base
+        base = "v9.7.4"
+    if success:
+        print(f"✅ TDD Green. Merging {branch_name} → {base}.")
+        merge_feature_branch(branch_name, base_branch=base)
+    else:
+        print(
+            f"🗑️ TDD Failed. Trashing branch {branch_name} — {base} is untouched.")
+        rollback_branch(branch_name, base_branch=base)
+    # Pop any stashed changes
+    _run_git(["stash", "pop"], )
+
+
 def generate_failure_report(
     feature_slug: str,
     original_prompt: str,

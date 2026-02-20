@@ -1,4 +1,13 @@
 ## [v4.1] — 2026-02-20
+### Added
+- [feat] Added `DAILY_BRIEFING.md` containing daily status reports.
+- [feat] Added `HEARTBEAT.md` containing factory status information.
+
+### Changed
+- [chore] Added `FACTORY_KANBAN.md` and `FACTORY_FAILURE_REPORT.md` to `.gitignore`.
+- [feat] Added `KANBAN_PATH` constant in `backend/factory/frontend_manager.py`.
+
+## [v4.1] — 2026-02-20
 - [feat] Refactored ExplorationPanel component for improved structure.
 - [feat] Extracted sub-components into `ExplorationPanelGuideView.tsx` and `ExplorationPanelRenderers.tsx`.
 - [feat] Introduced `SetupGuideView` component.

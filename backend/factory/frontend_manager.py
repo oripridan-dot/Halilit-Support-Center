@@ -33,9 +33,33 @@ from pathlib import Path
 _FACTORY_DIR = Path(__file__).resolve().parent
 _ROOT = _FACTORY_DIR.parent.parent
 
+KANBAN_PATH = _ROOT / "FACTORY_KANBAN.md"
+
 sys.path.insert(0, str(_FACTORY_DIR))
 from agent_core import query_llm  # noqa: E402
 from ast_patcher import apply_patch, apply_patch_batch  # noqa: E402
+
+
+# ---------------------------------------------------------------------------
+# Real-time Kanban board helper
+# ---------------------------------------------------------------------------
+
+def update_kanban(branch: str, target: str, state: str) -> None:
+    """
+    Writes real-time telemetry to the physical Kanban board at FACTORY_KANBAN.md.
+    Called at each state transition so the Operator can track execution live.
+    """
+    content = (
+        f"# 🏭 FACTORY KANBAN (LIVE)\n\n"
+        f"**Current Branch:** `{branch}`\n"
+        f"**Target:** `{target}`\n\n"
+        f"### 🔄 Execution State\n\n"
+        f"{state}\n\n"
+        f"---\n\n"
+        f"*Last updated: {__import__('datetime').datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}*\n"
+    )
+    KANBAN_PATH.write_text(content, encoding="utf-8")
+    print(f"\n📊 KANBAN → {state}")
 
 
 # ---------------------------------------------------------------------------
@@ -232,7 +256,7 @@ def _execute_factory_cmd(tool: str, args: str) -> dict:
 # Public API
 # ---------------------------------------------------------------------------
 
-def run_frontend_swarm(intent_spec: str) -> dict:
+def run_frontend_swarm(intent_spec: str, task_name: str = "frontend-task") -> dict:
     """
     Executes a localized frontend sub-swarm for the given intent.
 
@@ -241,6 +265,7 @@ def run_frontend_swarm(intent_spec: str) -> dict:
     Args:
         intent_spec: High-level spec/intent string (e.g., the content of a spec
                      file, or a plain-English instruction for a surgical patch).
+        task_name:   Slug used for the Kanban board branch label.
 
     Returns:
         {
@@ -252,9 +277,13 @@ def run_frontend_swarm(intent_spec: str) -> dict:
     """
     print(f"\n   🎨 [FRONTEND MANAGER] Planning sub-swarm for intent...")
     print(f"   {intent_spec[:120]}{'...' if len(intent_spec) > 120 else ''}")
+    update_kanban(
+        task_name, intent_spec[:80], "⏳ State 1: Frontend Manager activated — planning sub-swarm...")
 
     queue = _plan_frontend_queue(intent_spec)
     if not queue:
+        update_kanban(
+            task_name, intent_spec[:80], "❌ LLM returned empty queue — sub-swarm aborted.")
         return {
             "success": False,
             "tasks_run": 0,
@@ -263,6 +292,8 @@ def run_frontend_swarm(intent_spec: str) -> dict:
         }
 
     print(f"   ⚡ Frontend sub-swarm: {len(queue)} task(s) queued")
+    update_kanban(
+        task_name, intent_spec[:80], f"🛠️ State 2: Executing {len(queue)} frontend task(s)...")
 
     failures: list[dict] = []
     tasks_run = 0
@@ -271,6 +302,8 @@ def run_frontend_swarm(intent_spec: str) -> dict:
         tool = task.get("tool", "")
         args = task.get("args", "")
         print(f"\n   → [{tool.upper()}] {str(args)[:80]}")
+        update_kanban(task_name, str(args)[
+                      :60], f"⚙️  Step {tasks_run + 1}/{len(queue)}: [{tool.upper()}] running...")
 
         if tool == "patch_component":
             # args can be a dict (from JSON queue) or string
@@ -285,6 +318,8 @@ def run_frontend_swarm(intent_spec: str) -> dict:
 
         if not result.get("success", False):
             failures.append(result)
+            update_kanban(task_name, str(args)[
+                          :60], f"🚨 Step {tasks_run} FAILED — sub-swarm halted. Operator review required.")
             # Stop on first failure — don't validate broken code
             print(
                 f"   ⛔ Frontend sub-swarm halted at step {tasks_run} due to failure.")
@@ -297,6 +332,9 @@ def run_frontend_swarm(intent_spec: str) -> dict:
         else f"❌ [FRONTEND MANAGER] {len(failures)} failure(s) in {tasks_run} task(s)."
     )
     print(f"\n   {summary}")
+    if ok:
+        update_kanban(
+            task_name, intent_spec[:80], f"✅ State 6: All {tasks_run} task(s) complete — awaiting Operator review gate.")
     return {
         "success": ok,
         "tasks_run": tasks_run,

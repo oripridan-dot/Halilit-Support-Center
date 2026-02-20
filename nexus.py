@@ -225,7 +225,10 @@ _ACTION_MAP = {
     "synthesize": ("synthesize", "ð§¬ RIBOSOME",       "Translating Genome â Synthesis Directive (protein folding)..."),
     "mutate":     ("mutate",     "ð§« MUTATION ENGINE", "Analysing fitness logs â evolving agent DNA..."),
     "fitness":    ("fitness",    "ð FITNESS LEDGER",  "Printing per-agent fitness scores and generation counts..."),
-    "repair":     ("repair",     "🛠️  REPAIR SERVICE", "Running immune-response pipeline: import fixer → tsc → lint → vite → janitor..."),    "audit":      ("audit",     "🔍 TECH LEAD AUDIT", "Summoning Principal Engineer — running fresh heuristic scan → DAILY_BRIEFING.md..."),}
+    "repair":     ("repair",     "🛠️  REPAIR SERVICE", "Running immune-response pipeline: import fixer → tsc → lint → vite → janitor..."),    "audit":      ("audit",     "🔍 TECH LEAD AUDIT", "Summoning Principal Engineer — running fresh heuristic scan → DAILY_BRIEFING.md..."),
+    "delegate_frontend": ("delegate_frontend", "🎨 FRONTEND MANAGER", "Routing to React/Tailwind/Vite sub-swarm..."),
+    "delegate_data":     ("delegate_data",     "🔧 DATA MANAGER",    "Routing to Python/FastAPI/pipeline sub-swarm..."),
+}
 
 
 def _build_cmd(tool: str, args: str) -> list[str] | None:
@@ -319,6 +322,41 @@ def run_process(task: dict) -> dict:
             return {"tool": tool, "args": args, "success": False,
                     "summary": f"❌ [AUDIT] Tech Lead Agent failed: {exc}",
                     "error_output": str(exc)}
+
+    # --- Hierarchical Sub-Swarm delegation (parallel/batch path) ---
+    if tool == "delegate_frontend":
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from frontend_manager import run_frontend_swarm  # noqa: PLC0415
+            import re as _re
+            task_slug = _re.sub(r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
+            result = run_frontend_swarm(args, task_name=task_slug)
+            return {
+                "tool": tool, "args": args,
+                "success": result.get("success", False),
+                "summary": result.get("summary", ""),
+                "error_output": str(result.get("failures", [])) if result.get("failures") else "",
+            }
+        except Exception as exc:
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [DELEGATE_FRONTEND] Frontend Manager crashed: {exc}",
+                    "error_output": str(exc)}
+
+    if tool == "delegate_data":
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from data_manager import run_data_swarm  # noqa: PLC0415
+            result = run_data_swarm(args)
+            return {
+                "tool": tool, "args": args,
+                "success": result.get("success", False),
+                "summary": result.get("summary", ""),
+                "error_output": str(result.get("failures", [])) if result.get("failures") else "",
+            }
+        except Exception as exc:
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [DELEGATE_DATA] Data Manager crashed: {exc}",
+                    "error_output": str(exc)}
     # Pre-flight: verify the file exists before dispatching optimize
     if tool == "optimize" and args:
         target_path = ROOT / args
@@ -407,6 +445,44 @@ def execute_sequential(task: dict) -> dict:
             print(f"\n{RED}{msg}{RESET}")
             return {"tool": tool, "args": args, "success": False,
                     "summary": msg, "error_output": str(exc)}
+
+    # --- Hierarchical Sub-Swarm delegation handlers ---
+    if tool == "delegate_frontend":
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from frontend_manager import run_frontend_swarm  # noqa: PLC0415
+            import re as _re
+            task_slug = _re.sub(r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
+            result = run_frontend_swarm(args, task_name=task_slug)
+            return {
+                "tool": tool, "args": args,
+                "success": result.get("success", False),
+                "summary": result.get("summary", ""),
+                "error_output": str(result.get("failures", [])) if result.get("failures") else "",
+            }
+        except Exception as exc:
+            msg = f"❌ [DELEGATE_FRONTEND] Frontend Manager crashed: {exc}"
+            print(f"\n{RED}{msg}{RESET}")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": msg, "error_output": str(exc)}
+
+    if tool == "delegate_data":
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from data_manager import run_data_swarm  # noqa: PLC0415
+            result = run_data_swarm(args)
+            return {
+                "tool": tool, "args": args,
+                "success": result.get("success", False),
+                "summary": result.get("summary", ""),
+                "error_output": str(result.get("failures", [])) if result.get("failures") else "",
+            }
+        except Exception as exc:
+            msg = f"❌ [DELEGATE_DATA] Data Manager crashed: {exc}"
+            print(f"\n{RED}{msg}{RESET}")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": msg, "error_output": str(exc)}
+
     cmd = _build_task_force_cmd(
         task) if tool == "task_force" else _build_cmd(tool, args)
     if cmd:
