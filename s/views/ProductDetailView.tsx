@@ -1,400 +1,148 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from 'react';
+import { useNavigationStore } from '@/stores/navigationStore';
+import { useConductorCatalog } from '@/hooks/useConductorCatalog';
 import {
-  ArrowLeft,
-  Copy,
-  Check,
   ExternalLink,
-  FileText,
-  Package,
+  Check,
   Loader2,
-  AlertTriangle,
-  Zap,
-  BookOpen,
-  Clock,
-  ChevronRight,
-  Lock,
-} from "lucide-react";
-import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import { useNavigationStore } from "../../store/navigationStore";
-import { ProductImageCarousel } from "../ProductImageCarousel";
-import { EcosystemTab } from "../EcosystemTab";
-import { JITBadge } from "../JITBadge";
-import { useJITIntelligence } from "../../hooks/useJITIntelligence";
+} from 'lucide-react';
+import ImageWithFallback from '@/components/common/ImageWithFallback';
+import ProductImageCarousel from '@/components/ProductDetail/ProductImageCarousel';
+import EcosystemTab from '@/components/ProductDetail/EcosystemTab';
+import JITBadge from '@/components/ProductDetail/JITBadge';
+import { useJITIntelligence } from '@/hooks/useJITIntelligence';
+import { ConductorProduct } from '@/types/catalog';
+import { ProductBadge } from '@/components/common/ProductBadge';
 
-// ── Helpers ────────────────────────────────────────────────────────────────────
-
-function fmtPrice(n: number | null | undefined): string {
-  if (n == null || n === 0) return "—";
-  return `₪${n.toLocaleString("he-IL")}`;
-}
-
-function isCfp(price: number | null | undefined): boolean {
-  return price == null || price === 0;
-}
-
-// ── StockDot ───────────────────────────────────────────────────────────────────
-interface StockDotProps {
-  stock?: number | null;
-}
-const StockDot: React.FC<StockDotProps> = ({ stock }) => {
-  if (stock === 0)
-    return (
-      <>
-        <span className="w-2 h-2 rounded-full bg-red-500 inline-block" />{" "}
-        <span className="text-red-400 text-sm">Out of Stock</span>
-      </>
-    );
-  if (stock == null)
-    return (
-      <>
-        <span className="w-2 h-2 rounded-full bg-zinc-600 inline-block" />{" "}
-        <span className="text-zinc-500 text-sm">Unknown</span>
-      </>
-    );
-  return (
-    <>
-      <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />{" "}
-      <span className="text-emerald-400 text-sm">In Stock</span>
-    </>
-  );
-};
-
-// ── Toast ──────────────────────────────────────────────────────────────────────
-interface ToastProps {
-  msg: string;
-}
-const Toast: React.FC<ToastProps> = ({ msg }) => (
-  <div
-    className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2.5 rounded-xl
-    bg-zinc-900 border border-zinc-700 text-sm text-zinc-200 shadow-xl animate-fade-in"
-  >
-    <Check size={13} className="text-emerald-400" />
-    {msg}
-  </div>
-);
-
-// ── Skeleton ───────────────────────────────────────────────────────────────────
-interface SkeletonPulseProps {
-  className?: string;
-}
-const SkeletonPulse: React.FC<SkeletonPulseProps> = ({ className = "" }) => (
-  <div className={`bg-zinc-900 rounded animate-pulse ${className}`} />
-);
-
-// Pure loading skeleton — NO mock data, only animated placeholder shapes.
-const SkeletonHeader = () => (
-  <div
-    role="status"
-    aria-label="Loading product data…"
-    className="p-6 flex gap-6"
-  >
-    <SkeletonPulse className="w-48 h-40 rounded-xl shrink-0" />
-    <div className="flex-1 space-y-3 pt-1">
-      <SkeletonPulse className="h-6 w-64" />
-      <SkeletonPulse className="h-4 w-24" />
-      <SkeletonPulse className="h-3 w-20" />
-    </div>
-    <div className="w-40 space-y-2 pt-1">
-      <SkeletonPulse className="h-8 w-full" />
-      <SkeletonPulse className="h-4 w-24" />
-      <SkeletonPulse className="h-4 w-16" />
-    </div>
-    <span className="sr-only">Loading product data...</span>
-  </div>
-);
-const SkeletonOverview = () => (
-  <div className="space-y-4 p-4">
-    <SkeletonPulse className="h-6 w-full" />
-    <SkeletonPulse className="h-4 w-3/4" />
-    <SkeletonPulse className="h-4 w-1/2" />
-    <SkeletonPulse className="h-4 w-full" />
-    <SkeletonPulse className="h-4 w-1/2" />
-    <SkeletonPulse className="h-4 w-3/4" />
-  </div>
-);
-const SkeletonSpecs = () => (
-  <div className="space-y-2 p-4">
-    <SkeletonPulse className="h-4 w-1/3" />
-    <SkeletonPulse className="h-4 w-2/3" />
-    <SkeletonPulse className="h-4 w-1/2" />
-    <SkeletonPulse className="h-4 w-1/4" />
-    <SkeletonPulse className="h-4 w-3/4" />
-    <SkeletonPulse className="h-4 w-1/3" />
-  </div>
-);
-const SkeletonReviews = () => (
-  <div className="space-y-4 p-4">
-    <SkeletonPulse className="h-6 w-24" />
-    <SkeletonPulse className="h-4 w-1/2" />
-    <SkeletonPulse className="h-4 w-3/4" />
-  </div>
-);
-
-// ── ImageWithFallback ──────────────────────────────────────────────────────────
-interface ImageWithFallbackProps {
-  src: string | null | undefined;
-  alt: string;
-  className?: string;
-}
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
-  src,
-  alt,
-  className,
-}) => {
-  const [isError, setIsError] = useState(false);
-  const handleError = useCallback(() => {
-    setIsError(true);
-  }, []);
-
-  if (isError || !src) {
-    return (
-      <div
-        className={`bg-zinc-800 rounded-xl flex items-center justify-center ${className}`}
-        style={{ width: "100%", height: "200px" }}
-      >
-        <FileText size={48} className="text-zinc-600" />
-      </div>
-    );
-  }
-
-  return (
-    <img
-      src={src}
-      alt={alt}
-      onError={handleError}
-      className={`rounded-xl ${className}`}
-      style={{ width: "100%", height: "auto", objectFit: "contain" }}
-    />
-  );
-};
-
-// ── ProductDetailView ──────────────────────────────────────────────────────────
-export const ProductDetailView: React.FC = () => {
-  const { products, isLoading, error } = useConductorCatalog();
+const ProductDetailView: React.FC = () => {
+  const { products } = useConductorCatalog();
   const { activeProductId } = useNavigationStore();
+  const [isCopied, setIsCopied] = useState(false);
+  const { jitData, isLoading: isJITLoading, error: jitError } = useJITIntelligence(activeProductId);
+
   const product = useMemo(
     () => products.find((p) => p.id === activeProductId) ?? null,
     [products, activeProductId],
   );
-  const { jitData, jitLoading, jitError } = useJITIntelligence(
-    product?.id || "",
-  );
-  const [copyStatus, setCopyStatus] = useState<"idle" | "copied">("idle");
 
-  const handleCopyClick = useCallback(async () => {
-    if (!product?.id) return;
-    await navigator.clipboard.writeText(product.id);
-    setCopyStatus("copied");
-    setTimeout(() => setCopyStatus("idle"), 2000);
-  }, [product?.id]);
+  const isLoading = !product && !jitError;
 
-  const priceBadge = product?.data_trust?.price_source;
-  const specsBadge = product?.data_trust?.specs_source;
-
-  const renderBadgeLabel = (source: string | undefined): string => {
-    switch (source) {
-      case "halilit":
-        return "Commercial";
-      case "official":
-        return "Official";
-      case "estimated":
-        return "Estimated";
-      default:
-        return "";
+  const handleCopyClick = async (sku: string | undefined) => {
+    if (!sku) return;
+    try {
+      await navigator.clipboard.writeText(sku);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
     }
   };
 
-  if (isLoading || !product) {
+  const renderPrice = (product: ConductorProduct | null) => {
+    if (!product) return null;
+    if (product.price === 0 || !product.price) {
+      return (
+        <>
+          ₪ Call for Price (IL)
+          {product.data_trust.price_source && (
+            <ProductBadge source={product.data_trust.price_source} />
+          )}
+        </>
+      );
+    }
+    return (
+      <>
+        ₪ {product.price.toLocaleString('he-IL')} (IL)
+        {product.price_eilat > 0 && (
+          <span> | ₪ {product.price_eilat.toLocaleString('he-IL')} (Eilat)</span>
+        )}
+        {product.data_trust.price_source && (
+            <ProductBadge source={product.data_trust.price_source} />
+          )}
+      </>
+    );
+  };
+
+  if (isLoading) {
     return (
       <div className="bg-zinc-950 min-h-screen p-4">
-        <SkeletonHeader />
-        <div className="grid md:grid-cols-3 gap-6 mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="md:col-span-1">
-            <SkeletonPulse className="w-full h-80 rounded-xl" />
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-64"></div>
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-8 mt-2 w-2/3"></div>
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-6 mt-2 w-1/2"></div>
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-6 mt-2 w-1/4"></div>
           </div>
           <div className="md:col-span-2">
-            <SkeletonOverview />
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-12 w-full"></div>
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-8 mt-2 w-3/4"></div>
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-6 mt-2 w-1/2"></div>
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-6 mt-2 w-1/3"></div>
           </div>
         </div>
       </div>
     );
   }
 
-  if (error || !product) {
+  if (!product) {
     return (
-      <div className="bg-zinc-950 min-h-screen flex flex-col items-center justify-center p-4">
-        <AlertTriangle size={48} className="text-red-500" />
-        <p className="text-zinc-400 text-center mt-4">Product not found</p>
-        <button
-          onClick={() => window.history.back()}
-          className="mt-4 px-4 py-2 bg-zinc-800 text-zinc-200 rounded-md hover:bg-zinc-700 transition"
-        >
-          <ArrowLeft size={16} className="inline-block mr-2" />
-          Back
-        </button>
+      <div className="bg-zinc-950 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-zinc-300 text-lg">Product not found</p>
+          <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+            Back
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="bg-zinc-950 min-h-screen p-4">
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Left Column */}
+      {jitError && (
+        <div className="bg-red-500 text-white p-2 rounded-md mb-4">
+          Error loading JIT data.
+        </div>
+      )}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-1">
           <ImageWithFallback
             src={product.image_url}
             alt={product.name}
-            className="mb-4"
+            className="rounded-lg w-full h-64 object-cover"
           />
           <ProductImageCarousel images={product.image_gallery || []} />
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex items-center gap-2">
-              <span className="text-zinc-400 text-sm">SKU:</span>
-              <span className="bg-zinc-800 text-zinc-200 text-sm px-2 py-1 rounded-md">
-                {product.id}
-              </span>
-              <button onClick={handleCopyClick}>
-                {copyStatus === "idle" ? (
-                  <Copy size={16} className="text-zinc-400 hover:text-zinc-300 transition" />
-                ) : (
-                  <Check size={16} className="text-emerald-400" />
-                )}
+          <div className="flex items-center justify-between mt-2">
+            <div className="flex items-center space-x-2">
+              <span className="text-zinc-400">SKU:</span>
+              <span className="text-zinc-200">{product.id}</span>
+              <button
+                onClick={() => handleCopyClick(product.id)}
+                className="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs rounded-md px-2 py-1 flex items-center"
+              >
+                {isCopied ? <Check size={16} /> : "Copy"}
               </button>
             </div>
           </div>
-          <div className="mt-4">
-            {isCfp(product.price) ? (
-              <div className="text-red-400">Call for Price (IL)</div>
-            ) : (
-              <>
-                {product.price && (
-                  <div>
-                    {fmtPrice(product.price)} (IL)
-                  </div>
-                )}
-                {product.price_eilat && (
-                  <div>
-                    {fmtPrice(product.price_eilat)} (Eilat)
-                  </div>
-                )}
-              </>
-            )}
-            {priceBadge && (
-              <span className="text-zinc-400 text-xs">
-                Source: {renderBadgeLabel(priceBadge)}
-              </span>
-            )}
-          </div>
+          <div className="mt-2 text-zinc-200">{renderPrice(product)}</div>
           {product.halilit_url && (
             <a
               href={product.halilit_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-zinc-800 text-zinc-200 rounded-md hover:bg-zinc-700 transition"
+              className="mt-2 inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
             >
-              <ExternalLink size={16} />
+              <ExternalLink size={16} className="mr-2" />
               Halilit URL
             </a>
           )}
-          {specsBadge && (
-            <div className="mt-4 text-zinc-400 text-xs">
-              Specs Source: {renderBadgeLabel(specsBadge)}
-            </div>
-          )}
+          <JITBadge productId={product.id} />
         </div>
-
-        {/* Right Column */}
         <div className="md:col-span-2">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-2xl text-zinc-200 font-semibold">
-                {product.name}
-              </h1>
-              <p className="text-zinc-400 text-sm">{product.brand}</p>
-              {jitLoading && <Loader2 className="animate-spin h-4 w-4 text-blue-500" />}
-              {jitError && (
-                <AlertTriangle size={16} className="text-red-500 inline-block mr-2" />
-              )}
-            </div>
-            <JITBadge productId={product.id} />
-          </div>
-
-          <div className="mt-4">
-            {/* Overview Tab */}
-            <div>
-              <h2 className="text-lg text-zinc-200 font-medium">Overview</h2>
-              <p className="text-zinc-400 mt-2">{product.description_short}</p>
-              <h3 className="text-md text-zinc-200 font-medium mt-4">
-                Features
-              </h3>
-              <ul>
-                {product.features?.map((feature, index) => (
-                  <li key={index} className="text-zinc-400 mt-1">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <h3 className="text-md text-zinc-200 font-medium mt-4">Pros</h3>
-              <ul>
-                {product.pros?.map((pro, index) => (
-                  <li key={index} className="text-zinc-400 mt-1">
-                    {pro}
-                  </li>
-                ))}
-              </ul>
-              <h3 className="text-md text-zinc-200 font-medium mt-4">Cons</h3>
-              <ul>
-                {product.cons?.map((con, index) => (
-                  <li key={index} className="text-zinc-400 mt-1">
-                    {con}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Specs Tab */}
-            <div className="mt-6">
-              <h2 className="text-lg text-zinc-200 font-medium">Specs</h2>
-              <table className="mt-2 w-full">
-                <tbody>
-                  {product.specs &&
-                    Object.entries(product.specs).map(([key, value]) => (
-                      <tr key={key}>
-                        <td className="text-zinc-400 pr-4 py-1 whitespace-nowrap">
-                          {key}:
-                        </td>
-                        <td className="text-zinc-200 py-1">{value}</td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Ecosystem Tab */}
-            <div className="mt-6">
-              <EcosystemTab productId={product.id} />
-            </div>
-
-            {/* Reviews Tab */}
-            <div className="mt-6">
-              <h2 className="text-lg text-zinc-200 font-medium">Reviews</h2>
-              {product.rating && (
-                <div className="flex items-center gap-2">
-                  <BookOpen size={16} className="text-zinc-400" />
-                  <span className="text-zinc-400">
-                    {product.rating.toFixed(1)} / 5
-                  </span>
-                </div>
-              )}
-              {product.review_synthesis_summary && (
-                <p className="text-zinc-400 mt-2">
-                  {product.review_synthesis_summary}
-                </p>
-              )}
-              {product.real_world_insights && (
-                <p className="text-zinc-400 mt-2">
-                  {product.real_world_insights}
-                </p>
-              )}
+              <h1 className="text-zinc-100 text-2xl font-semibold">{product.name}</h1>
+              <p className="text-zinc-400">{product.brand}</p>
             </div>
           </div>
         </div>
@@ -402,3 +150,5 @@ export const ProductDetailView: React.FC = () => {
     </div>
   );
 };
+
+export default ProductDetailView;

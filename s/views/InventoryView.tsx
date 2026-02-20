@@ -1,51 +1,47 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { LucideIcon } from "lucide-react";
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { Search } from "lucide-react";
 
-import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import { useDebouncedValue } from "../../hooks/useDebouncedValue";
-import { useNavigationStore } from "../../stores/navigationStore";
-import { ConductorProduct } from "../../types";
-import { EnhancedInventorySearchDebounceWithThrottleSchema } from "../../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema"; // Assuming this contract exists, adjust path if necessary
+const debounce = (func: (...args: any[]) => void, delay: number) => {
+  let timeout: NodeJS.Timeout | null = null;
+  return (...args: any[]) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => {
+      func(...args);
+      timeout = null;
+    }, delay);
+  };
+};
 
-interface SortOption {
-  label: string;
-  value: string;
-  icon?: LucideIcon;
-}
-
-const sortOptions: SortOption[] = [
-  { label: "In Stock", value: "stock_asc" },
-  { label: "Unconfirmed", value: "unconfirmed_asc" },
-  { label: "Out of Stock", value: "out_of_stock_asc" },
-  { label: "CfP", value: "cfp_asc" },
-  { label: "Name (A-Z)", value: "name_asc" },
-  { label: "Name (Z-A)", value: "name_desc" },
-];
-
-const InventoryView = () => {
+const InventoryView: React.FC = () => {
   const { products } = useConductorCatalog();
-  const [searchText, setSearchText] = useState<string>("");
-  const [sort, setSort] = useState<string>("stock_asc");
-  const debouncedSearchText = useDebouncedValue(searchText, 300);
   const { goToProduct } = useNavigationStore();
+  const [searchText, setSearchText] = useState("");
+  const [debouncedSearchText, setDebouncedSearchText] = useState("");
+  const [sortOrder, setSortOrder] = useState<
+    "inStock" | "unconfirmed" | "outOfStock" | "cfp" | null
+  >(null);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(event.target.value);
-  };
+  useEffect(() => {
+    const handleSearch = debounce((text: string) => {
+      setDebouncedSearchText(text);
+    }, 300);
 
-  const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSort(event.target.value);
-  };
+    handleSearch(searchText);
+
+    return () => {
+      // cleanup
+    };
+  }, [searchText]);
 
   const filteredProducts = useMemo(() => {
     let filtered = products;
 
     if (debouncedSearchText) {
       filtered = filtered.filter((product) =>
-        product.name.toLowerCase().includes(debouncedSearchText.toLowerCase())
+        product.name?.toLowerCase().includes(debouncedSearchText.toLowerCase())
       );
     }
 
@@ -53,385 +49,221 @@ const InventoryView = () => {
   }, [products, debouncedSearchText]);
 
   const sortedProducts = useMemo(() => {
-    const sorted = [...filteredProducts];
+    let sorted = [...filteredProducts];
 
     sorted.sort((a, b) => {
-      if (sort === "stock_asc") {
-        const stockA = a.stock === null || a.stock === undefined ? 1 : a.stock === 0 ? 2 : 0;
-        const stockB = b.stock === null || b.stock === undefined ? 1 : b.stock === 0 ? 2 : 0;
-        return stockA - stockB;
-      } else if (sort === "unconfirmed_asc") {
-        const stockA = a.stock === null || a.stock === undefined ? 0 : 2;
-        const stockB = b.stock === null || b.stock === undefined ? 0 : 2;
-        return stockA - stockB;
-      } else if (sort === "out_of_stock_asc") {
-        const stockA = a.stock === 0 ? 0 : 2;
-        const stockB = b.stock === 0 ? 0 : 2;
-        return stockA - stockB;
-      } else if (sort === "cfp_asc") {
-        const cfpA = (a.price === 0 || !a.price) ? 0 : 1;
-        const cfpB = (b.price === 0 || !b.price) ? 0 : 1;
-        return cfpA - cfpB;
+      const aStock = a.stock ?? null;
+      const bStock = b.stock ?? null;
+      const aCfp = a.price === 0 || !a.price;
+      const bCfp = b.price === 0 || !b.price;
+
+      if (sortOrder === "inStock") {
+        if ((bStock ?? 0) > 0 && (aStock ?? 0) <= 0) return 1;
+        if ((aStock ?? 0) > 0 && (bStock ?? 0) <= 0) return -1;
+      } else if (sortOrder === "unconfirmed") {
+        if (bStock === null && aStock !== null) return 1;
+        if (aStock === null && bStock !== null) return -1;
+      } else if (sortOrder === "outOfStock") {
+        if (bStock === 0 && aStock !== 0) return 1;
+        if (aStock === 0 && bStock !== 0) return -1;
+      } else if (sortOrder === "cfp") {
+          if (bCfp && !aCfp) return 1;
+          if (aCfp && !bCfp) return -1;
       }
-        else if (sort === "name_asc") {
-            return a.name.localeCompare(b.name);
-        } else if (sort === "name_desc") {
-            return b.name.localeCompare(a.name);
-        }
+
+
+      if (aStock === null && bStock !== null) return 1;
+      if (bStock === null && aStock !== null) return -1;
+      if ((bStock ?? 0) > (aStock ?? 0)) return 1;
+      if ((aStock ?? 0) > (bStock ?? 0)) return -1;
+
+      if (bCfp && !aCfp) return 1;
+      if (aCfp && !bCfp) return -1;
+
+
       return 0;
     });
 
     return sorted;
-  }, [filteredProducts, sort]);
+  }, [filteredProducts, sortOrder]);
+
+
+  const handleRowClick = useCallback(
+    (productId: string) => {
+      goToProduct(productId);
+    },
+    [goToProduct]
+  );
 
 
   return (
-    <div className="container mx-auto py-4 dark:bg-zinc-900 dark:text-zinc-100">
-      <h1 className="text-2xl font-semibold mb-4">Inventory</h1>
-
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
-        <input
-          type="text"
-          placeholder="Search by name"
-          value={searchText}
-          onChange={handleSearchChange}
-          className="dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100 border border-gray-300 rounded-md px-3 py-2 w-full md:w-64"
-        />
-
-        <div className="flex items-center gap-2">
-          <label htmlFor="sort" className="text-sm font-medium">
-            Sort by:
-          </label>
-          <select
-            id="sort"
-            value={sort}
-            onChange={handleSortChange}
-            className="dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100 border border-gray-300 rounded-md px-3 py-2"
-          >
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+    <div className="p-4">
+      <div className="mb-4 flex items-center">
+        <div className="relative w-full">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="w-full pr-10 py-2 pl-3 rounded-md bg-zinc-700 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200"
+          />
+          <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-zinc-400" />
+          </div>
         </div>
       </div>
 
-      {sortedProducts.length === 0 ? (
-        <div className="text-center py-8 dark:text-zinc-400">
-          No products found.
-        </div>
-      ) : (
-        <div className="overflow-x-auto rounded-lg shadow-md">
-          <table className="min-w-full divide-y divide-zinc-700">
-            <thead className="dark:bg-zinc-800">
-              <tr>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Name
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Brand
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Price
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Eilat Price
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Stock
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-zinc-800">
-              {sortedProducts.map((product) => (
+      <div className="mb-4 flex space-x-4">
+        <button
+          onClick={() => setSortOrder(sortOrder === "inStock" ? null : "inStock")}
+          className={`px-3 py-2 rounded-md text-sm font-medium ${
+            sortOrder === "inStock"
+              ? "bg-blue-500 text-white"
+              : "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
+          } transition-colors duration-200`}
+        >
+          In Stock
+        </button>
+        <button
+          onClick={() =>
+            setSortOrder(sortOrder === "unconfirmed" ? null : "unconfirmed")
+          }
+          className={`px-3 py-2 rounded-md text-sm font-medium ${
+            sortOrder === "unconfirmed"
+              ? "bg-amber-500 text-white"
+              : "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
+          } transition-colors duration-200`}
+        >
+          Unconfirmed
+        </button>
+        <button
+          onClick={() =>
+            setSortOrder(sortOrder === "outOfStock" ? null : "outOfStock")
+          }
+          className={`px-3 py-2 rounded-md text-sm font-medium ${
+            sortOrder === "outOfStock"
+              ? "bg-red-500 text-white"
+              : "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
+          } transition-colors duration-200`}
+        >
+          Out of Stock
+        </button>
+        <button
+            onClick={() => setSortOrder(sortOrder === "cfp" ? null : "cfp")}
+            className={`px-3 py-2 rounded-md text-sm font-medium ${
+                sortOrder === "cfp"
+                    ? "bg-amber-500 text-white"
+                    : "bg-zinc-700 text-zinc-300 hover:bg-zinc-600"
+            } transition-colors duration-200`}
+        >
+            CfP
+        </button>
+      </div>
+
+
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm text-left text-zinc-400">
+          <thead className="text-xs uppercase bg-zinc-800 text-zinc-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                Name
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Brand
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Price
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Stock
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedProducts.map((product) => {
+              const isOutOfStock = product.stock === 0;
+              const isUnconfirmed = product.stock === null || product.stock === undefined;
+              const isCfp = product.price === 0 || !product.price;
+
+              return (
                 <tr
                   key={product.id}
-                  className={`cursor-pointer hover:bg-zinc-800 transition-colors duration-200 ${
-                    product.stock === 0
-                      ? "border-red-500"
-                      : product.stock === null || product.stock === undefined
-                      ? "border-amber-500"
-                      : ""
-                  }`}
-                  onClick={() => goToProduct(product.id)}
+                  className={`bg-zinc-900 border-b border-zinc-700 hover:bg-zinc-700 cursor-pointer ${
+                    isOutOfStock ? "border-red-500" : ""
+                  } ${isUnconfirmed ? "border-amber-500" : ""}`}
+                  onClick={() => handleRowClick(product.id)}
                 >
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     {product.name}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.brand}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.price !== undefined ? product.price : "N/A"}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.price_eilat !== undefined
-                      ? product.price_eilat
-                      : "N/A"}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap relative">
-                    {product.stock === 0 && (
-                      <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium rounded-full bg-red-900/50 text-red-400 border border-red-700">
+                  <td className="px-6 py-4">{product.brand}</td>
+                  <td className="px-6 py-4">{product.price}</td>
+                  <td className="px-6 py-4 relative">
+                    {isOutOfStock && (
+                      <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium text-red-400 bg-red-900/50 rounded-full">
                         OUT OF STOCK
                       </span>
                     )}
-                    {(product.stock === null || product.stock === undefined) && (
-                      <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium rounded-full bg-amber-900/50 text-amber-400 border border-amber-700">
+                    {isUnconfirmed && (
+                      <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium text-amber-400 bg-amber-900/50 rounded-full">
                         UNCONFIRMED
                       </span>
                     )}
-                    {(product.price === 0 || !product.price) &&
-                      (product.stock !== 0) &&
-                      (product.stock !== null) &&
-                      (product.stock !== undefined) && (
-                        <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium rounded-full bg-amber-900/50 text-amber-400 border border-amber-700">
+                    {isCfp && !isOutOfStock && !isUnconfirmed && (
+                        <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium text-amber-400 bg-amber-900/50 rounded-full">
                           CfP
                         </span>
-                      )}
+                    )}
+
+                    {product.stock !== null && product.stock !== undefined && product.stock > 0 && (
+                        <span>In Stock</span>
+                    )}
                   </td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
 
 export default InventoryView;
 
-import React, { useState, useMemo, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { LucideIcon } from "lucide-react";
-import { ArrowDown, ArrowUp } from "lucide-react";
+// frontend/src/hooks/useConductorCatalog.ts
+import { useState, useEffect } from "react";
 
-import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import { useDebouncedValue } from "../../hooks/useDebouncedValue";
-import { useNavigationStore } from "../../stores/navigationStore";
-import { ConductorProduct } from "../../types";
-import { EnhancedInventorySearchDebounceWithThrottleSchema } from "../../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema";
-
-interface SortOption {
-  label: string;
-  value: string;
-  icon?: LucideIcon;
+export interface ConductorProduct extends CatalogProduct {
+  /**
+   * Stock status from Halilit inventory (Commercial source).
+   * null = unconfirmed (no data), 0 = out of stock, >0 = in stock (quantity).
+   */
+  stock?: number | null;
 }
 
-const sortOptions: SortOption[] = [
-  { label: "In Stock", value: "stock_asc" },
-  { label: "Unconfirmed", value: "unconfirmed_asc" },
-  { label: "Out of Stock", value: "out_of_stock_asc" },
-  { label: "CfP", value: "cfp_asc" },
-  { label: "Name (A-Z)", value: "name_asc" },
-  { label: "Name (Z-A)", value: "name_desc" },
-];
+export const useConductorCatalog = () => {
+  const { get } = useBackendApi();
+  const [products, setProducts] = useState<ConductorProduct[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-const InventoryView = () => {
-  const { products } = useConductorCatalog();
-  const [searchText, setSearchText] = useState<string>("");
-  const [sort, setSort] = useState<string>("stock_asc");
-  const debouncedSearchText = useDebouncedValue(searchText, 300);
-  const { goToProduct } = useNavigationStore();
-
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchText(event.target.value);
-  };
-
-  const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSort(event.target.value);
-  };
-
-  const filteredProducts = useMemo(() => {
-    let filtered = products;
-
-    if (debouncedSearchText) {
-      filtered = filtered.filter((product) =>
-        product.name.toLowerCase().includes(debouncedSearchText.toLowerCase())
-      );
-    }
-
-    return filtered;
-  }, [products, debouncedSearchText]);
-
-  const sortedProducts = useMemo(() => {
-    const sorted = [...filteredProducts];
-
-    sorted.sort((a, b) => {
-      if (sort === "stock_asc") {
-        const stockA = a.stock === null || a.stock === undefined ? 1 : a.stock === 0 ? 2 : 0;
-        const stockB = b.stock === null || b.stock === undefined ? 1 : b.stock === 0 ? 2 : 0;
-        return stockA - stockB;
-      } else if (sort === "unconfirmed_asc") {
-        const stockA = a.stock === null || a.stock === undefined ? 0 : 2;
-        const stockB = b.stock === null || b.stock === undefined ? 0 : 2;
-        return stockA - stockB;
-      } else if (sort === "out_of_stock_asc") {
-        const stockA = a.stock === 0 ? 0 : 2;
-        const stockB = b.stock === 0 ? 0 : 2;
-        return stockA - stockB;
-      } else if (sort === "cfp_asc") {
-        const cfpA = (a.price === 0 || !a.price) ? 0 : 1;
-        const cfpB = (b.price === 0 || !b.price) ? 0 : 1;
-        return cfpA - cfpB;
+  useEffect(() => {
+    const fetchCatalog = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const data = await get<ConductorProduct[]>("/api/catalog");
+        setProducts(data);
+      } catch (err: any) {
+        setError(err.message || "Failed to fetch catalog");
+      } finally {
+        setIsLoading(false);
       }
-        else if (sort === "name_asc") {
-            return a.name.localeCompare(b.name);
-        } else if (sort === "name_desc") {
-            return b.name.localeCompare(a.name);
-        }
-      return 0;
-    });
+    };
 
-    return sorted;
-  }, [filteredProducts, sort]);
+    fetchCatalog();
+  }, [get]);
 
-
-  return (
-    <div className="container mx-auto py-4 dark:bg-zinc-900 dark:text-zinc-100">
-      <h1 className="text-2xl font-semibold mb-4">Inventory</h1>
-
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
-        <input
-          type="text"
-          placeholder="Search by name"
-          value={searchText}
-          onChange={handleSearchChange}
-          className="dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100 border border-gray-300 rounded-md px-3 py-2 w-full md:w-64"
-        />
-
-        <div className="flex items-center gap-2">
-          <label htmlFor="sort" className="text-sm font-medium">
-            Sort by:
-          </label>
-          <select
-            id="sort"
-            value={sort}
-            onChange={handleSortChange}
-            className="dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100 border border-gray-300 rounded-md px-3 py-2"
-          >
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {sortedProducts.length === 0 ? (
-        <div className="text-center py-8 dark:text-zinc-400">
-          No products found.
-        </div>
-      ) : (
-        <div className="overflow-x-auto rounded-lg shadow-md">
-          <table className="min-w-full divide-y divide-zinc-700">
-            <thead className="dark:bg-zinc-800">
-              <tr>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Name
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Brand
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Price
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Eilat Price
-                </th>
-                <th
-                  scope="col"
-                  className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider dark:text-zinc-300"
-                >
-                  Stock
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-zinc-800">
-              {sortedProducts.map((product) => (
-                <tr
-                  key={product.id}
-                  className={`cursor-pointer hover:bg-zinc-800 transition-colors duration-200 ${
-                    product.stock === 0
-                      ? "border-red-500"
-                      : product.stock === null || product.stock === undefined
-                      ? "border-amber-500"
-                      : ""
-                  }`}
-                  onClick={() => goToProduct(product.id)}
-                >
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.name}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.brand}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.price !== undefined ? product.price : "N/A"}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    {product.price_eilat !== undefined
-                      ? product.price_eilat
-                      : "N/A"}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap relative">
-                    {product.stock === 0 && (
-                      <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium rounded-full bg-red-900/50 text-red-400 border border-red-700">
-                        OUT OF STOCK
-                      </span>
-                    )}
-                    {(product.stock === null || product.stock === undefined) && (
-                      <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium rounded-full bg-amber-900/50 text-amber-400 border border-amber-700">
-                        UNCONFIRMED
-                      </span>
-                    )}
-                    {(product.price === 0 || !product.price) &&
-                      (product.stock !== 0) &&
-                      (product.stock !== null) &&
-                      (product.stock !== undefined) && (
-                        <span className="absolute top-0 right-0 px-2 py-0.5 text-xs font-medium rounded-full bg-amber-900/50 text-amber-400 border border-amber-700">
-                          CfP
-                        </span>
-                      )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
-  );
+  return { products, isLoading, error };
 };
-
-export default InventoryView;

@@ -1,27 +1,50 @@
-import type { BrandIdentity, SpecItem } from "./index";
-import type {
-  ConductorProduct,
-} from "../hooks/useConductorCatalog";
 
-export type { ConductorProduct } from "../hooks/useConductorCatalog";
 export type Product = ConductorProduct;
-
-export type PipelineProduct = any;
+export type PipelineProduct = IngestionProductDraft;
 
 export type OptimizedProduct = ConductorProduct;
 
-
-export interface ReviewVerdict {
-  source: string;
-  sentiment: "positive" | "neutral" | "negative";
-  summary: string;
-  url?: string;
+export interface BrandSection {
+  title: string;
+  items: BrandIdentity[];
 }
 
-export interface ExplorationPath {
-  type: string;
+export interface ProductDetailProps {
+  id: string;
+  name: string;
+  brand: BrandIdentity;
+  imageUrl: string;
+  price: number | null;
+  description?: string;
+  specs?: SpecItem[];
+  verdicts?: ReviewVerdict[];
+  accessories?: {
+    id: string;
+    name: string;
+    imageUrl: string;
+    price: number | null;
+  }[];
+  explorationPaths?: ExplorationPath[];
+  consensusScore?: number;
+}
+
+export interface ProductCardProps {
+  product: Product;
+  className?: string;
+  showBrand?: boolean;
+}
+
+export interface ProductListProps {
+  products: Product[];
+  className?: string;
+}
+
+export interface ProductFilter {
+  key: string;
   label: string;
-  icon: string;
-  description: string;
-  payload: Record<string, any>;
+  options: {
+    label: string;
+    value: string | number;
+    count?: number;
+  }[];
 }
