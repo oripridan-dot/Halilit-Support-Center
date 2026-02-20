@@ -225,8 +225,7 @@ _ACTION_MAP = {
     "synthesize": ("synthesize", "ð§¬ RIBOSOME",       "Translating Genome â Synthesis Directive (protein folding)..."),
     "mutate":     ("mutate",     "ð§« MUTATION ENGINE", "Analysing fitness logs â evolving agent DNA..."),
     "fitness":    ("fitness",    "ð FITNESS LEDGER",  "Printing per-agent fitness scores and generation counts..."),
-    "repair":     ("repair",     "🛠️  REPAIR SERVICE", "Running immune-response pipeline: import fixer → tsc → lint → vite → janitor..."),
-}
+    "repair":     ("repair",     "🛠️  REPAIR SERVICE", "Running immune-response pipeline: import fixer → tsc → lint → vite → janitor..."),    "audit":      ("audit",     "🔍 TECH LEAD AUDIT", "Summoning Principal Engineer — running fresh heuristic scan → DAILY_BRIEFING.md..."),}
 
 
 def _build_cmd(tool: str, args: str) -> list[str] | None:
@@ -272,6 +271,8 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["synthesize", args] if args else None
     if tool == "mutate":
         return factory + ["mutate"] + (["--force"] if args == "--force" else [])
+    if tool == "audit":
+        return None  # handled inline in execute_sequential / run_process
     if tool == "fitness":
         return factory + ["fitness"]
     if tool == "repair":
@@ -305,7 +306,19 @@ def run_process(task: dict) -> dict:
     """
     tool = task["tool"]
     args = task.get("args", "")
-
+    # --- Inline audit handler (parallel/batch path) ---
+    if tool == "audit":
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
+            generate_morning_briefing()
+            return {"tool": tool, "args": args, "success": True,
+                    "summary": "✅ [AUDIT] DAILY_BRIEFING.md refreshed by Tech Lead.",
+                    "error_output": ""}
+        except Exception as exc:
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [AUDIT] Tech Lead Agent failed: {exc}",
+                    "error_output": str(exc)}
     # Pre-flight: verify the file exists before dispatching optimize
     if tool == "optimize" and args:
         target_path = ROOT / args
@@ -379,7 +392,21 @@ def execute_sequential(task: dict) -> dict:
             return {"tool": tool, "args": args, "success": False,
                     "summary": f"â [OPTIMIZE {args}] File not found â skipped",
                     "error_output": f"File does not exist: {args}"}
-
+    # --- Inline audit handler: summon Tech Lead, regenerate DAILY_BRIEFING.md ---
+    if tool == "audit":
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        try:
+            from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
+            generate_morning_briefing()
+            print(f"\n{GREEN}✅ [AUDIT] DAILY_BRIEFING.md regenerated — Chief will re-read priorities on next turn.{RESET}")
+            return {"tool": tool, "args": args, "success": True,
+                    "summary": "✅ [AUDIT] Tech Lead briefing updated — DAILY_BRIEFING.md refreshed.",
+                    "error_output": ""}
+        except Exception as exc:
+            msg = f"❌ [AUDIT] Tech Lead Agent failed: {exc}"
+            print(f"\n{RED}{msg}{RESET}")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": msg, "error_output": str(exc)}
     cmd = _build_task_force_cmd(
         task) if tool == "task_force" else _build_cmd(tool, args)
     if cmd:

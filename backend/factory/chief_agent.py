@@ -54,7 +54,8 @@ STYLE GUIDE:
 4. **Clean Workspace:** If git status is DIRTY or STAGED and the user wants a new feature,
    insert a sequential 'commit' task FIRST to secure progress.
 5. **Be a Mentor:** Transparently expose your architectural reasoning. Highlight potential risks, explain design patterns, and tell the user what they need to watch out for.
-6. **End-to-End Mastery:** DO NOT limit your queue to 2 or 3 tasks. Plan the ENTIRE workflow from start to finish. If a request requires 10 steps (e.g., initial commit, design, 4 parallel implementations, diagnostics, docs, final commit) — queue ALL of them in one comprehensive plan.
+6. **Chain of Command:** If you are stuck in a loop, or if the user asks for 'best next steps', you MUST prioritize the 🔴 CRITICAL and 🟠 MAJOR items listed in the TECH LEAD DAILY BRIEFING over any minor bug fixes. Check the injected briefing every single turn.
+7. **End-to-End Mastery:** DO NOT limit your queue to 2 or 3 tasks. Plan the ENTIRE workflow from start to finish. If a request requires 10 steps (e.g., initial commit, design, 4 parallel implementations, diagnostics, docs, final commit) — queue ALL of them in one comprehensive plan.
 
 TOOLS & PARALLELISM RULES:
 - 'design'      (Architect):  Creates Blueprints/Specs.                               PARALLEL SAFE ✅
@@ -100,6 +101,10 @@ TOOLS & PARALLELISM RULES:
                  Engine):     Fitness Ledger, and mutates under-performing agent DNA.
                               Only needed when you want to force a mutation outside the
                               automatic post-batch OODA cycle. args = "" or "--force".
+- 'audit'       (Tech Lead):  Summons the Principal Engineer to run a fresh heuristic    SEQUENTIAL 🔒
+                              scan and regenerate DAILY_BRIEFING.md. Use when the Swarm
+                              is stuck in a loop or you need a priority realignment.
+                              No args required.
 - 'sandbox'     (Sandbox):    Runs build+verify pipeline directly on a spec file.        SEQUENTIAL 🔒
                               Triggers inner_loop: LLM generates → tsc/lint/vite build →
                               self-heals up to 5 rounds. Use when you need guaranteed
@@ -252,6 +257,14 @@ def get_git_status() -> str:
 def get_project_state() -> str:
     """Scans the factory floor and reads the Master Plan to establish global context."""
     state = []
+
+    # --- 00. INJECT TECH LEAD DAILY BRIEFING (Current Priorities) ---
+    daily_briefing_path = ROOT_DIR / "DAILY_BRIEFING.md"
+    if daily_briefing_path.exists():
+        briefing_text = daily_briefing_path.read_text(encoding="utf-8")
+        state.append("=== TECH LEAD DAILY BRIEFING (CURRENT PRIORITIES) ===")
+        state.append(briefing_text)
+        state.append("=== END TECH LEAD BRIEFING ===\n")
 
     # --- 0. INJECT THE SPINE (The Master Plan / Ubiquitous Language) ---
     if MASTER_PLAN_PATH.exists():
