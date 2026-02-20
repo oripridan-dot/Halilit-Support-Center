@@ -502,6 +502,39 @@ def cmd_fitness_report() -> None:
     )
 
 
+def cmd_repair(
+    target_file: str = "",
+    dry_run: bool = False,
+    report_only: bool = False,
+    fast: bool = False,
+) -> None:
+    """
+    Repair Service: run the full immune-response pipeline.
+      1. SmartImportFixer  — deterministic import path repair
+      2. Stub Detector     — find empty / incomplete generated files
+      3. TypeScript check  — tsc --noEmit
+      4. ESLint            — pnpm run lint
+      5. Vite build        — catch runtime import errors (skip with --fast)
+      6. Janitor           — metabolic flush (temp + backup files)
+    All results are logged to backend/data/repair_history.json for
+    pattern analysis across sessions.
+    """
+    log("🛠️  Activating Repair Service...")
+    agent = FACTORY / "repair_service.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    args = [sys.executable, str(agent)]
+    if target_file:
+        args += ["--target", target_file]
+    if dry_run:
+        args.append("--dry-run")
+    if report_only:
+        args.append("--report")
+    if fast:
+        args.append("--fast")
+    result = subprocess.run(args, cwd=str(ROOT), env=env)
+    sys.exit(result.returncode)
+
+
 # ---------------------------------------------------------------------------
 # Entry Point
 # ---------------------------------------------------------------------------
@@ -553,6 +586,12 @@ Bio-Swarm — Algorithmic Biology:
 Agentic UI Design (v0 MCP):
   v0_design "description"        Generate a v0.dev-ready prompt for a UI component
   v0_design "description" type   With component type hint (e.g. ProductCard)
+
+  python factory.py repair                       Run full immune-response repair pipeline
+  python factory.py repair --target <file>       Repair a specific file
+  python factory.py repair --report              Show repair history + chronic patterns
+  python factory.py repair --fast                Skip Vite build (faster)
+  python factory.py repair --dry-run             Preview fixes without writing
 
 Examples:
   python factory.py init
@@ -666,6 +705,20 @@ if __name__ == "__main__":
 
     elif command == "fitness":
         cmd_fitness_report()
+
+    elif command == "repair":
+        _target = ""
+        for i, a in enumerate(sys.argv[2:], 2):
+            if a == "--target" and i + 1 < len(sys.argv):
+                _target = sys.argv[i + 1]
+            elif a.startswith("--target="):
+                _target = a.split("=", 1)[1]
+        cmd_repair(
+            target_file=_target,
+            dry_run="--dry-run" in sys.argv or "-n" in sys.argv,
+            report_only="--report" in sys.argv or "-r" in sys.argv,
+            fast="--fast" in sys.argv,
+        )
 
     elif command == "grand_task_force":
         gtf_prompt = sys.argv[2] if len(sys.argv) > 2 else ""
