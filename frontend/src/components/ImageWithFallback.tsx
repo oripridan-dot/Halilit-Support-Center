@@ -1,75 +1,58 @@
 import React from 'react';
 
-interface DataTrust {
-  source?: string;
-  provider?: string;
-  [key: string]: any;
-}
-
 interface ImageWithFallbackProps {
   imageUrl: string | null | undefined;
   altText: string;
-  dataTrust?: DataTrust;
+  placeholderImageUrl: string;
 }
 
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText, dataTrust }) => {
-  const sizes = '(max-width: 320px) 320px, (max-width: 640px) 640px, 1024px';
-  const placeholderSrc = '/placeholder.png'; // Assuming placeholder.png is in the public directory
-
-  const generateSrcSet = (width: number, format: 'avif' | 'webp' | 'jpg') => {
-    if (!imageUrl) return '';
-
-    let formatParam = '';
-    switch (format) {
-      case 'avif':
-        formatParam = 'f_auto,q_auto';
-        break;
-      case 'webp':
-        formatParam = 'f_webp,q_auto';
-        break;
-      case 'jpg':
-        formatParam = 'f_jpg,q_auto';
-        break;
-      default:
-        formatParam = 'f_auto,q_auto';
-    }
-
-    return `${imageUrl}?${formatParam},w_${width} ${width}w`;
-  };
-
-  const getAltText = () => {
-    if (dataTrust && dataTrust.source) {
-      return `${altText} (Source: ${dataTrust.source})`;
-    }
-    return altText;
-  };
+const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
+  imageUrl,
+  altText,
+  placeholderImageUrl,
+}) => {
+  const cdnUrl = 'https://cdn.example.com';
 
   if (!imageUrl) {
     return (
-      <div className="bg-slate-900 w-full h-full flex items-center justify-center">
-        <img src={placeholderSrc} alt={altText} className="object-cover" loading="lazy" />
-      </div>
+      <img
+        src={placeholderImageUrl}
+        alt={altText}
+        className="rounded-md object-cover w-full h-full bg-slate-900"
+        loading="lazy"
+      />
     );
   }
+
+  const generateSrcSet = (width: number, format: 'avif' | 'webp' | 'jpeg') => {
+    return `${cdnUrl}/${imageUrl}?width=${width}&format=${format} ${width}w`;
+  };
 
   return (
     <picture>
       <source
-        srcSet={`${generateSrcSet(320, 'avif')}, ${generateSrcSet(640, 'avif')}, ${generateSrcSet(1024, 'avif')}`}
+        srcSet={`
+          ${generateSrcSet(320, 'avif')},
+          ${generateSrcSet(640, 'avif')} 2x,
+          ${generateSrcSet(1024, 'avif')} 3x
+        `}
         type="image/avif"
       />
       <source
-        srcSet={`${generateSrcSet(320, 'webp')}, ${generateSrcSet(640, 'webp')}, ${generateSrcSet(1024, 'webp')}`}
+        srcSet={`
+          ${generateSrcSet(320, 'webp')},
+          ${generateSrcSet(640, 'webp')} 2x,
+          ${generateSrcSet(1024, 'webp')} 3x
+        `}
         type="image/webp"
       />
       <img
-        src={`${imageUrl}?f_jpg,q_auto`}
-        srcSet={`${generateSrcSet(320, 'jpg')}, ${generateSrcSet(640, 'jpg')}, ${generateSrcSet(1024, 'jpg')}`}
-        alt={getAltText()}
+        src={`${cdnUrl}/${imageUrl}?width=640&format=jpeg`}
+        alt={altText}
         loading="lazy"
-        sizes={sizes}
+        className="rounded-md object-cover w-full h-full bg-slate-900"
         onError={(e) => {
-          (e.target as HTMLImageElement).src = placeholderSrc;
+          (e.target as HTMLImageElement).src = placeholderImageUrl;
         }}
       />
     </picture>

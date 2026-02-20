@@ -7,61 +7,64 @@
 To enhance the `ImageWithFallback` component by integrating a responsive image CDN with AVIF support, improving image loading performance, reducing bandwidth consumption, and ensuring optimal image quality across different devices and browsers. This directly addresses the "Zero Broken Images" and "Speed of Service" business goals.
 
 ## Requirements
-1. **CDN Integration:** Integrate with a responsive image CDN (e.g., Cloudinary, Imgix, or similar). Assume the CDN can transform images to AVIF format and generate responsive versions based on device characteristics via URL parameters. The exact URL parameters will depend on the chosen CDN (e.g. Cloudinary: `f_auto,q_auto` for format and quality).
+1. **CDN Integration:** Integrate with a responsive image CDN (e.g., Cloudinary, Imgix, or similar). Assume the CDN can transform images to AVIF format and generate responsive versions based on device characteristics via URL parameters. The exact URL parameters will depend on the chosen CDN (e.g. Cloudinary: `f_auto,q_auto` for format and quality). Use a placeholder CDN URL `https://cdn.example.com`.
 2. **AVIF Support:** The component must prioritize AVIF format when the browser supports it. The CDN should automatically serve AVIF images to supporting browsers via content negotiation (Accept header).
 3. **Responsive Images:** Generate responsive image URLs using the CDN to serve appropriately sized images based on the device's screen size and pixel density. Use the `<picture>` element with `<source>` elements for different image formats and sizes. Create three sizes: small (320w), medium (640w), and large (1024w).
 4. **Fallback Mechanism:** If the browser doesn't support AVIF or the CDN fails to deliver an AVIF image, the component must fall back to WebP and then to JPEG. Ensure the `<img>` tag includes a `src` attribute with a fallback image URL.
 5. **Placeholder Image:** If the `imageUrl` is missing, null, an empty string, or if all CDN transformations fail, the component must display a dark placeholder image (`/placeholder.png` or an inline SVG).
 6. **Error Handling:** The component must gracefully handle CDN errors and network issues, displaying the placeholder image if necessary.
-7. **Lazy Loading:** Implement lazy loading for images to further improve initial page load performance using the `loading="lazy"` attribute on the `<img>` tag.
-8. **Data Trust Integration:** If a `dataTrust` prop is passed, the `altText` should be automatically updated to include data source attributions.
-9. **Placeholder Styling:** The placeholder image MUST maintain the aspect ratio of the original image to prevent layout distortion.
+7. **Lazy Loading:** Implement lazy loading using the `loading="lazy"` attribute on the `<img>` tag.
+8. **Existing Functionality:** Preserve the existing fallback image and error handling functionality of the `ImageWithFallback` component.
+9. **TypeScript:** Ensure the component is correctly typed using TypeScript.
 
 ## Behavior Scenarios
-1. **Scenario:** Browser supports AVIF, CDN serves AVIF.
-  - Input: `imageUrl` is a valid CDN URL.
-  - Outcome: The browser loads the AVIF image from the CDN.
-2. **Scenario:** Browser does NOT support AVIF, CDN serves WebP.
-  - Input: `imageUrl` is a valid CDN URL.
-  - Outcome: The browser loads the WebP image from the CDN.
-3. **Scenario:** Browser does NOT support AVIF or WebP, CDN serves JPEG.
-  - Input: `imageUrl` is a valid CDN URL.
-  - Outcome: The browser loads the JPEG image from the CDN.
-4. **Scenario:** CDN URL is invalid or returns an error.
-  - Input: `imageUrl` is an invalid CDN URL.
-  - Outcome: The placeholder image is displayed.
-5. **Scenario:** `imageUrl` is null or undefined.
-  - Input: `imageUrl` is null.
-  - Outcome: The placeholder image is displayed.
-6. **Scenario:** Data Trust is provided.
-  - Input: `imageUrl` is a valid CDN URL, and `dataTrust` object is passed.
-  - Outcome: Image is loaded, `altText` reflects sourcing.
+
+1. **Scenario:** Browser supports AVIF, and the CDN delivers an AVIF image.
+    *   **Outcome:** The browser displays the AVIF image. The network request shows that the CDN served the AVIF image.
+2. **Scenario:** Browser does not support AVIF, and the CDN delivers a WebP image.
+    *   **Outcome:** The browser displays the WebP image. The network request shows that the CDN served the WebP image.
+3. **Scenario:** Browser does not support AVIF or WebP, and the CDN delivers a JPEG image.
+    *   **Outcome:** The browser displays the JPEG image. The network request shows that the CDN served the JPEG image.
+4. **Scenario:** The CDN returns an error for all image formats.
+    *   **Outcome:** The placeholder image is displayed.
+5. **Scenario:** The `imageUrl` prop is `null`, `undefined`, or an empty string.
+    *   **Outcome:** The placeholder image is displayed.
+6. **Scenario:** The image is below the fold and lazy loading is enabled.
+    *   **Outcome:** The image is not loaded until it scrolls into the viewport.
 
 ## Stitch UI Prompt
 ```text
 // Target Component: ImageWithFallback
-// Description: A React component that displays an image with responsive sizing, AVIF support, lazy loading, and a fallback placeholder.
-// Layout:  The component uses a <picture> element containing <source> elements for different image formats (AVIF, WebP, JPEG) and sizes (small, medium, large) and a default <img> tag for fallback. The <img> tag should also have the loading="lazy" attribute.
-// Visual Style:  Dark mode, Tailwind CSS. Use slate-900 for the background of the placeholder and blue-500 for any loading indicators.
+// Description: A React component that displays an image with responsive sizes, AVIF support via CDN, and a fallback placeholder.
+// Layout:  Uses a <picture> element with <source> elements for different image formats and sizes.  The <img> tag provides a final fallback.
+// Style: Dark mode, Tailwind CSS. Use slate-900 for background.
 // Data Slots:
-//   - imageUrl: The base URL of the image on the CDN (string).
-//   - altText:  The alt text for the image (string).
-//   - dataTrust: [Optional] An object that includes attribution information.
-// The CDN URLs should use URL parameters for AVIF, WebP, and JPEG formats. Example (Cloudinary):
-//   - AVIF: imageUrl + '?f_auto,q_auto,w_<width>'
-//   - WebP: imageUrl + '?f_webp,q_auto,w_<width>'
-//   - JPEG: imageUrl + '?f_jpg,q_auto,w_<width>'
-// Create <source> elements for each size (320w, 640w, 1024w) and each format (AVIF, WebP). Use the "sizes" attribute on the <img> tag to specify the image sizes for different screen widths.
-// Ensure lazy loading is enabled using loading="lazy" on the <img> tag.
-// Ensure error handling and fallback to placeholder.png (if cdn transformations fails).
-// Keep dark factory color scheme (Tailwind CSS, slate-900, blue-500).
+//   - imageUrl:  The base image URL.  Assume a CDN will transform this URL.
+//   - altText:   The alt text for the image.
+//   - placeholderImageUrl: The URL for a dark placeholder image.
+
+// Component Hierarchy:
+//  <picture>
+//    <source srcset="CDN_URL?width=320&format=avif CDN_URL?width=640&format=avif 2x, CDN_URL?width=1024&format=avif 3x" type="image/avif">
+//    <source srcset="CDN_URL?width=320&format=webp CDN_URL?width=640&format=webp 2x, CDN_URL?width=1024&format=webp 3x" type="image/webp">
+//    <img src="CDN_URL?width=640&format=jpeg" alt="{altText}" loading="lazy" class="rounded-md object-cover w-full h-full" onError="this.src='{placeholderImageUrl}'">
+//  </picture>
+
+// Instructions:
+//  1. Use Tailwind CSS classes for styling.
+//  2. Ensure the component handles loading states and errors gracefully.
+//  3. The <img> tag must have an onError handler that sets the src to the placeholder image.
+//  4. Replace CDN_URL with a placeholder CDN URL like "https://cdn.example.com/{imageUrl}".
+//  5. The component should be responsive and adapt to different screen sizes.
+
+// Example values for data slots:
+//  imageUrl: "products/guitar.jpg"
+//  altText: "Electric Guitar"
+//  placeholderImageUrl: "/placeholder.png"
+
+// Spacing: No specific spacing requirements, but ensure the image fits well within its container.
 ```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
-- Verify in browser that AVIF images are served to supporting browsers.
-- Verify in browser that WebP images are served to browsers that support WebP but not AVIF.
-- Verify in browser that JPEG images are served to browsers that do not support AVIF or WebP.
-- Verify that the placeholder image is displayed when the image URL is invalid.
-- Inspect the `<picture>` element in the browser's developer tools to ensure that the `<source>` elements are correctly generated with the appropriate `srcset` attributes.

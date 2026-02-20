@@ -1,6 +1,6 @@
 # Task-Force Blackboard: responsive_image_cdn_integration
 
-**Goal:** Integrate Next-gen Image CDN with AVIF support for faster loading and improved visual quality
+**Goal:** Integrate Next-gen Image CDN with AVIF support for faster image loading and improved visual quality as described in 2026-02-22_proposal_responsive_image_generation.md
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,8 +33,9 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- The provided information is insufficient for a proper review. The "IMPLEMENTED CODE" section is empty.
-- The API Contracts, Implementation Notes and Watchdog Review are also missing. Without these, it is impossible to determine if the request has been properly addressed.
+- The "IMPLEMENTED CODE" section is empty, making it impossible to assess the implementation.
+- There is no information from the Steerer, Builder, or Watchdog about the implementation.
+- The absence of the code prevents verification against the provided specification.
 
 **Required Fix:**
-Request the Builder to provide the implemented code, implementation notes, API contracts, and watchdog review.
+Provide the actual implemented code within the "IMPLEMENTED CODE" section. Additionally, include any relevant information from the Steerer, Builder, and Watchdog regarding the architecture, implementation details, and review feedback.
