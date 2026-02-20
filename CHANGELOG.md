@@ -1,4 +1,17 @@
 ## [v4.1] — 2026-02-20
+- [feat] Added `smart_import_fixer.py` to automatically fix common import issues in the frontend code.
+- [feat] Added a `Fix` dataclass to represent individual fixes.
+- [feat] Added a `FixReport` dataclass to summarize the fixes applied and skipped files.
+- [feat] Implemented the `summary()` method in `FixReport` to provide a concise report.
+- [fix]  Fixed out-of-src imports by removing them and inserting a TODO stub.
+- [fix]  Removed imports from missing `./generated.ts` if the imported names are defined locally.
+- [fix]  Corrected directory names using fuzzy matching.
+- [fix]  Corrected filenames using fuzzy matching.
+- [fix]  Fixed TSX generic arrow function syntax.
+- [refactor] Improved code readability and added type hints.
+- [refactor] Added more detailed comments and documentation.
+
+## [v4.1] — 2026-02-20
 - [feat] Added `tech_lead_context` to `consult_chief` function, enabling integration with the Senior Tech Lead Agent.
 - [feat] Senior Tech Lead's findings are now treated as high-priority health signals. The Chief Agent acknowledges them in its "thought" field and schedules fix tasks.
 - [fix]  Critical error handling in `build_component`. The build will exit now with a FATAL error if the output file path is not found in the spec file to prevent silent failures.
