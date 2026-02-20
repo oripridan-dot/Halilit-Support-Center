@@ -114,7 +114,8 @@ def run_catalog_delta_scan() -> dict[str, Any]:
     }
 
     if result["status"] == "clean":
-        print(f"   ✅ No schema changes detected ({len(current)} files scanned).")
+        print(
+            f"   ✅ No schema changes detected ({len(current)} files scanned).")
     else:
         if new_files:
             print(f"   🆕 New files     : {len(new_files)}")
@@ -150,11 +151,14 @@ def write_heartbeat_md(
     if scan_result["new"]:
         delta_lines.append(f"- **New:** {', '.join(scan_result['new'][:10])}")
     if scan_result["changed"]:
-        delta_lines.append(f"- **Modified:** {len(scan_result['changed'])} file(s)")
+        delta_lines.append(
+            f"- **Modified:** {len(scan_result['changed'])} file(s)")
     if scan_result["removed"]:
-        delta_lines.append(f"- **Removed:** {', '.join(scan_result['removed'][:5])}")
+        delta_lines.append(
+            f"- **Removed:** {', '.join(scan_result['removed'][:5])}")
 
-    delta_section = "\n".join(delta_lines) if delta_lines else "_No changes detected._"
+    delta_section = "\n".join(
+        delta_lines) if delta_lines else "_No changes detected._"
 
     content = f"""\
 # 🫀 Halilit Dark Factory — Heartbeat Log
@@ -207,7 +211,8 @@ def run_nightly_heartbeat() -> None:
         scan_result = run_catalog_delta_scan()
     except Exception as exc:  # pragma: no cover
         print(f"   ❌ Scan error: {exc}")
-        scan_result = {"total_files": 0, "new": [], "changed": [], "removed": [], "status": "error"}
+        scan_result = {"total_files": 0, "new": [],
+                       "changed": [], "removed": [], "status": "error"}
 
     # — Step 2: Tech Lead briefing —
     print("\n🧠 [2/3] Tech Lead: Compiling DAILY_BRIEFING.md")
