@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-20
+## v4.1
+
+- [feat] Added a new specification document for the `efficient_debounce` task force.
+- [docs] Added placeholders for architecture contract, implementation notes, review and feedback, and API contracts.
+
+## [v4.1] — 2026-02-20
 - [feat] Added ImageCDNIntegration component and integrated it into the App component.
 - [fix] Disabled GPG signing in `commit_and_push` function to avoid failures in dev containers.
 - [fix] Corrected the commit command in `review_changes` to disable GPG signing.
