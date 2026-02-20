@@ -12,10 +12,10 @@
  */
 
 // ── Backend pipeline types (internal / non-UI) ────────────────────────────────
-export * from './generated';
-import type { IngestionProductDraft, PricingTier } from './generated';
+// NOTE: IngestionProductDraft and PricingTier are defined inline below.
 
-/** Backend pipeline model — NOT for UI rendering. Use Product instead. */
+/** Backend pipeline model — NOT for UI rendering. Use Product instead.
+ *  Defined inline — no generated.ts required. */
 export type PipelineProduct = IngestionProductDraft;
 
 // ── Canonical frontend product type ──────────────────────────────────────────
