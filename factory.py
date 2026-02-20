@@ -320,7 +320,6 @@ def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> 
     if not agents:
         agents = ["steerer", "builder", "watchdog"]
 
-    # Resolve a short unique id if none provided
     if not task_id:
         task_id = _uuid.uuid4().hex[:8]
 
@@ -364,19 +363,40 @@ def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> 
     bb_path.write_text(bb_content, encoding="utf-8")
     log(f"  Blackboard created: {bb_path.relative_to(ROOT)}")
 
-    # Round 1 — Steerer
-    log("Round 1/3: Activating Steerer (Architecture Contract)...")
     env = {**os.environ,
-           "PYTHONPATH": str(FACTORY), "TF_BLACKBOARD": str(bb_path)}
+           "PYTHONPATH": str(FACTORY), "TF_BLACKBOARD": str(bb_path),
+           "TF_GOAL": goal}
+
+    # Round 1 — Steerer
+    (SPECS / "interface").mkdir(parents=True, exist_ok=True)
+
+    log("Round 1/3: Activating Steerer (Architecture Contract)...")
     subprocess.run([sys.executable, str(
         FACTORY / "steerer_agent.py")], cwd=str(FACTORY), env=env)
 
-    # Round 2 — Builder (uses spec written to blackboard by steerer if any)
+    # Read the spec path the Steerer just recorded
+    last_output_file = SPECS / "temp" / "steerer_last_output.txt"
+    if last_output_file.exists():
+        recorded_path = last_output_file.read_text(encoding="utf-8").strip()
+        if recorded_path and Path(recorded_path).exists():
+            build_target = recorded_path
+            log(
+                f"  Steerer wrote spec \u2192 {Path(recorded_path).relative_to(ROOT)}")
+            log(f"  Builder will implement: {Path(recorded_path).name}")
+            last_output_file.unlink()  # consume so stale paths can't carry over
+        else:
+            build_target = str(bb_path)
+            log("  Steerer output file missing \u2014 Builder will attempt Blackboard.")
+    else:
+        build_target = str(bb_path)
+        log("  Steerer wrote no output marker \u2014 Builder will attempt Blackboard.")
+
+    # Round 2 — Builder (pass the actual spec the Steerer just wrote)
     log("Round 2/3: Activating Builder (Implementation)...")
     subprocess.run([sys.executable, str(FACTORY / "builder_agent.py"),
-                   str(bb_path)], cwd=str(FACTORY), env=env)
+                   build_target], cwd=str(FACTORY), env=env)
 
-    # Round 3 — Watchdog / Patcher (reviews builder output)
+    # Round 3 — Watchdog
     log("Round 3/3: Activating Watchdog (Review)...")
     subprocess.run([sys.executable, str(
         FACTORY / "watchdog_agent.py")], cwd=str(FACTORY), env=env)

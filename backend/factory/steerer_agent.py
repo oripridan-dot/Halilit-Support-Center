@@ -127,10 +127,15 @@ def _classify_domain(response_text: str) -> str:
 
 
 def steer_system() -> None:
+    import os as _os
+
     if not STRATEGY_FILE.exists():
         print(f"❌  Missing Master Plan: {STRATEGY_FILE}")
         print("    Create it with: python factory.py init  (or edit specs/strategy/master_plan.md)")
         return
+
+    # When invoked from a Task Force, focus on the explicit goal
+    tf_goal = _os.environ.get("TF_GOAL", "").strip()
 
     print("🧭  Reading Strategic Compass …")
     strategy = STRATEGY_FILE.read_text(encoding="utf-8")
@@ -140,14 +145,28 @@ def steer_system() -> None:
 
     # --- Dynamic Context Discovery (Pillar 1) ---
     print("🔎  Discovering relevant codebase context …")
-    # Extract keywords from strategy as discovery queries
     _kw_pattern = re.compile(
         r'\b(?:implement|add|build|fix|create|upgrade|improve)\s+([a-z][a-z _\-]{3,40})', re.IGNORECASE)
-    discovery_queries = [m.group(1).strip()
-                         for m in _kw_pattern.finditer(strategy[:3000])][:5]
-    # Always include these anchor queries
-    discovery_queries += ["inventory grid", "product detail", "dashboard"]
-    dynamic_ctx = build_dynamic_context(discovery_queries[:6])
+    base_queries = [m.group(1).strip()
+                    for m in _kw_pattern.finditer((tf_goal or strategy)[:3000])][:5]
+    base_queries += ["inventory grid", "product detail", "dashboard"]
+    dynamic_ctx = build_dynamic_context(base_queries[:6])
+
+    if tf_goal:
+        task_instruction = (
+            f"TASK FORCE GOAL (MANDATORY — write a spec SPECIFICALLY for this goal):\n"
+            f"  {tf_goal}\n\n"
+            f"Do NOT identify a different gap. Write ONE complete spec for the goal above.\n"
+            f"The spec MUST include a '**Component:**' field pointing to the exact file to create/edit."
+        )
+    else:
+        task_instruction = (
+            "TASK:\n"
+            "Identify the SINGLE most critical missing feature or logic gap that prevents\n"
+            "the Halilit Support Center from achieving the Strategic Goals above.\n"
+            "Then write a complete, production-ready spec file to close that gap.\n"
+            "The spec MUST include a '**Component:**' field pointing to the exact file to create/edit."
+        )
 
     prompt = f"""
 STRATEGIC GOALS (Master Plan):
@@ -159,10 +178,7 @@ CURRENT SYSTEM STATE (Existing Specs):
 DYNAMICALLY DISCOVERED CODEBASE CONTEXT (real files found by searching the repo):
 {dynamic_ctx}
 
-TASK:
-Identify the SINGLE most critical missing feature or logic gap that prevents
-the Halilit Support Center from achieving the Strategic Goals above.
-Then write a complete, production-ready spec file to close that gap.
+{task_instruction}
 
 Remember: output ONLY the spec markdown — no explanation before or after.
 The spec MUST include a "## Verification Commands" section at the end.
@@ -197,6 +213,11 @@ The spec MUST include a "## Verification Commands" section at the end.
     save_artifact(str(save_path), response)
 
     rel_path = save_path.relative_to(_PROJECT_ROOT)
+    # Write the output path to a temp file so the Task Force coordinator
+    # can reliably pick up the spec without timestamp/set-difference heuristics
+    last_output_file = _PROJECT_ROOT / "specs" / "temp" / "steerer_last_output.txt"
+    last_output_file.parent.mkdir(parents=True, exist_ok=True)
+    last_output_file.write_text(str(save_path), encoding="utf-8")
     print()
     print(f"✅  STEERER ACTION: New directive written → {rel_path}")
 

@@ -76,6 +76,11 @@ TOOLS & PARALLELISM RULES:
 - 'task_force'  (Coordinator):Spins up a multi-agent Task-Force for cross-domain work. SEQUENTIAL 🔒
                               Creates a shared Blackboard and runs a 3-round cycle:
                               Steerer → Builder → Watchdog.
+                              ⚠️  USE SPARINGLY: Only schedule task_force when a feature
+                              REQUIRES both a backend API change AND a frontend UI change
+                              simultaneously. For purely frontend or purely backend work,
+                              ALWAYS prefer 'design' + 'implement' instead. task_force is
+                              overkill for single-file changes.
 - 'v0_design'   (V0 Designer):Generates a v0.dev-ready UI prompt from a plain-English  PARALLEL SAFE ✅
                               description, enforcing Halilit architecture rules.
                               args = "description of the component to design".
@@ -149,13 +154,23 @@ RULES:
 - ALWAYS use the "queue" key (even for a single task — wrap it in an array).
 - Set "parallel": true for tasks that touch DIFFERENT files or are read-only.
 - Set "parallel": false for 'commit', 'build', 'heal', 'doc', 'reflect', 'task_force' — they mutate shared state.
-- For 'implement', the "args" MUST be the spec filename to implement.
+- For 'implement', the "args" MUST be the spec filename to implement (from the Interface Specs list in the status report).
 - For 'optimize', the "args" MUST be the relative file path to refactor.
   ⚠️  ANTI-HALLUCINATION RULE: NEVER invent file paths for 'optimize'. Only schedule
-  an 'optimize' task when you KNOW the file exists — i.e. the user explicitly named the
-  file, it appeared in an error report, or you listed it from the repository structure.
-  DO NOT guess names like 'ObsoleteComponent.tsx' or 'old_script.py'. If you are unsure,
-  use 'diagnose' to scan, or skip the optimize task entirely.
+  an 'optimize' task when you KNOW the file exists. If unsure, use 'diagnose' first.
+- **TASK_FORCE vs IMPLEMENT RULE (CRITICAL):**
+  NEVER schedule 'task_force' for a feature that affects only the frontend OR only the backend.
+  Use 'task_force' ONLY when a feature needs BOTH a new API endpoint AND a new UI component.
+  For everything else, use 'design' (if no spec exists yet) followed by 'implement'.
+  Wrong: task_force for "add a copy SKU button" (pure frontend).
+  Right: design + implement for "add a copy SKU button".
+  Right: task_force for "implement a new JIT endpoint consumed by a new Detail tab".
+- **GENERATIVE PIPELINE (use this for NEW features with no existing spec):**
+  Step 1: 'design' (args = desired spec path, e.g. "interface/my_feature.md") — creates the spec.
+  Step 2: 'implement' (args = that same spec path) — builds the code.
+  Step 3: 'ui_validate' — confirms Vite build passes.
+  Step 4: 'commit' — saves the result.
+  The Chief has FULL authority to generate specs and implement them end-to-end without human approval at each step.
 - For 'explain', use a single queue item with "args" containing the answer text.
 - For 'reflect', the "args" MUST be a short description of the failure/lesson context.
 - Sequential tasks act as BARRIERS: all parallel tasks before them must finish first.

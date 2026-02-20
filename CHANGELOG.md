@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-20
+- [feat] Added critical rules for using 'task_force' vs 'implement', emphasizing when to use each for feature implementation.
+- [feat] Defined a generative pipeline for new features using 'design', 'implement', 'ui_validate', and 'commit'.
+- [docs] Updated documentation to clarify the use of 'implement' and 'optimize' tasks, including rules for their 'args'.
+- [refactor] Added import `os as _os` to `steerer_agent.py`.
+
+## [v4.1] — 2026-02-20
 ## v4.1
 
 - [feat] Added a new specification document for the `efficient_debounce` task force.
