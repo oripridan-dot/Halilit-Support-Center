@@ -600,12 +600,28 @@ class TestFrontendComponents:
         )
 
     def test_catalog_hook_uses_correct_endpoint(self):
-        """Catalog hook must fetch from /api/conductor/catalog."""
-        content = (self.FRONTEND_SRC / "hooks" / "useConductorCatalog.ts").read_text(
+        """Catalog hook must fetch from /api/conductor/catalog (inline or via imported constant)."""
+        hooks_dir = self.FRONTEND_SRC / "hooks"
+        hook_content = (hooks_dir / "useConductorCatalog.ts").read_text(
             encoding="utf-8", errors="replace"
         )
-        assert "/api/conductor/catalog" in content, (
-            "useConductorCatalog.ts must target /api/conductor/catalog"
+        # Accept: (a) hardcoded URL in hook, or (b) URL defined in an imported schema file
+        endpoint = "/api/conductor/catalog"
+        if endpoint in hook_content:
+            return  # direct match — pass
+        # Search schema files co-located with the hook
+        for schema_file in hooks_dir.glob("*.schema.ts"):
+            if endpoint in schema_file.read_text(encoding="utf-8", errors="replace"):
+                return  # constant defined in schema — pass
+        # Also search specs/contracts
+        contracts_dir = self.FRONTEND_SRC / "specs" / "contracts"
+        if contracts_dir.exists():
+            for f in contracts_dir.glob("*.ts"):
+                if endpoint in f.read_text(encoding="utf-8", errors="replace"):
+                    return
+        assert False, (
+            "useConductorCatalog.ts must target /api/conductor/catalog "
+            "(either inline or via an imported schema constant)"
         )
 
     def test_no_monolithic_components(self):

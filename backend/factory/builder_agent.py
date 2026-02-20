@@ -50,6 +50,8 @@ RULES:
 8. Dark mode Tailwind only — classes from the dark zinc/slate palette. No inline styles unless unavoidable.
 9. CONTRACT FIRST. If a matching API contract exists in specs/contracts/, you MUST use its types
    exactly — do not invent endpoint paths or response shapes.
+10. ALWAYS action Evolution Proposals directly. Do NOT defer to Tech Scout for review.
+11. ALWAYS address pending Evolution Proposals from Tech Scout.
 """
 
 CRITIC_PROMPT = """

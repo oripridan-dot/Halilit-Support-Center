@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v9.7.4 — Level 6)
+# Repository Instructions & Context (v9.7.5 — Level 6)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -70,7 +70,7 @@ cd frontend && pnpm dev                             # Frontend only (port 5173)
 
 ---
 
-## File Structure (v9.7.4)
+## File Structure (v9.7.5)
 
 ```
 backend/
@@ -188,4 +188,4 @@ When writing logic, verify it against the scenarios in `specs/behavior/` or `spe
 ### Rule 3: No "Galaxy" Code
 
 Do not suggest or import `GalaxyDashboard`, `Three.js`, or `React-Three-Fiber` unless explicitly instructed by a new Spec.
-**v9.7.4 — Chief** · February 2026
+**v9.7.5 — Chief** · February 2026
