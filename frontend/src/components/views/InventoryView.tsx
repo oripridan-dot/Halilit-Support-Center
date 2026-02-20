@@ -89,7 +89,8 @@ const InventoryView: React.FC = () => {
           item.brand.toLowerCase().includes(filterStr.toLowerCase()));
 
       const matchesBrand = !brandFilter || item.brand === brandFilter;
-      const matchesCategory = !categoryFilter || item.category === categoryFilter;
+      const matchesCategory =
+        !categoryFilter || item.category === categoryFilter;
       const matchesCfp = !cfpOnly || item.contextual_data?.cfp === "yes";
 
       return matchesText && matchesBrand && matchesCategory && matchesCfp;

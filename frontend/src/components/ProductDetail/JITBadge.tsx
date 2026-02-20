@@ -6,27 +6,36 @@
  *
  * Phases: idle → snap → intel → wisdom → complete | error
  */
-import React from 'react';
-import { useJITIntelligence, JITPhase } from '../../hooks';
+import React from "react";
+import { useJITIntelligence, JITPhase } from "../../hooks";
 
 interface JITBadgeProps {
   productId: string | null;
 }
 
 const PHASE_CONFIG: Record<JITPhase, { label: string; className: string }> = {
-  idle:     { label: 'JIT Ready',     className: 'bg-zinc-700 text-zinc-300' },
-  snap:     { label: 'Connecting…',   className: 'bg-blue-700 text-blue-100 animate-pulse' },
-  intel:    { label: 'Gathering…',    className: 'bg-yellow-600 text-yellow-100 animate-pulse' },
-  wisdom:   { label: 'Analysing…',    className: 'bg-orange-600 text-orange-100 animate-pulse' },
-  complete: { label: '✓ JIT Ready',   className: 'bg-green-700 text-green-100' },
-  error:    { label: 'JIT Unavailable', className: 'bg-red-800 text-red-200' },
+  idle: { label: "JIT Ready", className: "bg-zinc-700 text-zinc-300" },
+  snap: {
+    label: "Connecting…",
+    className: "bg-blue-700 text-blue-100 animate-pulse",
+  },
+  intel: {
+    label: "Gathering…",
+    className: "bg-yellow-600 text-yellow-100 animate-pulse",
+  },
+  wisdom: {
+    label: "Analysing…",
+    className: "bg-orange-600 text-orange-100 animate-pulse",
+  },
+  complete: { label: "✓ JIT Ready", className: "bg-green-700 text-green-100" },
+  error: { label: "JIT Unavailable", className: "bg-red-800 text-red-200" },
 };
 
 const JITBadge: React.FC<JITBadgeProps> = ({ productId }) => {
   const jit = useJITIntelligence(productId);
   const config = PHASE_CONFIG[jit.phase] ?? PHASE_CONFIG.idle;
 
-  if (jit.phase === 'idle') return null;
+  if (jit.phase === "idle") return null;
 
   return (
     <span
