@@ -1,0 +1,27 @@
+import type { BrandIdentity, SpecItem } from "./index";
+import type {
+  ConductorProduct,
+} from "../hooks/useConductorCatalog";
+
+export type { ConductorProduct } from "../hooks/useConductorCatalog";
+export type Product = ConductorProduct;
+
+export type PipelineProduct = any;
+
+export type OptimizedProduct = ConductorProduct;
+
+
+export interface ReviewVerdict {
+  source: string;
+  sentiment: "positive" | "neutral" | "negative";
+  summary: string;
+  url?: string;
+}
+
+export interface ExplorationPath {
+  type: string;
+  label: string;
+  icon: string;
+  description: string;
+  payload: Record<string, any>;
+}
