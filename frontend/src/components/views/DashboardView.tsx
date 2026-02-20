@@ -14,6 +14,7 @@ import {
   RefreshCcw,
   ArrowRight,
   Database,
+  Telescope,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
@@ -194,7 +195,7 @@ const SkeletonCard = () => (
 // ── DashboardView ──────────────────────────────────────────────────────────────
 const DashboardView: React.FC = () => {
   const { stats, errorMsg, refetch, isLoading } = useDashboardStats();
-  const { goToInventory, goToInventoryCfp, goToIngestionStatus } =
+  const { goToInventory, goToInventoryCfp, goToIngestionStatus, goToExplorer } =
     useNavigationStore();
 
   const hasStats = !!stats && !errorMsg;
@@ -303,6 +304,14 @@ const DashboardView: React.FC = () => {
           >
             <Package size={14} />
             Open Inventory Master
+          </button>
+          <button
+            onClick={() => goToExplorer()}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-950/40 hover:bg-emerald-900/40
+              border border-emerald-900/50 hover:border-emerald-700/60 text-emerald-400 text-sm font-medium transition-all"
+          >
+            <Telescope size={14} />
+            Explore Catalog
           </button>
           <button
             onClick={() => goToIngestionStatus()}

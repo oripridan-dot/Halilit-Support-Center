@@ -5,7 +5,7 @@
  */
 import { create } from 'zustand';
 
-export type ViewType = 'DASHBOARD' | 'INVENTORY' | 'PRODUCT_DETAIL' | 'INGESTION_STATUS';
+export type ViewType = 'DASHBOARD' | 'INVENTORY' | 'PRODUCT_DETAIL' | 'INGESTION_STATUS' | 'EXPLORER';
 
 interface NavigationState {
   currentView: ViewType;
@@ -15,6 +15,7 @@ interface NavigationState {
   initialCfpFilter: boolean | null;
 
   goToDashboard: () => void;
+  goToExplorer: () => void;
   goToInventory: (searchQuery?: string) => void;
   /** Navigate to inventory pre-filtered to Call-for-Price products */
   goToInventoryCfp: () => void;
@@ -31,6 +32,7 @@ export const useNavigationStore = create<NavigationState>((set, get) => ({
   initialCfpFilter: null,
 
   goToDashboard: () => set({ currentView: 'DASHBOARD', activeProductId: null, searchQuery: null, initialCfpFilter: null }),
+  goToExplorer: () => set({ currentView: 'EXPLORER', activeProductId: null, searchQuery: null, initialCfpFilter: null }),
   goToInventory: (searchQuery?: string) => set({
     currentView: 'INVENTORY',
     activeProductId: null,
@@ -59,6 +61,8 @@ export const useNavigationStore = create<NavigationState>((set, get) => ({
     if (currentView === 'PRODUCT_DETAIL') {
       set({ currentView: 'INVENTORY', activeProductId: null, searchQuery: null, initialCfpFilter: null });
     } else if (currentView === 'INGESTION_STATUS') {
+      set({ currentView: 'DASHBOARD', activeProductId: null, searchQuery: null, initialCfpFilter: null });
+    } else if (currentView === 'EXPLORER') {
       set({ currentView: 'DASHBOARD', activeProductId: null, searchQuery: null, initialCfpFilter: null });
     } else {
       set({ currentView: 'DASHBOARD', activeProductId: null, searchQuery: null, initialCfpFilter: null });

@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Activity,
   Zap,
+  Telescope,
 } from "lucide-react";
 import { useNavigationStore } from "./store/navigationStore";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
@@ -25,21 +26,27 @@ const ProductDetailView = React.lazy(
 const IngestionStatusView = React.lazy(
   () => import("./components/views/IngestionStatusView"),
 );
+const ExplorerView = React.lazy(
+  () => import("./components/views/ExplorerView"),
+);
 
 const VIEW_LABELS: Record<string, string> = {
   DASHBOARD: "Mission Control",
   INVENTORY: "Inventory Master",
   PRODUCT_DETAIL: "Product Intelligence",
   INGESTION_STATUS: "Data Pipeline",
+  EXPLORER: "Catalog Explorer",
 };
 
 const NAV_ITEMS = [
   { view: "DASHBOARD" as const, icon: LayoutDashboard, label: "Overview" },
   { view: "INVENTORY" as const, icon: PackageSearch, label: "Inventory" },
+  { view: "EXPLORER" as const, icon: Telescope, label: "Explorer" },
 ];
 
 function App() {
-  const { currentView, goToDashboard, goToInventory } = useNavigationStore();
+  const { currentView, goToDashboard, goToInventory, goToExplorer } =
+    useNavigationStore();
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const viewLabel = VIEW_LABELS[currentView] ?? currentView;
@@ -47,10 +54,12 @@ function App() {
   const navHandlers: Record<string, () => void> = {
     DASHBOARD: () => goToDashboard(),
     INVENTORY: () => goToInventory(),
+    EXPLORER: () => goToExplorer(),
   };
 
   const isInventoryActive =
     currentView === "INVENTORY" || currentView === "PRODUCT_DETAIL";
+  const isExplorerActive = currentView === "EXPLORER";
 
   return (
     <GlobalErrorBoundary>
@@ -89,7 +98,9 @@ function App() {
               const active =
                 view === "DASHBOARD"
                   ? currentView === "DASHBOARD"
-                  : isInventoryActive;
+                  : view === "EXPLORER"
+                    ? isExplorerActive
+                    : isInventoryActive;
               return (
                 <button
                   key={view}
@@ -175,6 +186,7 @@ function App() {
               {currentView === "INVENTORY" && <InventoryView />}
               {currentView === "PRODUCT_DETAIL" && <ProductDetailView />}
               {currentView === "INGESTION_STATUS" && <IngestionStatusView />}
+              {currentView === "EXPLORER" && <ExplorerView />}
             </Suspense>
           </main>
         </div>

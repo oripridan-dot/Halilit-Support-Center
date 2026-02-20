@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 interface Image {
   url: string;
@@ -30,10 +30,10 @@ const ProductImageCarousel: React.FC = () => {
           setImages([]);
         } else {
           const errorData = await response.json();
-          setError(errorData.detail || 'Failed to load images');
+          setError(errorData.detail || "Failed to load images");
         }
       } catch (err: any) {
-        setError(err.message || 'Failed to load images');
+        setError(err.message || "Failed to load images");
       } finally {
         setLoading(false);
       }
@@ -43,13 +43,16 @@ const ProductImageCarousel: React.FC = () => {
   }, [id]);
 
   const goToPrevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
+    );
   };
 
   const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
+    );
   };
-
 
   if (loading) {
     return (
@@ -81,6 +84,9 @@ const ProductImageCarousel: React.FC = () => {
         src={images[currentImageIndex].url}
         alt={`Product Image ${currentImageIndex + 1}`}
         className="w-full h-full object-contain"
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = "/placeholder.png";
+        }}
       />
       {images.length > 1 && (
         <>

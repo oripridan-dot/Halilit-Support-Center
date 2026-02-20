@@ -14,7 +14,10 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-import { useConductorCatalog, useProductRelationships } from "../../hooks/useConductorCatalog";
+import {
+  useConductorCatalog,
+  useProductRelationships,
+} from "../../hooks/useConductorCatalog";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
 import { useNavigationStore } from "../../store/navigationStore";
 
@@ -270,11 +273,24 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
     jitSpecs && Object.keys(jitSpecs).length > 0 ? jitSpecs : catalogSpecs;
 
   // Typed relationships from the product graph index
-  const { accessories: graphAccessories, alternatives: graphAlternatives, compatible: graphCompatible } =
-    useProductRelationships(activeProductId ?? null);
+  const {
+    accessories: graphAccessories,
+    alternatives: graphAlternatives,
+    compatible: graphCompatible,
+  } = useProductRelationships(activeProductId ?? null);
 
-  const toRelatedProduct = (p: { id: string; name: string; price?: number | null; image_url?: string }) =>
-    ({ id: p.id, name: p.name, price: p.price ?? undefined, image_url: p.image_url }) as RelatedProduct;
+  const toRelatedProduct = (p: {
+    id: string;
+    name: string;
+    price?: number | null;
+    image_url?: string;
+  }) =>
+    ({
+      id: p.id,
+      name: p.name,
+      price: p.price ?? undefined,
+      image_url: p.image_url,
+    }) as RelatedProduct;
 
   const accessories = graphAccessories.map(toRelatedProduct);
   const alternatives = graphAlternatives.map(toRelatedProduct);
@@ -333,7 +349,8 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
                 alt={displayName}
                 className="w-full h-full object-contain p-2"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).style.opacity = "0.2";
+                  (e.target as HTMLImageElement).src = "/placeholder.png";
+                  (e.target as HTMLImageElement).style.opacity = "1";
                 }}
               />
             </div>
@@ -553,10 +570,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = () => {
                     </MiniSection>
                   )}
                   {compatible.length > 0 && (
-                    <MiniSection
-                      title="Compatible"
-                      count={compatible.length}
-                    >
+                    <MiniSection title="Compatible" count={compatible.length}>
                       {compatible.map((item) => (
                         <RelatedProductCard
                           key={item.id}

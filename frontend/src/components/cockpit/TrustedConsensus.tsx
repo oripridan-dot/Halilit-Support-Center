@@ -86,6 +86,9 @@ export const TrustedConsensus = ({
                   src={review.logo}
                   alt={review.source}
                   className="w-6 h-6 object-contain"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
                 />
               ) : (
                 <span className="text-[10px] font-bold text-zinc-500">
