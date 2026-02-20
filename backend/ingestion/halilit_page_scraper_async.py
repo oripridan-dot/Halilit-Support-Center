@@ -53,6 +53,14 @@ except ImportError:
     ASYNC_CONCURRENCY = 50
     MAX_PRODUCTS_PER_BRAND = 0
 
+# Resilient extraction — API-first + Gemini semantic fallback
+from backend.ingestion.semantic_extractor import (
+    SemanticExtractor,
+    sniff_next_data,
+    html_to_markdown,
+    extract_with_gemini,
+)
+
 logger = logging.getLogger("AsyncHalilitPageScraper")
 
 # Semaphore for rate limiting (concurrent requests)
@@ -313,6 +321,45 @@ class AsyncHalilitPageScraper:
         if not html:
             return None
 
+        # ── Stage 1: API-First / Ghost Protocol ──────────────────────────
+        # Try __NEXT_DATA__ before paying the BeautifulSoup parse cost.
+        # Halilit's Next.js frontend often embeds the full product object here.
+        _next_data = sniff_next_data(html)
+        if _next_data:
+            logger.info("[API-FIRST] __NEXT_DATA__ hit for %s", url)
+            # Wrap into the downstream pipeline's expected skeleton
+            # and return immediately — no CSS selector parsing needed.
+            item_id_match = re.search(r"/items/(\d+)", url)
+            halilit_id = (
+                f"halilit-{item_id_match.group(1)}" if item_id_match
+                else f"h-{hashlib.md5(url.encode()).hexdigest()[:10]}"
+            )
+            nd_price = _next_data.get("price", 0.0) or 0.0
+            return {
+                "halilit_id": halilit_id,
+                "product_name": _next_data.get("title", ""),
+                "official_name": _next_data.get("title", ""),
+                "model_number": _next_data.get("sku", ""),
+                "brand": _next_data.get("brand", ""),
+                "sku": _next_data.get("sku", ""),
+                "price_il": nd_price,
+                "price_eilat": round(nd_price / 1.17, 2) if nd_price > 0 else 0.0,
+                "description": _next_data.get("description", ""),
+                "page_description": _next_data.get("description", ""),
+                "image_url": _next_data.get("image_url", ""),
+                "image_gallery": [_next_data["image_url"]] if _next_data.get("image_url") else [],
+                "official_images": [],
+                "features": [
+                    {"name": k, "value": v}
+                    for k, v in _next_data.get("specs", {}).items()
+                ],
+                "faq": [],
+                "audiences": [],
+                "halilit_url": url,
+                "source": "halilit_next_data",
+                "_extraction_source": "__NEXT_DATA__",
+            }
+
         soup = BeautifulSoup(html, "html.parser")
 
         # Extract JSON-LD
@@ -338,8 +385,45 @@ class AsyncHalilitPageScraper:
                 continue
 
         if not jsonld_products:
-            logger.debug(f"No JSON-LD Product found on {url}")
-            return None
+            # ── Stage 2: Gemini Semantic Fallback ────────────────────────
+            # JSON-LD is missing (SPA, JS-heavy, theme change). Pass the
+            # rendered HTML to Gemini Structured Output — no CSS selectors.
+            logger.info("[SEMANTIC] No JSON-LD on %s — trying Gemini extraction", url)
+            markdown = html_to_markdown(html)
+            semantic = extract_with_gemini(markdown) if len(markdown) > 100 else None
+            if not semantic:
+                logger.debug("[SEMANTIC] Gemini extraction yielded nothing for %s", url)
+                return None
+            item_id_match = re.search(r"/items/(\d+)", url)
+            halilit_id = (
+                f"halilit-{item_id_match.group(1)}" if item_id_match
+                else f"h-{hashlib.md5(url.encode()).hexdigest()[:10]}"
+            )
+            sem_price = semantic.get("price", 0.0) or 0.0
+            return {
+                "halilit_id": halilit_id,
+                "product_name": semantic.get("title", ""),
+                "official_name": semantic.get("title", ""),
+                "model_number": semantic.get("sku", ""),
+                "brand": semantic.get("brand", ""),
+                "sku": semantic.get("sku", ""),
+                "price_il": sem_price,
+                "price_eilat": round(sem_price / 1.17, 2) if sem_price > 0 else 0.0,
+                "description": semantic.get("description", ""),
+                "page_description": semantic.get("description", ""),
+                "image_url": semantic.get("image_url", ""),
+                "image_gallery": [semantic["image_url"]] if semantic.get("image_url") else [],
+                "official_images": [],
+                "features": [
+                    {"name": k, "value": v}
+                    for k, v in semantic.get("specs", {}).items()
+                ],
+                "faq": [],
+                "audiences": [],
+                "halilit_url": url,
+                "source": "halilit_product_page",
+                "_extraction_source": "gemini_semantic",
+            }
 
         # Merge products
         product = self._merge_jsonld_products(jsonld_products)
@@ -548,40 +632,20 @@ class AsyncHalilitPageScraper:
         return url
 
     def _extract_price_from_dom(self, soup: BeautifulSoup) -> float:
-        """Extract price from DOM when JSON-LD is missing."""
-        # Try multiple selectors for price
-        price_selectors = [
-            ".price, .price-new, .current-price, .price_value, .item_price",
-            "[data-price]",
-            ".product-price",
-            "#item_price",
-        ]
-        
-        for selector in price_selectors:
-            price_el = soup.select_one(selector)
-            if price_el:
-                # Get text and extract digits
-                text = price_el.get_text(strip=True)
-                # Look for Hebrew price pattern: "מחיר 1,234 ₪" or "1,234 ₪"
-                price_match = re.search(r'([\d,]+)\s*₪', text)
-                if price_match:
-                    try:
-                        price = float(price_match.group(1).replace(',', ''))
-                        if price > 0:
-                            return price
-                    except (ValueError, TypeError):
-                        pass
-                # Fallback: extract all digits
-                digits = "".join(c for c in text if c.isdigit() or c == ".")
-                if digits:
-                    try:
-                        price = float(digits)
-                        if price > 0:
-                            return price
-                    except (ValueError, TypeError):
-                        pass
-        
-        # Try data attributes
+        """
+        Extract price from DOM when JSON-LD is missing.
+
+        First tries semantic Gemini extraction (resilient to CSS changes);
+        falls back to structured-data attributes only (no fragile CSS selectors).
+        """
+        # Try structured data attributes — these come from the server and are stable
+        raw_html = str(soup)
+        # Look for JSON price in __NEXT_DATA__ first (free, no API call)
+        nd = sniff_next_data(raw_html)
+        if nd and nd.get("price", 0) > 0:
+            return float(nd["price"])
+
+        # Try data-price attributes (server-rendered, stable)
         for el in soup.select("[data-price]"):
             try:
                 price = float(el.get("data-price", 0))
@@ -589,89 +653,66 @@ class AsyncHalilitPageScraper:
                     return price
             except (ValueError, TypeError):
                 continue
-        
+
+        # Gemini semantic fallback — read the page as text, no CSS dependency
+        markdown = html_to_markdown(raw_html)
+        if len(markdown) > 100:
+            semantic = extract_with_gemini(markdown)
+            if semantic and semantic.get("price", 0) > 0:
+                logger.debug("[SEMANTIC] Price extracted via Gemini: %s", semantic["price"])
+                return float(semantic["price"])
+
         return 0.0
 
     def _extract_features_from_dom(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
-        """Extract features/specs from DOM when JSON-LD is missing."""
-        features = []
-        
-        # Try to find spec tables/lists
-        spec_selectors = [
-            ".item_specs table tr",
-            ".product-specs table tr",
-            ".specifications table tr",
-            ".item_features li",
-            ".product-features li",
-        ]
-        
-        for selector in spec_selectors:
-            rows = soup.select(selector)
-            for row in rows:
-                cells = row.find_all(["td", "th", "span", "div"])
-                if len(cells) >= 2:
-                    name = cells[0].get_text(strip=True)
-                    value = cells[1].get_text(strip=True)
-                    if name and value and len(name) < 100 and len(value) < 500:
-                        features.append({"name": name, "value": value})
-                elif len(cells) == 1:
-                    # Single cell might be a feature item
-                    text = cells[0].get_text(strip=True)
-                    if ":" in text:
-                        parts = text.split(":", 1)
-                        if len(parts) == 2:
-                            name = parts[0].strip()
-                            value = parts[1].strip()
-                            if name and value:
-                                features.append({"name": name, "value": value})
-        
-        # Also try definition lists
-        dl_items = soup.select("dl dt, dl dd")
-        if dl_items:
-            for i in range(0, len(dl_items) - 1, 2):
-                name = dl_items[i].get_text(strip=True)
-                value = dl_items[i + 1].get_text(strip=True) if i + 1 < len(dl_items) else ""
-                if name and value:
-                    features.append({"name": name, "value": value})
-        
-        return features[:50]  # Limit to 50 features
+        """
+        Extract features/specs from DOM when JSON-LD is missing.
+
+        Uses Gemini Semantic Extraction — immune to CSS class / DOM restructures.
+        """
+        raw_html = str(soup)
+        markdown = html_to_markdown(raw_html)
+        if len(markdown) < 100:
+            return []
+        semantic = extract_with_gemini(markdown)
+        if not semantic:
+            return []
+        features: List[Dict[str, str]] = []
+        for k, v in semantic.get("specs", {}).items():
+            features.append({"name": k, "value": v})
+        for feat in semantic.get("features", []):
+            if isinstance(feat, str) and ":" in feat:
+                parts = feat.split(":", 1)
+                features.append({"name": parts[0].strip(), "value": parts[1].strip()})
+            elif isinstance(feat, str):
+                features.append({"name": feat, "value": ""})
+        logger.debug("[SEMANTIC] Extracted %d features via Gemini", len(features))
+        return features[:50]
 
     def _extract_description_from_dom(self, soup: BeautifulSoup) -> str:
-        """Extract description from DOM when JSON-LD is missing."""
-        # Try multiple selectors for description
-        desc_selectors = [
-            ".item_description",
-            ".product-description",
-            ".description",
-            "[itemprop='description']",
-            ".item_content",
-            ".product-content",
-        ]
-        
-        for selector in desc_selectors:
-            desc_el = soup.select_one(selector)
-            if desc_el:
-                text = desc_el.get_text(strip=True)
-                # Filter out placeholder text
-                if text and len(text) > 20:
-                    # Remove common Hebrew placeholders
-                    placeholders = [
-                        "משלוחים חינם ברכישה דרך האתר",
-                        "סאבוופר",
-                        "אולפני",
-                    ]
-                    for placeholder in placeholders:
-                        if placeholder in text and len(text) < 100:
-                            continue
-                    return text
-        
-        # Try meta description
+        """
+        Extract description from DOM when JSON-LD is missing.
+
+        Uses Gemini Semantic Extraction — immune to CSS class / DOM restructures.
+        Falls back to <meta name="description"> (server-rendered, always stable).
+        """
+        # Meta description is server-rendered and stable across theme changes
         meta_desc = soup.find("meta", attrs={"name": "description"})
         if meta_desc:
-            text = meta_desc.get("content", "").strip()
-            if text and len(text) > 20:
+            text = (meta_desc.get("content") or "").strip()
+            if len(text) > 20:
                 return text
-        
+
+        # Gemini semantic fallback
+        raw_html = str(soup)
+        markdown = html_to_markdown(raw_html)
+        if len(markdown) < 100:
+            return ""
+        semantic = extract_with_gemini(markdown)
+        if semantic and semantic.get("description"):
+            desc = semantic["description"].strip()
+            logger.debug("[SEMANTIC] Description extracted via Gemini (%d chars)", len(desc))
+            return desc
         return ""
 
     async def scrape_brand_full(

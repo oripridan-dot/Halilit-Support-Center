@@ -1,14 +1,20 @@
 """
-Official (Brand) Page Scraper — JIT Phase 1
+Official (Brand) Page Scraper — JIT Phase 1  [Resilient v2]
 
 Fetches a candidate official product page and extracts:
-  - og:image, og:description
-  - Specs from tables/lists (simple heuristics)
+  - og:image, og:description  (stable meta tags — kept from v1)
+  - Specs via Gemini Semantic Extraction (replaces brittle CSS/regex heuristics)
+  - __NEXT_DATA__ probe for Next.js brand sites
 
 Used by jit_agent for the Auditor (visual verification) and merge step.
 URL discovery chain:
   1. BRAND_DOMAINS slug lookup (fast, no API)
   2. Gemini-powered URL suggestion (fallback, uses AI knowledge to find page)
+
+Resilience model (spec: specs/data_pipeline/03_resilient_ingestion.md):
+  - No soup.find() or hardcoded CSS selectors for spec extraction
+  - Gemini Structured Output is the primary spec extractor
+  - Failures are logged to the dead-letter queue
 """
 
 import logging
@@ -19,6 +25,22 @@ from typing import Any, Dict, List, Optional
 import requests
 
 logger = logging.getLogger("OfficialScraper")
+
+# Resilient semantic extraction (per spec 03_resilient_ingestion.md)
+try:
+    from backend.ingestion.semantic_extractor import (
+        sniff_next_data,
+        html_to_markdown,
+        extract_with_gemini,
+        _write_dlq,
+    )
+    _SEMANTIC_AVAILABLE = True
+except ImportError:
+    _SEMANTIC_AVAILABLE = False
+    def sniff_next_data(html): return None  # noqa: E704
+    def html_to_markdown(html, **kw): return ""  # noqa: E704
+    def extract_with_gemini(text, **kw): return None  # noqa: E704
+    def _write_dlq(url, reason, ctx=None): pass  # noqa: E704
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; HalilitSupport/1.0; +https://halilit.com)",
@@ -58,8 +80,17 @@ BRAND_DOMAINS: Dict[str, str] = {
 
 def fetch_official_page(url: str, timeout: int = 10) -> Dict[str, Any]:
     """
-    Fetch a single URL and extract og:image, og:description, and simple specs.
-    Returns dict: url, image_url, description, specs (flat key/value), raw_text (for verify_integrity).
+    Fetch a single URL and extract og:image, og:description, and specs.
+
+    Returns dict: url, image_url, description, specs (flat key/value),
+                  raw_text, stock_status, sku.
+
+    Extraction strategy (spec 03_resilient_ingestion.md):
+      1. __NEXT_DATA__ probe — free, no API call, covers Next.js brand sites
+      2. Gemini Semantic Extraction — pass rendered page Markdown to Gemini
+         Structured Output; immune to CSS class / DOM restructures
+      3. og:meta tags (regex on raw HTML) — always fast, universally stable
+      4. Graceful degradation: failures write to dead-letter queue
     """
     result: Dict[str, Any] = {
         "url": url,
@@ -67,42 +98,87 @@ def fetch_official_page(url: str, timeout: int = 10) -> Dict[str, Any]:
         "description": "",
         "specs": {},
         "raw_text": "",
+        "stock_status": "unknown",
+        "sku": "",
     }
     try:
         resp = requests.get(url, headers=HEADERS,
                             timeout=timeout, allow_redirects=True)
         if resp.status_code == 404:
-            return result  # Truly missing page — skip
+            _write_dlq(url, "HTTP 404 on official page")
+            return result
+        if resp.status_code >= 400:
+            _write_dlq(url, f"HTTP {resp.status_code} on official page")
+            return result
         html = resp.text
         result["raw_text"] = html[:50000]  # cap for verify_integrity
 
-        # og:image
+        # ── Stage 1: __NEXT_DATA__ probe (free) ───────────────────────────
+        if _SEMANTIC_AVAILABLE:
+            nd = sniff_next_data(html)
+            if nd:
+                logger.info("[API-FIRST] __NEXT_DATA__ found on official page: %s", url)
+                if nd.get("image_url"):
+                    result["image_url"] = nd["image_url"]
+                if nd.get("description"):
+                    result["description"] = nd["description"]
+                if nd.get("specs"):
+                    result["specs"] = nd["specs"]
+                if nd.get("stock_status"):
+                    result["stock_status"] = nd["stock_status"]
+                if nd.get("sku"):
+                    result["sku"] = nd["sku"]
+                # Still fall through to og:image if missing
+                if result["image_url"] and result["description"]:
+                    return result
+
+        # ── og:image (stable meta tag — kept from v1) ─────────────────────
         m = re.search(
             r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, re.I)
         if m:
             result["image_url"] = m.group(1).strip()
 
-        # og:description
-        m = re.search(
-            r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']*)["\']', html, re.I)
-        if m:
-            result["description"] = m.group(1).strip()
+        # ── og:description (stable meta tag — kept from v1) ───────────────
+        if not result["description"]:
+            m = re.search(
+                r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']*)["\']', html, re.I)
+            if m:
+                result["description"] = m.group(1).strip()
 
-        # Simple spec table: <td>key</td><td>value</td> or dt/dd
-        for pattern in [
-            r"<td[^>]*>([^<]+)</td>\s*<td[^>]*>([^<]+)</td>",
-            r"<dt[^>]*>([^<]+)</dt>\s*<dd[^>]*>([^<]+)</dd>",
-        ]:
-            for m in re.finditer(pattern, html, re.I | re.DOTALL):
-                k = re.sub(r"\s+", " ", m.group(1)).strip()
-                v = re.sub(r"\s+", " ", m.group(2)).strip()
-                if len(k) < 50 and len(v) < 200 and k and v:
-                    result["specs"][k] = v
+        # ── Stage 2: Gemini Semantic Extraction for specs ─────────────────
+        # Replace brittle table/dt regex with LLM-powered extraction.
+        # Gemini reads the page meaning — not the CSS structure.
+        if _SEMANTIC_AVAILABLE and not result["specs"]:
+            markdown = html_to_markdown(html)
+            if len(markdown) > 100:
+                semantic = extract_with_gemini(markdown)
+                if semantic:
+                    if semantic.get("specs"):
+                        result["specs"] = semantic["specs"]
+                    if not result["description"] and semantic.get("description"):
+                        result["description"] = semantic["description"]
+                    if not result["image_url"] and semantic.get("image_url"):
+                        result["image_url"] = semantic["image_url"]
+                    if semantic.get("stock_status") and semantic["stock_status"] != "unknown":
+                        result["stock_status"] = semantic["stock_status"]
+                    if semantic.get("sku"):
+                        result["sku"] = semantic["sku"]
+                    logger.info(
+                        "[SEMANTIC] Official page %s — extracted %d specs via Gemini",
+                        url, len(result["specs"]),
+                    )
+                else:
+                    _write_dlq(url, "Gemini returned no data for official page")
 
         return result
+    except requests.exceptions.Timeout:
+        _write_dlq(url, "Timeout fetching official page")
+    except requests.exceptions.ConnectionError as exc:
+        _write_dlq(url, f"Connection error fetching official page: {exc}")
     except Exception as e:
         logger.debug("fetch_official_page %s: %s", url, e)
-        return result
+        _write_dlq(url, f"fetch_official_page exception: {e}")
+    return result
 
 
 def _find_url_with_gemini(brand: str, product_name: str) -> Optional[str]:
