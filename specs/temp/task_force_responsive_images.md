@@ -1,6 +1,6 @@
-# Task-Force Blackboard: enhanced_search
+# Task-Force Blackboard: responsive_images
 
-**Goal:** Integrate vector search with approximate nearest neighbors (ANN) to improve search speed and relevance.
+**Goal:** Integrate next-gen image optimization to improve image loading and fallback handling.
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-No code was provided to evaluate against the specification.
+- The task cannot be completed because the implemented code is missing.
 
 **Required Fix:**
-Provide the implemented code for review.
+The Builder must provide the implemented code for review.

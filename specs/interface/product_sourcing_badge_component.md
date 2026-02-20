@@ -1,78 +1,80 @@
 # Spec: Product Sourcing Badge Component
-
-**Target:** src/components/ProductDetail/SourcingBadge.tsx
+**Target:** src/components/ProductSourcingBadge.tsx
 
 ## Overview
-This component displays a badge indicating the sourcing information for a specific product. The badge's text and appearance will dynamically change based on data retrieved from the backend regarding the product's origin and ethical sourcing practices.  It enhances transparency and provides crucial information to the end user.
+This component visually represents the sourcing status of a product in the Halilit Support Center Dark Factory. It displays a badge with text and color indicating whether the product is internally sourced, externally sourced, or has an unknown sourcing status.
 
 ## Requirements
-- The component must fetch sourcing data from the `/products/{product_id}/sourcing` backend endpoint.
-- The component must display a badge with text reflecting the product's sourcing status.  Possible statuses are: "Ethically Sourced", "Partially Sourced", "Unknown Sourcing".
-- The badge must have a distinct visual representation for each status (color-coded).
-    - "Ethically Sourced":  Background color: `bg-green-500`, Text color: `text-white`
-    - "Partially Sourced": Background color: `bg-yellow-500`, Text color: `text-slate-900`
-    - "Unknown Sourcing": Background color: `bg-red-500`, Text color: `text-white`
-- The component must handle loading and error states gracefully, displaying appropriate indicators.
-- The component should be reusable and accept a `productId` prop of type `string`.
-- The component should use `react-query` for data fetching and caching.
+- The component must accept a `sourcingStatus` prop, which determines the badge's appearance and text.
+- The component must display different text and background colors based on the `sourcingStatus` prop.
+- The component must handle three distinct sourcing statuses: "internal", "external", and "unknown".
+- The component must be styled using Tailwind CSS, fitting the dark theme of the Halilit Support Center.
+- The component must be implemented as a functional React component using TypeScript.
+- The component must be accessible and provide appropriate contrast for readability.
 
 ## Data Contract
 
-**API Endpoint:** `GET /products/{product_id}/sourcing`
+**Props:**
 
-**Request:**
-
-*   Path Parameter: `product_id` (string, required). Example: `"product123"`
-
-**Response:**
-
-```json
-{
-  "status": "Ethically Sourced" | "Partially Sourced" | "Unknown Sourcing"
-}
-```
-
-**Error Response:**
-
-Standard HTTP error codes (400, 404, 500) with a JSON body:
-
-```json
-{
-  "detail": "Error message"
+```typescript
+interface ProductSourcingBadgeProps {
+  sourcingStatus: "internal" | "external" | "unknown";
 }
 ```
 
 ## Behavior Scenarios
 
-- **Scenario:** Initial Load - Loading State
-  - Input: Component is mounted with `productId="product456"`.
-  - Outcome: The component displays a loading indicator (e.g., a spinner or placeholder text "Loading...").
+- **Scenario:** Internal Sourcing
+  - Input: `sourcingStatus="internal"`
+  - Outcome: Renders a badge with the text "Internal" and a green background (e.g., `bg-green-600`)
 
-- **Scenario:** Successful Fetch - Ethically Sourced
-  - Input: The API returns `{ "status": "Ethically Sourced" }`.
-  - Outcome: The component displays a badge with the text "Ethically Sourced", with a green background (`bg-green-500`) and white text (`text-white`).
+- **Scenario:** External Sourcing
+  - Input: `sourcingStatus="external"`
+  - Outcome: Renders a badge with the text "External" and a blue background (e.g., `bg-blue-600`)
 
-- **Scenario:** Successful Fetch - Partially Sourced
-  - Input: The API returns `{ "status": "Partially Sourced" }`.
-  - Outcome: The component displays a badge with the text "Partially Sourced", with a yellow background (`bg-yellow-500`) and dark slate text (`text-slate-900`).
-
-- **Scenario:** Successful Fetch - Unknown Sourcing
-  - Input: The API returns `{ "status": "Unknown Sourcing" }`.
-  - Outcome: The component displays a badge with the text "Unknown Sourcing", with a red background (`bg-red-500`) and white text (`text-white`).
-
-- **Scenario:** API Error - Product Not Found
-  - Input: The API returns a 404 error with the message "Product not found".
-  - Outcome: The component displays an error message "Sourcing information unavailable."
-
-- **Scenario:** API Error - Server Error
-  - Input: The API returns a 500 error with the message "Internal Server Error".
-  - Outcome: The component displays an error message "Failed to retrieve sourcing information."
+- **Scenario:** Unknown Sourcing
+  - Input: `sourcingStatus="unknown"`
+  - Outcome: Renders a badge with the text "Unknown" and a gray background (e.g., `bg-gray-600`)
 
 ## Out of Scope
-- Styling beyond the specified background and text colors is out of scope.
-- The backend implementation of the `/products/{product_id}/sourcing` endpoint is out of scope. This spec assumes that endpoint exists and returns the documented data contract.
-- Caching strategies beyond what `react-query` provides by default.
+- Handling of more than the three specified sourcing statuses.
+- Implementing any interactive functionality.
+- The component's placement or styling within a larger layout.
+- Internationalization of the badge text.
 
-## Verification Commands
-- `pnpm tsc --noEmit`
-- `pnpm run lint`
+```typescript
+// Target: src/components/ProductSourcingBadge.tsx
+import React from 'react';
+
+interface ProductSourcingBadgeProps {
+  sourcingStatus: "internal" | "external" | "unknown";
+}
+
+const ProductSourcingBadge: React.FC<ProductSourcingBadgeProps> = ({ sourcingStatus }) => {
+  let badgeText: string;
+  let backgroundColorClass: string;
+
+  switch (sourcingStatus) {
+    case "internal":
+      badgeText = "Internal";
+      backgroundColorClass = "bg-green-600";
+      break;
+    case "external":
+      badgeText = "External";
+      backgroundColorClass = "bg-blue-600";
+      break;
+    default:
+      badgeText = "Unknown";
+      backgroundColorClass = "bg-gray-600";
+      break;
+  }
+
+  return (
+    <div className={`inline-flex items-center rounded-md ${backgroundColorClass} px-2 py-1 text-xs font-medium text-white`}>
+      {badgeText}
+    </div>
+  );
+};
+
+export default ProductSourcingBadge;
+```

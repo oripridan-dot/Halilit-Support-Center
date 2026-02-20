@@ -344,7 +344,7 @@ def review_changes(auto_mode: bool = False) -> bool:
 
 # ---------------------------------------------------------------------------
 
-def execute_swarm(queue: list[dict]) -> list[dict]:
+def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
     """
     Parallel Execution Engine.
 
@@ -352,6 +352,9 @@ def execute_swarm(queue: list[dict]) -> list[dict]:
       • Accumulate consecutive parallel=True tasks into a batch.
       • When a parallel=False task appears (or queue ends), flush the batch
         via ThreadPoolExecutor, then run the sequential task interactively.
+      • After EVERY batch (parallel or sequential) the HOTL Steering Gate fires:
+        the Operator can approve, inspect diff, or reject+revert before the
+        next batch starts.
 
     Returns a list of failed task result dicts (empty if all succeeded).
     """
@@ -359,9 +362,10 @@ def execute_swarm(queue: list[dict]) -> list[dict]:
 
     batch: list[dict] = []
     failures: list[dict] = []
+    halted: list[bool] = [False]  # mutable flag accessible from closure
 
     def flush_batch() -> None:
-        if not batch:
+        if halted[0] or not batch:
             return
         count = len(batch)
         print(
@@ -374,20 +378,39 @@ def execute_swarm(queue: list[dict]) -> list[dict]:
                 if not res["success"]:
                     failures.append(res)
         batch.clear()
+        # ── HOTL STEERING GATE — fires after every parallel batch ──
+        if not auto_mode:
+            approved = review_changes(auto_mode=False)
+            if not approved:
+                print(f"{RED}❌ Batch rejected by Operator. Halting queue.{RESET}")
+                halted[0] = True
 
     for task in queue:
+        if halted[0]:
+            break
         if task.get("parallel", False):
             batch.append(task)
         else:
             flush_batch()
+            if halted[0]:
+                break
             print(
                 f"\n{YELLOW}🔒 Sequential task: {task['tool']} {task.get('args', '')}...{RESET}")
             res = execute_sequential(task)
             if not res.get("success", True):
                 failures.append(res)
+            # ── HOTL STEERING GATE — fires after every sequential task ──
+            if not auto_mode:
+                approved = review_changes(auto_mode=False)
+                if not approved:
+                    print(f"{RED}❌ Sequential task rejected by Operator. Halting queue.{RESET}")
+                    halted[0] = True
 
     flush_batch()
-    print(f"\n{GREEN}🏁 All objectives complete.{RESET}")
+    if halted[0]:
+        print(f"\n{YELLOW}⏹  Swarm halted at Operator's Steering Gate.{RESET}")
+    else:
+        print(f"\n{GREEN}🏁 All objectives complete.{RESET}")
     return failures
 
 
@@ -578,17 +601,16 @@ def main() -> None:
                     break
 
                 if confirm.lower() in ("", "y", "yes"):
-                    failures = execute_swarm(queue)
+                    failures = execute_swarm(queue, auto_mode=auto_mode)
                     plan = {"queue": []}
                     hr()
 
-                    # --- HOTL Steering Gate (post-swarm review) -----------
+                    # --- Post-swarm: auto-mode still needs a final gate pass ---
                     if not failures:
-                        accepted = review_changes(auto_mode=auto_mode)
-                        if not accepted:
-                            print(
-                                f"\n{YELLOW}Changes reverted. Provide a new instruction "
-                                f"or adjust your spec and re-run.{RESET}")
+                        if auto_mode:
+                            # In auto-mode the per-batch gates already auto-approved;
+                            # run one final commit to lock the full swarm result.
+                            review_changes(auto_mode=True)
                         consecutive_failures = 0
                         # ── OODA MUTATION CYCLE (runs silently after each successful batch) ──
                         _run_ooda_mutation_cycle()

@@ -2,6 +2,13 @@
 ## [v4.1] — 2026-02-20
 - [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
 - [refactor] Replaced the `ACCENT_MAP` with inline conditional styling for metric cards in `DashboardView.tsx`.
+- [docs] Updated formatting of architecture documentation.
+- [docs] Added sub-bullets to `navigationStore` properties in the architecture documentation.
+
+## [v4.1] — 2026-02-20
+## [v4.1] — 2026-02-20
+- [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
+- [refactor] Replaced the `ACCENT_MAP` with inline conditional styling for metric cards in `DashboardView.tsx`.
 
 ## [v4.1] — 2026-02-20
 - [docs] Updated formatting of architecture documentation.

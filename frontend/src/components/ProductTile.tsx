@@ -6,6 +6,8 @@ interface Product {
   image_url?: string | null;
   stock: number | null | undefined;
   price: number | null;
+  conductorProduct?: { image_url?: string | null } | null;
+  JITState?: { snap?: { thumbnail?: string | null } | null } | null;
 }
 
 interface Props {
@@ -13,7 +15,7 @@ interface Props {
 }
 
 const ProductTile: React.FC<Props> = ({ product }) => {
-  const { stock, price, name, image_url } = product;
+  const { stock, price, name, image_url, conductorProduct, JITState } = product;
 
   const isOutOfStock = stock === 0;
   const isUnconfirmedStock = stock === null || stock === undefined;
@@ -22,11 +24,23 @@ const ProductTile: React.FC<Props> = ({ product }) => {
   const borderColor = isOutOfStock ? 'border-red-500' : isUnconfirmedStock ? 'border-amber-500' : '';
   const hasIndicators = isOutOfStock || isUnconfirmedStock || isCallForPrice;
 
+  const imageSource = () => {
+    if (conductorProduct?.image_url) {
+      return 'Official Scout';
+    }
+    if (JITState?.snap?.thumbnail) {
+      return 'Inferred Scout';
+    }
+    return null;
+  };
+
+  const sourceBadge = imageSource();
+
   return (
     <div className={`relative border rounded-md shadow-md ${borderColor}`}>
       {/* Badges */}
       {(isOutOfStock || isUnconfirmedStock) && (
-        <div className="absolute top-0 right-0 p-2">
+        <div className="absolute top-0 right-0 p-2 z-10">
           {isOutOfStock && (
             <span className="bg-red-500 text-white px-2 py-1 rounded-md text-xs">
               OUT OF STOCK
@@ -38,6 +52,15 @@ const ProductTile: React.FC<Props> = ({ product }) => {
             </span>
           )}
         </div>
+      )}
+
+      {sourceBadge && (
+        <span
+          aria-label={`Source: ${sourceBadge}`}
+          className="absolute top-0 right-0 bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-700 dark:text-blue-300 z-20"
+        >
+          {sourceBadge}
+        </span>
       )}
 
       {/* Product Image */}
