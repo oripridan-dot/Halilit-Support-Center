@@ -109,6 +109,11 @@ echo "📦 [Final] Committing and pushing progress..."
 python3 "$FACTORY_PY" commit || echo "⚠️  Commit step encountered an error (non-fatal)"
 echo ""
 
+# ── Heartbeat: Catalog delta scan + HEARTBEAT.md ─────────────────────────────
+echo "🫀 [Heartbeat] Running catalog delta scan and writing HEARTBEAT.md..."
+python3 backend/factory/heartbeat_daemon.py || echo "⚠️  Heartbeat daemon encountered an error (non-fatal)"
+echo ""
+
 echo ""
 echo "☀️  ============================================="
 echo "☀️  Night Shift Complete — ${ELAPSED}s elapsed"

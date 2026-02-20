@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v9.7.2 — Chief)
+# Repository Instructions & Context (v9.7.4 — Level 6)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -28,7 +28,7 @@
 
 ## Project Overview
 
-**Halilit Support Center v9.7.2 (Chief)** — JIT product intelligence platform for musical instruments. Operator Console UI for inventory management and product support.
+**Halilit Support Center v9.7.4 (Chief)** — JIT product intelligence platform for musical instruments. Operator Console UI for inventory management and product support.
 
 - **Architecture**: Spec-driven Dark Factory. Specs in `specs/` are the **input**; code is the **output**. Never write code without reading the relevant spec first.
 - **Workflow**: `specs/interface/` → AI implements → verify outcome in app. See `OPERATOR_CONSOLE_SPEC.md` and `docs/WORKFLOW.md`.
@@ -70,7 +70,7 @@ cd frontend && pnpm dev                             # Frontend only (port 5173)
 
 ---
 
-## File Structure (v9.7.1)
+## File Structure (v9.7.4)
 
 ```
 backend/
@@ -119,7 +119,7 @@ specs/
 ├── 01_data/                  # Compliance, halilit_api, official_scout, catalog_organizer
 └── pricing_logic.md
 
-OPERATOR_CONSOLE_SPEC.md      # Master spec (Level 5 workflow)
+OPERATOR_CONSOLE_SPEC.md      # Master spec (Level 6 workflow)
 docs/                         # Dev documentation (QUICK_START, WORKFLOW, ARCHITECTURE, etc.)
 ```
 
@@ -188,4 +188,4 @@ When writing logic, verify it against the scenarios in `specs/behavior/` or `spe
 ### Rule 3: No "Galaxy" Code
 
 Do not suggest or import `GalaxyDashboard`, `Three.js`, or `React-Three-Fiber` unless explicitly instructed by a new Spec.
-**v9.7.2 — Chief** · February 2026
+**v9.7.4 — Chief** · February 2026

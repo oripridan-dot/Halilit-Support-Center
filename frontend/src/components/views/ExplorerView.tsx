@@ -63,7 +63,7 @@ interface IngestionProductDraft {
 }
 
 const ExplorerView: React.FC<ExplorerViewProps> = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [product, setProduct] = useState<ConductorProduct | null>(null);
   const [jitComputing, setJitComputing] = useState(false);

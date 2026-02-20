@@ -10,7 +10,13 @@ const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText
 
     return (
         <div className="bg-slate-900">
-            <img
+            <picture>
+      <source srcSet={`${src}.avif`} type="image/avif" />
+      <img
+        onError={(e) => {
+          e.currentTarget.onerror = null; // prevents looping
+          e.currentTarget.src = fallbackSrc;
+        }} loading="lazy"
                 src={imageUrl || "/placeholder.png"}
                 alt={defaultAltText}
                 onError={(e) => {

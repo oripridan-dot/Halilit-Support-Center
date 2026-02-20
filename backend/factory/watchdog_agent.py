@@ -238,6 +238,151 @@ def _run_tsc() -> dict:
     return {"status": "PASS", "source": "tsc", "log": ""}
 
 
+# ---------------------------------------------------------------------------
+# Wolverine — Compiler Error Feedback Loop
+# ---------------------------------------------------------------------------
+
+def extract_import_errors(compiler_log: str) -> list[dict]:
+    """
+    Parses tsc / Rollup / Vite compiler output and extracts actionable
+    import resolution failures.
+
+    Returns a list of dicts:
+        {"file": str, "bad_import": str, "line": int, "full_error": str}
+
+    Example patterns caught:
+        - "Cannot find module '../stores/navigationStore'"
+        - "Rollup failed to resolve import \"@/stores/navigationStore\""
+        - "error TS2307: Cannot find module 'src/stores/...'"
+    """
+    errors: list[dict] = []
+
+    # tsc: error TS2307 or TS2305 — "Cannot find module '...'"
+    tsc_pattern = re.compile(
+        r"^(?P<file>[^\(]+)\((?P<line>\d+),\d+\):.*?Cannot find module '(?P<imp>[^']+)'",
+        re.MULTILINE,
+    )
+    for m in tsc_pattern.finditer(compiler_log):
+        errors.append({
+            "file": m.group("file").strip(),
+            "bad_import": m.group("imp").strip(),
+            "line": int(m.group("line")),
+            "full_error": m.group(0).strip(),
+        })
+
+    # Rollup/Vite: "failed to resolve import '...' from '...'"
+    rollup_pattern = re.compile(
+        r"failed to resolve import [\"'](?P<imp>[^\"']+)[\"'] from [\"'](?P<file>[^\"']+)[\"']",
+        re.IGNORECASE,
+    )
+    for m in rollup_pattern.finditer(compiler_log):
+        errors.append({
+            "file": m.group("file").strip(),
+            "bad_import": m.group("imp").strip(),
+            "line": 0,
+            "full_error": m.group(0).strip(),
+        })
+
+    # Deduplicate by (file, bad_import)
+    seen: set[tuple[str, str]] = set()
+    unique: list[dict] = []
+    for e in errors:
+        key = (e["file"], e["bad_import"])
+        if key not in seen:
+            seen.add(key)
+            unique.append(e)
+
+    return unique
+
+
+def targeted_import_heal(compiler_log: str) -> bool:
+    """
+    Wolverine — Compiler Error Feedback Loop.
+
+    When tsc or Vite reports unresolved imports, this function:
+      1. Extracts the exact file + bad import path combination.
+      2. Asks the LLM to suggest the correct import path given the project layout.
+      3. Applies the fix directly via a string replace in the offending file.
+
+    Returns True if at least one fix was applied, False otherwise.
+    Architecture: Wolverine Gap-3 remediation (watchdog_agent.py).
+    """
+    import_errors = extract_import_errors(compiler_log)
+    if not import_errors:
+        return False
+
+    print(
+        f"🐺 Wolverine: {len(import_errors)} import error(s) detected — triggering targeted heal...")
+    fixed_any = False
+
+    for err in import_errors:
+        bad_file = err["file"]
+        bad_import = err["bad_import"]
+        print(f"   🔍  Healing: {bad_file}  ← bad import: '{bad_import}'")
+
+        # Build the absolute path to the file
+        candidate = ROOT_DIR / bad_file
+        if not candidate.exists():
+            candidate = FRONTEND_DIR / bad_file
+        if not candidate.exists():
+            print(f"      ⚠️  File not found on disk: {bad_file} — skipping.")
+            continue
+
+        file_content = candidate.read_text(encoding="utf-8")
+
+        # Ask the LLM to produce the corrected import line
+        heal_prompt = f"""A TypeScript/React file has an unresolvable import. Fix ONLY the broken import line.
+
+File: {bad_file}
+Bad import path: "{bad_import}"
+Compiler error: {err['full_error']}
+
+Project structure hints:
+- Navigation store is at: frontend/src/store/navigationStore.ts (singular "store", not "stores")
+- Hooks are at: frontend/src/hooks/
+- Components are at: frontend/src/components/
+- Types are at: frontend/src/types/index.ts
+
+Current file content (first 60 lines):
+{chr(10).join(file_content.splitlines()[:60])}
+
+Return ONLY the single corrected import line (e.g. import {{ useNavigationStore }} from '@/store/navigationStore';).
+No explanation. No fences. Just the corrected import statement."""
+
+        corrected_line = query_llm(
+            "You are a TypeScript import path expert. Return only the corrected import line.",
+            heal_prompt,
+            temperature=0.0,
+            model_tier="fast",
+        )
+
+        if not corrected_line:
+            print("      ❌ LLM returned no response.")
+            continue
+
+        corrected_line = corrected_line.strip().strip("`")
+
+        # Find and replace the bad import line in the file
+        bad_line_pattern = re.compile(
+            re.escape(bad_import).replace(r"\/", r"[/\\]"),
+            re.IGNORECASE,
+        )
+        # Find the actual import line containing the bad path
+        for original_line in file_content.splitlines():
+            if bad_import in original_line and original_line.strip().startswith("import"):
+                new_content = file_content.replace(
+                    original_line, corrected_line, 1)
+                candidate.write_text(new_content, encoding="utf-8")
+                print(
+                    f"      ✅ Fixed: '{original_line.strip()}' → '{corrected_line.strip()}'")
+                fixed_any = True
+                break
+        else:
+            print(f"      ⚠️  Could not locate the import line in {bad_file}.")
+
+    return fixed_any
+
+
 def _run_eslint() -> dict:
     """Run ESLint on JS/JSX files only (TSC handles TypeScript).
     Treats exit-code 2 with 'no files' / 'all ignored' as a clean pass."""
@@ -319,6 +464,46 @@ def _run_vitest() -> dict:
     return {"status": "PASS", "source": "vitest", "log": ""}
 
 
+def run_unit_tests(target_file: str = "") -> bool:
+    """
+    Executes physical Vitest unit tests in the frontend workspace.
+
+    Called by the Frontend Manager during TDD State 3 (Red Phase) and
+    State 5 (Green Phase) to verify React component logic.
+
+    Args:
+        target_file: If provided, runs only the tests matching that filename.
+                     Pass an empty string to run the full test suite.
+
+    Returns:
+        True if all tests pass (Green), False if any test fails (Red).
+    """
+    print(
+        f"🐕 Watchdog: Sniffing logic in {target_file if target_file else 'all components'}...")
+
+    cmd = ["pnpm", "test", "--", "--run", "--passWithNoTests"]
+    if target_file:
+        # Vitest accepts a filename filter as the last positional argument
+        cmd.append(Path(target_file).name)
+
+    result = subprocess.run(
+        cmd,
+        cwd=str(FRONTEND_DIR),
+        capture_output=True,
+        text=True,
+        timeout=120,
+    )
+
+    if result.returncode == 0:
+        print("   ✅ Watchdog confirms: Tests passed (Green Phase).")
+        return True
+
+    print("   ❌ Watchdog detected failures (Red Phase):")
+    # Print the last 15 lines to avoid console flood
+    print("\n".join(result.stdout.splitlines()[-15:]))
+    return False
+
+
 def run_diagnostics() -> dict:
     """Run all checks (tsc, eslint, pytest, vitest); return first failure or PASS."""
     print("🩺 Watchdog scanning system health...")
@@ -390,6 +575,10 @@ def run_watchdog() -> bool:
     """
     Execute a full watchdog cycle (diagnostics + prescription).
     Returns True if the system is healthy, False if a fix spec was written.
+
+    Wolverine self-healing:
+      If the first diagnostic run finds import/compiler errors, attempt an
+      automatic targeted_import_heal before falling back to LLM prescription.
     """
     REPAIRS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -401,6 +590,19 @@ def run_watchdog() -> bool:
             FIX_SPEC_PATH.unlink()
         print("✅ System is Healthy. No improvements needed.")
         return True
+
+    # ── Wolverine: auto-heal import errors before escalating ──────────────────
+    if report.get("log"):
+        healed = targeted_import_heal(report["log"])
+        if healed:
+            print("🐺 Wolverine: Import fixes applied. Re-running diagnostics...")
+            report = run_diagnostics()
+            if report["status"] == "PASS":
+                if FIX_SPEC_PATH.exists():
+                    FIX_SPEC_PATH.unlink()
+                print("✅ System healthy after Wolverine auto-heal.")
+                return True
+    # ──────────────────────────────────────────────────────────────────────────
 
     prescription = diagnose_and_prescribe(report)
 

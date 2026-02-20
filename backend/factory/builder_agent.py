@@ -87,9 +87,40 @@ def _detect_domain(spec_content: str) -> str:
     return "frontend" if fe_score >= be_score else "backend"
 
 
+_SAFE_PATH_RE = re.compile(r'^[\w./\-]+$')  # only safe filename characters
+_INVALID_PATH_CHARS = {"{", "}", "(", ")", "\n", "\r", " ", ";", "<", ">"}
+
+
+def _sanitize_path(raw: str) -> str | None:
+    """
+    Validates that an extracted file path looks like a real path and not
+    a fragment of LLM-generated code (Wolverine — Filepath Sanitization).
+
+    Returns the cleaned path string, or None if it smells like code syntax.
+    """
+    candidate = raw.strip().strip('`').strip('"').strip("'")
+    # Reject if it contains code-specific characters
+    if any(c in candidate for c in _INVALID_PATH_CHARS):
+        print(
+            f"⚠️  Wolverine: Rejecting unsafe path extraction: {candidate[:80]!r}")
+        return None
+    # Must contain a recognized source extension
+    if not re.search(r'\.(?:ts|tsx|py|js|jsx|css|json|md)$', candidate):
+        print(
+            f"⚠️  Wolverine: Path has no recognized extension: {candidate[:80]!r}")
+        return None
+    # Must not look like code (no spaces unless it's a path with spaces escaped)
+    if len(candidate.split()) > 4:
+        print(
+            f"⚠️  Wolverine: Path looks like prose, not a file: {candidate[:80]!r}")
+        return None
+    return candidate
+
+
 def _extract_target(spec_content: str, spec_file: Path) -> Path | None:
     """Return the absolute output path from the spec's Component/Target field.
     Falls back to the first path listed under '## Affected Files' (repair specs).
+    All extractions are passed through _sanitize_path to prevent garbage writes.
     """
     # 1. Standard Target / Component field
     match = re.search(
@@ -97,7 +128,9 @@ def _extract_target(spec_content: str, spec_file: Path) -> Path | None:
         spec_content, re.IGNORECASE
     )
     if match:
-        return PROJECT_ROOT / match.group(1).strip()
+        safe = _sanitize_path(match.group(1))
+        if safe:
+            return PROJECT_ROOT / safe
 
     # 2. Repair spec fallback: first backtick-quoted path in ## Affected Files
     section = re.search(
@@ -108,7 +141,9 @@ def _extract_target(spec_content: str, spec_file: Path) -> Path | None:
         path_match = re.search(r'`([^`]+\.(?:ts|tsx|py|js|jsx|css))`',
                                section.group(0))
         if path_match:
-            return PROJECT_ROOT / path_match.group(1).strip()
+            safe = _sanitize_path(path_match.group(1))
+            if safe:
+                return PROJECT_ROOT / safe
 
     return None
 

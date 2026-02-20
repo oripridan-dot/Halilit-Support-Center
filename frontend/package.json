@@ -1,7 +1,7 @@
 {
   "name": "halilit-support-frontend",
   "private": true,
-  "version": "9.7.2",
+  "version": "9.7.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -26,7 +26,10 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^14.2.1",
+    "@types/jest": "^30.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",

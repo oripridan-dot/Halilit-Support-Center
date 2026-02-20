@@ -28,6 +28,10 @@ build/
 # === LOGS ===
 logs/
 *.log
+
+# === FACTORY RUNTIME (volatile, not for VCS) ===
+FACTORY_KANBAN.md
+FACTORY_FAILURE_REPORT.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

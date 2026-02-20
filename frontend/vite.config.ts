@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
@@ -11,9 +12,12 @@ export default defineConfig({
     },
   },
   test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
+    css: true,
     // Exclude Playwright e2e specs — they are not Vitest tests
     exclude: ['tests/e2e/**', '**/node_modules/**'],
-    environment: 'jsdom',
   },
   server: {
     proxy: {

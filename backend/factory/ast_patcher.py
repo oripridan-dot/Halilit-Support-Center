@@ -32,6 +32,16 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
+try:
+    # agent_core and query_llm live in the same package (factory/)
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from agent_core import query_llm as _query_llm  # type: ignore
+    _LLM_AVAILABLE = True
+except Exception:  # noqa: BLE001
+    _LLM_AVAILABLE = False
+    _query_llm = None  # type: ignore[assignment]
+
 
 # ---------------------------------------------------------------------------
 # Public API
@@ -79,10 +89,54 @@ def apply_patch(
     replace_norm = replace_block.replace("\r\n", "\n").strip()
 
     if search_norm not in content:
-        print(f"❌ AST Patcher Fatal: Context anchor not found in {path.name}.")
+        print(
+            f"⚠️  AST Patcher: Context anchor not found in {path.name}. Activating Wolverine LLM Semantic Fallback...")
         print("--- Expected Anchor (first 120 chars) ---")
         print(search_norm[:120] + ("..." if len(search_norm) > 120 else ""))
         print("-----------------------------------------")
+
+        # ── Wolverine: LLM Semantic Fallback ────────────────────────────────
+        # The exact anchor wasn't found (whitespace drift, minor edits, etc.).
+        # Ask the LLM to locate the intent and apply the change semantically.
+        if _LLM_AVAILABLE and _query_llm and not dry_run:
+            print("   🐺 Wolverine: Sending to LLM for semantic patch...")
+            fallback_prompt = f"""The exact search block below was NOT found verbatim in the file.
+Your task: semantically locate where this change belongs and return the COMPLETE, UPDATED file content — no fences, no explanation.
+
+File: {path.name}
+
+===SEARCH BLOCK (intent to find)===
+{search_norm}
+
+===REPLACE BLOCK (replacement intent)===
+{replace_norm}
+
+===CURRENT FILE CONTENT===
+{content}
+
+Return ONLY the fully updated file content."""
+
+            updated = _query_llm(
+                "You are a precise code editor. Apply the described change semantically.",
+                fallback_prompt,
+                temperature=0.0,
+                model_tier="fast",
+            )
+            if updated and len(updated.strip()) > 50:
+                # Strip any accidental markdown fences the LLM may have added
+                import re as _re
+                updated = _re.sub(r'^```[a-zA-Z]*\n', '',
+                                  updated.strip(), flags=_re.MULTILINE)
+                updated = _re.sub(r'\n```\s*$', '',
+                                  updated.strip(), flags=_re.MULTILINE)
+                path.write_text(updated.strip() + "\n", encoding="utf-8")
+                print(f"   ✅ Wolverine: Semantic patch applied to {path.name}")
+                return True
+            else:
+                print("   ❌ Wolverine: LLM returned empty response. Patch aborted.")
+        else:
+            print("   ℹ️  Wolverine LLM fallback not available (LLM offline or dry_run).")
+
         return False
 
     if dry_run:
