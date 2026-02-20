@@ -1,6 +1,6 @@
 {
   "name": "halilit-support-center-root",
-  "version": "9.5.0",
+  "version": "9.7.3",
   "scripts": {
     "install:all": "pip install -r backend/requirements.txt && cd frontend && pnpm install",
     "dev": "PYTHONPATH=. python -m uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000 & cd frontend && pnpm dev",

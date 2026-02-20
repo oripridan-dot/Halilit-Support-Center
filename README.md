@@ -1,4 +1,4 @@
-# Halilit Support Center — Operator Console `v9.7.2 · Chief`
+# Halilit Support Center — Operator Console `v9.7.3 · Ribosome`
 
 JIT (Just-in-Time) product intelligence platform for musical instruments. Catalog + product graph from the Conductor pipeline; on-demand AI intelligence via Gemini 2.0 Flash.
 
@@ -60,12 +60,12 @@ Specs (source of truth for UI and data): **[specs/](specs/)**
 
 ## Bio-Swarm — Algorithmic Biology (v9.7.2)
 
-| Component | File | Purpose |
-|---|---|---|
-| **Genome specs** | `specs/genomes/*.yaml` | DNA — define States, Traits, Fitness goals, Phenotype Assertions |
-| **Ribosome** | `backend/factory/ribosome.py` | Genome interpreter — loads YAML, resolves `extends`, generates Synthesis Directives, runs PhenotypeVerifier |
+| Component           | File                                 | Purpose                                                                                                     |
+| ------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| **Genome specs**    | `specs/genomes/*.yaml`               | DNA — define States, Traits, Fitness goals, Phenotype Assertions                                            |
+| **Ribosome**        | `backend/factory/ribosome.py`        | Genome interpreter — loads YAML, resolves `extends`, generates Synthesis Directives, runs PhenotypeVerifier |
 | **Mutation Engine** | `backend/factory/mutation_engine.py` | OODA cycle — scans factory_logs, updates FitnessLedger, evolves agent DNA into `docs/LEARNED_GUIDELINES.md` |
-| **OODA loop** | `nexus.py` | Fires `_run_ooda_mutation_cycle()` automatically after every successful swarm batch |
+| **OODA loop**       | `nexus.py`                           | Fires `_run_ooda_mutation_cycle()` automatically after every successful swarm batch                         |
 
 ```bash
 # Genome workflow
