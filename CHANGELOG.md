@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-20
+## v4.1
+
+- [chore] Update `builder_agent.py` with an additional rule: "ALWAYS action Evolution Proposals directly. Do NOT defer to Tech Scout for review."
+- [chore] Update `fitness_ledger.json` with updated statistics for `patch_component`, `ui_validator`, and `builder` agents.
+
+## [v4.1] — 2026-02-20
 ### v4.1
 
 - [feat] Added `fitness_ledger.json` to store agent run data.

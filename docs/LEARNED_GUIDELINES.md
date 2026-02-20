@@ -144,3 +144,17 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Required anchor element was missing in the target file.
 **Fix:** Added verification that the anchor exists before patching.
 **Lesson:** ALWAYS verify that the specified anchor exists in the target file before attempting a `patch_component` operation.
+
+
+### [2026-02-20] Mutation — patch_component Gen 3
+**Symptom:** Patch application failed.
+**Root Cause:** Required anchor element was missing in the target file.
+**Fix:** Added verification that the anchor exists before patching.
+**Lesson:** ALWAYS verify that the specified anchor exists in the target file before attempting a `patch_component` operation.
+
+
+### [2026-02-20] Mutation — ui_validator Gen 2
+**Symptom:** UI validation failed.
+**Root Cause:** The agent failed to complete the UI validation task due to an overly broad instruction that requires updates across multiple specification documents.
+**Fix:** Decomposed UI validation tasks into smaller, sequential tasks.
+**Lesson:** ALWAYS decompose UI validation tasks that require updates to more than two specification documents into smaller, sequential tasks.
