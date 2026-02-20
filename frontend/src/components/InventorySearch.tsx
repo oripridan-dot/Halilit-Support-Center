@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDebounce } from './useDebounce';
 import { useThrottle } from './useThrottle';
 import { Loader2, XCircle } from 'lucide-react';
+import { INVENTORY_SEARCH_ENDPOINT } from '../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema';
+import { InventorySearchRequest, InventorySearchResponse, InventoryItem } from '../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema';
 
 interface InventorySearchProps {
-  // No props required.
 }
 
 const InventorySearch: React.FC<InventorySearchProps> = () => {
@@ -18,7 +19,6 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
   const debounceDelay = 300;
   const throttleInterval = 500;
 
-  // Debounce the search query
   useDebounce(
     () => {
       setDebouncedSearchQuery(searchQuery);
@@ -27,7 +27,6 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
     [searchQuery]
   );
 
-  // Throttle the debounced search query
   useThrottle(
     () => {
       setThrottledSearchQuery(debouncedSearchQuery);
@@ -48,12 +47,12 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
       setError(null);
 
       const requestBody: InventorySearchRequest = {
-        searchQuery: throttledSearchQuery,
+        query: throttledSearchQuery,
       };
 
       try {
         const response = await fetch(
-          INVENTORY_SEARCH_ENDPOINT,
+          `${INVENTORY_SEARCH_ENDPOINT}?query=${encodeURIComponent(throttledSearchQuery)}`,
           {
             method: 'GET',
             headers: {
@@ -78,7 +77,6 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
     fetchData();
   }, [throttledSearchQuery]);
 
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
@@ -88,7 +86,6 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
     setInventoryItems([]);
     setError(null);
   };
-
 
   return (
     <div className="dark:bg-zinc-900 p-4 rounded-lg shadow-md">
@@ -105,7 +102,7 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
             onClick={handleClear}
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
           >
-            <XCircle size={20} className="dark:text-zinc-400 hover:dark:text-zinc-200" />
+            <XCircle size={20} className="dark:text-zinc-400 hover:dark:text-zinc-100" />
           </button>
         )}
       </div>
@@ -117,22 +114,23 @@ const InventorySearch: React.FC<InventorySearchProps> = () => {
       )}
 
       {error && (
-        <div className="bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-4 py-2 mt-2 rounded-md">
+        <div className="text-red-500 py-4">
           {error}
         </div>
       )}
 
-      {!isLoading && !error && inventoryItems.length === 0 && searchQuery && (
-        <div className="dark:text-zinc-400 mt-2">No items found.</div>
+      {!isLoading && !error && inventoryItems.length === 0 && throttledSearchQuery && (
+        <div className="py-4 text-zinc-400">
+          No items found.
+        </div>
       )}
 
       {!isLoading && !error && inventoryItems.length > 0 && (
         <ul className="mt-2">
           {inventoryItems.map((item) => (
-            <li key={item.id} className="dark:text-zinc-200 py-2 border-b dark:border-zinc-700 last:border-none">
+            <li key={item.id} className="dark:text-zinc-100 py-2 border-b dark:border-zinc-700 last:border-none">
               <div className="font-semibold">{item.name}</div>
               <div>{item.description}</div>
-              <div>Quantity: {item.quantity}</div>
             </li>
           ))}
         </ul>

@@ -132,11 +132,11 @@ const SECTION_ICONS: Record<string, string> = {
 
 /**
  * Retrieves the appropriate icon for a given section name.
- * @param sectionName - The name of the section.
+ * @param name - The name of the section.
  * @returns The corresponding icon, or a default icon if not found.
  */
-function getSectionIcon(sectionName: string): string {
-  const normalizedName = sectionName.toLowerCase().replace(/[\s-]/g, "_");
+function getSectionIcon(name: string): string {
+  const normalizedName = name.toLowerCase().replace(/[\s-]/g, "_");
   for (const [pattern, icon] of Object.entries(SECTION_ICONS)) {
     if (normalizedName.includes(pattern)) return icon;
   }
@@ -161,7 +161,7 @@ export const ExplorationPanel: React.FC<ExplorationPanelProps> = ({
 
   const isSetupGuide = useMemo(() => {
     const data = (result.content ?? result) as Record<string, unknown>;
-    return topic === "setup" && Array.isArray((data as { sections?: unknown[] }).sections);
+    return topic === "setup" && Array.isArray(data.sections);
   }, [result, topic]);
 
   const guideData = useMemo(() => {
@@ -170,7 +170,7 @@ export const ExplorationPanel: React.FC<ExplorationPanelProps> = ({
     return {
       title: (data.title as string) || label,
       overview: (data.overview as string) || "",
-      sections: ((data as { sections?: GuideSection[] }).sections) || [],
+      sections: (data.sections as GuideSection[]) || [],
     };
   }, [result, isSetupGuide, label]);
 
@@ -238,11 +238,11 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
 
   /**
    * Toggles the checked state of a step within a section.
-   * @param sectionIndex - The index of the section.
-   * @param stepIndex - The index of the step.
+   * @param sectionIdx - The index of the section.
+   * @param stepIdx - The index of the step.
    */
-  const toggleStep = useCallback((sectionIndex: number, stepIndex: number): void => {
-    const key = `${sectionIndex}-${stepIndex}`;
+  const toggleStep = useCallback((sectionIdx: number, stepIdx: number): void => {
+    const key = `${sectionIdx}-${stepIdx}`;
     setCheckedSteps(prev => {
       const next = new Set(prev);
       next.has(key) ? next.delete(key) : next.add(key);
@@ -252,11 +252,11 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
 
   /**
    * Scrolls to a specific section within the guide.
-   * @param sectionIndex - The index of the section to scroll to.
+   * @param idx - The index of the section to scroll to.
    */
-  const scrollToSection = useCallback((sectionIndex: number): void => {
-    sectionRefs.current[sectionIndex]?.scrollIntoView({ behavior: "smooth", block: "start" });
-    setActiveSectionIdx(sectionIndex);
+  const scrollToSection = useCallback((idx: number): void => {
+    sectionRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActiveSectionIdx(idx);
   }, []);
 
   // Track scroll position to update active section in TOC
@@ -314,17 +314,17 @@ const SetupGuideView: React.FC<SetupGuideViewProps> = ({ guide, brandColor }): J
 
           {/* Section links */}
           <nav className="space-y-0.5">
-            {guide.sections.map((section, sectionIndex) => {
+            {guide.sections.map((section, idx) => {
               const sectionStepCount = section.steps?.length || 0;
-              const sectionCompleted = section.steps?.filter((_, stepIdx) =>
-                checkedSteps.has(`${sectionIndex}-${stepIdx}`)).length || 0;
-              const isActive = sectionIndex === activeSectionIdx;
+              const sectionCompleted = section.steps?.filter((_, si) =>
+                checkedSteps.has(`${idx}-${si}`)).length || 0;
+              const isActive = idx === activeSectionIdx;
               const isDone = sectionCompleted === sectionStepCount && sectionStepCount > 0;
 
               return (
                 <button
-                  key={sectionIndex}
-                  onClick={() => scrollToSection(sectionIndex)}
+                  key={idx}
+                  onClick={() => scrollToSection(idx)}
                   className={`w-full text-left px-2.5 py-2 rounded-lg text-[11px] transition-all flex items-center gap-2 group
                     ${isActive
                       ? "bg-slate-800/80 text-white"
@@ -470,11 +470,11 @@ const StepCard: React.FC<StepCardProps> = ({ step, stepNumber, isChecked, onTogg
         )}
 
         {/* Extra fields */}
-        {extraKeys.map(key => (
-          <div key={key} className="mt-1.5">
-            <span className="text-[9px] font-semibold text-zinc-600 uppercase tracking-wider">{formatLabel(key)}</span>
+        {extraKeys.map(k => (
+          <div key={k} className="mt-1.5">
+            <span className="text-[9px] font-semibold text-zinc-600 uppercase tracking-wider">{formatLabel(k)}</span>
             <p className="text-[11px] text-zinc-400 leading-relaxed mt-0.5">
-              {typeof step[key] === "string" ? (step[key] as string) : JSON.stringify(step[key])}
+              {typeof step[k] === "string" ? (step[k] as string) : JSON.stringify(step[k])}
             </p>
           </div>
         ))}
@@ -529,18 +529,18 @@ const GenericView: React.FC<GenericViewProps> = ({ data, brandColor }): JSX.Elem
 
 /**
  * Unwraps the result content, handling different data structures.
- * @param explorationResult - The exploration result.
+ * @param result - The exploration result.
  * @returns The unwrapped content.
  */
-function unwrapResult(explorationResult: ExplorationResult): unknown {
-  if (explorationResult.content && Array.isArray(explorationResult.content) && explorationResult.content.length === 1 && typeof explorationResult.content[0] === "object") {
-    return explorationResult.content[0];
+function unwrapResult(result: ExplorationResult): unknown {
+  if (result.content && Array.isArray(result.content) && result.content.length === 1 && typeof result.content[0] === "object") {
+    return result.content[0];
   }
 
-  if (explorationResult.content !== undefined) return explorationResult.content;
+  if (result.content !== undefined) return result.content;
 
   const clean: Record<string, unknown> = {};
-  for (const [key, value] of Object.entries(explorationResult)) {
+  for (const [key, value] of Object.entries(result)) {
     if (!META_KEYS.has(key)) clean[key] = value;
   }
   return clean;
@@ -548,11 +548,11 @@ function unwrapResult(explorationResult: ExplorationResult): unknown {
 
 /**
  * Formats a label by replacing underscores with spaces, converting camel case to separate words, and capitalizing each word.
- * @param labelKey - The label to format.
+ * @param key - The label to format.
  * @returns The formatted label.
  */
-function formatLabel(labelKey: string): string {
-  return labelKey
+function formatLabel(key: string): string {
+  return key
     .replace(/_/g, " ")
     .replace(/([a-z])([A-Z])/g, "$1 $2")
     .replace(/\b\w/g, char => char.toUpperCase());
@@ -700,11 +700,11 @@ const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, 
         </div>
       )}
       <div className="px-4 py-3 space-y-2">
-        {contentKeys.map(key => {
-          const value = obj[key];
-          if (isTipKey(key) && typeof value === "string") {
+        {contentKeys.map(k => {
+          const value = obj[k];
+          if (isTipKey(k) && typeof value === "string") {
             return (
-              <div key={key} className="flex items-start gap-2.5 bg-amber-500/[0.06] border border-amber-500/15 rounded-xl px-4 py-3">
+              <div key={k} className="flex items-start gap-2.5 bg-amber-500/[0.06] border border-amber-500/15 rounded-xl px-4 py-3">
                 <span className="text-amber-400 text-sm mt-0.5 shrink-0">{"\ud83d\udca1"}</span>
                 <div>
                   <span className="text-[9px] font-bold text-amber-400/70 uppercase tracking-widest">Pro Tip</span>
@@ -715,11 +715,11 @@ const RenderCard: React.FC<RenderCardProps> = ({ obj, brandColor, depth, index, 
           }
           return (
             <RenderValue
-              key={key}
+              key={k}
               value={value}
               brandColor={brandColor}
               depth={depth + 1}
-              label={key}
+              label={k}
             />
           );
         })}

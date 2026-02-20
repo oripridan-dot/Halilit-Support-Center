@@ -1,111 +1,112 @@
 # Spec: Integrate Responsive Image CDN with AVIF Support
 
-**Version:** 1.0
-**Component:** `src/components/ResponsiveImage/ResponsiveImage.tsx`
+**Target:** src/components/ResponsiveImage/ResponsiveImage.tsx
 
 ## Overview
-This component enables the display of responsive images, leveraging a Content Delivery Network (CDN) and providing AVIF image format support for modern browsers.  It dynamically generates image URLs based on screen size and preferred image format (AVIF if supported, falling back to WebP, then JPEG/PNG). The component prioritizes performance by loading appropriately sized images. This is in response to a tech scout proposal to use modern image formats to reduce load times.
+This component provides a responsive image solution utilizing a CDN that supports AVIF image format. It automatically selects the appropriate image size based on the device's screen width and prioritizes AVIF format if supported by the browser, falling back to other formats like WebP or JPEG. The goal is to optimize image delivery for performance and visual quality.
 
 ## Requirements
-- The component must accept a base image URL, a set of image sizes (breakpoints), and optional alt text.
-- The component must generate different image URLs for each specified breakpoint, using a predefined CDN URL transformation pattern.
-- The component must use the `<picture>` element with `<source>` elements for different image formats and sizes.
-- AVIF image format must be prioritized if the browser supports it. WebP should be the secondary format.
-- The component must gracefully fall back to JPEG/PNG if AVIF and WebP are not supported.
-- The component must use `loading="lazy"` attribute on the `<img>` tag.
-- The component must use Tailwind CSS for styling.
-- The component should accept a `className` prop to allow for custom styling.
-- The component should be fully type-safe using TypeScript.
-- The image URL generation should adhere to the following pattern: `CDN_BASE_URL/{image_base_url}_{width}.{format}` where:
-    - `CDN_BASE_URL` is a configurable environment variable (e.g., `NEXT_PUBLIC_IMAGE_CDN_URL`).
-    - `image_base_url` is the base image URL provided as a prop.
-    - `width` is the image width for a specific breakpoint.
-    - `format` is the image format (avif, webp, jpg/png).
-- The component should handle potential errors in image loading gracefully, without crashing the application.  (This spec does not specify error handling UI but implies graceful failure.)
-- The component should utilize browser-native lazy loading.
+- [x] The component should accept an `imagePath` prop representing the base path to the image on the CDN (e.g., `/images/products/my-image`).
+- [x] The component should generate `srcset` attributes for `<img>` tag, including different sizes tailored for various screen widths: 320, 640, 960, 1280, and 1920 pixels.
+- [x] The component must automatically detect browser support for AVIF format.
+- [x] If AVIF is supported, the `srcset` should include AVIF versions of the image for each size.
+- [x] If AVIF is not supported, the `srcset` should include WebP versions if supported, otherwise fallback to JPEG.
+- [x] The component should apply lazy loading using the `loading="lazy"` attribute.
+- [x] The component should include a `placeholder` prop, which is the file path to a low-resolution version of the image (e.g. `/images/products/my-image-placeholder.jpg`). This image should be displayed while the larger image loads.
+- [x] The component must use Tailwind CSS for styling, targeting a dark theme with slate-900 background and blue-500 accents where applicable.
+- [x] The component must include `alt` attribute with text that is passed via `altText` prop.
+- [x] The component should handle cases where the requested image size does not exist on the CDN, defaulting to a smaller available size or displaying an error (see "Behavior Scenarios").
+- [x] All CDN URLs should be constructed using HTTPS.
 
 ## Data Contract
-
-**Props:**
-
 ```typescript
 interface ResponsiveImageProps {
-  imageBaseUrl: string;
-  altText: string;
-  className?: string;
-  sizes?: {
-    sm?: number; // Small breakpoint (e.g., 640px)
-    md?: number; // Medium breakpoint (e.g., 768px)
-    lg?: number; // Large breakpoint (e.g., 1024px)
-    xl?: number; // Extra-large breakpoint (e.g., 1280px)
-    "2xl"?: number; // 2x Extra-large breakpoint (e.g., 1536px)
-  };
+  imagePath: string; // Base path to the image on the CDN (e.g., /images/products/my-image)
+  altText: string;  // Alt text for the image
+  placeholder: string; // Base path to the low-resolution placeholder image.
+  className?: string; // Optional CSS class names to apply to the image element.
 }
 ```
 
-**Environment Variables:**
-
-- `NEXT_PUBLIC_IMAGE_CDN_URL`: The base URL of the image CDN (e.g., `https://cdn.example.com`).
-
 ## Behavior Scenarios
-
-- **Scenario:** Browser supports AVIF
-  - Input: `imageBaseUrl = "products/my-image.jpg", sizes = { md: 768, lg: 1024 }`
-  - Expected Output:
+- **Scenario:** AVIF Support, Large Screen
+  - Input: `imagePath="/images/products/product-1", altText="Product 1", placeholder="/images/products/product-1-placeholder.jpg"`, screen width: 1920px, browser supports AVIF.
+  - Outcome: Renders an `<img>` tag with the following `srcset` attribute (line breaks added for readability):
     ```html
-    <picture>
-      <source srcset="CDN_BASE_URL/products/my-image_768.avif" media="(min-width: 768px)" type="image/avif">
-      <source srcset="CDN_BASE_URL/products/my-image_1024.avif" media="(min-width: 1024px)" type="image/avif">
-      <source srcset="CDN_BASE_URL/products/my-image_768.webp" media="(min-width: 768px)" type="image/webp">
-      <source srcset="CDN_BASE_URL/products/my-image_1024.webp" media="(min-width: 1024px)" type="image/webp">
-      <img src="CDN_BASE_URL/products/my-image.jpg" alt="Product Image" loading="lazy" />
-    </picture>
+    <img
+      src="/images/products/product-1-1920.avif"
+      srcset="
+        /images/products/product-1-320.avif 320w,
+        /images/products/product-1-640.avif 640w,
+        /images/products/product-1-960.avif 960w,
+        /images/products/product-1-1280.avif 1280w,
+        /images/products/product-1-1920.avif 1920w
+      "
+      alt="Product 1"
+      loading="lazy"
+      class="w-full h-auto object-cover bg-slate-900"
+      style="background-image: url('/images/products/product-1-placeholder.jpg'); background-size: cover; background-position: center;"
+    />
     ```
-- **Scenario:** Browser does not support AVIF but supports WebP
-  - Input: `imageBaseUrl = "products/my-image.jpg", sizes = { md: 768, lg: 1024 }`
-  - Expected Output: (Browser automatically selects WebP source)
+- **Scenario:** No AVIF Support, Medium Screen
+  - Input: `imagePath="/images/products/product-1", altText="Product 1", placeholder="/images/products/product-1-placeholder.jpg"`, screen width: 960px, browser does NOT support AVIF, but supports WebP.
+  - Outcome: Renders an `<img>` tag with the following `srcset` attribute:
     ```html
-    <picture>
-      <source srcset="CDN_BASE_URL/products/my-image_768.avif" media="(min-width: 768px)" type="image/avif">
-      <source srcset="CDN_BASE_URL/products/my-image_1024.avif" media="(min-width: 1024px)" type="image/avif">
-      <source srcset="CDN_BASE_URL/products/my-image_768.webp" media="(min-width: 768px)" type="image/webp">
-      <source srcset="CDN_BASE_URL/products/my-image_1024.webp" media="(min-width: 1024px)" type="image/webp">
-      <img src="CDN_BASE_URL/products/my-image.jpg" alt="Product Image" loading="lazy" />
-    </picture>
+    <img
+      src="/images/products/product-1-960.webp"
+      srcset="
+        /images/products/product-1-320.webp 320w,
+        /images/products/product-1-640.webp 640w,
+        /images/products/product-1-960.webp 960w,
+        /images/products/product-1-1280.webp 1280w,
+        /images/products/product-1-1920.webp 1920w
+      "
+      alt="Product 1"
+      loading="lazy"
+      class="w-full h-auto object-cover bg-slate-900"
+      style="background-image: url('/images/products/product-1-placeholder.jpg'); background-size: cover; background-position: center;"
+    />
     ```
-
-- **Scenario:** No sizes provided
-  - Input: `imageBaseUrl = "products/my-image.jpg", sizes = {}`
-  - Expected Output:
+- **Scenario:** No AVIF or WebP Support, Small Screen
+  - Input: `imagePath="/images/products/product-1", altText="Product 1", placeholder="/images/products/product-1-placeholder.jpg"`, screen width: 320px, browser does NOT support AVIF or WebP.
+  - Outcome: Renders an `<img>` tag with the following `srcset` attribute:
     ```html
-    <picture>
-      <img src="CDN_BASE_URL/products/my-image.jpg" alt="Product Image" loading="lazy" />
-    </picture>
+    <img
+      src="/images/products/product-1-320.jpg"
+      srcset="
+        /images/products/product-1-320.jpg 320w,
+        /images/products/product-1-640.jpg 640w,
+        /images/products/product-1-960.jpg 960w,
+        /images/products/product-1-1280.jpg 1280w,
+        /images/products/product-1-1920.jpg 1920w
+      "
+      alt="Product 1"
+      loading="lazy"
+      class="w-full h-auto object-cover bg-slate-900"
+      style="background-image: url('/images/products/product-1-placeholder.jpg'); background-size: cover; background-position: center;"
+    />
+    ```
+- **Scenario:** Image Size Not Available
+  - Input: `imagePath="/images/products/product-1", altText="Product 1", placeholder="/images/products/product-1-placeholder.jpg"`, screen width: 1920px, browser supports AVIF, but `/images/products/product-1-1920.avif` does not exist on the CDN.
+  - Outcome: The component should gracefully degrade by using the next smaller size available (e.g., 1280.avif) as the `src` and still include other sizes in the `srcset` (if available).  If *no* sizes are available, display a fallback image (e.g., from public/images/image-unavailable.png) and log an error to the console.
+- **Scenario:** Placeholder Image
+    - Input: `imagePath="/images/products/product-1", altText="Product 1", placeholder="/images/products/product-1-placeholder.jpg"`, screen width: 1920px, browser supports AVIF, Image loading.
+    - Outcome: While the `src` image is loading, the image tag's `background-image` style should be set to the `placeholder` URL, and the `background-size` to `cover`.
+- **Scenario:** Classname Passed
+  - Input: `imagePath="/images/products/product-1", altText="Product 1", placeholder="/images/products/product-1-placeholder.jpg", className="my-custom-class"`, screen width: 1920px, browser supports AVIF.
+  - Outcome: Renders an `<img>` tag that includes the provided classname:
+    ```html
+    <img
+      src="/images/products/product-1-1920.avif"
+      srcset=" ... "
+      alt="Product 1"
+      loading="lazy"
+      class="w-full h-auto object-cover bg-slate-900 my-custom-class"
+      style="background-image: url('/images/products/product-1-placeholder.jpg'); background-size: cover; background-position: center;"
+    />
     ```
 
-## Stitch UI Prompt
-
-```text
-// Target Component: ResponsiveImage
-// Description: A React component that displays responsive images with AVIF and WebP support.
-// Layout:  The component renders a <picture> element. Inside the <picture> element, it has multiple <source> elements for different image formats and sizes, and a fallback <img> element.
-// Style:  The component should use Tailwind CSS for styling. The alt text should be descriptive.
-// Dark mode, Tailwind CSS, slate-900 background, blue-500 accents.  Lazy loading is enabled.
-// Data slots:
-// imageBaseUrl: products/my-image.jpg
-// altText: Product Image
-// sizes: {md: 768, lg: 1024}
-// The CDN_BASE_URL is https://cdn.example.com (inferred from .env - do not hardcode).
-//  Ensure that different <source> elements are created for avif and webp formats. Ensure the <img> tag has loading="lazy".
-
-// Component hierarchy:
-// <picture>
-//  <source> (for each size and avif)
-//  <source> (for each size and webp)
-//  <img> (fallback)
-// </picture>
-```
-
-## Verification Commands
-- `pnpm tsc --noEmit`
-- `pnpm run lint`
+## Out of Scope
+- [Image optimization (this is handled by the CDN).]
+- [Error handling beyond console logging and displaying a default image.]
+- [Advanced lazy loading configurations (e.g., using Intersection Observer API directly). `loading="lazy"` is sufficient.]

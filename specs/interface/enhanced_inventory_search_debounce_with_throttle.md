@@ -2,78 +2,88 @@
 **Target:** frontend/src/components/InventorySearch.tsx
 
 ## Overview
-This specification outlines the implementation of an enhanced inventory search component, incorporating both debounce and throttle techniques to optimize performance and user experience. The component will provide a text input field for users to enter search queries, which will then trigger API requests to fetch matching inventory items. Debouncing will prevent excessive API calls during rapid typing, while throttling will ensure that at least one API call is made within a specific timeframe, even if the user pauses briefly.
+This specification outlines the implementation of an enhanced inventory search component featuring both debounce and throttle mechanisms to optimize search performance and reduce unnecessary API calls to the Halilit Support Center backend.  The component will allow users to search for inventory items by name or description, incorporating debounce to prevent rapid, successive requests during typing, and throttle to limit the maximum request frequency, improving the user experience and backend system load.
 
 ## Requirements
-- The component must include a text input field for entering search queries.
-- The component must use React 18 and TypeScript.
-- The component must be styled with Tailwind CSS using the dark theme and slate-900/blue-500 palette.
-- The component must debounce API calls for 300ms after the user stops typing.
-- The component must throttle API calls to ensure at least one call every 500ms, even during pauses in typing.
-- The component must display a loading indicator while the API request is in progress.
-- The component must display a list of inventory items that match the search query.
-- The component must handle potential API errors gracefully and display an error message to the user.
-- The component must fetch inventory data from the `/api/inventory/search` endpoint.
+- The component should provide a text input field for users to enter search queries.
+- The search functionality should incorporate a debounce mechanism with a delay of 300ms, preventing rapid requests while the user is typing.
+- The search functionality should also incorporate a throttle mechanism, limiting the maximum request frequency to once every 500ms, even if the debounced function is triggered more frequently.
+- The component should display a loading indicator while a search request is in progress.
+- The component should call the `/api/inventory/search` endpoint with the search query as a parameter.
+- The component should display the search results in a clear and concise manner. Assume the results are simply a list of strings (inventory item names).
+- The component should handle the case where no search results are found, displaying an appropriate message.
+- The component should use Tailwind CSS for styling, adhering to the dark theme (slate-900 background, blue-500 primary action color).
+- The component must be implemented using React 18 and TypeScript.
+- The component should be self-contained and reusable within the Halilit Support Center application.
 
 ## Data Contract
-**API Endpoint:** `/api/inventory/search` (Backend Spec Required - Out of Scope for this document, assuming it exists).
 
-**Request (GET):**
-```typescript
-interface InventorySearchRequest {
-  query: string;
-}
-```
+**Input Props:**
 
-**Response (JSON):**
-```typescript
-interface InventoryItem {
-  id: string;
-  name: string;
-  description: string;
-  quantity: number;
-}
-
-interface InventorySearchResponse {
-  items: InventoryItem[];
-}
-```
-
-**Component Props:**
 ```typescript
 interface InventorySearchProps {
-  // No props required.
+  onResults: (results: string[]) => void; // Callback function to pass search results to the parent component.
+  onError: (error: string) => void; // Callback function to handle errors during the search process.
+}
+```
+
+**API Request:**
+
+*   Endpoint: `/api/inventory/search`
+*   Method: `GET`
+*   Query Parameters:
+    *   `query: string` - The search query entered by the user.
+
+**API Response:**
+
+*   Success (200 OK):
+
+```json
+{
+  "results": ["Item A", "Item B", "Item C"]
+}
+```
+
+*   Failure (400 Bad Request - e.g., invalid query):
+
+```json
+{
+  "detail": "Invalid search query."
+}
+```
+
+*   Failure (500 Internal Server Error):
+
+```json
+{
+  "detail": "Internal server error."
 }
 ```
 
 ## Behavior Scenarios
-- **Scenario:** User types "bolt" quickly
-  - Input: User types "b", "bo", "bol", "bolt" in rapid succession.
-  - Outcome: Only the API request corresponding to "bolt" is made after a 300ms pause.  Throttle ensures at least one request is triggered even if the 300ms pause isn't met within a 500ms window since the first keystroke.
 
-- **Scenario:** User types "bolt" slowly with pauses
-  - Input: User types "b", pauses 400ms, types "o", pauses 400ms, types "l", pauses 400ms, types "t".
-  - Outcome: API requests are made after "b", "bo", "bol", and "bolt" after each 400ms pause, but due to the throttle, it will only send one request per 500ms.
+- **Scenario:** User types "widget" quickly.
+  - Input: User types "widget" in the search input field, with characters entered rapidly.
+  - Outcome: The debounce mechanism waits 300ms after the last character is typed. The throttle mechanism ensures that only one API call is made within a 500ms window. If the user types "widget", then pauses for > 300ms, then continues typing " 123", the search will be triggered for both terms (widget and widget 123), but separated by at least 500ms.
 
-- **Scenario:** API returns successfully
-  - Input: API responds with an array of `InventoryItem` objects.
-  - Outcome: The component renders a list of `InventoryItem` objects.
+- **Scenario:** User types a query, receives results.
+  - Input: User types "halilit" and pauses.  `/api/inventory/search?query=halilit` returns `{"results": ["Halilit X1", "Halilit Y2"]}`.
+  - Outcome: The `onResults` callback is called with `["Halilit X1", "Halilit Y2"]`. The parent component displays "Halilit X1" and "Halilit Y2" as the search results.
 
-- **Scenario:** API returns an error
-  - Input: API responds with a 500 error.
-  - Outcome: The component displays an error message to the user, such as "Error fetching inventory items."
+- **Scenario:** User types a query, receives no results.
+  - Input: User types "nonexistent" and pauses. `/api/inventory/search?query=nonexistent` returns `{"results": []}`.
+  - Outcome: The `onResults` callback is called with `[]`. The parent component displays "No results found."
 
-- **Scenario:** API takes a long time to respond
-  - Input: The API takes longer than 500ms to respond.
-  - Outcome: The loading indicator remains visible until the API responds.
+- **Scenario:** API returns an error.
+  - Input: User types "error" and pauses. `/api/inventory/search?query=error` returns a 500 Internal Server Error with `{"detail": "Simulated server error"}`.
+  - Outcome: The `onError` callback is called with `"Simulated server error"`. The parent component displays an error message indicating the search failed.
 
-- **Scenario:** User clears the input field
-  - Input: User deletes the search query from the input field.
-  - Outcome: The displayed list of inventory items is cleared.
+- **Scenario:** Rapid typing exceeding throttle limit
+  - Input: User continuously types with very short pauses between characters.
+  - Outcome: The search API is called no more frequently than once every 500ms, ensuring the throttle limit is respected even with the debounced function triggering more often. The loading indicator is displayed while waiting for each throttled search result.
 
 ## Out of Scope
-- Backend API implementation for `/api/inventory/search`.
-- Authentication and authorization.
-- Detailed styling beyond the basic Tailwind CSS dark theme.
-- Pagination of search results.
-- Search result highlighting.
+- This spec does not cover pagination of search results.  It's assumed all results fit on one page.
+- This spec does not cover any specific error handling UI within the `InventorySearch` component itself, only the propagation of errors via the `onError` prop.  The parent component is responsible for displaying error messages.
+- Authentication and authorization are assumed to be handled elsewhere. The component should not manage any user credentials.
+- This spec doesn't cover i18n/localization.

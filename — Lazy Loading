@@ -1,26 +1,31 @@
 import React from 'react';
 
-interface ImageWithFallbackProps {
-    imageUrl: string | undefined | null;
-    altText?: string;
+interface Props {
+  imageUrl?: string | null;
+  altText: string;
+  className?: string;
 }
 
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText }) => {
-    const defaultAltText = altText || "Product Image";
+const ImageWithFallback: React.FC<Props> = ({ imageUrl, altText, className }) => {
+  const placeholderImage = '/placeholder.png';
 
-    return (
-        <div className="bg-slate-900">
-            <img
-                src={imageUrl || "/placeholder.png"}
-                alt={defaultAltText}
-                onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/placeholder.png";
-                }}
-                className="object-cover w-full h-full"
-                loading="lazy"
-            />
-        </div>
-    );
+  const [imageSrc, setImageSrc] = React.useState<string | undefined>(
+    imageUrl || placeholderImage
+  );
+
+  const handleImageError = () => {
+    setImageSrc(placeholderImage);
+  };
+
+  return (
+    <img
+      src={imageSrc}
+      alt={altText}
+      className={`${className} object-cover`}
+      onError={handleImageError}
+      loading="lazy"
+    />
+  );
 };
 
 export default ImageWithFallback;
