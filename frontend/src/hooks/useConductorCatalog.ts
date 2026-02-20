@@ -1,13 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import {
-  CATALOG_ENDPOINT,
-  CatalogRequestParams,
-  PaginatedCatalogResponse,
+  CONDUCTOR_CATALOG_ENDPOINT,
   ConductorProduct,
-} from './implement_backend_pagination_for_catalog_data_in_useconducto.schema';
-
-export type { ConductorProduct };
+  ConductorCatalogParams,
+  PaginatedCatalogResponse,
 
 interface UseConductorCatalogProps {
   page?: number;
@@ -18,19 +15,19 @@ interface UseConductorCatalogProps {
   brand?: string;
 }
 
-export const useConductorCatalog = ({
+const useConductorCatalog = ({
   page = 1,
-  pageSize: pageSizeProp = 25,
+  pageSize = 25,
   searchQuery = '',
   sortBy = '',
   category = '',
   brand = '',
 }: UseConductorCatalogProps) => {
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<Error | null>(null);
 
-  const params: CatalogRequestParams = {
+  const params: ConductorCatalogParams = {
     page,
-    pageSize: pageSizeProp,
+    pageSize,
     searchQuery,
     sortBy,
     category,
@@ -41,87 +38,47 @@ export const useConductorCatalog = ({
     data,
     isLoading,
     isError,
-  } = useQuery<PaginatedCatalogResponse, Error>({
-    queryKey: ['catalog', params],
-    queryFn: async () => {
-      const url = new URL(CATALOG_ENDPOINT, window.location.origin);
-      Object.entries(params).forEach(([key, value]) => {
-        if (value !== '' && value !== undefined) {
-          url.searchParams.append(key, String(value));
-        }
-      });
-      const response = await fetch(url.toString());
+  } = useQuery<PaginatedCatalogResponse, Error>(
+    ['catalog', params],
+    async () => {
+      const queryParams = new URLSearchParams();
+      if (params.page !== undefined) queryParams.append('page', String(params.page));
+      if (params.pageSize !== undefined) queryParams.append('pageSize', String(params.pageSize));
+      if (params.searchQuery) queryParams.append('searchQuery', params.searchQuery);
+      if (params.sortBy) queryParams.append('sortBy', params.sortBy);
+      if (params.category) queryParams.append('category', params.category);
+      if (params.brand) queryParams.append('brand', params.brand);
 
+      const url = `${CONDUCTOR_CATALOG_ENDPOINT}?${queryParams.toString()}`;
+      const response = await fetch(url);
       if (!response.ok) {
-        const msg = `HTTP error! status: ${response.status}`;
-        setError(msg);
-        throw new Error(msg);
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json();
+      return response.json() as Promise<PaginatedCatalogResponse>;
     },
-  });
+    {
+      onError: (err: Error) => {
+        setError(err);
+      },
+    }
+  );
 
-  const products: ConductorProduct[] = data?.products || [];
+  const products = data?.products || [];
   const totalItems = data?.totalItems || 0;
   const totalPages = data?.totalPages || 0;
   const currentPage = data?.currentPage || 1;
-  const pageSize = data?.pageSize || pageSizeProp;
+  const itemsPerPage = data?.pageSize || 25;
 
   return {
     products,
     totalItems,
     totalPages,
     currentPage,
-    pageSize,
+    pageSize: itemsPerPage,
     isLoading,
-    isError,
+    isError: isError || !!error,
     error,
   };
 };
 
 export default useConductorCatalog;
-
-// ─── Stub hooks (awaiting implementation) ───────────────────────────────────
-// These are re-exported from hooks/index.ts; stubs keep the barrel valid.
-
-export const useProductsByGalaxy = (_galaxyId?: string) => ({
-  products: [] as ConductorProduct[],
-  isLoading: false,
-  isError: false,
-});
-
-export const useProductsBySpectrum = (_spectrumId?: string) => ({
-  products: [] as ConductorProduct[],
-  isLoading: false,
-  isError: false,
-});
-
-export const useProductRelationships = (_productId?: string) => ({
-  relationships: [],
-  isLoading: false,
-  isError: false,
-});
-
-export const useProductFamily = (_familyId?: string) => ({
-  family: null,
-  isLoading: false,
-  isError: false,
-});
-
-export const useProductVariants = (_productId?: string) => ({
-  variants: [] as ConductorProduct[],
-  isLoading: false,
-  isError: false,
-});
-
-export const useConductorProductsByCategory = (_category?: string) => ({
-  products: [] as ConductorProduct[],
-  isLoading: false,
-  isError: false,
-});
-
-export const useSpectrumStar = (_spectrumId?: string) => ({
-  star: null,
-  isLoading: false,
-  isError: false,
-});
