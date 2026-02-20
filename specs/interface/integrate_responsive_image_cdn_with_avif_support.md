@@ -1,9 +1,10 @@
 # Spec: Integrate Responsive Image CDN with AVIF Support
 
-**Target:** src/components/ResponsiveImage/ResponsiveImage.tsx
+**Version:** 1.0
+**Component:** `src/components/ResponsiveImage/ResponsiveImage.tsx`
 
 ## Overview
-This component enables the display of responsive images, leveraging a Content Delivery Network (CDN) and providing AVIF image format support for modern browsers.  It dynamically generates image URLs based on screen size and preferred image format (AVIF if supported, falling back to WebP, then JPEG/PNG). The component prioritizes performance by loading appropriately sized images.
+This component enables the display of responsive images, leveraging a Content Delivery Network (CDN) and providing AVIF image format support for modern browsers.  It dynamically generates image URLs based on screen size and preferred image format (AVIF if supported, falling back to WebP, then JPEG/PNG). The component prioritizes performance by loading appropriately sized images. This is in response to a tech scout proposal to use modern image formats to reduce load times.
 
 ## Requirements
 - The component must accept a base image URL, a set of image sizes (breakpoints), and optional alt text.
@@ -16,11 +17,12 @@ This component enables the display of responsive images, leveraging a Content De
 - The component should accept a `className` prop to allow for custom styling.
 - The component should be fully type-safe using TypeScript.
 - The image URL generation should adhere to the following pattern: `CDN_BASE_URL/{image_base_url}_{width}.{format}` where:
-    - `CDN_BASE_URL` is a configurable environment variable.
+    - `CDN_BASE_URL` is a configurable environment variable (e.g., `NEXT_PUBLIC_IMAGE_CDN_URL`).
     - `image_base_url` is the base image URL provided as a prop.
     - `width` is the image width for a specific breakpoint.
     - `format` is the image format (avif, webp, jpg/png).
 - The component should handle potential errors in image loading gracefully, without crashing the application.  (This spec does not specify error handling UI but implies graceful failure.)
+- The component should utilize browser-native lazy loading.
 
 ## Data Contract
 
@@ -29,51 +31,81 @@ This component enables the display of responsive images, leveraging a Content De
 ```typescript
 interface ResponsiveImageProps {
   imageBaseUrl: string;
-  alt: string;
-  sizes: {
-    [key: string]: number; // e.g., { small: 320, medium: 768, large: 1280 } representing screen width breakpoints
+  altText: string;
+  className?: string;
+  sizes?: {
+    sm?: number; // Small breakpoint (e.g., 640px)
+    md?: number; // Medium breakpoint (e.g., 768px)
+    lg?: number; // Large breakpoint (e.g., 1024px)
+    xl?: number; // Extra-large breakpoint (e.g., 1280px)
+    "2xl"?: number; // 2x Extra-large breakpoint (e.g., 1536px)
   };
-  className?: string; // Optional Tailwind CSS class names
 }
 ```
 
+**Environment Variables:**
+
+- `NEXT_PUBLIC_IMAGE_CDN_URL`: The base URL of the image CDN (e.g., `https://cdn.example.com`).
+
 ## Behavior Scenarios
 
-- **Scenario:** Browser supports AVIF, Small Screen
-  - Input: `imageBaseUrl` = "images/hero", `alt` = "Hero Image", `sizes` = `{ small: 320, medium: 768, large: 1280 }`, screen width = 320px
-  - Outcome:
-    - `<picture>` element is rendered.
-    - First `<source>` element has `srcset` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/images/hero_320.avif` and `type` attribute: "image/avif".
-    - Second `<source>` element has `srcset` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/images/hero_320.webp` and `type` attribute: "image/webp".
-    - `<img>` element has `src` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/images/hero_320.jpg`, `alt` attribute: "Hero Image", and `loading` attribute: "lazy".
-    - Tailwind classes are applied: `className` prop, plus `w-full h-auto`.
+- **Scenario:** Browser supports AVIF
+  - Input: `imageBaseUrl = "products/my-image.jpg", sizes = { md: 768, lg: 1024 }`
+  - Expected Output:
+    ```html
+    <picture>
+      <source srcset="CDN_BASE_URL/products/my-image_768.avif" media="(min-width: 768px)" type="image/avif">
+      <source srcset="CDN_BASE_URL/products/my-image_1024.avif" media="(min-width: 1024px)" type="image/avif">
+      <source srcset="CDN_BASE_URL/products/my-image_768.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="CDN_BASE_URL/products/my-image_1024.webp" media="(min-width: 1024px)" type="image/webp">
+      <img src="CDN_BASE_URL/products/my-image.jpg" alt="Product Image" loading="lazy" />
+    </picture>
+    ```
+- **Scenario:** Browser does not support AVIF but supports WebP
+  - Input: `imageBaseUrl = "products/my-image.jpg", sizes = { md: 768, lg: 1024 }`
+  - Expected Output: (Browser automatically selects WebP source)
+    ```html
+    <picture>
+      <source srcset="CDN_BASE_URL/products/my-image_768.avif" media="(min-width: 768px)" type="image/avif">
+      <source srcset="CDN_BASE_URL/products/my-image_1024.avif" media="(min-width: 1024px)" type="image/avif">
+      <source srcset="CDN_BASE_URL/products/my-image_768.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="CDN_BASE_URL/products/my-image_1024.webp" media="(min-width: 1024px)" type="image/webp">
+      <img src="CDN_BASE_URL/products/my-image.jpg" alt="Product Image" loading="lazy" />
+    </picture>
+    ```
 
-- **Scenario:** Browser does NOT support AVIF, Medium Screen
-  - Input: `imageBaseUrl` = "product/thumbnail", `alt` = "Product Thumbnail", `sizes` = `{ small: 320, medium: 768, large: 1280 }`, screen width = 800px (browser AVIF support is disabled for testing)
-  - Outcome:
-    - `<picture>` element is rendered.
-    - First `<source>` element has `srcset` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/product/thumbnail_768.webp` and `type` attribute: "image/webp".
-    - `<img>` element has `src` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/product/thumbnail_768.jpg`, `alt` attribute: "Product Thumbnail", and `loading` attribute: "lazy".
-    - Tailwind classes are applied: `className` prop, plus `w-full h-auto`.
+- **Scenario:** No sizes provided
+  - Input: `imageBaseUrl = "products/my-image.jpg", sizes = {}`
+  - Expected Output:
+    ```html
+    <picture>
+      <img src="CDN_BASE_URL/products/my-image.jpg" alt="Product Image" loading="lazy" />
+    </picture>
+    ```
 
-- **Scenario:** Large Screen, Custom Class Name
-  - Input: `imageBaseUrl` = "blog/post", `alt` = "Blog Post Image", `sizes` = `{ small: 320, medium: 768, large: 1280 }`, screen width = 1400px, `className` = "rounded-lg shadow-md"
-  - Outcome:
-    - `<picture>` element is rendered.
-    - First `<source>` element has `srcset` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/blog/post_1280.avif` and `type` attribute: "image/avif".
-    - Second `<source>` element has `srcset` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/blog/post_1280.webp` and `type` attribute: "image/webp".
-    - `<img>` element has `src` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/blog/post_1280.jpg`, `alt` attribute: "Blog Post Image", and `loading` attribute: "lazy".
-    - Tailwind classes are applied: `rounded-lg shadow-md w-full h-auto`.
+## Stitch UI Prompt
 
-- **Scenario:** Empty Sizes Object
-  - Input: `imageBaseUrl` = "misc/logo", `alt` = "Company Logo", `sizes` = `{}`, screen width = irrelevant.
-  - Outcome:
-    - `<img>` element is rendered.
-    - `<img>` element has `src` attribute: `${process.env.NEXT_PUBLIC_CDN_BASE_URL}/misc/logo_.jpg`, `alt` attribute: "Company Logo", and `loading` attribute: "lazy". The `width` parameter is missing from the generated URL because no sizes are provided.
-    - Tailwind classes are applied: `w-full h-auto`.
+```text
+// Target Component: ResponsiveImage
+// Description: A React component that displays responsive images with AVIF and WebP support.
+// Layout:  The component renders a <picture> element. Inside the <picture> element, it has multiple <source> elements for different image formats and sizes, and a fallback <img> element.
+// Style:  The component should use Tailwind CSS for styling. The alt text should be descriptive.
+// Dark mode, Tailwind CSS, slate-900 background, blue-500 accents.  Lazy loading is enabled.
+// Data slots:
+// imageBaseUrl: products/my-image.jpg
+// altText: Product Image
+// sizes: {md: 768, lg: 1024}
+// The CDN_BASE_URL is https://cdn.example.com (inferred from .env - do not hardcode).
+//  Ensure that different <source> elements are created for avif and webp formats. Ensure the <img> tag has loading="lazy".
 
-## Out of Scope
-- Image optimization techniques (e.g., compression, quality settings) are assumed to be handled by the CDN.
-- Error handling UI (e.g., displaying a placeholder image or error message) is not specified in this version.  The component should avoid crashing the page but how errors are displayed is left to a future specification.
-- Advanced CDN features like image manipulation (cropping, watermarking) are not covered.
-- Configuration of the `CDN_BASE_URL` environment variable is out of scope.  It is assumed to be set.
+// Component hierarchy:
+// <picture>
+//  <source> (for each size and avif)
+//  <source> (for each size and webp)
+//  <img> (fallback)
+// </picture>
+```
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

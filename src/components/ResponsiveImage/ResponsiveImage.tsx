@@ -2,74 +2,62 @@ import React from 'react';
 
 interface ResponsiveImageProps {
   imageBaseUrl: string;
-  alt: string;
-  sizes: {
-    [key: string]: number;
-  };
+  altText: string;
   className?: string;
+  sizes?: {
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+    "2xl"?: number;
+  };
 }
 
 const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   imageBaseUrl,
-  alt,
-  sizes,
+  altText,
   className,
+  sizes,
 }) => {
-  const cdnBaseUrl = process.env.NEXT_PUBLIC_CDN_BASE_URL;
+  const CDN_BASE_URL = process.env.NEXT_PUBLIC_IMAGE_CDN_URL;
 
-  if (!cdnBaseUrl) {
-    console.error("NEXT_PUBLIC_CDN_BASE_URL is not defined");
+  if (!CDN_BASE_URL) {
+    console.error('NEXT_PUBLIC_IMAGE_CDN_URL is not defined');
     return (
-      <img
-        src="" // Or a placeholder
-        alt={alt}
-        className={`w-full h-auto ${className || ''}`}
-        loading="lazy"
-      />
+      <div className="bg-slate-900 text-red-500 p-2">
+        Image CDN URL not configured.
+      </div>
     );
   }
 
-  const generateImageUrl = (width: number, format: 'avif' | 'webp' | 'jpg') => {
-    return `${cdnBaseUrl}/${imageBaseUrl}_${width}.${format}`;
+  const generateImageUrl = (width: number, format: 'avif' | 'webp' | 'jpg' | 'png') => {
+    return `${CDN_BASE_URL}/${imageBaseUrl.replace(/\.(jpg|jpeg|png)$/, '')}_${width}.${format}`;
   };
 
-  const hasSizes = Object.keys(sizes).length > 0;
-
-  if (!hasSizes) {
-    return (
-      <img
-        src={`${cdnBaseUrl}/${imageBaseUrl}_.jpg`}
-        alt={alt}
-        className={`w-full h-auto ${className || ''}`}
-        loading="lazy"
-      />
-    );
-  }
-
+  const hasSizes = sizes && Object.keys(sizes).length > 0;
 
   return (
-    <picture>
-      {Object.entries(sizes).map(([key, width]) => (
-        <React.Fragment key={key}>
-          <source
-            srcSet={generateImageUrl(width, 'avif')}
-            type="image/avif"
-            media={`(max-width: ${width}px)`}
-          />
-          <source
-            srcSet={generateImageUrl(width, 'webp')}
-            type="image/webp"
-            media={`(max-width: ${width}px)`}
-          />
-        </React.Fragment>
-      ))}
+    <picture className={className}>
+      {hasSizes &&
+        Object.entries(sizes!).map(([key, width]) => (
+          <>
+            <source
+              key={`${key}-avif`}
+              srcSet={generateImageUrl(width!, 'avif')}
+              media={`(min-width: ${width}px)`}
+              type="image/avif"
+            />
+            <source
+              key={`${key}-webp`}
+              srcSet={generateImageUrl(width!, 'webp')}
+              media={`(min-width: ${width}px)`}
+              type="image/webp"
+            />
+          </>
+        ))}
       <img
-        src={generateImageUrl(
-          Object.values(sizes).sort((a, b) => b - a)[0] || 1,
-          'jpg'
-        )}
-        alt={alt}
-        className={`w-full h-auto ${className || ''}`}
+        src={`${CDN_BASE_URL}/${imageBaseUrl}`}
+        alt={altText}
         loading="lazy"
       />
     </picture>
