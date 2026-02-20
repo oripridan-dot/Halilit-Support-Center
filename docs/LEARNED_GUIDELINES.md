@@ -113,3 +113,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** `fixes` attribute was missing.
 **Fix:** Added the missing `fixes` attribute.
 **Lesson:** ALWAYS validate object attribute existence.
+
+### [2026-02-20] Initialize Data Attributes
+**Symptom:** `ui_validator_agent.py` raised an AttributeError.
+**Root Cause:** FixReport objects lacked a default 'fixes' attribute.
+**Fix:** Initialized the 'fixes' attribute in FixReport.
+**Lesson:** ALWAYS initialize data object attributes.
