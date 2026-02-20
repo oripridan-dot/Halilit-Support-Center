@@ -77,6 +77,28 @@
 - [fix] Improved graceful fallback to full text read if embedding API is unavailable in get_relevant_lore.
 - [chore] Formatted mcp_servers.json for readability and changed web-search enabled status to true.
 
+## [v9.7.2] — 2026-02-20
+
+### Algorithmic Biology — Bio-Swarm Architecture
+- [feat] `specs/genomes/` — DNA Genome YAML schema: States (FSM), Traits, Mutations_Allowed, Phenotype_Assertions, `extends` inheritance
+- [feat] `specs/genomes/base_cell.yaml` — parent genome (ZERO_CRASH_RENDER); States: LOADING/ERROR/EMPTY/READY
+- [feat] `specs/genomes/product_explorer.yaml` — ZERO_CLICK_DISCOVERY fitness; SourceBadgePhenotype, StreamingPhenotype, MemoryPhenotype
+- [feat] `specs/genomes/inventory_grid.yaml` — MAX_SCAN_VELOCITY fitness; GridDensityPhenotype, PricePhenotype, SearchPhenotype
+- [feat] `backend/factory/ribosome.py` — Genome Interpreter Engine: loads YAML, resolves `extends`, calls LLM for Synthesis Directive, runs PhenotypeVerifier (VIABLE threshold ≥ 80/100)
+- [feat] `backend/factory/mutation_engine.py` — Genetic Feedback Loop: scans factory_logs, FitnessLedger (JSON), generates micro-heuristics, injects into LEARNED_GUIDELINES.md
+- [feat] `nexus.py` — OODA: `_run_ooda_mutation_cycle()` fires automatically after every successful swarm batch
+- [feat] `factory.py` — `synthesize`, `mutate`, `fitness` commands
+- [feat] `backend/factory/chief_agent.py` — knows `synthesize` (PARALLEL SAFE) and `mutate` (SEQUENTIAL) tools
+- [feat] `backend/services/improvement_cycle.py` v4.0 — `auto_mutate`, `GET /fitness`, `POST /mutate`, `POST /cycles/{id}/rewind`
+
+### ProductDetailView — VIABLE 100/100
+- [feat] `SourceBadge` component: COMMERCIAL (emerald), OFFICIAL (blue), CONTEXTUAL (amber) — visually distinct
+- [feat] RENDERED_PARTIAL state: greyed-out badge + Lock icon for unavailable sources
+- [feat] Source availability logic derived from real catalog/JIT state (not mock data)
+- [fix] `SkeletonHeader`: `role=status` + `aria-label` — unambiguously loading UI, not synthetic data
+- [feat] `useJITIntelligence` exposes `cancelStream()` — STRICT_JIT: component calls it explicitly on unmount
+- [fix] `query_llm` signature: changed `model=SMART_MODEL` → `model_tier="smart"` in ribosome.py and mutation_engine.py
+
 ## [v9.7.1] — 2026-02-20
 
 ### Cleanup & Hardening

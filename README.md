@@ -1,8 +1,10 @@
-# Halilit Support Center — Operator Console `v9.7.1 · Chief`
+# Halilit Support Center — Operator Console `v9.7.2 · Chief`
 
 JIT (Just-in-Time) product intelligence platform for musical instruments. Catalog + product graph from the Conductor pipeline; on-demand AI intelligence via Gemini 2.0 Flash.
 
-**Workflow:** Dark Factory. Specs in `specs/` are the **input**; code is the **output**. The AI implements specs exactly. See [docs/](docs/) and `.cursorrules` (Dark Factory Protocol). Run the supervisor: `PYTHONPATH=. python3 backend/factory_supervisor.py [--rebuild]`.
+**Architecture:** Algorithmic Biology — Dark Factory powered by DNA Genomes, Ribosome interpreter, and a Mutation Engine (Genetic Feedback Loop). Specs in `specs/genomes/` define organism fitness goals; the Ribosome generates Synthesis Directives; the Builder materialises code; the Mutation Engine evolves agent DNA via OODA cycles.
+
+**Workflow:** Dark Factory. Specs in `specs/` are the **input**; code is the **output**. The AI implements specs exactly. See [docs/](docs/). Run the master controller: `python factory.py start`.
 
 ---
 
@@ -14,7 +16,11 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r backend/requirements.txt
 cd frontend && (pnpm install || npm install) && cd ..
 
-# Run the app
+# Run the app (preferred — Master Factory Controller)
+export GEMINI_API_KEY="your-key"
+python factory.py start          # backend (8000) + frontend (5173)
+
+# Or legacy
 ./factory_reset.sh
 ```
 
@@ -48,7 +54,29 @@ Specs (source of truth for UI and data): **[specs/](specs/)**
 - **Frontend:** React 18, TypeScript, Vite, Zustand, React Query, Tailwind
 - **Backend:** Python 3.11+, FastAPI, Conductor CLI (ingest, sync, rebuild-catalog)
 - **Data:** Catalog from `backend/data`; product graph (families, relationships); JIT per product
+- **AI:** Gemini 2.0 Flash (`gemini-2.0-flash`) via `google-genai`; Gemini 2.0 Flash Lite for fast ops
 
 ---
 
-**Operator Console** · Spec-driven · [docs/](docs/)
+## Bio-Swarm — Algorithmic Biology (v9.7.2)
+
+| Component | File | Purpose |
+|---|---|---|
+| **Genome specs** | `specs/genomes/*.yaml` | DNA — define States, Traits, Fitness goals, Phenotype Assertions |
+| **Ribosome** | `backend/factory/ribosome.py` | Genome interpreter — loads YAML, resolves `extends`, generates Synthesis Directives, runs PhenotypeVerifier |
+| **Mutation Engine** | `backend/factory/mutation_engine.py` | OODA cycle — scans factory_logs, updates FitnessLedger, evolves agent DNA into `docs/LEARNED_GUIDELINES.md` |
+| **OODA loop** | `nexus.py` | Fires `_run_ooda_mutation_cycle()` automatically after every successful swarm batch |
+
+```bash
+# Genome workflow
+python factory.py synthesize specs/genomes/product_explorer.yaml   # generate Synthesis Directive
+python factory.py build specs/temp/synthesis_genome_*.md           # materialise code
+python factory.py mutate                                            # run OODA mutation cycle
+python factory.py fitness                                           # view FitnessLedger
+```
+
+Current VIABLE genomes: `base_cell`, `product_explorer` (100/100), `inventory_grid`
+
+---
+
+**Operator Console** · Spec-driven · Bio-Swarm v9.7.2 · [docs/](docs/)

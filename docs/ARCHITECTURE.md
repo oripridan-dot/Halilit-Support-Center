@@ -40,6 +40,33 @@ The Halilit Support Center is a web application designed as a data-forward conso
 *   `scribe_agent.py`: Regenerates documentation to reflect the current codebase.
 *   `spec_writer.py`: Translates human intent into detailed Markdown specifications.
 *   `builder_agent.py`: Materializes code from a specification.
+*   `chief_agent.py`: Orchestrates the swarm — delegates to builder, optimizer, watchdog, and Bio-Swarm tools.
+*   `tech_lead_agent.py`: Validates output quality before promotion.
+
+## Bio-Swarm — Algorithmic Biology (v9.7.2)
+
+### Genome Specs (`specs/genomes/`)
+DNA-like YAML files defining component fitness. Each genome has:
+- **States** — FSM nodes with `visual_hint`, `required`, and `transitions`
+- **Traits** — typed, inheritable behavioural traits (e.g. `SourceBadgePhenotype`, `StreamingPhenotype`)
+- **Phenotype_Assertions** — testable correctness properties verified by the Ribosome
+- **`extends`** — inherits from a parent genome (e.g. `base_cell`)
+
+### Ribosome (`backend/factory/ribosome.py`)
+Genome Interpreter Engine:
+1. Loads and resolves genome YAML (inheritance, env context)
+2. Calls LLM to fold genome into a **Synthesis Directive** (`specs/temp/synthesis_genome_*.md`)
+3. Runs **PhenotypeVerifier** — LLM checks all assertions against real code; VIABLE ≥ 80/100
+
+### Mutation Engine (`backend/factory/mutation_engine.py`)
+Genetic Feedback Loop — OODA cycle:
+- **Observe**: scans `factory_logs/` for agent execution records
+- **Orient**: scores agents 0–1 (`FitnessLedger` at `backend/data/genome/fitness_ledger.json`)
+- **Decide**: agents below `MUTATION_THRESHOLD=0.65` get micro-heuristic injections
+- **Act**: appends evolved rules to `docs/LEARNED_GUIDELINES.md`
+
+### OODA Integration
+`nexus.py` captures `_SESSION_START_TS` at boot and calls `_run_ooda_mutation_cycle()` after every successful swarm batch, creating a continuous improvement feedback loop.
 
 ## Key Conventions
 

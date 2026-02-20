@@ -1,11 +1,11 @@
-VERSION=9.7.1
-RELEASE_TAG=v9.7.1-chief
+VERSION=9.7.2
+RELEASE_TAG=v9.7.2-chief
 BUILD_DATE=2026-02-20
 BRANCH=main
 STATUS=production-ready
-ARCHITECTURE=spec-driven-operator-console
-AGENTS=conductor-cli-jit-agent,nexus-chief-swarm
-COMPONENTS=unified-catalog-api,operator-console-ui,product-graph,specs,chief-nexus
+ARCHITECTURE=spec-driven-algorithmic-biology
+AGENTS=conductor-cli-jit-agent,nexus-chief-swarm,ribosome,mutation-engine
+COMPONENTS=unified-catalog-api,operator-console-ui,product-graph,specs,chief-nexus,bio-swarm-genomes
 TEST_COVERAGE=18/18
 WORKFLOW=spec-driven-dark-factory
 CODENAME=Chief
