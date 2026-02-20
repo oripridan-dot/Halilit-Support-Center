@@ -61,6 +61,7 @@ backend/data/ingestion/
 backend/data/brands/
 backend/data/graph/
 backend/data/jit_cache/
+backend/data/vector_db/
 backend/data/1_official/
 backend/data/2_commercial/
 backend/data/3_contextual/
