@@ -1,6 +1,6 @@
-# Task-Force Blackboard: efficient_debounce
+# Task-Force Blackboard: debounce_integration
 
-**Goal:** Integrate Efficient Debounce/Throttle Library to enhance search response and reduce server load.
+**Goal:** Integrate Efficient Debounce/Throttle Library to improve search debounce
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- No implemented code was provided for review.
+No code was provided for review, therefore it cannot be determined if the specification was implemented.
 
 **Required Fix:**
-The Builder must provide the implemented code for review against the specified requirements and user intent.
+Request the builder agent to provide the implemented code.
