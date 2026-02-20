@@ -376,7 +376,7 @@ def generate_mutation(
         Generate the mutation micro-heuristic now.
     """)
 
-    micro_block = query_llm(system, user_prompt, model=SMART_MODEL)
+    micro_block = query_llm(system, user_prompt, model_tier="smart")
 
     # Determine injection target
     target = "SYSTEM_PROMPT" if "SYSTEM_PROMPT" in micro_block else "GUIDELINES"
@@ -431,7 +431,7 @@ def _inject_to_guidelines(micro_block: str, heuristic: str, today: str) -> None:
         existing_guidelines=existing[-3000:],
     )
     new_entry = query_llm(
-        system, "Generate the guidelines entry now.", model=SMART_MODEL)
+        system, "Generate the guidelines entry now.", model_tier="smart")
 
     # Ensure the entry is clean
     new_entry = new_entry.strip()
@@ -484,7 +484,7 @@ def _splice_into_system_prompt(agent_name: str, heuristic: str) -> None:
         micro_heuristic=heuristic,
     )
     new_prompt_text = query_llm(
-        system, "Splice the heuristic now.", model=SMART_MODEL)
+        system, "Splice the heuristic now.", model_tier="smart")
 
     # Reconstruct file
     new_source = source[:match.start(

@@ -227,7 +227,7 @@ def generate_synthesis_directive(genome: dict, env_context: str) -> str:
         fitness_goal=genome.get("fitness_goal", ""),
     )
 
-    return query_llm(system, user_prompt, model=SMART_MODEL)
+    return query_llm(system, user_prompt, model_tier="smart")
 
 
 def _format_states(genome: dict) -> str:
@@ -339,7 +339,7 @@ def verify_phenotype(genome: dict, code_text: str) -> PhenotypeVerdict:
         Verify all assertions now.
     """)
 
-    raw = query_llm(_VERIFIER_SYSTEM_PROMPT, user_prompt, model=SMART_MODEL)
+    raw = query_llm(_VERIFIER_SYSTEM_PROMPT, user_prompt, model_tier="smart")
 
     # Parse response
     score_match = re.search(r"PHENOTYPE_SCORE:\s*(\d+)", raw)
@@ -431,7 +431,8 @@ def main() -> None:
         prog="ribosome.py",
         description="Genome Interpreter — translate a YAML genome into a Builder synthesis directive.",
     )
-    parser.add_argument("genome", nargs="?", default="", help="Path to genome YAML file")
+    parser.add_argument("genome", nargs="?", default="",
+                        help="Path to genome YAML file")
     parser.add_argument(
         "--verify",
         metavar="FILE",
