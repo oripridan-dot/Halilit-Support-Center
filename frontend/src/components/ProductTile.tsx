@@ -13,7 +13,7 @@ interface Props {
 }
 
 const ProductTile: React.FC<Props> = ({ product }) => {
-  const { stock, price } = product;
+  const { stock, price, name, image_url } = product;
 
   const isOutOfStock = stock === 0;
   const isUnconfirmedStock = stock === null || stock === undefined;
@@ -21,7 +21,6 @@ const ProductTile: React.FC<Props> = ({ product }) => {
 
   const borderColor = isOutOfStock ? 'border-red-500' : isUnconfirmedStock ? 'border-amber-500' : '';
   const hasIndicators = isOutOfStock || isUnconfirmedStock || isCallForPrice;
-
 
   return (
     <div className={`relative border rounded-md shadow-md ${borderColor}`}>
@@ -42,10 +41,9 @@ const ProductTile: React.FC<Props> = ({ product }) => {
       )}
 
       {/* Product Image */}
-      {/* Placeholder image handling should be in a separate spec/component, this spec focuses on the indicators */}
       <img
-        src={product.image_url || '/placeholder.png'}
-        alt={product.name}
+        src={image_url || '/placeholder.png'}
+        alt={name}
         className="w-full h-48 object-cover rounded-t-md"
         onError={(e) => {
           (e.target as HTMLImageElement).src = '/placeholder.png';
@@ -53,7 +51,7 @@ const ProductTile: React.FC<Props> = ({ product }) => {
       />
 
       <div className="p-2">
-        <h3 className="text-lg font-medium">{product.name}</h3>
+        <h3 className="text-lg font-medium">{name}</h3>
 
         {/* Price or Call for Price */}
         {isCallForPrice ? (

@@ -67,7 +67,8 @@ def _resolve_import(source_file: Path, import_path: str) -> Path | None:
         return base
     # Try adding extensions
     for ext in _EXTENSIONS:
-        candidate = Path(str(base) + ext) if not ext.startswith("/") else base / ext.lstrip("/")
+        candidate = Path(
+            str(base) + ext) if not ext.startswith("/") else base / ext.lstrip("/")
         if candidate.exists():
             return candidate
     return None
@@ -94,6 +95,11 @@ def scan_imports(src_dir: Path = SRC_DIR) -> list[ImportError_]:
             imp = match.group(1)
             if not imp.startswith("."):
                 continue  # absolute / aliased — skip
+            # Skip imports that appear inside comments (// or * lines)
+            line_start = text.rfind('\n', 0, match.start()) + 1
+            line_text = text[line_start:match.start()].lstrip()
+            if line_text.startswith('//') or line_text.startswith('*'):
+                continue  # comment line — skip
             resolved = _resolve_import(fpath, imp)
             if resolved is None:
                 errors.append(ImportError_(
@@ -180,7 +186,8 @@ def validate_ui(run_build: bool = True) -> dict:
                 )
             ]
             build_error_lines = error_lines[:20]  # cap to avoid noise
-            print(f"  ❌ Vite build FAILED — {len(build_error_lines)} error line(s):")
+            print(
+                f"  ❌ Vite build FAILED — {len(build_error_lines)} error line(s):")
             for ln in build_error_lines:
                 print(f"     • {ln}")
         else:
@@ -194,7 +201,8 @@ def validate_ui(run_build: bool = True) -> dict:
     if import_error_msgs:
         summary_parts.append(f"{len(import_error_msgs)} broken import(s)")
     if build_error_lines:
-        summary_parts.append(f"Vite build errors: {build_error_lines[0][:120]}")
+        summary_parts.append(
+            f"Vite build errors: {build_error_lines[0][:120]}")
     if not summary_parts:
         summary_parts.append("All checks passed")
 

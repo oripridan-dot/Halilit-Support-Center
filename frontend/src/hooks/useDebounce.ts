@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react';
  * throttle rapid state changes before triggering expensive side-effects.
  */
 export function useDebounce<T>(value: T, delay: number): T {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+    const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setDebouncedValue(value), delay);
-    return () => clearTimeout(timer);
-  }, [value, delay]);
+    useEffect(() => {
+        const timer = setTimeout(() => setDebouncedValue(value), delay);
+        return () => clearTimeout(timer);
+    }, [value, delay]);
 
-  return debouncedValue;
+    return debouncedValue;
 }

@@ -1,4 +1,54 @@
 ## [v4.1] — 2026-02-20
+## v4.1
+
+- [feat] Added `v0_design` tool to `chief_agent.py`.
+- [refactor] Updated `cmd_status` in `factory.py`.
+- [feat] Added `cmd_v0_design` function to `factory.py`.
+- [feat] Added result caching for visual QA.
+- [feat] Added caching functions for visual QA.
+- [refactor] Added `hashlib`, `json`, and `time` imports to `visual_qa.py`.
+- [feat] Added spec file: `specs/interface/global_search_-_prioritize_exact_sku_matches.md`.
+- [feat] Global search prioritizes exact SKU matches.
+- [refactor] Updated `GlobalSearch.tsx` for efficient search result handling.
+- [feat] Added JIT Intelligence integration to ProductDetailView.
+- [feat] Added sourcing badges.
+- [feat] Used ConductorCatalog for product details.
+- [refactor] Updated imports in ProductDetailView.tsx.
+- [feat] Added useRef to ProductDetailView.tsx.
+- [feat] Added JITPhase and JITIntelligenceState to useJITIntelligence hook.
+- [feat] Added useConductorCatalog hook.
+- [feat] Added SourcingBadge component.
+- [refactor] Updated RelationshipSection to handle product sources.
+- [refactor] Updated styling and logic in ProductDetailView.tsx.
+- [feat] Added logic to ProductDetailView to display information from conductor catalog.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated the SYSTEM_PROMPT in `chief_agent.py`.
+- [feat] Added a new file `OrganizedCatalog.ts` with type definitions for brand catalog.
+- [feat] Added spec for product tile image sourcing badges.
+- [refactor] Removed optional Family and Relationship Inference logic in `OrganizedCatalog.ts`.
+- [refactor] Return the `OrganizedCatalog` result directly in `OrganizedCatalog.ts`.
+- [feat] Added a new API endpoint `/machines/{machine_id}/status` to fetch machine status.
+- [feat] Implemented a FastAPI application `halilit_api/machines.py`.
+- [feat] Added v0 agent file `backend/factory/v0_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [feat] Added v0 agent file `backend/factory/v0_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [feat] Added v0 agent file `backend/factory/v0_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+- [refactor] Updated SYSTEM_PROMPT in `chief_agent.py`.
+- [feat] Added `v0_design` tool to `chief_agent.py`.
+
+## [v4.1] — 2026-02-20
 ## [v4.1]
 
 - [feat] Added `v0_design` tool to `chief_agent.py`.

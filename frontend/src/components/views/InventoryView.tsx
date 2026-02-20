@@ -1,11 +1,18 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useConductorCatalog } from '../../hooks/useConductorCatalog';
-import { Product, formatPrice } from '../../types';
-import { PackageOpen } from 'lucide-react';
-import { useNavigationStore } from '../../store/navigationStore';
-import { useDebounceValue } from '../../hooks/useDebounceValue';
-import { Check, ChevronDown, ChevronRight, ChevronsUpDown, Package, Search } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
+import { useConductorCatalog } from "../../hooks/useConductorCatalog";
+import { Product, formatPrice } from "../../types";
+import { PackageOpen } from "lucide-react";
+import { useNavigationStore } from "../../store/navigationStore";
+import { useDebounceValue } from "../../hooks/useDebounceValue";
+import {
+  Check,
+  ChevronDown,
+  ChevronRight,
+  ChevronsUpDown,
+  Package,
+  Search,
+} from "lucide-react";
 
 interface StockBadgeProps {
   stock: number | null | undefined;
@@ -34,7 +41,8 @@ const PAGE_SIZE = 50;
 const InventoryView: React.FC = () => {
   const navigate = useNavigate();
   const { products, isLoading, error, refetch } = useConductorCatalog();
-  const { searchQuery, initialCfpFilter, setSearchQuery, goToProduct } = useNavigationStore();
+  const { searchQuery, initialCfpFilter, setSearchQuery, goToProduct } =
+    useNavigationStore();
 
   const [filterText, setFilterText] = useState(
     typeof searchQuery === "string" ? searchQuery : "",
@@ -56,7 +64,7 @@ const InventoryView: React.FC = () => {
 
   // Apply the debounced search and initial filters
   useEffect(() => {
-      setSearchQuery(debouncedFilterText || null);
+    setSearchQuery(debouncedFilterText || null);
   }, [debouncedFilterText, setSearchQuery]);
 
   // 2. Sync cfpOnly from navigation store deep-link
@@ -69,206 +77,208 @@ const InventoryView: React.FC = () => {
     setPage(1);
   }, [filterText, brandFilter, categoryFilter, cfpOnly, sortField, sortDir]);
 
-  const filterStr = typeof debouncedFilterText === "string" ? debouncedFilterText : "";
+  const filterStr =
+    typeof debouncedFilterText === "string" ? debouncedFilterText : "";
 
   const filteredProducts = useMemo(() => {
     if (!products) return [];
 
-    let filtered = products.filter(item => {
+    let filtered = products.filter((item) => {
       const matchesText =
         !filterStr ||
         item.name.toLowerCase().includes(filterStr.toLowerCase()) ||
-        (item.brand && item.brand.toLowerCase().includes(filterStr.toLowerCase()));
+        (item.brand &&
+          item.brand.toLowerCase().includes(filterStr.toLowerCase()));
 
       const matchesBrand = !brandFilter || item.brand === brandFilter;
       const matchesCategory = !categoryFilter || item.category === categoryFilter;
-      const matchesCfp = !cfpOnly || item.data_status === "COMPLETE";
+      const matchesCfp = !cfpOnly || item.contextual_data?.cfp === "yes";
 
       return matchesText && matchesBrand && matchesCategory && matchesCfp;
     });
 
-    return filtered;
-  }, [products, filterStr, brandFilter, categoryFilter, cfpOnly]);
-
-  const sortedProducts = useMemo(() => {
-    if (!filteredProducts) return [];
-
-    const sorted = [...filteredProducts].sort((a, b) => {
-      const fieldA = a[sortField as keyof Product];
-      const fieldB = b[sortField as keyof Product];
-
-      let comparison = 0;
-      if (fieldA < fieldB) {
-        comparison = -1;
+    const sortProducts = (a: Product, b: Product) => {
+      const dir = sortDir === "asc" ? 1 : -1;
+      if (sortField === "name") {
+        return a.name.localeCompare(b.name) * dir;
       }
-      if (fieldA > fieldB) {
-        comparison = 1;
+      if (sortField === "price") {
+        return (a.price - b.price) * dir;
       }
-      if (sortDir === "desc") {
-        comparison *= -1;
-      }
-      return comparison;
-    });
+      return 0;
+    };
 
-    return sorted;
-  }, [filteredProducts, sortField, sortDir]);
+    filtered = [...filtered].sort(sortProducts);
 
-  const paginatedProducts = useMemo(() => {
-    if (!sortedProducts) return [];
     const startIndex = (page - 1) * PAGE_SIZE;
-    return sortedProducts.slice(startIndex, startIndex + PAGE_SIZE);
-  }, [sortedProducts, page]);
+    const endIndex = startIndex + PAGE_SIZE;
+    return filtered.slice(startIndex, endIndex);
+  }, [
+    products,
+    filterStr,
+    brandFilter,
+    categoryFilter,
+    cfpOnly,
+    sortField,
+    sortDir,
+    page,
+  ]);
 
-  const handleProductClick = (productId: string) => {
-    goToProduct(productId);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilterText(e.target.value);
   };
 
-  const handleSort = (field: string) => {
-    if (sortField === field) {
-      setSortDir(sortDir === "asc" ? "desc" : "asc");
-    } else {
-      setSortField(field);
-      setSortDir("asc");
-    }
-  };
+  if (error) {
+    return <div>Error loading inventory</div>;
+  }
 
   return (
-    <div className="container mx-auto py-4">
-      <div className="flex items-center mb-4">
-        <div className="relative w-full">
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Inventory Master</h1>
+
+      <div className="mb-4 flex items-center space-x-4">
+        <div className="flex items-center border rounded-md p-2 w-64">
+          <Search className="h-4 w-4 mr-2 text-gray-400" />
           <input
             type="text"
             placeholder="Search products..."
+            className="w-full outline-none"
             value={filterText}
-            onChange={(e) => setFilterText(e.target.value)}
-            className="w-full py-2 pl-10 pr-4 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={handleSearchChange}
           />
-          <div className="absolute top-0 left-0 py-2 pl-3">
-            <Search className="h-5 w-5 text-gray-400" />
-          </div>
+        </div>
+
+        <div>
+          <label htmlFor="brandFilter" className="mr-2">
+            Brand:
+          </label>
+          <select
+            id="brandFilter"
+            value={brandFilter}
+            onChange={(e) => setBrandFilter(e.target.value)}
+            className="border rounded-md px-2 py-1"
+          >
+            <option value="">All</option>
+            {/* Replace with actual brand options */}
+            <option value="Roland">Roland</option>
+            <option value="Fender">Fender</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="categoryFilter" className="mr-2">
+            Category:
+          </label>
+          <select
+            id="categoryFilter"
+            value={categoryFilter}
+            onChange={(e) => setCategoryFilter(e.target.value)}
+            className="border rounded-md px-2 py-1"
+          >
+            <option value="">All</option>
+            {/* Replace with actual category options */}
+            <option value="Guitar">Guitar</option>
+            <option value="Keyboard">Keyboard</option>
+          </select>
+        </div>
+
+        <label className="flex items-center">
+          <input
+            type="checkbox"
+            checked={cfpOnly}
+            onChange={(e) => setCfpOnly(e.target.checked)}
+            className="mr-2"
+          />
+          CFP Only
+        </label>
+      </div>
+
+      <div className="mb-4 flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => {
+              setSortField("name");
+              setSortDir(sortDir === "asc" ? "desc" : "asc");
+            }}
+            className="flex items-center px-2 py-1 border rounded-md"
+          >
+            Name
+            {sortField === "name" &&
+              (sortDir === "asc" ? (
+                <ChevronDown className="w-4 h-4 ml-1" />
+              ) : (
+                <ChevronRight className="w-4 h-4 ml-1 rotate-180" />
+              ))}
+          </button>
+          <button
+            onClick={() => {
+              setSortField("price");
+              setSortDir(sortDir === "asc" ? "desc" : "asc");
+            }}
+            className="flex items-center px-2 py-1 border rounded-md"
+          >
+            Price
+            {sortField === "price" &&
+              (sortDir === "asc" ? (
+                <ChevronDown className="w-4 h-4 ml-1" />
+              ) : (
+                <ChevronRight className="w-4 h-4 ml-1 rotate-180" />
+              ))}
+          </button>
         </div>
       </div>
 
-      <div className="flex items-center mb-2">
-        <label htmlFor="cfp-only" className="mr-2">
-          CFP Only:
-        </label>
-        <input
-          type="checkbox"
-          id="cfp-only"
-          checked={cfpOnly}
-          onChange={(e) => setCfpOnly(e.target.checked)}
-          className="mr-2"
-        />
-      </div>
+      {isLoading && <div>Loading...</div>}
 
-      {isLoading && (
-        <div className="text-center py-4">Loading...</div>
-      )}
-
-      {error && (
-        <div className="text-center py-4 text-red-500">Error: {error.message}</div>
-      )}
-
-      {(!isLoading && !error && paginatedProducts.length === 0) && (
-        <div className="text-center py-4">No products found.</div>
-      )}
-
-      {(!isLoading && !error && paginatedProducts.length > 0) && (
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th
-                  onClick={() => handleSort('name')}
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
-                >
-                  Name
-                  {sortField === 'name' && (
-                    sortDir === 'asc' ? (
-                      <ChevronDown className="inline ml-1 h-4 w-4" />
-                    ) : (
-                      <ChevronRight className="inline ml-1 h-4 w-4" />
-                    )
-                  )}
-                </th>
-                <th
-                  onClick={() => handleSort('brand')}
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
-                >
-                  Brand
-                  {sortField === 'brand' && (
-                    sortDir === 'asc' ? (
-                      <ChevronDown className="inline ml-1 h-4 w-4" />
-                    ) : (
-                      <ChevronRight className="inline ml-1 h-4 w-4" />
-                    )
-                  )}
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Category
-                </th>
-                <th
-                  onClick={() => handleSort('price')}
-                  className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
-                >
-                  Price
-                  {sortField === 'price' && (
-                    sortDir === 'asc' ? (
-                      <ChevronDown className="inline ml-1 h-4 w-4" />
-                    ) : (
-                      <ChevronRight className="inline ml-1 h-4 w-4" />
-                    )
-                  )}
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Stock
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {paginatedProducts.map((product) => (
-                <tr
-                  key={product.id}
-                  className="hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleProductClick(product.id)}
-                >
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {product.name}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {product.brand}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {product.category}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {formatPrice(product.price)}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    <StockBadge stock={product.specs?.stock} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="flex items-center justify-between mt-4">
-            <button
-              onClick={() => setPage(page - 1)}
-              disabled={page === 1}
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded opacity-75 disabled:opacity-50"
+      {products && !isLoading && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredProducts.map((product) => (
+            <div
+              key={product.id}
+              className="border rounded-md p-4 hover:shadow-md cursor-pointer"
+              onClick={() => goToProduct(product.id)}
             >
-              Previous
-            </button>
-            <span>Page {page}</span>
-            <button
-              onClick={() => setPage(page + 1)}
-              disabled={!sortedProducts || (page * PAGE_SIZE) >= sortedProducts.length}
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded opacity-75 disabled:opacity-50"
-            >
-              Next
-            </button>
-          </div>
+              <img
+                src={product.image_url}
+                alt={product.name}
+                className="w-full h-48 object-contain mb-2"
+              />
+              <h3 className="text-lg font-medium mb-1">{product.name}</h3>
+              <p className="text-gray-600 mb-2">{product.brand}</p>
+              <div className="flex items-center justify-between">
+                <div>{formatPrice(product.price)}</div>
+                <StockBadge stock={product.specs?.stock} />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {products && !isLoading && filteredProducts.length === 0 && (
+        <div>No products found.</div>
+      )}
+
+      {products && !isLoading && filteredProducts.length > 0 && (
+        <div className="mt-4 flex justify-center">
+          <button
+            onClick={() => setPage(page - 1)}
+            disabled={page === 1}
+            className="px-4 py-2 mr-2 border rounded-md disabled:opacity-50"
+          >
+            Previous
+          </button>
+          <span>Page {page}</span>
+          <button
+            onClick={() => {
+              if (products && products.length > page * PAGE_SIZE) {
+                setPage(page + 1);
+              }
+            }}
+            disabled={!products || products.length <= page * PAGE_SIZE}
+            className="px-4 py-2 ml-2 border rounded-md disabled:opacity-50"
+          >
+            Next
+          </button>
         </div>
       )}
     </div>

@@ -1,24 +1,45 @@
-import { useState, useEffect, useRef } from 'react';
+// frontend/src/hooks/useValidateHeroImage.ts
+import { useState, useEffect, useCallback } from 'react';
 
 interface UseValidateHeroImageResult {
   isValidating: boolean;
   isValid: boolean | null;
 }
 
-const CACHE_KEY_PREFIX = 'hero_image_validation:';
-const CACHE_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
+const CACHE_KEY_PREFIX = 'image_validation:';
+const CACHE_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
 
-function useValidateHeroImage(imageUrl: string | undefined | null): UseValidateHeroImageResult {
+function useValidateHeroImage(imageUrl: string): UseValidateHeroImageResult {
   const [isValidating, setIsValidating] = useState<boolean>(false);
   const [isValid, setIsValid] = useState<boolean | null>(null);
-  const debounceTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  const clearDebounce = () => {
-    if (debounceTimeout.current) {
-      clearTimeout(debounceTimeout.current);
-      debounceTimeout.current = null;
+  const checkCache = useCallback((url: string) => {
+    const cacheKey = `${CACHE_KEY_PREFIX}${url}`;
+    const cachedData = localStorage.getItem(cacheKey);
+
+    if (cachedData) {
+      try {
+        const { isValid: cachedIsValid, timestamp } = JSON.parse(cachedData);
+        if (Date.now() - timestamp < CACHE_DURATION_MS) {
+          return cachedIsValid;
+        } else {
+          localStorage.removeItem(cacheKey); // Expired cache
+          return null;
+        }
+      } catch (error) {
+        console.error('Error parsing cached data:', error);
+        localStorage.removeItem(cacheKey); // Corrupted cache
+        return null;
+      }
     }
-  };
+    return null;
+  }, []);
+
+  const setCache = useCallback((url: string, isValid: boolean) => {
+    const cacheKey = `${CACHE_KEY_PREFIX}${url}`;
+    const cacheData = JSON.stringify({ isValid, timestamp: Date.now() });
+    localStorage.setItem(cacheKey, cacheData);
+  }, []);
 
   useEffect(() => {
     if (!imageUrl) {
@@ -26,57 +47,39 @@ function useValidateHeroImage(imageUrl: string | undefined | null): UseValidateH
       return;
     }
 
-    const cachedResult = localStorage.getItem(`${CACHE_KEY_PREFIX}${imageUrl}`);
-    if (cachedResult) {
-      const { isValid: cachedIsValid, timestamp } = JSON.parse(cachedResult);
-      if (Date.now() - timestamp < CACHE_EXPIRY_MS) {
-        setIsValid(cachedIsValid);
-        return;
-      } else {
-          localStorage.removeItem(`${CACHE_KEY_PREFIX}${imageUrl}`);
-      }
+    const cachedIsValid = checkCache(imageUrl);
+    if (cachedIsValid !== null) {
+      setIsValid(cachedIsValid);
+      return;
     }
 
-    clearDebounce();
-    setIsValidating(true);
-    setIsValid(null);
 
     const validateImage = async () => {
+      setIsValidating(true);
       try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 seconds timeout
-
-        const response = await fetch(imageUrl, { method: 'HEAD', signal: controller.signal });
-        clearTimeout(timeoutId);
-
-        if (response.ok) {
-          setIsValid(true);
-        } else {
-          setIsValid(false);
-          localStorage.setItem(`${CACHE_KEY_PREFIX}${imageUrl}`, JSON.stringify({ isValid: false, timestamp: Date.now() }));
+        const response = await fetch(imageUrl, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
+        const isValid = response.ok && response.status >= 200 && response.status < 300;
+        setIsValid(isValid);
+        if (!isValid) {
+          setCache(imageUrl, false);
         }
       } catch (error: any) {
         console.error(`Error validating image ${imageUrl}:`, error);
         setIsValid(false);
-        localStorage.setItem(`${CACHE_KEY_PREFIX}${imageUrl}`, JSON.stringify({ isValid: false, timestamp: Date.now() }));
+        setCache(imageUrl, false);
       } finally {
         setIsValidating(false);
       }
     };
 
-
-    debounceTimeout.current = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
         validateImage();
     }, 500);
 
-    return () => {
-        clearDebounce();
-    };
-
-
-  }, [imageUrl]);
+    return () => clearTimeout(timeoutId);
+  }, [imageUrl, checkCache, setCache]);
 
   return { isValidating, isValid };
 }
 
-export { useValidateHeroImage, UseValidateHeroImageResult };
+export { useValidateHeroImage };

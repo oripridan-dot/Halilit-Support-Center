@@ -98,14 +98,12 @@ const AccessoryRecommendations: React.FC<AccessoryRecommendationsProps> = ({ pro
                   src={accessory.imageUrl}
                   alt={accessory.name}
                   width={192}
-                  height={108}
-                  className="rounded-t-lg object-cover"
-                  layout="responsive"
-                  objectFit="cover"
+                  height={192}
+                  className="w-full h-48 object-cover rounded-t-lg"
                 />
                 <div className="p-2">
-                  <p className="text-sm font-medium text-white">{accessory.name}</p>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm font-medium text-white line-clamp-2">{accessory.name}</p>
+                  <p className="text-sm font-bold text-blue-400 mt-2">
                     {accessory.price !== null ? `$${accessory.price.toFixed(2)}` : 'Call for Price'}
                   </p>
                 </div>
