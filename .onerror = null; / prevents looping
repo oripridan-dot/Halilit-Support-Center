@@ -1,0 +1,30 @@
+import React from 'react';
+
+interface ImageWithFallbackProps {
+    imageUrl: string | undefined | null;
+    altText?: string;
+}
+
+const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText }) => {
+    const defaultAltText = altText || "Product Image";
+    const fallbackSrc = "/placeholder.png";
+
+    return (
+        <div className="bg-slate-900">
+            <picture>
+                <source srcSet={`${imageUrl?.split('.').slice(0, -1).join('.')}.avif`} type="image/avif" />
+                <img
+                    onError={(e) => {
+                        (e.target as HTMLImageElement).src = fallbackSrc;
+                    }}
+                    loading="lazy"
+                    src={imageUrl || fallbackSrc}
+                    alt={defaultAltText}
+                    className="w-full h-full object-contain"
+                />
+            </picture>
+        </div>
+    );
+};
+
+export default ImageWithFallback;
