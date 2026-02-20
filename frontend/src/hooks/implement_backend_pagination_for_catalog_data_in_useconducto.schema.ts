@@ -60,3 +60,7 @@ export interface CatalogRequestParams {
     category?: string;
     brand?: string;
 }
+
+// Aliases used by useConductorCatalog.ts
+export const CONDUCTOR_CATALOG_ENDPOINT = CATALOG_ENDPOINT;
+export type ConductorCatalogParams = CatalogRequestParams;

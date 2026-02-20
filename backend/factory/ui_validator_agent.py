@@ -198,14 +198,19 @@ def validate_ui(run_build: bool = True) -> dict:
         build_passed, build_output = run_vite_build()
 
         if not build_passed:
-            # Extract meaningful errors: include lines after "error during build:"
-            # and lines containing known error keywords
+            # Extract meaningful errors: only include lines that represent
+            # genuine fatal build failures, not warnings or advisory notices.
             lines = build_output.splitlines()
             error_lines = []
             capture_next = 0
             for ln in lines:
                 stripped = ln.strip()
                 if not stripped:
+                    continue
+                # Skip lines that are clearly non-fatal warnings
+                if any(warn_kw in stripped.lower() for warn_kw in (
+                    "warn ", "warning:", "deprecated", "experimentaldecorators",
+                )):
                     continue
                 if "error during build" in stripped.lower():
                     error_lines.append(stripped)
@@ -215,10 +220,11 @@ def validate_ui(run_build: bool = True) -> dict:
                     error_lines.append(stripped)
                     capture_next -= 1
                     continue
+                # Only flag hard fatal resolver errors, not warnings
                 if any(kw in ln for kw in (
-                    "Failed to resolve", "Cannot find",
+                    "Failed to resolve", "Cannot find module",
                     "does not provide an export", "Module not found",
-                    "[vite]", "[rollup]",
+                    "Rollup failed", "[rollup]",
                 )):
                     error_lines.append(stripped)
             build_error_lines = error_lines[:20]

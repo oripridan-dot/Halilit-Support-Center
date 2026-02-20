@@ -1,34 +1,3 @@
-## [v4.1] — 2026-02-20
-- [chore] Updated `builder_agent.py` with a new rule to always action Evolution Proposals directly.
-- [chore] Updated `fitness_ledger.json` with updated statistics for agents.
-- [feat] Added `fitness_ledger.json` to store agent run data.
-- [docs] Added new learned guideline: "Check Patch Anchor Existence".
-- [feat] Introduced `useConductorCatalog` hook for product data.
-- [feat] Defined canonical `ConductorProduct` interface.
-- [feat] Added `ProductRelationship` and `ProductFamily` interfaces.
-- [feat] Added product contextual data fields to `ConductorProduct`.
-- [feat] Added `DAILY_BRIEFING.md` for daily status reports.
-- [feat] Added `HEARTBEAT.md` for factory status information.
-- [chore] Added `FACTORY_KANBAN.md` and `FACTORY_FAILURE_REPORT.md` to `.gitignore`.
-- [feat] Added `KANBAN_PATH` constant.
-- [feat] Refactored ExplorationPanel component.
-- [feat] Extracted sub-components for ExplorationPanel.
-- [feat] Introduced `SetupGuideView` component.
-- [refactor] Improved component organization and readability.
-- [feat] Added `smart_import_fixer.py` for automated import fixing.
-- [feat] Added `Fix` and `FixReport` dataclasses.
-- [feat] Implemented `summary()` method in `FixReport`.
-- [fix] Fixed out-of-src imports.
-- [fix] Removed imports from missing `./generated.ts`.
-- [fix] Corrected directory names.
-- [fix] Corrected filenames.
-- [fix] Fixed TSX generic arrow function syntax.
-- [refactor] Improved code readability and added type hints.
-- [refactor] Added more detailed comments and documentation.
-- [feat] Added `tech_lead_context` to `consult_chief` function.
-- [feat] Senior Tech Lead findings are treated as high-priority health signals.
-- [fix] Critical error handling in `build_component`.
-
 ## [v9.7.5] — 2026-02-20
 
 ### v9.7.5 · Level 6 — AI Test Kit Standard

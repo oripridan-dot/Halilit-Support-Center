@@ -5,6 +5,7 @@ import {
   ConductorCatalogParams,
   ConductorProduct,
   PaginatedCatalogResponse,
+} from './implement_backend_pagination_for_catalog_data_in_useconducto.schema';
 import { ImageWithFallback } from '../components/ImageWithFallback';
 import { useError } from './useError';
 
@@ -70,7 +71,7 @@ export const useConductorCatalog = ({
         brand,
       }),
     onError: (err) => {
-        console.error("Catalog fetch failed:", err);
+      console.error("Catalog fetch failed:", err);
     },
   });
 
@@ -80,7 +81,7 @@ export const useConductorCatalog = ({
       resetError();
       refetch();
     } else {
-        console.error("Max retries reached.  Catalog fetch failed.");
+      console.error("Max retries reached.  Catalog fetch failed.");
     }
   };
 
@@ -115,57 +116,61 @@ export const ConductorCatalogList = ({
 }) => {
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:bg-zinc-900 p-4">
-        {Array.from({ length: 8 }).map((_, index) => (
-          <div key={index} className="animate-pulse dark:bg-zinc-800 rounded-lg p-4">
-            <div className="h-40 bg-zinc-700 rounded-md mb-2"></div>
-            <div className="h-4 bg-zinc-700 rounded-md mb-2"></div>
-            <div className="h-4 bg-zinc-700 rounded-md"></div>
-          </div>
-        ))}
-      </div>
-    );
-  }
-
-  if (isError) {
-    return (
-      <div className="dark:bg-zinc-800 p-4 rounded-lg text-center">
-        <p className="text-red-500">Failed to load catalog. Please try again.</p>
-        <button
-          onClick={handleRetry}
-          className="mt-2 px-4 py-2 bg-zinc-700 text-white rounded hover:bg-zinc-600"
-        >
-          Retry ({retryCount}/{3})
-        </button>
-      </div>
-    );
-  }
-
-  if (products.length === 0) {
-    return (
-      <div className="dark:bg-zinc-800 p-4 rounded-lg text-center">
-        <p>No products found.</p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:bg-zinc-900 p-4">
-      {products.map((product) => (
-        <div key={product.id} className="dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden">
-          <ImageWithFallback
-            src={product.image_url}
-            alt={product.name}
-            fallbackSrc="/placeholder.png"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-lg font-semibold text-zinc-200 truncate">{product.name}</h3>
-            <p className="text-zinc-400 text-sm truncate">{product.description}</p>
-            <p className="text-zinc-300">${product.price.toFixed(2)}</p>
-          </div>
+      <div className= "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:bg-zinc-900 p-4" >
+      {
+        Array.from({ length: 8 }).map((_, index) => (
+          <div key= { index } className = "animate-pulse dark:bg-zinc-800 rounded-lg p-4" >
+          <div className="h-40 bg-zinc-700 rounded-md mb-2" > </div>
+        < div className = "h-4 bg-zinc-700 rounded-md mb-2" > </div>
+        < div className = "h-4 bg-zinc-700 rounded-md" > </div>
         </div>
-      ))}
+        ))
+      }
+      </div>
+    );
+  }
+
+if (isError) {
+  return (
+    <div className= "dark:bg-zinc-800 p-4 rounded-lg text-center" >
+    <p className="text-red-500" > Failed to load catalog.Please try again.</p>
+      < button
+  onClick = { handleRetry }
+  className = "mt-2 px-4 py-2 bg-zinc-700 text-white rounded hover:bg-zinc-600"
+    >
+    Retry({ retryCount } / { 3})
+    </button>
     </div>
+    );
+}
+
+if (products.length === 0) {
+  return (
+    <div className= "dark:bg-zinc-800 p-4 rounded-lg text-center" >
+    <p>No products found.</p>
+      </div>
+    );
+}
+
+return (
+  <div className= "grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:bg-zinc-900 p-4" >
+  {
+    products.map((product) => (
+      <div key= { product.id } className = "dark:bg-zinc-800 rounded-lg shadow-md overflow-hidden" >
+      <ImageWithFallback
+            src={ product.image_url }
+            alt = { product.name }
+            fallbackSrc = "/placeholder.png"
+            className = "w-full h-48 object-cover"
+      />
+      <div className="p-4" >
+    <h3 className="text-lg font-semibold text-zinc-200 truncate" > { product.name } </h3>
+    < p className = "text-zinc-400 text-sm truncate" > { product.description } </p>
+    < p className = "text-zinc-300" > ${ product.price.toFixed(2) } </p>
+    </div>
+    </div>
+    ))
+  }
+  </div>
   );
 };

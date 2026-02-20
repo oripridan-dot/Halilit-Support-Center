@@ -24,7 +24,7 @@ import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 from datetime import datetime
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Query
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
@@ -421,9 +421,38 @@ async def get_dashboard_stats():
         return JSONResponse(status_code=500, content={"error": str(e)})
 
 
+def _get_catalog_dict() -> dict | None:
+    """Return catalog as dict. Uses in-memory cache or rebuilds from JSON bytes."""
+    global _catalog_cache_dict
+    if _catalog_cache_dict is not None:
+        return _catalog_cache_dict
+    if _catalog_cache_json is not None:
+        try:
+            catalog = json.loads(_catalog_cache_json.decode("utf-8"))
+            _catalog_cache_dict = catalog
+            return catalog
+        except Exception:
+            pass
+    return None
+
+
 @app.get("/api/conductor/catalog")
-async def get_conductor_catalog(request: Request):
-    """Single source of truth — pre-indexed catalog from skeleton inventory."""
+async def get_conductor_catalog(
+    request: Request,
+    page: int = Query(
+        default=0, ge=0, description="Page (1-based). 0 = legacy full blob."),
+    page_size: int = Query(default=25, ge=1, le=200, alias="pageSize"),
+    search: str = Query(default=""),
+    sort_by: str = Query(default="", alias="sortBy"),
+    category: str = Query(default=""),
+    brand: str = Query(default=""),
+):
+    """Single source of truth — pre-indexed catalog from skeleton inventory.
+
+    When pagination parameters are supplied (page ≥ 1, or search/category/brand),
+    returns a PaginatedCatalogResponse JSON object with server-side filtering.
+    When called with no params, returns the full catalog blob (legacy behaviour).
+    """
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_time
     try:
         now = time.time()
@@ -437,6 +466,71 @@ async def get_conductor_catalog(request: Request):
         if _catalog_cache_json is None:
             return JSONResponse(status_code=503, content={"error": "Catalog still building"})
 
+        # ── Paginated / filtered path ───────────────────────────────────────
+        is_paginated = page >= 1 or bool(search) or bool(
+            category) or bool(brand) or bool(sort_by)
+        if is_paginated:
+            catalog = _get_catalog_dict()
+            if catalog is None:
+                return JSONResponse(status_code=503, content={"error": "Catalog unavailable"})
+
+            products: list[dict] = list(catalog.get("products", []))
+
+            # Search filter — name, sku, brand, description
+            if search:
+                q = search.lower()
+                products = [
+                    p for p in products
+                    if q in (p.get("name") or "").lower()
+                    or q in (p.get("sku") or "").lower()
+                    or q in (p.get("brand") or "").lower()
+                    or q in (p.get("description") or "").lower()
+                    or q in (p.get("description_short") or "").lower()
+                ]
+
+            # Category filter
+            if category:
+                cat_lower = category.lower()
+                products = [p for p in products if (
+                    p.get("category") or "").lower() == cat_lower]
+
+            # Brand filter
+            if brand:
+                brand_lower = brand.lower()
+                products = [p for p in products if (
+                    p.get("brand") or "").lower() == brand_lower]
+
+            # Sort
+            if sort_by == "price_asc":
+                products = sorted(products, key=lambda p: (
+                    p.get("price") is None, p.get("price") or 0))
+            elif sort_by == "price_desc":
+                products = sorted(products, key=lambda p: (
+                    p.get("price") is None, -(p.get("price") or 0)))
+            elif sort_by == "name_asc":
+                products = sorted(products, key=lambda p: (
+                    p.get("name") or "").lower())
+            # Default: in-stock items first, then CfP
+            else:
+                products = sorted(products, key=lambda p: (
+                    p.get("price") is None, (p.get("name") or "").lower()))
+
+            # Paginate
+            effective_page = max(1, page)
+            total_items = len(products)
+            total_pages = max(1, (total_items + page_size - 1) // page_size)
+            start = (effective_page - 1) * page_size
+            page_products = products[start: start + page_size]
+
+            return JSONResponse({
+                "products": page_products,
+                "totalItems": total_items,
+                "totalPages": total_pages,
+                "currentPage": effective_page,
+                "pageSize": page_size,
+            })
+
+        # ── Legacy full-blob path ───────────────────────────────────────────
         accept_encoding = request.headers.get("accept-encoding", "")
         if "gzip" in accept_encoding and _catalog_cache_gzip is not None:
             return Response(
@@ -444,8 +538,6 @@ async def get_conductor_catalog(request: Request):
                 media_type="application/json",
                 headers={"Content-Encoding": "gzip"},
             )
-
-        return Response(content=_catalog_cache_json, media_type="application/json")
 
         return Response(content=_catalog_cache_json, media_type="application/json")
     except Exception as e:

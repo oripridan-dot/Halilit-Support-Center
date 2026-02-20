@@ -214,3 +214,43 @@ The Task Force:
 **Generation:** 1 (The Pioneers)
 **Started:** February 2026
 **Status:** Active — v9.7.2 — Product intelligence views live, Evolution Protocol bootstrapped.
+
+---
+
+## Level 7: Liquid Scaling and Autopoiesis
+
+> **Phase Codename:** The AI Cell
+> **Status:** Architectural definition locked — February 2026
+> **Reference:** `docs/ARCHITECTURE.md § The AI Cell Paradigm`
+
+Level 7 is the transition from a **managed factory** (humans press the buttons) to an **autopoietic organism** (the system maintains, repairs, and evolves itself). The Halilit Dark Factory achieves Level 7 when all three Core Survival Protocols are operational end-to-end.
+
+### Phase Objectives
+
+| #   | Objective                                                                             | Protocol              | Completion Signal                                                                             |
+| --- | ------------------------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------- |
+| 7.1 | Deploy `heartbeat_daemon.py` on a nightly cron schedule                               | Mitochondria (Evolve) | Catalog delta detected and ingested without operator input                                    |
+| 7.2 | Implement Mutation Engine: latency profiling + `ast_patcher.py` auto-refactor         | Evolve                | Pipeline stage self-optimises from linear to `asyncio` under load                             |
+| 7.3 | Enable cross-domain Task Force scheduling in `chief_agent.py`                         | Combine               | Chief combines Data Manager + Frontend Manager for a single mandate without manual delegation |
+| 7.4 | Implement Apoptosis: ephemeral sub-process lifecycle with hard-terminate              | Detach                | Heavy scraping job completes and process terminates with zero residual resource cost          |
+| 7.5 | Mitosis: parameterised Docker clone + workload partitioner                            | Liquid Scaling        | 10,000+ product batch ingested across N parallel cells and merged correctly                   |
+| 7.6 | Stem Cell capability: Chief writes a novel agent script for an unrecognised task type | Dynamic Generation    | New `.py` agent file synthesised at runtime; passes Watchdog validation                       |
+
+### Entry Criteria (Level 6 → Level 7)
+
+All of the following must be true before Level 7 is declared active:
+
+- All Level 6 Business Goals (§ above) have passing tests in the TDD State Machine.
+- `watchdog_agent.py` is live and blocking broken mutations from reaching `main`.
+- `janitor_agent.py` is scheduled and clearing metabolic waste on a defined cadence.
+- `docs/ARCHITECTURE.md` AI Cell Paradigm section is written and injected into the Chief's system prompt.
+
+### Glossary Additions (Level 7)
+
+| Term                | Definition                                                                                                                                   |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Autopoiesis**     | The system's ability to reproduce and maintain itself without external direction. The Level 7 north star.                                    |
+| **Mitosis**         | Spinning up N identical Docker containers to partition and parallelise a workload that exceeds single-cell capacity.                         |
+| **Apoptosis**       | Programmed sub-process termination. A heavy compute job that cleanly self-destructs upon completion.                                         |
+| **Mutation Engine** | The combination of `ast_patcher.py` and the TDD State Machine that proposes, validates, and merges performance improvements to the codebase. |
+| **Stem Cell Agent** | A dynamically synthesised Python agent written at runtime by the Chief to handle a capability gap not covered by existing agents.            |
