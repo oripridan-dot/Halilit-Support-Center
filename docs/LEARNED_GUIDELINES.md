@@ -137,3 +137,10 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** `fixes` attribute was not present.
 **Fix:** Added a handler for the missing attribute.
 **Lesson:** ALWAYS handle potentially missing attributes.
+
+
+### [2026-02-20] Mutation — Check Patch Anchor Existence
+**Symptom:** Patch application failed.
+**Root Cause:** Required anchor element was missing in the target file.
+**Fix:** Added verification that the anchor exists before patching.
+**Lesson:** ALWAYS verify that the specified anchor exists in the target file before attempting a `patch_component` operation.

@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-20
+### v4.1
+
+- [feat] Added `fitness_ledger.json` to store agent run data.
+- [docs] Added new learned guidelines: "Check Patch Anchor Existence".
+
+## [v4.1] — 2026-02-20
 - [feat] Introduced `useConductorCatalog` hook for fetching and managing product data.
 - [feat] Defined canonical `ConductorProduct` interface.
 - [feat] Added `ProductRelationship` and `ProductFamily` interfaces for product relationships.
