@@ -17,6 +17,15 @@ Tools exposed:
   factory_commit       – Stage all changes and create a semantic commit.
   factory_status       – Return environment health as JSON.
 
+  [Level 8 — Liquid MCP Core tools]
+  run_frontend_tests   – Run Vitest and return raw terminal output so the
+                         LLM can self-correct without a middle-manager.
+  git_isolate_workspace – Create an AI feature branch before any edit.
+  git_merge_workspace  – Squash-merge or rollback the feature branch.
+  apply_udiff_patch    – Apply SEARCH/REPLACE blocks or unified diff to any
+                         workspace file. Replaces ast_patcher — no fragile
+                         string matching, no Wolverine LLM fallback needed.
+
 Run standalone (for debugging):
     PYTHONPATH=. python backend/mcp/servers/factory_mcp_server.py
 
@@ -56,7 +65,7 @@ _FACTORY_PY = str(_ROOT / "factory.py")
 # MCP protocol constants
 # ---------------------------------------------------------------------------
 PROTOCOL_VERSION = "2024-11-05"
-SERVER_INFO = {"name": "halilit-factory", "version": "4.0.0"}
+SERVER_INFO = {"name": "halilit-factory", "version": "5.0.0"}
 
 # ---------------------------------------------------------------------------
 # Tool definitions
@@ -148,6 +157,135 @@ TOOLS: list[dict[str, Any]] = [
         "description": "Return environment health: API key, venv, spec count, agent presence.",
         "inputSchema": {"type": "object", "properties": {}, "required": []},
     },
+    # -----------------------------------------------------------------------
+    # Level 8 — Liquid MCP Core (Phase 1: Tool Consolidation)
+    # -----------------------------------------------------------------------
+    {
+        "name": "run_frontend_tests",
+        "description": (
+            "Run the Vitest frontend unit-test suite and return the raw terminal output. "
+            "Pass an optional target_file to narrow the run to a single component. "
+            "The LLM can read exact error messages and self-correct without a middle-manager."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "target_file": {
+                    "type": "string",
+                    "description": "Optional filename filter (e.g. 'GlobalSearch.tsx'). Omit to run all tests.",
+                }
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "git_isolate_workspace",
+        "description": (
+            "Create and checkout a new AI feature branch before any code changes are made. "
+            "Wraps repo_agent.create_feature_branch(). Returns the branch name created."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "task_name": {
+                    "type": "string",
+                    "description": "Short slug describing the task (e.g. 'add-debounce-search').",
+                }
+            },
+            "required": ["task_name"],
+        },
+    },
+    {
+        "name": "git_merge_workspace",
+        "description": (
+            "Merge a successful AI feature branch back into the base branch, or trash it on failure. "
+            "Wraps repo_agent.merge_and_cleanup()."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "branch_name": {
+                    "type": "string",
+                    "description": "The feature branch name returned by git_isolate_workspace.",
+                },
+                "success_status": {
+                    "type": "boolean",
+                    "description": "True to squash-merge into base, False to delete the branch and rollback.",
+                },
+            },
+            "required": ["branch_name", "success_status"],
+        },
+    },
+    {
+        "name": "execute_bash_command",
+        "description": (
+            "Execute an arbitrary shell command and return stdout + stderr. "
+            "Gives the LLM native OS-level autonomy: run npm install, git status, tsc, etc. "
+            "working_directory defaults to the project root if omitted."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "command": {
+                    "type": "string",
+                    "description": "The shell command to execute (e.g. 'pnpm install react-router-dom').",
+                },
+                "working_directory": {
+                    "type": "string",
+                    "description": "Absolute or project-relative working directory. Defaults to project root.",
+                },
+            },
+            "required": ["command"],
+        },
+    },
+    {
+        "name": "apply_udiff_patch",
+        "description": (
+            "Apply a surgical code patch to a workspace file using either:\n"
+            "  • SEARCH/REPLACE blocks (Aider format) — preferred for LLM-generated edits\n"
+            "  • Standard Unified Diff (git apply format)\n"
+            "The format is auto-detected. This replaces the brittle ast_patcher and never silently\n"
+            "corrupts files — it fails loudly if the anchor cannot be found."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "file_path": {
+                    "type": "string",
+                    "description": (
+                        "Workspace-relative path to the file to patch "
+                        "(e.g. 'frontend/src/components/GlobalSearch.tsx'). "
+                        "Required for SEARCH/REPLACE format; optional for unified diff "
+                        "(path is taken from the diff header)."
+                    ),
+                },
+                "patch_text": {
+                    "type": "string",
+                    "description": (
+                        "The patch to apply. Use SEARCH/REPLACE blocks:\n"
+                        "  <<<<<<< SEARCH\n"
+                        "  old code\n"
+                        "  =======\n"
+                        "  new code\n"
+                        "  >>>>>>> REPLACE\n"
+                        "Or a standard unified diff string."
+                    ),
+                },
+                "fmt": {
+                    "type": "string",
+                    "description": "Format hint: 'auto' (default), 'search_replace', or 'unified'.",
+                    "enum": ["auto", "search_replace", "unified"],
+                    "default": "auto",
+                },
+                "dry_run": {
+                    "type": "boolean",
+                    "description": "If true, validate the patch but do not write any files.",
+                    "default": False,
+                },
+            },
+            "required": ["patch_text"],
+        },
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -231,6 +369,124 @@ def _tool_status(args: dict[str, Any]) -> str:
     return out
 
 
+# ---------------------------------------------------------------------------
+# Level 8 — Liquid MCP Core tool handlers
+# ---------------------------------------------------------------------------
+
+_FRONTEND_DIR = _ROOT / "frontend"
+
+
+def _tool_run_frontend_tests(args: dict[str, Any]) -> str:
+    """Run Vitest and return the raw terminal output so the LLM can self-correct."""
+    target_file: str = args.get("target_file", "").strip()
+    cmd = ["pnpm", "test", "--", "--run", "--passWithNoTests"]
+    if target_file:
+        from pathlib import Path as _P
+        cmd.append(_P(target_file).name)
+    try:
+        result = subprocess.run(
+            cmd,
+            cwd=str(_FRONTEND_DIR),
+            capture_output=True,
+            text=True,
+            timeout=120,
+        )
+        raw = (result.stdout + "\n" + result.stderr).strip()
+        status = "PASS" if result.returncode == 0 else "FAIL"
+        return f"[{status}]\n{raw}"
+    except subprocess.TimeoutExpired:
+        return "[ERROR] Test run timed out after 120 s."
+    except FileNotFoundError:
+        return "[ERROR] pnpm not found. Is it installed in the frontend directory?"
+    except Exception as exc:
+        return f"[ERROR] {exc}"
+
+
+def _tool_git_isolate_workspace(args: dict[str, Any]) -> str:
+    """Create an AI feature branch and return its name."""
+    task_name: str = args.get("task_name", "ai-task").strip()
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from repo_agent import create_feature_branch  # type: ignore
+        branch = create_feature_branch(task_name)
+        return json.dumps({"branch": branch, "status": "created"})
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
+def _tool_git_merge_workspace(args: dict[str, Any]) -> str:
+    """Merge or trash an AI feature branch depending on success_status."""
+    branch_name: str = args.get("branch_name", "").strip()
+    success: bool = bool(args.get("success_status", False))
+    if not branch_name:
+        return json.dumps({"error": "branch_name is required."})
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from repo_agent import merge_and_cleanup  # type: ignore
+        merge_and_cleanup(branch_name, success)
+        action = "merged" if success else "rolled_back"
+        return json.dumps({"branch": branch_name, "status": action})
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
+def _tool_execute_bash_command(args: dict[str, Any]) -> str:
+    """Execute an arbitrary shell command and return stdout + stderr."""
+    command: str = args.get("command", "").strip()
+    working_directory: str = args.get("working_directory", "").strip()
+    if not command:
+        return json.dumps({"error": "command is required."})
+
+    cwd = working_directory if working_directory else str(_ROOT)
+    # Resolve relative paths against project root
+    from pathlib import Path as _P
+    resolved_cwd = str((_ROOT / cwd).resolve()
+                       ) if not _P(cwd).is_absolute() else cwd
+
+    try:
+        result = subprocess.run(
+            command,
+            shell=True,
+            cwd=resolved_cwd,
+            capture_output=True,
+            text=True,
+            timeout=180,
+        )
+        return json.dumps({
+            "exit_code": result.returncode,
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+        })
+    except subprocess.TimeoutExpired:
+        return json.dumps({"error": "Command timed out after 180 s."})
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
+def _tool_apply_udiff_patch(args: dict[str, Any]) -> str:
+    """Apply a SEARCH/REPLACE or unified-diff patch — the Level 8 code-edit tool."""
+    patch_text: str = args.get("patch_text", "").strip()
+    file_path: str = args.get("file_path", "").strip()
+    fmt: str = args.get("fmt", "auto")
+    dry_run: bool = bool(args.get("dry_run", False))
+
+    if not patch_text:
+        return json.dumps({"success": False, "message": "patch_text is required."})
+
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from udiff_patcher import apply_udiff  # type: ignore
+        result = apply_udiff(
+            file_path if file_path else None,
+            patch_text,
+            fmt=fmt,
+            dry_run=dry_run,
+        )
+        return json.dumps(result, indent=2)
+    except Exception as exc:
+        return json.dumps({"success": False, "message": str(exc)})
+
+
 _TOOL_HANDLERS = {
     "factory_chief_plan": _tool_chief_plan,
     "factory_build": _tool_build,
@@ -239,6 +495,12 @@ _TOOL_HANDLERS = {
     "factory_v0_design": _tool_v0_design,
     "factory_commit": _tool_commit,
     "factory_status": _tool_status,
+    # Level 8 — Liquid MCP Core
+    "run_frontend_tests": _tool_run_frontend_tests,
+    "git_isolate_workspace": _tool_git_isolate_workspace,
+    "git_merge_workspace": _tool_git_merge_workspace,
+    "execute_bash_command": _tool_execute_bash_command,
+    "apply_udiff_patch": _tool_apply_udiff_patch,
 }
 
 # ---------------------------------------------------------------------------

@@ -1,4 +1,12 @@
 ## [v4.1] — 2026-02-20
+### v4.2 changes:
+- [feature] ANTI-LOOP DIRECTIVE added to system prompt (never retry same approach).
+- [feature] 'escalate_to_senior' tool added (circuit-breaker, SEQUENTIAL).
+- [feature] `consult_chief()` accepts `senior_override` param (SYSTEM_OVERRIDE injection).
+- [doc] Updated system prompt to reflect v9.7.5 awareness.
+- [refactor] Updated module docstring to reflect v4.2 and v9.7.5.
+
+## [v4.1] — 2026-02-20
 - [chore] Updated `builder_agent.py` with a new rule to always action Evolution Proposals directly.
 - [chore] Updated `fitness_ledger.json` with updated statistics for agents.
 - [feat] Added `fitness_ledger.json` to store agent run data.
