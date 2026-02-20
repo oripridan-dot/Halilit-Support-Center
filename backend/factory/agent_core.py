@@ -1,4 +1,5 @@
 import os
+import re as _re
 import sys
 from pathlib import Path
 
@@ -39,6 +40,59 @@ FAST_MODEL = "gemini-2.0-flash-lite"
 MODEL = SMART_MODEL
 
 
+def get_relevant_lore(task_query: str, top_k: int = 5) -> str:
+    """
+    Phase 3 — Vector Memory: embed LEARNED_GUIDELINES.md sections and
+    return only the top-K lessons most relevant to the current task.
+
+    Falls back to full-text read if the embedding API is unavailable
+    (no key, rate-limit, etc.) so agents never lose their memory.
+    """
+    lessons_path = _PROJECT_ROOT / "docs" / "LEARNED_GUIDELINES.md"
+    if not lessons_path.exists():
+        return ""
+
+    raw = lessons_path.read_text(encoding="utf-8")
+
+    # Split on H2/H3 markdown headers so each lesson is its own chunk
+    sections = [s.strip() for s in _re.split(r"\n(?=##)", raw) if s.strip()]
+
+    # If few sections or no client, return everything — full text is fine
+    if not _CLIENT or len(sections) <= top_k:
+        return raw
+
+    try:
+        _EMBED_MODEL = "models/text-embedding-004"
+
+        def _embed(text: str) -> list[float]:
+            resp = _CLIENT.models.embed_content(
+                model=_EMBED_MODEL,
+                contents=text[:4000],  # cap token cost per chunk
+            )
+            return resp.embeddings[0].values
+
+        q_vec = _embed(task_query)
+
+        def _cosine(a: list[float], b: list[float]) -> float:
+            dot = sum(x * y for x, y in zip(a, b))
+            norm_a = sum(x * x for x in a) ** 0.5
+            norm_b = sum(x * x for x in b) ** 0.5
+            return dot / (norm_a * norm_b + 1e-9)
+
+        scored: list[tuple[float, str]] = []
+        for section in sections:
+            s_vec = _embed(section)
+            scored.append((_cosine(q_vec, s_vec), section))
+
+        scored.sort(key=lambda x: x[0], reverse=True)
+        top_sections = [s for _, s in scored[:top_k]]
+        return "\n\n---\n\n".join(top_sections)
+
+    except Exception:
+        # Embedding failed — graceful fallback to full text
+        return raw
+
+
 def get_project_context(target_type: str = "frontend", blackboard_file: str = "") -> str:
     """
     Loads critical project context so the Agent respects the Architecture.
@@ -52,10 +106,13 @@ def get_project_context(target_type: str = "frontend", blackboard_file: str = ""
     root = _PROJECT_ROOT
     context_parts: list[str] = []
 
-    # --- Always inject Lessons Learned (persistent agent memory) ---
-    lessons_path = root / "docs" / "LEARNED_GUIDELINES.md"
+    # --- Always inject Lessons Learned (persistent agent memory, vector-filtered) ---
+    lessons_path = _PROJECT_ROOT / "docs" / "LEARNED_GUIDELINES.md"
     if lessons_path.exists():
-        lessons = lessons_path.read_text(encoding="utf-8")
+        # Use embedding search to inject only lessons relevant to this task type,
+        # keeping the prompt lean instead of dumping the entire file every time.
+        lessons = get_relevant_lore(
+            f"{target_type} task — apply relevant lessons")
         context_parts.append(
             f"--- CRITICAL LESSONS LEARNED (read before acting) ---\n{lessons}\n"
             f"--- END LESSONS ---\n"

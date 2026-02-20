@@ -6,9 +6,13 @@ Fetches a candidate official product page and extracts:
   - Specs from tables/lists (simple heuristics)
 
 Used by jit_agent for the Auditor (visual verification) and merge step.
+URL discovery chain:
+  1. BRAND_DOMAINS slug lookup (fast, no API)
+  2. Gemini-powered URL suggestion (fallback, uses AI knowledge to find page)
 """
 
 import logging
+import os
 import re
 from typing import Any, Dict, List, Optional
 
@@ -65,19 +69,22 @@ def fetch_official_page(url: str, timeout: int = 10) -> Dict[str, Any]:
         "raw_text": "",
     }
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
-        if resp.status_code != 200:
-            return result
+        resp = requests.get(url, headers=HEADERS,
+                            timeout=timeout, allow_redirects=True)
+        if resp.status_code == 404:
+            return result  # Truly missing page — skip
         html = resp.text
         result["raw_text"] = html[:50000]  # cap for verify_integrity
 
         # og:image
-        m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, re.I)
+        m = re.search(
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html, re.I)
         if m:
             result["image_url"] = m.group(1).strip()
 
         # og:description
-        m = re.search(r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']*)["\']', html, re.I)
+        m = re.search(
+            r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']*)["\']', html, re.I)
         if m:
             result["description"] = m.group(1).strip()
 
@@ -98,36 +105,86 @@ def fetch_official_page(url: str, timeout: int = 10) -> Dict[str, Any]:
         return result
 
 
+def _find_url_with_gemini(brand: str, product_name: str) -> Optional[str]:
+    """
+    Use Gemini's world-knowledge to find the official product page URL.
+    Gemini is used purely as a NAVIGATOR (finding the URL), not as a spec generator.
+    The returned URL is always verified with a HEAD request before returning.
+    """
+    try:
+        from backend.env_secrets import get_gemini_api_key
+        api_key = get_gemini_api_key()
+        if not api_key:
+            return None
+        from google import genai
+        client = genai.Client(api_key=api_key)
+        prompt = (
+            f"What is the exact official product page URL for '{product_name}' by {brand}? "
+            "Reply with ONLY the URL (no extra text). If you don't know the exact URL, "
+            "reply with the brand's main product listing URL (e.g. https://brand.com/products). "
+            "Do not invent or guess URLs you are not confident about."
+        )
+        response = client.models.generate_content(
+            model="gemini-2.0-flash-lite",
+            contents=prompt,
+        )
+        raw = (response.text or "").strip()
+        # Extract first http(s) URL from response
+        m = re.search(r'https?://[^\s\'"<>]+', raw)
+        if not m:
+            return None
+        candidate = m.group(0).rstrip(".,;)")
+        logger.info("Gemini suggested official URL: %s", candidate)
+        # Do a lightweight connectivity check — accept any non-404 response
+        try:
+            resp = requests.head(candidate, headers=HEADERS,
+                                 timeout=8, allow_redirects=True)
+            if resp.status_code != 404:
+                return resp.url
+            # 404 = page doesn't exist; try without HEAD (some servers block HEAD)
+            resp2 = requests.get(candidate, headers=HEADERS,
+                                 timeout=8, stream=True)
+            resp2.close()
+            if resp2.status_code != 404:
+                return resp2.url
+        except Exception:
+            # Network error is not a 404 — still return the candidate URL
+            return candidate
+    except Exception as e:
+        logger.debug("Gemini URL finder: %s", e)
+    return None
+
+
 def find_official_product_url(brand: str, product_name: str) -> Optional[str]:
     """
-    Suggest a candidate official product page URL.
-    Uses brand domain + product name slug. Does not use Google Search.
-    Returns None if no domain or if we don't want to guess.
+    Discover the official product page URL using a two-stage approach:
+      Stage 1 — Slug-based domain lookup (instant, no API)
+      Stage 2 — Gemini-powered URL discovery (fallback for unknown brands)
     """
-    brand_lower = brand.lower().strip().replace(" ", " ")
+    brand_lower = brand.lower().strip()
     domain = None
     for key, d in BRAND_DOMAINS.items():
         if key in brand_lower or brand_lower in key:
             domain = d
             break
-    if not domain:
-        domain = brand_lower.replace(" ", "") + ".com"
 
-    # Simple slug from product name (alphanumeric and dash)
-    slug = re.sub(r"[^a-z0-9\s-]", "", product_name.lower())
-    slug = re.sub(r"\s+", "-", slug).strip("-")[:60]
+    # Stage 1: slug-based lookup for known brands
+    if domain:
+        slug = re.sub(r"[^a-z0-9\s-]", "", product_name.lower())
+        slug = re.sub(r"\s+", "-", slug).strip("-")[:60]
+        candidates = [
+            f"https://{domain}/products/{slug}",
+            f"https://www.{domain}/products/{slug}",
+            f"https://{domain}/{slug}",
+        ]
+        for url in candidates:
+            try:
+                resp = requests.head(url, headers=HEADERS,
+                                     timeout=5, allow_redirects=True)
+                if resp.status_code == 200:
+                    return resp.url
+            except Exception:
+                continue
 
-    # Common paths (many brand sites use /products/... or /.../product-name)
-    candidates = [
-        f"https://{domain}/products/{slug}",
-        f"https://www.{domain}/products/{slug}",
-        f"https://{domain}/{slug}",
-    ]
-    for url in candidates:
-        try:
-            resp = requests.head(url, headers=HEADERS, timeout=5, allow_redirects=True)
-            if resp.status_code == 200:
-                return resp.url
-        except Exception:
-            continue
-    return None
+    # Stage 2: Gemini-powered URL discovery (handles unknown brands, unusual slugs)
+    return _find_url_with_gemini(brand, product_name)

@@ -19,6 +19,7 @@ import subprocess
 import os
 import time
 import textwrap
+import argparse
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -97,6 +98,7 @@ _ACTION_MAP = {
     "reflect":    ("reflect",    "🧠 MENTOR",          "Extracting lesson → updating LEARNED_GUIDELINES.md..."),
     "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
     "v0_design":  ("v0_design",  "🎨 V0 DESIGNER",    "Generating v0.dev prompt or integrating v0 output..."),
+    "scout":      ("scout",      "🔭 SCOUT",           "Scanning for new tools → writing Evolution Proposals..."),
 }
 
 
@@ -108,6 +110,10 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
     if tool == "design":
         return factory + ["design", args] if args else None
     if tool == "implement":
+        return factory + ["build", args] if args else None
+    if tool == "sandbox":
+        # Sandbox makeover: autonomous inner_loop build with full verification
+        # Same as 'implement' but signals the Chief's intent to force clean builds
         return factory + ["build", args] if args else None
     if tool in ("build",):
         return factory + ["build"]
@@ -133,6 +139,8 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return None  # handled by execute_task_force() below
     if tool == "v0_design":
         return factory + ["v0_design", args] if args else None
+    if tool == "scout":
+        return factory + ["scout"]
     return None  # 'explain' or unknown
 
 
@@ -307,6 +315,44 @@ def execute_swarm(queue: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    # ---- CLI flags (Phase 4 — Auto-Pilot) ----------------------------------
+    parser = argparse.ArgumentParser(
+        prog="nexus.py",
+        description="THE CHIEF: Project Nexus — Massively Parallel AI Engineering Console",
+    )
+    parser.add_argument(
+        "--auto",
+        action="store_true",
+        help="Auto-Pilot: authorize every swarm plan without a Y/n prompt.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        dest="dry_run",
+        help="Dry Run: show the Chief's plan but do NOT dispatch any tasks.",
+    )
+    parser.add_argument(
+        "instruction",
+        nargs="?",
+        default="",
+        help="Optional: initial instruction passed straight to the Chief.",
+    )
+    args = parser.parse_args()
+
+    auto_mode: bool = args.auto
+    dry_run: bool = args.dry_run
+
+    if auto_mode:
+        print(
+            f"{YELLOW}{BOLD}⚡ AUTO-PILOT ENGAGED — plans execute without confirmation.{RESET}")
+    if dry_run:
+        print(
+            f"{CYAN}{BOLD}💤 DRY-RUN MODE — tasks will be printed but NOT executed.{RESET}")
+
+    # Kill Switch — abort after this many consecutive failures
+    KILL_SWITCH_THRESHOLD = 3
+    consecutive_failures: int = 0
+
     # ---- Verify environment ------------------------------------------------
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
     if not api_key:
@@ -330,7 +376,8 @@ def main() -> None:
     print("---------------------------------------")
 
     print(f"\n{DIM}🧠 Analyzing Project State...{RESET}")
-    plan = consult_chief("", is_startup=True)
+    initial_input = args.instruction or ""
+    plan = consult_chief(initial_input, is_startup=not bool(initial_input))
 
     print(f"\n{GREEN}{BOLD}CHIEF'S BRIEFING:{RESET}")
     type_writer(plan.get("explanation", "(no explanation)"))
@@ -356,13 +403,39 @@ def main() -> None:
                     print(
                         f"   {i}. {mode} | {BOLD}{task['tool'].upper()}{RESET} {args_label}")
 
-                try:
-                    confirm = input(
-                        f"\n{CYAN}Authorize Swarm? [{BOLD}Y{RESET}{CYAN}/n] "
-                        f"or type new instructions: {RESET}"
-                    ).strip()
-                except (KeyboardInterrupt, EOFError):
-                    break
+                # --- Auto-Pilot or interactive confirm ----------------------
+                if dry_run:
+                    print(
+                        f"\n{CYAN}[DRY-RUN] Plan would execute {len(queue)} task(s). Not dispatching.{RESET}")
+                    plan = {"queue": []}
+                    hr()
+                    # In dry-run, fall through to free-form prompt
+                    try:
+                        user_input = input(f"\n{BOLD}YOU > {RESET}").strip()
+                    except (KeyboardInterrupt, EOFError):
+                        break
+                    if not user_input or user_input.lower() in ("exit", "quit", "q", ":q"):
+                        break
+                    print(f"\n{DIM}Chief is planning logistics...{RESET}")
+                    plan = consult_chief(user_input, is_startup=False)
+                    hr()
+                    print(f"\n{GREEN}{BOLD}CHIEF >{RESET}")
+                    type_writer(plan.get("explanation", "(no explanation)"))
+                    hr()
+                    continue
+
+                if auto_mode:
+                    confirm = "y"
+                    print(
+                        f"\n{CYAN}⚡ [AUTO] Executing {len(queue)} task(s)...{RESET}")
+                else:
+                    try:
+                        confirm = input(
+                            f"\n{CYAN}Authorize Swarm? [{BOLD}Y{RESET}{CYAN}/n] "
+                            f"or type new instructions: {RESET}"
+                        ).strip()
+                    except (KeyboardInterrupt, EOFError):
+                        break
 
                 if confirm.lower() in ("exit", "quit", "q", ":q"):
                     break
@@ -372,8 +445,51 @@ def main() -> None:
                     plan = {"queue": []}
                     hr()
 
-                    # --- Auto-recovery: feed failures back to Chief ---
+                    # --- Kill Switch: abort after N consecutive failures ---
                     if failures:
+                        consecutive_failures += 1
+                        if consecutive_failures >= KILL_SWITCH_THRESHOLD:
+                            print(
+                                f"\n{RED}{BOLD}🛑 KILL SWITCH TRIGGERED:{RESET}{RED} "
+                                f"{consecutive_failures} consecutive failure batch(es). "
+                                f"Halting Auto-Pilot to prevent runaway loops.{RESET}"
+                            )
+                            print(
+                                f"  Last failures:\n"
+                                + "\n".join(
+                                    f"    • {f['tool']} {f.get('args', '')}"
+                                    for f in failures
+                                )
+                            )
+                            # Log halt to file for post-mortem
+                            try:
+                                log_dir = ROOT / "factory_logs"
+                                log_dir.mkdir(exist_ok=True)
+                                import datetime as _dt
+                                halt_log = log_dir / "autopilot_halt.log"
+                                with open(halt_log, "a", encoding="utf-8") as _fh:
+                                    _fh.write(
+                                        f"\n[{_dt.datetime.now().isoformat()}] KILL SWITCH TRIGGERED\n"
+                                        + "\n".join(
+                                            f"  FAILED: {f['tool']} {f.get('args','')} — {f.get('error_output','')[:300]}"
+                                            for f in failures
+                                        ) + "\n"
+                                    )
+                                print(
+                                    f"  {DIM}Halt logged to factory_logs/autopilot_halt.log{RESET}")
+                            except Exception:
+                                pass
+                            if auto_mode:
+                                print(
+                                    f"  {DIM}Re-run without --auto or fix the errors, "
+                                    f"then restart Nexus.{RESET}")
+                                break
+                            # In interactive mode, warn but allow continuation
+                            print(
+                                f"  {YELLOW}Manual override: type a new instruction to continue.{RESET}")
+                            consecutive_failures = 0  # reset after warning in interactive
+
+                        # --- Auto-recovery: feed failures back to Chief ---
                         failure_report = "\n".join(
                             f"FAILED: {f['tool']} {f.get('args', '')}\n{f.get('error_output', '')}"
                             for f in failures
@@ -391,6 +507,8 @@ def main() -> None:
                         if thought:
                             print(f"  {DIM}[Reasoning: {thought}]{RESET}")
                         hr()
+                    else:
+                        consecutive_failures = 0  # reset on clean run
 
                     continue
 
@@ -406,6 +524,11 @@ def main() -> None:
 
             else:
                 # No pending queue — free-form input
+                if auto_mode:
+                    # Auto-Pilot with empty queue: nothing to do, exit gracefully
+                    print(
+                        f"\n{GREEN}✅ [AUTO] Queue exhausted. Nexus shutting down.{RESET}")
+                    break
                 try:
                     user_input = input(f"\n{BOLD}YOU > {RESET}").strip()
                 except (KeyboardInterrupt, EOFError):

@@ -425,6 +425,19 @@ def cmd_v0_design(description: str, component_type: str = "UIComponent") -> None
         log(f"❌ V0 design failed: {result.get('error', 'unknown')}")
 
 
+def cmd_scout() -> None:
+    """Scout: scan for new MCP servers / tools and write Evolution Proposals."""
+    ensure_env()
+    log("🔭 Activating Scout Agent (Tech Intelligence Scan)...")
+    agent = FACTORY / "scout_agent.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    subprocess.run(
+        [sys.executable, str(agent)],
+        cwd=str(FACTORY),
+        env=env,
+    )
+
+
 # ---------------------------------------------------------------------------
 # Entry Point
 # ---------------------------------------------------------------------------
@@ -461,6 +474,10 @@ Level 9 — Feedback & Memory Loop:
 Level 10 — Autonomous Polish:
   grand_task_force ["prompt"]    Chief-driven end-to-end catalog + UI polish via DAG
                                  (omit prompt to use the canonical polish protocol)
+
+Evolutionary AI:
+  scout                          Scout: scan for new tools → write Evolution Proposals
+                                 Proposals land in specs/strategy/evolution/ for Chief review
 
 Agentic UI Design (v0 MCP):
   v0_design "description"        Generate a v0.dev-ready prompt for a UI component
@@ -560,6 +577,9 @@ if __name__ == "__main__":
         tf_goal = sys.argv[3]
         tf_agents = sys.argv[4].split(",") if len(sys.argv) > 4 else None
         cmd_task_force(tf_id, tf_goal, tf_agents)
+
+    elif command == "scout":
+        cmd_scout()
 
     elif command == "grand_task_force":
         gtf_prompt = sys.argv[2] if len(sys.argv) > 2 else ""

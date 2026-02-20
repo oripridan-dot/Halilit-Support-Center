@@ -67,6 +67,18 @@ TOOLS & PARALLELISM RULES:
                               args = "description of the component to design".
                               If args starts with 'integrate:', integrates v0 output
                               into the specified file path.
+- 'scout'       (Scout):      Scans for new tools (MCP servers, frameworks, libraries)  PARALLEL SAFE ✅
+                              and writes Evolution Proposals to specs/strategy/evolution/.
+                              Use on demand to refresh the tool landscape awareness.
+                              No args required.
+- 'sandbox'     (Sandbox):    Runs build+verify pipeline directly on a spec file.        SEQUENTIAL 🔒
+                              Triggers inner_loop: LLM generates → tsc/lint/vite build →
+                              self-heals up to 5 rounds. Use when you need guaranteed
+                              green-build output, or after 'implement' fails ui_validate.
+                              args = spec file path (e.g. "specs/interface/02_inventory_grid.md").
+                              SANDBOX MAKEOVER: If the Chief wants to rebuild a component
+                              from scratch with a clean verified state, queue 'sandbox'
+                              directly. It replaces the stale Stitch/human-input workflow.
 - 'explain'     (None):       Plain-English answer; no queue.                          PARALLEL SAFE ✅
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
@@ -117,6 +129,16 @@ RULES:
 - For 'explain', use a single queue item with "args" containing the answer text.
 - For 'reflect', the "args" MUST be a short description of the failure/lesson context.
 - Sequential tasks act as BARRIERS: all parallel tasks before them must finish first.
+- **TDD RULE (Phase 1):** For ANY new feature or component that does not yet have a
+  corresponding test file, you MUST queue a 'design' task to write a test spec BEFORE
+  the 'implement' task. The 'design' args must be a test spec path, e.g.
+  'tests/specs/<feature>_test.md' or 'specs/behavior/<feature>_scenarios.md'.
+  NEVER queue 'implement' for a new feature without a preceding 'design' task that
+  produces a test spec. If the feature already has test scenarios in specs/behavior/,
+  this rule is satisfied — do not duplicate.
+  Example TDD queue:
+    {"tool": "design",    "args": "specs/behavior/new_feature_scenarios.md", "parallel": true},
+    {"tool": "implement", "args": "interface/new_feature.md",                "parallel": false}
 - **UI VALIDATE RULE:** After ANY batch of 'implement' tasks that touch frontend specs
   (specs/interface/ or component files), you MUST queue a sequential 'ui_validate' task
   immediately after the parallel batch closes, before 'diagnose' or 'commit'. This catches
@@ -189,6 +211,26 @@ def get_project_state() -> str:
             "⚠️  WARNING: The Spine (specs/strategy/master_plan.md) is missing. "
             "Agents lack global product context.\n"
         )
+
+    # --- 0a. INJECT EVOLUTION PROPOSALS (Scout briefings) ---
+    evolution_dir = ROOT_DIR / "specs" / "strategy" / "evolution"
+    if evolution_dir.exists():
+        proposals = sorted(evolution_dir.glob("*.md"))
+        if proposals:
+            # Surface only the 3 most recent proposals to stay concise
+            recent = proposals[-3:]
+            state.append(
+                "=== SCOUT EVOLUTION PROPOSALS (pending Chief review) ===")
+            for p in recent:
+                state.append(f"\n--- {p.name} ---")
+                state.append(p.read_text(encoding="utf-8")
+                             [:1200])  # cap per file
+            state.append("=== END EVOLUTION PROPOSALS ===\n")
+            state.append(
+                "CHIEF DIRECTIVE: Review the proposals above. If any RECOMMEND verdict "
+                "aligns with the Master Plan's current gaps, schedule a 'scout' or "
+                "'task_force' to integrate the tool. Otherwise, acknowledge and proceed."
+            )
 
     # 1. Git status
     git_status = get_git_status()

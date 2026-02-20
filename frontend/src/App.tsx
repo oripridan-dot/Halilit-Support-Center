@@ -1,10 +1,18 @@
-import React, { Suspense } from "react";
-import { LayoutDashboard, PackageSearch, Server } from "lucide-react";
+import React, { Suspense, useState } from "react";
+import {
+  LayoutDashboard,
+  PackageSearch,
+  Server,
+  ChevronLeft,
+  ChevronRight,
+  Activity,
+  Zap,
+} from "lucide-react";
 import { useNavigationStore } from "./store/navigationStore";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { GlobalSearch } from "./components/GlobalSearch";
 
-// Strict Lazy Loading (Only professional views)
+// Strict Lazy Loading
 const DashboardView = React.lazy(
   () => import("./components/views/DashboardView"),
 );
@@ -18,65 +26,148 @@ const IngestionStatusView = React.lazy(
   () => import("./components/views/IngestionStatusView"),
 );
 
+const VIEW_LABELS: Record<string, string> = {
+  DASHBOARD: "Mission Control",
+  INVENTORY: "Inventory Master",
+  PRODUCT_DETAIL: "Product Intelligence",
+  INGESTION_STATUS: "Data Pipeline",
+};
+
+const NAV_ITEMS = [
+  { view: "DASHBOARD" as const, icon: LayoutDashboard, label: "Overview" },
+  { view: "INVENTORY" as const, icon: PackageSearch, label: "Inventory" },
+];
+
 function App() {
   const { currentView, goToDashboard, goToInventory } = useNavigationStore();
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  const viewLabel = VIEW_LABELS[currentView] ?? currentView;
+
+  const navHandlers: Record<string, () => void> = {
+    DASHBOARD: () => goToDashboard(),
+    INVENTORY: () => goToInventory(),
+  };
+
+  const isInventoryActive =
+    currentView === "INVENTORY" || currentView === "PRODUCT_DETAIL";
 
   return (
     <GlobalErrorBoundary>
-      <div className="flex h-screen w-screen bg-black text-zinc-100 font-sans overflow-hidden">
-        {/* SIDEBAR */}
-        <aside className="w-64 border-r border-zinc-800 bg-zinc-950 flex flex-col">
-          <div className="h-16 flex items-center px-6 border-b border-zinc-800 gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">
+      <div
+        className="flex h-screen w-screen bg-black text-zinc-100 overflow-hidden"
+        style={{ fontFamily: "Inter, system-ui, sans-serif" }}
+      >
+        {/* ── SIDEBAR ── */}
+        <aside
+          className="relative flex flex-col bg-[#0a0a0a] border-r border-zinc-900 transition-all duration-200"
+          style={{ width: sidebarOpen ? 220 : 56 }}
+        >
+          {/* Logo */}
+          <div
+            className="h-12 flex items-center border-b border-zinc-900 shrink-0 overflow-hidden"
+            style={{ padding: sidebarOpen ? "0 16px" : "0 14px" }}
+          >
+            <div className="w-7 h-7 bg-blue-600 rounded-md flex items-center justify-center font-black text-white text-sm shrink-0">
               H
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-bold">Halilit SC</span>
-              <span className="text-[10px] text-zinc-500 tracking-widest">
-                OPERATOR CONSOLE
-              </span>
-            </div>
-          </div>
-          <nav className="p-4 space-y-2">
-            <button
-              onClick={goToDashboard}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${currentView === "DASHBOARD" ? "bg-zinc-900 text-blue-400" : "text-zinc-400 hover:text-white"}`}
-            >
-              <LayoutDashboard size={18} /> Overview
-            </button>
-            <button
-              onClick={goToInventory}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${currentView === "INVENTORY" || currentView === "PRODUCT_DETAIL" ? "bg-zinc-900 text-blue-400" : "text-zinc-400 hover:text-white"}`}
-            >
-              <PackageSearch size={18} /> Inventory
-            </button>
-            <div className="pt-4 mt-4 border-t border-zinc-800">
-              <div className="flex items-center gap-3 px-3 text-zinc-500">
-                <Server size={16} />
-                <span className="text-xs">
-                  Factory Status:{" "}
-                  <span className="text-emerald-500">Online</span>
+            {sidebarOpen && (
+              <div className="ml-3 flex flex-col leading-tight">
+                <span className="text-[13px] font-semibold tracking-tight text-zinc-100">
+                  Halilit SC
+                </span>
+                <span className="text-[9px] text-zinc-600 tracking-[0.12em] uppercase">
+                  Operator Console
                 </span>
               </div>
-            </div>
+            )}
+          </div>
+
+          {/* Nav Items */}
+          <nav className="flex-1 py-3 space-y-0.5 px-2">
+            {NAV_ITEMS.map(({ view, icon: Icon, label }) => {
+              const active =
+                view === "DASHBOARD"
+                  ? currentView === "DASHBOARD"
+                  : isInventoryActive;
+              return (
+                <button
+                  key={view}
+                  onClick={navHandlers[view]}
+                  title={!sidebarOpen ? label : undefined}
+                  className={`
+                    w-full flex items-center gap-2.5 rounded-md text-[13px] font-medium transition-all
+                    ${sidebarOpen ? "px-3 py-2" : "px-0 py-2 justify-center"}
+                    ${
+                      active
+                        ? "bg-blue-600/10 text-blue-400"
+                        : "text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900"
+                    }
+                  `}
+                >
+                  <Icon size={15} className="shrink-0" />
+                  {sidebarOpen && <span>{label}</span>}
+                </button>
+              );
+            })}
           </nav>
+
+          {/* Factory Status */}
+          <div className="pb-3 px-2 border-t border-zinc-900 pt-3">
+            <div
+              title={!sidebarOpen ? "Factory Online" : undefined}
+              className={`flex items-center gap-2 rounded-md py-1.5 ${sidebarOpen ? "px-3" : "justify-center"}`}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 animate-pulse" />
+              {sidebarOpen && (
+                <span className="text-[11px] text-zinc-600">
+                  Factory <span className="text-emerald-500">Online</span>
+                </span>
+              )}
+            </div>
+          </div>
+
+          {/* Collapse Toggle */}
+          <button
+            onClick={() => setSidebarOpen((v) => !v)}
+            className="absolute -right-3 top-8 w-6 h-6 rounded-full bg-zinc-900 border border-zinc-800
+              flex items-center justify-center text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800 transition-colors z-10"
+          >
+            {sidebarOpen ? (
+              <ChevronLeft size={12} />
+            ) : (
+              <ChevronRight size={12} />
+            )}
+          </button>
         </aside>
 
-        {/* MAIN STAGE */}
+        {/* ── MAIN STAGE ── */}
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-16 border-b border-zinc-800 bg-zinc-950 flex items-center justify-between px-8">
-            <div className="text-sm text-zinc-500">
-              System <span className="text-zinc-300">/ {currentView}</span>
+          {/* Header */}
+          <header className="h-12 border-b border-zinc-900 bg-[#0a0a0a] flex items-center justify-between px-5 shrink-0">
+            <div className="flex items-center gap-2 text-sm">
+              <span className="text-zinc-600">System</span>
+              <span className="text-zinc-700">/</span>
+              <span className="text-zinc-300 font-medium">{viewLabel}</span>
             </div>
-            <div className="w-96">
-              <GlobalSearch />
+            <div className="flex items-center gap-3">
+              <div className="w-72">
+                <GlobalSearch />
+              </div>
+              <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800">
+                <Zap size={11} className="text-blue-400" />
+                <span className="text-[11px] text-zinc-500">v9.7.1</span>
+              </div>
             </div>
           </header>
-          <main className="flex-1 overflow-auto bg-black relative">
+
+          {/* Content */}
+          <main className="flex-1 overflow-auto bg-black">
             <Suspense
               fallback={
-                <div className="p-10 text-zinc-500 animate-pulse">
-                  Loading Factory Module...
+                <div className="flex items-center gap-3 p-8 text-zinc-600">
+                  <Activity size={14} className="animate-pulse" />
+                  <span className="text-sm">Loading module…</span>
                 </div>
               }
             >

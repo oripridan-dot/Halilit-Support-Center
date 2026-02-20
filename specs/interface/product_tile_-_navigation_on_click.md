@@ -22,16 +22,41 @@ To enable navigation to the Product Detail View directly from a Product Tile whe
 1. **Scenario:** The user clicks on a Product Tile in the Inventory View.
     * **Outcome:** The user is navigated to the Product Detail View for the corresponding product.
 2. **Scenario:** The user focuses on a Product Tile using the keyboard (Tab key).
-    * **Outcome:** The Product Tile receives focus and displays a visual indication of focus (e.g., an outline).
-    * **Action:** The user presses the Enter key or Spacebar.
+    * **Outcome:** The Product Tile is visually highlighted (e.g., with a different background color or border).
+3. **Scenario:** The user presses the Enter key while a Product Tile is focused.
     * **Outcome:** The user is navigated to the Product Detail View for the corresponding product.
-3. **Scenario:** The user clicks on the image within a Product Tile.
-    * **Outcome:** The user is navigated to the Product Detail View for the corresponding product (navigation not prevented by the image).
-4.  **Scenario:** `product.id` is null or undefined.
-    *   **Outcome:** Clicking the product tile does nothing.
-5. **Scenario:** The Product Tile shows "Out of Stock" badge.
-    * **Action:** The user clicks the Product Tile.
-    * **Outcome:** The user is navigated to the Product Detail View for the corresponding product. The "Out of Stock" indicators are still visible on the detail page.
+4. **Scenario:** The user presses the Space key while a Product Tile is focused.
+    * **Outcome:** The user is navigated to the Product Detail View for the corresponding product.
+5. **Scenario:** A product with invalid id is clicked (or does not exist).
+    * **Outcome:** The user is not navigated and an error toast message appears.
+
+## Stitch UI Prompt
+
+You are a React code generator. The component to generate is `ProductTile.tsx`.
+It should be a functional component that displays a product's image, name, and optionally a badge. It should be clickable to navigate to the product detail page.
+
+**Layout:** Use a Flexbox layout with `flex flex-col`. The tile should contain an image at the top, followed by product information below.
+
+**Visual Style:** Use a dark theme consistent with the Halilit Support Center (slate-900 background, blue-500 accents). The component should have a subtle hover effect to indicate clickability (e.g., `hover:bg-slate-800`). Use Tailwind CSS.
+
+**Data Slots:**
+
+*   **`imageUrl`:** URL of the product image. Use `/placeholder.png` if the image is missing.
+*   **`productName`:** Name of the product.
+*   **`productId`:** ID of the product.
+*   **`badgeText`:** Optional text for a badge (e.g., "OUT OF STOCK", "UNCONFIRMED"). If empty, do not display the badge.
+*   **`badgeColor`:** Tailwind color class for the badge background (e.g., `bg-red-500`, `bg-amber-500`).
+
+**Component Hierarchy:**
+
+1.  Top-level `div` with `flex flex-col` and appropriate padding/margin. Add `cursor-pointer` to signify clickability.
+2.  `img` tag for the product image. Use `w-full h-48 object-cover` for styling. Handle image loading errors by showing a placeholder.
+3.  `div` for product information (name, badge) with `p-2` for padding.
+4.  Optional badge element. Position it in the top-right corner of the image using `absolute top-2 right-2`.
+
+**Accessibility:** Add `tabIndex="0"` to the top-level `div` to make it focusable. Use `aria-label` to provide a descriptive label for screen readers.
+
+```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`

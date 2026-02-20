@@ -64,6 +64,17 @@ OUTPUT RULES — follow exactly:
 - Do NOT wrap your output in markdown fences (no ``` blocks around the whole file).
 - Output ONLY the spec file — no preamble, no explanation, no commentary.
 
+**NEW RULE: STITCH UI PROMPT (FRONTEND ONLY)**
+If the target component is a Frontend UI view (.tsx), you MUST include a dedicated
+section called "## Stitch UI Prompt" immediately before "## Verification Commands".
+This section must contain a highly detailed prompt meant to be copy-pasted into
+Google Stitch (or Lovable/v0).
+- Define the layout (e.g., Bento Grid, Flexbox, CSS Grid).
+- Define the visual style (Dark mode, Tailwind CSS, slate-900 background, blue-500 accents).
+- Define "Data Slots" with placeholders (do NOT hardcode real product names or prices).
+- Describe component hierarchy and spacing clearly so Stitch can produce pixel-perfect code.
+- Reference the exact Tailwind color tokens used in the rest of the Operator Console.
+
 **MANDATORY SECTION — every spec MUST end with:**
 
 ## Verification Commands
@@ -188,6 +199,43 @@ The spec MUST include a "## Verification Commands" section at the end.
     rel_path = save_path.relative_to(_PROJECT_ROOT)
     print()
     print(f"✅  STEERER ACTION: New directive written → {rel_path}")
+
+    # ── Phase 2: API Contract Enforcement ───────────────────────────────────
+    # For cross-domain features touching an API boundary, generate a binding
+    # TypeScript contract and save it to specs/contracts/.
+    is_cross_domain = any(
+        kw in response.lower()
+        for kw in ["api", "endpoint", "fetch", "usequery", "react query", "/api/", "fastapi"]
+    )
+    if is_cross_domain:
+        print("📋  Cross-domain feature detected — generating API contract...")
+        contract_prompt = f"""
+You are a TypeScript API Contract Architect.
+Based on the spec below, write a minimal but complete TypeScript type declaration file.
+Define:
+  - The endpoint path (as a const string)
+  - The Request body type (if any)
+  - The Response type
+  - Any shared sub-types
+
+Spec:
+{response[:3000]}
+
+Output ONLY valid TypeScript. No markdown fences. No explanation.
+File should be self-contained and start with // Contract: <feature name>
+"""
+        contract_code = query_llm(
+            "You output only TypeScript type declarations.",
+            contract_prompt, temperature=0.0
+        )
+        if contract_code and "type" in contract_code.lower():
+            contracts_dir = _PROJECT_ROOT / "specs" / "contracts"
+            contracts_dir.mkdir(parents=True, exist_ok=True)
+            contract_path = contracts_dir / f"{filename_base}.schema.ts"
+            save_artifact(str(contract_path), contract_code.strip())
+            print(
+                f"   📄 Contract written → specs/contracts/{contract_path.name}")
+
     print()
     print("👉  Next steps:")
     print(f"    1. Review the spec:  cat {rel_path}")

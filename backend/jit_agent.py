@@ -429,6 +429,17 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
     brand_name = snap_data.get("brand", "")
     halilit_url = snap_data.get("halilit_url", "")
 
+    # When brand is generic, extract real brand from product name (e.g. "512audio Academy" → "512audio")
+    _generic_brands = {"other", "unknown", "", "n/a", "misc"}
+    if brand_name.lower() in _generic_brands and product_name:
+        # Use the first word(s) as the brand candidate — strip trailing model keywords
+        words = product_name.split()
+        # If first token looks like a brand (contains digit, mixed case, or is short), use it
+        candidate = words[0] if words else brand_name
+        if candidate.lower() not in _generic_brands:
+            brand_name = candidate
+            logger.info("Brand extracted from product name: %s → %s", snap_data.get("brand"), brand_name)
+
     # ── Phase 2: PARALLEL SWARM — Official first, then Halilit ──
     yield _sse_event("status", {"phase": "intel", "message": "Fetching official brand data (priority) and Halilit data..."})
     loop = asyncio.get_event_loop()
@@ -530,7 +541,7 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
                         bytes_halilit, bytes_official)
                 )
                 similarity = comparison.get("similarity", 0)
-                identity_verified = similarity > 0.85
+                identity_verified = similarity > 0.70
                 if identity_verified:
                     yield _sse_event("status", {
                         "phase": "auditor",
@@ -557,14 +568,17 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
         logger.warning("Auditor step failed: %s", e)
 
     # Emit official_specs from combined data (for frontend)
-    # When identity not verified (commercial vs official image mismatch), do not persist official URL/images
+    # Images are gated behind identity_verified (avoid showing wrong product image).
+    # official_url & specs always flow — operator can verify independently.
     if combined_data and not combined_data.get("error"):
+        # Use the found candidate URL even when visual identity is unconfirmed
+        candidate_url = (official_candidate or {}).get("url", "") or combined_data.get("official_url", "")
         official_specs = {
             "specs": combined_data.get("specs", {}),
             "features": combined_data.get("features", []),
             "description": combined_data.get("description", ""),
             "images": combined_data.get("images", []) if identity_verified else [],
-            "official_url": combined_data.get("official_url", "") if identity_verified else "",
+            "official_url": candidate_url,
             "identity_verified": identity_verified,
         }
         yield _sse_event("official_specs", official_specs)

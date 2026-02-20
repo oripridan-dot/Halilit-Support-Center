@@ -279,6 +279,122 @@ JIT intelligence (`useJITIntelligence`) streams progressively via SSE. The UI sh
 - [ ] Related product cards are clickable via `() => goToProduct(item.id)`
 - [ ] History tab shows placeholder (not empty, not an error)
 
+## Stitch UI Prompt
+
+> Copy this entire block into Google Stitch, Lovable, or v0.dev.
+
+---
+
+Build a **Product Intelligence View** React component in TypeScript using **Tailwind CSS**. This is a full-page operator console view — dark mode, professional, information-dense.
+
+**Overall style:**
+
+- Background: `bg-zinc-950`
+- Surface cards: `bg-zinc-900` with `border border-zinc-800 rounded-xl`
+- Accent color: `blue-500` for interactive elements
+- Text hierarchy: `text-white` (titles), `text-zinc-300` (body), `text-zinc-500` (muted/labels)
+- Icons: `lucide-react` only
+
+---
+
+**Layout (top to bottom, full width):**
+
+### 1. Back Button Row
+
+- Simple `← Back` text button, `text-zinc-400 hover:text-white`, top-left of page
+
+### 2. Header Card (`bg-zinc-900 rounded-xl p-6 flex flex-row gap-6`)
+
+Three columns inside:
+
+**Column A — Hero Image (w-48 h-48, bg-white rounded-lg p-2)**
+
+- `<img>` with `object-contain w-full h-full`
+- Data slot: `{imageUrl}` (string URL placeholder)
+
+**Column B — Identity Block (flex-1)**
+
+- `<h1 className="text-2xl font-bold text-white">{productName}</h1>`
+- Brand badge: `<span className="inline-block px-2 py-0.5 bg-blue-500/20 text-blue-400 text-sm rounded cursor-pointer">{brandName}</span>`
+- SKU: `<p className="font-mono text-zinc-500 text-sm mt-1">{skuId}</p>`
+- Category: `<span className="text-xs bg-zinc-800 text-zinc-400 px-2 py-0.5 rounded">{category}</span>`
+
+**Column C — Pricing Block (w-40, text-right)**
+
+- IL Price: `<p className="text-3xl font-bold text-white">₪{ilPrice}</p>` — if no price show `<p className="text-amber-400 text-lg">Call for Price</p>`
+- Eilat Price: `<p className="text-sm text-zinc-400">Eilat: ₪{eilatPrice}</p>` — if no eilat show `—`
+- Stock dot: green dot + "In Stock" / red dot + "Out of Stock" / gray dot + "Unknown" (small, bottom of block)
+
+### 3. Action Toolbar (`flex flex-row gap-3 py-3 border-y border-zinc-800 sticky top-0 bg-zinc-950 z-10`)
+
+Three buttons side by side:
+
+- `[📋 Copy Tech Specs]` — `bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded-lg text-sm`
+- `[🖨 Generate Quote PDF]` — same style
+- `[🔗 Open Official Page]` — same style, visually dimmed (`opacity-50`) when disabled
+
+### 4. Tab Bar (`flex flex-row gap-1 border-b border-zinc-800`)
+
+Three tabs: **Ecosystem** | **Specifications** | **History**
+
+- Active tab: `border-b-2 border-blue-500 text-white`
+- Inactive: `text-zinc-500 hover:text-zinc-300`
+- "Ecosystem" is selected by default
+
+### 5. Tab Content Area (`mt-4 min-h-64`)
+
+**Ecosystem tab:**
+Three sections stacked:
+
+- "Verified Accessories" heading + green `Verified` badge per item
+- "Alternatives" heading
+- "Compatible" heading (only if items exist)
+
+Each related product: `bg-zinc-900 rounded-lg p-3 flex gap-3 cursor-pointer hover:bg-zinc-800`
+
+- Small image (48×48, white bg, contain)
+- Name (`text-white text-sm`) + price (`text-zinc-400 text-xs`)
+- Use placeholders: `{accessoryName}`, `{accessoryPrice}`, `{accessoryImageUrl}`
+
+Empty state: `<p className="text-zinc-500 text-sm">No verified accessories found in the product graph.</p>`
+
+**Specifications tab:**
+Table: `w-full text-sm`
+
+- Rows: `even:bg-zinc-900/30`
+- Left cell: `text-zinc-400 font-medium w-1/3`
+- Right cell: `text-white`
+- Data slot: array of `{ key: string; value: string }` placeholders
+- Empty state: `<p className="text-zinc-500 text-sm">Official specifications not yet fetched.</p>`
+
+**History tab:**
+Just: `<p className="text-zinc-500 text-sm">Ticket history coming soon. No records for this product yet.</p>`
+
+---
+
+**Skeleton loader state** (show when loading):
+
+- Pulse animation (`animate-pulse bg-zinc-800 rounded`) for all content areas
+- Image: `w-48 h-48 rounded-lg`
+- Title: `h-6 w-64 rounded`
+- Brand: `h-4 w-32 rounded`
+- Price: `h-8 w-24 rounded`
+- Three toolbar button outlines
+- Three tab outlines
+- Several rows of varying width content lines
+
+---
+
+**DO NOT:**
+
+- Hardcode any product names, prices, or SKUs — use placeholder variables only
+- Use any library other than `lucide-react` for icons
+- Use `react-router-dom`
+- Add any `useEffect`, `useState`, or data fetching — UI only, no logic
+
+---
+
 ## Verification Commands
+
 - `pnpm tsc --noEmit`
 - `pnpm run lint`

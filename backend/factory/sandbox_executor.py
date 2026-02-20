@@ -131,6 +131,10 @@ def _resolve_cmd(raw_line: str) -> tuple[list[str], Path] | None:
     if re.search(r"tsc\b.*--noemit", lower):
         return ["pnpm", "exec", "tsc", "--noEmit"], _FRONTEND_DIR
 
+    # Vite production build (catches runtime import resolution that tsc misses)
+    if re.search(r"pnpm\s+build|npm\s+run\s+build|vite\s+build", lower):
+        return ["pnpm", "build", "--mode", "production"], _FRONTEND_DIR
+
     # pnpm / npm lint
     if re.search(r"(pnpm|npm)\s+run\s+lint", lower) or re.search(r"pnpm\s+lint\b", lower):
         return ["pnpm", "run", "lint"], _FRONTEND_DIR
