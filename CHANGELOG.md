@@ -1,4 +1,13 @@
 ## [v4.1] — 2026-02-20
+- [feat] Refactored ExplorationPanel component for improved structure.
+- [feat] Extracted sub-components into `ExplorationPanelGuideView.tsx` and `ExplorationPanelRenderers.tsx`.
+- [feat] Introduced `SetupGuideView` component.
+- [feat] Added `GenericView` and `unwrapResult` to `ExplorationPanelRenderers.tsx`.
+- [chore] Removed unused type definitions and constants from `ExplorationPanel.tsx`.
+- [refactor] Updated imports to reflect new component structure.
+- [refactor] Improved component organization and readability.
+
+## [v4.1] — 2026-02-20
 - [feat] Added `smart_import_fixer.py` to automatically fix common import issues in the frontend code.
 - [feat] Added a `Fix` dataclass to represent individual fixes.
 - [feat] Added a `FixReport` dataclass to summarize the fixes applied and skipped files.

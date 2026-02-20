@@ -1,82 +1,127 @@
 import React, { useState, useEffect } from 'react';
-import { useConductorCatalog, ConductorProduct } from '../../hooks/useConductorCatalog';
-import { useDebounceValue } from '../../hooks/useDebounceValue';
-import { useNavigationStore } from '../../store/navigationStore';
+import { useDebounceThrottle } from '../hooks/useDebounceThrottle';
+import { useNavigationStore } from '../stores/navigationStore';
+import { Loader2 } from 'lucide-react';
 
-const InventoryView: React.FC = () => {
-  const { searchQuery: initialSearchQuery } = useNavigationStore((s) => ({
-    searchQuery: s.searchQuery,
-  }));
-  const [filterText, setFilterText] = useState<string>(initialSearchQuery ?? '');
-  const debouncedFilter = useDebounceValue(filterText, 150);
+interface InventoryItem {
+    id: string;
+    name: string;
+    sku: string;
+    description: string;
+    price: number;
+    // ... other inventory item properties
+}
 
-  const { data, isLoading, error } = useConductorCatalog({ searchQuery: debouncedFilter });
+interface InventoryViewProps {
+    // Define any props if needed
+}
 
-  useEffect(() => {
-    setFilterText(initialSearchQuery ?? '');
-  }, [initialSearchQuery]);
+const InventoryView: React.FC<InventoryViewProps> = () => {
+    const [filterText, setFilterText] = useState('');
+    const [inventory, setInventory] = useState<InventoryItem[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const { searchQuery: initialCfpFilter, setSearchQuery } = useNavigationStore();
+    const debouncedSetFilterText = useDebounceThrottle(
+        (value: string) => {
+            setFilterText(value);
+        },
+        150,
+        0
+    );
 
-  const products: ConductorProduct[] = data?.products ?? [];
-  const filtered = debouncedFilter
-    ? products.filter((p) =>
-        (p.search_text ?? '').toLowerCase().includes(debouncedFilter.toLowerCase()) ||
-        p.name.toLowerCase().includes(debouncedFilter.toLowerCase()) ||
-        p.brand.toLowerCase().includes(debouncedFilter.toLowerCase())
-      )
-    : products;
+    useEffect(() => {
+        if (initialCfpFilter) {
+            debouncedSetFilterText(initialCfpFilter);
+        }
+    }, [initialCfpFilter, debouncedSetFilterText]);
 
-  return (
-    <div className="bg-zinc-900 min-h-screen p-4">
-      <input
-        type="text"
-        placeholder="Search inventory..."
-        value={filterText}
-        onChange={(e) => setFilterText(e.target.value)}
-        className="bg-zinc-800 text-zinc-100 placeholder-zinc-500 rounded-md p-2 w-full mb-4 outline-none focus:ring-2 focus:ring-blue-500"
-      />
 
-      {isLoading && <p className="text-zinc-400">Loading...</p>}
-      {error && <p className="text-red-400">Error: {error}</p>}
+    useEffect(() => {
+        const fetchInventory = async () => {
+            setIsLoading(true);
+            setError(null);
+            try {
+                // Simulate API call with a delay
+                await new Promise((resolve) => setTimeout(resolve, 500));
+                // Replace with actual API call
+                const searchTerm = filterText.toLowerCase();
+                const mockInventory: InventoryItem[] = [
+                    { id: '1', name: 'Fender Stratocaster', sku: 'FS001', description: 'Electric guitar', price: 1000 },
+                    { id: '2', name: 'Gibson Les Paul', sku: 'GLP001', description: 'Electric guitar', price: 1200 },
+                    { id: '3', name: 'Roland Juno-106', sku: 'RJ001', description: 'Synthesizer', price: 800 },
+                    { id: '4', name: 'Yamaha P-125', sku: 'YP001', description: 'Digital Piano', price: 600 },
+                    { id: '5', name: 'Fender Precision Bass', sku: 'FPB001', description: 'Bass Guitar', price: 900 },
+                ];
+                const filteredInventory = mockInventory.filter(item =>
+                    item.name.toLowerCase().includes(searchTerm) ||
+                    item.sku.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm)
+                );
+                setInventory(filteredInventory);
 
-      {!isLoading && !error && filtered.length === 0 && (
-        <p className="text-zinc-500">No items found.</p>
-      )}
+                if (initialCfpFilter && !filterText) {
+                    setFilterText(initialCfpFilter);
+                    setSearchQuery(initialCfpFilter);
+                }
 
-      {filtered.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {filtered.map((item: ConductorProduct) => (
-            <div key={item.id} className="bg-zinc-800 rounded-md p-4 transition-colors">
-              {item.image_url && (
-                <img
-                  src={item.image_url}
-                  alt={item.name}
-                  className="w-full h-32 object-contain mb-2 rounded"
-                />
-              )}
-              <h3 className="text-zinc-100 font-semibold text-sm leading-tight">{item.name}</h3>
-              <p className="text-zinc-400 text-xs mt-1">{item.brand}</p>
-              {item.price > 0 && (
-                <p className="text-blue-400 text-sm font-medium mt-2">
-                  &#x20AA;{item.price.toLocaleString()}
-                </p>
-              )}
-              <span
-                className={`inline-block mt-2 text-xs px-2 py-0.5 rounded-full ${
-                  item.data_status === 'COMPLETE'
-                    ? 'bg-green-900 text-green-300'
-                    : item.data_status === 'GOOD'
-                    ? 'bg-blue-900 text-blue-300'
-                    : 'bg-zinc-700 text-zinc-400'
-                }`}
-              >
-                {item.data_status}
-              </span>
-            </div>
-          ))}
+
+            } catch (err: any) {
+                setError(err.message || 'Failed to fetch inventory.');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchInventory();
+    }, [filterText, initialCfpFilter, setSearchQuery]);
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const searchTerm = event.target.value;
+        debouncedSetFilterText(searchTerm);
+        setSearchQuery(searchTerm);
+    };
+
+    return (
+        <div className="dark:bg-zinc-900 min-h-screen p-4">
+            <input
+                type="text"
+                placeholder="Search inventory..."
+                onChange={handleInputChange}
+                className="dark:bg-zinc-800 dark:text-zinc-100 placeholder-zinc-400 w-full rounded-md py-2 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={filterText}
+            />
+
+            {isLoading && (
+                <div className="flex items-center justify-center">
+                    <Loader2 className="animate-spin h-6 w-6 text-blue-500" />
+                    <span className="ml-2 dark:text-zinc-300">Loading...</span>
+                </div>
+            )}
+
+            {error && (
+                <div className="text-red-500 mb-4">
+                    Error: {error}
+                </div>
+            )}
+
+            {!isLoading && !error && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {inventory.map(item => (
+                        <div key={item.id} className="dark:bg-zinc-800 rounded-md p-4 shadow-md">
+                            <h3 className="dark:text-zinc-100 text-lg font-semibold mb-2">{item.name}</h3>
+                            <p className="dark:text-zinc-400 text-sm mb-2">{item.description}</p>
+                            <p className="dark:text-zinc-300 text-sm">SKU: {item.sku}</p>
+                            <p className="dark:text-zinc-300 text-sm">Price: ${item.price.toFixed(2)}</p>
+                        </div>
+                    ))}
+                    {inventory.length === 0 && !isLoading && !error && (
+                        <div className="dark:text-zinc-400">No items found.</div>
+                    )}
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
 export default InventoryView;
