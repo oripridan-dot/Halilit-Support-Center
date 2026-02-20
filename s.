@@ -1,4 +1,0 @@
-from pydantic import ConfigDict
-
-class ProductGraph:
-    model_config = ConfigDict(arbitrary_types_allowed=True)

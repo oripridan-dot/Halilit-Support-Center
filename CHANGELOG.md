@@ -1,3 +1,18 @@
+## [v9.7.5] — 2026-02-20
+### v9.7.5 · Level 6 — AI Test Kit Standard
+
+- [feat] AI Test Kit (`backend/tests/test_ai.py`) — 27 tests across 6 tiers: AI-Unit, AI-Source-Rules, AI-Integration, AI-E2E, AI-Safety, AI-Performance, AI-Contract. Introduces the AI-world equivalent of the classic unit/integration/e2e pyramid.
+- [feat] Playwright E2E suite (`frontend/tests/e2e/01_search_scenarios.spec.ts`) — 6 scenarios, all passing (17s).
+- [fix] `useConductorCatalog.ts` — rewrote with clean `useQuery` pattern, named + default exports, stub barrel hooks.
+- [fix] `ImageWithFallback.tsx` — fixed broken JSX (`<picture>` tag), added named export.
+- [fix] `ProductImageCarousel.tsx` — removed `react-router-dom`, uses `useNavigationStore`.
+- [feat] New components: `common/ProductBadge`, `common/ImageWithFallback`, `ResponsiveImage/ResponsiveImage`.
+- [feat] `frontend/src/types/catalog.ts` — canonical catalog type re-exports.
+- [chore] `pytest.ini` — registered `live` and `slow` custom markers.
+- [chore] Version bump: package.json 9.7.3→9.7.5, frontend 9.7.4→9.7.5.
+
+---
+
 ## [v4.1] — 2026-02-20
 ## v4.1
 
