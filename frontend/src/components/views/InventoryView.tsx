@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useConductorCatalog, ConductorProduct } from '../../hooks/useConductorCatalog';
-import { useDebounce } from '../../hooks/useDebounce';
-import { navigationStore } from '../../store/navigationStore';
+import { useDebounceValue } from '../../hooks/useDebounceValue';
+import { useNavigationStore } from '../../store/navigationStore';
 
 const InventoryView: React.FC = () => {
-  const { searchQuery, initialCfpFilter } = navigationStore.getState();
-  const [filterText, setFilterText] = useState<string>(searchQuery || initialCfpFilter || '');
+  const searchQuery = useNavigationStore((s) => s.searchQuery);
+  const [filterText, setFilterText] = useState<string>(searchQuery ?? '');
+  const debouncedFilter = useDebounceValue(filterText, 150);
 
-  const debouncedFilter = useDebounce(filterText, 150);
+  const { data, isLoading, error } = useConductorCatalog({ searchQuery: debouncedFilter });
 
-  const { data, isLoading, error } = useConductorCatalog();
-
-  // Sync external navigation-store search to local filter
   useEffect(() => {
-    if (searchQuery) setFilterText(searchQuery);
+    setFilterText(searchQuery ?? '');
   }, [searchQuery]);
 
   const products: ConductorProduct[] = data?.products ?? [];
@@ -45,7 +43,7 @@ const InventoryView: React.FC = () => {
       {filtered.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filtered.map((item: ConductorProduct) => (
-            <div key={item.id} className="bg-zinc-800 rounded-md p-4 hover:bg-zinc-750 transition-colors">
+            <div key={item.id} className="bg-zinc-800 rounded-md p-4 transition-colors">
               {item.image_url && (
                 <img
                   src={item.image_url}
@@ -56,7 +54,9 @@ const InventoryView: React.FC = () => {
               <h3 className="text-zinc-100 font-semibold text-sm leading-tight">{item.name}</h3>
               <p className="text-zinc-400 text-xs mt-1">{item.brand}</p>
               {item.price > 0 && (
-                <p className="text-blue-400 text-sm font-medium mt-2">₪{item.price.toLocaleString()}</p>
+                <p className="text-blue-400 text-sm font-medium mt-2">
+                  &#x20AA;{item.price.toLocaleString()}
+                </p>
               )}
               <span
                 className={`inline-block mt-2 text-xs px-2 py-0.5 rounded-full ${
