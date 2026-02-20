@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useConductorCatalog } from './hooks/useConductorCatalog';
 import { useDebounceValue } from './hooks/useDebounceValue';
 import { InventoryItem } from '../../specs/contracts/enhanced_inventory_search_debounce_with_throttle.schema';
@@ -10,10 +10,9 @@ interface InventoryViewProps {
 
 const InventoryView: React.FC<InventoryViewProps> = () => {
   const [filterText, setFilterText] = useState('');
-  const [throttled, setThrottled] = useState(false);
   const debouncedFilterText = useDebounceValue(filterText, 150);
   const { initialCfpFilter, searchQuery } = useNavigationStore();
-  const { data, isLoading, error, refetch } = useConductorCatalog({
+  const { data, isLoading, error } = useConductorCatalog({
     searchQuery: debouncedFilterText,
     initialCfpFilter,
   });
@@ -22,31 +21,9 @@ const InventoryView: React.FC<InventoryViewProps> = () => {
     setFilterText(searchQuery || '');
   }, [searchQuery]);
 
-  useEffect(() => {
-    const applyInitialFilters = () => {
-      // Apply initial filters from navigationStore on mount
-      if (searchQuery) {
-        setFilterText(searchQuery);
-      }
-    };
-    applyInitialFilters();
-  }, []);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-        setThrottled(true);
-    }, 300);
-
-    return () => {
-        clearTimeout(timeoutId);
-        setThrottled(false);
-    };
-  }, [debouncedFilterText]);
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilterText(event.target.value);
   };
-
 
   return (
     <div className="dark:bg-zinc-900 min-h-screen p-4">

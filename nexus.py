@@ -273,6 +273,14 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["mutate"] + (["--force"] if args == "--force" else [])
     if tool == "fitness":
         return factory + ["fitness"]
+    if tool == "repair":
+        cmd = factory + ["repair"]
+        if args:
+            if args.startswith("--"):
+                cmd.append(args)
+            else:
+                cmd += ["--target", args]
+        return cmd
     return None  # 'explain' or unknown
 
 
