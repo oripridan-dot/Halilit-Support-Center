@@ -1,4 +1,18 @@
 ## [v4.1] — 2026-02-20
+```
+## [v4.1]
+
+- [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
+- [refactor] Replaced the `ACCENT_MAP` with inline conditional styling for metric cards in `DashboardView.tsx`.
+- [docs] Updated formatting of architecture documentation.
+- [docs] Added sub-bullets to `navigationStore` properties in the architecture documentation.
+- [feat] Added conductor and JIT product image sources to `ProductTile.tsx`.
+- [feat] Added badges to `ProductTile.tsx` to indicate image source.
+- [refactor] Added `auto_mode` parameter to `execute_swarm` function to enable HOTL steering gate.
+- [feat] Added a new file `Size` containing helper components (StockDot, Toast, SkeletonPulse, etc.).
+```
+
+## [v4.1] — 2026-02-20
 ## v4.1
 
 - [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
