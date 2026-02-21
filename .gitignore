@@ -95,3 +95,10 @@ PARADIGM_SHIFT_PROPOSAL.md
 backend/data/*.jsonl
 backend/data/darwin_last_run.txt
 halilit_shadow_cell/
+
+# === AUTO-GENERATED RUNTIME DOCS (nightly heartbeat & briefing) ===
+HEARTBEAT.md
+DAILY_BRIEFING.md
+
+# === GENERATED SPEC SCHEMA ARTIFACTS (builder side-effects) ===
+specs/contracts/
