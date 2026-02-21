@@ -979,6 +979,32 @@ async def sentry_webhook(
     return {"status": "received", "message": "Telemetry Nerve activated."}
 
 
+@app.post("/api/telemetry/crash-report", status_code=200, tags=["telemetry"])
+async def crash_report(
+    request: Request,
+    background_tasks: BackgroundTasks,
+):
+    """Sovereign Nerve — receives frontend crash reports (uncaught JS errors / unhandled rejections).
+
+    The payload shape matches what Sovereign Nerve (frontend/src/telemetry.ts) sends:
+      { event: {title}, stacktrace, culprit, timestamp, environment, userAgent }
+    This is forwarded to process_production_error() in the same way as the Sentry webhook.
+    Returns 200 immediately so the browser keepalive request is resolved fast.
+    """
+    try:
+        payload = await request.json()
+    except Exception:
+        payload = {"message": "(unparseable payload)", "event": {}}
+
+    try:
+        from backend.factory.telemetry_agent import process_production_error  # type: ignore
+        background_tasks.add_task(process_production_error, payload)
+    except Exception as exc:
+        logger.error("Telemetry Agent import failed: %s", exc)
+
+    return {"status": "received", "message": "Sovereign Nerve ingestor activated."}
+
+
 # Mount images directory if it exists (for locally cached product images)
 IMAGES_DIR = DATA_DIR / "images"
 if IMAGES_DIR.exists():
