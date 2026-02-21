@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-The IMPLEMENTED CODE section is empty, so I cannot determine if the code satisfies the specification.
+No implemented code was provided to review.
 
 **Required Fix:**
-The Builder must populate the IMPLEMENTED CODE section with the actual code changes made.
+The Builder must provide the implemented code for review against the specification.

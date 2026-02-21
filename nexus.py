@@ -1375,9 +1375,9 @@ def main() -> None:
                         print(
                             f"\n{YELLOW}\U0001f504 Consulting Chief for recovery plan...{RESET}")
                         plan = consult_chief(
-                            "", is_startup=Falssenior_context
+                            "", is_startup=False,
                             failure_context=failure_report,
-                            tech_lead_context=_recovery_senior,
+                            tech_lead_context=_senior_context,
                             senior_override=_pending_override,
                         )
                         print(f"\n{RED}{BOLD}CHIEF RECOVERY PLAN:{RESET}")

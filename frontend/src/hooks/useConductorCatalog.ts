@@ -1,7 +1,12 @@
-import { useState, useEffect, useMemo } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery } from 'react-query';
+import {
+  CATALOG_ENDPOINT,
+  CatalogRequestParams,
+  PaginatedCatalogResponse,
+  ConductorProduct,
+import { fetcher } from './utils/fetcher';
 
-interface UseConductorCatalogProps {
+interface UseConductorCatalogParams extends CatalogRequestParams {
   page?: number;
   pageSize?: number;
   searchQuery?: string;
@@ -10,24 +15,8 @@ interface UseConductorCatalogProps {
   brand?: string;
 }
 
-const defaultPageSize = 25;
-
-const useConductorCatalog = ({
-  page = 1,
-  pageSize = defaultPageSize,
-  searchQuery = '',
-  sortBy = '',
-  category = '',
-  brand = '',
-}: UseConductorCatalogProps = {}) => {
-  const params: CatalogRequestParams = {
-    page,
-    pageSize,
-    searchQuery,
-    sortBy,
-    category,
-    brand,
-  };
+export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
+  const { page = 1, pageSize = 25, searchQuery = '', sortBy = '', category = '', brand = '' } = params;
 
   const {
     data,
@@ -35,40 +24,35 @@ const useConductorCatalog = ({
     error,
     refetch,
   } = useQuery<PaginatedCatalogResponse, Error>(
-    ['conductorCatalog', params],
-    async () => {
-      const url = new URL(CATALOG_ENDPOINT, window.location.origin);
-      Object.entries(params).forEach(([key, value]) => {
-        if (value !== undefined && value !== '') {
-          url.searchParams.append(key, String(value));
-        }
-      });
-
-      const response = await fetch(url.toString());
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json() as Promise<PaginatedCatalogResponse>;
-    },
+    ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
+    () =>
+      fetcher(CATALOG_ENDPOINT, {
+        page,
+        pageSize,
+        searchQuery,
+        sortBy,
+        category,
+        brand,
+      }),
+    {
+      keepPreviousData: true,
+    }
   );
 
   const products = data?.products || [];
   const totalItems = data?.totalItems || 0;
   const totalPages = data?.totalPages || 0;
   const currentPage = data?.currentPage || 1;
-  const currentPageSize = data?.pageSize || defaultPageSize;
+  const itemsPerPage = data?.pageSize || 25;
 
   return {
     products,
     totalItems,
     totalPages,
     currentPage,
-    pageSize: currentPageSize,
+    itemsPerPage,
     isLoading,
-    error: error ? (error as Error).message : null,
-    retry: refetch,
+    error,
+    refetch,
   };
 };
-
-export default useConductorCatalog;
