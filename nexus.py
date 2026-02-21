@@ -457,6 +457,35 @@ def run_process(task: dict) -> dict:
                     "summary": f"❌ [DELEGATE_FRONTEND] Frontend Manager crashed: {exc}",
                     "error_output": str(exc)}
 
+
+    # ── Evolution Proposal intercept ──────────────────────────────────────────
+    # Code-level guard: if the LLM queues ANY tool on a proposal file path,
+    # silently route it to the deterministic evolution_manager instead.
+    import re as _evo_re
+    if tool in ("delegate_data", "delegate_frontend", "implement") and isinstance(args, str):
+        _evo_m = _evo_re.search(
+            r"(\d{4}-\d{2}-\d{2}_proposal_[\w\-]+\.md)", args)
+        if _evo_m:
+            _prop_rel = "specs/strategy/evolution/" + _evo_m.group(1)
+            print("\n" + YELLOW + "\U0001f500 [ROUTER] Intercepted '" + tool + "' on evolution proposal "
+                  "-> redirecting to evolution_manager" + RESET)
+            sys.path.insert(0, str(ROOT))
+            try:
+                from backend.factory.evolution_manager import process_proposal  # noqa: PLC0415
+                _er = process_proposal(_prop_rel)
+                _v = _er.get("verdict", "?")
+                _rs = _er.get("reason", "")
+                return {
+                    "tool": "process_evolution_proposal", "args": _prop_rel,
+                    "success": True,
+                    "summary": "[EVOLUTION MANAGER] " + _v + ": " + _rs,
+                    "error_output": "", "evolution_result": _er,
+                }
+            except Exception as _eex:
+                return {"tool": tool, "args": args, "success": False,
+                        "summary": "[EVOLUTION MANAGER] intercept failed: " + str(_eex),
+                        "error_output": str(_eex)}
+
     if tool == "delegate_data":
         if _REACT_MODE:
             result = react_loop(args)
@@ -602,6 +631,35 @@ def execute_sequential(task: dict) -> dict:
             print(f"\n{RED}{msg}{RESET}")
             return {"tool": tool, "args": args, "success": False,
                     "summary": msg, "error_output": str(exc)}
+
+
+    # ── Evolution Proposal intercept ──────────────────────────────────────────
+    # Code-level guard: if the LLM queues ANY tool on a proposal file path,
+    # silently route it to the deterministic evolution_manager instead.
+    import re as _evo_re
+    if tool in ("delegate_data", "delegate_frontend", "implement") and isinstance(args, str):
+        _evo_m = _evo_re.search(
+            r"(\d{4}-\d{2}-\d{2}_proposal_[\w\-]+\.md)", args)
+        if _evo_m:
+            _prop_rel = "specs/strategy/evolution/" + _evo_m.group(1)
+            print("\n" + YELLOW + "\U0001f500 [ROUTER] Intercepted '" + tool + "' on evolution proposal "
+                  "-> redirecting to evolution_manager" + RESET)
+            sys.path.insert(0, str(ROOT))
+            try:
+                from backend.factory.evolution_manager import process_proposal  # noqa: PLC0415
+                _er = process_proposal(_prop_rel)
+                _v = _er.get("verdict", "?")
+                _rs = _er.get("reason", "")
+                return {
+                    "tool": "process_evolution_proposal", "args": _prop_rel,
+                    "success": True,
+                    "summary": "[EVOLUTION MANAGER] " + _v + ": " + _rs,
+                    "error_output": "", "evolution_result": _er,
+                }
+            except Exception as _eex:
+                return {"tool": tool, "args": args, "success": False,
+                        "summary": "[EVOLUTION MANAGER] intercept failed: " + str(_eex),
+                        "error_output": str(_eex)}
 
     if tool == "delegate_data":
         if _REACT_MODE:
