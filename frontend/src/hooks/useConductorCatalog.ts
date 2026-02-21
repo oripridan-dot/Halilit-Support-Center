@@ -40,20 +40,6 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
   const [pageSize, setPageSize] = useState<number>(params.pageSize ?? 25);
   const [sortBy, setSortBy] = useState<string>(params.sortBy ?? '');
 
-  if (process.env.NODE_ENV !== 'production') {
-    const checkGalaxyDb = async () => {
-      try {
-        await import('../../public/data/galaxy_db.json');
-        console.warn("Legacy galaxy_db.json is present. This should not happen in production.");
-      } catch (e) {
-        // File does not exist, which is the desired state.
-        console.log("galaxy_db.json not found, as expected.");
-      }
-    };
-    checkGalaxyDb();
-  }
-
-
   const queryParams = useMemo(
     () => ({
       page,
