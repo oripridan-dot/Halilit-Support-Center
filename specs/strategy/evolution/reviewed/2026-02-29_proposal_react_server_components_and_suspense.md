@@ -27,3 +27,9 @@ RSCs enable server-side rendering of React components, potentially reducing the 
 
 ## Lineage Note (Generational Spawn Signal)
 React Server Components represent a significant paradigm shift in how React applications are built and deployed, potentially warranting a Gen-2 agent in the future to fully leverage this technology.
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `REJECT`
+**Reason:** Proposal introduces a framework outside the approved stack (Three Source Rules / Architecture Law).
+*(Processed by evolution_manager.py — Chief auto-review)*

@@ -24,3 +24,9 @@ Product detail Ecosystem tab that shows nothing when `related_ids` is empty
 Tanstack Router offers features like prefetching and improved data dependency management, which can significantly improve the loading speed of the 'Ecosystem' tab, particularly when no related items exist. This can prevent UI 'dead zones' and lead to more consistent performance.
 
 ---
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `SPEC`
+**Reason:** RECOMMEND + MEDIUM_RISK: 'Tanstack Router' queued for spec-driven build next session.
+*(Processed by evolution_manager.py — Chief auto-review)*

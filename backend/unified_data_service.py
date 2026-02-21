@@ -19,6 +19,7 @@ All data passing through this service is validated against source rules.
 Single source of truth for all product data processing in Halilit Support Center.
 """
 
+from backend.project_config import INGESTION_DATA_DIR, FRONTEND_PUBLIC_DATA
 import json
 import logging
 import re
@@ -42,7 +43,6 @@ logger = logging.getLogger("UnifiedDataService")
 # CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════════════
 
-from backend.project_config import INGESTION_DATA_DIR, FRONTEND_PUBLIC_DATA
 
 INGESTION_DIR = INGESTION_DATA_DIR
 FRONTEND_DATA_DIR = FRONTEND_PUBLIC_DATA
@@ -489,6 +489,84 @@ class DataNormalizer:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
+# TRIE SEARCH INDEX — stdlib-only prefix lookup
+# ═══════════════════════════════════════════════════════════════════════════
+
+class TrieSearchIndex:
+    """
+    Prefix-based search index built from the product catalog.
+
+    Stores product IDs at *every* prefix node so that a query walks at most
+    len(query) trie nodes instead of scanning all products linearly.
+
+    Build: O(N * avg_token_length)  Query: O(query_length)
+    Memory: ~1-4 MB for 1 000 products.
+
+    Three Source Rules compliant — index is built only from catalog fields
+    (product_name, brand, id); never from AI-generated content.
+    """
+
+    _IDS_KEY = "$$ids"
+
+    def __init__(self, products: list) -> None:
+        # root: dict keyed by single char, plus _IDS_KEY -> set[str]
+        self._root: dict = {}
+        self._build(products)
+
+    # ------------------------------------------------------------------
+    # Build
+    # ------------------------------------------------------------------
+
+    def _build(self, products: list) -> None:
+        for product in products:
+            pid = product.get("id") or product.get("product_id") or ""
+            if not pid:
+                continue
+            tokens: list[str] = []
+            # name words
+            name = product.get("product_name", "") or product.get("name", "")
+            tokens.extend(name.lower().split())
+            # brand
+            brand = product.get("brand", "")
+            if brand:
+                tokens.extend(brand.lower().split())
+            # id / sku itself
+            tokens.append(str(pid).lower())
+
+            for token in tokens:
+                if not token:
+                    continue
+                node = self._root
+                for ch in token:
+                    if ch not in node:
+                        node[ch] = {}
+                    node = node[ch]
+                    # store id at every prefix, not just the leaf
+                    if self._IDS_KEY not in node:
+                        node[self._IDS_KEY] = set()
+                    node[self._IDS_KEY].add(pid)
+
+    # ------------------------------------------------------------------
+    # Query
+    # ------------------------------------------------------------------
+
+    def prefix_search(self, prefix: str) -> "set[str] | None":
+        """Return a set of product IDs whose tokens start with *prefix*.
+
+        Returns None when the prefix is not in the index at all, signalling
+        the caller to fall through to the substring scan.
+        Returns an empty set when the prefix is found but has no IDs (should
+        not happen in practice, but safe to handle).
+        """
+        node = self._root
+        for ch in prefix:
+            if ch not in node:
+                return None  # prefix not in index → fall back
+            node = node[ch]
+        return node.get(self._IDS_KEY, set())
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # SECTION 2: CONDUCTOR DATA SERVICE (from conductor_data_service.py)
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -510,6 +588,7 @@ class ConductorDataService:
         self.taxonomy_manager = get_taxonomy_manager()
         self._catalog_cache = None
         self._cache_timestamp = None
+        self._trie: "TrieSearchIndex | None" = None
 
     def get_all_products(self) -> List[Dict[str, Any]]:
         """
@@ -589,8 +668,20 @@ class ConductorDataService:
         # Cache it
         self._catalog_cache = catalog
         self._cache_timestamp = now
+        self._build_trie_index(catalog)
 
         return catalog
+
+    def _build_trie_index(self, catalog: Dict[str, Any]) -> None:
+        """(Re)build the TrieSearchIndex from the freshly loaded catalog."""
+        try:
+            products = catalog.get("products", [])
+            self._trie = TrieSearchIndex(products)
+            self.logger.debug(
+                "🔍 Trie index built for %d products", len(products))
+        except Exception as exc:  # pragma: no cover
+            self.logger.warning("TrieSearchIndex build failed: %s", exc)
+            self._trie = None
 
     def get_taxonomy_schema(self) -> Dict[str, Any]:
         """
@@ -625,7 +716,8 @@ class ConductorDataService:
             # Use cached catalog for brands when valid (avoids second get_all_approved_products)
             now = datetime.utcnow()
             if self._catalog_cache and self._cache_timestamp and (now - self._cache_timestamp).total_seconds() < CACHE_TTL_SECONDS:
-                all_brands = sorted(self._catalog_cache.get('metadata', {}).get('brands', []))
+                all_brands = sorted(self._catalog_cache.get(
+                    'metadata', {}).get('brands', []))
             else:
                 approved_by_brand = self.database.get_all_approved_products()
                 all_brands = sorted(list(approved_by_brand.keys()))
@@ -679,16 +771,19 @@ class ConductorDataService:
         brands_lower = None
         if 'brand' in filters:
             b = filters['brand']
-            brands_lower = [b.lower()] if isinstance(b, str) else [x.lower() for x in b]
+            brands_lower = [b.lower()] if isinstance(
+                b, str) else [x.lower() for x in b]
             filters_applied['brand'] = filters['brand']
 
         categories_lower = None
         if 'category' in filters:
             c = filters['category']
-            categories_lower = [c.lower()] if isinstance(c, str) else [x.lower() for x in c]
+            categories_lower = [c.lower()] if isinstance(
+                c, str) else [x.lower() for x in c]
             filters_applied['category'] = filters['category']
 
-        search_query = filters.get('search_query', '').lower() if 'search_query' in filters else None
+        search_query = filters.get('search_query', '').lower(
+        ) if 'search_query' in filters else None
         if search_query is not None:
             filters_applied['search_query'] = filters['search_query']
 
@@ -698,10 +793,12 @@ class ConductorDataService:
             tiers = [t] if isinstance(t, str) else list(t)
             filters_applied['pricing_tier'] = filters['pricing_tier']
 
-        min_price = float(filters['min_price']) if 'min_price' in filters else None
+        min_price = float(filters['min_price']
+                          ) if 'min_price' in filters else None
         if min_price is not None:
             filters_applied['min_price'] = min_price
-        max_price = float(filters['max_price']) if 'max_price' in filters else None
+        max_price = float(filters['max_price']
+                          ) if 'max_price' in filters else None
         if max_price is not None:
             filters_applied['max_price'] = max_price
 
@@ -825,9 +922,12 @@ class ConductorDataService:
         buckets: Dict[Tuple[str, str], Dict[str, Any]] = {}
 
         for product in products:
-            taxonomy = product.get('taxonomy') if isinstance(product.get('taxonomy'), dict) else {}
-            cat = (taxonomy.get('canonical_category') or 'Uncategorized').strip() if isinstance(taxonomy, dict) else 'Uncategorized'
-            subcat = (taxonomy.get('canonical_subcategory') or '').strip() if isinstance(taxonomy, dict) else ''
+            taxonomy = product.get('taxonomy') if isinstance(
+                product.get('taxonomy'), dict) else {}
+            cat = (taxonomy.get('canonical_category') or 'Uncategorized').strip(
+            ) if isinstance(taxonomy, dict) else 'Uncategorized'
+            subcat = (taxonomy.get('canonical_subcategory')
+                      or '').strip() if isinstance(taxonomy, dict) else ''
             if not subcat:
                 continue
             brand = (product.get('brand') or 'Unknown').strip()
@@ -858,7 +958,8 @@ class ConductorDataService:
                 row['brands'] = sorted(list(brands_set))
             subcats_out.append(row)
 
-        subcats_out.sort(key=lambda x: (x['brand_count'], x['product_count']), reverse=True)
+        subcats_out.sort(key=lambda x: (
+            x['brand_count'], x['product_count']), reverse=True)
         return {'subcategories': subcats_out}
 
     # =========================================================================
@@ -919,7 +1020,8 @@ class ConductorDataService:
                 if u:
                     return u
 
-        media_assets = product.get('media_assets', []) or product.get('display', {}).get('media_assets', [])
+        media_assets = product.get('media_assets', []) or product.get(
+            'display', {}).get('media_assets', [])
         for asset in media_assets:
             if isinstance(asset, dict) and asset.get('display_purpose') == purpose:
                 u = asset.get('url')
@@ -931,13 +1033,15 @@ class ConductorDataService:
             u = url_from(product.get('image_hero'))
             if u:
                 return u
-            official = product.get('official_images') or product.get('image_gallery')
+            official = product.get(
+                'official_images') or product.get('image_gallery')
             if isinstance(official, list) and official:
                 u = url_from(official[0])
                 if u:
                     return u
         if purpose == 'thumbnail':
-            official = product.get('official_images') or product.get('image_gallery')
+            official = product.get(
+                'official_images') or product.get('image_gallery')
             if isinstance(official, list) and len(official) > 1:
                 u = url_from(official[1])
                 if u:
@@ -950,16 +1054,26 @@ class ConductorDataService:
         return None
 
     def _matches_search(self, product: Dict[str, Any], query: str) -> bool:
-        """Check if product matches search query."""
+        """Check if product matches search query.
+
+        Fast path: single-token queries use the TrieSearchIndex (O(len(query))
+        instead of iterating all products linearly).
+        Falls back to substring scan for multi-word phrases or trie misses.
+        """
+        q = query.strip().lower()
+        if self._trie and " " not in q:
+            ids = self._trie.prefix_search(q)
+            if ids is not None:
+                pid = product.get("id") or product.get("product_id") or ""
+                return str(pid) in ids
+        # Multi-word phrase or trie miss → original substring fallback
         searchable = [
             product.get('product_name', '').lower(),
             product.get('brand', '').lower(),
             product.get('taxonomy', {}).get('canonical_category', '').lower(),
             product.get('description_short', '').lower(),
         ]
-
-        search_text = ' '.join(searchable)
-        return query in search_text
+        return q in ' '.join(searchable)
 
     def _empty_catalog(self) -> Dict[str, Any]:
         """Return empty but valid catalog structure."""

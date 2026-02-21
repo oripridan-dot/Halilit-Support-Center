@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-21
+- [feat] Added `generate_stitch_ui_shell` tool to `factory_mcp_server.py`.
+- [feat] Implemented `_tool_generate_stitch_ui_shell` handler.
+- [feat] Added `stitch_mcp.py` to house the Internal Stitch Engine logic.
+- [feat] Added `generate_stitch_ui_shell` function in `stitch_mcp.py`.
+
+## [v4.1] — 2026-02-21
 - [Remove] Deleted `specs/temp/steerer_last_output.txt`.
 
 ## [v4.1] — 2026-02-21

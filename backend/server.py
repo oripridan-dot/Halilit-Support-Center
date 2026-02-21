@@ -85,6 +85,13 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup and shutdown lifecycle."""
+    # Pyroscope performance profiling (no-op when env-vars absent)
+    try:
+        from backend.pyroscope_integration import init_pyroscope
+        init_pyroscope()
+    except Exception as _pex:
+        logger.debug("Pyroscope init skipped: %s", _pex)
+
     # Start memory tracking
     start_memory_tracking()
     log_memory_snapshot("startup")
@@ -836,6 +843,62 @@ async def products_search(q: str = ""):
     except Exception as e:
         logger.warning("products/search failed: %s", e)
         return {"products": [], "total": 0, "error": str(e)}
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# IMAGE VALIDATION  (spec: evolution_clarifai_s_image_moderation_api.md)
+# ═══════════════════════════════════════════════════════════════════════════
+
+@app.get("/api/validate-image", tags=["images"])
+async def validate_image(url: str):
+    """
+    Validate that a hero image URL is reachable and contains a valid image.
+
+    Performs an HTTP HEAD request + optional Content-Type check using the
+    ImageValidator service.  No external AI service is required — validation
+    is structural (HTTP status + MIME type), not semantic.
+
+    Query param:
+        url (str): The image URL to validate.
+
+    Returns:
+        {valid, status_code, content_type, reason, url}
+    """
+    if not url:
+        from fastapi import HTTPException
+        raise HTTPException(
+            status_code=400, detail="url parameter is required")
+    try:
+        from backend.image_validator import validate_image_url
+        result = validate_image_url(url, verify_bytes=False)
+        return result
+    except Exception as exc:
+        logger.warning("validate-image error: %s", exc)
+        return {"url": url, "valid": False, "status_code": None,
+                "content_type": None, "reason": f"error:{exc}"}
+
+
+@app.post("/api/validate-catalog-images", tags=["images"])
+async def validate_catalog_images_endpoint():
+    """
+    Validate hero image URLs for all products in the catalog.
+    Returns {product_id: {valid, reason, ...}} for every product that has a hero URL.
+    Heavy operation — run rarely (e.g. nightly via the heartbeat daemon).
+    """
+    try:
+        from backend.image_validator import validate_catalog_images
+        service = get_conductor_data_service()
+        catalog = service.get_unified_catalog()
+        results = validate_catalog_images(catalog.get("products", []))
+        invalid = {pid: r for pid, r in results.items() if not r["valid"]}
+        return {
+            "total_checked": len(results),
+            "invalid_count": len(invalid),
+            "invalid": invalid,
+        }
+    except Exception as exc:
+        logger.error("validate-catalog-images error: %s", exc)
+        return {"error": str(exc)}
 
 
 # ═══════════════════════════════════════════════════════════════════════════

@@ -173,6 +173,30 @@ TOOLS: list[dict[str, Any]] = [
         },
     },
     {
+        "name": "generate_stitch_ui_shell",
+        "description": (
+            "Generate a pristine React + Tailwind CSS visual shell from a plain-English "
+            "design prompt — the Internal Stitch Engine. Use this FIRST when building or "
+            "rewriting any frontend UI component. Returns raw TSX with placeholder slots "
+            "and merge instructions for wiring real hooks into the shell."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "design_prompt": {
+                    "type": "string",
+                    "description": "Plain-English description of the desired UI component.",
+                },
+                "component_name": {
+                    "type": "string",
+                    "description": "React component name hint (e.g. 'InventoryGrid', 'ProductCard').",
+                    "default": "UIComponent",
+                },
+            },
+            "required": ["design_prompt"],
+        },
+    },
+    {
         "name": "factory_commit",
         "description": "Stage all current changes and create a semantic git commit.",
         "inputSchema": {"type": "object", "properties": {}, "required": []},
@@ -604,6 +628,20 @@ def _tool_v0_design(args: dict[str, Any]) -> str:
         return json.dumps({"error": str(e)})
 
 
+def _tool_generate_stitch_ui_shell(args: dict[str, Any]) -> str:
+    """Invoke the Internal Stitch Engine to generate a pristine React/Tailwind shell."""
+    design_prompt = args.get("design_prompt", "").strip()
+    component_name = args.get("component_name", "UIComponent").strip()
+    if not design_prompt:
+        return json.dumps({"error": "design_prompt is required"})
+    try:
+        from backend.mcp.servers.stitch_mcp import generate_stitch_ui_shell  # type: ignore
+        result = generate_stitch_ui_shell(design_prompt, component_name)
+        return json.dumps(result, indent=2, ensure_ascii=False)
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
 def _tool_commit(args: dict[str, Any]) -> str:
     ok, out = _run_factory(["commit"], timeout=90)
     return out
@@ -898,6 +936,7 @@ _TOOL_HANDLERS = {
     "factory_heal": _tool_heal,
     "factory_diagnose": _tool_diagnose,
     "factory_v0_design": _tool_v0_design,
+    "generate_stitch_ui_shell": _tool_generate_stitch_ui_shell,
     "factory_commit": _tool_commit,
     "factory_status": _tool_status,
     # Level 8 — Liquid MCP Core

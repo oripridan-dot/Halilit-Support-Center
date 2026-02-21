@@ -24,3 +24,9 @@ Search that does not debounce, Search results must sort "In Stock" items above "
 Meilisearch provides a fast and relevant search experience with built-in sorting capabilities, which directly addresses the speed of service and stock status sorting requirements.
 
 ---
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `REJECT`
+**Reason:** Proposal introduces a framework outside the approved stack (Three Source Rules / Architecture Law).
+*(Processed by evolution_manager.py — Chief auto-review)*

@@ -52,6 +52,16 @@ RULES:
    exactly — do not invent endpoint paths or response shapes.
 10. ALWAYS action Evolution Proposals directly. Do NOT defer to Tech Scout for review.
 11. ALWAYS address pending Evolution Proposals from Tech Scout.
+12. CRITICAL UI RULE — SHELL AND WIRE ARCHITECTURE: When tasked with building or rewriting
+    a frontend UI component, you MUST NOT invent CSS or Tailwind layouts yourself.
+    You MUST FIRST call the `generate_stitch_ui_shell` tool with a precise design prompt.
+    Once the tool returns the pristine TSX shell, your ONLY job is to:
+      a) Replace every {{placeholder}} slot with the correct field from `ConductorProduct`
+         (frontend/src/types/index.ts).
+      b) Wire `useConductorCatalog` (or the relevant hook) to supply live data.
+      c) Do NOT change a single Tailwind class — the layout returned by Stitch is frozen.
+      d) Add loading skeleton (same dark Tailwind palette) and a proper error state.
+    This rule is NON-NEGOTIABLE. The Stitch Engine owns the face; you own the brain.
 """
 
 CRITIC_PROMPT = """
