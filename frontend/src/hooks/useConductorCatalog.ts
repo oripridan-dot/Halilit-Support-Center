@@ -1,93 +1,115 @@
+import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { ImageWithFallback } from '../components/ImageWithFallback';
+import { ResearchAnimation } from '../components/ResearchAnimation';
+import { Skeleton } from '../components/Skeleton';
+import { MagnifyingGlass } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const CATALOG_ENDPOINT = '/api/conductor/catalog';
+const defaultPageSize = 25;
 
-export interface ConductorProduct {
-  id: string;
-  name: string;
-  brand: string;
-  brand_logo?: string;
-  galaxy_id?: string;
-  spectrum_id?: string;
-  category?: string;
-  subcategory?: string;
-  price?: number;
-  price_eilat?: number;
-  tier?: string;
-  image_url?: string;
-  image_gallery?: string[];
-  description?: string;
-  description_short?: string;
-  specs?: Record<string, unknown>;
-  features?: string[];
-  rating?: number;
-  review_count?: number;
-  pros?: string[];
-  cons?: string[];
-  quality_score?: number;
-  data_status?: string;
-  data_missing?: string[];
-  halilit_url?: string;
-  official_url?: string;
-  sources?: string[];
-  family_id?: string | null;
-  variant_key?: string | null;
-  relationship_ids?: string[];
+interface UseConductorCatalogProps {
+    page?: number;
+    pageSize?: number;
+    searchQuery?: string;
+    sortBy?: string;
+    category?: string;
+    brand?: string;
 }
 
-interface CatalogParams {
-  page?: number;
-  pageSize?: number;
-  searchQuery?: string;
-  sortBy?: string;
-  category?: string;
-  brand?: string;
-}
+export const useConductorCatalog = (props: UseConductorCatalogProps = {}) => {
+    const { page = 1, pageSize = defaultPageSize, searchQuery = '', sortBy = '', category = '', brand = '' } = props;
+    const [isError, setIsError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
-interface CatalogApiResponse {
-  products: ConductorProduct[];
-  total?: number;
-  totalItems?: number;
-  totalPages?: number;
-  currentPage?: number;
-  pageSize?: number;
-  brand_count?: number;
-  indexes?: Record<string, unknown>;
-}
+    const params: CatalogRequestParams = {
+        page,
+        pageSize,
+        searchQuery,
+        sortBy,
+        category,
+        brand,
+    };
 
-async function fetchCatalog(params: CatalogParams): Promise<CatalogApiResponse> {
-  const url = new URL(CATALOG_ENDPOINT, window.location.origin);
-  Object.entries(params).forEach(([key, value]) => {
-    if (value !== undefined && value !== '') {
-      url.searchParams.append(key, String(value));
-    }
-  });
-  const response = await fetch(url.toString());
-  if (!response.ok) {
-    throw new Error(`Catalog fetch failed: HTTP ${response.status}`);
-  }
-  return response.json() as Promise<CatalogApiResponse>;
-}
+    const { data, isLoading, isError: queryIsError, error, refetch } = useQuery<PaginatedCatalogResponse, Error>(
+        ['catalog', params],
+        async () => {
+            const searchParams = new URLSearchParams();
+            if (params.page) searchParams.append('page', params.page.toString());
+            if (params.pageSize) searchParams.append('pageSize', params.pageSize.toString());
+            if (params.searchQuery) searchParams.append('searchQuery', params.searchQuery);
+            if (params.sortBy) searchParams.append('sortBy', params.sortBy);
+            if (params.category) searchParams.append('category', params.category);
+            if (params.brand) searchParams.append('brand', params.brand);
 
-export function useConductorCatalog(params: CatalogParams = {}) {
-  const { page = 1, pageSize = 250, searchQuery = '', sortBy = '', category = '', brand = '' } = params;
+            const url = `${CATALOG_ENDPOINT}?${searchParams.toString()}`;
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        },
+        {
+            keepPreviousData: true,
+        }
+    );
 
-  const { data, isLoading, isError, error, refetch } = useQuery<CatalogApiResponse, Error>({
-    queryKey: ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
-    queryFn: () => fetchCatalog({ page, pageSize, searchQuery, sortBy, category, brand }),
-    staleTime: 5 * 60 * 1000,
-    retry: 2,
-  });
+    useEffect(() => {
+        if (queryIsError && error) {
+            setIsError(true);
+            setErrorMessage(error.message);
+        } else {
+            setIsError(false);
+            setErrorMessage('');
+        }
+    }, [queryIsError, error]);
 
-  return {
-    products: data?.products ?? [],
-    totalItems: data?.totalItems ?? data?.total ?? 0,
-    totalPages: data?.totalPages ?? 1,
-    currentPage: data?.currentPage ?? 1,
-    pageSize: data?.pageSize ?? pageSize,
-    isLoading,
-    isError,
-    error: error ? error.message : null,
-    refetch,
-  };
-}
+    const products = data?.products || [];
+    const totalItems = data?.totalItems || 0;
+    const totalPages = data?.totalPages || 0;
+    const currentPage = data?.currentPage || 1;
+    const pageSize = data?.pageSize || defaultPageSize;
+
+
+    return {
+        products,
+        totalItems,
+        totalPages,
+        currentPage,
+        pageSize,
+        isLoading,
+        isError,
+        errorMessage,
+        refetch,
+    };
+};
+
+export const CatalogLoadingIndicator = () => {
+  return (
+    <div className="absolute top-0 left-0 w-full h-full bg-slate-900 z-10 flex items-center justify-center">
+      <motion.div
+        animate={{ scale: [0.8, 1.2] }}
+        transition={{ duration: 1.5, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse' }}
+      >
+        <MagnifyingGlass className="text-blue-500 h-8 w-8" />
+      </motion.div>
+    </div>
+  );
+};
+
+
+export const CatalogSkeleton = () => {
+    return (
+        <div className="space-y-4">
+            {[...Array(5)].map((_, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                    <Skeleton className="h-24 w-24 rounded-md" />
+                    <div className="space-y-2 w-full">
+                        <Skeleton className="h-4 w-3/4 rounded-md" />
+                        <Skeleton className="h-4 w-1/2 rounded-md" />
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+};
