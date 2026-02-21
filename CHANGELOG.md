@@ -1,4 +1,7 @@
 ## [v4.1] — 2026-02-21
+- [Remove] Deleted `specs/temp/steerer_last_output.txt`.
+
+## [v4.1] — 2026-02-21
 ## v4.1
 
 - [chore] Removed a temporary file.
