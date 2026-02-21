@@ -103,29 +103,42 @@ def purge_scope_violations(src_dir: Path = SRC_DIR) -> list[str]:
             )
 
         # ── Strategy 2: JSX in .ts — className= is the smoking gun ───────
-        #    Walk backwards from first className= to the nearest export/function
-        #    boundary and truncate there.
+        #    Prefer: git show HEAD to restore the last clean committed version.
+        #    Fallback: walk backwards and truncate at the nearest export/function
+        #    boundary (removes the injected JSX block, but may lose hook body).
         jsx_hit = re.search(r'\bclassName=', working)
         if jsx_hit:
-            pre = working[: jsx_hit.start()]
-            # Find the last export const / export function / standalone function
-            # declaration before the JSX hit — that's the start of the junk block
-            boundary = None
-            for m2 in re.finditer(
-                r'^(export\s+)?(const|function|class)\s+\w',
-                pre,
-                re.MULTILINE,
-            ):
-                boundary = m2  # keep scanning — we want the LAST match before jsx_hit
-            if boundary:
-                working = working[: boundary.start()].rstrip() + "\n"
-            else:
-                # No clean boundary found — truncate at line containing className
-                line_start = working.rfind("\n", 0, jsx_hit.start()) + 1
-                working = working[:line_start].rstrip() + "\n"
-            repaired.append(
-                f"[scope-purge] Stripped JSX component block (className detected) from {fpath.relative_to(ROOT_DIR)}"
+            rel_path = fpath.relative_to(ROOT_DIR)
+            # ── Attempt 1: git show HEAD (non-destructive, full restore) ──
+            import subprocess as _sp
+            git_show = _sp.run(
+                ["git", "-C", str(ROOT_DIR), "show", f"HEAD:{rel_path}"],
+                capture_output=True,
+                text=True,
             )
+            if git_show.returncode == 0 and git_show.stdout.strip():
+                working = git_show.stdout
+                repaired.append(
+                    f"[scope-purge] Restored {rel_path} from git HEAD (JSX-in-.ts detected)"
+                )
+            else:
+                # ── Attempt 2: truncate at JSX boundary ──────────────────
+                pre = working[: jsx_hit.start()]
+                boundary = None
+                for m2 in re.finditer(
+                    r'^(export\s+)?(const|function|class)\s+\w',
+                    pre,
+                    re.MULTILINE,
+                ):
+                    boundary = m2  # keep scanning — want LAST match before jsx_hit
+                if boundary:
+                    working = working[: boundary.start()].rstrip() + "\n"
+                else:
+                    line_start = working.rfind("\n", 0, jsx_hit.start()) + 1
+                    working = working[:line_start].rstrip() + "\n"
+                repaired.append(
+                    f"[scope-purge] Stripped JSX component block (className detected) from {rel_path}"
+                )
 
         # ── Strategy 3: component imports in hook file ────────────────────
         import_pattern = re.compile(
