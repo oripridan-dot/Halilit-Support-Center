@@ -1,13 +1,13 @@
 # Spec: Integrate Pyroscope for Performance Profiling
 **Version:** 1.0
-**Component:** `backend/pyroscope_integration.py`
+**Component:** `backend/main.py`
 
 ## Purpose
 To integrate Pyroscope for continuous performance profiling of the Halilit Support Center backend. This will enable efficient identification and resolution of performance bottlenecks, leading to improved responsiveness and scalability. Addresses the "Speed of Service" technical standard by providing tools to monitor and improve latency.
 
 ## Requirements
-- [x] Create a new Python module `backend/pyroscope_integration.py` containing the logic for initializing and configuring the Pyroscope agent.
 - [x] Install the Pyroscope Python agent (`pyroscopeio`) as a project dependency. Add `pyroscopeio` to `requirements.txt`.
+- [x] Create a new Python module `backend/pyroscope_integration.py` containing the logic for initializing and configuring the Pyroscope agent.
 - [x] The `backend/pyroscope_integration.py` module must define a function `init_pyroscope()` that initializes the Pyroscope agent.
 - [x] The `init_pyroscope()` function must read Pyroscope configuration parameters (server address, application name, API key) from environment variables. The environment variables must be named: `PYROSCOPE_SERVER_ADDRESS`, `PYROSCOPE_APPLICATION_NAME`, and `PYROSCOPE_API_KEY`.
 - [x] The `init_pyroscope()` function must start the Pyroscope agent.
@@ -18,15 +18,19 @@ To integrate Pyroscope for continuous performance profiling of the Halilit Suppo
 
 ## Behavior Scenarios
 - **Scenario:** All required environment variables are set.
-  - Input: `PYROSCOPE_SERVER_ADDRESS`, `PYROSCOPE_APPLICATION_NAME`, and `PYROSCOPE_API_KEY` are all defined.
-  - Outcome: The Pyroscope agent starts successfully and begins profiling the application. Logs indicate successful initialization.
+  - Input: `PYROSCOPE_SERVER_ADDRESS`, `PYROSCOPE_APPLICATION_NAME`, and `PYROSCOPE_API_KEY` are set to valid values.
+  - Outcome: The Pyroscope agent starts successfully and begins profiling the application. The console displays a message indicating that Pyroscope has started.
 - **Scenario:** One or more required environment variables are missing.
   - Input: `PYROSCOPE_SERVER_ADDRESS` is missing.
-  - Outcome: The `init_pyroscope()` function logs an error message indicating the missing environment variable. The Pyroscope agent does NOT start, but the application continues to function normally.
+  - Outcome: The Pyroscope agent does not start. An error message is logged indicating the missing environment variable. The application continues to run without Pyroscope profiling.
+- **Scenario:** Pyroscope server is unreachable.
+  - Input: `PYROSCOPE_SERVER_ADDRESS` points to a non-existent server.
+  - Outcome: The Pyroscope agent attempts to start but fails to connect to the server. An error message is logged. The application continues to run, but no profiling data is sent to Pyroscope.
 
-## Data Contract
-N/A — This feature does not involve data contracts in the traditional sense. It configures a performance monitoring tool.
+## Stitch UI Prompt
+(Not applicable for backend spec)
 
 ## Verification Commands
+- `python -m py_compile backend/main.py`
 - `python -m py_compile backend/pyroscope_integration.py`
 - `pytest backend/tests/test_pyroscope_integration.py -v`
