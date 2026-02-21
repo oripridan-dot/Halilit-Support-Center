@@ -1,78 +1,122 @@
-# Quick Start
-
-Get the Halilit Operator Console running in one place. No scattered "clear cache" or "verify" steps—just run.
+# Quick Start — Halilit Support Center (v9.7.6)
 
 ---
 
-## First Time: Install
+## Prerequisites
 
-From the **project root** (folder that contains `backend/` and `frontend/`):
-
-**1. Python virtual environment**
+- Python 3.11+, Node.js 18+, pnpm
+- `GEMINI_API_KEY` (or `GOOGLE_API_KEY`) — required for intelligence features
 
 ```bash
+export GEMINI_API_KEY="your-key-here"
+```
+
+---
+
+## One-Command Launch (Recommended)
+
+```bash
+source .venv/bin/activate
+python factory.py start
+```
+
+This starts:
+- **Backend** (FastAPI) on http://localhost:8000
+- **Frontend** (Vite) on http://localhost:5173
+
+---
+
+## First-Time Setup
+
+```bash
+# 1. Clone and enter the repo
+git clone <repo-url>
+cd Halilit-Support-Center
+
+# 2. Create Python virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
-```
 
-Windows PowerShell: `.venv\Scripts\Activate.ps1`
-
-**2. Backend dependencies**
-
-```bash
+# 3. Install Python dependencies
 pip install -r backend/requirements.txt
-```
 
-**3. Frontend dependencies**
+# 4. Install frontend dependencies
+cd frontend && pnpm install && cd ..
 
-```bash
-cd frontend && (pnpm install || npm install) && cd ..
-```
+# 5. Set your Gemini API key
+export GEMINI_API_KEY="your-key-here"
 
-**4. (Optional) Environment**
+# 6. Check system status
+python factory.py status
 
-Copy `.env.example` to `.env` and set `GOOGLE_API_KEY` if you want JIT (on-demand product intelligence). The catalog works without it.
-
----
-
-## Every Time: Run the App
-
-**One command (recommended):**
-
-```bash
-./factory_reset.sh
-```
-
-- Backend: http://localhost:8000 (API docs: http://localhost:8000/docs)
-- Frontend: http://localhost:5173
-
-If you see "CRITICAL: No catalog artifact found", run once:
-
-```bash
-./factory_reset.sh --rebuild
-```
-
-That rebuilds the catalog then starts both servers.
-
-**Alternative:** Use your existing script:
-
-```bash
-./start_console.sh
+# 7. Launch
+python factory.py start
 ```
 
 ---
 
-## Open in Browser
+## Alternative Launch Methods
 
-- **URL:** http://localhost:5173
-- **In Cursor:** View → Simple Browser → enter `http://localhost:5173`
+```bash
+# Legacy / direct
+PYTHONPATH=. python backend/conductor_main.py dev   # Backend + frontend
+PYTHONPATH=. python backend/server.py               # Backend only (port 8000)
+cd frontend && pnpm dev                             # Frontend only (port 5173)
 
-Keep the terminal open while using the app.
+# Force rebuild catalog cache
+python factory.py start --rebuild
+```
 
 ---
 
-## Next Steps
+## Interactive AI Console (Nexus)
 
-- **How we work:** [WORKFLOW.md](WORKFLOW.md)
-- **Run and data commands:** [FACTORY_PIPELINE.md](FACTORY_PIPELINE.md)
-- **What the console must do:** [OPERATOR_CONSOLE_SPEC.md](../OPERATOR_CONSOLE_SPEC.md)
+```bash
+source .venv/bin/activate
+python nexus.py
+```
+
+Connects you to the full AI swarm: Chief, Builder, Tech Lead, Product Manager, Darwin, Sonar.
+
+---
+
+## Build a Feature (Spec-Driven)
+
+```bash
+# 1. Generate a spec (Architect Agent)
+python factory.py design "Add price history chart to ProductDetail"
+
+# 2. Materialise spec → code (Builder Agent + Tech Lead review)
+python factory.py build specs/interface/<generated-spec>.md
+
+# 3. Verify in browser → amend spec if needed → repeat
+```
+
+---
+
+## Diagnose & Heal
+
+```bash
+python factory.py diagnose    # Scan errors, no changes
+python factory.py heal        # Auto-repair errors (up to 3 cycles)
+```
+
+---
+
+## Commit
+
+```bash
+python factory.py commit      # Stage all changes + semantic git commit
+```
+
+---
+
+## Key URLs
+
+| URL | Purpose |
+|-----|---------|
+| http://localhost:5173 | Operator Console (React SPA) |
+| http://localhost:8000/docs | FastAPI Swagger UI |
+| http://localhost:8000/api/health | Liveness check |
+| http://localhost:8000/api/health/deep | Deep organ check |
+| http://localhost:8000/api/conductor/catalog | Product catalog JSON |

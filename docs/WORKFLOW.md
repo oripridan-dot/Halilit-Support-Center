@@ -1,52 +1,132 @@
-# The New Workflow: Spec-Driven Factory
+# Halilit Support Center — Workflow (v9.7.6 · Level 6)
 
-We build the Halilit Support Center as a **Dark Factory**: the **Specification** is the source of truth; the **Codebase** is the artifact. You act as the **Factory Owner**—you approve outcomes, not line-by-line code.
-
----
-
-## Principles
-
-1. **Specs, not tickets** — Requirements live in `specs/*.md` and `OPERATOR_CONSOLE_SPEC.md`. No "fix the button" without a spec that says what the button must do.
-2. **Outcomes, not code** — You verify behavior in the app (e.g. "row turns red when stock is 0"). If it's wrong, you fix the **spec** and re-prompt; you don't debug the implementation by hand.
-3. **One command to run** — Use `./factory_reset.sh` or `./start_console.sh`. No scattered "clear cache / verify / restart" playbooks.
-4. **Golden scenarios** — Data quality is checked against `backend/tests/golden_scenarios.json`. Build fails (or compliance report fails) when the catalog doesn't satisfy those scenarios.
+> The Factory Owner defines intent via specs. The swarm executes, self-heals, self-disrupts.
 
 ---
 
-## The 5 Levels (Where You Are)
+## The Three Roles
 
-| Level | Role | What you do |
-|-------|------|-------------|
-| 1 | Encoder | Ask for a single function; review code. |
-| 2 | Planner | Ask for a module; still review code. |
-| **3** | **Architect** | **Ask for a component from a spec; verify behavior.** |
-| **4** | **Scenario driver** | **Define scenarios (e.g. Playwright); approve pass/fail.** |
-| **5** | **Factory Owner** | **Update spec → prompt Builder → approve outcome. No code review.** |
-
-**Target:** Work at Level 5. You update a spec, send the standard prompt (see [SPEC_DRIVEN_DEVELOPMENT.md](SPEC_DRIVEN_DEVELOPMENT.md)), and only check that the app behaves as the spec says.
+| Role | Responsibilities |
+|------|-----------------|
+| **Factory Owner** (you) | Write / update specs. Review outcomes. Set priorities. |
+| **Chief Agent** | Translates intent → delegation queue → assigns tasks to agents. |
+| **Tech Lead Agent** | Pre-flight gate. APPROVEs or VETOs every Builder output (Bicameral Governance). |
 
 ---
 
-## Daily Loop
+## The Daily Workflow
 
-1. **Change a spec** — e.g. add "Grid rows must turn red if stock is 0" to `specs/interface/02_inventory_grid.md`.
-2. **Prompt the Factory Builder** — "I have updated `specs/interface/02_inventory_grid.md`. Role: Factory Builder. Read the spec and `frontend/src/components/views/InventoryView.tsx`. Rewrite the component to satisfy the spec. Produce the code artifact."
-3. **Verify in the app** — Run the app, go to Inventory Master, check if zero-stock rows are red.
-   - **Yes** → Commit.
-   - **No** → Refine the spec (e.g. "red = Tailwind `bg-red-900/20`") and re-prompt. Do not debug the component manually.
+### 1. Orient
+
+```bash
+python factory.py status          # Environment health check
+cat HEARTBEAT.md                  # Nightly system self-report
+cat DAILY_BRIEFING.md             # Tech Lead nightly briefing
+python factory.py chief-plan      # Chief: prioritised task queue
+```
+
+### 2. Define Intent (Spec First)
+
+Before writing any code, check for a relevant spec:
+
+```
+specs/interface/
+  01_operator_dashboard.md   # Dashboard view
+  02_inventory_grid.md       # InventoryView
+  03_product_intelligence.md # ProductDetailView
+  04_natural_explorer_ux.md  # Natural Explorer pattern
+```
+
+If no spec exists → generate one:
+
+```bash
+python factory.py design "New feature description" [category]
+# Writes spec to specs/interface/<slug>.md
+```
+
+### 3. Build → Verify → Fix
+
+```bash
+python factory.py build specs/interface/02_inventory_grid.md
+# Builder materialises code; Tech Lead pre-flight reviews; Patch Agent applies.
+```
+
+Open the app and verify against **Behavior Scenarios** in the spec.
+
+If it fails → amend the spec → re-run build. **Never fix code by hand when the spec can be clarified.**
+
+### 4. Heal Errors
+
+```bash
+python factory.py heal            # Watchdog: scan errors, auto-repair (3 cycles)
+python factory.py diagnose        # Scan only, no changes
+```
+
+### 5. Commit
+
+```bash
+python factory.py commit          # Stage all + semantic git commit
+```
 
 ---
 
-## What We Don’t Do Anymore
+## Nexus — Interactive Console
 
-- **Don’t** paste code errors and ask "why doesn’t this work?" — Fix the spec or the scenario; then regenerate.
-- **Don’t** maintain separate "ACTION_REQUIRED" or "VERIFY_CHANGES" docs — Single workflow: specs + [QUICK_START](QUICK_START.md) + [FACTORY_PIPELINE](FACTORY_PIPELINE.md).
-- **Don’t** reference Galaxy, Spectrum, or Arena — Those views are removed. Only Mission Control, Inventory Master, Product Intelligence.
+For multi-step queries or real-time Chief → Swarm dialogue:
+
+```bash
+python nexus.py
+> run sonar
+> consult product_manager
+> run darwin "backend pagination bottleneck"
+> build specs/interface/03_product_intelligence.md
+```
 
 ---
 
-## See Also
+## Views (Operator Console)
 
-- [OPERATOR_CONSOLE_SPEC.md](../OPERATOR_CONSOLE_SPEC.md) — Product Detail and compliance.
-- [SPEC_DRIVEN_DEVELOPMENT.md](SPEC_DRIVEN_DEVELOPMENT.md) — Spec format and prompt templates.
-- [FACTORY_PIPELINE.md](FACTORY_PIPELINE.md) — How to run and rebuild the factory.
+| View | Route | Key Purpose |
+|------|-------|-------------|
+| **Dashboard** | `/` or `/dashboard` | Metrics, ingestion status, quick links |
+| **Inventory** | `/inventory` | Searchable product grid, sort, filter, pagination |
+| **ProductDetail** | `/product/:id` | JIT intelligence cockpit per product |
+
+> Old names **"Mission Control"** and **"Inventory Master"** are deprecated. Use the names above.
+
+---
+
+## Key Commands (factory.py)
+
+| Command | Purpose |
+|---------|---------|
+| `python factory.py start` | Launch backend (8000) + frontend (5173) |
+| `python factory.py status` | Environment health: API key, venv, agent presence |
+| `python factory.py design "desc" [cat]` | Architect: generate a spec |
+| `python factory.py build <spec_path>` | Builder: materialise spec → code |
+| `python factory.py darwin "hypothesis"` | Darwin: architectural mutation in Shadow Cell |
+| `python factory.py heal` | Watchdog: auto-repair errors (up to 3 cycles) |
+| `python factory.py diagnose` | Scan TypeScript/Python errors, no changes |
+| `python factory.py commit` | Stage all + semantic commit |
+| `python factory.py chief-plan` | Chief: prioritised task queue |
+
+---
+
+## Spec Is Law
+
+- If code conflicts with `specs/interface/` or `OPERATOR_CONSOLE_SPEC.md`, the **code is wrong**.
+- Do not infer business logic — read it from `specs/data_pipeline/`.
+- Do not write code without a spec.
+- Do not fix code by hand when the spec can be clarified instead.
+
+---
+
+## Three Source Rules (Non-Negotiable)
+
+| Source | Owns |
+|--------|------|
+| Commercial (Halilit.com) | Prices, SKUs, stock |
+| Official (brand pages) | Titles, specs, media, docs |
+| Contextual (3+ review sites) | Reviews, pros/cons, ratings |
+
+Empty fields > synthetic fields. See `backend/source_rules.py`.
