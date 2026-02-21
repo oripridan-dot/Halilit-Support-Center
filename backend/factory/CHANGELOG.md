@@ -1,3 +1,21 @@
+## [v9.7.6] — 2026-02-21
+
+### v9.7.6 · Level 6 — Darwin Protocol & Sovereign Nerve
+
+- [feat] Darwin Protocol — `darwin_agent.py` + `shadow_cell.py` + MCP `run_architectural_experiment` / `spawn_shadow_cell` / `destroy_shadow_cell` / `get_paradigm_shift_proposal`.
+- [feat] Bicameral Governance — `review_architectural_plan` + `request_architectural_review` MCP tool; Chief MUST call this before any delegation.
+- [feat] Active Sonar — `active_sonar.py` pings backend, frontend, halilit.com every 5 min; triggers Telemetry Reflex Arc on failure.
+- [feat] Product Manager Agent — `product_manager.py` + `read_roadmap` / `update_roadmap` / `consult_product_manager` MCP tools + `docs/ROADMAP.md`.
+- [feat] Heartbeat Daemon v2 — `schedule` loop, Active Sonar integration, Darwin cycle, `--daemon` flag.
+- [feat] Sovereign Nerve — `telemetry_agent.py` + `/api/webhooks/sentry` POST endpoint + `frontend/src/telemetry.ts`.
+- [feat] `/api/health/deep` endpoint.
+- [feat] Fast-Pass Image Heuristic in `visual_validator.py` and `product_image_validation.py`.
+- [feat] MCP server v6.1.0 — 10 new tools.
+- [chore] `schedule>=1.2.0` in `requirements.txt`.
+- [chore] Version bump: package.json + frontend 9.7.5→9.7.6.
+
+---
+
 ## [v9.7.5] — 2026-02-20
 
 ### v9.7.5 · Level 6 — AI Test Kit Standard

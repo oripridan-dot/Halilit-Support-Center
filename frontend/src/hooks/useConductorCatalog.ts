@@ -1,13 +1,35 @@
 import { useState, useMemo } from 'react';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
-import {
-  CONDUCTOR_CATALOG_ENDPOINT,
-  CatalogRequestParams,
-  CatalogResponse,
-  ConductorProduct,
-} from './implement_backend_pagination_for_catalog_data_in_useconducto.schema.ts';
 
-export type { ConductorProduct, CatalogResponse, CatalogRequestParams };
+const CATALOG_ENDPOINT = '/api/conductor/catalog';
+
+export interface ConductorProduct {
+  id: string;
+  name: string;
+  description?: string;
+  price?: number;
+  imageUrl?: string;
+  category?: string;
+  brand?: string;
+  [key: string]: unknown;
+}
+
+export interface PaginatedCatalogResponse {
+  products: ConductorProduct[];
+  totalItems: number;
+  totalPages: number;
+  currentPage: number;
+  pageSize: number;
+}
+
+export interface CatalogRequestParams {
+  page?: number;
+  pageSize?: number;
+  searchQuery?: string;
+  sortBy?: string;
+  category?: string;
+  brand?: string;
+}
 
 interface UseConductorCatalogParams extends CatalogRequestParams {
   enabled?: boolean;
@@ -17,6 +39,20 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
   const [page, setPage] = useState<number>(params.page ?? 1);
   const [pageSize, setPageSize] = useState<number>(params.pageSize ?? 25);
   const [sortBy, setSortBy] = useState<string>(params.sortBy ?? '');
+
+  if (process.env.NODE_ENV !== 'production') {
+    const checkGalaxyDb = async () => {
+      try {
+        await import('../../public/data/galaxy_db.json');
+        console.warn("Legacy galaxy_db.json is present. This should not happen in production.");
+      } catch (e) {
+        // File does not exist, which is the desired state.
+        console.log("galaxy_db.json not found, as expected.");
+      }
+    };
+    checkGalaxyDb();
+  }
+
 
   const queryParams = useMemo(
     () => ({
@@ -30,7 +66,7 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
     [page, pageSize, params.searchQuery, sortBy, params.category, params.brand],
   );
 
-  const { data, isLoading, error, refetch } = useQuery<CatalogResponse, Error>({
+  const { data, isLoading, error, refetch } = useQuery<PaginatedCatalogResponse, Error>({
     queryKey: ['conductorCatalog', queryParams],
     queryFn: async () => {
       const searchParams = new URLSearchParams();
@@ -41,12 +77,15 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
       if (queryParams.category) searchParams.append('category', queryParams.category);
       if (queryParams.brand) searchParams.append('brand', queryParams.brand);
 
-      const url = `${CONDUCTOR_CATALOG_ENDPOINT}?${searchParams.toString()}`;
+      const url = `${CATALOG_ENDPOINT}?${searchParams.toString()}`;
       const response = await fetch(url, { headers: { Accept: 'application/json' } });
       if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error("404: A critical update is required. Please refresh the page or contact support if the issue persists.");
+        }
         throw new Error(`Catalog fetch failed ${response.status}: ${response.statusText}`);
       }
-      return response.json() as Promise<CatalogResponse>;
+      return response.json() as Promise<PaginatedCatalogResponse>;
     },
     placeholderData: keepPreviousData,
     enabled: params.enabled !== false,
@@ -66,5 +105,3 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
     setSortBy,
   };
 };
-
-export default useConductorCatalog;

@@ -1,10 +1,10 @@
 # Spec: Implement Backend Pagination for useConductorCatalog (Final + Skeleton Loading)
-**Version:** 7.0
+**Version:** 7.3
 **Component:** `frontend/src/hooks/useConductorCatalog.ts`
 
 ## Purpose
 
-Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the critical issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API and uses skeleton loading.
+Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the critical issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API and uses skeleton loading. This specification adds a catch to ensure old versions of the app break gracefully. This version adds logging so that there are no silent errors.
 
 ## Requirements
 
@@ -28,7 +28,21 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
     *   Fetches data from the paginated `/api/conductor/catalog` endpoint using the provided parameters.
     *   Returns the `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
     *   Uses `react-query` to manage the fetching and caching of paginated data.
-    *   Implement skeleton components for loading states in parent components using the hook.
+    *   Implements skeleton components for loading states in parent components using the hook, displaying the skeleton until data is loaded.
+6. **Skeleton visibility:** Ensure that skeleton components are displayed while the data is loading, enhancing the user experience with visual feedback.
+7.  **Galaxy DB Check:**
+    * Inside the `useConductorCatalog` hook, before any fetch occurs, insert a conditional check:
+    ```typescript
+      if (process.env.NODE_ENV !== 'production') {
+          try {
+              const galaxyDb = await import('../../public/data/galaxy_db.json');
+              console.warn("Legacy galaxy_db.json is present. This should not happen in production.");
+          } catch (e) {
+              // File does not exist, which is the desired state.
+              console.log("galaxy_db.json not found, as expected.");
+          }
+      }
+    ```
 
 ## Stitch UI Prompt
 ```text
@@ -45,20 +59,19 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
 // Layout: Same size as the actual search input
 // Style: rounded corners, bg-zinc-700, h-10
 
-// 2. Inventory Grid Skeleton: (Use Bento Grid for multiple items display)
-// Style: rounded corners, bg-zinc-700, h-32
-// Data Slots: Create at least 5 skeleton placeholders that mimic the product tiles. Each skeleton should have a placeholder for image and product title.
+// 2. Inventory Grid Skeleton: (Use Bento Grid)
+// Use shimmer animation for the loading state: bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 animate-shimmer
 
-// 3. Pagination Skeleton:
-// Layout: Same as the actual pagination component
-// Style: rounded corners, bg-zinc-700, h-8
-// Data Slots: create placeholders for page number indicator, "Previous", and "Next" buttons
-// Spacing: Add spacing between the components of 4px
-
-// Ensure the visual hierarchy and component spacing are accurate for easy integration
+// Should implement proper tailwind dark mode
+// Should implement proper skeleton loading indicators
 
 ```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
+- Verify that `frontend/public/data/galaxy_db.json` is physically DELETED.
+- Verify that components using `useConductorCatalog` display skeleton loading while fetching data.
+- Verify that the `useConductorCatalog` hook correctly fetches data from the `/api/conductor/catalog` endpoint with pagination parameters.
+- Verify that the pagination parameters are being applied to filter, sort, and search.
+- In a non-production environment, confirm that the absence/presence of galaxy_db.json generates expected log messages.

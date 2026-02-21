@@ -76,6 +76,27 @@
 - [feat] Senior Tech Lead findings are treated as high-priority health signals.
 - [fix] Critical error handling in `build_component`.
 
+## [v9.7.6] — 2026-02-21
+
+### v9.7.6 · Level 6 — Darwin Protocol & Sovereign Nerve
+
+- [feat] **Darwin Protocol (Level 10)** — `darwin_agent.py` + `shadow_cell.py`: hypothesis-driven architectural mutation in isolated Shadow Cell, PARADIGM_SHIFT_PROPOSAL.md on ≥20% benchmark win.
+- [feat] `factory.py darwin "hypothesis" [--live]` — new CLI command for architectural experiments.
+- [feat] **Bicameral Governance (Level 9)** — `veto_or_approve_plan` + `review_architectural_plan` in `tech_lead_agent.py`; `request_architectural_review` MCP tool enforces pre-flight APPROVE/VETO.
+- [feat] **Active Sonar** — `active_sonar.py`: synthetic stack monitoring (backend + frontend + halilit.com); triggers Sovereign Telemetry Reflex Arc on outage.
+- [feat] **Heartbeat Daemon v2** — `heartbeat_daemon.py` upgraded with `schedule` loop (sonar every 5 min, nightly heartbeat at 03:00), Darwin Protocol cycle, and `--daemon` flag.
+- [feat] **Product Manager Agent** — `product_manager.py`: Agile PM reads `docs/ROADMAP.md`, surfaces the next sprint priority, auto-generates [EXECUTE] spec. `pm` / `roadmap` shortcut in nexus.py.
+- [feat] **ROADMAP.md** — `docs/ROADMAP.md` created; MCP tools `read_roadmap`, `update_roadmap`, `consult_product_manager` wired via `factory_mcp_server.py`.
+- [feat] **Sovereign Nerve (frontend telemetry)** — `frontend/src/telemetry.ts`: zero-vendor crash collector; `initSovereignNerve()` wired in `main.tsx`; `/api/webhooks/sentry` backend endpoint dispatches `telemetry_agent.py`.
+- [feat] `telemetry_agent.py` — Sovereign Nerve Reflex Arc; drafts `HOTFIX_PROPOSAL_*.md` on every production crash.
+- [feat] `/api/health/deep` — deep organ health check (catalog count, JIT cache, memory).
+- [feat] **Fast-Pass Image Heuristic** — `visual_validator.py` `fast_pass_check_sync/async`; `product_image_validation.py` 2-stage HEAD/deep pipeline; `fast_pass_image_check` MCP tool.
+- [feat] MCP server bumped to v6.1.0 — 10 new tools: `request_architectural_review`, `fast_pass_image_check`, `read_roadmap`, `update_roadmap`, `consult_product_manager`, `run_architectural_experiment`, `spawn_shadow_cell`, `destroy_shadow_cell`, `get_paradigm_shift_proposal`.
+- [chore] `schedule>=1.2.0` added to `backend/requirements.txt`.
+- [chore] Version bump: package.json 9.7.5→9.7.6, frontend 9.7.5→9.7.6.
+
+---
+
 ## [v9.7.5] — 2026-02-20
 
 ### v9.7.5 · Level 6 — AI Test Kit Standard

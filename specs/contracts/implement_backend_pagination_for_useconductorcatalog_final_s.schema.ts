@@ -1,17 +1,17 @@
 ```typescript
 // Contract: Implement Backend Pagination for useConductorCatalog (Final + Skeleton Loading)
 
-export const CONDUCTOR_CATALOG_ENDPOINT = '/api/conductor/catalog';
+export const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
 export interface ConductorProduct {
   id: string;
   name: string;
   description: string;
+  price: number;
   imageUrl: string;
   category: string;
   brand: string;
-  price: number;
-  // Add other product properties as needed
+  // Add other properties as needed based on your product data
 }
 
 export interface PaginatedCatalogResponse {
@@ -31,5 +31,5 @@ export interface CatalogParams {
   brand?: string;
 }
 
-export type CatalogResponse = PaginatedCatalogResponse; // The API returns a paginated response
+export type CatalogResponse = PaginatedCatalogResponse;
 ```

@@ -1,7 +1,7 @@
 """
 THE CHIEF — Strategic Partner Agent v4.2 (backend/factory/chief_agent.py)
 
-Massively Parallel Engineering Manager with Failure Recovery and full v9.7.5 awareness.
+Massively Parallel Engineering Manager with Failure Recovery and full v9.7.6 awareness.
 Outputs a TASK QUEUE enabling the Nexus Swarm Console to execute
 independent tasks simultaneously and auto-recover from failures.
 
@@ -25,6 +25,12 @@ from pathlib import Path
 # agent_core.py lives in the same directory
 sys.path.insert(0, str(Path(__file__).parent))
 from agent_core import query_llm  # noqa: E402
+
+# Bicameral Governance — pre-flight gatekeeper (fail-safe import)
+try:
+    from tech_lead_agent import veto_or_approve_plan as _veto_or_approve_plan
+except ImportError:
+    _veto_or_approve_plan = None  # type: ignore[assignment]
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -51,7 +57,7 @@ IF YOU SEE A FAILURE REPORT OR A SYSTEM_OVERRIDE IN YOUR CONTEXT:
      identical or near-identical args without an 'escalate_to_senior' between them.
 ████████████████████████████████████████████████████████████████████████
 
-You are THE CHIEF (Level 6) for Halilit Support Center v9.7.5 Dark Factory.
+You are THE CHIEF (Level 6) for Halilit Support Center v9.7.6 Dark Factory.
 You are an Executive Router, CTO, and a Senior Mentor. You are the BRAIN of the system, not the hands.
 Your Identity: You do NOT write code. You do NOT call low-level build tools directly.
 Your Goal: Translate high-level intent into precise delegation instructions for your Specialist Managers, maximise parallel execution of independent work streams, and expose your strategic thinking.
@@ -62,7 +68,7 @@ EXECUTIVE ROUTER DIRECTIVE:
   - Meta/governance work (audit, heal, commit, doc, reflect) → handle directly
   NEVER schedule 'implement', 'synthesize', or 'v0_design' directly — these are now owned by the Managers.
 
-ARCHITECTURE GROUND TRUTH (v9.7.5):
+ARCHITECTURE GROUND TRUTH (v9.7.6):
 - Frontend: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Views: Dashboard, Inventory, ProductDetail.
 - Backend: Python 3.11+ FastAPI + Gemini 2.0 Flash. Conductor CLI for data pipeline.
 - Three Source Rules: Commercial (Halilit) owns prices/SKUs. Official (Brand) owns specs/media. Contextual (Reviews) owns reviews.
@@ -555,6 +561,61 @@ def consult_chief(user_input: str, is_startup: bool = False,
             # Ensure queue key always exists
             if "queue" not in parsed:
                 parsed["queue"] = []
+
+            # ----------------------------------------------------------------
+            # 🛡️  BICAMERAL GOVERNANCE — Two-Key Pre-Flight Gatekeeper
+            # Only runs on fresh operator plans, not on failure-recovery or
+            # already-overridden passes (prevents infinite veto loops).
+            # ----------------------------------------------------------------
+            if (
+                _veto_or_approve_plan is not None
+                and parsed.get("queue")
+                and not failure_context
+                and not senior_override  # already on a second pass — skip
+            ):
+                # Build a human-readable plan summary for the Tech Lead
+                plan_lines = [f"INTENT: {user_input or '(startup scan)'}",
+                              f"EXPLANATION: {parsed.get('explanation', '')}",
+                              "PROPOSED QUEUE:"]
+                for i, task in enumerate(parsed["queue"], 1):
+                    mode = "⚡️ PARALLEL" if task.get(
+                        "parallel") else "🔒 SEQUENTIAL"
+                    plan_lines.append(
+                        f"  {i}. {mode} | [{task.get('tool', '?')}] {task.get('args', '')}"
+                    )
+                plan_summary = "\n".join(plan_lines)
+
+                print("\033[93m\n─" * 60 + "\033[0m")
+                print(
+                    "\033[93m🗡️  Tech Lead is reviewing the plan before execution...\033[0m")
+                verdict = _veto_or_approve_plan(
+                    user_input or "(startup scan)", plan_summary
+                )
+
+                if verdict["status"] == "VETOED":
+                    print(
+                        f"\033[91m\n🛑  TECH LEAD VETO: \"{verdict['feedback']}\"\033[0m"
+                    )
+                    print(
+                        "\033[93m🔄  Chief Agent ingesting Tech Lead feedback — revising plan...\033[0m")
+                    # Re-consult the Chief with the Tech Lead's correction
+                    # injected as a senior_override so it cannot be ignored.
+                    corrected = consult_chief(
+                        user_input=user_input,
+                        is_startup=is_startup,
+                        failure_context=failure_context,
+                        tech_lead_context=tech_lead_context,
+                        senior_override=verdict["feedback"],
+                    )
+                    print(
+                        "\033[92m✅  Plan revised by Tech Lead mandate. Initiating Swarm...\033[0m\n")
+                    print("\033[93m" + "─" * 60 + "\033[0m\n")
+                    return corrected
+                else:
+                    print(
+                        f"\033[92m✅  TECH LEAD APPROVED: {verdict['feedback']}\033[0m"
+                    )
+                    print("\033[93m" + "─" * 60 + "\033[0m\n")
 
             return parsed
     except json.JSONDecodeError:

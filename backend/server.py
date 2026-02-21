@@ -24,7 +24,7 @@ import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 from datetime import datetime
-from fastapi import FastAPI, Request, Query
+from fastapi import FastAPI, Request, Query, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
@@ -368,6 +368,46 @@ async def health_check():
         "version": __version__,
         "service": "Halilit Support Center",
         "architecture": "JIT",
+    }
+
+
+@app.get("/api/health/deep")
+async def deep_health_check():
+    """Active Sonar deep-check — validates internal organs, not just process liveness."""
+    import psutil
+
+    # ── Check 1: Catalog accessibility ──────────────────────────────────────
+    catalog_status = "OK"
+    catalog_product_count = 0
+    try:
+        data_service = get_conductor_data_service()
+        catalog = data_service.get_catalog()
+        catalog_product_count = len(catalog.get("products", []))
+        if catalog_product_count == 0:
+            catalog_status = "EMPTY"
+    except Exception as exc:
+        catalog_status = f"ERROR: {exc}"
+
+    # ── Check 2: JIT cache directory ─────────────────────────────────────────
+    jit_cache_dir = DATA_DIR / "jit_cache"
+    jit_cache_status = "OK" if jit_cache_dir.exists() else "MISSING"
+
+    # ── Check 3: Memory ──────────────────────────────────────────────────────
+    proc = psutil.Process(os.getpid())
+    memory_mb = proc.memory_info().rss / 1024 / 1024
+
+    overall = "operational" if catalog_status == "OK" else "degraded"
+
+    return {
+        "status": overall,
+        "timestamp": time.time(),
+        "version": __version__,
+        "core": {
+            "catalog": catalog_status,
+            "catalog_product_count": catalog_product_count,
+            "jit_cache": jit_cache_status,
+        },
+        "memory_usage_mb": round(memory_mb, 2),
     }
 
 
@@ -838,6 +878,35 @@ async def jit_product_intelligence(product_id: str):
 if os.path.exists(str(FRONTEND_PUBLIC_DATA)):
     app.mount("/data", StaticFiles(directory=str(FRONTEND_PUBLIC_DATA)), name="data")
     logger.info(f"Serving /data from {FRONTEND_PUBLIC_DATA}")
+
+# ═══════════════════════════════════════════════════════════════════════════
+# TELEMETRY NERVE — Sentry Reflex Arc
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+@app.post("/api/webhooks/sentry", status_code=200, tags=["webhooks"])
+async def sentry_webhook(
+    request: Request,
+    background_tasks: BackgroundTasks,
+):
+    """Receive Sentry error webhooks and dispatch the Telemetry Agent.
+
+    Returns 200 immediately so Sentry doesn't retry, then processes the
+    payload asynchronously via BackgroundTasks.
+    """
+    try:
+        payload = await request.json()
+    except Exception:
+        payload = {"message": "(unparseable payload)", "event": {}}
+
+    try:
+        from backend.factory.telemetry_agent import process_production_error  # type: ignore
+        background_tasks.add_task(process_production_error, payload)
+    except Exception as exc:
+        logger.error("Telemetry Agent import failed: %s", exc)
+
+    return {"status": "received", "message": "Telemetry Nerve activated."}
+
 
 # Mount images directory if it exists (for locally cached product images)
 IMAGES_DIR = DATA_DIR / "images"

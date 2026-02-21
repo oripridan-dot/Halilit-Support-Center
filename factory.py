@@ -1,5 +1,5 @@
 """
-MASTER FACTORY CONTROLLER — Halilit Support Center v9.7.2 Chief
+MASTER FACTORY CONTROLLER — Halilit Support Center v9.7.6 Chief
 Unified CLI for the full development lifecycle.
 
 Commands:
@@ -493,6 +493,24 @@ def cmd_scout() -> None:
     )
 
 
+def cmd_darwin(hypothesis: str, live: bool = False) -> None:
+    """
+    Darwin Protocol: spin up a Shadow Cell, mutate the architecture, benchmark.
+    Without --live, returns the experiment plan only (safe mode).
+    With --live, physically clones the repo, runs mutations + benchmarks in isolation.
+    """
+    ensure_env()
+    log(f"🧬 Activating Darwin Agent (Architectural Red Team)...")
+    log(f"   Hypothesis: {hypothesis}")
+    log(f"   Mode: {'LIVE EXPERIMENT (Shadow Cell)' if live else 'PLAN ONLY (safe mode)'}")
+
+    env = {**os.environ, "PYTHONPATH": str(ROOT)}
+    args = [sys.executable, str(FACTORY / "darwin_agent.py"), hypothesis]
+    if live:
+        args.append("--live")
+    subprocess.run(args, cwd=str(ROOT), env=env)
+
+
 # ---------------------------------------------------------------------------
 # Bio-Swarm — Genome / Ribosome / Mutation Engine
 # ---------------------------------------------------------------------------
@@ -610,6 +628,9 @@ Level 10 — Autonomous Polish:
 Evolutionary AI:
   scout                          Scout: scan for new tools → write Evolution Proposals
                                  Proposals land in specs/strategy/evolution/ for Chief review
+  darwin "hypothesis"            Darwin Protocol: architectural self-disruption experiment
+  darwin "hypothesis" --live     Darwin (live): clone repo into Shadow Cell, mutate + benchmark
+                                 PARADIGM_SHIFT_PROPOSAL.md written if ≥20% improvement proven
 
 Bio-Swarm — Algorithmic Biology:
   synthesize <genome.yaml>       Ribosome: translate a Genome YAML → synthesis directive
@@ -733,6 +754,16 @@ if __name__ == "__main__":
 
     elif command == "scout":
         cmd_scout()
+
+    elif command == "darwin":
+        if len(sys.argv) < 3:
+            log(
+                '❌ Usage: python factory.py darwin "hypothesis about architecture" [--live]')
+            log('   Example: python factory.py darwin "SQLite JOINs are slow, test NetworkX"')
+            log('   --live  : execute mutation + benchmark in isolated Shadow Cell (default: plan only)')
+            sys.exit(1)
+        _live_flag = "--live" in sys.argv
+        cmd_darwin(sys.argv[2], live=_live_flag)
 
     elif command == "synthesize":
         if len(sys.argv) < 3:
