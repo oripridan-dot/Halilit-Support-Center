@@ -24,3 +24,9 @@ Gradually introduce RSCs for non-interactive components in ProductDetailView and
 RSCs offer potential performance benefits by rendering components on the server, reducing client-side JavaScript. However, they require careful integration and may introduce complexity. Monitor adoption and assess impact before broader rollout.
 
 ---
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `REJECT`
+**Reason:** Proposal introduces a framework outside the approved stack (Three Source Rules / Architecture Law).
+*(Processed by evolution_manager.py — Chief auto-review)*

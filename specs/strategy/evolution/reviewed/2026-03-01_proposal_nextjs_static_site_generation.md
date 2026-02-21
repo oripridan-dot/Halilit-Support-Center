@@ -24,3 +24,9 @@ Catalog load must render a skeleton within 200 ms.
 Next.js SSG can significantly improve initial load times by pre-rendering UI components, directly addressing the 'Speed of Service' goal and the 200ms skeleton requirement. It offers a balance between performance and ease of integration.
 
 ---
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `REJECT`
+**Reason:** Proposal introduces a framework outside the approved stack (Three Source Rules / Architecture Law).
+*(Processed by evolution_manager.py — Chief auto-review)*

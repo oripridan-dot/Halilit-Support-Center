@@ -24,3 +24,9 @@ Replace the existing accessory recommendation logic (currently inferred from `sp
 Supabase Vector can improve accessory recommendation relevance by leveraging semantic similarity. Requires some infrastructure setup (new MCP) and embedding model management, but the potential upside in attachment rate is significant. This could also improve the 'Product detail Ecosystem tab' when `related_ids` is empty.
 
 ---
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `REJECT`
+**Reason:** Proposal introduces a framework outside the approved stack (Three Source Rules / Architecture Law).
+*(Processed by evolution_manager.py — Chief auto-review)*

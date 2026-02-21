@@ -227,6 +227,15 @@ def _detect_placeholder_files() -> list[str]:
                 )
                 continue
 
+            # Skip factory infrastructure files — they embed stub pattern strings
+            # in their own source (e.g. tech_lead_agent defines stub regexes).
+            _factory_skip = {
+                "tech_lead_agent.py", "evolution_manager.py",
+                "repair_service.py", "nexus.py",
+            }
+            if path.name in _factory_skip:
+                continue
+
             # Content patterns
             try:
                 content = path.read_text(encoding="utf-8", errors="replace")

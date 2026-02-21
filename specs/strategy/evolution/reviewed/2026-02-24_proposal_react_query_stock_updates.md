@@ -24,3 +24,9 @@ Aggressive Out-of-Stock Signaling
 React Query provides robust caching and background data fetching, which could prevent race conditions and improve the responsiveness of out-of-stock signaling. It also offers built-in error handling, reducing the likelihood of attribute-related crashes seen in recent logs.
 
 ---
+
+---
+## Chief Verdict — 2026-02-21
+**Decision:** `SPEC`
+**Reason:** RECOMMEND + MEDIUM_RISK: 'TanStack Query (formerly React Query)' queued for spec-driven build next session.
+*(Processed by evolution_manager.py — Chief auto-review)*
