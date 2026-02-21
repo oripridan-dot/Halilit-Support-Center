@@ -1,4 +1,9 @@
 ## [v9.7.6] — 2026-02-21
+- [feat] Added specification document for Halilit vs. Thomann price comparison.
+- [feat] Implemented `thomann_scraper.py` module for fetching product data from Thomann.de.
+- [feat] Implemented `price_comparison_engine.py` module for calculating landed cost comparisons.
+
+## [v9.7.6] — 2026-02-21
 ```
 - [feat] Refactor: Removed extensive test documentation and docstrings.
 - [feat] Refactor: Imported necessary modules for testing: `List`, `Dict`, `TestCase`, `normalize_product`, `ProductGraph`, and `ConfigDict`.
