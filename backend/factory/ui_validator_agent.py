@@ -48,6 +48,76 @@ FRONTEND_DIR = ROOT_DIR / "frontend"
 SRC_DIR = FRONTEND_DIR / "src"
 
 # ---------------------------------------------------------------------------
+# Scope-violation purger
+# ---------------------------------------------------------------------------
+# The Builder sometimes hallucinates component code (JSX components, component
+# imports) directly into hook/store/util .ts files.  This produces unresolvable
+# imports that SmartImportFixer can never fix because the targets simply don't
+# exist.  Detect and auto-strip these scope violations BEFORE the import scan
+# so the system never gets stuck on them.
+
+_HOOK_DIRS = {"hooks", "store", "stores", "utils", "lib", "services"}
+# Marker that the Builder uses when it appends a second file's content
+_APPENDED_FILE_COMMENT = re.compile(
+    r"^//\s+frontend/src/", re.MULTILINE
+)
+
+
+def purge_scope_violations(src_dir: Path = SRC_DIR) -> list[str]:
+    """
+    Scan every .ts (non-.tsx) file under hook/store/utils directories.
+    If the file contains:
+      1. A '// frontend/src/...' comment block (Builder appended a second file)
+      2. Unresolvable relative imports to 'components/' paths
+
+    … strip the garbage in-place and return a list of repaired file paths.
+
+    This is a zero-LLM, deterministic repair pass.
+    """
+    repaired: list[str] = []
+
+    for fpath in sorted(src_dir.rglob("*.ts")):
+        # Only target non-TSX files in scoped directories
+        if fpath.suffix == ".tsx":
+            continue
+        if not any(part in _HOOK_DIRS for part in fpath.parts):
+            continue
+        if "node_modules" in fpath.parts or fpath.name.endswith(".d.ts"):
+            continue
+
+        try:
+            original = fpath.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+
+        # ── Strategy 1: truncate at appended-file marker ─────────────────
+        match = _APPENDED_FILE_COMMENT.search(original)
+        if match:
+            cleaned = original[: match.start()].rstrip() + "\n"
+            fpath.write_text(cleaned, encoding="utf-8")
+            repaired.append(
+                f"[scope-purge] Truncated appended component block from {fpath.relative_to(ROOT_DIR)}"
+            )
+            original = cleaned  # continue checking remaining content
+
+        # ── Strategy 2: strip import lines that reference non-existent
+        #    component paths (components/ imports in hook files)  ──────────
+        import_pattern = re.compile(
+            r"^import\s+.*?from\s+['\"](\./|\.\./).*?components/[^'\"]+['\"];?\s*$",
+            re.MULTILINE,
+        )
+        fixed = import_pattern.sub("", original)
+        if fixed != original:
+            # Also strip any now-orphaned blank lines at the top of the file
+            fixed = re.sub(r"\n{3,}", "\n\n", fixed).lstrip("\n")
+            fpath.write_text(fixed, encoding="utf-8")
+            repaired.append(
+                f"[scope-purge] Stripped hallucinated component import(s) from {fpath.relative_to(ROOT_DIR)}"
+            )
+
+    return repaired
+
+# ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
 
@@ -157,6 +227,18 @@ def validate_ui(run_build: bool = True) -> dict:
     print(sep)
     print("🖥️  UI VALIDATOR — import scan + Vite build check")
     print(sep)
+
+    # 0. Scope-violation purge (zero-LLM, deterministic)
+    #    Removes hallucinated component code/imports the Builder dumps into
+    #    hook/store/util .ts files — these can never be fixed by SmartImportFixer
+    #    and would otherwise permanently block the system.
+    purge_results = purge_scope_violations(SRC_DIR)
+    if purge_results:
+        print(f"  🧹 Scope-violation purge: {len(purge_results)} file(s) auto-repaired:")
+        for r in purge_results:
+            print(f"     • {r}")
+    else:
+        print("  ✅ Scope check: no hook/store file contamination detected.")
 
     # 1. Static import map scan (fast — no subprocess)
     print("🔍  Scanning imports in frontend/src …")

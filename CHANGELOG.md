@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-21
+- [feat] Added a `purge_scope_violations` function to remove Builder-hallucinated component code and imports from hook/store/util files.
+- [feat] The `purge_scope_violations` function scans .ts files in specific directories for scope violations.
+- [feat] The `purge_scope_violations` function truncates files at appended-file markers and removes invalid component imports.
+- [feat] The `validate_ui` function now calls `purge_scope_violations` before other validation steps.
+
+## [v4.1] — 2026-02-21
 ## v4.1
 
 - [feat] Introduced `oracle_agent.py`, an external Oracle service to assist the Swarm in resolving failures.

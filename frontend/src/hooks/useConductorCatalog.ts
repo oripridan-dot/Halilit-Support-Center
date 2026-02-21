@@ -1,16 +1,41 @@
-import { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useSearchParams } from 'react-router-dom';
-import {
-  CatalogRequestParams,
-  PaginatedCatalogResponse,
-  ConductorProduct,
-  CATALOG_ENDPOINT,
-import { ImageWithFallback } from '../components/ImageWithFallback';
-import { ResearchAnimation } from '../components/ResearchAnimation';
-import { useDebounce } from './useDebounce';
 
-interface UseConductorCatalogProps {
+const CATALOG_ENDPOINT = '/api/conductor/catalog';
+
+export interface ConductorProduct {
+  id: string;
+  name: string;
+  brand: string;
+  brand_logo?: string;
+  galaxy_id?: string;
+  spectrum_id?: string;
+  category?: string;
+  subcategory?: string;
+  price?: number;
+  price_eilat?: number;
+  tier?: string;
+  image_url?: string;
+  image_gallery?: string[];
+  description?: string;
+  description_short?: string;
+  specs?: Record<string, unknown>;
+  features?: string[];
+  rating?: number;
+  review_count?: number;
+  pros?: string[];
+  cons?: string[];
+  quality_score?: number;
+  data_status?: string;
+  data_missing?: string[];
+  halilit_url?: string;
+  official_url?: string;
+  sources?: string[];
+  family_id?: string | null;
+  variant_key?: string | null;
+  relationship_ids?: string[];
+}
+
+interface CatalogParams {
   page?: number;
   pageSize?: number;
   searchQuery?: string;
@@ -19,66 +44,50 @@ interface UseConductorCatalogProps {
   brand?: string;
 }
 
-export const useConductorCatalog = ({
-  page = 1,
-  pageSize = 25,
-  searchQuery = '',
-  sortBy = '',
-  category = '',
-  brand = '',
-}: UseConductorCatalogProps = {}) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+interface CatalogApiResponse {
+  products: ConductorProduct[];
+  total?: number;
+  totalItems?: number;
+  totalPages?: number;
+  currentPage?: number;
+  pageSize?: number;
+  brand_count?: number;
+  indexes?: Record<string, unknown>;
+}
 
-  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+async function fetchCatalog(params: CatalogParams): Promise<CatalogApiResponse> {
+  const url = new URL(CATALOG_ENDPOINT, window.location.origin);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== '') {
+      url.searchParams.append(key, String(value));
+    }
+  });
+  const response = await fetch(url.toString());
+  if (!response.ok) {
+    throw new Error(`Catalog fetch failed: HTTP ${response.status}`);
+  }
+  return response.json() as Promise<CatalogApiResponse>;
+}
 
-  const params: CatalogRequestParams = {
-    page,
-    pageSize,
-    searchQuery: debouncedSearchQuery,
-    sortBy,
-    category,
-    brand,
-  };
+export function useConductorCatalog(params: CatalogParams = {}) {
+  const { page = 1, pageSize = 250, searchQuery = '', sortBy = '', category = '', brand = '' } = params;
 
-  const {
-    data,
-    isLoading,
-    error,
-    refetch,
-  } = useQuery<PaginatedCatalogResponse, Error>(
-    ['catalog', params],
-    async () => {
-      const url = new URL(CATALOG_ENDPOINT, window.location.origin);
-      Object.entries(params).forEach(([key, value]) => {
-        if (value !== undefined && value !== '') {
-          url.searchParams.append(key, String(value));
-        }
-      });
-      const response = await fetch(url.toString());
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json() as Promise<PaginatedCatalogResponse>;
-    },
-  );
-
-  const handlePageChange = (newPage: number) => {
-    setSearchParams(prevParams => {
-      const newParams = new URLSearchParams(prevParams);
-      newParams.set('page', String(newPage));
-      return newParams;
-    });
-  };
+  const { data, isLoading, isError, error, refetch } = useQuery<CatalogApiResponse, Error>({
+    queryKey: ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
+    queryFn: () => fetchCatalog({ page, pageSize, searchQuery, sortBy, category, brand }),
+    staleTime: 5 * 60 * 1000,
+    retry: 2,
+  });
 
   return {
-    products: data?.products || [],
-    totalItems: data?.totalItems || 0,
-    totalPages: data?.totalPages || 0,
-    currentPage: data?.currentPage || 1,
-    pageSize: data?.pageSize || 25,
+    products: data?.products ?? [],
+    totalItems: data?.totalItems ?? data?.total ?? 0,
+    totalPages: data?.totalPages ?? 1,
+    currentPage: data?.currentPage ?? 1,
+    pageSize: data?.pageSize ?? pageSize,
     isLoading,
-    error,
+    isError,
+    error: error ? error.message : null,
     refetch,
-    handlePageChange,
   };
-};
+}
