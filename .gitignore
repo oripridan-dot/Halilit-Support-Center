@@ -88,3 +88,10 @@ frontend/package-lock.json
 .agent_memory/
 frontend/public/data/galaxy_db.json
 specs/temp/
+
+# === DARWIN PROTOCOL & TELEMETRY RUNTIME ARTIFACTS ===
+docs/HOTFIX_PROPOSAL_*.md
+PARADIGM_SHIFT_PROPOSAL.md
+backend/data/*.jsonl
+backend/data/darwin_last_run.txt
+halilit_shadow_cell/

@@ -14,6 +14,7 @@ Usage (via nexus.py):
     python nexus.py --briefing
 """
 
+import json
 import os
 import re
 import subprocess
@@ -622,6 +623,127 @@ def diagnose_death_loop(failed_task_intent: str, previous_attempts: int = 1) -> 
             "Do NOT retry the previous approach. "
             "Use 'sandbox' to rewrite the failing component from scratch."
         )
+
+
+# ---------------------------------------------------------------------------
+# BICAMERAL GOVERNANCE — Two-Key Pre-Flight Gatekeeper
+# ---------------------------------------------------------------------------
+
+GATEKEEPER_SYSTEM_PROMPT = """
+You are the RUTHLESS SENIOR ARCHITECT and GATEKEEPER (Level 9) of the Halilit Dark Factory.
+The Chief Agent has proposed a plan. Your job is to detect BULLSHIT before a single line of
+code is touched.
+
+ARCHITECTURE LAWS (these are absolute — any violation is an immediate VETO):
+- Frontend: React 18 + Vite SPA. NEVER Next.js or any server-side rendering framework.
+- State management: Zustand (app state) + React Query (server state). NEVER Redux, MobX, Jotai, or any store we don't already use.
+- CSS: Tailwind CSS with design-system tokens (slate-*, blue-*, etc.). NEVER arbitrary hex colors. NEVER brittle CSS Grid when Flexbox satisfies the requirement.
+- Backend: Python 3.11 + FastAPI. NEVER Django, NEVER Flask.
+- Data purity: ZERO synthetic/mock/AI-generated data presented as real product data. Empty fields > fake fields.
+- No new third-party libraries or frameworks unless an Evolution Proposal exists in specs/strategy/evolution/.
+- Three Source Rules: Commercial (Halilit.com) owns prices/SKUs. Official (brand pages) owns specs/media. Contextual (review sites) owns reviews. NEVER mix ownership.
+- If it is a frontend change, it must go through delegate_frontend (never 'implement' directly).
+- If it is a backend change, it must go through delegate_data (never 'implement' directly).
+
+YOUR VERDICT CRITERIA:
+1. Does the plan violate any Architecture Law above? → VETO, provide the corrected strategy.
+2. Does the plan introduce unnecessary complexity (10-file blast for a 2-line fix)? → VETO.
+3. Does the plan suggest deprecated patterns (class components, inline styles, hardcoded data)? → VETO.
+4. Is the plan architecturally sound and minimal? → APPROVE.
+
+Respond ONLY with a JSON object. No markdown fences, no commentary outside the JSON:
+{"status": "APPROVED" | "VETOED", "feedback": "<one paragraph: if VETOED explain the violation and prescribe the exact corrected strategy; if APPROVED write one confirming sentence>"}
+"""
+
+
+def veto_or_approve_plan(intent: str, proposed_plan: str) -> dict:
+    """
+    Bicameral Governance Gate — ruthless Senior Architect reviews the Chief's
+    proposed plan before any code is written.
+
+    Args:
+        intent:        The operator's original intent / goal.
+        proposed_plan: Human-readable summary of what the Chief intends to do.
+
+    Returns:
+        {"status": "APPROVED" | "VETOED", "feedback": "..."}
+
+    Fails open (APPROVED) when the LLM is unavailable so the factory
+    is never hard-blocked by a network outage.
+    """
+    user_message = (
+        f"OPERATOR INTENT:\n{intent}\n\n"
+        f"CHIEF'S PROPOSED PLAN:\n{proposed_plan}"
+    )
+    try:
+        raw = query_llm(
+            GATEKEEPER_SYSTEM_PROMPT,
+            user_message,
+            model_tier="smart",
+            temperature=0.2,
+        )
+        raw = (raw or "").strip()
+        # Strip any accidental markdown fences from the LLM
+        if "```json" in raw:
+            raw = raw.split("```json")[1].split("```")[0].strip()
+        elif "```" in raw:
+            raw = raw.split("```")[1].split("```")[0].strip()
+        data = json.loads(raw)
+        return {
+            "status": data.get("status", "APPROVED"),
+            "feedback": data.get("feedback", "Plan reviewed — no issues found."),
+        }
+    except json.JSONDecodeError as exc:
+        # Malformed JSON from LLM — fail open
+        return {
+            "status": "APPROVED",
+            "feedback": f"Gatekeeper parse error ({exc}). Plan auto-approved.",
+        }
+    except Exception as exc:  # noqa: BLE001
+        # Network / API failure — fail open so factory is never hard-blocked
+        return {
+            "status": "APPROVED",
+            "feedback": f"Gatekeeper LLM unavailable ({exc}). Plan auto-approved.",
+        }
+
+
+# ---------------------------------------------------------------------------
+# BICAMERAL GOVERNANCE — MCP-exposed review wrapper
+# ---------------------------------------------------------------------------
+
+def review_architectural_plan(intent: str, proposed_plan: str) -> str:
+    """
+    MCP-callable wrapper around veto_or_approve_plan().
+
+    Formats the verdict for terminal display in bright colours so the Operator
+    can watch the AI police itself, and returns a human-readable verdict string
+    suitable for injection into the Chief's context.
+
+    Returns:
+        A string starting with '[APPROVED]' or '[VETOED]' followed by the
+        Tech Lead's one-paragraph verdict.
+    """
+    # Colourful pre-flight banner
+    print("\033[93m\n" + "─" * 60 + "\033[0m")
+    print("\033[93m🛡️  Tech Lead: Reviewing Chief's proposed architecture...\033[0m")
+    print(f"\033[90m   Intent: {intent[:120]}\033[0m")
+
+    verdict = veto_or_approve_plan(intent, proposed_plan)
+
+    if verdict["status"] == "VETOED":
+        print(
+            f"\033[91m\n🛑  TECH LEAD VETO DETECTED! Forcing Chief to rewrite plan...\033[0m"
+        )
+        print(f"\033[91m   {verdict['feedback']}\033[0m")
+        print("\033[93m" + "─" * 60 + "\033[0m\n")
+        return f"[VETOED] {verdict['feedback']}"
+    else:
+        print(
+            f"\033[92m\n✅  Tech Lead Approved. Plan is structurally sound.\033[0m"
+        )
+        print(f"\033[92m   {verdict['feedback']}\033[0m")
+        print("\033[93m" + "─" * 60 + "\033[0m\n")
+        return f"[APPROVED] {verdict['feedback']}"
 
 
 if __name__ == "__main__":

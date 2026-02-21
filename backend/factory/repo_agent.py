@@ -401,7 +401,7 @@ def merge_and_cleanup(branch_name: str, success: bool) -> None:
     base = get_current_branch()
     if base == branch_name:
         # Already on the feature branch — detect the actual base
-        base = "v9.7.4"
+        base = "v9.7.6"
     if success:
         print(f"✅ TDD Green. Merging {branch_name} → {base}.")
         merge_feature_branch(branch_name, base_branch=base)

@@ -2,8 +2,12 @@ import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { initSovereignNerve } from "./telemetry.ts";
 import App from "./App.tsx";
 import "./index.css";
+
+// ── Sovereign Nerve: self-hosted crash/error telemetry ─────────────────────
+initSovereignNerve();
 
 // Initialize React Query client with sensible defaults
 const queryClient = new QueryClient({

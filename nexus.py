@@ -7,7 +7,7 @@ Massively Parallel AI Engineering Console for the Dark Factory.
 v4.2 changes:
   â¢ mentor_insight from Chief is now displayed after every briefing.
   â¢ fitness tool added to action map with proper icon.
-  â¢ Version aligned with project v9.7.4.
+  â¢ Version aligned with project v9.7.6.
 
 Features:
   â¢ Chief now outputs a TASK QUEUE instead of a single action.
@@ -1433,6 +1433,20 @@ def main() -> None:
                 else:
                     print(
                         f"   {GREEN}\u2705 Factory is clean — no issues detected.{RESET}")
+                hr()
+                continue
+
+            # ---- 'pm' shortcut: Product Manager roadmap briefing --------------
+            if user_input.lower() in ("pm", "/pm", "roadmap", "what's next", "whats next", "next"):
+                print(
+                    f"\n{MAGENTA}\U0001f454 Consulting Product Manager...{RESET}")
+                try:
+                    sys.path.insert(0, str(ROOT / "backend" / "factory"))
+                    from product_manager import consult_product_manager  # type: ignore  # noqa: PLC0415
+                    _pm_brief = consult_product_manager(user_input)
+                    print(f"\n{BOLD}{_pm_brief}{RESET}")
+                except Exception as _pm_exc:
+                    print(f"   {RED}PM Agent error: {_pm_exc}{RESET}")
                 hr()
                 continue
 

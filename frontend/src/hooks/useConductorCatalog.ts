@@ -1,13 +1,35 @@
 import { useState, useMemo } from 'react';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
-import {
-  CATALOG_ENDPOINT,
-  CatalogRequestParams,
-  PaginatedCatalogResponse,
-  ConductorProduct,
-} from './implement_backend_pagination_for_useconductorcatalog_final_s.schema';
 
-export type { ConductorProduct, PaginatedCatalogResponse, CatalogRequestParams };
+const CATALOG_ENDPOINT = '/api/conductor/catalog';
+
+export interface ConductorProduct {
+  id: string;
+  name: string;
+  description?: string;
+  price?: number;
+  imageUrl?: string;
+  category?: string;
+  brand?: string;
+  [key: string]: unknown;
+}
+
+export interface PaginatedCatalogResponse {
+  products: ConductorProduct[];
+  totalItems: number;
+  totalPages: number;
+  currentPage: number;
+  pageSize: number;
+}
+
+export interface CatalogRequestParams {
+  page?: number;
+  pageSize?: number;
+  searchQuery?: string;
+  sortBy?: string;
+  category?: string;
+  brand?: string;
+}
 
 interface UseConductorCatalogParams extends CatalogRequestParams {
   enabled?: boolean;

@@ -29,6 +29,28 @@ Tools exposed:
                          cold-booted, context-free Oracle AI for a radical
                          outside perspective and a step-by-step Rescue Protocol.
 
+  [Level 9 — Bicameral Governance & Backlog Engine]
+  request_architectural_review – Submit the Chief's plan to the ruthless Senior
+                         Architect (Tech Lead) for APPROVE / VETO before any
+                         code is written. Enforces architecture laws.
+  fast_pass_image_check – HEAD-only heuristic: validate an image URL in
+                         microseconds without downloading it. Skips heavy
+                         AI/Vision for the ~95% of obviously-valid images.
+  read_roadmap         – Read the full docs/ROADMAP.md backlog.
+  update_roadmap       – Tick/untick tasks or move them to Completed.
+  consult_product_manager – Ask the Agile PM to pitch the next sprint priority
+                         and auto-generate an [EXECUTE] spec for the Chief.
+
+  [Level 10 — Darwin Protocol: Architectural Self-Disruption]
+  run_architectural_experiment – Activate the Darwin Agent on a hypothesis: generate
+                         a mutation plan, optionally execute it in an isolated Shadow
+                         Cell, benchmark old-vs-new, and write PARADIGM_SHIFT_PROPOSAL.md
+                         if the data proves ≥20% improvement.
+  spawn_shadow_cell      – Physically clone the repo into an isolated sandbox outside
+                         the workspace for radical architectural experiments.
+  destroy_shadow_cell    – Destroy the Shadow Cell and reclaim disk space.
+  get_paradigm_shift_proposal – Read the latest Darwin Agent proposal.
+
 Run standalone (for debugging):
     PYTHONPATH=. python backend/mcp/servers/factory_mcp_server.py
 
@@ -68,7 +90,7 @@ _FACTORY_PY = str(_ROOT / "factory.py")
 # MCP protocol constants
 # ---------------------------------------------------------------------------
 PROTOCOL_VERSION = "2024-11-05"
-SERVER_INFO = {"name": "halilit-factory", "version": "5.0.0"}
+SERVER_INFO = {"name": "halilit-factory", "version": "6.1.0"}
 
 # ---------------------------------------------------------------------------
 # Tool definitions
@@ -290,6 +312,120 @@ TOOLS: list[dict[str, Any]] = [
         },
     },
     # -----------------------------------------------------------------------
+    # Bicameral Governance — Two-Key Pre-Flight Gatekeeper
+    # -----------------------------------------------------------------------
+    {
+        "name": "request_architectural_review",
+        "description": (
+            "Submit the Chief's proposed plan to the ruthless Senior Architect (Tech Lead) "
+            "for pre-flight approval BEFORE any code is written. "
+            "The Tech Lead will VETO plans that violate architecture laws (wrong framework, "
+            "Redux instead of Zustand, Next.js instead of Vite, etc.) and provide a "
+            "corrected strategy. Returns '[APPROVED] ...' or '[VETOED] corrected strategy'. "
+            "CRITICAL: The Chief MUST call this tool before delegating any implementation task."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "intent": {
+                    "type": "string",
+                    "description": "The operator's original goal / intent.",
+                },
+                "proposed_plan": {
+                    "type": "string",
+                    "description": "Human-readable summary of what the Chief intends to do.",
+                },
+            },
+            "required": ["intent", "proposed_plan"],
+        },
+    },
+    # -----------------------------------------------------------------------
+    # Fast-Pass Image Heuristic — Data Manager I/O unblock
+    # -----------------------------------------------------------------------
+    {
+        "name": "fast_pass_image_check",
+        "description": (
+            "Perform a microsecond HEAD-only heuristic check on an image URL. "
+            "Returns true if the URL serves a real image (Content-Type is an image type "
+            "AND Content-Length > 10 KB). Returns false if the image is broken, "
+            "suspiciously small, or returns a non-image content type. "
+            "Use this during catalog ingestion to skip heavy AI/Vision validation for "
+            "the ~95 percent of images that are obviously valid."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "image_url": {
+                    "type": "string",
+                    "description": "The full URL of the product image to check.",
+                },
+            },
+            "required": ["image_url"],
+        },
+    },
+    # -----------------------------------------------------------------------
+    # Backlog Engine — Product Manager Roadmap tools
+    # -----------------------------------------------------------------------
+    {
+        "name": "read_roadmap",
+        "description": (
+            "Read the full contents of docs/ROADMAP.md — the factory backlog. "
+            "Returns the current sprint tasks, long-term epics, and completed items. "
+            "The Product Manager uses this before every briefing to surface the "
+            "highest-priority incomplete task."
+        ),
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "update_roadmap",
+        "description": (
+            "Update a task's status in docs/ROADMAP.md. "
+            "Use new_status='complete' to tick a checkbox, 'incomplete' to untick, "
+            "or 'move_to_completed' to move the item to the Completed section. "
+            "The Product Manager calls this automatically when the Operator confirms a feature is done."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "task_name": {
+                    "type": "string",
+                    "description": "The text of the task to find (partial match is fine).",
+                },
+                "new_status": {
+                    "type": "string",
+                    "description": "One of: 'complete', 'incomplete', 'move_to_completed'.",
+                    "enum": ["complete", "incomplete", "move_to_completed"],
+                },
+            },
+            "required": ["task_name", "new_status"],
+        },
+    },
+    {
+        "name": "consult_product_manager",
+        "description": (
+            "Ask the Agile Product Manager to read the roadmap and brief you on the "
+            "highest-priority next task. The PM will explain WHY it is the priority, "
+            "assess the technical state, and auto-generate a ready-to-execute Chief spec. "
+            "Optionally pass confirm_complete_task to mark a finished feature as done "
+            "in the roadmap before the PM formulates the next brief."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "user_input": {
+                    "type": "string",
+                    "description": "Your question or instruction for the PM (e.g. 'What\'s next?').",
+                    "default": "What's next?",
+                },
+                "confirm_complete_task": {
+                    "type": "string",
+                    "description": "Optional: name / partial text of a task just completed to auto-tick it.",
+                },
+            },
+            "required": [],
+        },
+    },
+    # -----------------------------------------------------------------------
     # JIT Oracle Lifeline (Level 8 Safety Net)
     # -----------------------------------------------------------------------
     {
@@ -320,6 +456,80 @@ TOOLS: list[dict[str, Any]] = [
             },
             "required": ["intent"],
         },
+    },
+    # -----------------------------------------------------------------------
+    # Darwin Protocol — Architectural Self-Disruption (Level 10)
+    # -----------------------------------------------------------------------
+    {
+        "name": "run_architectural_experiment",
+        "description": (
+            "Activate the Darwin Agent (Architectural Red Team). Formulates a hypothesis "
+            "about an architectural bottleneck, generates a concrete mutation plan and benchmark "
+            "strategy, optionally spins up a Shadow Cell (isolated repo clone) to execute the "
+            "mutation, and writes a PARADIGM_SHIFT_PROPOSAL.md if the data proves a ≥20%% gain. "
+            "Use this whenever the Operator wants to question the current architecture without "
+            "touching the live repository. Safe mode (run_in_cell=false) returns the plan only."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "hypothesis": {
+                    "type": "string",
+                    "description": (
+                        "The architectural challenge to explore, e.g. "
+                        "'SQLite JOINs for accessory mapping are slow — test NetworkX graph' or "
+                        "'Standard Python loops in ingestion are bottlenecked — test asyncio+aiohttp'."
+                    ),
+                },
+                "run_in_cell": {
+                    "type": "boolean",
+                    "description": (
+                        "If true, physically spin up a Shadow Cell, execute mutation commands "
+                        "inside it, and run benchmarks. If false (default), return the plan only "
+                        "without touching the filesystem."
+                    ),
+                    "default": False,
+                },
+            },
+            "required": ["hypothesis"],
+        },
+    },
+    {
+        "name": "spawn_shadow_cell",
+        "description": (
+            "Physically clone the entire live repository into an isolated sandbox directory "
+            "OUTSIDE the main workspace (halilit_shadow_cell/). The Shadow Cell can be mutated, "
+            "benchmarked, and destroyed without ever affecting production code. "
+            "Call destroy_shadow_cell when done to free disk space."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "force": {
+                    "type": "boolean",
+                    "description": "If true (default), destroy any existing Shadow Cell before creating a fresh one.",
+                    "default": True,
+                }
+            },
+            "required": [],
+        },
+    },
+    {
+        "name": "destroy_shadow_cell",
+        "description": (
+            "Destroy the Shadow Cell sandbox and reclaim disk space. "
+            "Always call this after an architectural experiment is complete."
+        ),
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
+    },
+    {
+        "name": "get_paradigm_shift_proposal",
+        "description": (
+            "Read the latest PARADIGM_SHIFT_PROPOSAL.md written by the Darwin Agent. "
+            "Returns the full Markdown document with benchmark evidence and the Governor "
+            "decision instructions. Returns a placeholder if no proposal exists yet."
+        ),
+        "inputSchema": {"type": "object", "properties": {}, "required": []},
     },
 ]
 
@@ -544,6 +754,144 @@ def _tool_consult_oracle(args: dict[str, Any]) -> str:
         return json.dumps({"error": str(exc)})
 
 
+# ---------------------------------------------------------------------------
+# Bicameral Governance tool handlers
+# ---------------------------------------------------------------------------
+
+def _tool_request_architectural_review(args: dict[str, Any]) -> str:
+    """Submit a plan to the Tech Lead gatekeeper for APPROVE / VETO verdict."""
+    intent: str = args.get("intent", "").strip()
+    proposed_plan: str = args.get("proposed_plan", "").strip()
+    if not intent or not proposed_plan:
+        return "[ERROR] Both 'intent' and 'proposed_plan' are required."
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from tech_lead_agent import review_architectural_plan  # type: ignore
+        return review_architectural_plan(intent, proposed_plan)
+    except Exception as exc:
+        return f"[ERROR] Tech Lead unavailable: {exc}"
+
+
+def _tool_fast_pass_image_check(args: dict[str, Any]) -> str:
+    """Perform a synchronous HEAD-only heuristic image check."""
+    image_url: str = args.get("image_url", "").strip()
+    if not image_url:
+        return json.dumps({"valid": False, "error": "image_url is required."})
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "services"))
+        from product_image_validation import fast_pass_image_check  # type: ignore
+        valid = fast_pass_image_check(image_url)
+        return json.dumps({"image_url": image_url, "valid": valid,
+                           "validation_path": "fast_pass" if valid else "suspicious"})
+    except Exception as exc:
+        return json.dumps({"valid": False, "error": str(exc)})
+
+
+# ---------------------------------------------------------------------------
+# Backlog Engine / PM tool handlers
+# ---------------------------------------------------------------------------
+
+def _tool_read_roadmap(args: dict[str, Any]) -> str:  # noqa: ARG001
+    """Return the full contents of docs/ROADMAP.md."""
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from product_manager import read_roadmap  # type: ignore
+        return read_roadmap()
+    except Exception as exc:
+        roadmap_path = _ROOT / "docs" / "ROADMAP.md"
+        if roadmap_path.exists():
+            return roadmap_path.read_text(encoding="utf-8")
+        return f"[ERROR] Could not read roadmap: {exc}"
+
+
+def _tool_update_roadmap(args: dict[str, Any]) -> str:
+    """Update a task checkbox in docs/ROADMAP.md."""
+    task_name: str = args.get("task_name", "").strip()
+    new_status: str = args.get("new_status", "complete").strip()
+    if not task_name:
+        return "[ERROR] task_name is required."
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from product_manager import update_roadmap  # type: ignore
+        return update_roadmap(task_name, new_status)
+    except Exception as exc:
+        return f"[ERROR] Could not update roadmap: {exc}"
+
+
+def _tool_consult_product_manager(args: dict[str, Any]) -> str:
+    """Ask the PM to brief the Operator on the next roadmap priority."""
+    user_input: str = args.get("user_input", "What's next?").strip()
+    # type: ignore[assignment]
+    confirm_task: str = args.get("confirm_complete_task", "").strip() or None
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from product_manager import consult_product_manager  # type: ignore
+        return consult_product_manager(user_input, confirm_task)
+    except Exception as exc:
+        return f"[ERROR] PM Agent unavailable: {exc}"
+
+
+# ---------------------------------------------------------------------------
+# Darwin Protocol handlers (Level 10 — Architectural Self-Disruption)
+# ---------------------------------------------------------------------------
+
+def _tool_run_architectural_experiment(args: dict[str, Any]) -> str:
+    """
+    Activate the Darwin Agent on a hypothesis.
+    run_in_cell=False: returns plan only (safe).
+    run_in_cell=True:  spins up Shadow Cell, mutates, benchmarks, destroys.
+    """
+    hypothesis: str = args.get("hypothesis", "").strip()
+    run_in_cell: bool = bool(args.get("run_in_cell", False))
+
+    if not hypothesis:
+        return "[ERROR] hypothesis is required. Describe the architectural bottleneck to explore."
+
+    try:
+        sys.path.insert(0, str(_ROOT))
+        from backend.factory.darwin_agent import initiate_darwin_experiment  # type: ignore
+        return initiate_darwin_experiment(hypothesis, run_in_cell=run_in_cell)
+    except Exception as exc:
+        return f"[ERROR] Darwin Agent unavailable: {exc}"
+
+
+def _tool_spawn_shadow_cell(args: dict[str, Any]) -> str:
+    """Spin up an isolated Shadow Cell clone of the live repository."""
+    force: bool = bool(args.get("force", True))
+    try:
+        sys.path.insert(0, str(_ROOT))
+        from backend.factory.shadow_cell import spin_up_shadow_cell, shadow_cell_status  # type: ignore
+        path = spin_up_shadow_cell(force=force)
+        status = shadow_cell_status()
+        return json.dumps({"path": path, **status})
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
+def _tool_destroy_shadow_cell(args: dict[str, Any]) -> str:  # noqa: ARG001
+    """Destroy the Shadow Cell and reclaim disk space."""
+    try:
+        sys.path.insert(0, str(_ROOT))
+        from backend.factory.shadow_cell import destroy_shadow_cell  # type: ignore
+        destroy_shadow_cell()
+        return json.dumps({"status": "destroyed"})
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
+def _tool_get_paradigm_shift_proposal(args: dict[str, Any]) -> str:  # noqa: ARG001
+    """Return the latest PARADIGM_SHIFT_PROPOSAL.md (or a placeholder)."""
+    try:
+        sys.path.insert(0, str(_ROOT))
+        from backend.factory.darwin_agent import get_last_proposal  # type: ignore
+        return get_last_proposal()
+    except Exception as exc:
+        proposal_path = _ROOT / "PARADIGM_SHIFT_PROPOSAL.md"
+        if proposal_path.exists():
+            return proposal_path.read_text(encoding="utf-8")
+        return f"[ERROR] Could not read proposal: {exc}"
+
+
 _TOOL_HANDLERS = {
     "factory_chief_plan": _tool_chief_plan,
     "factory_build": _tool_build,
@@ -560,6 +908,18 @@ _TOOL_HANDLERS = {
     "apply_udiff_patch": _tool_apply_udiff_patch,
     # JIT Oracle Lifeline (Level 8 Safety Net)
     "consult_oracle": _tool_consult_oracle,
+    # Bicameral Governance tools
+    "request_architectural_review": _tool_request_architectural_review,
+    "fast_pass_image_check": _tool_fast_pass_image_check,
+    # Backlog Engine / PM tools
+    "read_roadmap": _tool_read_roadmap,
+    "update_roadmap": _tool_update_roadmap,
+    "consult_product_manager": _tool_consult_product_manager,
+    # Darwin Protocol — Architectural Self-Disruption (Level 10)
+    "run_architectural_experiment": _tool_run_architectural_experiment,
+    "spawn_shadow_cell": _tool_spawn_shadow_cell,
+    "destroy_shadow_cell": _tool_destroy_shadow_cell,
+    "get_paradigm_shift_proposal": _tool_get_paradigm_shift_proposal,
 }
 
 # ---------------------------------------------------------------------------
