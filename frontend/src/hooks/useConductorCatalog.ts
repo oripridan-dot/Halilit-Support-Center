@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
-import { ResearchAnimation } from '../../components/ResearchAnimation';
+
 import { useState } from 'react';
 
 export const useConductorCatalog = (
