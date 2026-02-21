@@ -1,6 +1,6 @@
 # Task-Force Blackboard: pyroscope_integration
 
-**Goal:** Integrate Pyroscope for performance profiling per 2026-03-01_proposal_pyroscope_for_performance_profiling.md
+**Goal:** Integrate Pyroscope for performance profiling
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- No code provided to review.
+No implemented code was provided for review.
 
 **Required Fix:**
-Provide the implemented code for review.
+Provide the implemented code so that it can be reviewed against the specification and user's original intent.

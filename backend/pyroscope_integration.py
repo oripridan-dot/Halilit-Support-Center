@@ -1,7 +1,7 @@
 # backend/pyroscope_integration.py
 import os
 import logging
-from pyroscope import Pyroscope
+from pyroscope import configure, start_profiler
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -13,30 +13,30 @@ def init_pyroscope():
     api_key = os.getenv("PYROSCOPE_API_KEY")
 
     if not all([server_address, application_name, api_key]):
-        missing_vars = []
-        if not server_address:
-            missing_vars.append("PYROSCOPE_SERVER_ADDRESS")
-        if not application_name:
-            missing_vars.append("PYROSCOPE_APPLICATION_NAME")
-        if not api_key:
-            missing_vars.append("PYROSCOPE_API_KEY")
-
-        error_message = f"Pyroscope initialization skipped due to missing environment variable(s): {', '.join(missing_vars)}"
-        logger.warning(error_message)
+        missing_vars = [
+            var for var, value in zip(
+                ["PYROSCOPE_SERVER_ADDRESS", "PYROSCOPE_APPLICATION_NAME", "PYROSCOPE_API_KEY"],
+                [server_address, application_name, api_key]
+            ) if value is None
+        ]
+        missing_vars_str = ", ".join(missing_vars)
+        logger.warning(f"Pyroscope initialization skipped: Missing environment variable(s): {missing_vars_str}")
         return
 
     try:
-        Pyroscope.start(
-            server_address=server_address,
+        configure(
             application_name=application_name,
+            server_address=server_address,
             api_key=api_key,
-            tags={"env": "dev"},
-            cpu_profiling=True,
-            memory_profiling=True,
-            block_profiling=True,
         )
+        start_profiler()
         logger.info("Pyroscope agent started successfully.")
-
     except Exception as e:
-        error_message = f"Failed to start Pyroscope agent: {e}"
-        logger.error(error_message)
+        logger.error(f"Failed to start Pyroscope agent: {e}")
+
+if __name__ == '__main__':
+    # Example usage (for testing purposes) - will not be executed in production
+    init_pyroscope()
+    # Simulate some work to be profiled (optional)
+    import time
+    time.sleep(5)
