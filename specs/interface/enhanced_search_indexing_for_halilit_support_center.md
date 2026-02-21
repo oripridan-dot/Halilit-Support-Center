@@ -1,79 +1,114 @@
 # Spec: Enhanced Search Indexing for Halilit Support Center
 
-**Target:** data_pipeline/scripts/enhanced_search_indexing.py
+**Target:** backend/services/search_indexing.py
 
 ## Overview
-This script enhances the search indexing process for the Halilit Support Center by incorporating stemming, stop word removal, and synonym expansion to improve search result relevance and accuracy. This will lead to improved customer satisfaction by enabling them to find the information they need more quickly and easily.
+This service enhances the search indexing capabilities of the Halilit Support Center's knowledge base. It consumes data about support tickets and documentation updates from existing internal systems, preprocesses the text, and updates a search index to improve search result relevance and speed. The service will use an asynchronous architecture to avoid blocking other operations.
 
 ## Requirements
-- [x] Implement stemming using the NLTK library to reduce words to their root form.
-- [x] Implement stop word removal using the NLTK library to eliminate common words that do not contribute to search meaning.
-- [x] Implement synonym expansion using a pre-defined synonym dictionary or a more advanced technique like WordNet (NLTK).
-- [x] The script should connect to the Halilit Support Center's existing data sources (e.g., database, knowledge base articles, chat logs) via configured credentials and API endpoints.
-- [x] The script must index all relevant data, including article titles, content, keywords, chat logs, and forum posts.
-- [x] The script should integrate with the existing search engine (specify Elasticsearch, including version).
-- [x] The script should be configurable via environment variables for settings like data source credentials, search engine host, index name, and synonym dictionary path.
-- [x] Implement logging to track the indexing progress and any errors encountered.
-- [x] The script must be idempotent: running it multiple times should not create duplicate entries or corrupt the index.
-- [x] The script should be able to perform a full re-index or an incremental index based on a timestamp of the last update.
+- The service must subscribe to events indicating new or updated support tickets (identified by ticket ID and last updated timestamp) from the Ticketing System.
+- The service must subscribe to events indicating new or updated documentation articles (identified by article ID and last updated timestamp) from the Documentation Management System.
+- The service must retrieve the full content of updated tickets and documentation articles from their respective systems via internal APIs.
+- The service must preprocess the retrieved text content by:
+    - Removing HTML tags.
+    - Converting to lowercase.
+    - Removing punctuation.
+    - Removing stop words (using a predefined list).
+- The service must use an external search index (e.g., Elasticsearch, Algolia) to store and manage the indexed data. We'll refer to this as the "Search Index Provider."
+- The service must handle errors gracefully, logging errors and retrying failed indexing attempts up to 3 times with exponential backoff (1s, 4s, 16s).
+- The service must expose a health check endpoint that returns a 200 status code if the service is running and can connect to the Search Index Provider and internal APIs.
+- The service should prioritize indexing documentation articles before support tickets.
+- The service should be idempotent: re-indexing the same document should not create duplicates in the search index. The ticket ID or article ID will be used as the document ID in the search index.
 
 ## Data Contract
 
-**Input:**
+**Event Payloads (Ticketing System and Documentation Management System):**
 
-*   **Environment Variables:**
-    *   `DATABASE_URL`: (string) Connection string to the Halilit Support Center database.
-    *   `ELASTICSEARCH_HOST`: (string) Hostname/IP address of the Elasticsearch server.
-    *   `ELASTICSEARCH_PORT`: (integer) Port number of the Elasticsearch server.
-    *   `ELASTICSEARCH_INDEX_NAME`: (string) Name of the Elasticsearch index to use.
-    *   `SYNONYM_DICTIONARY_PATH`: (string, optional) Path to a JSON file containing synonym mappings.
-    *   `LAST_INDEXED_TIMESTAMP`: (string, optional, ISO 8601 format)  Timestamp to use for incremental indexing. If not provided, a full re-index will be performed.
+```python
+from pydantic import BaseModel
+from datetime import datetime
 
-*   **Synonym Dictionary (Optional JSON File):**
-    ```json
-    {
-        "customer": ["client", "user", "consumer"],
-        "issue": ["problem", "error", "bug", "fault"],
-        "shipping": ["delivery", "transport", "dispatch"]
-    }
-    ```
+class UpdateEvent(BaseModel):
+    id: str # Ticket ID or Article ID
+    last_updated: datetime
+```
 
-**Output:**
+**Ticketing System API (Internal):**
 
-*   No direct output to stdout.
-*   Data indexed in Elasticsearch.
-*   Logs indicating progress and any errors encountered.
+Request: `GET /api/tickets/{ticket_id}`
+
+Response:
+
+```python
+class Ticket(BaseModel):
+    ticket_id: str
+    subject: str
+    body: str
+    created_at: datetime
+    updated_at: datetime
+    customer_id: str
+    agent_id: str | None
+```
+
+**Documentation Management System API (Internal):**
+
+Request: `GET /api/articles/{article_id}`
+
+Response:
+
+```python
+class Article(BaseModel):
+    article_id: str
+    title: str
+    content: str
+    created_at: datetime
+    updated_at: datetime
+    category: str
+```
+
+**Search Index Data (Elasticsearch Example):**
+
+```json
+{
+  "document_id": "ticket-123" or "article-456", # Use ticket_id or article_id
+  "type": "ticket" or "article",
+  "title": "Ticket Subject or Article Title",
+  "content": "Preprocessed Ticket Body or Article Content",
+  "created_at": "ISO 8601 Timestamp",
+  "updated_at": "ISO 8601 Timestamp",
+  "customer_id": "Customer ID (only for tickets)",
+  "agent_id": "Agent ID (only for tickets)",
+  "category": "Article Category (only for articles)"
+}
+```
 
 ## Behavior Scenarios
 
-- **Scenario: Full Re-Index**
-  - Input: Script is executed with `LAST_INDEXED_TIMESTAMP` environment variable not set.
-  - Outcome: All relevant data sources are read, processed (stemming, stop word removal, synonym expansion), and indexed into Elasticsearch.  Existing index is either deleted and recreated, or all documents are deleted and re-indexed.
+- **Scenario:** New Ticket Created
+  - Input: Ticketing System emits `UpdateEvent(id="ticket-123", last_updated=2024-01-01T10:00:00Z)`
+  - Outcome: Service retrieves ticket "ticket-123" via API, preprocesses its subject and body, and adds a new document to the Search Index with `document_id="ticket-123"` and `type="ticket"`.
 
-- **Scenario: Incremental Index**
-  - Input: Script is executed with `LAST_INDEXED_TIMESTAMP` environment variable set to "2024-01-01T00:00:00Z".
-  - Outcome: Only data modified or created since "2024-01-01T00:00:00Z" in the relevant data sources are read, processed, and indexed into Elasticsearch.
+- **Scenario:** Existing Documentation Article Updated
+  - Input: Documentation Management System emits `UpdateEvent(id="article-456", last_updated=2024-01-02T12:00:00Z)`
+  - Outcome: Service retrieves article "article-456" via API, preprocesses its title and content, and updates the corresponding document in the Search Index with `document_id="article-456"` and `type="article"`. The `updated_at` field in the search index is updated to 2024-01-02T12:00:00Z.
 
-- **Scenario: Synonym Expansion**
-  - Input: A document containing the word "customer" is processed, with a synonym dictionary defined as in the Data Contract.
-  - Outcome: The indexed document in Elasticsearch contains not only "customer" but also "client", "user", and "consumer" (or a combined term like "customer client user consumer") in the relevant field(s).
+- **Scenario:** Indexing Fails Temporarily
+  - Input: Ticketing System emits `UpdateEvent(id="ticket-789", last_updated=2024-01-03T14:00:00Z)`, but the Search Index Provider is temporarily unavailable.
+  - Outcome: Service logs the error, retries indexing "ticket-789" after 1 second, 4 seconds, and 16 seconds. If all retries fail, the error is logged again, and the indexing is abandoned for that event.
 
-- **Scenario: Stop Word Removal**
-  - Input: A document containing the sentence "This is a test document" is processed.
-  - Outcome: The indexed document in Elasticsearch contains only "test" and "document" (assuming "this", "is", and "a" are in the NLTK stop word list).
+- **Scenario:** Health Check Request
+  - Input: `GET /health` endpoint is called.
+  - Outcome: Service returns a 200 status code if it's running and can connect to the Search Index Provider and internal APIs. Otherwise, it returns a 500 status code with a descriptive error message.
 
-- **Scenario: Indexing Failure (Database Connection)**
-  - Input: Script is executed with an invalid `DATABASE_URL`.
-  - Outcome: Script logs an error message indicating database connection failure and exits with a non-zero exit code.
-
-- **Scenario: Indexing Failure (Elasticsearch Connection)**
-    - Input: Script is executed with an invalid `ELASTICSEARCH_HOST`.
-    - Outcome: Script logs an error message indicating Elasticsearch connection failure and exits with a non-zero exit code.
+- **Scenario:** Documentation Article is indexed before a Ticket.
+  - Input: Ticketing System emits `UpdateEvent(id="ticket-999", last_updated=2024-03-01T00:00:00Z)` and Documentation Management System emits `UpdateEvent(id="article-888", last_updated=2024-02-29T00:00:00Z)`. The service receives both events within a short timeframe.
+  - Outcome:  The service prioritizes processing the Documentation Article (`article-888`) first, indexing its content before proceeding with the ticket (`ticket-999`).  This is achieved via a priority queue or similar mechanism within the service.
 
 ## Out of Scope
-- UI for monitoring indexing progress.
-- Automated deployment of the script.
-- Real-time indexing.
-- Implementing a custom stop word list beyond the NLTK default.
-- Implementing custom stemming algorithms.
--  Handling data source schema changes. This assumes a stable data model.
+
+- UI for searching the index.
+- Defining the specific Search Index Provider (e.g., Elasticsearch cluster details). This is configuration.
+- User authentication and authorization.
+- Detailed monitoring and alerting setup. This will be handled by a separate monitoring service.
+- Creation of the Ticketing System API or Documentation Management System API.
+- Schema definition within the Search Index Provider. The service only needs to write, update, and delete documents based on the provided schema.

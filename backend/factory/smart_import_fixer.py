@@ -83,12 +83,14 @@ class Fix:
 @dataclass
 class FixReport:
     fixes_applied: list[Fix] = field(default_factory=list)
-    skipped: list[str] = field(default_factory=list)     # things we couldn't fix
+    # things we couldn't fix
+    skipped: list[str] = field(default_factory=list)
 
     def summary(self) -> str:
         if not self.fixes_applied and not self.skipped:
             return "✅  Smart Import Fixer: nothing to fix."
-        lines = [f"🔧  Smart Import Fixer — {len(self.fixes_applied)} fix(es) applied, {len(self.skipped)} unresolved:"]
+        lines = [
+            f"🔧  Smart Import Fixer — {len(self.fixes_applied)} fix(es) applied, {len(self.skipped)} unresolved:"]
         for f in self.fixes_applied:
             rel = f.file.relative_to(ROOT)
             lines.append(f"   ✅ [{f.kind}] {rel}: {f.description}")
@@ -141,7 +143,8 @@ def _fuzzy_path_fix(source_file: Path, import_path: str) -> str | None:
       - Reconstruct and verify the full path resolves after all segment fixes.
     """
     base = source_file.parent
-    parts = Path(import_path).parts  # e.g. ('..', '..', 'stores', 'navigationStore')
+    # e.g. ('..', '..', 'stores', 'navigationStore')
+    parts = Path(import_path).parts
 
     # Build an absolute candidate path segment by segment, fixing as we go
     current = base
@@ -172,13 +175,15 @@ def _fuzzy_path_fix(source_file: Path, import_path: str) -> str | None:
 
         # First try stem-only match (ignoring extension)
         sibling_stems = [Path(s).stem for s in siblings]
-        stem_matches = get_close_matches(part_stem, sibling_stems, n=1, cutoff=0.7)
+        stem_matches = get_close_matches(
+            part_stem, sibling_stems, n=1, cutoff=0.7)
         if stem_matches:
             matched_stem = stem_matches[0]
             # Find the full name (with extension) if it was a file
             full_names = [s for s in siblings if Path(s).stem == matched_stem]
             if full_names:
-                chosen = full_names[0]  # prefer exact; if multiple prefer .ts/.tsx
+                # prefer exact; if multiple prefer .ts/.tsx
+                chosen = full_names[0]
                 for fn in full_names:
                     if fn.endswith((".ts", ".tsx")):
                         chosen = fn
@@ -189,7 +194,8 @@ def _fuzzy_path_fix(source_file: Path, import_path: str) -> str | None:
                     current = current / chosen
                 else:
                     # Include stem only (we'll strip extension in the final import)
-                    fixed_parts.append(Path(chosen).stem if not part_ext else chosen)
+                    fixed_parts.append(
+                        Path(chosen).stem if not part_ext else chosen)
                     current = (current / chosen).parent
                 continue
 
@@ -198,7 +204,8 @@ def _fuzzy_path_fix(source_file: Path, import_path: str) -> str | None:
         if full_matches:
             chosen = full_matches[0]
             fixed_parts.append(Path(chosen).stem if not part_ext else chosen)
-            current = (current / chosen).parent if (current / chosen).is_file() else current / chosen
+            current = (current / chosen).parent if (current /
+                                                    chosen).is_file() else current / chosen
             continue
 
         # Cannot fix this segment
@@ -215,11 +222,50 @@ def _fuzzy_path_fix(source_file: Path, import_path: str) -> str | None:
     return None
 
 
+# Standard in-tree path prefixes that are always safe to import from.
+_SAFE_IMPORT_PREFIXES = (
+    "../hooks/", "../store/", "../stores/", "../types/",
+    "../components/", "../views/", "../utils/", "../lib/",
+    "../api/", "../context/", "../constants/", "../styles/",
+    "./hooks/", "./store/", "./stores/", "./types/",
+    "./components/", "./views/", "./utils/", "./lib/",
+    "./",  # anything relative within same dir is always safe
+)
+
+
 def _is_out_of_src(source_file: Path, import_path: str) -> bool:
-    """Return True if the resolved import would land outside frontend/src/."""
+    """
+    Return True ONLY when an import explicitly references forbidden external
+    paths (e.g. specs/contracts) or completely exits the frontend root
+    (e.g. ../../../backend).
+
+    Standard relative imports like ../hooks/, ../store/, ../types/ resolve
+    inside frontend/src and are ALWAYS preserved.
+    """
+    # 1. Explicit spec/contract violation — always flag.
+    if "specs/contracts" in import_path:
+        return True
+
+    # 2. Any path recognised as an in-tree standard import is safe.
+    for prefix in _SAFE_IMPORT_PREFIXES:
+        if import_path.startswith(prefix) or import_path == prefix.rstrip("/"):
+            return False
+
+    # 3. Resolve the path lexically and check against the frontend root.
+    #    Anything that stays inside the frontend/ folder is considered valid;
+    #    we never delete imports that merely sit outside src/ but are still
+    #    within frontend/ (e.g. frontend/public/ assets).
     try:
         resolved = (source_file.parent / import_path).resolve()
-        return not str(resolved).startswith(str(FRONTEND_SRC))
+        resolved_str = str(resolved)
+        # Safe: resolves inside frontend/src
+        if resolved_str.startswith(str(FRONTEND_SRC)):
+            return False
+        # Safe: resolves somewhere else within the frontend root
+        if resolved_str.startswith(str(FRONTEND_DIR)):
+            return False
+        # Truly out-of-bounds: escapes the entire frontend directory
+        return True
     except Exception:
         return False
 
@@ -246,7 +292,7 @@ def _fix_jsx_generics(content: str, source_file: Path, report: FixReport,
 
 
 def _fix_missing_generated(content: str, source_file: Path, report: FixReport,
-                            dry_run: bool) -> str:
+                           dry_run: bool) -> str:
     """Remove `export * from './generated'` and `import ... from './generated'`
     when generated.ts doesn't exist."""
     generated_path = source_file.parent / "generated.ts"
@@ -268,7 +314,7 @@ def _fix_missing_generated(content: str, source_file: Path, report: FixReport,
 
 
 def _fix_imports_in_content(content: str, source_file: Path, report: FixReport,
-                             dry_run: bool) -> str:
+                            dry_run: bool) -> str:
     """Scan all relative imports and attempt to fix broken ones."""
     result = content
 
@@ -295,7 +341,7 @@ def _fix_imports_in_content(content: str, source_file: Path, report: FixReport,
                     kind="out_of_src",
                     original=import_path,
                     replacement="(removed)",
-                    description=f"Removed out-of-src import '{import_path}' — specs/contracts must not be imported in frontend files",
+                    description=f"Removed out-of-frontend import '{import_path}' — path escapes the frontend root (specs/contracts or backend reference)",
                 ))
             else:
                 report.skipped.append(
@@ -313,7 +359,8 @@ def _fix_imports_in_content(content: str, source_file: Path, report: FixReport,
             )
             report.fixes_applied.append(Fix(
                 file=source_file,
-                kind="dir_fuzzy" if import_path.rsplit("/", 1)[0] != fixed.rsplit("/", 1)[0] else "file_fuzzy",
+                kind="dir_fuzzy" if import_path.rsplit(
+                    "/", 1)[0] != fixed.rsplit("/", 1)[0] else "file_fuzzy",
                 original=import_path,
                 replacement=fixed,
                 description=f"'{import_path}' → '{fixed}'",
@@ -359,7 +406,8 @@ def fix_imports(
     if target_file:
         files = [target_file] if target_file.exists() else []
     else:
-        files = sorted(FRONTEND_SRC.rglob("*.ts")) + sorted(FRONTEND_SRC.rglob("*.tsx"))
+        files = sorted(FRONTEND_SRC.rglob("*.ts")) + \
+            sorted(FRONTEND_SRC.rglob("*.tsx"))
         # Skip declaration files and node_modules
         files = [f for f in files
                  if "node_modules" not in f.parts and not f.name.endswith(".d.ts")]

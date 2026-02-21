@@ -37,7 +37,7 @@ KANBAN_PATH = _ROOT / "FACTORY_KANBAN.md"
 
 sys.path.insert(0, str(_FACTORY_DIR))
 from agent_core import query_llm  # noqa: E402
-from ast_patcher import apply_patch, apply_patch_batch  # noqa: E402
+from udiff_patcher import apply_patch, apply_patch_batch  # noqa: E402
 
 
 # ---------------------------------------------------------------------------
@@ -317,6 +317,15 @@ def run_frontend_swarm(intent_spec: str, task_name: str = "frontend-task") -> di
         tasks_run += 1
 
         if not result.get("success", False):
+            # Auto-escalation: anchor miss on patch_component → mandate rebuild
+            if (tool == "patch_component"
+                    and "Anchor not found" in result.get("error_output", "")):
+                result["error_output"] = (
+                    f"PATCH_ANCHOR_MISS: {result['error_output']}\n"
+                    f"AUTO-ESCALATION REQUIRED: Use 'sandbox' or 'delegate_frontend' "
+                    f"with explicit 'REBUILD from scratch, do NOT use patch_component' "
+                    f"for intent: {intent_spec[:200]}"
+                )
             failures.append(result)
             update_kanban(task_name, str(args)[
                           :60], f"🚨 Step {tasks_run} FAILED — sub-swarm halted. Operator review required.")

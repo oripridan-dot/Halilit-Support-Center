@@ -32,6 +32,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # logs from the current session (not all historical logs).
 _SESSION_START_TS: float = time.time()
 
+# Anti-Loop Circuit Breaker — stores the last Senior Architect mandate.
+# Set by the escalate_to_senior handler; injected into the next Chief consult.
+_last_senior_mandate: str = ""
+
+# Level 8 — ReAct mode flag (set by --react CLI flag in main())
+_REACT_MODE: bool = False
+
 try:
     from dotenv import load_dotenv
     load_dotenv(Path(__file__).resolve().parent / ".env")
@@ -122,6 +129,49 @@ def _get_senior_insight() -> str:
         return get_insights_for_chief(include_stubs=True)
     except Exception as exc:
         return f"(Senior scan unavailable: {exc})"
+
+
+def _call_death_loop_diagnosis(failed_intent: str, attempts: int) -> str:
+    """
+    🚨 ANTI-LOOP CIRCUIT BREAKER — calls the On-Call Senior Architect.
+
+    Reads crash logs + kanban, asks the LLM for a different strategy,
+    prints the mandate in bright red/yellow, and returns it for injection
+    into the Chief's context as a SYSTEM_OVERRIDE.
+
+    Never raises — falls back to a hard-coded rebuild mandate.
+    """
+    print(
+        f"\n{RED}{BOLD}"
+        f"🚨 DEATH LOOP DETECTED ({attempts} consecutive failures)"
+        f"{RESET}"
+    )
+    print(
+        f"{YELLOW}   Summoning On-Call Senior Architect to break the loop..."
+        f"{RESET}"
+    )
+    try:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        from tech_lead_agent import diagnose_death_loop  # noqa: PLC0415
+        mandate = diagnose_death_loop(
+            failed_intent, previous_attempts=attempts)
+    except Exception as exc:
+        mandate = (
+            f"SYSTEM OVERRIDE MANDATE: Senior diagnosis failed ({exc}). "
+            f"Force-escalate: use 'sandbox' to REBUILD the blocked component "
+            f"from scratch. Do NOT use patch_component. Intent: {failed_intent}"
+        )
+
+    print(f"\n{RED}{BOLD}{'=' * 62}{RESET}")
+    print(f"{RED}{BOLD}🧠 SENIOR ARCHITECT OVERRIDE{RESET}")
+    print(f"{RED}{BOLD}{'=' * 62}{RESET}")
+    for line in mandate.splitlines():
+        if "SYSTEM OVERRIDE MANDATE" in line:
+            print(f"{YELLOW}{BOLD}  → {line}{RESET}")
+        else:
+            print(f"{MAGENTA}  {line}{RESET}")
+    print(f"{RED}{BOLD}{'=' * 62}{RESET}\n")
+    return mandate
 
 
 def _detect_placeholder_files() -> list[str]:
@@ -228,6 +278,13 @@ _ACTION_MAP = {
     "repair":     ("repair",     "🛠️  REPAIR SERVICE", "Running immune-response pipeline: import fixer → tsc → lint → vite → janitor..."),    "audit":      ("audit",     "🔍 TECH LEAD AUDIT", "Summoning Principal Engineer — running fresh heuristic scan → DAILY_BRIEFING.md..."),
     "delegate_frontend": ("delegate_frontend", "🎨 FRONTEND MANAGER", "Routing to React/Tailwind/Vite sub-swarm..."),
     "delegate_data":     ("delegate_data",     "🔧 DATA MANAGER",    "Routing to Python/FastAPI/pipeline sub-swarm..."),
+    "escalate_to_senior": ("escalate_to_senior", "🚨 SENIOR ARCHITECT", "Circuit-breaker: On-Call Senior diagnoses death loop → prescribes new strategy..."),
+    # Level 8 — Liquid MCP Core (can be scheduled directly by the Chief or used inside react_loop)
+    "run_frontend_tests":    ("run_frontend_tests",    "🧪 VITEST",           "Running Vitest suite — returning raw terminal output..."),
+    "git_isolate_workspace": ("git_isolate_workspace", "🌿 GIT ISOLATE",      "Creating AI feature branch before any edit..."),
+    "git_merge_workspace":   ("git_merge_workspace",   "🔀 GIT MERGE",        "Merging or rolling back feature branch..."),
+    "execute_bash":          ("execute_bash",          "💻 BASH",             "Executing shell command and returning stdout + stderr..."),
+    "apply_patch":           ("apply_patch",           "🩹 UDIFF PATCHER",    "Applying SEARCH/REPLACE or unified diff patch to file..."),
 }
 
 
@@ -323,13 +380,71 @@ def run_process(task: dict) -> dict:
                     "summary": f"❌ [AUDIT] Tech Lead Agent failed: {exc}",
                     "error_output": str(exc)}
 
+    # --- Anti-Loop Circuit Breaker: escalate_to_senior (parallel/batch path) ---
+    if tool == "escalate_to_senior":
+        global _last_senior_mandate
+        mandate = _call_death_loop_diagnosis(
+            str(args) or "unknown intent", attempts=1)
+        _last_senior_mandate = mandate
+        return {"tool": tool, "args": args, "success": True,
+                "summary": "✅ [SENIOR ARCHITECT] Mandate issued — Chief will receive SYSTEM_OVERRIDE.",
+                "error_output": ""}
+
+    # --- Level 8 direct MCP tool dispatch (parallel/batch path) ---
+    if tool in ("run_frontend_tests", "execute_bash", "apply_patch",
+                "git_isolate_workspace", "git_merge_workspace"):
+        _mcp = _load_mcp_handlers()
+        _mcp_name = {
+            "run_frontend_tests":    "run_frontend_tests",
+            "execute_bash":          "execute_bash_command",
+            "apply_patch":           "apply_udiff_patch",
+            "git_isolate_workspace": "git_isolate_workspace",
+            "git_merge_workspace":   "git_merge_workspace",
+        }[tool]
+        _handler = _mcp.get(_mcp_name)
+        if _handler is None:
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"❌ [{tool.upper()}] MCP handler not found.",
+                    "error_output": "MCP server could not be loaded."}
+        try:
+            import json as _j
+            # args is a plain string from the queue — parse as JSON dict if possible
+            _tool_args = _j.loads(args) if isinstance(args, str) and args.startswith("{") else {
+                "command": args} if tool == "execute_bash" else {"task_name": args} if tool == "git_isolate_workspace" else {}
+            out = _handler(_tool_args)
+            success = True
+            if isinstance(out, str):
+                try:
+                    _parsed = _j.loads(out)
+                    success = _parsed.get("success", True) if isinstance(
+                        _parsed, dict) else True
+                    if "exit_code" in _parsed:
+                        success = _parsed["exit_code"] == 0
+                except Exception:
+                    pass
+            return {"tool": tool, "args": args, "success": success,
+                    "summary": f"[{tool.upper()}] {chr(0x2705) if success else chr(0x274c)} {str(out)[:200]}",
+                    "error_output": str(out) if not success else ""}
+        except Exception as exc:
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"\u274c [{tool.upper()}] {exc}", "error_output": str(exc)}
+
     # --- Hierarchical Sub-Swarm delegation (parallel/batch path) ---
     if tool == "delegate_frontend":
+        if _REACT_MODE:
+            result = react_loop(args)
+            return {
+                "tool": tool, "args": args,
+                "success": result["success"],
+                "summary": result["summary"],
+                "error_output": "" if result["success"] else result["summary"],
+            }
         sys.path.insert(0, str(ROOT / "backend" / "factory"))
         try:
             from frontend_manager import run_frontend_swarm  # noqa: PLC0415
             import re as _re
-            task_slug = _re.sub(r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
+            task_slug = _re.sub(
+                r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
             result = run_frontend_swarm(args, task_name=task_slug)
             return {
                 "tool": tool, "args": args,
@@ -343,6 +458,14 @@ def run_process(task: dict) -> dict:
                     "error_output": str(exc)}
 
     if tool == "delegate_data":
+        if _REACT_MODE:
+            result = react_loop(args)
+            return {
+                "tool": tool, "args": args,
+                "success": result["success"],
+                "summary": result["summary"],
+                "error_output": "" if result["success"] else result["summary"],
+            }
         sys.path.insert(0, str(ROOT / "backend" / "factory"))
         try:
             from data_manager import run_data_swarm  # noqa: PLC0415
@@ -436,7 +559,8 @@ def execute_sequential(task: dict) -> dict:
         try:
             from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
             generate_morning_briefing()
-            print(f"\n{GREEN}✅ [AUDIT] DAILY_BRIEFING.md regenerated — Chief will re-read priorities on next turn.{RESET}")
+            print(
+                f"\n{GREEN}✅ [AUDIT] DAILY_BRIEFING.md regenerated — Chief will re-read priorities on next turn.{RESET}")
             return {"tool": tool, "args": args, "success": True,
                     "summary": "✅ [AUDIT] Tech Lead briefing updated — DAILY_BRIEFING.md refreshed.",
                     "error_output": ""}
@@ -446,13 +570,26 @@ def execute_sequential(task: dict) -> dict:
             return {"tool": tool, "args": args, "success": False,
                     "summary": msg, "error_output": str(exc)}
 
+    # --- Anti-Loop Circuit Breaker: escalate_to_senior (interactive path) ---
+    if tool == "escalate_to_senior":
+        global _last_senior_mandate
+        mandate = _call_death_loop_diagnosis(
+            str(args) or "unknown intent", attempts=1)
+        _last_senior_mandate = mandate
+        print(
+            f"\n{GREEN}✅ [SENIOR ARCHITECT] Mandate stored — injecting into Chief on next turn.{RESET}")
+        return {"tool": tool, "args": args, "success": True,
+                "summary": "✅ [SENIOR ARCHITECT] Mandate issued — Chief receives SYSTEM_OVERRIDE next turn.",
+                "error_output": ""}
+
     # --- Hierarchical Sub-Swarm delegation handlers ---
     if tool == "delegate_frontend":
         sys.path.insert(0, str(ROOT / "backend" / "factory"))
         try:
             from frontend_manager import run_frontend_swarm  # noqa: PLC0415
             import re as _re
-            task_slug = _re.sub(r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
+            task_slug = _re.sub(
+                r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
             result = run_frontend_swarm(args, task_name=task_slug)
             return {
                 "tool": tool, "args": args,
@@ -467,6 +604,14 @@ def execute_sequential(task: dict) -> dict:
                     "summary": msg, "error_output": str(exc)}
 
     if tool == "delegate_data":
+        if _REACT_MODE:
+            res = react_loop(args)
+            return {
+                "tool": tool, "args": args,
+                "success": res["success"],
+                "summary": res["summary"],
+                "error_output": "" if res["success"] else res["summary"],
+            }
         sys.path.insert(0, str(ROOT / "backend" / "factory"))
         try:
             from data_manager import run_data_swarm  # noqa: PLC0415
@@ -482,6 +627,51 @@ def execute_sequential(task: dict) -> dict:
             print(f"\n{RED}{msg}{RESET}")
             return {"tool": tool, "args": args, "success": False,
                     "summary": msg, "error_output": str(exc)}
+
+    # --- Level 8 direct MCP tool dispatch (interactive path) ---
+    if tool in ("run_frontend_tests", "execute_bash", "apply_patch",
+                "git_isolate_workspace", "git_merge_workspace"):
+        import json as _ji
+        _mcp2 = _load_mcp_handlers()
+        _mcp_name2 = {
+            "run_frontend_tests":    "run_frontend_tests",
+            "execute_bash":          "execute_bash_command",
+            "apply_patch":           "apply_udiff_patch",
+            "git_isolate_workspace": "git_isolate_workspace",
+            "git_merge_workspace":   "git_merge_workspace",
+        }[tool]
+        _handler2 = _mcp2.get(_mcp_name2)
+        if _handler2 is None:
+            print(
+                f"\n{RED}\u274c [{tool.upper()}] MCP handler not found.{RESET}")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"\u274c [{tool.upper()}] MCP handler not found.",
+                    "error_output": "MCP server could not be loaded."}
+        try:
+            _tool_args2 = (_ji.loads(args) if isinstance(args, str) and args.startswith("{")
+                           else {"command": args} if tool == "execute_bash"
+                           else {"task_name": args} if tool == "git_isolate_workspace"
+                           else {})
+            out2 = _handler2(_tool_args2)
+            print(f"   {str(out2)[:400]}")
+            success2 = True
+            if isinstance(out2, str):
+                try:
+                    _p2 = _ji.loads(out2)
+                    success2 = _p2.get("success", True) if isinstance(
+                        _p2, dict) else True
+                    if "exit_code" in _p2:
+                        success2 = _p2["exit_code"] == 0
+                except Exception:
+                    pass
+            _icon2 = "\u2705" if success2 else "\u274c"
+            return {"tool": tool, "args": args, "success": success2,
+                    "summary": f"[{tool.upper()}] {_icon2} {str(out2)[:200]}",
+                    "error_output": str(out2) if not success2 else ""}
+        except Exception as exc2:
+            print(f"\n{RED}\u274c [{tool.upper()}] {exc2}{RESET}")
+            return {"tool": tool, "args": args, "success": False,
+                    "summary": f"\u274c [{tool.upper()}] {exc2}", "error_output": str(exc2)}
 
     cmd = _build_task_force_cmd(
         task) if tool == "task_force" else _build_cmd(tool, args)
@@ -557,7 +747,7 @@ def review_changes(auto_mode: bool = False) -> bool:
             subprocess.run(["git", "add", "."])
             subprocess.run(["git", "config", "--local",
                            "commit.gpgsign", "false"])
-            r= subprocess.run([
+            r = subprocess.run([
                 "git", "-c", "commit.gpgsign=false",
                 "commit", "--no-gpg-sign", "-m", "chore: automated batch execution approved"
             ], capture_output=True, text=True)
@@ -664,6 +854,221 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
 # OODA Mutation Cycle â called automatically after every successful batch
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Level 8 — MCP handler loader (shared by react_loop and direct handlers)
+# ---------------------------------------------------------------------------
+
+def _load_mcp_handlers() -> dict:
+    """
+    Import the Level 8 MCP tool handlers from factory_mcp_server directly.
+    Returns the _TOOL_HANDLERS dict, or {} if unavailable.
+    """
+    try:
+        import importlib.util as _ilu
+        _spec = _ilu.spec_from_file_location(
+            "factory_mcp_server",
+            ROOT / "backend" / "mcp" / "servers" / "factory_mcp_server.py",
+        )
+        _mod = _ilu.module_from_spec(_spec)  # type: ignore[arg-type]
+        _spec.loader.exec_module(_mod)  # type: ignore[union-attr]
+        return _mod._TOOL_HANDLERS
+    except Exception as exc:
+        print(f"{DIM}⚠️  MCP handlers unavailable: {exc}{RESET}")
+        return {}
+
+
+# ---------------------------------------------------------------------------
+# Level 8 — ReAct Core Runtime
+# ---------------------------------------------------------------------------
+
+_REACT_SYSTEM = """You are the LEVEL 8 CORE — a free-thinking engineering agent operating in a
+ReAct (Reason → Act → Observe) loop. You have direct access to OS-level tools.
+You work like a senior human developer: read the terminal, fix what's broken, verify, commit.
+
+AVAILABLE TOOLS (call one per turn):
+  run_frontend_tests    {"target_file": "<optional filename filter>"}
+      → Runs Vitest and returns [PASS/FAIL] + raw terminal output.
+  execute_bash_command  {"command": "<shell command>", "working_directory": "<optional path>"}
+      → Executes any shell command. Returns {exit_code, stdout, stderr}.
+  apply_udiff_patch     {"file_path": "<workspace-relative path>", "patch_text": "<SEARCH/REPLACE or unified diff>"}
+      → Applies a surgical code patch. PREFERRED for all file edits.
+  git_isolate_workspace {"task_name": "<slug>"}
+      → Creates and checks out an AI feature branch. Returns branch name.
+  git_merge_workspace   {"branch_name": "<branch>", "success_status": true|false}
+      → Merges branch on success, rolls back on failure.
+  read_file             {"path": "<workspace-relative path>"}
+      → Reads a file from disk. Not a registered MCP tool — handled inline.
+
+RULES:
+- NEVER guess file contents — use read_file to read before patching.
+- NEVER skip run_frontend_tests after every code change.
+- Fix ONE issue per turn, then re-run tests to confirm before moving on.
+- When tests are GREEN, call git_merge_workspace with success_status=true.
+- If you exhaust max turns without green tests, call git_merge_workspace with success_status=false.
+
+RESPONSE FORMAT (JSON only, no markdown — one action per response):
+{
+  "thought": "<your reasoning>",
+  "action": "<tool_name or DONE>",
+  "args": {<tool arguments as object>},
+  "status": "WORKING | DONE | FAILED"
+}
+When status=DONE or status=FAILED, set action="DONE" and include "result" key with summary.
+"""
+
+
+def react_loop(goal: str, max_turns: int = 14) -> dict:
+    """
+    Level 8 Core Runtime: Reason → Act → Observe loop.
+
+    The Chief LLM picks MCP tools turn-by-turn, reads real terminal output,
+    and self-corrects — no middle-manager Python state machine required.
+
+    Args:
+        goal:      Plain-English task description (from the Operator).
+        max_turns: Hard cap on iterations (default 14).
+
+    Returns:
+        {"success": bool, "summary": str, "turns": int}
+    """
+    import json as _json
+    import re as _re
+
+    # ── Load handlers ────────────────────────────────────────────────────────
+    handlers = _load_mcp_handlers()
+    if not handlers:
+        return {
+            "success": False,
+            "summary": "❌ [REACT] MCP handlers could not be loaded. Falling back to manager.",
+            "turns": 0,
+        }
+
+    # Inline read_file handler (not an MCP tool, but needed by the LLM)
+    def _read_file(args: dict) -> str:
+        p = ROOT / args.get("path", "")
+        if not p.exists():
+            return f"File not found: {args.get('path')}"
+        try:
+            return p.read_text(encoding="utf-8", errors="replace")[:8000]
+        except Exception as exc:
+            return f"Error reading file: {exc}"
+
+    all_handlers = {**handlers, "read_file": _read_file}
+
+    # ── Load LLM ─────────────────────────────────────────────────────────────
+    try:
+        sys.path.insert(0, str(ROOT / "backend" / "factory"))
+        from agent_core import query_llm  # type: ignore
+    except ImportError as exc:
+        return {"success": False, "summary": f"❌ [REACT] agent_core unavailable: {exc}", "turns": 0}
+
+    # ── ReAct loop ───────────────────────────────────────────────────────────
+    history: list[str] = []
+    branch: str = ""
+
+    print(f"\n{CYAN}{BOLD}⚛️  REACT CORE ACTIVATED{RESET}")
+    print(f"   Goal: {goal}")
+    print(f"   Max turns: {max_turns}\n")
+
+    for turn in range(1, max_turns + 1):
+        history_block = "\n".join(history[-20:])  # cap context window
+        user_prompt = (
+            f"GOAL: {goal}\n\n"
+            f"TURN: {turn}/{max_turns}\n\n"
+            f"HISTORY (most recent last):\n{history_block or '(none yet)'}\n\n"
+            "What is your next action? Respond with JSON only."
+        )
+
+        raw = query_llm(_REACT_SYSTEM, user_prompt,
+                        temperature=0.2, model_tier="smart")
+        if not raw:
+            history.append(f"[T{turn}] LLM returned empty response.")
+            continue
+
+        # Strip any accidental markdown fence
+        raw = raw.strip()
+        raw = _re.sub(r"^```(?:json)?\s*", "", raw)
+        raw = _re.sub(r"\s*```\s*$", "", raw)
+
+        try:
+            step = _json.loads(raw)
+        except _json.JSONDecodeError:
+            # Try to extract JSON from the raw output
+            m = _re.search(r"\{.*\}", raw, _re.DOTALL)
+            if m:
+                try:
+                    step = _json.loads(m.group(0))
+                except Exception:
+                    history.append(
+                        f"[T{turn}] Could not parse JSON: {raw[:200]}")
+                    continue
+            else:
+                history.append(f"[T{turn}] No JSON in response: {raw[:200]}")
+                continue
+
+        thought = step.get("thought", "")
+        action = step.get("action", "")
+        step_args = step.get("args", {})
+        status = step.get("status", "WORKING")
+
+        print(
+            f"{DIM}[T{turn}] {BOLD}{action}{RESET}{DIM}  →  {thought[:100]}{RESET}")
+
+        # ── Terminal condition ───────────────────────────────────────────────
+        if action == "DONE" or status in ("DONE", "FAILED"):
+            result_msg = step.get("result", thought)
+            success = status != "FAILED"
+            if branch and success:
+                handlers.get("git_merge_workspace", lambda _: None)(
+                    {"branch_name": branch, "success_status": True}
+                )
+            elif branch and not success:
+                handlers.get("git_merge_workspace", lambda _: None)(
+                    {"branch_name": branch, "success_status": False}
+                )
+            icon = "✅" if success else "❌"
+            print(
+                f"\n{GREEN if success else RED}{icon} [REACT] {result_msg}{RESET}")
+            return {"success": success, "summary": f"{icon} [REACT] {result_msg}", "turns": turn}
+
+        # ── Execute tool ─────────────────────────────────────────────────────
+        handler = all_handlers.get(action)
+        if handler is None:
+            obs = f"Unknown tool: {action}. Available: {list(all_handlers.keys())}"
+            print(f"   {YELLOW}⚠️  {obs}{RESET}")
+        else:
+            try:
+                obs = handler(step_args)
+                # Track branch name for auto-merge
+                if action == "git_isolate_workspace":
+                    try:
+                        _br = _json.loads(obs).get("branch", "")
+                        if _br:
+                            branch = _br
+                    except Exception:
+                        pass
+            except Exception as exc:
+                obs = f"Tool error: {exc}"
+
+        # Truncate very long observations to prevent context explosion
+        obs_str = str(obs)
+        if len(obs_str) > 3000:
+            obs_str = obs_str[:1500] + \
+                "\n... [truncated] ...\n" + obs_str[-600:]
+
+        history.append(
+            f"[T{turn}] ACTION={action} ARGS={step_args}\nOBSERVATION={obs_str}\n")
+
+    # Max turns exceeded
+    if branch:
+        handlers.get("git_merge_workspace", lambda _: None)(
+            {"branch_name": branch, "success_status": False}
+        )
+    summary = f"❌ [REACT] Goal not completed after {max_turns} turns: {goal[:80]}"
+    print(f"\n{RED}{summary}{RESET}")
+    return {"success": False, "summary": summary, "turns": max_turns}
+
+
 def _run_ooda_mutation_cycle() -> None:
     """
     Bio-Swarm OODA hook: silently runs the Mutation Engine after each
@@ -715,6 +1120,11 @@ def main() -> None:
         help="Auto-Pilot: authorize every swarm plan without a Y/n prompt.",
     )
     parser.add_argument(
+        "--react",
+        action="store_true",
+        help="Level 8 ReAct mode: delegate_frontend/data route through the ReAct Core (MCP tools) instead of sub-swarm managers.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         dest="dry_run",
@@ -748,7 +1158,13 @@ def main() -> None:
     auto_mode: bool = args.auto
     dry_run: bool = args.dry_run
 
-    if auto_mode:
+    # Level 8: engage ReAct Core Runtime if --react flag is set
+    global _REACT_MODE, _last_senior_mandate
+    _REACT_MODE = args.react
+    if _REACT_MODE:
+        print(
+            f"{CYAN}{BOLD}⚛️  LEVEL 8 REACT MODE ENGAGED — delegates route through ReAct Core.{RESET}")
+
         print(
             f"{YELLOW}{BOLD}â¡ AUTO-PILOT ENGAGED â plans execute without confirmation.{RESET}")
     if dry_run:
@@ -834,7 +1250,10 @@ def main() -> None:
                     if not user_input or user_input.lower() in ("exit", "quit", "q", ":q"):
                         break
                     print(f"\n{DIM}Chief is planning logistics...{RESET}")
-                    plan = consult_chief(user_input, is_startup=False)
+                    _dr_mandate = _last_senior_mandate
+                    _last_senior_mandate = ""
+                    plan = consult_chief(user_input, is_startup=False,
+                                         senior_override=_dr_mandate)
                     hr()
                     print(f"\n{GREEN}{BOLD}CHIEF >{RESET}")
                     type_writer(plan.get("explanation", "(no explanation)"))
@@ -865,9 +1284,11 @@ def main() -> None:
                     # --- Post-swarm: stub/placeholder detection ---
                     _stubs = _detect_placeholder_files()
                     if _stubs:
-                        print(f"\n{YELLOW}\u26a0\ufe0f  STUB DETECTOR: {len(_stubs)} placeholder file(s) found after swarm:{RESET}")
+                        print(
+                            f"\n{YELLOW}\u26a0\ufe0f  STUB DETECTOR: {len(_stubs)} placeholder file(s) found after swarm:{RESET}")
                         for _s in _stubs:
-                            print(f"   {RED}\u2022 {_s.splitlines()[0]}{RESET}")
+                            print(
+                                f"   {RED}\u2022 {_s.splitlines()[0]}{RESET}")
                             if len(_s.splitlines()) > 1:
                                 print(f"     {DIM}{_s.splitlines()[1]}{RESET}")
                         # Treat stubs as failures so the Chief auto-recovers
@@ -936,14 +1357,28 @@ def main() -> None:
                             f"FAILED: {f['tool']} {f.get('args', '')}\n{f.get('error_output', '')}"
                             for f in failures
                         )
-                        # Fresh Senior scan gives Chief live factory health during recovery
-                        _recovery_senior = _get_senior_insight()
+
+                        # --- ANTI-LOOP: auto-escalate to Senior Architect at 2 failures ---
+                        if consecutive_failures >= 2 and not _last_senior_mandate:
+                            _loop_intent = (
+                                str(failures[-1].get("args", "unknown"))
+                                if failures else "unknown"
+                            )
+                            _last_senior_mandate = _call_death_loop_diagnosis(
+                                _loop_intent, attempts=consecutive_failures
+                            )
+
+                        # Consume mandate — only injected once per loop cycle
+                        _pending_override = _last_senior_mandate
+                        _last_senior_mandate = ""
+
                         print(
                             f"\n{YELLOW}\U0001f504 Consulting Chief for recovery plan...{RESET}")
                         plan = consult_chief(
                             "", is_startup=False,
                             failure_context=failure_report,
-                            tech_lead_context=_recovery_senior,
+                            tech_lead_context=_senior_context,
+                            senior_override=_pending_override,
                         )
                         print(f"\n{RED}{BOLD}CHIEF RECOVERY PLAN:{RESET}")
                         type_writer(
@@ -989,21 +1424,25 @@ def main() -> None:
 
             # ---- 'senior' shortcut: print Tech Lead report on demand ----
             if user_input.lower() in ("senior", "scan", "tech lead", "tl"):
-                print(f"\n{MAGENTA}\U0001f454 Requesting Senior Tech Lead Scan...{RESET}")
+                print(
+                    f"\n{MAGENTA}\U0001f454 Requesting Senior Tech Lead Scan...{RESET}")
                 _tl_report = _get_senior_insight()
                 if _tl_report and "unavailable" not in _tl_report:
                     for _tl_line in _tl_report.splitlines():
                         print(f"   {_tl_line}")
                 else:
-                    print(f"   {GREEN}\u2705 Factory is clean — no issues detected.{RESET}")
+                    print(
+                        f"   {GREEN}\u2705 Factory is clean — no issues detected.{RESET}")
                 hr()
                 continue
 
-            # ---- Consult Chief with new input ----
-            print(f"\n{DIM}Chief is planning logistics...{RESET}")
+            # Inject any pending Senior Architect mandate into context
+            _pending_mandate = _last_senior_mandate
+            _last_senior_mandate = ""  # consume immediately
             _fresh_senior = _get_senior_insight()
             plan = consult_chief(user_input, is_startup=False,
-                                 tech_lead_context=_fresh_senior)
+                                 tech_lead_context=_fresh_senior,
+                                 senior_override=_pending_mandate)
 
             hr()
             print(f"\n{GREEN}{BOLD}CHIEF >{RESET}")

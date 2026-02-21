@@ -22,6 +22,12 @@ from typing import Optional
 # agent_core lives in the same package; this file is executed with cwd=FACTORY
 from agent_core import query_llm, save_artifact
 
+# JIT Oracle Lifeline — cold-booted external consultant for stuck loops
+try:
+    from oracle_agent import consult_external_oracle as _oracle_lifeline
+except ImportError:
+    from .oracle_agent import consult_external_oracle as _oracle_lifeline  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
@@ -383,6 +389,115 @@ No explanation. No fences. Just the corrected import statement."""
     return fixed_any
 
 
+def targeted_jsx_in_ts_heal(compiler_log: str) -> bool:
+    """
+    JSX-in-TS Healer — fixes the specific esbuild error:
+      "Expected '>' but found 'className'" or any JSX syntax in a .ts file.
+
+    Root-cause: a builder agent rewrote a hook/utility .ts file and injected
+    React JSX component code. esbuild cannot parse JSX from .ts files.
+
+    Strategy (in order):
+      1. Parse affected .ts file path from the esbuild error.
+      2. Attempt `git checkout HEAD -- <file>` to restore the last clean version.
+      3. If no git version exists, ask the LLM to strip all JSX and rewrite as
+         a plain TypeScript hook (no render, no return JSX).
+
+    Returns True if at least one file was fixed.
+    """
+    # esbuild error pattern: 'Expected ">" but found "XXX"'
+    # file reference appears as: file: path/to/file.ts:line:col
+    jsx_error_pattern = re.compile(
+        r'Expected ["\u201c]>["\u201d] but found',
+        re.IGNORECASE,
+    )
+    if not jsx_error_pattern.search(compiler_log):
+        return False
+
+    # Extract the affected .ts file
+    file_ref_pattern = re.compile(
+        r"(?:file:\s*|Transform failed.*?\n.*?)([\w./\-]+\.ts):\d+:\d+",
+        re.IGNORECASE,
+    )
+    # Also try simpler: look for a .ts path in the error lines
+    path_pattern = re.compile(r"([\w/.\-]+\.ts)(?=:\d+:\d+)", re.IGNORECASE)
+
+    affected_files: list[Path] = []
+    for m in path_pattern.finditer(compiler_log):
+        raw = m.group(1).strip()
+        candidate = ROOT_DIR / raw
+        if not candidate.exists():
+            candidate = FRONTEND_DIR / raw
+        if candidate.exists() and candidate.suffix == ".ts":
+            if candidate not in affected_files:
+                affected_files.append(candidate)
+
+    if not affected_files:
+        print("🚨 JSX-in-TS error detected but could not locate the .ts file.")
+        return False
+
+    fixed_any = False
+    for ts_file in affected_files:
+        rel = ts_file.relative_to(ROOT_DIR)
+        print(f"🔧 JSX-in-TS Healer: attempting git restore for {rel}")
+
+        # Strategy 1: git checkout HEAD
+        git_result = subprocess.run(
+            ["git", "-C", str(ROOT_DIR), "checkout", "HEAD", "--", str(rel)],
+            capture_output=True,
+            text=True,
+        )
+        if git_result.returncode == 0:
+            print(f"   ✅ Restored {rel} from git HEAD.")
+            fixed_any = True
+            continue
+
+        # Strategy 2: git show HEAD — pipe content directly
+        show_result = subprocess.run(
+            ["git", "-C", str(ROOT_DIR), "show", f"HEAD:{rel}"],
+            capture_output=True,
+            text=True,
+        )
+        if show_result.returncode == 0 and show_result.stdout.strip():
+            ts_file.write_text(show_result.stdout, encoding="utf-8")
+            print(f"   ✅ Restored {rel} from git HEAD via show.")
+            fixed_any = True
+            continue
+
+        # Strategy 3: LLM rewrite — strip all JSX, keep the hook logic
+        print(f"   ⚠️  No git version for {rel} — asking LLM to strip JSX...")
+        current = ts_file.read_text(encoding="utf-8")
+        strip_prompt = f"""The following TypeScript file ({rel}) is a .ts file
+(not .tsx) but contains JSX/React component code. This causes an esbuild error.
+
+Your job: REWRITE this file as a clean TypeScript hook (.ts).
+Rules:
+- REMOVE all React component functions (any function returning JSX / <div> etc.)
+- REMOVE all JSX markup
+- KEEP only the hook function (the function starting with 'use...')
+- KEEP all imports needed by the hook
+- KEEP the hook's return value intact
+- File must have no JSX whatsoever
+- Export the hook as both named and default export
+
+Current (broken) file content:
+{current[:6000]}
+
+Return ONLY the complete corrected TypeScript file. No fences. No explanation."""
+        fixed_content = query_llm(
+            "You are a TypeScript refactoring expert. Strip JSX from hooks.",
+            strip_prompt,
+            temperature=0.0,
+            model_tier="fast",
+        )
+        if fixed_content and "export" in fixed_content:
+            ts_file.write_text(fixed_content.strip(), encoding="utf-8")
+            print(f"   ✅ LLM stripped JSX from {rel}.")
+            fixed_any = True
+
+    return fixed_any
+
+
 def _run_eslint() -> dict:
     """Run ESLint on JS/JSX files only (TSC handles TypeScript).
     Treats exit-code 2 with 'no files' / 'all ignored' as a clean pass."""
@@ -591,6 +706,19 @@ def run_watchdog() -> bool:
         print("✅ System is Healthy. No improvements needed.")
         return True
 
+    # ── JSX-in-TS Healer: catches esbuild "Expected > but found className" ────
+    if report.get("log"):
+        jsx_healed = targeted_jsx_in_ts_heal(report["log"])
+        if jsx_healed:
+            print("🔧 JSX-in-TS Healer: fixes applied. Re-running diagnostics...")
+            report = run_diagnostics()
+            if report["status"] == "PASS":
+                if FIX_SPEC_PATH.exists():
+                    FIX_SPEC_PATH.unlink()
+                print("✅ System healthy after JSX-in-TS auto-heal.")
+                return True
+    # ─────────────────────────────────────────────────────────────────────────
+
     # ── Wolverine: auto-heal import errors before escalating ──────────────────
     if report.get("log"):
         healed = targeted_import_heal(report["log"])
@@ -611,9 +739,33 @@ def run_watchdog() -> bool:
         print(f"🩹 Fix Prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
         print("   Run `python factory.py heal` to apply.")
         return False
+
+    # ── JIT Oracle Lifeline ─────────────────────────────────────────────────
+    # The normal LLM doctor is stumped — escalate to the Oracle (cold-booted,
+    # unpolluted context) which approaches the problem from first principles.
+    print("⚠️  Swarm detecting high uncertainty/failure loop.")
+    print("🔄  Escalating to JIT Oracle Lifeline...")
+    oracle_strategy = _oracle_lifeline(
+        intent=(
+            f"Fix the following {report.get('source', 'unknown')} errors "
+            f"in the Halilit Support Center project."
+        ),
+        current_code=(
+            f"# Error source: {report.get('source', 'unknown')}\n"
+            f"# See error log for affected files."
+        ),
+        error_logs=report.get("log", "(no log available)"),
+    )
+    if oracle_strategy:
+        oracle_fix_path = REPAIRS_DIR / "oracle_rescue_protocol.md"
+        save_artifact(str(oracle_fix_path), oracle_strategy)
+        print(
+            f"🛸 Oracle Rescue Protocol saved → {oracle_fix_path.relative_to(ROOT_DIR)}")
+        print("🔄  Chief adopting Oracle Rescue Protocol...")
+        print("   Review the protocol, then run `python factory.py heal` to apply.")
     else:
-        print("❌ Watchdog failed to analyse the error — check API key and logs.")
-        return False
+        print("❌ Oracle returned no response — check GEMINI_API_KEY and network.")
+    return False
 
 
 if __name__ == "__main__":

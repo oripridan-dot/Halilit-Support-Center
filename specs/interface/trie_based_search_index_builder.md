@@ -3,102 +3,201 @@
 **Target:** data_pipeline/trie_search_index.py
 
 ## Overview
-This script constructs a trie-based search index from Halilit product data sourced from the Halilit API and stores it in a JSON file.  This index will be used by the support center's search functionality to provide fast, prefix-based searching for products and their associated documentation. The script ensures data integrity by validating the API response against a Pydantic model.
+This script builds a Trie-based search index from the Halilit Support Center's knowledge base articles, optimized for fast prefix-based search. The index will be serialized to a file for later use by the search service. The knowledge base articles are sourced from the main database.
 
 ## Requirements
-- Must fetch product data from the Halilit Product API. The base URL is assumed to be defined in a configuration file (`config.py`).
-- Must validate the API response against a Pydantic model representing the expected product data structure.
-- Must construct a trie data structure in memory.
-- Each node in the trie should store a list of product IDs that match the prefix represented by the path to that node.
-- Must serialize the trie data structure to a JSON file (`data/product_index.json`).
-- Must handle API errors gracefully and log any errors encountered during data fetching or processing.
-- Must be idempotent: re-running the script should produce the same index given the same source data.
-- Must only include "active" products in the search index. An active product is defined as a product where the `is_active` field in the Halilit API response is `True`.
+- The script must connect to the Halilit Support Center's database.
+- The script must fetch all knowledge base articles from the `knowledge_base_articles` table.
+- The script must construct a Trie data structure using the article titles as keys.
+- The Trie must support prefix-based search, returning a list of article IDs matching the prefix.
+- The script must serialize the Trie to a file.
+- The script must handle database connection errors gracefully.
+- The script must be idempotent, meaning running it multiple times should produce the same serialized Trie if the underlying data hasn't changed.
+- The script must log its progress and any errors encountered.
+- The script should use an environment variable `DATABASE_URL` to configure the database connection string.
+- The script should use an environment variable `TRIE_INDEX_PATH` to specify where the trie will be saved.
 
 ## Data Contract
+- **Input:** Knowledge base articles from the database, structured as follows:
 
-**Halilit Product API Response:**
+  ```python
+  from pydantic import BaseModel
+  from typing import Optional
 
-```json
-[
-  {
-    "product_id": "string",
-    "name": "string",
-    "description": "string",
-    "is_active": boolean,
-    "documentation_url": "string"
-  },
-  ...
-]
-```
-
-**Pydantic Model (data_pipeline/models.py):**
-
-```python
-from typing import List, Optional
-from pydantic import BaseModel, HttpUrl
-
-class Product(BaseModel):
-    product_id: str
-    name: str
-    description: str
-    is_active: bool
-    documentation_url: Optional[HttpUrl] = None  # Documentation URL can be null
-```
-
-**Serialized Trie Data (data/product_index.json):**
-
-```json
-{
-  "a": {
-    "p": {
-      "i": {
-        "d": {
-          "product_id_1": {},
-          "product_id_2": {}
-        }
-      }
-    }
-  },
-  "b": {
-    "e": {
-      "l": {
-        "l": {
-          "product_id_3": {}
-        }
-      }
-    }
-  },
-  ...
-}
-```
-
-Each key in the JSON object represents a character in a product name.  The value is either another nested object representing the next character in the prefix or an empty object associated with a product ID if the current path represents the complete product name. A given `product_id` should appear under all of its prefixes. For example, if a product's name is "bell", then `product_id_3` should appear under "b", "be", "bel", and "bell" prefixes.
+  class Article(BaseModel):
+      id: int
+      title: str
+      content: str
+      created_at: datetime
+      updated_at: Optional[datetime] = None
+  ```
+- **Output:** A serialized Trie data structure, saved to the file specified by `TRIE_INDEX_PATH`. The Trie stores a mapping between article titles and article IDs. The serialized format should allow for efficient deserialization.  Consider `pickle` or `json` for initial implementation, but `protobuf` or other binary format can be considered if performance becomes a bottleneck.
 
 ## Behavior Scenarios
-
-- **Scenario: Successful Index Creation**
-  - Input: Halilit API returns a list of products, including active and inactive products.
-  - Outcome: `data/product_index.json` is created, containing a trie index of only the active products.
-
-- **Scenario: API Returns Empty List**
-  - Input: Halilit API returns an empty list.
-  - Outcome: `data/product_index.json` is created, containing an empty trie (`{}`).
-
-- **Scenario: API Returns Invalid Data**
-  - Input: Halilit API returns data that does not conform to the Pydantic `Product` model.
-  - Outcome: The script logs an error message indicating the validation failure and exits. The existing `data/product_index.json` (if any) remains untouched.
-
-- **Scenario: API Returns Product With `documentation_url` as Null**
-  - Input: Halilit API returns a product where `documentation_url` is `null`.
-  - Outcome: The script successfully parses the data into the `Product` model without raising an exception and includes the product in the search index.
-
-- **Scenario: API Request Fails**
-  - Input: Halilit API returns an error (e.g., 500 Internal Server Error, network timeout).
-  - Outcome: The script logs an error message indicating the API failure and exits. The existing `data/product_index.json` (if any) remains untouched.
+- **Scenario:** Initial Trie Creation
+  - Input: Empty Trie index file, 1000 knowledge base articles in the database.
+  - Outcome: A new Trie index file is created, containing all 1000 articles. The script logs the number of articles processed.
+- **Scenario:** Trie Update with New Articles
+  - Input: Existing Trie index file, 10 new knowledge base articles added to the database.
+  - Outcome: The existing Trie index file is updated to include the 10 new articles. The script logs the number of articles processed (should be 10).
+- **Scenario:** Database Connection Failure
+  - Input: Invalid database connection string in `DATABASE_URL`.
+  - Outcome: The script logs an error message indicating the database connection failure and exits gracefully, without modifying the existing Trie file.
+- **Scenario:** Existing Trie Corrupted
+    - Input: Existing TRIE index file is corrupted and cannot be deserialized.
+    - Outcome: The script logs a warning that the Trie file is corrupted, rebuilds the trie from scratch, and saves a new Trie index file.
+- **Scenario:** Trie already up to date
+    - Input: Existing Trie index file, no changes to the `knowledge_base_articles` table since last run.
+    - Outcome: The script does nothing.
 
 ## Out of Scope
-- Real-time updates to the index. This script is intended to be run periodically (e.g., daily) to refresh the index.
-- Authorization or authentication with the Halilit API. It's assumed that any necessary API keys or credentials are provided through environment variables or configuration.
-- Deployment or scheduling of the script. This is assumed to be handled by a separate system (e.g., a cron job, Airflow).
-- Fine-grained error recovery; in case of a validation or API error the script exits and leaves the existing `data/product_index.json` as is.
+- Real-time updates to the Trie index as articles are created or updated.
+- Advanced text processing techniques (e.g., stemming, lemmatization).
+- Complex ranking or scoring of search results.
+- GUI for manually triggering index creation.
+- Authentication/Authorization.
+
+```python
+import os
+import logging
+import pickle
+from typing import List
+from datetime import datetime
+
+import psycopg2
+from psycopg2 import OperationalError
+from pydantic import BaseModel
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+class Article(BaseModel):
+    id: int
+    title: str
+    content: str
+    created_at: datetime
+    updated_at: datetime | None = None
+
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.article_ids = [] # Store a list of article IDs for each prefix
+
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, title: str, article_id: int):
+        node = self.root
+        for char in title.lower():  # Consistent case
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+            node.article_ids.append(article_id) # Store the article ID at each prefix level
+
+    def search(self, prefix: str) -> List[int]:
+        node = self.root
+        for char in prefix.lower(): # Consistent case
+            if char not in node.children:
+                return []  # Prefix not found
+            node = node.children[char]
+        return node.article_ids
+
+def create_db_connection():
+    db_url = os.environ.get("DATABASE_URL")
+    if not db_url:
+        raise ValueError("DATABASE_URL environment variable not set.")
+
+    try:
+        conn = psycopg2.connect(db_url)
+        return conn
+    except OperationalError as e:
+        logging.error(f"Database connection error: {e}")
+        raise
+
+def fetch_articles(conn) -> List[Article]:
+    try:
+        with conn.cursor() as cur:
+            cur.execute("SELECT id, title, content, created_at, updated_at FROM knowledge_base_articles")
+            articles_data = cur.fetchall()
+            articles = [Article(id=row[0], title=row[1], content=row[2], created_at=row[3], updated_at=row[4]) for row in articles_data]
+            return articles
+    except Exception as e:
+        logging.error(f"Error fetching articles: {e}")
+        raise
+
+def build_trie(articles: List[Article]) -> Trie:
+    trie = Trie()
+    for article in articles:
+        trie.insert(article.title, article.id)
+    return trie
+
+def serialize_trie(trie: Trie, filepath: str):
+    try:
+        with open(filepath, 'wb') as f:
+            pickle.dump(trie, f)
+        logging.info(f"Trie serialized to {filepath}")
+    except Exception as e:
+        logging.error(f"Error serializing trie: {e}")
+        raise
+
+def deserialize_trie(filepath: str) -> Trie | None:
+    try:
+        with open(filepath, 'rb') as f:
+            return pickle.load(f)
+    except FileNotFoundError:
+        logging.warning(f"Trie file not found at {filepath}. Building from scratch.")
+        return None
+    except Exception as e:
+        logging.warning(f"Error deserializing trie from {filepath}: {e}. Building from scratch.")
+        return None
+
+
+
+def main():
+    trie_index_path = os.environ.get("TRIE_INDEX_PATH")
+    if not trie_index_path:
+        logging.error("TRIE_INDEX_PATH environment variable not set.")
+        return
+
+    try:
+        conn = create_db_connection()
+        articles = fetch_articles(conn)
+        conn.close()
+
+        existing_trie = deserialize_trie(trie_index_path)
+
+        if existing_trie:
+            # Check if the existing Trie contains all the articles.  A simple way to do this is to compare the length of the serialized
+            # article IDs versus the total articles.  If they're equal, it means no update is needed.  A more robust and efficient approach would
+            # be to store a hash of the articles when building the Trie, and comparing it to a newly generated hash.
+            all_article_ids = []
+            for article in articles:
+                all_article_ids.append(article.id)
+
+            num_articles_in_trie = 0
+            for char, node in existing_trie.root.children.items():
+                num_articles_in_trie += len(node.article_ids)
+
+            if len(articles) == num_articles_in_trie:
+                logging.info("Trie is already up to date. Skipping rebuild.")
+                return # Trie already up to date.
+            else:
+                logging.info("Trie needs to be updated.")
+        else:
+            logging.info("No Trie found.  Building a new one.")
+
+
+
+        trie = build_trie(articles)
+        serialize_trie(trie, trie_index_path)
+        logging.info("Trie index creation complete.")
+
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+
+
+if __name__ == "__main__":
+    main()
+```

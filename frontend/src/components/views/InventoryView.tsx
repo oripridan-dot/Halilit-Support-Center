@@ -1,158 +1,168 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useDebounceThrottle } from "../../hooks/useDebounceThrottle";
 import { useNavigationStore } from "../../store/navigationStore";
-import { Loader2 } from "lucide-react";
+import { useConductorCatalog } from "../../hooks/useConductorCatalog";
+import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 
-interface InventoryItem {
-  id: string;
-  name: string;
-  sku: string;
-  description: string;
-  price: number;
-  // ... other inventory item properties
-}
+const PAGE_SIZE = 25;
 
-interface InventoryViewProps {
-  // Define any props if needed
-}
+const InventoryView: React.FC = () => {
+  const {
+    searchQuery: globalSearch,
+    setSearchQuery,
+    goToProduct,
+  } = useNavigationStore();
+  const [localSearch, setLocalSearch] = useState(globalSearch ?? "");
+  const [page, setPage] = useState(1);
 
-const InventoryView: React.FC<InventoryViewProps> = () => {
-  const [filterText, setFilterText] = useState("");
-  const [inventory, setInventory] = useState<InventoryItem[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const { searchQuery: initialCfpFilter, setSearchQuery } =
-    useNavigationStore();
-  const debouncedSetFilterText = useDebounceThrottle(
+  // Reset to page 1 whenever the search term changes
+  const debouncedSetSearch = useDebounceThrottle(
     (value: string) => {
-      setFilterText(value);
+      setPage(1);
+      setSearchQuery(value);
     },
     150,
     0,
   );
 
-  useEffect(() => {
-    if (initialCfpFilter) {
-      debouncedSetFilterText(initialCfpFilter);
-    }
-  }, [initialCfpFilter, debouncedSetFilterText]);
+  const {
+    products,
+    totalItems,
+    totalPages,
+    isLoading,
+    isError,
+    handleRetry,
+    retryCount,
+  } = useConductorCatalog({
+    page,
+    pageSize: PAGE_SIZE,
+    searchQuery: globalSearch,
+  });
 
-  useEffect(() => {
-    const fetchInventory = async () => {
-      setIsLoading(true);
-      setError(null);
-      try {
-        // Simulate API call with a delay
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        // Replace with actual API call
-        const searchTerm = filterText.toLowerCase();
-        const mockInventory: InventoryItem[] = [
-          {
-            id: "1",
-            name: "Fender Stratocaster",
-            sku: "FS001",
-            description: "Electric guitar",
-            price: 1000,
-          },
-          {
-            id: "2",
-            name: "Gibson Les Paul",
-            sku: "GLP001",
-            description: "Electric guitar",
-            price: 1200,
-          },
-          {
-            id: "3",
-            name: "Roland Juno-106",
-            sku: "RJ001",
-            description: "Synthesizer",
-            price: 800,
-          },
-          {
-            id: "4",
-            name: "Yamaha P-125",
-            sku: "YP001",
-            description: "Digital Piano",
-            price: 600,
-          },
-          {
-            id: "5",
-            name: "Fender Precision Bass",
-            sku: "FPB001",
-            description: "Bass Guitar",
-            price: 900,
-          },
-        ];
-        const filteredInventory = mockInventory.filter(
-          (item) =>
-            item.name.toLowerCase().includes(searchTerm) ||
-            item.sku.toLowerCase().includes(searchTerm) ||
-            item.description.toLowerCase().includes(searchTerm),
-        );
-        setInventory(filteredInventory);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const v = e.target.value;
+    setLocalSearch(v);
+    debouncedSetSearch(v);
+  };
 
-        if (initialCfpFilter && !filterText) {
-          setFilterText(initialCfpFilter);
-          setSearchQuery(initialCfpFilter);
-        }
-      } catch (err: any) {
-        setError(err.message || "Failed to fetch inventory.");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchInventory();
-  }, [filterText, initialCfpFilter, setSearchQuery]);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const searchTerm = event.target.value;
-    debouncedSetFilterText(searchTerm);
-    setSearchQuery(searchTerm);
+  const handleProductClick = (productId: string) => {
+    goToProduct(productId);
   };
 
   return (
     <div className="dark:bg-zinc-900 min-h-screen p-4">
-      <input
-        type="text"
-        placeholder="Search inventory..."
-        onChange={handleInputChange}
-        className="dark:bg-zinc-800 dark:text-zinc-100 placeholder-zinc-400 w-full rounded-md py-2 px-4 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        value={filterText}
-      />
+      {/* ── Search bar ── */}
+      <div className="mb-4 flex items-center gap-2">
+        <input
+          type="text"
+          placeholder="Search by name, SKU, or brand…"
+          value={localSearch}
+          onChange={handleInputChange}
+          className="dark:bg-zinc-800 dark:text-zinc-100 placeholder-zinc-400 flex-1 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        {totalItems > 0 && (
+          <span className="text-zinc-400 text-sm whitespace-nowrap">
+            {totalItems.toLocaleString()} products
+          </span>
+        )}
+      </div>
 
+      {/* ── States ── */}
       {isLoading && (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center py-12">
           <Loader2 className="animate-spin h-6 w-6 text-blue-500" />
-          <span className="ml-2 dark:text-zinc-300">Loading...</span>
+          <span className="ml-2 dark:text-zinc-300">Loading…</span>
         </div>
       )}
 
-      {error && <div className="text-red-500 mb-4">Error: {error}</div>}
-
-      {!isLoading && !error && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {inventory.map((item) => (
-            <div
-              key={item.id}
-              className="dark:bg-zinc-800 rounded-md p-4 shadow-md"
-            >
-              <h3 className="dark:text-zinc-100 text-lg font-semibold mb-2">
-                {item.name}
-              </h3>
-              <p className="dark:text-zinc-400 text-sm mb-2">
-                {item.description}
-              </p>
-              <p className="dark:text-zinc-300 text-sm">SKU: {item.sku}</p>
-              <p className="dark:text-zinc-300 text-sm">
-                Price: ${item.price.toFixed(2)}
-              </p>
-            </div>
-          ))}
-          {inventory.length === 0 && !isLoading && !error && (
-            <div className="dark:text-zinc-400">No items found.</div>
-          )}
+      {isError && (
+        <div className="dark:bg-zinc-800 p-4 rounded-lg text-center">
+          <p className="text-red-500 mb-2">Failed to load inventory.</p>
+          <button
+            onClick={handleRetry}
+            className="px-4 py-2 bg-zinc-700 text-white rounded hover:bg-zinc-600"
+          >
+            Retry ({retryCount}/3)
+          </button>
         </div>
+      )}
+
+      {/* ── Product grid ── */}
+      {!isLoading && !isError && (
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {products.length === 0 ? (
+              <div className="col-span-full text-zinc-400 py-12 text-center">
+                No products found.
+              </div>
+            ) : (
+              products.map((product) => {
+                const hasPrice = product.price != null;
+                const isOutOfStock = (product as any).stock === 0;
+                const isUnconfirmed =
+                  (product as any).stock == null && !hasPrice;
+                return (
+                  <button
+                    key={product.id}
+                    onClick={() => handleProductClick(product.id)}
+                    className={`dark:bg-zinc-800 rounded-md p-4 shadow-md text-left hover:ring-2 hover:ring-blue-500 transition-all ${
+                      isOutOfStock ? "ring-2 ring-red-600" : ""
+                    }`}
+                  >
+                    {isOutOfStock && (
+                      <span className="inline-block mb-2 text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded">
+                        OUT OF STOCK
+                      </span>
+                    )}
+                    {isUnconfirmed && (
+                      <span className="inline-block mb-2 text-xs font-bold bg-amber-500 text-white px-2 py-0.5 rounded">
+                        UNCONFIRMED
+                      </span>
+                    )}
+                    <h3 className="dark:text-zinc-100 text-sm font-semibold mb-1 truncate">
+                      {product.name}
+                    </h3>
+                    <p className="text-zinc-400 text-xs mb-1 truncate">
+                      {product.brand}
+                    </p>
+                    {hasPrice ? (
+                      <p className="text-blue-400 text-sm font-medium">
+                        ₪{product.price!.toLocaleString()}
+                      </p>
+                    ) : (
+                      <p className="text-amber-400 text-xs font-medium">
+                        Call for Price
+                      </p>
+                    )}
+                  </button>
+                );
+              })
+            )}
+          </div>
+
+          {/* ── Pagination ── */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-3 mt-6">
+              <button
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={page === 1}
+                className="p-1.5 rounded dark:bg-zinc-700 disabled:opacity-40 hover:bg-zinc-600"
+              >
+                <ChevronLeft className="h-4 w-4 text-zinc-300" />
+              </button>
+              <span className="text-zinc-400 text-sm">
+                Page {page} of {totalPages}
+              </span>
+              <button
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                disabled={page === totalPages}
+                className="p-1.5 rounded dark:bg-zinc-700 disabled:opacity-40 hover:bg-zinc-600"
+              >
+                <ChevronRight className="h-4 w-4 text-zinc-300" />
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

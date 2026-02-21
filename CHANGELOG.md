@@ -1,4 +1,83 @@
+## [v4.1] — 2026-02-21
+- [Remove] Deleted `specs/temp/steerer_last_output.txt`.
+
+## [v4.1] — 2026-02-21
+## v4.1
+
+- [chore] Removed a temporary file.
+
+## [v4.1] — 2026-02-21
+- [removal] Removed `specs/temp/steerer_last_output.txt`.
+
+## [v4.1] — 2026-02-21
+- [chore] Removed temporary specification for galaxy_db pagination.
+
+## [v4.1] — 2026-02-21
+## v4.1
+
+- [fix] Use `_senior_context` instead of `_recovery_senior` for tech lead context in chief recovery plan.
+- [remove] Delete `specs/temp/steerer_last_output.txt`.
+
+## [v4.1] — 2026-02-21
+- [feat] Added a new function `purge_scope_violations` to automatically fix certain types of code issues.
+- [fix] `purge_scope_violations` now strips appended component blocks, JSX in `.ts` files, and invalid component imports.
+- [refactor] Improved the logic and efficiency of the `purge_scope_violations` function.
+- [chore] Enhanced the reporting of the `purge_scope_violations` function to provide more descriptive messages about the repairs made.
+
+## [v4.1] — 2026-02-21
+- [feat] Added a `purge_scope_violations` function to remove Builder-hallucinated component code and imports from hook/store/util files.
+- [feat] The `purge_scope_violations` function scans .ts files in specific directories for scope violations.
+- [feat] The `purge_scope_violations` function truncates files at appended-file markers and removes invalid component imports.
+- [feat] The `validate_ui` function now calls `purge_scope_violations` before other validation steps.
+
+## [v4.1] — 2026-02-21
+## v4.1
+
+- [feat] Introduced `oracle_agent.py`, an external Oracle service to assist the Swarm in resolving failures.
+- [feat] Implemented `consult_external_oracle` function to query the Oracle with intent, code, and error logs.
+- [feat] Defined `ORACLE_SYSTEM_PROMPT` for the Oracle's persona, guiding it to provide "Rescue Protocols".
+
+## [v4.1] — 2026-02-20
+### v4.2 changes:
+- [feature] ANTI-LOOP DIRECTIVE added to system prompt (never retry same approach).
+- [feature] 'escalate_to_senior' tool added (circuit-breaker, SEQUENTIAL).
+- [feature] `consult_chief()` accepts `senior_override` param (SYSTEM_OVERRIDE injection).
+- [doc] Updated system prompt to reflect v9.7.5 awareness.
+- [refactor] Updated module docstring to reflect v4.2 and v9.7.5.
+
+## [v4.1] — 2026-02-20
+- [chore] Updated `builder_agent.py` with a new rule to always action Evolution Proposals directly.
+- [chore] Updated `fitness_ledger.json` with updated statistics for agents.
+- [feat] Added `fitness_ledger.json` to store agent run data.
+- [docs] Added new learned guideline: "Check Patch Anchor Existence".
+- [feat] Introduced `useConductorCatalog` hook for product data.
+- [feat] Defined canonical `ConductorProduct` interface.
+- [feat] Added `ProductRelationship` and `ProductFamily` interfaces.
+- [feat] Added product contextual data fields to `ConductorProduct`.
+- [feat] Added `DAILY_BRIEFING.md` for daily status reports.
+- [feat] Added `HEARTBEAT.md` for factory status information.
+- [chore] Added `FACTORY_KANBAN.md` and `FACTORY_FAILURE_REPORT.md` to `.gitignore`.
+- [feat] Added `KANBAN_PATH` constant.
+- [feat] Refactored ExplorationPanel component.
+- [feat] Extracted sub-components for ExplorationPanel.
+- [feat] Introduced `SetupGuideView` component.
+- [refactor] Improved component organization and readability.
+- [feat] Added `smart_import_fixer.py` for automated import fixing.
+- [feat] Added `Fix` and `FixReport` dataclasses.
+- [feat] Implemented `summary()` method in `FixReport`.
+- [fix] Fixed out-of-src imports.
+- [fix] Removed imports from missing `./generated.ts`.
+- [fix] Corrected directory names.
+- [fix] Corrected filenames.
+- [fix] Fixed TSX generic arrow function syntax.
+- [refactor] Improved code readability and added type hints.
+- [refactor] Added more detailed comments and documentation.
+- [feat] Added `tech_lead_context` to `consult_chief` function.
+- [feat] Senior Tech Lead findings are treated as high-priority health signals.
+- [fix] Critical error handling in `build_component`.
+
 ## [v9.7.5] — 2026-02-20
+
 ### v9.7.5 · Level 6 — AI Test Kit Standard
 
 - [feat] AI Test Kit (`backend/tests/test_ai.py`) — 27 tests across 6 tiers: AI-Unit, AI-Source-Rules, AI-Integration, AI-E2E, AI-Safety, AI-Performance, AI-Contract. Introduces the AI-world equivalent of the classic unit/integration/e2e pyramid.
@@ -14,18 +93,21 @@
 ---
 
 ## [v4.1] — 2026-02-20
+
 ## v4.1
 
 - [chore] Update `builder_agent.py` with an additional rule: "ALWAYS action Evolution Proposals directly. Do NOT defer to Tech Scout for review."
 - [chore] Update `fitness_ledger.json` with updated statistics for `patch_component`, `ui_validator`, and `builder` agents.
 
 ## [v4.1] — 2026-02-20
+
 ### v4.1
 
 - [feat] Added `fitness_ledger.json` to store agent run data.
 - [docs] Added new learned guidelines: "Check Patch Anchor Existence".
 
 ## [v4.1] — 2026-02-20
+
 - [feat] Introduced `useConductorCatalog` hook for fetching and managing product data.
 - [feat] Defined canonical `ConductorProduct` interface.
 - [feat] Added `ProductRelationship` and `ProductFamily` interfaces for product relationships.
@@ -44,15 +126,19 @@
 - [feat] Added more product contextual data fields like `review_synthesis_summary`, `real_world_insights`, `review_sources` to `ConductorProduct`.
 
 ## [v4.1] — 2026-02-20
+
 ### Added
+
 - [feat] Added `DAILY_BRIEFING.md` containing daily status reports.
 - [feat] Added `HEARTBEAT.md` containing factory status information.
 
 ### Changed
+
 - [chore] Added `FACTORY_KANBAN.md` and `FACTORY_FAILURE_REPORT.md` to `.gitignore`.
 - [feat] Added `KANBAN_PATH` constant in `backend/factory/frontend_manager.py`.
 
 ## [v4.1] — 2026-02-20
+
 - [feat] Refactored ExplorationPanel component for improved structure.
 - [feat] Extracted sub-components into `ExplorationPanelGuideView.tsx` and `ExplorationPanelRenderers.tsx`.
 - [feat] Introduced `SetupGuideView` component.
@@ -62,37 +148,42 @@
 - [refactor] Improved component organization and readability.
 
 ## [v4.1] — 2026-02-20
+
 - [feat] Added `smart_import_fixer.py` to automatically fix common import issues in the frontend code.
 - [feat] Added a `Fix` dataclass to represent individual fixes.
 - [feat] Added a `FixReport` dataclass to summarize the fixes applied and skipped files.
 - [feat] Implemented the `summary()` method in `FixReport` to provide a concise report.
-- [fix]  Fixed out-of-src imports by removing them and inserting a TODO stub.
-- [fix]  Removed imports from missing `./generated.ts` if the imported names are defined locally.
-- [fix]  Corrected directory names using fuzzy matching.
-- [fix]  Corrected filenames using fuzzy matching.
-- [fix]  Fixed TSX generic arrow function syntax.
+- [fix] Fixed out-of-src imports by removing them and inserting a TODO stub.
+- [fix] Removed imports from missing `./generated.ts` if the imported names are defined locally.
+- [fix] Corrected directory names using fuzzy matching.
+- [fix] Corrected filenames using fuzzy matching.
+- [fix] Fixed TSX generic arrow function syntax.
 - [refactor] Improved code readability and added type hints.
 - [refactor] Added more detailed comments and documentation.
 
 ## [v4.1] — 2026-02-20
+
 - [feat] Added `tech_lead_context` to `consult_chief` function, enabling integration with the Senior Tech Lead Agent.
 - [feat] Senior Tech Lead's findings are now treated as high-priority health signals. The Chief Agent acknowledges them in its "thought" field and schedules fix tasks.
-- [fix]  Critical error handling in `build_component`. The build will exit now with a FATAL error if the output file path is not found in the spec file to prevent silent failures.
+- [fix] Critical error handling in `build_component`. The build will exit now with a FATAL error if the output file path is not found in the spec file to prevent silent failures.
 - [refactor] Updated `consult_chief` to inject Senior Tech Lead context into the prompt.
 
 ## [v4.1] — 2026-02-20
+
 - [feat] Added critical rules for using 'task_force' vs 'implement', emphasizing when to use each for feature implementation.
 - [feat] Defined a generative pipeline for new features using 'design', 'implement', 'ui_validate', and 'commit'.
 - [docs] Updated documentation to clarify the use of 'implement' and 'optimize' tasks, including rules for their 'args'.
 - [refactor] Added import `os as _os` to `steerer_agent.py`.
 
 ## [v4.1] — 2026-02-20
+
 ## v4.1
 
 - [feat] Added a new specification document for the `efficient_debounce` task force.
 - [docs] Added placeholders for architecture contract, implementation notes, review and feedback, and API contracts.
 
 ## [v4.1] — 2026-02-20
+
 - [feat] Added ImageCDNIntegration component and integrated it into the App component.
 - [fix] Disabled GPG signing in `commit_and_push` function to avoid failures in dev containers.
 - [fix] Corrected the commit command in `review_changes` to disable GPG signing.
@@ -100,6 +191,7 @@
 - [refactor] Updated print messages in `review_changes` to use more appropriate icons.
 
 ## [v4.1] — 2026-02-20
+
 ## v4.1
 
 - [feat] Added `auto_mode` parameter to `execute_swarm` function.
@@ -107,6 +199,7 @@
 - [refactor] Improved resilience of the `push` operation in `commit_and_push`. Added handling for new branches and diverged branches.
 
 ## [v4.1] — 2026-02-20
+
 ## v4.1
 
 - [feat] Updated date formatting in `DashboardView.tsx`.
@@ -121,6 +214,7 @@
 - [feat] Added evolution proposal: Next-gen Image CDN with AVIF support.
 
 ## [v4.1] — 2026-02-20
+
 ```
 ## [v4.1]
 
@@ -135,6 +229,7 @@
 ```
 
 ## [v4.1] — 2026-02-20
+
 ## v4.1
 
 - [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
@@ -146,18 +241,23 @@
 - [refactor] Added `auto_mode` parameter to `execute_swarm` function to enable HOTL steering gate.
 
 ## [v4.1] — 2026-02-20
+
 ## [v4.1] — 2026-02-20
+
 - [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
 - [refactor] Replaced the `ACCENT_MAP` with inline conditional styling for metric cards in `DashboardView.tsx`.
 - [docs] Updated formatting of architecture documentation.
 - [docs] Added sub-bullets to `navigationStore` properties in the architecture documentation.
 
 ## [v4.1] — 2026-02-20
+
 ## [v4.1] — 2026-02-20
+
 - [feat] Updated date formatting in `DashboardView.tsx` to use `dd/MM/yyyy HH:mm`.
 - [refactor] Replaced the `ACCENT_MAP` with inline conditional styling for metric cards in `DashboardView.tsx`.
 
 ## [v4.1] — 2026-02-20
+
 - [docs] Updated formatting of architecture documentation.
 - [docs] Added sub-bullets to `navigationStore` properties in the architecture documentation.
 - [docs] Fixed typo in `scribe_agent.py` documentation.

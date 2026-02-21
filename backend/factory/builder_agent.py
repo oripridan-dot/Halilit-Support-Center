@@ -273,6 +273,36 @@ def build_component(spec_path: str) -> None:
     # =========================================================================
 
     if not full_path:
+        # ── Task Force graceful degradation ──────────────────────────────────
+        # When running inside a Task Force (TF_BLACKBOARD is set), we should NOT
+        # hard-abort — the Watchdog still needs to run and the blackboard should
+        # record a meaningful diagnosis so the Chief can re-plan.
+        import os as _os
+        tf_bb = _os.environ.get("TF_BLACKBOARD", "")
+        tf_goal = _os.environ.get("TF_GOAL", "")
+        if tf_bb and Path(tf_bb).exists():
+            diagnosis = (
+                f"\n---\n## Round 2 — Builder: Skipped (No Implementation Target)\n\n"
+                f"**Reason:** The spec `{spec_file.name}` has no `**Component:**` field "
+                f"pointing to a concrete file path. Wolverine rejected all candidate paths "
+                f"as unsafe (e.g. 'as needed.').\n\n"
+                f"**Goal was:** {tf_goal or '(not set)'}\n\n"
+                f"**What this means:** This Task Force goal is likely an audit/review/sync "
+                f"goal, not an implementation goal. The Builder cannot generate code without "
+                f"a concrete target file.\n\n"
+                f"**Recommended next action for the Chief:**\n"
+                f"- If this was an audit goal: use `audit` or `diagnose` instead of `task_force`.\n"
+                f"- If implementation was intended: re-run with a spec that has a concrete "
+                f"`**Component:** path/to/file.tsx` field.\n"
+            )
+            bb_text = Path(tf_bb).read_text(encoding="utf-8")
+            Path(tf_bb).write_text(bb_text + diagnosis, encoding="utf-8")
+            print(
+                f"⚠️  Builder: No target path in {spec_file.name} — wrote diagnosis to blackboard. "
+                f"Watchdog will review."
+            )
+            sys.exit(0)  # exit cleanly so Watchdog still runs
+        # Outside a Task Force: hard abort as before
         print(
             f"❌ CRITICAL FATAL: Target path missing in {spec_file.name}. Code generation aborted to prevent silent failure.")
         sys.exit(1)
@@ -350,12 +380,23 @@ def build_component(spec_path: str) -> None:
                 print(f"     • [{fix.kind}] {fix.description}")
         return True
 
+    # Extract intent from spec title for Oracle escalation context
+    import re as _re
+    _title_match = _re.search(r"^#\s+(.+)", spec_content, _re.MULTILINE)
+    _intent = (
+        _title_match.group(1).strip() if _title_match
+        else f"Implement {full_path.name}"
+    )
+
     # Run the autonomous self-healing inner loop
     passed = inner_loop(
         spec_text=spec_with_checks,
         builder_fn=_builder_fn,
         max_rounds=MAX_RETRIES,
         verbose=True,
+        intent=_intent,
+        target_file=full_path,
+        oracle_trigger_round=2,  # Phone Oracle after 2 consecutive failures
     )
 
     if passed:

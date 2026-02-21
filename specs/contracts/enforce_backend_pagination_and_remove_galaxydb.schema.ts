@@ -1,8 +1,9 @@
 ```typescript
 // Contract: Enforce Backend Pagination and Remove GalaxyDB
 
-// Shared Types
-interface ConductorProduct {
+export const CONDUCTOR_CATALOG_ENDPOINT = '/api/conductor/catalog';
+
+export interface ConductorProduct {
   id: string;
   name: string;
   description: string;
@@ -10,16 +11,9 @@ interface ConductorProduct {
   category: string;
   brand: string;
   price: number;
-  // Add other product properties as needed
+  // Add other properties as needed
 }
 
-// Endpoint Path
-export const CONDUCTOR_CATALOG_ENDPOINT = '/api/conductor/catalog';
-
-// Request Body (None for this endpoint, using query parameters)
-// type ConductorCatalogRequest = {};
-
-// Response Type
 export interface PaginatedCatalogResponse {
   products: ConductorProduct[];
   totalItems: number;
@@ -27,4 +21,15 @@ export interface PaginatedCatalogResponse {
   currentPage: number;
   pageSize: number;
 }
+
+export interface ConductorCatalogParams {
+    page?: number;
+    pageSize?: number;
+    searchQuery?: string;
+    sortBy?: string;
+    category?: string;
+    brand?: string;
+}
+
+export interface ConductorCatalogResponse extends PaginatedCatalogResponse {}
 ```

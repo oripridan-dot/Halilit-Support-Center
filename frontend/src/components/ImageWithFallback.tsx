@@ -1,32 +1,31 @@
-import React from 'react';
+import React from "react";
 
 interface ImageWithFallbackProps {
-    imageUrl: string | undefined | null;
-    altText?: string;
+  imageUrl: string | undefined | null;
+  altText?: string;
+  className?: string;
 }
 
-const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({ imageUrl, altText }) => {
-    const defaultAltText = altText || "Product Image";
+const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
+  imageUrl,
+  altText,
+  className = "w-full h-full object-contain",
+}) => {
+  const src = imageUrl || "/placeholder.png";
+  const defaultAltText = altText || "Product Image";
 
-    return (
-        <div className="bg-slate-900">
-            <picture>
-      <source srcSet={`${src}.avif`} type="image/avif" />
-      <img
-        onError={(e) => {
-          e.currentTarget.onerror = null; // prevents looping
-          e.currentTarget.src = fallbackSrc;
-        }} loading="lazy"
-                src={imageUrl || "/placeholder.png"}
-                alt={defaultAltText}
-                onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/placeholder.png";
-                }}
-                className="w-full h-full object-contain"
-                loading="lazy"
-            />
-        </div>
-    );
+  return (
+    <img
+      src={src}
+      alt={defaultAltText}
+      className={className}
+      loading="lazy"
+      onError={(e) => {
+        e.currentTarget.onerror = null;
+        e.currentTarget.src = "/placeholder.png";
+      }}
+    />
+  );
 };
 
 export default ImageWithFallback;

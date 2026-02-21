@@ -221,16 +221,30 @@ class FactoryHeuristics:
     # --- 5. Pending Evolution Proposals ------------------------------------
 
     def check_pending_evolution(self) -> None:
-        """Checks if the Scout agent has queued unreviewed evolution proposals."""
+        """Checks if the Scout agent has queued unreviewed evolution proposals.
+
+        Reports at most 3 proposals (oldest first) so the Chief does not try
+        to action the entire backlog in a single session.  Remaining count is
+        surfaced so the Chief knows a backlog exists.
+        """
         evo_dir = SPECS_DIR / "strategy" / "evolution"
         if evo_dir.exists():
-            proposals = [
-                p.name for p in evo_dir.glob("*.md") if p.name.upper() != "README.MD"
-            ]
-            if proposals:
+            all_proposals = sorted(
+                [p for p in evo_dir.glob("*.md")          # top-level only
+                 if p.name.upper() != "README.MD"],        # reviewed/ subdir excluded by *.md
+                key=lambda p: p.name,  # lexicographic ≈ date order
+            )
+            if all_proposals:
+                # Cap at 3 per session to prevent mass-parallel anchor conflicts
+                batch = all_proposals[:3]
+                remaining = len(all_proposals) - len(batch)
+                names = ", ".join(p.name for p in batch)
+                tail = f" (+{remaining} more — process in next session)" if remaining else ""
                 self.issues.append(
-                    f"[EVOLUTION] Tech Scout has {len(proposals)} pending proposal(s) "
-                    f"awaiting Chief review: {', '.join(proposals)}"
+                    f"[EVOLUTION] Tech Scout has {len(all_proposals)} pending proposal(s) "
+                    f"awaiting Chief review (batch of {len(batch)}): {names}{tail}. "
+                    f"CHIEF RULE: process ONLY this batch of {len(batch)} this session. "
+                    f"Use delegate_data per proposal. Do NOT schedule all at once."
                 )
 
     # --- 6. Backend Integrity Checks ---------------------------------------
@@ -532,6 +546,82 @@ def get_insights_for_chief(include_stubs: bool = True) -> str:
         lines.append(f"  {i}. {issue}")
     lines.append("=== END SENIOR SCAN ===")
     return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# DEATH LOOP DIAGNOSIS  (On-Call Senior Architect)
+# ---------------------------------------------------------------------------
+DEATH_LOOP_SYSTEM_PROMPT = """
+You are the ON-CALL SENIOR ARCHITECT (Level 9) for the Halilit Dark Factory.
+
+A DEATH LOOP has been detected: the same task has failed multiple times with the same approach.
+
+Your job:
+1. Read the failure context provided.
+2. Identify WHY the previous approach failed.
+3. Prescribe a COMPLETELY DIFFERENT strategy.
+
+RULES:
+- NEVER suggest the same approach that already failed (same tool, same args).
+- Be specific: name the exact tool or file to use instead.
+- If the failure is a 'patch_component' anchor miss → mandate 'sandbox' or full file rewrite.
+- If the failure is a missing import → mandate the exact import path fix.
+- If the failure is a 'delegate_frontend' loop → mandate a design review step first.
+
+Always end your response with exactly this format (one line):
+SYSTEM OVERRIDE MANDATE: [your exact instruction for the Chief to follow]
+"""
+
+
+def diagnose_death_loop(failed_task_intent: str, previous_attempts: int = 1) -> str:
+    """
+    Called by nexus.py when consecutive_failures >= 2.
+    Reads recent log + KANBAN context, calls LLM with DEATH_LOOP_SYSTEM_PROMPT,
+    returns a mandate string the Chief will inject via senior_override.
+    Safe fallback if LLM is unavailable.
+    """
+    # --- Gather context ---
+    log_path = ROOT_DIR / "factory_logs" / "autopilot_halt.log"
+    kanban_path = ROOT_DIR / "FACTORY_KANBAN.md"
+
+    log_tail = ""
+    if log_path.exists():
+        lines = log_path.read_text(
+            encoding="utf-8", errors="replace").splitlines()
+        log_tail = "\n".join(lines[-50:])
+
+    kanban_snippet = ""
+    if kanban_path.exists():
+        kanban_snippet = kanban_path.read_text(
+            encoding="utf-8", errors="replace")[:2000]
+
+    context_block = (
+        f"FAILED TASK INTENT: {failed_task_intent}\n"
+        f"PREVIOUS ATTEMPTS: {previous_attempts}\n\n"
+        f"--- RECENT LOG (last 50 lines) ---\n{log_tail}\n\n"
+        f"--- FACTORY_KANBAN (truncated) ---\n{kanban_snippet}\n"
+    )
+
+    try:
+        mandate = query_llm(
+            system_prompt=DEATH_LOOP_SYSTEM_PROMPT,
+            user_message=context_block,
+            model_tier="smart",
+        )
+        # Ensure mandate line is always present
+        if "SYSTEM OVERRIDE MANDATE:" not in mandate:
+            mandate += (
+                "\n\nSYSTEM OVERRIDE MANDATE: Stop retrying the same approach. "
+                "Use 'sandbox' tool to rewrite the target file from scratch, "
+                "then verify with get_errors before continuing."
+            )
+        return mandate.strip()
+    except Exception as exc:  # noqa: BLE001
+        return (
+            f"SYSTEM OVERRIDE MANDATE: LLM unavailable ({exc}). "
+            "Do NOT retry the previous approach. "
+            "Use 'sandbox' to rewrite the failing component from scratch."
+        )
 
 
 if __name__ == "__main__":

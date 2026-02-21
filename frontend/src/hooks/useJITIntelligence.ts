@@ -1,8 +1,4 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import type { VerdictData } from "../components/cockpit/VerdictCard";
-import type { ReviewSource } from "../components/cockpit/TrustedConsensus";
-import type { FieldNotesData } from "../components/cockpit/FieldNotes";
-import type { ExplorationPath } from "../components/cockpit/ExplorationDock";
 
 /**
  * JIT Intelligence phases:

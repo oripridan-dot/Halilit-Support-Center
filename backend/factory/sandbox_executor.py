@@ -25,6 +25,15 @@ from enum import Enum
 from pathlib import Path
 from typing import Callable
 
+# Oracle import — optional; degrades gracefully if unavailable
+try:
+    from oracle_agent import consult_external_oracle as _oracle_call
+except ImportError:
+    try:
+        from .oracle_agent import consult_external_oracle as _oracle_call  # type: ignore
+    except ImportError:
+        _oracle_call = None  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
@@ -303,6 +312,9 @@ def inner_loop(
     builder_fn: Callable[[str, str | None], bool],
     max_rounds: int = 5,
     verbose: bool = True,
+    intent: str = "",
+    target_file: Path | None = None,
+    oracle_trigger_round: int = 2,
 ) -> bool:
     """
     Autonomous self-healing execution loop.
@@ -313,15 +325,22 @@ def inner_loop(
         3. Run Verification Suite.
         4. If all pass → return True.
         5. If failure → package error, call builder_fn(spec_text, error) again.
-        6. Repeat up to max_rounds.
+        6. After oracle_trigger_round consecutive failures, call JIT Oracle
+           Lifeline and inject Rescue Protocol into the next error_feedback.
+        7. Repeat up to max_rounds.
 
     Args:
-        spec_text:   The full spec markdown text.
-        builder_fn:  A callable(spec_text, error_feedback) -> bool.
-                     MUST write the generated code to disk and return True on
-                     success (or False if the LLM returned nothing useful).
-        max_rounds:  Maximum self-healing iterations before giving up.
-        verbose:     Print progress.
+        spec_text:            The full spec markdown text.
+        builder_fn:           A callable(spec_text, error_feedback) -> bool.
+                              MUST write the generated code to disk and return
+                              True on success (or False if the LLM returned
+                              nothing useful).
+        max_rounds:           Maximum self-healing iterations before giving up.
+        verbose:              Print progress.
+        intent:               Human-readable goal; passed to Oracle on escalation.
+        target_file:          Path to the output file; Oracle reads it for context.
+        oracle_trigger_round: Escalate to Oracle after this many consecutive
+                              failures (default: 2).  Set to 0 to disable.
 
     Returns:
         True if the suite passed before max_rounds, False otherwise.
@@ -337,6 +356,8 @@ def inner_loop(
         print(f"🔬  Found {len(commands)} verification command(s).")
 
     error_feedback: str | None = None
+    _consecutive_failures = 0
+    _oracle_fired = False  # only call Oracle once per inner_loop run
 
     for round_num in range(1, max_rounds + 1):
         if verbose:
@@ -362,18 +383,53 @@ def inner_loop(
                 print(f"\n🎉  All checks PASSED on round {round_num}!")
             return True
 
+        _consecutive_failures += 1
         failure = vr.first_failure
-        if failure:
-            error_feedback = (
-                f"Your code failed the automated verification check.\n"
-                f"Command: `{failure.command.label}`\n"
-                f"Error output:\n{failure.error_summary}\n\n"
-                f"Fix ALL issues listed above before resubmitting. "
-                f"Do NOT repeat the same mistake. Study every line of the error carefully."
-            )
+        raw_error = (
+            f"Your code failed the automated verification check.\n"
+            f"Command: `{failure.command.label}`\n"
+            f"Error output:\n{failure.error_summary}\n\n"
+            f"Fix ALL issues listed above before resubmitting. "
+            f"Do NOT repeat the same mistake. Study every line of the error carefully."
+        ) if failure else (error_feedback or "Unknown verification failure.")
+
+        # ── JIT Oracle Lifeline ──────────────────────────────────────────
+        # After oracle_trigger_round consecutive failures, phone the Oracle
+        # for an unpolluted, outside-the-box Rescue Protocol.
+        if (
+            oracle_trigger_round > 0
+            and _consecutive_failures >= oracle_trigger_round
+            and not _oracle_fired
+            and _oracle_call is not None
+        ):
+            _oracle_fired = True
+            _oracle_intent = intent or "(see spec below)\n" + spec_text[:800]
+            _current_code = ""
+            if target_file and target_file.exists():
+                try:
+                    _current_code = target_file.read_text(encoding="utf-8")
+                except OSError:
+                    pass
             if verbose:
                 print(
-                    f"\n⚠️  Verification FAILED — feeding error back to Builder (round {round_num+1})...")
+                    f"\n⚠️  Swarm detecting high uncertainty/failure loop ({_consecutive_failures} failures).")
+            rescue_protocol = _oracle_call(
+                intent=_oracle_intent,
+                current_code=_current_code,
+                error_logs=raw_error,
+            )
+            if verbose:
+                print("🔄  Chief adopting Oracle Rescue Protocol...")
+            raw_error = (
+                f"🚨 ORACLE RESCUE PROTOCOL (adopt this strategy immediately) 🚨\n"
+                f"{rescue_protocol}\n\n"
+                f"--- ORIGINAL VERIFICATION ERROR ---\n{raw_error}"
+            )
+
+        error_feedback = raw_error
+        if verbose:
+            print(
+                f"\n⚠️  Verification FAILED — feeding error back to Builder (round {round_num+1})...")
 
     if verbose:
         print(

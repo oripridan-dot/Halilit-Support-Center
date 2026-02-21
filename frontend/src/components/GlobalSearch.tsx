@@ -53,9 +53,26 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const productMap = useMemo(() => {
-    const map = new Map<string, { id: string, name: string, brand: string, image_url?: string, category?: string, subcategory?: string }>();
+    const map = new Map<
+      string,
+      {
+        id: string;
+        name: string;
+        brand: string;
+        image_url?: string;
+        category?: string;
+        subcategory?: string;
+      }
+    >();
     for (const p of products) {
-      map.set(p.id, { id: p.id, name: p.name, brand: p.brand, image_url: p.image_url, category: p.category, subcategory: p.subcategory });
+      map.set(p.id, {
+        id: p.id,
+        name: p.name,
+        brand: p.brand,
+        image_url: p.image_url,
+        category: p.category,
+        subcategory: p.subcategory,
+      });
     }
     return map;
   }, [products]);
@@ -100,24 +117,27 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
             (product) =>
               product.name.toLowerCase().includes(searchTerm) ||
               product.brand.toLowerCase().includes(searchTerm) ||
-              product.id.toLowerCase().includes(searchTerm)
+              product.id.toLowerCase().includes(searchTerm),
           )
-          .filter(product => product.id.toUpperCase() !== trimmed.toUpperCase());
-        
-        searchResults = searchResults.concat(otherResults.slice(0, maxResults - (exactMatch ? 1 : 0)));
+          .filter(
+            (product) => product.id.toUpperCase() !== trimmed.toUpperCase(),
+          );
 
+        searchResults = searchResults.concat(
+          otherResults.slice(0, maxResults - (exactMatch ? 1 : 0)),
+        );
 
         setResults(searchResults);
         setError(null);
       } catch (e: any) {
-        if (e.name !== 'AbortError') {
-          setError(e.message || 'An error occurred during search.');
+        if (e.name !== "AbortError") {
+          setError(e.message || "An error occurred during search.");
         }
         setResults([]);
       } finally {
         setLoading(false);
       }
-    }, 200);
+    }, 300);
 
     return () => {
       clearTimeout(timeoutId);
@@ -183,10 +203,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const resultCount = results.length;
 
   return (
-    <div
-      ref={wrapperRef}
-      className={`relative w-full ${className}`}
-    >
+    <div ref={wrapperRef} className={`relative w-full ${className}`}>
       <div className="relative">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <Search className="w-5 h-5 text-zinc-400" />
@@ -231,11 +248,14 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
               </button>
             </div>
           )}
-          {!loading && !error && results.length === 0 && query.trim().length > 1 && (
-            <div className="px-4 py-2 text-sm text-zinc-400">
-              No results found.
-            </div>
-          )}
+          {!loading &&
+            !error &&
+            results.length === 0 &&
+            query.trim().length > 1 && (
+              <div className="px-4 py-2 text-sm text-zinc-400">
+                No results found.
+              </div>
+            )}
           {!loading &&
             !error &&
             results.map((result, index) => (

@@ -86,3 +86,5 @@ frontend/package-lock.json
 
 # === ROOT-LEVEL GENERATED ===
 .agent_memory/
+frontend/public/data/galaxy_db.json
+specs/temp/
