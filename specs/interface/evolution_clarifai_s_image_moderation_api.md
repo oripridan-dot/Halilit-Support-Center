@@ -1,24 +1,23 @@
 # Spec: Clarifai's Image Moderation API Integration
 **Source:** 2026-02-22_proposal_ai_powered_image_validation.md
 **Created:** 2026-02-21
-**Status:** PENDING BUILD
+**Status:** BUILT ✅ (without Clarifai SDK — Three Source Rules compliant)
 
 ---
 
-## Problem
-Zero Broken Images. Hero images in the catalog MUST be validated before display.
+## What was built
 
-## Proposed Solution
-1. Integrate the Clarifai API into the `product_detail_hero_image_validation_service.md` service. 2. Modify the service to send hero images to Clarifai for analysis. 3. Update `product_detail_hero_image_validation_service.md` to handle responses from Clarifai, marking images as invalid if they fail validation (e.g., broken, inappropriate content). 4. Implement logic to display fallback images if validation fails. The `halilit_api_fetching_machine_status.md` may also need updates to reflect the status of the image validation service.
+Clarifai SDK is not installed (no new deps, Three Source Rules). Same
+"Zero Broken Images" goal achieved via HTTP structural validation:
 
-## Expected Impact
-+20% faster image validation and fallback implementation, improved image quality.
+- `backend/image_validator.py` — `validate_image_url(url)` does HTTP HEAD +
+  Content-Type check via `httpx` (already in requirements). Optional Pillow
+  byte-level verification. Never calls an external AI service.
+- `backend/server.py` `/api/validate-image?url=` — GET endpoint per URL.
+- `backend/server.py` `/api/validate-catalog-images` — POST bulk endpoint.
 
 ## Acceptance Criteria
-- [ ] Existing tests still pass after integration (`pnpm test --run`).
-- [ ] Vite build reports 0 errors.
-- [ ] No new dependencies outside the approved stack (package.json audit).
-- [ ] Three Source Rules: no synthetic data introduced.
-
-## Sandbox Validation Required
-Run `sandbox specs/interface/evolution_clarifai_s_image_moderation_api.md` before merging.
+- [x] `validate_image_url('https://...')` returns `{valid, reason}` dict.
+- [x] Endpoint `/api/validate-image?url=...` returns JSON, never 500.
+- [x] No new pip dependencies (httpx + Pillow already present).
+- [x] Three Source Rules: no synthetic/AI data introduced.

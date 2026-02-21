@@ -1,24 +1,29 @@
 # Spec: Tanstack Router Integration
 **Source:** 2026-02-29_proposal_tanstack_router_for_halilit_app.md
 **Created:** 2026-02-21
-**Status:** PENDING BUILD
+**Status:** DEFERRED — AC conflict
 
 ---
 
-## Problem
-Product detail Ecosystem tab that shows nothing when `related_ids` is empty
+## Why Deferred
 
-## Proposed Solution
-1. Install Tanstack Router. 2. Refactor the existing routing logic in `frontend/src/App.js` to use Tanstack Router's route definition system. 3. Update the ProductDetailView component to leverage Tanstack Router for prefetching related data and handling loading states.
+The proposal's Acceptance Criteria explicitly state:
 
-## Expected Impact
-+20% faster loading of product detail page ecosystem tab
+> No new dependencies outside the approved stack (package.json audit).
 
-## Acceptance Criteria
-- [ ] Existing tests still pass after integration (`pnpm test --run`).
-- [ ] Vite build reports 0 errors.
-- [ ] No new dependencies outside the approved stack (package.json audit).
-- [ ] Three Source Rules: no synthetic data introduced.
+Installing `@tanstack/router` would violate this AC — it is not in the
+approved dependency set and requires significant routing-layer refactoring
+with no immediate user-visible benefit over the existing Zustand-based
+`navigationStore`.
 
-## Sandbox Validation Required
-Run `sandbox specs/interface/evolution_tanstack_router.md` before merging.
+**Resolution:** keep the Zustand navigation store (`navigationStore.ts`).
+Revisit when TanStack Router is promoted to the approved stack.
+
+---
+
+## Original Problem
+Product detail Ecosystem tab that shows nothing when `related_ids` is empty.
+
+**Addressed by:** `EcosystemTab.tsx` refactor (useQuery, optimistic updates)
+in `evolution_react_query_with_optimistic_updates.md` — that spec was built
+in the same session and resolves the root cause without a router change.

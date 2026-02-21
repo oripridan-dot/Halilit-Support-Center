@@ -3,6 +3,12 @@ import { useQuery, keepPreviousData } from '@tanstack/react-query';
 
 const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
+/** How long catalog data is considered fresh (ms). */
+const CATALOG_STALE_TIME = 30_000; // 30 s
+
+/** Auto-refetch interval for stock-level awareness (ms). */
+const CATALOG_REFETCH_INTERVAL = 60_000; // 1 min
+
 export interface ConductorProduct {
   id: string;
   name: string;
@@ -74,6 +80,8 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
       return response.json() as Promise<PaginatedCatalogResponse>;
     },
     placeholderData: keepPreviousData,
+    staleTime: CATALOG_STALE_TIME,
+    refetchInterval: CATALOG_REFETCH_INTERVAL,
     enabled: params.enabled !== false,
   });
 

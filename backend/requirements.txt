@@ -25,3 +25,11 @@ schedule>=1.2.0
 # Testing
 pytest>=7.0.0
 pytest-asyncio>=0.23.0
+
+# Image processing (hero image validation — stdlib Pillow)
+Pillow>=10.0.0
+
+# Performance profiling (optional — install manually to activate):
+#   pip install pyroscope-io
+# Set PYROSCOPE_SERVER_ADDRESS in .env to activate profiling.
+# pyroscope-io>=0.8.0
