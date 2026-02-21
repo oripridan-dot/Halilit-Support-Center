@@ -208,3 +208,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Unknown.
 **Fix:** Not documented.
 **Lesson:** ALWAYS provide detailed failure context when calling 'reflect'.
+
+### [2026-02-21] Reduce Task Scope
+**Symptom:** delegate_data task timed out.
+**Root Cause:** Task scope was too broad.
+**Fix:** Limited task scope to one vendor.
+**Lesson:** ALWAYS scope tasks to reasonable limits.

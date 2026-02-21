@@ -23,7 +23,7 @@ import { LiquidCanvas, type LiquidSchema } from "./LiquidCanvas";
 /**
  * Represents the result of submitting an innovation request to the deep pipeline.
  */
-interface InnovationResult {
+interface InnovationRequestResult {
   status: string;
   message: string;
 }
@@ -31,7 +31,7 @@ interface InnovationResult {
 /**
  * Represents the result of a Liquid JIT synthesis.
  */
-interface LiquidResult {
+interface LiquidRequestResult {
   status: "success" | "error";
   ui_schema?: LiquidSchema;
   sql_preview?: string;
@@ -42,7 +42,7 @@ interface LiquidResult {
  * Represents the different states of the innovation panel.
  * "liquid" = LiquidCanvas overlay is active.
  */
-type PanelState =
+type InnovationPanelState =
   | "idle"
   | "submitting"
   | "success"
@@ -50,7 +50,7 @@ type PanelState =
   | "liquid";
 
 /** Submission mode: instant SDUI ("liquid") or full file-writing pipeline ("deep"). */
-type SubmissionMode = "liquid" | "deep";
+type SubmitMode = "liquid" | "deep";
 
 // ---------------------------------------------------------------------------
 // Component
@@ -62,9 +62,9 @@ type SubmissionMode = "liquid" | "deep";
 export const JitInnovationButton: React.FC = () => {
   const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [innovationNeed, setInnovationNeed] = useState("");
-  const [panelState, setPanelState] = useState<PanelState>("idle");
+  const [panelState, setPanelState] = useState<InnovationPanelState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
-  const [submissionMode, setSubmissionMode] = useState<SubmissionMode>("liquid");
+  const [submitMode, setSubmitMode] = useState<SubmitMode>("liquid");
   const [liquidSchema, setLiquidSchema] = useState<LiquidSchema | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -113,7 +113,7 @@ export const JitInnovationButton: React.FC = () => {
 
     setPanelState("submitting");
 
-    if (submissionMode === "liquid") {
+    if (submitMode === "liquid") {
       setStatusMessage("Liquid Engine synthesising…");
       try {
         const response = await fetch("/api/innovation/liquid", {
@@ -129,7 +129,7 @@ export const JitInnovationButton: React.FC = () => {
         if (!response.ok)
           throw new Error(`Server responded with ${response.status}`);
 
-        const data: LiquidResult = await response.json();
+        const data: LiquidRequestResult = await response.json();
 
         if (data.status === "success" && data.ui_schema) {
           setLiquidSchema(data.ui_schema);
@@ -164,7 +164,7 @@ export const JitInnovationButton: React.FC = () => {
         if (!response.ok)
           throw new Error(`Server responded with ${response.status}`);
 
-        const data: InnovationResult = await response.json();
+        const data: InnovationRequestResult = await response.json();
         setPanelState("success");
         setStatusMessage(
           data.message ??
@@ -195,7 +195,7 @@ export const JitInnovationButton: React.FC = () => {
   // Render
   // ---------------------------------------------------------------------------
 
-  return ( // _self_heal_patch_component
+  return (
     <>
       {/* ── Liquid Canvas (full-screen overlay when a schema is ready) ── */}
       {panelState === "liquid" && liquidSchema && (
@@ -240,7 +240,7 @@ export const JitInnovationButton: React.FC = () => {
             fixed bottom-20 right-5 z-50
             w-[380px] max-w-[calc(100vw-2rem)]
             rounded-2xl border border-zinc-800
-            bg-slate-900 shadow-2xl shadow-black/60
+            bg-[#0f0f0f] shadow-2xl shadow-black/60
             flex flex-col overflow-hidden
             transition-all duration-200
           "
@@ -255,7 +255,7 @@ export const JitInnovationButton: React.FC = () => {
                 💡 Request a JIT Feature
               </h2>
               <p className="text-[11px] text-zinc-500 mt-0.5">
-                {submissionMode === "liquid"
+                {submitMode === "liquid"
                   ? "Liquid mode — instant SDUI, no compilation."
                   : "Deep mode — full pipeline + spec proposal."}
               </p>
@@ -264,9 +264,9 @@ export const JitInnovationButton: React.FC = () => {
               {/* Mode toggle */}
               <div className="flex rounded-md overflow-hidden border border-zinc-700 text-[10px] font-medium">
                 <button
-                  onClick={() => setSubmissionMode("liquid")}
+                  onClick={() => setSubmitMode("liquid")}
                   className={`px-2.5 py-1 transition-colors ${
-                    submissionMode === "liquid"
+                    submitMode === "liquid"
                       ? "bg-blue-600 text-white"
                       : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
                   }`}
@@ -275,9 +275,9 @@ export const JitInnovationButton: React.FC = () => {
                   🌊 Liquid
                 </button>
                 <button
-                  onClick={() => setSubmissionMode("deep")}
+                  onClick={() => setSubmitMode("deep")}
                   className={`px-2.5 py-1 transition-colors ${
-                    submissionMode === "deep"
+                    submitMode === "deep"
                       ? "bg-purple-700 text-white"
                       : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
                   }`}
@@ -386,14 +386,14 @@ export const JitInnovationButton: React.FC = () => {
                   className={`
                     px-4 py-1.5 rounded-lg text-xs font-semibold
                     ${
-                      submissionMode === "liquid"
+                      submitMode === "liquid"
                         ? "bg-blue-600 hover:bg-blue-500"
                         : "bg-purple-700 hover:bg-purple-600"
                     } disabled:opacity-40 disabled:cursor-not-allowed
                     text-white transition-all active:scale-95
                   `}
                 >
-                  {submissionMode === "liquid"
+                  {submitMode === "liquid"
                     ? "🌊 Synthesise"
                     : "🧬 Send to Factory →"}
                 </button>

@@ -23,6 +23,9 @@ from backend.unified_data_service_v73 import get_conductor_data_service
 from backend.scrapers.comparison_api import ComparisonAPI
 from backend.scrapers.ingestion_orchestrator import IngestionOrchestrator
 from backend.scrapers.thomann_scraper import ThomannScraper, ThomannProduct
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 import os
 import sys
@@ -36,8 +39,12 @@ import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 from datetime import datetime
 from fastapi import FastAPI, Request, Query, BackgroundTasks
+=======
+from fastapi import FastAPI, BackgroundTasks
+>>>>>>> Stashed changes
 =======
 from fastapi import FastAPI, BackgroundTasks
 >>>>>>> Stashed changes
@@ -1087,6 +1094,7 @@ async def refresh_conductor_status():
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # ═══════════════════════════════════════════════════════════════════════════
 # BATCH IMAGE LOOKUP — lightweight endpoint for focus-zone enrichment
 # Checks JIT cache for images without triggering full JIT pipeline.
@@ -1112,6 +1120,8 @@ async def batch_image_lookup(request: Request):
                 status_code=400,
                 content={"error": "product_ids must be a list of max 200 IDs"},
 =======
+=======
+>>>>>>> Stashed changes
             # 🌐 GET REAL THOMANN DATA (no longer using fake hardcoded database)
             thomann_by_brand = get_thomann_products_by_brand()
             thomann_data = thomann_by_brand.get(brand, {})
@@ -1506,6 +1516,128 @@ async def jit_product_intelligence(product_id: str):
 # STATIC FILES & FRONTEND
 # ═══════════════════════════════════════════════════════════════════════════
 =======
+# ========== FULL-SCALE COMPARISON ENDPOINTS (v2) ==========
+
+# Initialize comparison API (singleton)
+_comparison_api = None
+
+
+def get_comparison_api():
+    global _comparison_api
+    if _comparison_api is None:
+        _comparison_api = ComparisonAPI()
+    return _comparison_api
+
+
+@app.post("/api/v2/comparison/full/run-ingestion")
+async def run_full_ingestion(background_tasks: BackgroundTasks, skip_halilit: bool = False, skip_thomann: bool = False):
+    """
+    Start full-scale data ingestion in background.
+    Scrapes all products from Halilit.com and Thomannmusic.com with pagination.
+
+    Returns immediately, ingestion runs in background (30-60 minutes).
+    """
+    try:
+        def ingestion_task():
+            try:
+                orchestrator = IngestionOrchestrator()
+                logger.info("🚀 Starting full-scale ingestion...")
+                orchestrator.run_full_ingestion(
+                    skip_halilit=skip_halilit, skip_thomann=skip_thomann)
+                logger.info("✅ Full-scale ingestion complete")
+                # Clear API cache after ingestion
+                api = get_comparison_api()
+                api.clear_cache()
+            except Exception as e:
+                logger.error(f"❌ Ingestion failed: {e}", exc_info=True)
+
+        background_tasks.add_task(ingestion_task)
+        return {
+            "status": "ingestion_started",
+            "message": "Full-scale ingestion started in background",
+            "estimated_duration_minutes": "30-60",
+            "skip_halilit": skip_halilit,
+            "skip_thomann": skip_thomann
+        }
+    except Exception as e:
+        logger.error(f"Ingestion start error: {e}")
+        return {"error": str(e), "status": "failed"}, 500
+
+
+@app.get("/api/v2/comparison/full")
+async def get_full_comparison_overview():
+    """Get overview statistics of comparison database."""
+    try:
+        api = get_comparison_api()
+        stats = api.get_database_stats()
+        return {
+            "status": "success",
+            "data": stats
+        }
+    except Exception as e:
+        logger.error(f"Overview error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/paginated")
+async def get_paginated_comparisons(page: int = 1, page_size: int = 50, min_confidence: float = 0):
+    """Get paginated comparison results with optional filtering."""
+    try:
+        api = get_comparison_api()
+        results = api.get_paginated_comparisons(
+            page=page, page_size=page_size, min_confidence=min_confidence)
+        return {
+            "status": "success",
+            "page": page,
+            "page_size": page_size,
+            "min_confidence": min_confidence,
+            "data": results
+        }
+    except Exception as e:
+        logger.error(f"Pagination error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/brand/{brand}")
+async def get_brand_comparison_full(brand: str):
+    """Get comprehensive comparison for a specific brand."""
+    try:
+        api = get_comparison_api()
+        results = api.get_brand_comparison_all(brand=brand)
+        return {
+            "status": "success",
+            "brand": brand,
+            "data": results
+        }
+    except Exception as e:
+        logger.error(f"Brand comparison error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/export-csv")
+async def export_full_comparison_csv():
+    """Export all comparisons as CSV file."""
+    try:
+        api = get_comparison_api()
+        csv_path = api.export_full_comparison_csv()
+        return FileResponse(path=csv_path, media_type="text/csv", filename="comparison_full_export.csv")
+    except Exception as e:
+        logger.error(f"CSV export error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/database-stats")
+async def get_database_statistics():
+    """Get raw database statistics."""
+    try:
+        api = get_comparison_api()
+        stats = api.get_database_stats()
+        return stats
+    except Exception as e:
+        logger.error(f"Database stats error: {e}")
+        return {"error": str(e)}, 500
+
+
 # ========== FULL-SCALE COMPARISON ENDPOINTS (v2) ==========
 
 # Initialize comparison API (singleton)

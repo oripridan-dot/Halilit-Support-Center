@@ -1,4 +1,12 @@
 ## [v9.7.6] — 2026-02-21
+- [feat] Added full-scale comparison endpoints (v2).
+- [feat] Implemented `/api/v2/comparison/full/run-ingestion` endpoint for background data ingestion.
+- [feat] Implemented `/api/v2/comparison/full` endpoint to get overview statistics of comparison database.
+- [refactor] Moved `get_thomann_products_by_brand` function call.
+- [refactor] Refactored `batch_image_lookup` endpoint to check for max 200 IDs.
+- [fix] Fixed stashed changes merge conflicts.
+
+## [v9.7.6] — 2026-02-21
 ## v9.7.6
 
 - [feat] Added architecture diagrams for the scraping pipeline.
