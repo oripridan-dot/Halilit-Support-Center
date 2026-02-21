@@ -748,5 +748,61 @@ def review_architectural_plan(intent: str, proposed_plan: str) -> str:
         return f"[APPROVED] {verdict['feedback']}"
 
 
+# ---------------------------------------------------------------------------
+# BOARDROOM PROTOCOL — Advisory Consultation (NOT Execution)
+# ---------------------------------------------------------------------------
+
+BOARDROOM_SYSTEM_PROMPT = """You are the Senior Tech Lead and Principal Architect of the Halilit Support Center Dark Factory.
+The Governor (Operator) and the Chief Agent are bringing you into the Boardroom to consult on a new idea or proposal.
+
+ARCHITECTURE GROUND TRUTH (enforce these as laws):
+- Frontend: React 18 + Vite SPA. NEVER Next.js, NEVER SSR.
+- State: Zustand (app) + React Query (server). NEVER Redux, MobX, or new stores.
+- CSS: Tailwind CSS design-system tokens only. NEVER arbitrary hex colors.
+- Backend: Python 3.11 + FastAPI. NEVER Django, Flask.
+- Data purity: ZERO synthetic/mock/AI-generated data. Empty fields > fake fields.
+- Three Source Rules: Commercial (Halilit.com) owns prices/SKUs. Official (brand pages) owns specs/media. Contextual (3+ review sites) owns reviews. Mixing = immediate VETO.
+- No new dependencies without an Evolution Proposal in specs/strategy/evolution/.
+
+Your mandate is strictly ADVISORY. DO NOT write implementation code. DO NOT generate specs or task queues.
+
+1. Analyse the idea honestly and critically.
+2. Provide a harsh, direct critique: Is it brilliant? Is it overkill? Is it premature?
+3. Highlight specific architectural risks (e.g., 'This will bloat the frontend bundle', 'This violates Vite SPA constraints', 'This adds a network dependency to an offline-first tool').
+4. Suggest a cleaner, simpler alternative if one exists.
+5. End with a clear verdict on its own line:
+   [APPROVAL] — if you endorse the concept as designed.
+   [SUGGESTION] — if you endorse a modified version (state the modification).
+   [REJECTION] — if the idea is fundamentally flawed for our architecture.
+"""
+
+
+def consult_tech_lead_on_idea(idea_or_proposal: str) -> str:
+    """
+    Brings the Tech Lead into the Boardroom for architectural advice and consultation.
+
+    This is PURELY advisory — no code is generated, no specs are written,
+    no task queues are created. The Tech Lead analyses the idea, critiques it,
+    and issues one of: [APPROVAL], [SUGGESTION], or [REJECTION].
+
+    Called by nexus.py when the operator uses consulting language, and exposed
+    as an MCP tool so the Chief can invoke it before committing to execution.
+    """
+    print("\n" + "👔" * 10)
+    print("🏛️  BOARDROOM CONVENED: Consulting Tech Lead on new proposal...")
+    print(
+        f"   Idea: {idea_or_proposal[:120]}{'...' if len(idea_or_proposal) > 120 else ''}")
+
+    verdict = query_llm(
+        system_prompt=BOARDROOM_SYSTEM_PROMPT,
+        user_prompt=f"Proposal for Consultation:\n{idea_or_proposal}",
+        model_tier="smart",
+    )
+
+    print("   ✅  Tech Lead has provided advisory feedback.")
+    print("👔" * 10 + "\n")
+    return verdict or "[ERROR] Tech Lead unavailable — LLM did not respond."
+
+
 if __name__ == "__main__":
     generate_morning_briefing()

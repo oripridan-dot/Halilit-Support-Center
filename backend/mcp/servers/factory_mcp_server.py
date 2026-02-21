@@ -40,6 +40,9 @@ Tools exposed:
   update_roadmap       – Tick/untick tasks or move them to Completed.
   consult_product_manager – Ask the Agile PM to pitch the next sprint priority
                          and auto-generate an [EXECUTE] spec for the Chief.
+  consult_tech_lead_on_idea – Boardroom Protocol: bring the Tech Lead into an advisory
+                         session on a new idea or proposal. Returns [APPROVAL],
+                         [SUGGESTION], or [REJECTION] — NO code is generated.
 
   [Level 10 — Darwin Protocol: Architectural Self-Disruption]
   run_architectural_experiment – Activate the Darwin Agent on a hypothesis: generate
@@ -90,7 +93,7 @@ _FACTORY_PY = str(_ROOT / "factory.py")
 # MCP protocol constants
 # ---------------------------------------------------------------------------
 PROTOCOL_VERSION = "2024-11-05"
-SERVER_INFO = {"name": "halilit-factory", "version": "6.1.0"}
+SERVER_INFO = {"name": "halilit-factory", "version": "6.2.0"}
 
 # ---------------------------------------------------------------------------
 # Tool definitions
@@ -422,6 +425,27 @@ TOOLS: list[dict[str, Any]] = [
                 },
             },
             "required": ["task_name", "new_status"],
+        },
+    },
+    {
+        "name": "consult_tech_lead_on_idea",
+        "description": (
+            "Boardroom Protocol — Advisory only, NOT execution. Brings the Senior Tech Lead "
+            "into an architectural consultation on a new idea or proposal before any code is "
+            "written. Call this when the Operator asks 'what do you think?', 'should we...', "
+            "or 'is this a good idea?'. The Tech Lead will analyse the idea against our strict "
+            "architecture laws and return an [APPROVAL], [SUGGESTION], or [REJECTION] verdict. "
+            "DO NOT call this when the Operator says 'build' or 'execute'."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "idea_or_proposal": {
+                    "type": "string",
+                    "description": "The idea, proposal, or question to consult the Tech Lead on.",
+                }
+            },
+            "required": ["idea_or_proposal"],
         },
     },
     {
@@ -856,6 +880,19 @@ def _tool_update_roadmap(args: dict[str, Any]) -> str:
         return f"[ERROR] Could not update roadmap: {exc}"
 
 
+def _tool_consult_tech_lead_on_idea(args: dict[str, Any]) -> str:
+    """Boardroom Protocol — advisory-only consultation with the Senior Tech Lead."""
+    idea_or_proposal: str = args.get("idea_or_proposal", "").strip()
+    if not idea_or_proposal:
+        return "[ERROR] idea_or_proposal is required. Describe the idea or proposal to consult on."
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from tech_lead_agent import consult_tech_lead_on_idea  # type: ignore
+        return consult_tech_lead_on_idea(idea_or_proposal)
+    except Exception as exc:
+        return f"[ERROR] Tech Lead unavailable: {exc}"
+
+
 def _tool_consult_product_manager(args: dict[str, Any]) -> str:
     """Ask the PM to brief the Operator on the next roadmap priority."""
     user_input: str = args.get("user_input", "What's next?").strip()
@@ -953,6 +990,7 @@ _TOOL_HANDLERS = {
     # Backlog Engine / PM tools
     "read_roadmap": _tool_read_roadmap,
     "update_roadmap": _tool_update_roadmap,
+    "consult_tech_lead_on_idea": _tool_consult_tech_lead_on_idea,
     "consult_product_manager": _tool_consult_product_manager,
     # Darwin Protocol — Architectural Self-Disruption (Level 10)
     "run_architectural_experiment": _tool_run_architectural_experiment,
