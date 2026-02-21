@@ -996,6 +996,11 @@ async def crash_report(
     except Exception:
         payload = {"message": "(unparseable payload)", "event": {}}
 
+    # Skip agent processing for validation / CI probes to avoid false alarms.
+    env = payload.get("environment") or (payload.get("event") or {}).get("environment") or ""
+    if env in ("test", "validation", "ci"):
+        return {"status": "received", "message": "Test probe acknowledged — Sovereign Nerve not triggered."}
+
     try:
         from backend.factory.telemetry_agent import process_production_error  # type: ignore
         background_tasks.add_task(process_production_error, payload)

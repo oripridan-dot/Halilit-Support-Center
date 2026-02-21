@@ -260,7 +260,8 @@ def test_api_endpoints():
         try:
             payload = json.dumps({"event": {"title": "validation-probe"},
                                    "stacktrace": "none",
-                                   "culprit": "test_pipeline.py"}).encode()
+                                   "culprit": "test_pipeline.py",
+                                   "environment": "test"}).encode()
             req = urllib.request.Request(
                 url, data=payload,
                 headers={"Content-Type": "application/json"},
