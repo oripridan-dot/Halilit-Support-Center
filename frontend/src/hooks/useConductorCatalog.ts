@@ -1,13 +1,13 @@
 import { useState, useMemo } from 'react';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import {
-  CONDUCTOR_CATALOG_ENDPOINT,
+  CATALOG_ENDPOINT,
   CatalogRequestParams,
-  CatalogResponse,
+  PaginatedCatalogResponse,
   ConductorProduct,
-} from './implement_backend_pagination_for_catalog_data_in_useconducto.schema.ts';
+} from './implement_backend_pagination_for_useconductorcatalog_final_s.schema';
 
-export type { ConductorProduct, CatalogResponse, CatalogRequestParams };
+export type { ConductorProduct, PaginatedCatalogResponse, CatalogRequestParams };
 
 interface UseConductorCatalogParams extends CatalogRequestParams {
   enabled?: boolean;
@@ -30,7 +30,7 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
     [page, pageSize, params.searchQuery, sortBy, params.category, params.brand],
   );
 
-  const { data, isLoading, error, refetch } = useQuery<CatalogResponse, Error>({
+  const { data, isLoading, error, refetch } = useQuery<PaginatedCatalogResponse, Error>({
     queryKey: ['conductorCatalog', queryParams],
     queryFn: async () => {
       const searchParams = new URLSearchParams();
@@ -41,12 +41,12 @@ export const useConductorCatalog = (params: UseConductorCatalogParams = {}) => {
       if (queryParams.category) searchParams.append('category', queryParams.category);
       if (queryParams.brand) searchParams.append('brand', queryParams.brand);
 
-      const url = `${CONDUCTOR_CATALOG_ENDPOINT}?${searchParams.toString()}`;
+      const url = `${CATALOG_ENDPOINT}?${searchParams.toString()}`;
       const response = await fetch(url, { headers: { Accept: 'application/json' } });
       if (!response.ok) {
         throw new Error(`Catalog fetch failed ${response.status}: ${response.statusText}`);
       }
-      return response.json() as Promise<CatalogResponse>;
+      return response.json() as Promise<PaginatedCatalogResponse>;
     },
     placeholderData: keepPreviousData,
     enabled: params.enabled !== false,
