@@ -1,21 +1,17 @@
-# Spec: Final Enforcement of Backend Pagination and Removal of `galaxy_db.json` with Enhanced UI Feedback and Stock/CfP Sorting
-
-**Version:** 5.0
+# Spec: Implement Backend Pagination for useConductorCatalog (Final + Skeleton Loading)
+**Version:** 7.0
 **Component:** `frontend/src/hooks/useConductorCatalog.ts`
 
 ## Purpose
 
-This specification represents the culmination of efforts to eliminate reliance on the large `galaxy_db.json` file, ensuring optimal performance and scalability for the Halilit Support Center. This version introduces polished UI elements for loading, error handling, and enhanced control over sorting based on stock and "Call for Price" (CfP) status. It completely removes `galaxy_db.json`, enforcing backend pagination and providing a seamless user experience.
+Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the critical issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API and uses skeleton loading.
 
 ## Requirements
 
-1.  **Irreversible `galaxy_db.json` Elimination:** Physically DELETE the `frontend/public/data/galaxy_db.json` file. No vestige of this file should remain in the codebase.
-
-2.  **Unwavering Dependency Isolation:** The `useConductorCatalog` hook MUST *exclusively* fetch data from the `/api/conductor/catalog` endpoint. Any attempt to access or import `galaxy_db.json` will constitute a failure.
-
-3.  **Robust Backend Pagination Implementation:** The `/api/conductor/catalog` endpoint MUST correctly interpret `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` query parameters, delivering a paginated response with accurate metadata: `products`, `totalItems`, `totalPages`, `currentPage`, `pageSize`. The backend MUST default `pageSize` to 25 and `page` to 1 if these parameters are omitted. The sorting MUST place "In Stock" items first, then sort CfP above non-CfP items within each stock group.
-
-4.  **Strict Data Contract Adherence:** The `/api/conductor/catalog` endpoint's response MUST conform to the following TypeScript interface:
+1.  **Total `galaxy_db.json` Removal:** Physically DELETE the `frontend/public/data/galaxy_db.json` file.
+2.  **`useConductorCatalog` Dependency Isolation:** Ensure the `useConductorCatalog` hook *solely* relies on the `/api/conductor/catalog` endpoint for data. It must NOT attempt to import or read `galaxy_db.json` under any circumstances.
+3.  **Backend Pagination Endpoint:** Verify that the `/api/conductor/catalog` endpoint correctly accepts `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` query parameters and returns a paginated subset of the catalog data, along with metadata about the total number of items and pages. The backend should default `pageSize` to 25 if not specified, and if `page` is not specified, it should default to 1. If sorting parameters are being passed, preserve them.
+4.  **Data Contract Validation:** Ensure the data contract for `/api/conductor/catalog` includes pagination metadata:
 
     ```typescript
     interface PaginatedCatalogResponse {
@@ -27,68 +23,47 @@ This specification represents the culmination of efforts to eliminate reliance o
     }
     ```
 
-5.  **`useConductorCatalog` Hook Implementation — The Final Word:**
-    *   The hook MUST accept optional `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` parameters, defaulting to `1`, `25`, `''`, `''`, `''`, and `''` respectively.
-    *   Data retrieval from the paginated `/api/conductor/catalog` endpoint MUST leverage the provided parameters.
-    *   The hook MUST accurately return `products`, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
-    *   `react-query` MUST manage data fetching and caching.
-    *   A polished "research animation" (e.g., animated magnifying glass icon) MUST be displayed during data fetching, providing clear visual feedback.
-    *   Graceful error handling with a "retry" banner MUST be implemented to address API failures.
-    *   `ImageWithFallback` MUST be used for all product images, ensuring a consistent and reliable image loading experience.
-    *   Stock and CfP sorting MUST be applied according to Spec `interface/inventory_search_stock_cfp_sorting.md`.
-
-6.  **Aggressive Filtering and Sorting Integration:** The `useConductorCatalog` hook must seamlessly integrate filtering and sorting, ensuring all user-specified criteria are communicated to the backend API.
-
-7.  **Loading State Enforcement:** A loading state with a research animation MUST be actively displayed while catalog data is being fetched.
+5.  **`useConductorCatalog` Hook Implementation:** Ensure the `useConductorCatalog` hook:
+    *   Accepts optional `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` parameters with default values of `1`, `25`, `''`, `''`, `''`, and `''` respectively.
+    *   Fetches data from the paginated `/api/conductor/catalog` endpoint using the provided parameters.
+    *   Returns the `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
+    *   Uses `react-query` to manage the fetching and caching of paginated data.
+    *   Implement skeleton components for loading states in parent components using the hook.
 
 ## Stitch UI Prompt
-
 ```text
-// Target Component: InventoryView or ProductTile (depending on where you use the hook)
-// Description: The component that consumes the useConductorCatalog hook
-// Style: Dark mode, Tailwind CSS, slate-900 background, blue-500 accents
+// Target Component: useConductorCatalog hook implementation
+// Description: This prompt focuses on creating the skeleton loading states
 
-// Layout:
-// The layout depends on the parent component (InventoryView or ProductTile). For InventoryView, it's a grid; for ProductTile, it's a card.
+// The component using useConductorCatalog should have a main container with:
+// Layout: Flexbox, direction column
+// Style: dark mode, slate-900 background
 
-// Visual Style:
-// Background: slate-900
-// Text: zinc-400
-// Primary color: blue-500 (for interactive elements like buttons/links)
-// Accent color: zinc-700 (for separators/borders)
+// Before catalog data is loaded, show the following skeleton placeholders:
 
-// State Management:
-// Assume that the component is connected to a Zustand store that provides the following state:
-// - isLoading: boolean (true while the data is loading, false otherwise)
-// - error: string | null (error message if there's an error, null otherwise)
-// - totalItems: number (total number of items in the catalog)
-// - currentPage: number (current page number)
-// - pageSize: number (number of items per page)
-// - products: ConductorProduct[] (array of products to display)
+// 1. Search Input Skeleton:
+// Layout: Same size as the actual search input
+// Style: rounded corners, bg-zinc-700, h-10
 
-// Create a React component that displays a loading indicator (a magnifying glass icon with a subtle animation),
-// an error message (if there's an error), or the product data (if there's no error and the data is loaded).
+// 2. Inventory Grid Skeleton: (Use Bento Grid or CSS Grid for this)
+// Create 5-10 skeleton rows, with each row containing:
+// - Image placeholder: rounded corners, bg-zinc-700, w-24, h-24
+// - Text placeholders (product name, brand, price): varying widths, bg-zinc-700, h-6, rounded
 
-// Data Slots:
-// - isLoading: {boolean} - If true, display a loading indicator instead of the product data.
-// - error: {string | null} - If not null, display an error message.
-// - totalItems: {number} - The total number of products.
-// - currentPage: {number} - The current page number.
-// - pageSize: {number} - The number of products per page.
-// - products: {ConductorProduct[]} - An array of product objects.
+// Use Tailwind CSS classes for:
+// - Container: flex flex-col items-center p-4 slate-900
+// - Search Input Skeleton: rounded-md bg-zinc-700 h-10 w-full
+// - Grid Row: flex items-center space-x-4
+// - Image Placeholder: rounded-md bg-zinc-700 w-24 h-24
+// - Text Placeholders: rounded-md bg-zinc-700 h-6 w-32
 
-// Component Hierarchy:
-// 1. Conditional rendering:
-//    - If isLoading: Display the loading indicator (animated magnifying glass).
-//    - Else if error: Display the error message.
-//    - Else: Display the product data.
-
-// Spacing:
-// Use Tailwind CSS spacing classes (e.g., `mt-4`, `mb-2`, `p-4`) for consistent spacing throughout the component.
+// The entire skeleton loading UI should shimmer. Use framer-motion for the shimmer effect. The skeleton UI should be responsive.
 ```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
-- Ensure `frontend/public/data/galaxy_db.json` is physically deleted.
-- Manual test: Verify that the InventoryView and other catalog views function correctly with filtering, sorting, and pagination. Confirm that stock and CfP sorting are applied correctly.
+- Ensure galaxy_db.json is physically deleted from frontend/public/data
+- Run the application and verify that the inventory grid and other components using `useConductorCatalog` load data correctly from the backend API.
+- Inspect network requests to confirm that only paginated requests are made to `/api/conductor/catalog`.
+- Verify correct display of loading skeletons during data fetching.

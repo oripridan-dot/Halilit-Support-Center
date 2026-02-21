@@ -1,8 +1,9 @@
 ```typescript
 // Contract: Implement Backend Pagination for useConductorCatalog
-const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
-interface ConductorProduct {
+export const CATALOG_ENDPOINT = '/api/conductor/catalog';
+
+export interface ConductorProduct {
   id: string;
   name: string;
   description: string;
@@ -10,10 +11,10 @@ interface ConductorProduct {
   category: string;
   brand: string;
   price: number;
-  [key: string]: any;
+  // Add other product properties as needed
 }
 
-interface PaginatedCatalogResponse {
+export interface PaginatedCatalogResponse {
   products: ConductorProduct[];
   totalItems: number;
   totalPages: number;
@@ -21,7 +22,7 @@ interface PaginatedCatalogResponse {
   pageSize: number;
 }
 
-interface CatalogParams {
+export interface CatalogRequestParams {
   page?: number;
   pageSize?: number;
   searchQuery?: string;
@@ -30,13 +31,5 @@ interface CatalogParams {
   brand?: string;
 }
 
-interface UseConductorCatalogResult {
-  products: ConductorProduct[] | undefined;
-  totalItems: number | undefined;
-  totalPages: number | undefined;
-  currentPage: number | undefined;
-  pageSize: number | undefined;
-  isLoading: boolean;
-  error: any; // Replace 'any' with a more specific error type if possible
-}
+export type CatalogResponse = PaginatedCatalogResponse;
 ```
