@@ -230,7 +230,8 @@ class FactoryHeuristics:
         evo_dir = SPECS_DIR / "strategy" / "evolution"
         if evo_dir.exists():
             all_proposals = sorted(
-                [p for p in evo_dir.glob("*.md") if p.name.upper() != "README.MD"],
+                [p for p in evo_dir.glob("*.md")          # top-level only
+                 if p.name.upper() != "README.MD"],        # reviewed/ subdir excluded by *.md
                 key=lambda p: p.name,  # lexicographic ≈ date order
             )
             if all_proposals:

@@ -63,6 +63,10 @@ OUTPUT RULES — follow exactly:
 - Requirements must be concrete and testable — no vague language.
 - Do NOT wrap your output in markdown fences (no ``` blocks around the whole file).
 - Output ONLY the spec file — no preamble, no explanation, no commentary.
+- **ANTI-DUPLICATE RULE:** Before selecting a topic, scan the CURRENT SYSTEM STATE
+  for specs that already target the same component or goal. If one exists, your output
+  must UPDATE that existing spec (keep its filename concept) rather than inventing a new
+  topic. Never write two specs for the same component file.
 
 **NEW RULE: STITCH UI PROMPT (FRONTEND ONLY)**
 If the target component is a Frontend UI view (.tsx), you MUST include a dedicated
@@ -209,6 +213,27 @@ The spec MUST include a "## Verification Commands" section at the end.
     output_dir = OUTPUT_DIR_FRONTEND if domain == "frontend" else OUTPUT_DIR_BACKEND
     output_dir.mkdir(parents=True, exist_ok=True)
     save_path = output_dir / f"{filename_base}.md"
+
+    # ── Duplicate-spec guard ─────────────────────────────────────────────────
+    # If an existing spec already targets the same component file, UPDATE it
+    # instead of creating a second one.  Prevents Steerer loops from flooding
+    # specs/interface/ with near-identical files.
+    component_match = re.search(r"\*\*Component:\*\*\s*`?([^\`\n]+)`?", response)
+    if component_match:
+        target_component = component_match.group(1).strip().lower()
+        for existing in output_dir.glob("*.md"):
+            if existing == save_path:
+                continue  # same name → normal overwrite, no issue
+            try:
+                existing_text = existing.read_text(encoding="utf-8")
+                em = re.search(r"\*\*Component:\*\*\s*`?([^\`\n]+)`?", existing_text)
+                if em and em.group(1).strip().lower() == target_component:
+                    print(f"⚠️  Duplicate spec detected — same component '{target_component}'")
+                    print(f"   Updating existing spec: {existing.name}")
+                    save_path = existing  # overwrite in place
+                    break
+            except Exception:
+                continue
 
     save_artifact(str(save_path), response)
 
