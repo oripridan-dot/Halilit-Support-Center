@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-02-08T13:24:28.276622",
+  "steps": {
+    "halilit_extraction": {
+      "status": "SUCCESS",
+      "output": ""
+    },
+    "thomann_scraping": {
+      "status": "SUCCESS",
+      "output": ""
+    },
+    "data_processing": {
+      "status": "SUCCESS",
+      "output": ""
+    }
+  },
+  "verification": {
+    "Halilit": {
+      "halilit_rcf_full.json": {
+        "exists": true,
+        "size": 3879
+      },
+      "halilit_mackie_full.json": {
+        "exists": true,
+        "size": 4215
+      },
+      "halilit_full_merged.json": {
+        "exists": true,
+        "size": 8825
+      },
+      "halilit_extraction_summary.json": {
+        "exists": true,
+        "size": 329
+      }
+    },
+    "Thomann": {
+      "thomann_rcf_full.json": {
+        "exists": true,
+        "size": 19347
+      },
+      "thomann_mackie_full.json": {
+        "exists": true,
+        "size": 11471
+      },
+      "thomann_full_merged.json": {
+        "exists": true,
+        "size": 33313
+      },
+      "thomann_scraping_summary.json": {
+        "exists": true,
+        "size": 352
+      }
+    },
+    "Reports": {
+      "rcf_comparison_detailed.csv": {
+        "exists": true,
+        "size": 2617
+      },
+      "mackie_comparison_detailed.csv": {
+        "exists": true,
+        "size": 2928
+      },
+      "comparison_summary.json": {
+        "exists": true,
+        "size": 559
+      }
+    }
+  },
+  "summary": {
+    "timestamp": "1770557070.5919383",
+    "total_products": 50,
+    "total_matches": 20,
+    "by_brand": {
+      "RCF": {
+        "total_products": 25,
+        "matched_count": 13,
+        "match_rate": "52.0%",
+        "unmatched_count": 12,
+        "avg_price_difference_usd": null,
+        "cheaper_platform": "Halilit"
+      },
+      "Mackie": {
+        "total_products": 25,
+        "matched_count": 7,
+        "match_rate": "28.0%",
+        "unmatched_count": 18,
+        "avg_price_difference_usd": null,
+        "cheaper_platform": "Halilit"
+      }
+    },
+    "overall_match_rate": "40.0%"
+  }
+}

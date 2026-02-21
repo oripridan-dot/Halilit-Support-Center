@@ -1,0 +1,28 @@
+{
+  "comparison_type": "name_based_fuzzy_matching",
+  "exchange_rate_used": "1 USD = 3.65 ILS",
+  "total_halilit_products": 50,
+  "total_thomann_products": 0,
+  "by_brand": {
+    "RCF": {
+      "total_halilit_products": 25,
+      "found_on_thomann": 25,
+      "coverage_percent": "100.0%",
+      "high_confidence_matches": 16,
+      "medium_confidence_matches": 4,
+      "low_confidence_matches": 5,
+      "thomann_price_range_usd": "$48 - $1880",
+      "thomann_price_range_ils": "\u20aa175 - \u20aa6862"
+    },
+    "Mackie": {
+      "total_halilit_products": 25,
+      "found_on_thomann": 25,
+      "coverage_percent": "100.0%",
+      "high_confidence_matches": 6,
+      "medium_confidence_matches": 7,
+      "low_confidence_matches": 12,
+      "thomann_price_range_usd": "$68 - $689",
+      "thomann_price_range_ils": "\u20aa248 - \u20aa2515"
+    }
+  }
+}

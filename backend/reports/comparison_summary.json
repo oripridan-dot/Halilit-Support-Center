@@ -1,0 +1,24 @@
+{
+  "timestamp": "1770557070.5919383",
+  "total_products": 50,
+  "total_matches": 20,
+  "by_brand": {
+    "RCF": {
+      "total_products": 25,
+      "matched_count": 13,
+      "match_rate": "52.0%",
+      "unmatched_count": 12,
+      "avg_price_difference_usd": null,
+      "cheaper_platform": "Halilit"
+    },
+    "Mackie": {
+      "total_products": 25,
+      "matched_count": 7,
+      "match_rate": "28.0%",
+      "unmatched_count": 18,
+      "avg_price_difference_usd": null,
+      "cheaper_platform": "Halilit"
+    }
+  },
+  "overall_match_rate": "40.0%"
+}

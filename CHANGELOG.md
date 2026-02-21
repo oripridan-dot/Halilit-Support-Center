@@ -1,4 +1,9 @@
 ## [v9.7.6] — 2026-02-21
+## v9.7.6
+
+- [feat] Added architecture diagrams for the scraping pipeline.
+
+## [v9.7.6] — 2026-02-21
 - [feat] Added specification document for Halilit vs. Thomann price comparison.
 - [feat] Implemented `thomann_scraper.py` module for fetching product data from Thomann.de.
 - [feat] Implemented `price_comparison_engine.py` module for calculating landed cost comparisons.

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-02-08",
+  "data_sources": {
+    "halilit": "Web scraped from halilit.com (50 products)",
+    "thomann": "Web scraped from thomann.com (185 products)"
+  },
+  "coverage": {
+    "total_halilit_products": 50,
+    "total_thomann_products": 185,
+    "halilit_products_with_prices": 50,
+    "price_coverage_percent": 100.0
+  },
+  "price_ranges": {
+    "rcf": {
+      "halilit_min": 170,
+      "halilit_max": 13910,
+      "thomann_min_usd": 48,
+      "thomann_max_usd": 1880,
+      "thomann_min_ils": 175,
+      "thomann_max_ils": 6862
+    },
+    "mackie": {
+      "halilit_min": 208,
+      "halilit_max": 1796,
+      "thomann_min_usd": 68,
+      "thomann_max_usd": 689,
+      "thomann_min_ils": 248,
+      "thomann_max_ils": 2515
+    }
+  },
+  "status": "Complete - Ready for Margin Analysis"
+}

@@ -1,0 +1,26 @@
+Brand,Halilit_Product,Halilit_Price_ILS,Match_Status,Thomann_Product,Thomann_Price_USD,Thomann_Price_ILS,Match_Confidence,Match_Reason,Availability
+RCF,RCF ART 710-A MK5,TBD,MATCHED,40RCFArt 715-A MK V$619,$619.00,₪2259,90%,fuzzy_match_strong,Both Platforms
+RCF,RCF ART 708-A MK5,TBD,MATCHED,10RCFArt 710-A MK V$485,$485.00,₪1770,90%,fuzzy_match_strong,Both Platforms
+RCF,RCF ART 715-A MK5,TBD,MATCHED,1RCFArt 735-A MK V$939,$939.00,₪3427,90%,fuzzy_match_strong,Both Platforms
+RCF,RCF CVR TT 515 Protection Cover,TBD,MATCHED,64RCFART 915 Cover$75,$75.00,₪274,93%,fuzzy_match_strong,Both Platforms
+RCF,RCF H-BR 2X COMPACT M 06,TBD,WEAK_MATCH,RCFH-BR ART 912 B-Stock$76,$76.00,₪277,56%,fuzzy_match_weak,Both Platforms
+RCF,RCF ART 735-A MK5,TBD,MATCHED,40RCFArt 715-A MK V$619,$619.00,₪2259,90%,fuzzy_match_strong,Both Platforms
+RCF,RCF ART 732-A MK5,TBD,MATCHED,1RCFArt 735-A MK V$939,$939.00,₪3427,90%,fuzzy_match_strong,Both Platforms
+RCF,כיסוי מגן RCF CVR KXL 4-A Protection Cover,TBD,MATCHED,30RCFART 708 / 408 Cover$48,$48.00,₪175,64%,fuzzy_match_moderate,Both Platforms
+RCF,RCF CVR TT 25 II Protection Cover,TBD,MATCHED,58RCFART 912 Cover$68,$68.00,₪248,83%,fuzzy_match_strong,Both Platforms
+RCF,RCF F 10XR,TBD,MATCHED,25RCFF 10 XR$257,$257.00,₪938,85%,partial_code_match,Both Platforms
+RCF,RCF H-BR 2X COMPACT M 05,TBD,WEAK_MATCH,RCFH-BR ART 912 B-Stock$76,$76.00,₪277,56%,fuzzy_match_weak,Both Platforms
+RCF,RCF CVR TTS 15 Padded Cover,TBD,MATCHED,64RCFART 915 Cover$75,$75.00,₪274,71%,fuzzy_match_moderate,Both Platforms
+RCF,כיסוי מגן RCF CVR NXL 14-A Protection Cover,TBD,MATCHED,30RCFART 708 / 408 Cover$48,$48.00,₪175,63%,fuzzy_match_moderate,Both Platforms
+RCF,RCF CVR TT 22 II Protection Cover,TBD,MATCHED,58RCFART 912 Cover$68,$68.00,₪248,83%,fuzzy_match_strong,Both Platforms
+RCF,RCF HDL 20-A,TBD,MATCHED,"12RCFHDL 10-A$1,880",$1880.00,₪6862,92%,fuzzy_match_strong,Both Platforms
+RCF,RCF H-BR 2X COMPACT M 08,TBD,WEAK_MATCH,RCFH-BR ART 912 B-Stock$76,$76.00,₪277,56%,fuzzy_match_weak,Both Platforms
+RCF,RCF ART 745-A MK5,TBD,MATCHED,40RCFArt 715-A MK V$619,$619.00,₪2259,90%,fuzzy_match_strong,Both Platforms
+RCF,RCF F 12XR,TBD,MATCHED,25RCFF 10 XR$257,$257.00,₪938,85%,fuzzy_match_strong,Both Platforms
+RCF,RCF SWM-BR COMPACT M,TBD,WEAK_MATCH,RCFH-BR ART 912 B-Stock$76,$76.00,₪277,52%,fuzzy_match_weak,Both Platforms
+RCF,RCF HD 10-A MK5,TBD,MATCHED,"12RCFHDL 10-A$1,880",$1880.00,₪6862,82%,fuzzy_match_strong,Both Platforms
+RCF,RCF CVR 005 Cover for SUB 702-AS MK3,TBD,MATCHED,3RCFCover Sub 8006-AS$257,$257.00,₪938,76%,fuzzy_match_strong,Both Platforms
+RCF,RCF ART 912-AX,TBD,MATCHED,RCFH-BR ART 912 B-Stock$76,$76.00,₪277,95%,model_code_match,Both Platforms
+RCF,כיסוי מגן RCF CVR KX 45-A Protection Cover,TBD,MATCHED,38RCFEVOX J8 Cover$88,$88.00,₪321,66%,fuzzy_match_moderate,Both Platforms
+RCF,עגלת נשיאה RCF KRT-WH 002 Cart,TBD,WEAK_MATCH,58RCFART 912 Cover$68,$68.00,₪248,48%,fuzzy_match_weak,Both Platforms
+RCF,RCF NXL24A Fly Bar Kit,TBD,MATCHED,RCFFL-B NXL 44 Fly Bar$304,$304.00,₪1110,78%,fuzzy_match_strong,Both Platforms

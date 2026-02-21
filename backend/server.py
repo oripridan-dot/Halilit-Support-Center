@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 """
 Halilit Support Center — JIT Architecture API Server
 
@@ -12,6 +13,17 @@ from fastapi.responses import Response, FileResponse, JSONResponse
 from backend import __version__
 from backend.unified_data_service import get_conductor_data_service
 from backend.product_normalizer import build_catalog
+=======
+from datetime import datetime
+from typing import Dict
+from backend.thomann_comparison import get_thomann_comparison, TARGET_BRANDS
+from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
+from backend.auto_sync_engine import get_auto_sync_engine
+from backend.unified_data_service_v73 import get_conductor_data_service
+from backend.scrapers.comparison_api import ComparisonAPI
+from backend.scrapers.ingestion_orchestrator import IngestionOrchestrator
+from backend.scrapers.thomann_scraper import ThomannScraper, ThomannProduct
+>>>>>>> Stashed changes
 import os
 import sys
 import logging
@@ -23,8 +35,12 @@ import asyncio
 import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
+<<<<<<< Updated upstream
 from datetime import datetime
 from fastapi import FastAPI, Request, Query, BackgroundTasks
+=======
+from fastapi import FastAPI, BackgroundTasks
+>>>>>>> Stashed changes
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
@@ -734,6 +750,7 @@ async def refresh_conductor_catalog(block: bool = False):
             "message": "Refresh already in progress. Poll /api/conductor/refresh/status",
         }
 
+<<<<<<< Updated upstream
     if block:
         try:
             _invalidate_catalog_cache()
@@ -748,6 +765,295 @@ async def refresh_conductor_catalog(block: bool = False):
                 "product_count": meta.get("total_products", 0),
                 "brands": len(meta.get("brands", [])),
                 "timestamp": meta.get("timestamp", datetime.now().isoformat()),
+=======
+
+# ========== AUTO-SYNC ENDPOINTS (Phase 1E) ==========
+
+
+def get_sync_engine():
+    """Get auto-sync engine singleton."""
+    return get_auto_sync_engine()
+
+
+@app.post("/api/copilot/sync")
+async def sync_product(request_data: dict):
+    """Sync a single product result to frontend after pipeline completion."""
+    try:
+        sync_engine = get_sync_engine()
+
+        # Extract product data
+        product_id = request_data.get(
+            "product_id") or request_data.get("halilit_id")
+        product_name = request_data.get("product_name")
+        brand = request_data.get("brand", "Unknown")
+        category = request_data.get("category", "Uncategorized")
+        status = request_data.get("status", "APPROVED")
+        risk_score = request_data.get("risk_score", 50)
+        pricing_tier = request_data.get("pricing_tier")
+
+        async def sync_stream():
+            """Stream sync events as SSE."""
+            async for event in sync_engine.sync_pipeline_result(
+                product_id=product_id,
+                product_name=product_name,
+                brand=brand,
+                category=category,
+                status=status,
+                risk_score=risk_score,
+                pricing_tier=pricing_tier
+            ):
+                yield f"data: {json.dumps(event)}\n\n"
+
+        return StreamingResponse(sync_stream(), media_type="text/event-stream")
+    except Exception as e:
+        logger.error(f"Sync error: {str(e)}")
+        return JSONResponse(status_code=400, content={"error": str(e)})
+
+
+@app.post("/api/copilot/sync-batch")
+async def sync_batch(request_data: dict):
+    """Sync multiple products to frontend (batch sync with progress)."""
+    try:
+        sync_engine = get_sync_engine()
+
+        # Extract batch data
+        products = request_data.get("products", [])
+        brand = request_data.get("brand", "Unknown")
+
+        if not products:
+            return JSONResponse(status_code=400, content={"error": "No products provided"})
+
+        async def batch_sync_stream():
+            """Stream batch sync events as SSE."""
+            async for event in sync_engine.sync_batch(
+                products=products,
+                brand=brand
+            ):
+                yield f"data: {json.dumps(event)}\n\n"
+
+        return StreamingResponse(batch_sync_stream(), media_type="text/event-stream")
+    except Exception as e:
+        logger.error(f"Batch sync error: {str(e)}")
+        return JSONResponse(status_code=400, content={"error": str(e)})
+
+
+@app.get("/api/copilot/sync/history")
+async def sync_history(limit: int = 50):
+    """Get sync history."""
+    sync_engine = get_sync_engine()
+    return {
+        "history": sync_engine.get_sync_history(limit),
+        "total_syncs": len(sync_engine.sync_history)
+    }
+
+
+@app.get("/api/copilot/sync/batch-status/{batch_id}")
+async def sync_batch_status(batch_id: str):
+    """Get status of a specific sync batch."""
+    sync_engine = get_sync_engine()
+    status = sync_engine.get_batch_status(batch_id)
+
+    if status is None:
+        return JSONResponse(status_code=404, content={"error": "Batch not found"})
+
+    return {"batch_status": status}
+
+
+@app.post("/api/copilot/sync/toggle")
+async def toggle_sync(request_data: dict):
+    """Enable or disable auto-sync."""
+    sync_engine = get_sync_engine()
+    enabled = request_data.get("enabled", True)
+    sync_engine.toggle_sync(enabled)
+
+    return {
+        "status": "enabled" if enabled else "disabled",
+        "sync_enabled": enabled
+    }
+
+
+@app.delete("/api/copilot/sync/history")
+async def clear_sync_history():
+    """Clear sync history."""
+    sync_engine = get_sync_engine()
+    sync_engine.clear_history()
+    return {"status": "cleared"}
+
+
+# ========== THOMANN-HALILIT PRICE COMPARISON ENDPOINTS ==========
+
+
+# Sample Thomann product database (would be fetched from Thomann API in production)
+# ⚠️ DEPRECATED: Mock data removed - now using real web scraping via ThomannScraper
+# See get_thomann_products_by_brand() function below for real data integration
+# Removed - was hardcoded fictional data
+THOMANN_PRODUCTS_DATABASE_DEPRECATED = {}
+
+
+# Cache for Thomann products (avoids re-scraping on every request)
+_THOMANN_PRODUCT_CACHE = {
+    "products": None,  # List[ThomannProduct]
+    # Dict mapping brand→{product_name→{price_eur, weight_kg}}
+    "by_brand": None,
+    "timestamp": None,
+    "source": None  # "live_scraper", "test_data", or "error"
+}
+
+# Environment flag: USE_TEST_DATA=1 to always use test dataset
+USE_TEST_DATA = os.getenv("USE_TEST_DATA", "0") == "1"
+
+
+def load_thomann_test_data() -> Dict[str, Dict]:
+    """Load test Thomann products from JSON file (for development/fallback)"""
+    try:
+        test_data_path = Path(__file__).parent / \
+            "scrapers" / "thomann_test_data.json"
+        if test_data_path.exists():
+            with open(test_data_path) as f:
+                data = json.load(f)
+                # Extract brand data (skip metadata)
+                by_brand = {k: v for k, v in data.items() if k != "_metadata"}
+                logger.info(
+                    f"✅ Loaded test data for {len(by_brand)} brands from {test_data_path.name}")
+                return by_brand
+        else:
+            logger.warning(f"Test data not found at {test_data_path}")
+            return {}
+    except Exception as e:
+        logger.error(f"Failed to load test data: {e}")
+        return {}
+
+
+@app.get("/api/comparison/brands")
+async def get_comparison_brands():
+    """Get list of brands available for comparison"""
+    return {
+        "brands": TARGET_BRANDS,
+        "count": len(TARGET_BRANDS),
+        "description": "Thomann-Halilit price comparison available for these brands"
+    }
+
+
+def get_thomann_products_by_brand() -> Dict[str, Dict]:
+    """
+    Get Thomann products by brand using REAL web scraping (with test data fallback).
+
+    Returns:
+        Dict mapping brand_name → {product_name → {price_eur, weight_kg, product_url, in_stock}}
+
+    Priority:
+        1. Return cached data if available (recent)
+        2. Try live web scraping (ThomannScraper)
+        3. Fall back to test data (thomann_test_data.json)
+        4. Return empty dict if all else fails
+
+    Environment:
+        - USE_TEST_DATA=1: Skip live scraping, use test data directly
+    """
+    global _THOMANN_PRODUCT_CACHE
+
+    try:
+        # Return cached data if available and fresh (< 1 hour old)
+        if _THOMANN_PRODUCT_CACHE["by_brand"] is not None:
+            if _THOMANN_PRODUCT_CACHE.get("timestamp"):
+                from datetime import timedelta
+                cache_time = datetime.fromisoformat(
+                    _THOMANN_PRODUCT_CACHE["timestamp"])
+                if datetime.now() - cache_time < timedelta(hours=1):
+                    logger.info(
+                        f"🔄 Using cached Thomann data (source: {_THOMANN_PRODUCT_CACHE.get('source')})")
+                    return _THOMANN_PRODUCT_CACHE["by_brand"]
+
+        # Check if test data mode is forced
+        if USE_TEST_DATA:
+            logger.info("📋 TEST MODE: Using test dataset (USE_TEST_DATA=1)")
+            test_data = load_thomann_test_data()
+            if test_data:
+                _THOMANN_PRODUCT_CACHE["by_brand"] = test_data
+                _THOMANN_PRODUCT_CACHE["timestamp"] = datetime.now(
+                ).isoformat()
+                _THOMANN_PRODUCT_CACHE["source"] = "test_data (forced)"
+                return test_data
+
+        # Try live scraping
+        logger.info("🌐 Attempting REAL Thomann data from thomannmusic.com...")
+        try:
+            scraper = ThomannScraper(max_pages_per_category=3)
+            products, stats = scraper.scrape_all_categories()
+
+            if stats['total_products'] > 0:
+                logger.info(
+                    f"✅ Scraped {stats['total_products']} real products from Thomann")
+
+                # Index by brand
+                by_brand = {}
+                for product in products:
+                    brand_lower = product.brand.lower()
+                    if brand_lower not in by_brand:
+                        by_brand[brand_lower] = {}
+
+                    by_brand[brand_lower][product.product_name] = {
+                        "price_eur": product.price_eur,
+                        "weight_kg": product.weight_kg or 0,
+                        "product_url": product.product_url,
+                        "in_stock": product.in_stock,
+                    }
+
+                _THOMANN_PRODUCT_CACHE["by_brand"] = by_brand
+                _THOMANN_PRODUCT_CACHE["timestamp"] = datetime.now(
+                ).isoformat()
+                _THOMANN_PRODUCT_CACHE["source"] = "live_scraper"
+                logger.info(
+                    f"✅ Indexed {len(by_brand)} brands from REAL Thomann data")
+                return by_brand
+            else:
+                logger.warning(
+                    f"⚠️  Live scraping returned 0 products. Stats: {stats}")
+                raise Exception("Live scraper returned no products")
+
+        except Exception as scrape_error:
+            logger.warning(f"🌐 Live scraping failed: {scrape_error}")
+            logger.info("🔄 Falling back to test data...")
+
+            # Fall back to test data
+            test_data = load_thomann_test_data()
+            if test_data:
+                logger.info(
+                    f"📋 Using fallback test data for {len(test_data)} brands")
+                _THOMANN_PRODUCT_CACHE["by_brand"] = test_data
+                _THOMANN_PRODUCT_CACHE["timestamp"] = datetime.now(
+                ).isoformat()
+                _THOMANN_PRODUCT_CACHE["source"] = "test_data (fallback)"
+                return test_data
+            else:
+                logger.error("❌ Both live scraping AND test data failed")
+                raise
+
+    except Exception as e:
+        logger.error(f"🚨 CRITICAL: Final fallback failed: {e}")
+        logger.warning(
+            "⚠️  Returning empty dict - comparison will skip Thomann")
+        _THOMANN_PRODUCT_CACHE["source"] = "error"
+        return {}
+
+
+@app.get("/api/comparison/all")
+async def get_all_brands_comparison():
+    """
+    Get comparison summary for all target brands.
+
+    Returns high-level metrics without detailed product listings.
+    """
+    try:
+        results = {
+            "timestamp": datetime.now().isoformat(),
+            "brands": {},
+            "overall_summary": {
+                "total_brands": len(TARGET_BRANDS),
+                "total_products_compared": 0,
+                "total_matched": 0,
+                "avg_price_diff_percent": 0,
+>>>>>>> Stashed changes
             }
         except Exception as e:
             logger.error(f"Refresh failed: {e}")
@@ -780,6 +1086,7 @@ async def refresh_conductor_status():
     return result
 
 
+<<<<<<< Updated upstream
 # ═══════════════════════════════════════════════════════════════════════════
 # BATCH IMAGE LOOKUP — lightweight endpoint for focus-zone enrichment
 # Checks JIT cache for images without triggering full JIT pipeline.
@@ -804,6 +1111,15 @@ async def batch_image_lookup(request: Request):
             return JSONResponse(
                 status_code=400,
                 content={"error": "product_ids must be a list of max 200 IDs"},
+=======
+            # 🌐 GET REAL THOMANN DATA (no longer using fake hardcoded database)
+            thomann_by_brand = get_thomann_products_by_brand()
+            thomann_data = thomann_by_brand.get(brand, {})
+            comparison = comparison_service.compare_brand_catalog(
+                brand=brand,
+                halilit_products=halilit_by_brand[brand],
+                thomann_products_map=thomann_data
+>>>>>>> Stashed changes
             )
 
         from backend.jit_agent import _read_cache
@@ -854,9 +1170,29 @@ async def products_search(q: str = ""):
                 "brand": p.get("brand"),
                 "price_il": p.get("price_il"),
             }
+<<<<<<< Updated upstream
             for p in products
         ]
         return {"products": out, "total": result.get("total_results", len(out))}
+=======
+
+        # 🌐 GET REAL THOMANN DATA (no longer using fake hardcoded database)
+        thomann_by_brand = get_thomann_products_by_brand()
+        thomann_data = thomann_by_brand.get(brand_lower, {})
+
+        # Create comparison
+        comparison = comparison_service.compare_brand_catalog(
+            brand=brand_lower,
+            halilit_products=halilit_by_brand[brand_lower],
+            thomann_products_map=thomann_data
+        )
+
+        logger.info(
+            f"✅ Generated comparison for {brand_lower}: {comparison['summary']['total_products']} products")
+
+        return comparison
+
+>>>>>>> Stashed changes
     except Exception as e:
         logger.warning("products/search failed: %s", e)
         return {"products": [], "total": 0, "error": str(e)}
@@ -875,8 +1211,222 @@ async def validate_image(url: str):
     ImageValidator service.  No external AI service is required — validation
     is structural (HTTP status + MIME type), not semantic.
 
+<<<<<<< Updated upstream
     Query param:
         url (str): The image URL to validate.
+=======
+        if not all([brand, halilit_product_id]):
+            return {"error": "brand and halilit_product_id required"}
+
+        # Get Halilit product
+        service = get_conductor_data_service()
+        catalog = service.get_unified_catalog()
+
+        halilit_product = None
+        for p in catalog["products"]:
+            if p.get("id") == halilit_product_id:
+                halilit_product = p
+                break
+
+        if not halilit_product:
+            return {"error": f"Product {halilit_product_id} not found"}
+
+        # Create validated comparison
+        comparison_service = get_thomann_comparison()
+        comparison = comparison_service.create_price_comparison(
+            halilit_product=halilit_product,
+            thomann_price_eur=thomann_price_eur,
+            thomann_weight_kg=thomann_weight_kg,
+            matched=bool(thomann_price_eur),
+            confidence_score=100 if thomann_model else 0
+        )
+
+        logger.info(
+            f"✅ Validated comparison for {halilit_product.get('product_name')}")
+
+        return comparison.to_dict()
+
+    except Exception as e:
+        logger.error(f"Validation error: {e}")
+        return {"error": str(e)}
+
+
+# ========== FULL-SCALE COMPARISON ENDPOINTS ==========
+# These endpoints compare ALL Halilit products to Thomann products
+
+
+@app.get("/api/v2/comparison/full")
+async def get_full_comparison():
+    """
+    Get comprehensive comparison across ALL products.
+
+    This endpoint:
+    - Loads all Halilit products from database
+    - Loads all Thomann products from database
+    - Compares them using fuzzy matching
+    - Returns detailed statistics and results
+
+    Note: May take 10-30 seconds on first call, cached afterward.
+    """
+    try:
+        from backend.scrapers.comparison_api import get_comparison_api
+
+        api = get_comparison_api()
+        comparison_data = api.get_comprehensive_comparison()
+
+        return {
+            "status": "success",
+            "meta": comparison_data["meta"],
+            "total_products": len(comparison_data["comparisons"]),
+            "note": "Use /api/v2/comparison/full/paginated for paginated results",
+        }
+
+    except Exception as e:
+        logger.error(f"Full comparison error: {e}")
+        return {
+            "error": str(e),
+            "message": "Make sure to run data ingestion first: python backend/scrapers/ingestion_orchestrator.py",
+        }
+
+
+@app.get("/api/v2/comparison/full/paginated")
+async def get_paginated_comparison(page: int = 1, page_size: int = 50, min_confidence: float = 0.0):
+    """
+    Get paginated comparison results.
+
+    Query parameters:
+    - page: Page number (1-indexed)
+    - page_size: Results per page (default: 50, max: 500)
+    - min_confidence: Minimum match confidence 0-100 (default: 0)
+    """
+    try:
+        from backend.scrapers.comparison_api import get_comparison_api
+
+        # Limit page size
+        page_size = min(page_size, 500)
+
+        api = get_comparison_api()
+        paginated_results = api.get_paginated_comparisons(
+            page=page, page_size=page_size, min_confidence=min_confidence
+        )
+
+        return {
+            "status": "success",
+            "pagination": {
+                "page": paginated_results["page"],
+                "page_size": paginated_results["page_size"],
+                "total_results": paginated_results["total_results"],
+                "total_pages": paginated_results["total_pages"],
+                "has_next": paginated_results["has_next"],
+                "has_prev": paginated_results["has_prev"],
+            },
+            "results": paginated_results["results"],
+        }
+
+    except Exception as e:
+        logger.error(f"Paginated comparison error: {e}")
+        return {"error": str(e)}
+
+
+@app.get("/api/v2/comparison/full/brand/{brand}")
+async def get_brand_full_comparison(brand: str):
+    """
+    Get all comparisons for a specific brand.
+
+    Examples: /api/v2/comparison/full/brand/montarbo
+    """
+    try:
+        from backend.scrapers.comparison_api import get_comparison_api
+
+        api = get_comparison_api()
+        brand_data = api.get_brand_comparison_all(brand)
+
+        return {
+            "status": "success",
+            "brand": brand,
+            "data": brand_data,
+        }
+
+    except Exception as e:
+        logger.error(f"Brand comparison error: {e}")
+        return {"error": str(e)}
+
+
+@app.get("/api/v2/comparison/full/export-csv")
+async def export_full_comparison_csv():
+    """
+    Export all comparisons to CSV file.
+
+    Returns downloadable CSV with all products, prices, and differences.
+    """
+    try:
+        from backend.scrapers.comparison_api import get_comparison_api
+
+        api = get_comparison_api()
+        filepath = api.export_full_comparison_csv()
+
+        return FileResponse(filepath, filename="halilit_thomann_full_comparison.csv")
+
+    except Exception as e:
+        logger.error(f"CSV export error: {e}")
+        return {"error": str(e)}
+
+
+@app.post("/api/v2/comparison/full/run-ingestion")
+async def run_full_data_ingestion(skip_halilit: bool = False, skip_thomann: bool = False):
+    """
+    Trigger complete data ingestion from Halilit and Thomann.
+
+    This endpoint:
+    1. Scrapes all categories with pagination
+    2. Stores products in SQLite database
+    3. Clears comparison cache (triggers recalculation)
+
+    Parameters:
+    - skip_halilit: Skip Halilit scraping
+    - skip_thomann: Skip Thomann scraping
+
+    ⚠️ WARNING: This may take 30-60 minutes depending on site sizes.
+    Run in background: curl -X POST 'http://localhost:8000/api/v2/comparison/full/run-ingestion' &
+    """
+    try:
+        from backend.scrapers.ingestion_orchestrator import IngestionOrchestrator
+        from backend.scrapers.comparison_api import get_comparison_api
+
+        logger.info("🚀 Starting full-scale data ingestion...")
+        logger.info(
+            f"  Skip Halilit: {skip_halilit}, Skip Thomann: {skip_thomann}")
+
+        orchestrator = IngestionOrchestrator()
+        stats = orchestrator.run_full_ingestion(
+            skip_halilit=skip_halilit, skip_thomann=skip_thomann
+        )
+
+        # Clear cache to force recalculation
+        api = get_comparison_api()
+        api.clear_cache()
+
+        # Export to JSON
+        orchestrator.export_database_to_json()
+
+        logger.info("✅ Ingestion complete, cache cleared")
+
+        return {
+            "status": "success",
+            "message": "Data ingestion complete. Cache cleared for fresh comparison.",
+            "stats": stats,
+        }
+
+    except Exception as e:
+        logger.error(f"Ingestion error: {e}", exc_info=True)
+        return {"error": str(e), "details": "Check server logs for details"}
+
+
+@app.get("/api/v2/comparison/full/database-stats")
+async def get_database_statistics():
+    """
+    Get current database statistics.
+>>>>>>> Stashed changes
 
     Returns:
         {valid, status_code, content_type, reason, url}
@@ -951,9 +1501,135 @@ async def jit_product_intelligence(product_id: str):
         )
 
 
+<<<<<<< Updated upstream
 # ═══════════════════════════════════════════════════════════════════════════
 # STATIC FILES & FRONTEND
 # ═══════════════════════════════════════════════════════════════════════════
+=======
+# ========== FULL-SCALE COMPARISON ENDPOINTS (v2) ==========
+
+# Initialize comparison API (singleton)
+_comparison_api = None
+
+
+def get_comparison_api():
+    global _comparison_api
+    if _comparison_api is None:
+        _comparison_api = ComparisonAPI()
+    return _comparison_api
+
+
+@app.post("/api/v2/comparison/full/run-ingestion")
+async def run_full_ingestion(background_tasks: BackgroundTasks, skip_halilit: bool = False, skip_thomann: bool = False):
+    """
+    Start full-scale data ingestion in background.
+    Scrapes all products from Halilit.com and Thomannmusic.com with pagination.
+
+    Returns immediately, ingestion runs in background (30-60 minutes).
+    """
+    try:
+        def ingestion_task():
+            try:
+                orchestrator = IngestionOrchestrator()
+                logger.info("🚀 Starting full-scale ingestion...")
+                orchestrator.run_full_ingestion(
+                    skip_halilit=skip_halilit, skip_thomann=skip_thomann)
+                logger.info("✅ Full-scale ingestion complete")
+                # Clear API cache after ingestion
+                api = get_comparison_api()
+                api.clear_cache()
+            except Exception as e:
+                logger.error(f"❌ Ingestion failed: {e}", exc_info=True)
+
+        background_tasks.add_task(ingestion_task)
+        return {
+            "status": "ingestion_started",
+            "message": "Full-scale ingestion started in background",
+            "estimated_duration_minutes": "30-60",
+            "skip_halilit": skip_halilit,
+            "skip_thomann": skip_thomann
+        }
+    except Exception as e:
+        logger.error(f"Ingestion start error: {e}")
+        return {"error": str(e), "status": "failed"}, 500
+
+
+@app.get("/api/v2/comparison/full")
+async def get_full_comparison_overview():
+    """Get overview statistics of comparison database."""
+    try:
+        api = get_comparison_api()
+        stats = api.get_database_stats()
+        return {
+            "status": "success",
+            "data": stats
+        }
+    except Exception as e:
+        logger.error(f"Overview error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/paginated")
+async def get_paginated_comparisons(page: int = 1, page_size: int = 50, min_confidence: float = 0):
+    """Get paginated comparison results with optional filtering."""
+    try:
+        api = get_comparison_api()
+        results = api.get_paginated_comparisons(
+            page=page, page_size=page_size, min_confidence=min_confidence)
+        return {
+            "status": "success",
+            "page": page,
+            "page_size": page_size,
+            "min_confidence": min_confidence,
+            "data": results
+        }
+    except Exception as e:
+        logger.error(f"Pagination error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/brand/{brand}")
+async def get_brand_comparison_full(brand: str):
+    """Get comprehensive comparison for a specific brand."""
+    try:
+        api = get_comparison_api()
+        results = api.get_brand_comparison_all(brand=brand)
+        return {
+            "status": "success",
+            "brand": brand,
+            "data": results
+        }
+    except Exception as e:
+        logger.error(f"Brand comparison error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/export-csv")
+async def export_full_comparison_csv():
+    """Export all comparisons as CSV file."""
+    try:
+        api = get_comparison_api()
+        csv_path = api.export_full_comparison_csv()
+        return FileResponse(path=csv_path, media_type="text/csv", filename="comparison_full_export.csv")
+    except Exception as e:
+        logger.error(f"CSV export error: {e}")
+        return {"error": str(e)}, 500
+
+
+@app.get("/api/v2/comparison/full/database-stats")
+async def get_database_statistics():
+    """Get raw database statistics."""
+    try:
+        api = get_comparison_api()
+        stats = api.get_database_stats()
+        return stats
+    except Exception as e:
+        logger.error(f"Database stats error: {e}")
+        return {"error": str(e)}, 500
+
+
+# ========== FRONTEND ROUTING ==========
+>>>>>>> Stashed changes
 
 if os.path.exists(str(FRONTEND_PUBLIC_DATA)):
     app.mount("/data", StaticFiles(directory=str(FRONTEND_PUBLIC_DATA)), name="data")
