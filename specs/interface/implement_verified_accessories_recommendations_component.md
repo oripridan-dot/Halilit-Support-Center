@@ -1,5 +1,5 @@
 # Spec: Implement Verified Accessories Recommendations Component
-**Version:** 1.0
+**Version:** 1.1
 **Component:** `frontend/src/components/ProductDetail/VerifiedAccessoriesRecommendations.tsx`
 
 ## Purpose
@@ -31,89 +31,120 @@ To display a curated selection of verified accessory recommendations for a given
 6.  **Navigation:**
     -   Clicking an accessory card must navigate the user to the Product Detail page for that accessory, using `useNavigationStore().goToProduct(accessory.id)`.
 7.  **No Accessories Message:**
-    -   If no verified accessories are available (API returns an empty list), display the message: "No verified accessories available. Check related products or official brand resources for suggestions to manually add." in a visually distinct manner, using `text-zinc-400 italic`.
-8.  **Dark Theme Styling:**
+    -   If no verified accessories are available, display the message: "No verified accessories available. Check related products or official brand resources for suggestions to manually add." in a visually distinct manner.
+8. **Dark Theme Styling:**
     -   Use Tailwind CSS to style the component, adhering to the dark theme (slate-900 background, blue-500 accents).
 9.  **Responsiveness:**
-    -   The component must be responsive and adapt to different screen sizes.
-10. **Integration Location:**
-    - This component MUST be displayed in place of the Related Products section shown in `specs/interface/enhanced_productdetailview_with_skeleton_and_ecosystem_tab.md` after the product details and before the ecosystem tab.
+    -   The component should be responsive and adapt to different screen sizes.
+10. **"Verified" Badge Implementation**:
+    - The "Verified" badge should be implemented as a separate component for reusability and styled with Tailwind CSS. It should have a green background and white text.
+11. **Skeleton Loaders**:
+    - Implement skeleton loaders for a smooth loading experience. Use the same shimmer animation as other loading states.
+12. **Placement**:
+    - Ensure the component is correctly integrated into the ProductDetailView layout, ideally below the product information and above the Ecosystem Tab.
+13.  **useProductRelationships Hook**:
+    -   Implement the `useProductRelationships` hook. The backend must have a `/api/products/{product_id}/relationships` endpoint that returns relationship data.
 
 ## Data Contract
 
-**`useProductRelationships` Hook:**
+**API Endpoint:** `/api/products/{product_id}/relationships` (GET)
+
+**Request:**
+*   `product_id` (path parameter): The ID of the product for which to retrieve related products.
+
+**Response (JSON):**
+
+```json
+{
+  "verifiedAccessories": [
+    {
+      "id": "string",
+      "name": "string",
+      "brand": "string",
+      "price": number | null,
+      "image_url": "string"
+    }
+  ]
+}
+```
+
+**TypeScript Interface:**
+
 ```typescript
+interface ConductorProduct {
+  id: string;
+  name: string;
+  brand: string;
+  price: number | null;
+  image_url: string;
+}
+
 interface ProductRelationships {
   isLoading: boolean;
   error: string | null;
   verifiedAccessories: ConductorProduct[];
 }
 ```
-The hook fetches data internally to create the object above.
 
 ## Behavior Scenarios
--   **Scenario:** Initial Load - No Recommendations
-    -   Input:  Component mounts, API returns an empty `verifiedAccessories` array.
-    -   Outcome: Displays a message "No verified accessories available. Check related products or official brand resources for suggestions to manually add."
 
--   **Scenario:** Initial Load - Recommendations Available
-    -   Input: Component mounts, API returns a list of accessories.
-    -   Outcome: Displays a carousel of accessory product recommendations.
-
+-   **Scenario:** Initial Load - Accessories Available
+    -   Input: Component mounts with `productId = "123"`, API returns a list of verified accessories.
+    -   Outcome: Displays a carousel of accessory cards, each showing the accessory's image, name, price, and a "Verified" badge.
+-   **Scenario:** Initial Load - No Accessories Available
+    -   Input: Component mounts with `productId = "123"`, API returns an empty list of verified accessories.
+    -   Outcome: Displays the message: "No verified accessories available. Check related products or official brand resources for suggestions to manually add.".
 -   **Scenario:** API Error
-    -   Input:  Component mounts, API returns an error.
-    -   Outcome: Displays an error message: "Failed to load accessory recommendations."
+    -   Input: Component mounts with `productId = "123"`, API returns an error (e.g., 500 Internal Server Error).
+    -   Outcome: Displays an error message.
+-   **Scenario:** Loading State
+    -   Input: Component is fetching data.
+    -   Outcome: Displays skeleton loaders.
 
 ## Stitch UI Prompt
+
 ```text
 // Target Component: VerifiedAccessoriesRecommendations
-// Description:  A React component that displays a carousel of verified accessory recommendations.
+// Description:  A React component that displays a horizontal carousel of verified accessory recommendations for a product.
+// Styling: Tailwind CSS, dark theme (slate-900 background, blue-500 accents)
+// Layout: Flexbox, horizontal scrolling
 
-// Layout: Flexbox, horizontal scrolling. Dark mode, Tailwind CSS.
-
-// Overall Structure:
-// Container (flex, horizontal scroll)
-//   Accessory Card (repeat)
-//     Image
-//     Product Name
-//     Product Price
-//     "Verified" Badge
-
-// Visual Style:
-// Dark mode
-// Tailwind CSS
-// Background: slate-900
-// Accent: blue-500
-// Text: white for product name, zinc-400 for price
+// Structure:
+// - Container (bg-slate-900, p-4)
+//   - Title (text-lg, font-semibold, text-white, mb-2): "Verified Accessories"
+//   - Carousel (flex, space-x-4, overflow-x-auto, pb-4)
+//     - AccessoryCard (repeated for each accessory)
 
 // Data Slots:
-// Data Slot: Product Image (URL) - Placeholder: "/placeholder.png"
-// Data Slot: Product Name (string) - Placeholder: "Accessory Product Name"
-// Data Slot: Product Price (number) - Placeholder: "99.99"
+// - accessory.image_url: URL of the accessory image
+// - accessory.name: Name of the accessory
+// - accessory.price: Price of the accessory
 
-// Component Hierarchy and Spacing:
-// Container:
-//   - className: "flex space-x-4 overflow-x-auto pb-4"
-// Accessory Card:
-//   - className: "w-64 shrink-0 rounded-lg overflow-hidden shadow-md bg-slate-800"
-//   - Image: className: "w-full h-32 object-cover"
-//   - Product Name: className: "text-white font-semibold px-4 py-2"
-//   - Product Price: className: "text-zinc-400 px-4 pb-2"
-// "Verified" Badge:
-//   - className: "absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-md text-xs"
+// AccessoryCard:
+// - Container (w-64, shrink-0, rounded-lg, overflow-hidden, shadow-md, relative)
+//   - Image (aspect-w-4, aspect-h-3, w-full, h-32, object-cover): {accessory.image_url}
+//   - Content (p-2)
+//     - Name (text-sm, font-semibold, text-white, truncate): {accessory.name}
+//     - Price (text-xs, text-zinc-400): ₪{accessory.price}
+//   - VerifiedBadge (absolute, top-2, right-2, bg-green-500, text-white, px-2, py-1, rounded-md, text-xs): "Verified"
 
-// Loading State: Replace the whole component with a skeleton loader as used elsewhere in the app.
+// No Accessories Message:
+// - Container (text-zinc-400, italic): "No verified accessories available. Check related products or official brand resources for suggestions to manually add."
 
-// No Accessories State: Display the message: "No verified accessories available. Check related products or official brand resources for suggestions to manually add."
-// Styling: Styling matches existing `No verified accessories available` styling using `text-zinc-400 italic`
+// Loading State (Skeleton):
+// - Container (w-64, shrink-0, rounded-lg, overflow-hidden, shadow-md)
+//   - Image (aspect-w-4, aspect-h-3, animate-shimmer, w-full, h-32, bg-zinc-700)
+//   - Content (p-2)
+//     - Name (animate-shimmer, h-4, w-3/4, bg-zinc-700, rounded-md, mb-1)
+//     - Price (animate-shimmer, h-3, w-1/2, bg-zinc-700, rounded-md)
 
 // Instructions:
-// 1. Create a flex container with horizontal scrolling.
-// 2. Repeat the Accessory Card structure for each accessory.
-// 3. Implement the data slots with the specified placeholders.
-// 4. Add the "Verified" badge.
-// 5. Use Tailwind CSS to implement the visual style.
-// 6. Implement loading and no accessories states.
+// - Use flexbox for the carousel layout.
+// - Use truncate class for the accessory name to prevent overflow.
+// - The VerifiedBadge should be positioned absolutely in the top-right corner of the AccessoryCard.
+// - Ensure all text colors and background colors adhere to the dark theme (slate-900/blue-500 palette).
+// - Handle the loading state by displaying a placeholder skeleton UI for each accessory card.
+// - Handle the "No accessories available" state by displaying the appropriate message.
 ```
 
 ## Verification Commands
