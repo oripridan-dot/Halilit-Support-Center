@@ -1,26 +1,35 @@
+import { useState, useEffect, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { useSearchParams } from 'react-router-dom';
+import { fetcher } from '../utils/fetcher';
+import { ResearchAnimation } from '../components/ResearchAnimation';
+import { ImageWithFallback } from '../components/ImageWithFallback';
+import { useValidateHeroImage } from './useValidateHeroImage';
 
-import { useState } from 'react';
+// Define a lookup table for brand colors
+const brandColors: { [key: string]: string } = {
+  'Halilit': 'blue-500',
+  'Brand2': 'green-500', // Example brand and color
+  'Brand3': 'red-500', // Example brand and color
+};
 
-export const useConductorCatalog = (
-  initialPage: number = 1,
-  initialPageSize: number = 25,
-  initialSearchQuery: string = '',
-  initialSortBy: string = '',
-  initialCategory: string = '',
-  initialBrand: string = ''
-) => {
-  const [searchParams] = useSearchParams();
+interface UseConductorCatalogProps {
+  page?: number;
+  pageSize?: number;
+  searchQuery?: string;
+  sortBy?: string;
+  category?: string;
+  brand?: string;
+}
 
-  const page = parseInt(searchParams.get('page') || initialPage.toString(), 10);
-  const pageSize = parseInt(searchParams.get('pageSize') || initialPageSize.toString(), 10);
-  const searchQuery = searchParams.get('searchQuery') || initialSearchQuery;
-  const sortBy = searchParams.get('sortBy') || initialSortBy;
-  const category = searchParams.get('category') || initialCategory;
-  const brand = searchParams.get('brand') || initialBrand;
-
-  const params: CatalogParams = {
+export const useConductorCatalog = ({
+  page = 1,
+  pageSize = 25,
+  searchQuery = '',
+  sortBy = '',
+  category = '',
+  brand = '',
+}: UseConductorCatalogProps) => {
+  const params: CatalogRequestParams = {
     page,
     pageSize,
     searchQuery,
@@ -29,37 +38,27 @@ export const useConductorCatalog = (
     brand,
   };
 
-  const {
-    data,
-    isLoading,
-    error,
-    refetch,
-  } = useQuery<CatalogResponse, Error>({
-    queryKey: ['catalog', params],
-    queryFn: async () => {
-      const response = await fetch(`${CATALOG_ENDPOINT}?${new URLSearchParams(
-        Object.entries(params)
-          .filter(([, value]) => value !== '' && value !== undefined && value !== null)
-          .map(([key, value]) => [key, value?.toString()])
-      )}`);
+  const { data, isLoading, error, refetch } = useQuery<PaginatedCatalogResponse, Error>(
+    ['catalog', params],
+    () => fetcher<PaginatedCatalogResponse>(`${CATALOG_ENDPOINT}?${new URLSearchParams(params as any)}`),
+  );
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json() as Promise<CatalogResponse>;
-    },
-    keepPreviousData: true,
-  });
+  const products = data?.products || [];
+  const totalItems = data?.totalItems || 0;
+  const totalPages = data?.totalPages || 0;
+  const currentPage = data?.currentPage || 1;
+  const currentBrandColor = brandColors[brand] || 'blue-500';
 
   return {
-    products: data?.products || [],
-    totalItems: data?.totalItems || 0,
-    totalPages: data?.totalPages || 0,
-    currentPage: data?.currentPage || 1,
-    pageSize: data?.pageSize || 25,
+    products,
+    totalItems,
+    totalPages,
+    currentPage,
+    pageSize,
     isLoading,
     error,
     refetch,
-    loadingComponent: isLoading ? <ResearchAnimation brandName="Halilit" brandColor="#0ea5e9" /> : null,
+    brand,
+    brandColor: currentBrandColor,
   };
 };
