@@ -1,4 +1,7 @@
 ## [v4.1] — 2026-02-21
+- [removal] Removed `specs/temp/steerer_last_output.txt`.
+
+## [v4.1] — 2026-02-21
 - [chore] Removed temporary specification for galaxy_db pagination.
 
 ## [v4.1] — 2026-02-21
