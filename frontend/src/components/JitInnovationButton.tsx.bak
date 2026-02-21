@@ -34,9 +34,6 @@ type InnovationPanelState = "idle" | "submitting" | "success" | "error";
 // Component
 // ---------------------------------------------------------------------------
 
-/**
- * A floating action button that allows users to submit innovation requests.
- */
 export const JitInnovationButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [innovationNeed, setInnovationNeed] = useState("");
@@ -45,7 +42,7 @@ export const JitInnovationButton: React.FC = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   /**
-   * Auto-focuses the textarea when the panel opens.
+   * Auto-focus the textarea when the panel opens.
    */
   useEffect(() => {
     if (isOpen && panelState === "idle") {
@@ -54,7 +51,7 @@ export const JitInnovationButton: React.FC = () => {
   }, [isOpen, panelState]);
 
   /**
-   * Resets the panel to the idle state, clearing input and messages.
+   * Resets the panel to the idle state.
    */
   const resetPanel = () => {
     setInnovationNeed("");
@@ -67,16 +64,13 @@ export const JitInnovationButton: React.FC = () => {
     setIsOpen(true);
   };
 
-  /**
-   * Closes the panel and resets its state after a short delay to allow for animation.
-   */
   const handleClosePanel = () => {
     setIsOpen(false);
     setTimeout(resetPanel, 300); // Reset after close animation
   };
 
   /**
-   * Handles the submission of the innovation request to the backend.
+   * Handles the submission of the innovation request.
    */
   const handleSubmit = async () => {
     const trimmedNeed = innovationNeed.trim();
@@ -116,9 +110,6 @@ export const JitInnovationButton: React.FC = () => {
     }
   };
 
-  /**
-   * Handles keyboard input for the textarea, submitting the form when Cmd/Ctrl + Enter is pressed.
-   */
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
       event.preventDefault();

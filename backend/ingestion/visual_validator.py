@@ -729,13 +729,20 @@ def reject_official_if_mismatch(product: Dict[str, Any], min_similarity: float =
     Uses cached visual_match_status when present to avoid re-fetching images on every catalog build.
     Modifies product in place and returns it.
     """
-    commercial_url = (product.get("image_url") or "").strip()
+    # image_url may be a dict {"url": "..."}  (produced by older pipeline stages)
+    _raw_img = product.get("image_url") or ""
+    if isinstance(_raw_img, dict):
+        _raw_img = _raw_img.get("url") or ""
+    commercial_url = str(_raw_img).strip()
     official_list = product.get("official_images") or []
     official_hero_url = None
     if official_list:
         first = official_list[0]
-        official_hero_url = (first.get("url") if isinstance(
-            first, dict) else first) or ""
+        _first_url = (first.get("url") if isinstance(first, dict) else first) or ""
+        # Handle nested dict: {"url": {"url": "..."}}
+        if isinstance(_first_url, dict):
+            _first_url = _first_url.get("url") or ""
+        official_hero_url = str(_first_url)
 
     # Only validate when a real official brand URL exists.
     # Without official_url, the "official_images" are just Halilit CDN images —
