@@ -350,12 +350,23 @@ def build_component(spec_path: str) -> None:
                 print(f"     • [{fix.kind}] {fix.description}")
         return True
 
+    # Extract intent from spec title for Oracle escalation context
+    import re as _re
+    _title_match = _re.search(r"^#\s+(.+)", spec_content, _re.MULTILINE)
+    _intent = (
+        _title_match.group(1).strip() if _title_match
+        else f"Implement {full_path.name}"
+    )
+
     # Run the autonomous self-healing inner loop
     passed = inner_loop(
         spec_text=spec_with_checks,
         builder_fn=_builder_fn,
         max_rounds=MAX_RETRIES,
         verbose=True,
+        intent=_intent,
+        target_file=full_path,
+        oracle_trigger_round=2,  # Phone Oracle after 2 consecutive failures
     )
 
     if passed:
