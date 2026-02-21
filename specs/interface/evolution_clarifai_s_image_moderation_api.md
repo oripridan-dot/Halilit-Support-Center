@@ -1,4 +1,5 @@
 # Spec: Clarifai's Image Moderation API Integration
+
 **Source:** 2026-02-22_proposal_ai_powered_image_validation.md
 **Created:** 2026-02-21
 **Status:** BUILT ✅ (without Clarifai SDK — Three Source Rules compliant)
@@ -17,6 +18,7 @@ Clarifai SDK is not installed (no new deps, Three Source Rules). Same
 - `backend/server.py` `/api/validate-catalog-images` — POST bulk endpoint.
 
 ## Acceptance Criteria
+
 - [x] `validate_image_url('https://...')` returns `{valid, reason}` dict.
 - [x] Endpoint `/api/validate-image?url=...` returns JSON, never 500.
 - [x] No new pip dependencies (httpx + Pillow already present).

@@ -19,6 +19,7 @@ All data passing through this service is validated against source rules.
 Single source of truth for all product data processing in Halilit Support Center.
 """
 
+from backend.project_config import INGESTION_DATA_DIR, FRONTEND_PUBLIC_DATA
 import json
 import logging
 import re
@@ -42,7 +43,6 @@ logger = logging.getLogger("UnifiedDataService")
 # CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════════════
 
-from backend.project_config import INGESTION_DATA_DIR, FRONTEND_PUBLIC_DATA
 
 INGESTION_DIR = INGESTION_DATA_DIR
 FRONTEND_DATA_DIR = FRONTEND_PUBLIC_DATA
@@ -677,7 +677,8 @@ class ConductorDataService:
         try:
             products = catalog.get("products", [])
             self._trie = TrieSearchIndex(products)
-            self.logger.debug("🔍 Trie index built for %d products", len(products))
+            self.logger.debug(
+                "🔍 Trie index built for %d products", len(products))
         except Exception as exc:  # pragma: no cover
             self.logger.warning("TrieSearchIndex build failed: %s", exc)
             self._trie = None
@@ -715,7 +716,8 @@ class ConductorDataService:
             # Use cached catalog for brands when valid (avoids second get_all_approved_products)
             now = datetime.utcnow()
             if self._catalog_cache and self._cache_timestamp and (now - self._cache_timestamp).total_seconds() < CACHE_TTL_SECONDS:
-                all_brands = sorted(self._catalog_cache.get('metadata', {}).get('brands', []))
+                all_brands = sorted(self._catalog_cache.get(
+                    'metadata', {}).get('brands', []))
             else:
                 approved_by_brand = self.database.get_all_approved_products()
                 all_brands = sorted(list(approved_by_brand.keys()))
@@ -769,16 +771,19 @@ class ConductorDataService:
         brands_lower = None
         if 'brand' in filters:
             b = filters['brand']
-            brands_lower = [b.lower()] if isinstance(b, str) else [x.lower() for x in b]
+            brands_lower = [b.lower()] if isinstance(
+                b, str) else [x.lower() for x in b]
             filters_applied['brand'] = filters['brand']
 
         categories_lower = None
         if 'category' in filters:
             c = filters['category']
-            categories_lower = [c.lower()] if isinstance(c, str) else [x.lower() for x in c]
+            categories_lower = [c.lower()] if isinstance(
+                c, str) else [x.lower() for x in c]
             filters_applied['category'] = filters['category']
 
-        search_query = filters.get('search_query', '').lower() if 'search_query' in filters else None
+        search_query = filters.get('search_query', '').lower(
+        ) if 'search_query' in filters else None
         if search_query is not None:
             filters_applied['search_query'] = filters['search_query']
 
@@ -788,10 +793,12 @@ class ConductorDataService:
             tiers = [t] if isinstance(t, str) else list(t)
             filters_applied['pricing_tier'] = filters['pricing_tier']
 
-        min_price = float(filters['min_price']) if 'min_price' in filters else None
+        min_price = float(filters['min_price']
+                          ) if 'min_price' in filters else None
         if min_price is not None:
             filters_applied['min_price'] = min_price
-        max_price = float(filters['max_price']) if 'max_price' in filters else None
+        max_price = float(filters['max_price']
+                          ) if 'max_price' in filters else None
         if max_price is not None:
             filters_applied['max_price'] = max_price
 
@@ -915,9 +922,12 @@ class ConductorDataService:
         buckets: Dict[Tuple[str, str], Dict[str, Any]] = {}
 
         for product in products:
-            taxonomy = product.get('taxonomy') if isinstance(product.get('taxonomy'), dict) else {}
-            cat = (taxonomy.get('canonical_category') or 'Uncategorized').strip() if isinstance(taxonomy, dict) else 'Uncategorized'
-            subcat = (taxonomy.get('canonical_subcategory') or '').strip() if isinstance(taxonomy, dict) else ''
+            taxonomy = product.get('taxonomy') if isinstance(
+                product.get('taxonomy'), dict) else {}
+            cat = (taxonomy.get('canonical_category') or 'Uncategorized').strip(
+            ) if isinstance(taxonomy, dict) else 'Uncategorized'
+            subcat = (taxonomy.get('canonical_subcategory')
+                      or '').strip() if isinstance(taxonomy, dict) else ''
             if not subcat:
                 continue
             brand = (product.get('brand') or 'Unknown').strip()
@@ -948,7 +958,8 @@ class ConductorDataService:
                 row['brands'] = sorted(list(brands_set))
             subcats_out.append(row)
 
-        subcats_out.sort(key=lambda x: (x['brand_count'], x['product_count']), reverse=True)
+        subcats_out.sort(key=lambda x: (
+            x['brand_count'], x['product_count']), reverse=True)
         return {'subcategories': subcats_out}
 
     # =========================================================================
@@ -1009,7 +1020,8 @@ class ConductorDataService:
                 if u:
                     return u
 
-        media_assets = product.get('media_assets', []) or product.get('display', {}).get('media_assets', [])
+        media_assets = product.get('media_assets', []) or product.get(
+            'display', {}).get('media_assets', [])
         for asset in media_assets:
             if isinstance(asset, dict) and asset.get('display_purpose') == purpose:
                 u = asset.get('url')
@@ -1021,13 +1033,15 @@ class ConductorDataService:
             u = url_from(product.get('image_hero'))
             if u:
                 return u
-            official = product.get('official_images') or product.get('image_gallery')
+            official = product.get(
+                'official_images') or product.get('image_gallery')
             if isinstance(official, list) and official:
                 u = url_from(official[0])
                 if u:
                     return u
         if purpose == 'thumbnail':
-            official = product.get('official_images') or product.get('image_gallery')
+            official = product.get(
+                'official_images') or product.get('image_gallery')
             if isinstance(official, list) and len(official) > 1:
                 u = url_from(official[1])
                 if u:

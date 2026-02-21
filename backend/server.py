@@ -866,7 +866,8 @@ async def validate_image(url: str):
     """
     if not url:
         from fastapi import HTTPException
-        raise HTTPException(status_code=400, detail="url parameter is required")
+        raise HTTPException(
+            status_code=400, detail="url parameter is required")
     try:
         from backend.image_validator import validate_image_url
         result = validate_image_url(url, verify_bytes=False)

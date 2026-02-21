@@ -1,4 +1,5 @@
 # Spec: Trie-Based Prefix Search Index
+
 **Source:** 2026-02-23_proposal_trie_search_index.md
 **Created:** 2026-02-21
 **Status:** BUILT ✅
@@ -49,8 +50,8 @@ Query (prefix_search(query)):
 
 ### Files to Touch
 
-| File | Change |
-|---|---|
+| File                              | Change                                                                                 |
+| --------------------------------- | -------------------------------------------------------------------------------------- |
 | `backend/unified_data_service.py` | Add `TrieSearchIndex` class + `_build_trie_index()` + integrate in `_matches_search()` |
 
 Do NOT touch any other file. No frontend changes.

@@ -88,7 +88,8 @@ def validate_image_url(
             head = client.head(url, headers=_HEADERS)
             base["status_code"] = head.status_code
             content_type = (
-                head.headers.get("content-type", "").split(";")[0].strip().lower()
+                head.headers.get(
+                    "content-type", "").split(";")[0].strip().lower()
             )
             base["content_type"] = content_type
 
@@ -109,7 +110,8 @@ def validate_image_url(
                 try:
                     img = Image.open(io.BytesIO(get.content))
                     img.verify()
-                    base["content_type"] = Image.MIME.get(img.format or "", content_type)
+                    base["content_type"] = Image.MIME.get(
+                        img.format or "", content_type)
                 except (UnidentifiedImageError, Exception) as pex:  # noqa: BLE001
                     base["reason"] = f"pillow-verify-failed:{pex}"
                     return base
@@ -150,5 +152,6 @@ def validate_catalog_images(
         )
         if not pid or not hero:
             continue
-        results[pid] = validate_image_url(hero, timeout=timeout, verify_bytes=False)
+        results[pid] = validate_image_url(
+            hero, timeout=timeout, verify_bytes=False)
     return results

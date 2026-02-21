@@ -1,4 +1,5 @@
 # Spec: Tanstack Router Integration
+
 **Source:** 2026-02-29_proposal_tanstack_router_for_halilit_app.md
 **Created:** 2026-02-21
 **Status:** DEFERRED — AC conflict
@@ -22,6 +23,7 @@ Revisit when TanStack Router is promoted to the approved stack.
 ---
 
 ## Original Problem
+
 Product detail Ecosystem tab that shows nothing when `related_ids` is empty.
 
 **Addressed by:** `EcosystemTab.tsx` refactor (useQuery, optimistic updates)

@@ -466,7 +466,6 @@ def run_process(task: dict) -> dict:
                     "summary": f"❌ [DELEGATE_FRONTEND] Frontend Manager crashed: {exc}",
                     "error_output": str(exc)}
 
-
     # ── Evolution Proposal intercept ──────────────────────────────────────────
     # Code-level guard: if the LLM queues ANY tool on a proposal file path,
     # silently route it to the deterministic evolution_manager instead.
@@ -642,7 +641,6 @@ def execute_sequential(task: dict) -> dict:
                     "summary": msg, "error_output": str(exc)}
 
 
-    # ── Evolution Proposal intercept ──────────────────────────────────────────
     # Code-level guard: if the LLM queues ANY tool on a proposal file path,
     # silently route it to the deterministic evolution_manager instead.
     import re as _evo_re
@@ -771,7 +769,7 @@ def review_changes(auto_mode: bool = False) -> bool:
     Human-on-the-Loop gate: display modified files, let the Operator
     approve, inspect, or reject before the next task batch runs.
 
-    Returns True  â changes accepted (and committed).
+    Returns True  â changes accetd (and committed).
     Returns False â changes reverted via git restore.
     """
     # Quick-exit: no tracked changes means nothing to review
@@ -800,7 +798,7 @@ def review_changes(auto_mode: bool = False) -> bool:
             print(f"{RED}❌ Commit failed: {(r.stdout + r.stderr).strip()}{RESET}")
             return False
         _metabolic_flush()
-        return True
+        return True    
 
     while True:
         try:
