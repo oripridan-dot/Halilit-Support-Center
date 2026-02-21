@@ -178,3 +178,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Code generation created incomplete file.
 **Fix:** Completed the implementation for that file.
 **Lesson:** ALWAYS ensure generated files are complete.
+
+### [2026-02-21] Refactor Naming Conventions
+**Symptom:** Refactoring caused duplicate symbol errors.
+**Root Cause:** Inconsistent naming and export conventions.
+**Fix:** Corrected naming and export declarations.
+**Lesson:** ALWAYS enforce consistent naming conventions.
