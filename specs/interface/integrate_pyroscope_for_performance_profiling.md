@@ -16,21 +16,17 @@ To integrate Pyroscope for continuous performance profiling of the Halilit Suppo
 - [x] The integration must support CPU profiling, memory profiling, and block profiling.
 - [x] Add a startup check to ensure that pyroscope can be started, given required environment variables.
 
-## Data Contract
-N/A — This feature does not involve data contracts in the traditional sense. It focuses on application instrumentation.
-
 ## Behavior Scenarios
-- **Scenario:** Pyroscope is correctly configured and running.
-  - Input: All required environment variables are set correctly.
-  - Outcome: The Pyroscope agent starts successfully and begins profiling the application. Performance data is visible in the Pyroscope UI.
-- **Scenario:** Required environment variables are missing.
-  - Input: One or more of the required environment variables (`PYROSCOPE_SERVER_ADDRESS`, `PYROSCOPE_APPLICATION_NAME`, `PYROSCOPE_API_KEY`) are not set.
-  - Outcome: The `init_pyroscope()` function logs an error message indicating the missing environment variable(s). The application continues to function normally (without profiling).
-- **Scenario:** The Pyroscope server is unreachable.
-    - Input: The `PYROSCOPE_SERVER_ADDRESS` environment variable is set to an invalid address.
-    - Outcome: The `init_pyroscope()` function logs an error message indicating the connection failure. The application continues to function normally (without profiling).
+- **Scenario:** All required environment variables are set.
+  - Input: `PYROSCOPE_SERVER_ADDRESS`, `PYROSCOPE_APPLICATION_NAME`, and `PYROSCOPE_API_KEY` are all defined.
+  - Outcome: The Pyroscope agent starts successfully and begins profiling the application. Logs indicate successful initialization.
+- **Scenario:** One or more required environment variables are missing.
+  - Input: `PYROSCOPE_SERVER_ADDRESS` is missing.
+  - Outcome: The `init_pyroscope()` function logs an error message indicating the missing environment variable. The Pyroscope agent does NOT start, but the application continues to function normally.
+
+## Data Contract
+N/A — This feature does not involve data contracts in the traditional sense. It configures a performance monitoring tool.
 
 ## Verification Commands
-- `pnpm tsc --noEmit`
-- `pnpm run lint`
+- `python -m py_compile backend/pyroscope_integration.py`
 - `pytest backend/tests/test_pyroscope_integration.py -v`
