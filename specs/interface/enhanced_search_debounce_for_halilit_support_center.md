@@ -3,98 +3,101 @@
 **Target:** `data_pipeline/scripts/enhanced_search_debounce.py`
 
 ## Overview
-This script aims to improve the efficiency of search operations within the Halilit Support Center by implementing a debouncing mechanism. This will prevent excessive queries from being sent to the backend when users rapidly type or modify search terms, reducing server load and improving responsiveness.
+This script implements a debounced search function that enhances the responsiveness of the Halilit Support Center's search functionality. It aims to minimize the load on the search backend by preventing excessive search requests when users are typing quickly. This script will use Redis as a temporary store.
 
 ## Requirements
-- The script must read search query logs from a specified input file.
-- The script must identify potentially debounced queries based on proximity in time (configurable threshold).
-- The script must output a file containing the original queries and a flag indicating whether they were likely debounced.
-- The script must be configurable with a time window parameter (in seconds) to define the debouncing threshold.
-- The script must log the number of total queries processed, and the number of queries identified as likely debounced.
-- The script must be robust and handle potential errors such as malformed log entries gracefully.
-- The script should be designed to be easily integrated into an existing data pipeline.
+- The script must implement a `debounced_search` function.
+- The `debounced_search` function should accept a search query string as input.
+- The script must use Redis to store the timestamp of the last search request for a given query.
+- If a new search request arrives within a specified debounce time after the last request for the same query, the new request should be discarded.
+- If the debounce time has elapsed, the script must execute the search query against the Halilit Support Center's search API and return the results.
+- The script must log all search requests and their outcomes (executed or discarded) with timestamps.
+- The debounce time should be configurable via an environment variable.
+- The script must handle potential network errors gracefully (e.g., connection refused, timeout) when interacting with the search API and Redis.
+- Must comply with Three Source Rules; no synthetic data. Assume environment variables contain necessary endpoint URLs and credentials.
+- Uses the Halilit Support Center API (assume its schema is available).
 
 ## Data Contract
-**Input (Search Query Logs):**
 
-Each line in the input file represents a search query. The structure of each line is a JSON string containing at least the timestamp and the search query.
+**Input:**
 
-```json
-{
-  "timestamp": "2024-10-27T10:00:00.000Z",
-  "query": "broken halilit toy"
-}
+```python
+query: str  # The search query string
 ```
 
-**Output (Debounced Query Analysis):**
+**Output:**
 
-The output is a JSONL (JSON Lines) file, where each line is a JSON object containing the original log entry and a boolean flag indicating whether the query was likely debounced.
+```python
+from typing import Any, Dict, List, Optional
+from pydantic import BaseModel
 
-```json
-{
-  "timestamp": "2024-10-27T10:00:00.000Z",
-  "query": "broken halilit toy",
-  "debounced": true
-}
+class SearchResult(BaseModel):
+    title: str
+    url: str
+    snippet: str
+
+class SearchResponse(BaseModel):
+    results: List[SearchResult]
+    total_results: int
+    query: str
+
+    # or None if debounced
 ```
 
-**Configuration:**
+**Environment Variables:**
 
-The script should accept the following configuration parameters:
-
-- `input_file` (str): Path to the input log file.
-- `output_file` (str): Path to the output JSONL file.
-- `debounce_threshold` (float): Time window in seconds within which queries are considered debounced (e.g., 0.5 seconds).
+- `HALILIT_SEARCH_API_URL`: The URL of the Halilit Support Center's search API. (e.g., `https://api.halilit.com/search`)
+- `HALILIT_SEARCH_API_KEY`: The API key for authenticating with the Halilit Support Center's search API.
+- `REDIS_HOST`: The hostname of the Redis server.
+- `REDIS_PORT`: The port number of the Redis server.
+- `DEBOUNCE_TIME_SECONDS`: The debounce time in seconds (e.g., "0.5").
 
 ## Behavior Scenarios
-- **Scenario:** Basic Debouncing
-  - Input:  `input.log` containing:
-    ```json
-    {"timestamp": "2024-10-27T10:00:00.000Z", "query": "ha"}
-    {"timestamp": "2024-10-27T10:00:00.200Z", "query": "hal"}
-    {"timestamp": "2024-10-27T10:00:00.400Z", "query": "hali"}
-    {"timestamp": "2024-10-27T10:00:00.600Z", "query": "halil"}
-    {"timestamp": "2024-10-27T10:00:05.000Z", "query": "halilit"}
-    ```
-  - Configuration: `debounce_threshold = 0.5`
-  - Outcome: `output.jsonl` should contain:
-    ```json
-    {"timestamp": "2024-10-27T10:00:00.000Z", "query": "ha", "debounced": true}
-    {"timestamp": "2024-10-27T10:00:00.200Z", "query": "hal", "debounced": true}
-    {"timestamp": "2024-10-27T10:00:00.400Z", "query": "hali", "debounced": true}
-    {"timestamp": "2024-10-27T10:00:00.600Z", "query": "halil", "debounced": false}
-    {"timestamp": "2024-10-27T10:00:05.000Z", "query": "halilit", "debounced": false}
-    ```
+- **Scenario:** First Search Request
+  - Input: `query = "printer driver"`
+  - Outcome:
+    - The script executes the search query against the Halilit Support Center's search API.
+    - The script stores the current timestamp in Redis, associated with the query "printer driver".
+    - The script returns the search results in the `SearchResponse` format.
+    - A log entry indicating that the search was executed.
 
-- **Scenario:** No Debouncing
-  - Input:  `input.log` containing:
-    ```json
-    {"timestamp": "2024-10-27T10:00:00.000Z", "query": "toy"}
-    {"timestamp": "2024-10-27T10:00:05.000Z", "query": "toys"}
-    ```
-  - Configuration: `debounce_threshold = 0.5`
-  - Outcome: `output.jsonl` should contain:
-    ```json
-    {"timestamp": "2024-10-27T10:00:00.000Z", "query": "toy", "debounced": false}
-    {"timestamp": "2024-10-27T10:00:05.000Z", "query": "toys", "debounced": false}
-    ```
+- **Scenario:** Debounced Search Request
+  - Input: `query = "printer driver"` (arrives 0.2 seconds after the first search request for the same query)
+  - Outcome:
+    - The script detects that the debounce time has not elapsed since the last request for "printer driver".
+    - The script discards the search request.
+    - The script returns `None`.
+    - A log entry indicating that the search was debounced.
 
-- **Scenario:** Empty Input File
-  - Input: `input.log` is empty
-  - Configuration: `debounce_threshold = 0.5`
-  - Outcome: `output.jsonl` should be empty, script should log that 0 queries were processed and 0 were debounced, without raising an exception.
+- **Scenario:** Non-Debounced Search Request
+  - Input: `query = "printer driver"` (arrives 1 second after the first search request for the same query, assuming `DEBOUNCE_TIME_SECONDS` is set to 0.5)
+  - Outcome:
+    - The script detects that the debounce time has elapsed.
+    - The script executes the search query against the Halilit Support Center's search API.
+    - The script updates the timestamp in Redis with the current timestamp.
+    - The script returns the search results in the `SearchResponse` format.
+    - A log entry indicating that the search was executed.
 
-- **Scenario:** Malformed JSON Log Entry
-  - Input: `input.log` contains:
-    ```json
-    {"timestamp": "2024-10-27T10:00:00.000Z", "query": "correct"}
-    {"timestamp": "2024-10-27T10:00:01.000Z", "invalid": "json}
-    {"timestamp": "2024-10-27T10:00:02.000Z", "query": "another correct"}
-    ```
-  - Configuration: `debounce_threshold = 0.5`
-  - Outcome: `output.jsonl` should contain the valid entries with appropriate `debounced` flags. The invalid entry should be skipped and logged as an error, and not cause the script to terminate.
+- **Scenario:** Redis Connection Error
+  - Input: `query = "printer driver"` (Redis server is unavailable)
+  - Outcome:
+    - The script catches the connection exception.
+    - The script logs the error.
+    - The script executes the search query against the Halilit Support Center's search API (to degrade gracefully in case Redis is unavailable).
+    - The script returns the search results in the `SearchResponse` format.
+    - A log entry indicating that the search was executed.
+
+- **Scenario:** Halilit Search API Error
+  - Input: `query = "printer driver"` (Halilit Search API returns a 500 error)
+  - Outcome:
+    - The script catches the exception from the Halilit Search API.
+    - The script logs the error.
+    - The script returns an empty search result (with `total_results=0` and `results` as an empty list) within the `SearchResponse` format.
+    - A log entry indicating that the error from the upstream API was caught.
 
 ## Out of Scope
-- This script does not handle the actual throttling or blocking of queries. It only identifies potential debounced queries.
-- This script does not interact with the search API directly. It only analyzes log files.
-- Real-time debouncing within the application is out of scope. This script analyzes historical data.
+- Implementation of the Halilit Support Center's search API itself.
+- Authentication of users accessing the search functionality.
+- Caching of search results beyond the debouncing mechanism.
+- Monitoring and alerting of the script's performance.
+- Rate limiting on the API calls.
