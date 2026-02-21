@@ -21,7 +21,7 @@ import { LiquidCanvas, type LiquidSchema } from "./LiquidCanvas";
 // ---------------------------------------------------------------------------
 
 /**
- * Represents the result of submitting an innovation request.
+ * Represents the result of submitting a classic (deep) innovation request.
  */
 interface InnovationRequestResult {
   status: string;
@@ -80,14 +80,14 @@ export const JitInnovationButton: React.FC = () => {
   /**
    * Resets the panel to the idle state, clearing input and messages.
    */
-  const resetPanel = (): void => {
+  const resetPanel = () => {
     setInnovationNeed("");
     setPanelState("idle");
     setStatusMessage("");
     setLiquidSchema(null);
   };
 
-  const handleOpenPanel = (): void => {
+  const handleOpenPanel = () => {
     resetPanel();
     setIsOpen(true);
   };
@@ -95,7 +95,7 @@ export const JitInnovationButton: React.FC = () => {
   /**
    * Closes the panel and resets its state after a short delay to allow for animation.
    */
-  const handleClosePanel = (): void => {
+  const handleClosePanel = () => {
     setIsOpen(false);
     setTimeout(resetPanel, 300); // Reset after close animation
   };
@@ -104,7 +104,7 @@ export const JitInnovationButton: React.FC = () => {
    * Handles the submission of the innovation request to the backend.
    * Routes to /api/innovation/liquid (Liquid mode) or /api/innovation/request (Deep mode).
    */
-  const handleSubmit = async (): Promise<void> => {
+  const handleSubmit = async () => {
     const trimmedNeed = innovationNeed.trim();
     if (!trimmedNeed) return;
 
@@ -181,7 +181,7 @@ export const JitInnovationButton: React.FC = () => {
   /**
    * Handles keyboard input for the textarea, submitting the form when Cmd/Ctrl + Enter is pressed.
    */
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>): void => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
       event.preventDefault();
       handleSubmit();

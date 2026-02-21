@@ -20,7 +20,6 @@ import React, { useEffect, useRef, useState } from "react";
 // Types
 // ---------------------------------------------------------------------------
 
-/** Defines the structure of the Liquid Canvas schema. */
 export interface LiquidSchema {
   type: "DataGrid" | "MetricCard" | "List";
   title: string;
@@ -33,7 +32,6 @@ interface LiquidCanvasProps {
   onClose?: () => void;
 }
 
-/** Defines the structure of the Liquid data response. */
 interface LiquidResponse {
   columns: string[];
   row_count: number;
@@ -45,27 +43,23 @@ interface LiquidResponse {
 // Sub-widgets
 // ---------------------------------------------------------------------------
 
-interface DataGridWidgetProps {
-  schema: LiquidSchema;
-  data: Record<string, unknown>[];
-  columns: string[];
-  capped: boolean;
-}
-
-/** Renders a sortable data grid. */
 function DataGridWidget({
   schema,
   data,
   columns,
   capped,
-}: DataGridWidgetProps): JSX.Element {
+}: {
+  schema: LiquidSchema;
+  data: Record<string, unknown>[];
+  columns: string[];
+  capped: boolean;
+}) {
   const [sortCol, setSortCol] = useState<string | null>(null);
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
 
   const displayCols = schema.columns?.length ? schema.columns : columns;
 
-  /** Handles column sorting. */
-  function handleSort(col: string): void {
+  function handleSort(col: string) {
     if (sortCol === col) {
       setSortDir((d) => (d === "asc" ? "desc" : "asc"));
     } else {
@@ -133,16 +127,13 @@ function DataGridWidget({
   );
 }
 
-interface MetricCardWidgetProps {
-  data: Record<string, unknown>[];
-  columns: string[];
-}
-
-/** Renders a card displaying key metrics. */
 function MetricCardWidget({
   data,
   columns,
-}: MetricCardWidgetProps): JSX.Element {
+}: {
+  data: Record<string, unknown>[];
+  columns: string[];
+}) {
   const firstRow = data[0];
   if (!firstRow) return <p className="text-zinc-500 text-sm">No data.</p>;
 
@@ -168,16 +159,13 @@ function MetricCardWidget({
   );
 }
 
-interface ListWidgetProps {
-  data: Record<string, unknown>[];
-  columns: string[];
-}
-
-/** Renders a simple list of text values. */
 function ListWidget({
   data,
   columns,
-}: ListWidgetProps): JSX.Element {
+}: {
+  data: Record<string, unknown>[];
+  columns: string[];
+}) {
   const primaryCol = columns[0];
   const secondaryCol = columns[1];
   return (
@@ -205,13 +193,10 @@ function ListWidget({
 // Main LiquidCanvas
 // ---------------------------------------------------------------------------
 
-/**
- * The main LiquidCanvas component that fetches data and renders the appropriate widget.
- */
 export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
   schema,
   onClose,
-}): JSX.Element => {
+}) => {
   const [data, setData] = useState<Record<string, unknown>[]>([]);
   const [columns, setColumns] = useState<string[]>([]);
   const [capped, setCapped] = useState(false);
@@ -251,8 +236,8 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
-  /** Handles closing the canvas on backdrop click. */
-  function handleBackdrop(e: React.MouseEvent): void {
+  // Close on backdrop click
+  function handleBackdrop(e: React.MouseEvent) {
     if (e.target === overlayRef.current && onClose) onClose();
   }
 
