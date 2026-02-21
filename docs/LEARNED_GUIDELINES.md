@@ -178,3 +178,29 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Code generation created incomplete file.
 **Fix:** Completed the implementation for that file.
 **Lesson:** ALWAYS ensure generated files are complete.
+
+### [2026-02-21] Refactor Naming Conventions
+**Symptom:** Refactoring caused duplicate symbol errors.
+**Root Cause:** Inconsistent naming and export conventions.
+**Fix:** Corrected naming and export declarations.
+**Lesson:** ALWAYS enforce consistent naming conventions.
+
+### [2026-02-21] Validate Anchor Existence
+**Symptom:** `PATCH_ANCHOR_MISS` error occurred during build.
+**Root Cause:** An expected anchor was missing.
+**Fix:** Rebuilt module from sandbox environment.
+**Lesson:** ALWAYS validate anchor existence before patching.
+
+
+### [2026-02-21] Mutation — patch_component Gen 5
+**Symptom:** `PATCH_ANCHOR_MISS` error occurred when using `patch_component`.
+**Root Cause:** The specified anchor text was missing in the target file.
+**Fix:** Added a check for anchor existence before calling `patch_component`. If the anchor is missing, `create_file` is used to create a new file with the desired content.
+**Lesson:** ALWAYS confirm the existence of the specified anchor text in the target file before calling `patch_component`; if the anchor is missing, use `create_file` to create a new file with the desired content instead.
+
+
+### [2026-02-21] Mutation — ui_validator Gen 4
+**Symptom:** UI validation failed.
+**Root Cause:** The ui_validate tool consistently fails due to scope violations or build issues.
+**Fix:** Run a minimal scope check on only the changed files.
+**Lesson:** ALWAYS run a minimal scope check (e.g., changed files only) for `ui_validate` before more comprehensive validation.

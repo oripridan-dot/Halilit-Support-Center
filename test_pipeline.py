@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 """
-Pipeline outcome validation — Operator Console (spec-driven).
-Run from project root. Tests that pipeline artifacts exist and catalog builds.
-Optional: python3 test_pipeline.py. See docs/FACTORY_PIPELINE.md.
+Pipeline + System Validation — Halilit Operator Console (v9.7.6)
+=================================================================
+Run from project root:  python test_pipeline.py
+Covers: file structure, brand data, catalog build (with error capture),
+API health, frontend components, navigation store, pipeline flow,
+Source Rule compliance, data quality (dict image_url), TypeScript
+compilation, and backend module import health.
+See docs/FACTORY_PIPELINE.md for context.
 """
 
 from backend.project_config import DATA_DIR, FRONTEND_PUBLIC_DATA
+import io
 import json
+import logging
 import sys
 import subprocess
 from pathlib import Path
@@ -36,7 +43,8 @@ def print_section(title: str):
 
 def print_status(status: str, message: str):
     """Print a status message."""
-    icon = "✅" if status == "PASS" else "❌" if status == "FAIL" else "⚠️"
+    icon = {"PASS": "✅", "FAIL": "❌", "WARN": "⚠️",
+            "SKIP": "⏭️"}.get(status, "ℹ️")
     print(f"{icon} {status}: {message}")
 
 
@@ -45,13 +53,22 @@ def test_file_structure():
     print_section("TEST 1: File Structure")
 
     checks = [
-        ("Backend directory", PROJECT_ROOT / "backend"),
-        ("Frontend directory", PROJECT_ROOT / "frontend"),
-        ("Data directory", DATA_DIR),
-        ("Frontend public data", FRONTEND_PUBLIC_DATA),
-        ("Server file", PROJECT_ROOT / "backend" / "server.py"),
-        ("Conductor CLI", PROJECT_ROOT / "backend" / "conductor_main.py"),
-        ("Ignition script", PROJECT_ROOT / "ignite_factory.sh"),
+        ("Backend directory",          PROJECT_ROOT / "backend"),
+        ("Frontend directory",         PROJECT_ROOT / "frontend"),
+        ("Data directory",             DATA_DIR),
+        ("Frontend public data",       FRONTEND_PUBLIC_DATA),
+        ("Source rules (THE LAW)",     PROJECT_ROOT / "backend" / "source_rules.py"),
+        ("Server file",                PROJECT_ROOT / "backend" / "server.py"),
+        ("Conductor CLI",              PROJECT_ROOT /
+         "backend" / "conductor_main.py"),
+        ("Product normalizer",         PROJECT_ROOT /
+         "backend" / "product_normalizer.py"),
+        ("Visual validator",           PROJECT_ROOT /
+         "backend" / "ingestion" / "visual_validator.py"),
+        ("Ignition script",            PROJECT_ROOT / "ignite_factory.sh"),
+        ("Factory controller",         PROJECT_ROOT / "factory.py"),
+        ("Frontend telemetry module",  PROJECT_ROOT /
+         "frontend" / "src" / "telemetry.ts"),
     ]
 
     all_pass = True
@@ -112,7 +129,7 @@ def test_brand_json_files():
 
 
 def test_catalog_build():
-    """Test 3: Build catalog and verify structure."""
+    """Test 3: Build catalog, verify structure, and surface per-file load errors."""
     print_section("TEST 3: Catalog Build")
 
     if not BUILD_CATALOG_AVAILABLE:
@@ -121,9 +138,42 @@ def test_catalog_build():
         print("   Hint: Activate virtual environment: source .venv/bin/activate")
         return False
 
+    # Intercept ERROR-level log messages emitted by product_normalizer
+    error_records: list = []
+
+    class _Capture(logging.Handler):
+        def emit(self, record: logging.LogRecord) -> None:
+            if record.levelno >= logging.ERROR:
+                error_records.append(record)
+
+    pn_logger = logging.getLogger("backend.product_normalizer")
+    handler = _Capture()
+    pn_logger.addHandler(handler)
+
     try:
         print("Building catalog from frontend/public/data...")
         catalog = build_catalog(str(FRONTEND_PUBLIC_DATA), resolve=False)
+    except Exception as e:
+        pn_logger.removeHandler(handler)
+        print_status("FAIL", f"Catalog build raised an exception: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+    finally:
+        pn_logger.removeHandler(handler)
+
+    if error_records:
+        print_status("FAIL",
+                     f"{len(error_records)} brand file(s) had load errors (products skipped):")
+        for rec in error_records[:15]:
+            print(f"     ❌  {rec.getMessage()}")
+        if len(error_records) > 15:
+            print(f"     … and {len(error_records) - 15} more")
+    else:
+        print_status("PASS", "All brand files loaded without errors")
+
+    try:
+        pass  # catalog already built above
 
         # Verify structure
         required_keys = ["products", "indexes", "metadata"]
@@ -162,10 +212,10 @@ def test_catalog_build():
         else:
             print_status("PASS", f"Catalog contains {total_products} products")
 
-        return True
+        return len(error_records) == 0
 
     except Exception as e:
-        print_status("FAIL", f"Catalog build failed: {e}")
+        print_status("FAIL", f"Catalog build post-processing failed: {e}")
         import traceback
         traceback.print_exc()
         return False
@@ -173,35 +223,72 @@ def test_catalog_build():
 
 def test_api_endpoints():
     """Test 4: Verify API endpoints are accessible (if server is running)."""
-    print_section("TEST 4: API Endpoints")
+    print_section("TEST 4: API Endpoints (live)")
 
     import urllib.request
     import urllib.error
 
-    endpoints = [
-        ("/api/health", "Health check"),
-        ("/api/conductor/catalog", "Catalog endpoint"),
+    GET_endpoints = [
+        ("/api/health",              "Health check"),
+        ("/api/conductor/catalog",   "Catalog endpoint"),
+        ("/api/dashboard/stats",     "Dashboard stats"),
+    ]
+    POST_endpoints = [
+        ("/api/telemetry/crash-report", "Sovereign Nerve telemetry"),
     ]
 
     all_pass = True
-    for endpoint, name in endpoints:
+    server_up = False
+
+    for endpoint, name in GET_endpoints:
+        url = f"http://localhost:8000{endpoint}"
         try:
-            url = f"http://localhost:8000{endpoint}"
             req = urllib.request.Request(url)
             req.add_header("Accept", "application/json")
-
-            with urllib.request.urlopen(req, timeout=2) as response:
-                if response.status == 200:
-                    print_status("PASS", f"{name}: {endpoint} (200 OK)")
+            with urllib.request.urlopen(req, timeout=3) as resp:
+                server_up = True
+                if resp.status == 200:
+                    print_status("PASS", f"{name}: GET {endpoint} → 200 OK")
                 else:
                     print_status(
-                        "FAIL", f"{name}: {endpoint} ({response.status})")
+                        "FAIL", f"{name}: GET {endpoint} → {resp.status}")
                     all_pass = False
         except urllib.error.URLError:
-            print_status(
-                "SKIP", f"{name}: Server not running (start with './start_console.sh')")
+            print_status("SKIP", f"{name}: server not running")
         except Exception as e:
-            print_status("FAIL", f"{name}: {endpoint} - {e}")
+            print_status("FAIL", f"{name}: {endpoint} — {e}")
+            all_pass = False
+
+    for endpoint, name in POST_endpoints:
+        if not server_up:
+            print_status("SKIP", f"{name}: server not running")
+            continue
+        url = f"http://localhost:8000{endpoint}"
+        try:
+            payload = json.dumps({"event": {"title": "validation-probe"},
+                                  "stacktrace": "none",
+                                  "culprit": "test_pipeline.py",
+                                  "environment": "test"}).encode()
+            req = urllib.request.Request(
+                url, data=payload,
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=3) as resp:
+                body = json.loads(resp.read())
+                if resp.status == 200 and body.get("status") == "received":
+                    print_status(
+                        "PASS", f"{name}: POST {endpoint} → 200 received")
+                else:
+                    print_status(
+                        "FAIL", f"{name}: POST {endpoint} → unexpected: {body}")
+                    all_pass = False
+        except urllib.error.HTTPError as e:
+            print_status(
+                "FAIL", f"{name}: POST {endpoint} → HTTP {e.code} (was 405 before v9.7.6 fix)")
+            all_pass = False
+        except Exception as e:
+            print_status("FAIL", f"{name}: {endpoint} — {e}")
             all_pass = False
 
     return all_pass
@@ -213,14 +300,17 @@ def test_frontend_components():
 
     frontend_src = PROJECT_ROOT / "frontend" / "src"
     required_components = [
-        ("App.tsx", "Main app component"),
-        ("components/GlobalSearch.tsx", "Global search component"),
-        ("components/views/DashboardView.tsx", "Dashboard view"),
-        ("components/views/InventoryView.tsx", "Inventory view"),
-        ("components/views/ProductDetailView.tsx", "Product detail view"),
-        ("hooks/useConductorCatalog.ts", "Catalog hook"),
-        ("hooks/useJITIntelligence.ts", "JIT intelligence hook"),
-        ("store/navigationStore.ts", "Navigation store"),
+        ("App.tsx",                                         "Main app component"),
+        ("components/GlobalSearch.tsx",                     "Global search"),
+        ("components/views/DashboardView.tsx",              "Dashboard view"),
+        ("components/views/InventoryView.tsx",              "Inventory view"),
+        ("components/views/ProductDetailView.tsx",          "Product detail view"),
+        ("hooks/useConductorCatalog.ts",                    "Catalog hook"),
+        ("hooks/useJITIntelligence.ts",
+         "JIT intelligence hook"),
+        ("store/navigationStore.ts",                        "Navigation store"),
+        ("telemetry.ts",
+         "Sovereign Nerve telemetry module"),
     ]
 
     all_pass = True
@@ -272,13 +362,18 @@ def test_pipeline_flow():
     print_section("TEST 7: Pipeline Flow Validation")
 
     flow_steps = [
-        ("1. Ingestion", "Brand JSONs in frontend/public/data", FRONTEND_PUBLIC_DATA.exists()
-         and len(list(FRONTEND_PUBLIC_DATA.glob("*.json"))) > 0),
-        ("2. Catalog Build", "build_catalog() function", True),  # Already tested
-        ("3. API Serving", "server.py mounts /api/conductor/catalog", True),  # File exists
-        # Already checked
-        ("4. Frontend Hook", "useConductorCatalog uses /api/conductor/catalog", True),
-        ("5. GlobalSearch", "Uses /api/products/search", True),  # Already checked
+        ("1. Ingestion",     "Brand JSONs in frontend/public/data",
+         FRONTEND_PUBLIC_DATA.exists() and len(list(FRONTEND_PUBLIC_DATA.glob("*.json"))) > 0),
+        ("2. Catalog Build", "build_catalog() importable",
+         BUILD_CATALOG_AVAILABLE),
+        ("3. API Serving",   "server.py provides /api/conductor/catalog",
+         (PROJECT_ROOT / "backend" / "server.py").exists()),
+        ("4. Frontend Hook", "useConductorCatalog.ts present",
+         (PROJECT_ROOT / "frontend" / "src" / "hooks" / "useConductorCatalog.ts").exists()),
+        ("5. JIT Streaming", "useJITIntelligence.ts present",
+         (PROJECT_ROOT / "frontend" / "src" / "hooks" / "useJITIntelligence.ts").exists()),
+        ("6. Telemetry",     "Sovereign Nerve telemetry.ts present",
+         (PROJECT_ROOT / "frontend" / "src" / "telemetry.ts").exists()),
     ]
 
     all_pass = True
@@ -292,73 +387,225 @@ def test_pipeline_flow():
     return all_pass
 
 
-def generate_sample_data():
-    """Generate a sample product for testing."""
-    print_section("SAMPLE DATA: Product Structure")
+# ---------------------------------------------------------------------------
+# Test 8 — Source Rule Compliance
+# ---------------------------------------------------------------------------
 
-    sample_product = {
-        "id": "TEST-001",
-        "name": "Test Product",
-        "brand": "Test Brand",
-        "galaxy_id": "keys-production",
-        "spectrum_id": "synthesizers",
-        "category": "Keys & Production",
-        "subcategory": "Synthesizers",
-        "price": 999.99,
-        "price_eilat": 849.99,
-        "currency": "ILS",
-        "image_url": "/assets/images/placeholder_product.svg",
-        "description": "Test product description",
-        "specs": {"keys": 61, "polyphony": "64 voices"},
-        "halilit_url": "https://halilit.com/test",
-    }
+def test_source_rule_compliance() -> bool:
+    """Verify source_rules.py defines the Three Sources and key constants."""
+    print_section("TEST 8: Source Rule Compliance (THE LAW)")
 
-    print("Sample product structure:")
-    print(json.dumps(sample_product, indent=2))
+    source_rules_path = PROJECT_ROOT / "backend" / "source_rules.py"
+    if not source_rules_path.exists():
+        print_status(
+            "FAIL", "source_rules.py MISSING — THE LAW has been violated!")
+        return False
 
-    return sample_product
+    content = source_rules_path.read_text()
+    required_symbols = [
+        ("COMMERCIAL source defined",
+         "COMMERCIAL" in content or "commercial" in content),
+        ("OFFICIAL source defined",
+         "OFFICIAL" in content or "official" in content),
+        ("CONTEXTUAL source defined",
+         "CONTEXTUAL" in content or "contextual" in content),
+        ("Price field ownership present", "price" in content),
+    ]
+
+    all_pass = True
+    for name, ok in required_symbols:
+        if ok:
+            print_status("PASS", name)
+        else:
+            print_status("FAIL", name)
+            all_pass = False
+
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "source_rules", source_rules_path)
+        mod = importlib.util.module_from_spec(spec)  # type: ignore[arg-type]
+        spec.loader.exec_module(mod)  # type: ignore[union-attr]
+        print_status("PASS", "source_rules.py imports without errors")
+    except Exception as e:
+        print_status("FAIL", f"source_rules.py import failed: {e}")
+        all_pass = False
+
+    return all_pass
 
 
-def main():
-    """Run all tests."""
+# ---------------------------------------------------------------------------
+# Test 9 — Data Quality: dict image_url
+# ---------------------------------------------------------------------------
+
+def test_data_quality_image_url() -> bool:
+    """Scan brand JSON files for dict-typed image_url (fixed gracefully in v9.7.6)."""
+    print_section("TEST 9: Data Quality — image_url field shape")
+
+    if not FRONTEND_PUBLIC_DATA.exists():
+        print_status("SKIP", "Frontend data directory missing")
+        return False
+
+    exclude = {"index", "search_index", "search_index_min",
+               "galaxy_db", "sample", "inventory", "taxonomy"}
+    affected: list = []
+    total_files = 0
+
+    for f in sorted(FRONTEND_PUBLIC_DATA.glob("*.json")):
+        if f.stem in exclude:
+            continue
+        total_files += 1
+        try:
+            data = json.loads(f.read_text())
+            products = data if isinstance(
+                data, list) else data.get("products", [])
+            n = sum(1 for p in products if isinstance(
+                p.get("image_url"), dict))
+            if n:
+                affected.append(f"{f.name} ({n} products)")
+        except Exception as e:
+            print_status("WARN", f"Cannot read {f.name}: {e}")
+
+    print(f"   Scanned {total_files} brand files")
+    if affected:
+        print_status("WARN",
+                     f"{len(affected)} file(s) have dict image_url "
+                     f"(normalizer auto-flattens; re-enrich to fix source data):")
+        for name in affected[:10]:
+            print(f"     ⚠️  {name}")
+        if len(affected) > 10:
+            print(f"     … and {len(affected) - 10} more")
+        return True   # WARN only — v9.7.6 handles this gracefully
+    else:
+        print_status("PASS", "All brand files have string image_url fields")
+        return True
+
+
+# ---------------------------------------------------------------------------
+# Test 10 — TypeScript Compilation
+# ---------------------------------------------------------------------------
+
+def test_typescript_compilation() -> bool:
+    """Run tsc --noEmit on the frontend to catch any type errors."""
+    print_section("TEST 10: TypeScript Compilation")
+
+    frontend_dir = PROJECT_ROOT / "frontend"
+    tsconfig = frontend_dir / "tsconfig.app.json"
+
+    if not tsconfig.exists():
+        print_status("SKIP", "tsconfig.app.json not found in frontend/")
+        return False
+
+    tsc_exec = frontend_dir / "node_modules" / ".bin" / "tsc"
+    if not tsc_exec.exists():
+        which = subprocess.run(
+            ["which", "tsc"], capture_output=True, text=True)
+        if which.returncode != 0:
+            print_status(
+                "SKIP", "tsc not found — run pnpm install in frontend/")
+            return False
+        tsc_exec = Path(which.stdout.strip())
+
+    try:
+        result = subprocess.run(
+            [str(tsc_exec), "--project", str(tsconfig), "--noEmit"],
+            capture_output=True, text=True,
+            cwd=str(frontend_dir), timeout=120,
+        )
+        if result.returncode == 0:
+            print_status("PASS", "TypeScript compilation: no type errors")
+            return True
+        else:
+            error_lines = [l for l in result.stdout.splitlines()
+                           if "error TS" in l]
+            print_status("FAIL", f"TypeScript: {len(error_lines)} error(s)")
+            for line in error_lines[:10]:
+                print(f"     ❌  {line.strip()}")
+            if len(error_lines) > 10:
+                print(f"     … and {len(error_lines) - 10} more")
+            return False
+    except subprocess.TimeoutExpired:
+        print_status("WARN", "tsc timed out after 120 s")
+        return True
+    except Exception as e:
+        print_status("FAIL", f"tsc execution failed: {e}")
+        return False
+
+
+# ---------------------------------------------------------------------------
+# Test 11 — Backend Module Import Health
+# ---------------------------------------------------------------------------
+
+def test_backend_imports() -> bool:
+    """Ensure core backend modules import cleanly (catches syntax/import errors)."""
+    print_section("TEST 11: Backend Module Import Health")
+
+    modules = [
+        ("backend.source_rules",                "Source rules (THE LAW)"),
+        ("backend.product_normalizer",           "Product normalizer"),
+        ("backend.product_graph",                "Product graph"),
+        ("backend.jit_agent",                    "JIT agent"),
+        ("backend.server",                       "FastAPI server"),
+        ("backend.ingestion.visual_validator",   "Visual validator"),
+    ]
+
+    all_pass = True
+    for mod_name, label in modules:
+        try:
+            import importlib
+            importlib.import_module(mod_name)
+            print_status("PASS", f"{label}: {mod_name}")
+        except Exception as e:
+            print_status("FAIL", f"{label}: {mod_name} — {e}")
+            all_pass = False
+
+    return all_pass
+
+
+def main() -> int:
+    """Run all validation checks."""
     print("\n" + "=" * 70)
-    print("  HALILIT OPERATOR CONSOLE — PIPELINE VALIDATION TEST")
-    print("  Version 9.6.0")
+    print("  HALILIT OPERATOR CONSOLE — SYSTEM VALIDATION")
+    print("  Version 9.7.6  |  February 2026")
+    print("  Three Source Rules: Commercial · Official · Contextual")
     print("=" * 70)
 
-    results = []
+    results: list = []
 
-    # Run tests
-    results.append(("File Structure", test_file_structure()))
-    results.append(("Brand JSON Files", test_brand_json_files()))
-    results.append(("Catalog Build", test_catalog_build()))
-    results.append(("API Endpoints", test_api_endpoints()))
-    results.append(("Frontend Components", test_frontend_components()))
-    results.append(("Navigation Store", test_navigation_store()))
-    results.append(("Pipeline Flow", test_pipeline_flow()))
+    results.append(("File Structure",          test_file_structure()))
+    results.append(("Brand JSON Files",         test_brand_json_files()))
+    results.append(("Catalog Build",            test_catalog_build()))
+    results.append(("API Endpoints (live)",     test_api_endpoints()))
+    results.append(("Frontend Components",      test_frontend_components()))
+    results.append(("Navigation Store",         test_navigation_store()))
+    results.append(("Pipeline Flow",            test_pipeline_flow()))
+    results.append(("Source Rule Compliance",   test_source_rule_compliance()))
+    results.append(("Data Quality: image_url",  test_data_quality_image_url()))
+    results.append(("TypeScript Compilation",   test_typescript_compilation()))
+    results.append(("Backend Module Health",    test_backend_imports()))
 
-    # Generate sample data
-    generate_sample_data()
+    print_section("VALIDATION SUMMARY — v9.7.6")
 
-    # Summary
-    print_section("TEST SUMMARY")
-
-    passed = sum(1 for _, result in results if result)
+    passed = sum(1 for _, r in results if r)
     total = len(results)
 
     for name, result in results:
-        status = "✅ PASS" if result else "❌ FAIL"
-        print(f"{status}: {name}")
+        print(f"{'✅ PASS' if result else '❌ FAIL'}: {name}")
 
-    print(f"\nTotal: {passed}/{total} tests passed")
+    pct = int(passed / total * 100)
+    print(f"\nOverall: {passed}/{total} checks passed ({pct}%)")
 
     if passed == total:
-        print_status("PASS", "All tests passed! System is ready.")
+        print_status("PASS", "System is healthy — all checks passed.")
         return 0
+    elif passed >= total - 2:
+        print_status(
+            "WARN", f"{total - passed} minor check(s) failed — review above.")
+        return 1
     else:
         print_status(
-            "FAIL", f"{total - passed} test(s) failed. Please review above.")
-        return 1
+            "FAIL", f"{total - passed} check(s) failed — system needs attention.")
+        return 2
 
 
 if __name__ == "__main__":

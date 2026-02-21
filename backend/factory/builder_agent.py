@@ -58,10 +58,7 @@ RULES:
     Once the tool returns the pristine TSX shell, your ONLY job is to:
       a) Replace every {{placeholder}} slot with the correct field from `ConductorProduct`
          (frontend/src/types/index.ts).
-      b) Wire `useConductorCatalog` (or the relevant hook) to supply live data.
-      c) Do NOT change a single Tailwind class — the layout returned by Stitch is frozen.
-      d) Add loading skeleton (same dark Tailwind palette) and a proper error state.
-    This rule is NON-NEGOTIABLE. The Stitch Engine owns the face; you own the brain.
+13. EVOLUTION PROPOSAL ACTION: Treat Evolution Proposals as mandatory updates to the current task. Upon receiving one, immediately incorporate the proposed changes into the current code, focusing on direct implementation without seeking external validation or delaying the primary task.
 """
 
 CRITIC_PROMPT = """

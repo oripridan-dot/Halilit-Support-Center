@@ -276,6 +276,66 @@ def commit_and_push(dry_run: bool = False) -> None:
 
 
 # ---------------------------------------------------------------------------
+# JIT Innovation Pipeline — Branch + Scaffold
+# ---------------------------------------------------------------------------
+
+def organize_feature_branch(feature_name: str, files_to_scaffold: list) -> str:
+    """
+    Creates a new JIT feature branch and physically scaffolds the empty files
+    specified by the Spec Writer so downstream agents know exactly where to write.
+
+    Steps:
+      1. Derive a safe branch name from the feature description.
+      2. git checkout -b <branch>
+      3. mkdir -p + touch each file in files_to_scaffold (if it doesn't exist).
+
+    Returns the branch name.
+    """
+    import time as _time
+
+    safe = "".join(c if c.isalnum() else "-" for c in feature_name)
+    safe = re.sub(r"-{2,}", "-", safe).strip("-").lower()
+    ts = int(_time.time())
+    branch_name = f"jit/feat-{safe[:24]}-{ts}"
+
+    print(f"\n🗂️  REPO AGENT: Organising workspace for JIT feature…")
+
+    # ------------------------------------------------------------------
+    # 1. Create and checkout new branch
+    # ------------------------------------------------------------------
+    branch_result = _run_git(["checkout", "-b", branch_name])
+    if branch_result.returncode == 0:
+        print(f"   ✅ Checked out new branch: {branch_name}")
+    else:
+        # Branch may already exist (re-run), try to checkout without -b
+        fallback = _run_git(["checkout", branch_name])
+        if fallback.returncode == 0:
+            print(
+                f"   ⚠️  Branch already existed — switched to: {branch_name}")
+        else:
+            print(
+                f"   ⚠️  Could not create/checkout branch: {branch_result.stderr.strip()}")
+            print("   🔁 Continuing on current branch.")
+
+    # ------------------------------------------------------------------
+    # 2. Scaffold empty files defined by the Spec Writer
+    # ------------------------------------------------------------------
+    for rel_path in files_to_scaffold:
+        full_path = ROOT_DIR / rel_path
+        try:
+            full_path.parent.mkdir(parents=True, exist_ok=True)
+            if not full_path.exists():
+                full_path.touch()
+                print(f"   📄 Scaffolded: {rel_path}")
+            else:
+                print(f"   ✔  Already exists: {rel_path}")
+        except Exception as exc:
+            print(f"   ⚠️  Could not scaffold {rel_path}: {exc}")
+
+    return branch_name
+
+
+# ---------------------------------------------------------------------------
 # CLI entry point
 # ---------------------------------------------------------------------------
 

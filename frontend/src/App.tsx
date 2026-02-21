@@ -12,6 +12,7 @@ import {
 import { useNavigationStore } from "./store/navigationStore";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { GlobalSearch } from "./components/GlobalSearch";
+import { JitInnovationButton } from "./components/JitInnovationButton";
 
 // Strict Lazy Loading
 const DashboardView = React.lazy(
@@ -191,6 +192,8 @@ function App() {
           </main>
         </div>
       </div>
+      {/* ── JIT Innovation Pipeline floating button ── */}
+      <JitInnovationButton />
     </GlobalErrorBoundary>
   );
 }

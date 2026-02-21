@@ -745,6 +745,13 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     if not name:
         return None
 
+    # Flatten image_url: some pipeline stages store it as {"url": "..."} instead of a plain string.
+    # Normalize to a plain string here so downstream code can safely call .strip() / .startswith() etc.
+    _raw_img_url = p.get("image_url")
+    if isinstance(_raw_img_url, dict):
+        p = dict(p)
+        p["image_url"] = _raw_img_url.get("url") or ""
+
     # Commercial vs official image match: reject official data if images don't match same product
     p = reject_official_if_mismatch(dict(p))
 

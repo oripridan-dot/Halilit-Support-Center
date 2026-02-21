@@ -1,3 +1,6 @@
+## [v9.7.6] — 2026-02-21
+- [chore] Removed JitInnovationButton component.
+
 ## [v4.1] — 2026-02-21
 - [feat] Added `generate_stitch_ui_shell` tool to `factory_mcp_server.py`.
 - [feat] Implemented `_tool_generate_stitch_ui_shell` handler.

@@ -93,6 +93,106 @@ Make the spec complete enough for an AI coding agent to implement it without fur
         f"   Next step → review the spec, then: python factory.py build specs/{category}/{filename}.md")
 
 
+# ---------------------------------------------------------------------------
+# JIT Innovation Pipeline entry-point
+# ---------------------------------------------------------------------------
+
+JIT_SYSTEM_PROMPT = """You are the SPEC ARCHITECT for "Halilit Support Center — Dark Factory".
+A new feature has been approved by the Boardroom. Translate the operator's need and the
+Boardroom's architectural verdict into a rigorous Markdown specification.
+
+OUTPUT FORMAT (follow exactly):
+# Spec: [Title]
+**Target:** [relative/file/path]
+
+## Overview
+One paragraph describing the feature.
+
+## Requirements
+- [Requirement 1]
+- ...
+
+## Data Contract
+Describe API request/response shapes or React prop types.
+
+## Behavior Scenarios
+- **Scenario:** [Name]
+  - Input: [Data or action]
+  - Outcome: [Expected behavior]
+
+## Out of Scope
+- [What this spec does NOT cover]
+
+CRITICAL RULE: You MUST append a JSON block at the very end, enclosed in ```json ... ```,
+listing the exact file paths that need to be CREATED OR MODIFIED.
+Example:
+```json
+{"files_to_scaffold": ["frontend/src/components/NewFeature.tsx", "backend/api/new_route.py"]}
+```
+
+RULES:
+1. Frontend: React 18 + TypeScript + Tailwind CSS (dark theme, slate-900/blue-500 palette).
+2. Backend: Python 3.11+ + FastAPI + Pydantic v2.
+3. NEVER propose synthetic or mock data — Three Source Rules are absolute law.
+4. Keep file paths realistic — they must fit the existing project structure.
+"""
+
+
+def generate_jit_specification(
+    need_description: str,
+    boardroom_verdict: str,
+    timestamp: int | None = None,
+) -> tuple[str, list[str]]:
+    """
+    Called by the JIT Innovation Pipeline (innovation_router.py).
+
+    Writes a formal Markdown spec to specs/interface/JIT_SPEC_<ts>.md
+    and extracts the ``files_to_scaffold`` JSON array embedded in the spec.
+
+    Returns:
+        (spec_relative_path, files_to_scaffold_list)
+    """
+    import json as _json
+    import time as _time
+
+    if timestamp is None:
+        timestamp = int(_time.time())
+
+    print("\n📐 SPEC WRITER: Drafting formal technical specification…")
+
+    prompt = (
+        f"Operator Need: {need_description}\n\n"
+        f"Boardroom Architecture:\n{boardroom_verdict}"
+    )
+
+    content = query_llm(JIT_SYSTEM_PROMPT, prompt, temperature=0.4)
+
+    if not content:
+        print("   ❌ Spec Writer: LLM returned empty content.")
+        return f"specs/interface/JIT_SPEC_{timestamp}.md", []
+
+    # Write spec to disk
+    spec_dir = PROJECT_ROOT / "specs" / "interface"
+    spec_dir.mkdir(parents=True, exist_ok=True)
+    spec_filename = f"JIT_SPEC_{timestamp}.md"
+    spec_path = spec_dir / spec_filename
+    spec_path.write_text(content, encoding="utf-8")
+    print(f"   ✅ Formal Spec written to: specs/interface/{spec_filename}")
+
+    # Extract files_to_scaffold JSON embedded in the spec
+    files_to_scaffold: list[str] = []
+    try:
+        json_block = content.split("```json")[1].split("```")[0].strip()
+        files_to_scaffold = _json.loads(
+            json_block).get("files_to_scaffold", [])
+    except Exception:
+        pass  # Graceful degradation — no JSON block
+
+    return f"specs/interface/{spec_filename}", files_to_scaffold
+
+
+# ---------------------------------------------------------------------------
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python spec_writer.py 'Feature description' [category]")
