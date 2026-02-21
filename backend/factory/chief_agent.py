@@ -79,6 +79,7 @@ STYLE GUIDE:
 5. **Be a Mentor:** Transparently expose your architectural reasoning. Highlight potential risks, explain design patterns, and tell the user what they need to watch out for.
 6. **Chain of Command:** If you are stuck in a loop, or if the user asks for 'best next steps', you MUST prioritize the 🔴 CRITICAL and 🟠 MAJOR items listed in the TECH LEAD DAILY BRIEFING over any minor bug fixes. Check the injected briefing every single turn.
 7. **End-to-End Mastery:** DO NOT limit your queue to 2 or 3 tasks. Plan the ENTIRE workflow from start to finish. If a request requires 10 steps (e.g., initial commit, design, 4 parallel implementations, diagnostics, docs, final commit) — queue ALL of them in one comprehensive plan.
+   ⚠️  EXCEPTION — EVOLUTION PROPOSALS: NEVER queue more than 3 Evolution Proposal tasks at once. Processing all proposals in parallel causes anchor conflicts and death loops. Queue 3, commit, end session. The next session will pick up the remainder.
 
 TOOLS & PARALLELISM RULES:
 - 'design'      (Architect):  Creates Blueprints/Specs (cross-domain).                PARALLEL SAFE ✅
@@ -101,7 +102,9 @@ TOOLS & PARALLELISM RULES:
 - 'steer'       (Strategist): Reviews business goals.                                  PARALLEL SAFE ✅
 - 'doc'         (Scribe):     Regenerates ARCHITECTURE.md.                             SEQUENTIAL 🔒
 - 'optimize'    (Optimizer):  Refactors a source file.                                 PARALLEL SAFE ✅ (if different files)
-- 'build'       (Data):       Rebuilds the product catalog.                            SEQUENTIAL 🔒
+- 'build'       (Data):       Runs catalog skeleton-sync (refreshes product inventory).  SEQUENTIAL 🔒
+                              NO ARGS — runs automatically. Do NOT pass a spec path here;
+                              use 'delegate_data' or 'sandbox' for spec-driven builds.
 - 'commit'      (Repo Agent): Git snapshot — must block all.                           SEQUENTIAL 🔒
 - 'reflect'     (Mentor):     Analyzes a completed task/failure and appends a lesson   SEQUENTIAL 🔒
                               to docs/LEARNED_GUIDELINES.md so future agents avoid
@@ -351,9 +354,11 @@ def get_project_state() -> str:
                              [:1200])  # cap per file
             state.append("=== END EVOLUTION PROPOSALS ===\n")
             state.append(
-                "CHIEF DIRECTIVE: Review the proposals above. If any RECOMMEND verdict "
-                "aligns with the Master Plan's current gaps, schedule a 'scout' or "
-                "'task_force' to integrate the tool. Otherwise, acknowledge and proceed."
+                "CHIEF DIRECTIVE — EVOLUTION PROPOSALS: "
+                "Process AT MOST 3 proposals this session via 'delegate_data' (one task per proposal). "
+                "NEVER action all proposals in one parallel batch — anchor conflicts will cause a death loop. "
+                "If patch_component fails with an anchor miss, DO NOT retry — mandate 'sandbox' for a clean rewrite. "
+                "After the batch completes, schedule 'commit' and end the session."
             )
 
     # 1. Git status

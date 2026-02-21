@@ -221,16 +221,29 @@ class FactoryHeuristics:
     # --- 5. Pending Evolution Proposals ------------------------------------
 
     def check_pending_evolution(self) -> None:
-        """Checks if the Scout agent has queued unreviewed evolution proposals."""
+        """Checks if the Scout agent has queued unreviewed evolution proposals.
+
+        Reports at most 3 proposals (oldest first) so the Chief does not try
+        to action the entire backlog in a single session.  Remaining count is
+        surfaced so the Chief knows a backlog exists.
+        """
         evo_dir = SPECS_DIR / "strategy" / "evolution"
         if evo_dir.exists():
-            proposals = [
-                p.name for p in evo_dir.glob("*.md") if p.name.upper() != "README.MD"
-            ]
-            if proposals:
+            all_proposals = sorted(
+                [p for p in evo_dir.glob("*.md") if p.name.upper() != "README.MD"],
+                key=lambda p: p.name,  # lexicographic ≈ date order
+            )
+            if all_proposals:
+                # Cap at 3 per session to prevent mass-parallel anchor conflicts
+                batch = all_proposals[:3]
+                remaining = len(all_proposals) - len(batch)
+                names = ", ".join(p.name for p in batch)
+                tail = f" (+{remaining} more — process in next session)" if remaining else ""
                 self.issues.append(
-                    f"[EVOLUTION] Tech Scout has {len(proposals)} pending proposal(s) "
-                    f"awaiting Chief review: {', '.join(proposals)}"
+                    f"[EVOLUTION] Tech Scout has {len(all_proposals)} pending proposal(s) "
+                    f"awaiting Chief review (batch of {len(batch)}): {names}{tail}. "
+                    f"CHIEF RULE: process ONLY this batch of {len(batch)} this session. "
+                    f"Use delegate_data per proposal. Do NOT schedule all at once."
                 )
 
     # --- 6. Backend Integrity Checks ---------------------------------------

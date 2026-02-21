@@ -628,9 +628,16 @@ if __name__ == "__main__":
 
     elif command == "build":
         if len(sys.argv) < 3:
-            log("❌ Usage: python factory.py build <spec_path>")
-            sys.exit(1)
-        cmd_build(sys.argv[2])
+            # No spec path → Chief triggered a catalog rebuild (not a spec build).
+            # Run a lightweight skeleton-sync to refresh the product catalog.
+            log("ℹ️  No spec path provided — running catalog skeleton-sync instead.")
+            import subprocess as _sp
+            _sp.run(
+                [sys.executable, str(ROOT / "backend" / "conductor_main.py"), "skeleton-sync"],
+                cwd=str(ROOT),
+            )
+        else:
+            cmd_build(sys.argv[2])
 
     elif command == "doc":
         cmd_doc()
