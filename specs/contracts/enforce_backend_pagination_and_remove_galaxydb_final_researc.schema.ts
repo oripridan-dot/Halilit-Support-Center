@@ -13,7 +13,6 @@ export interface ConductorProduct {
   price: number;
   inStock: boolean;
   cfp: boolean;
-  // Add other properties as needed
 }
 
 export interface PaginatedCatalogResponse {

@@ -10,7 +10,7 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
 
 1.  **Total `galaxy_db.json` Removal:** Physically DELETE the `frontend/public/data/galaxy_db.json` file.
 2.  **`useConductorCatalog` Dependency Isolation:** Ensure the `useConductorCatalog` hook *solely* relies on the `/api/conductor/catalog` endpoint for data. It must NOT attempt to import or read `galaxy_db.json` under any circumstances.
-3.  **Backend Pagination Endpoint:** Verify that the `/api/conductor/catalog` endpoint correctly accepts `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` query parameters and returns a paginated subset of the catalog data, along with metadata about the total number of items and pages. The backend should default `pageSize` to 25 if not specified, and if `page` is not specified, it should default to 1. If sorting parameters are being passed, preserve them. The sorting MUST put "In Stock" items first, and then sort CfP above non-CfP within each stock group.
+3.  **Backend Pagination Endpoint:** Verify that the `/api/conductor/catalog` endpoint correctly accepts `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` query parameters and returns a paginated subset of the catalog data, along with metadata about the total number of items and pages. The backend should default `pageSize` to 25 if not specified, and if `page` is not specified, it should default to 1. If sorting parameters are being passed, preserve them. The sorting MUST put "In Stock" items first, and then sort CfP above non-CfP items within each stock group.
 4.  **Data Contract Validation:** Ensure the data contract for `/api/conductor/catalog` includes pagination metadata:
 
     ```typescript
@@ -25,54 +25,27 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
 
 5.  **`useConductorCatalog` Hook Implementation:** Ensure the `useConductorCatalog` hook:
     *   Accepts optional `page`, `pageSize`, `searchQuery`, `sortBy`, `category`, and `brand` parameters with default values of `1`, `25`, `''`, `''`, `''`, and `''` respectively.
-    *   Fetches data from the paginated `/api/conductor/catalog` endpoint using the provided parameters.
+    *   Fetches data from the paginated `/api/conductor/catalog` endpoint using the provided parameters, using `react-query`.
     *   Returns the `products` array, `totalItems`, `totalPages`, `currentPage`, and `pageSize` from the API response.
-    *   Uses `react-query` to manage data fetching and caching.
-    *   Displays a polished "research animation" (e.g., animated magnifying glass icon) during data fetching, providing clear visual feedback. Use `framer-motion` for the animation. The animation timing should be tweaked for smoothness.
-    *   Implements graceful error handling with a "retry" banner MUST be implemented to address API failures.
-    *   `ImageWithFallback` MUST be used for all product images, ensuring a consistent and reliable image loading experience.
-    *   Stock and CfP sorting MUST be applied according to Spec `interface/inventory_search_stock_cfp_sorting.md`.
-    *   Displays skeleton placeholders while the initial catalog data is loaded.
+    *   Displays an animated magnifying glass icon during data fetching. This animation must be smooth and visually appealing.
+    *   Implements graceful error handling by displaying a "retry" banner if the API fails to load the data. This banner should allow the user to manually retry the data fetch.
 
-6. **Skeleton Placeholder:** Display skeleton placeholders for the product grid and other relevant UI elements while the catalog is initially loading. This provides immediate visual feedback to the user and enhances the perceived performance.
+6. **Error Handling**:
+    * If the API request fails, display a retry banner at the top of the view. The banner should display a user-friendly error message, such as "Failed to load product catalog. Please try again later."
+    * The retry banner should include a button that allows the user to manually retry the data fetch.
+7. **Image Fallback:** The `useConductorCatalog` hook is responsible for providing the `image_url` to be used by the `ImageWithFallback` component.
+8. **Skeleton Loading Placeholder:** Render skeleton placeholders during the initial catalog load (before any data is available). The skeleton should visually mimic the layout of the inventory grid, providing a loading indication to the user.
 
 ## Stitch UI Prompt
-
 ```text
-// Target Component: useConductorCatalog hook implementation / InventoryView
-// Description: This prompt focuses on creating the skeleton loading states
+// Target Component: useConductorCatalog hook and its implementation
 
-// The component using useConductorCatalog should have a main container with:
-// Layout: Flexbox, direction column
-// Style: dark mode, slate-900 background
-
-// Before catalog data is loaded, show the following skeleton placeholders:
-
-// 1. Search Input Skeleton:
-// Layout: Same size as the actual search input
-// Style: rounded corners, bg-zinc-700, h-10
-
-// 2. Inventory Grid Skeleton: (Use Bento Grid or CSS Grid)
-//    Create a grid with 2-4 columns, each representing a product card.
-//    Each product card skeleton should have:
-
-//    - Image Skeleton:
-//      Layout: Placeholder rectangle with aspect ratio 4:3
-//      Style: rounded corners, bg-zinc-700
-
-//    - Title Skeleton:
-//      Layout: Short line
-//      Style: rounded corners, bg-zinc-700
-
-//    - Price Skeleton:
-//      Layout: Short line
-//      Style: rounded corners, bg-zinc-700
-
-// 3. Implement research animation while loading, similar to a magnifying glass zooming.
-// 4. Use the retry banner from react-query for errors, slate-900 background and blue-500 text.
-
-// Tailwind Dark Mode Palette: slate-900, zinc-700, blue-500.  Use standard Tailwind tokens only, no hex codes.
-// Ensure sufficient spacing between skeleton elements to mimic actual product cards.
+// Description: Create a UI for a product catalog loading state. Use a research or magnifying glass animation during the data fetching process. Implement graceful error handling by displaying a "retry" banner with a user-friendly message and a retry button. The hook will provide the data for the ImageWithFallback component. Show skeleton placeholders during the initial load.
+// 1. The retry banner should be positioned at the top. Use Tailwind CSS for styling with a slate-900 background and blue-500 accents.
+// 2. Use shimmer style skeleton placeholders.
+// 3. The skeleton placeholders should mimic the layout of a product grid, with placeholders for images, titles, and prices.
+// Layout: Should use a top-down flexbox layout for overall structure, with the retry banner at the top if needed, then the data with research animation or skeleton loader, then the products.
+// Style: dark mode, slate-900 background, blue-500 accents.
 ```
 
 ## Verification Commands
