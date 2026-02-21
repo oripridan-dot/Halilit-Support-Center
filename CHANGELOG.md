@@ -1,4 +1,7 @@
 ## [v4.1] — 2026-02-21
+- [chore] Removed temporary specification for galaxy_db pagination.
+
+## [v4.1] — 2026-02-21
 ## v4.1
 
 - [fix] Use `_senior_context` instead of `_recovery_senior` for tech lead context in chief recovery plan.
