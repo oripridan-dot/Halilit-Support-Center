@@ -196,3 +196,15 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Patch application targeted incorrect component state.
 **Fix:** Performed a clean rebuild using the `sandbox` environment.
 **Lesson:** ALWAYS rebuild after patch anchor mismatch.
+
+### [2026-02-21] Context Too Vague
+**Symptom:** Insufficient failure detail provided.
+**Root Cause:** Unknown.
+**Fix:** Not documented.
+**Lesson:** ALWAYS provide detailed failure context when calling 'reflect'.
+
+### [2026-02-21] Context Too Vague
+**Symptom:** Insufficient failure detail provided.
+**Root Cause:** Unknown.
+**Fix:** Not documented.
+**Lesson:** ALWAYS provide detailed failure context when calling 'reflect'.

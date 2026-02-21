@@ -805,10 +805,9 @@ def review_changes(auto_mode: bool = False) -> bool:
     print(f"{'â' * 52}{RESET}")
     subprocess.run(["git", "status", "-s"])
 
-    # ── Post-change: verify invariants BEFORE committing (catch regressions)
-    if a
-    _guardian_run(silent=False)
-    uto_mode:
+    if auto_mode:
+        # ── Post-change: verify invariants BEFORE committing (catch regressions)
+        _guardian_run(silent=False)
         print(f"\n{CYAN}⚡ [AUTO] Changes auto-approved and committed.{RESET}")
         subprocess.run(["git", "add", "."])
         subprocess.run(["git", "config", "--local", "commit.gpgsign", "false"])

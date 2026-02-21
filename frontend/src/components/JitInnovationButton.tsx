@@ -21,7 +21,7 @@ import { LiquidCanvas, type LiquidSchema } from "./LiquidCanvas";
 // ---------------------------------------------------------------------------
 
 /**
- * Represents the result of submitting an innovation request.
+ * Represents the result of submitting an innovation request to the deep pipeline.
  */
 interface InnovationRequestResult {
   status: string;
@@ -49,7 +49,7 @@ type InnovationPanelState =
   | "error"
   | "liquid";
 
-/** Submission mode: instant SDUI or full file-writing pipeline. */
+/** Submission mode: instant SDUI ("liquid") or full file-writing pipeline ("deep"). */
 type SubmitMode = "liquid" | "deep";
 
 // ---------------------------------------------------------------------------
@@ -60,7 +60,7 @@ type SubmitMode = "liquid" | "deep";
  * A floating action button that allows users to submit innovation requests.
  */
 export const JitInnovationButton: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
   const [innovationNeed, setInnovationNeed] = useState("");
   const [panelState, setPanelState] = useState<InnovationPanelState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
@@ -72,10 +72,10 @@ export const JitInnovationButton: React.FC = () => {
    * Auto-focuses the textarea when the panel opens.
    */
   useEffect(() => {
-    if (isOpen && panelState === "idle") {
+    if (isPanelOpen && panelState === "idle") {
       setTimeout(() => textareaRef.current?.focus(), 80);
     }
-  }, [isOpen, panelState]);
+  }, [isPanelOpen, panelState]);
 
   /**
    * Resets the panel to the idle state, clearing input and messages.
@@ -87,16 +87,19 @@ export const JitInnovationButton: React.FC = () => {
     setLiquidSchema(null);
   };
 
+  /**
+   * Opens the innovation panel.
+   */
   const handleOpenPanel = (): void => {
     resetPanel();
-    setIsOpen(true);
+    setIsPanelOpen(true);
   };
 
   /**
    * Closes the panel and resets its state after a short delay to allow for animation.
    */
   const handleClosePanel = (): void => {
-    setIsOpen(false);
+    setIsPanelOpen(false);
     setTimeout(resetPanel, 300); // Reset after close animation
   };
 
@@ -130,7 +133,7 @@ export const JitInnovationButton: React.FC = () => {
 
         if (data.status === "success" && data.ui_schema) {
           setLiquidSchema(data.ui_schema);
-          setIsOpen(false); // collapse the input panel
+          setIsPanelOpen(false); // collapse the input panel
           setPanelState("liquid"); // show the canvas
         } else {
           setPanelState("error");
@@ -219,7 +222,7 @@ export const JitInnovationButton: React.FC = () => {
       </button>
 
       {/* ── Overlay backdrop ── */}
-      {isOpen && (
+      {isPanelOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
           onClick={handleClosePanel}
@@ -228,7 +231,7 @@ export const JitInnovationButton: React.FC = () => {
       )}
 
       {/* ── Panel ── */}
-      {isOpen && (
+      {isPanelOpen && (
         <div
           role="dialog"
           aria-modal="true"

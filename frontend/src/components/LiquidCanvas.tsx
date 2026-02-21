@@ -41,16 +41,26 @@ interface LiquidResponse {
   data: Record<string, unknown>[];
 }
 
-// ---------------------------------------------------------------------------
-// Sub-widgets
-// ---------------------------------------------------------------------------
-
 interface DataGridWidgetProps {
   schema: LiquidSchema;
   data: Record<string, unknown>[];
   columns: string[];
   capped: boolean;
 }
+
+interface MetricCardWidgetProps {
+  data: Record<string, unknown>[];
+  columns: string[];
+}
+
+interface ListWidgetProps {
+  data: Record<string, unknown>[];
+  columns: string[];
+}
+
+// ---------------------------------------------------------------------------
+// Sub-widgets
+// ---------------------------------------------------------------------------
 
 /** Renders a sortable data grid. */
 function DataGridWidget({
@@ -59,27 +69,31 @@ function DataGridWidget({
   columns,
   capped,
 }: DataGridWidgetProps): JSX.Element {
-  const [sortCol, setSortCol] = useState<string | null>(null);
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+  const [sortColumn, setSortColumn] = useState<string | null>(null);
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
-  const displayCols = schema.columns?.length ? schema.columns : columns;
+  const displayedColumns = schema.columns?.length ? schema.columns : columns;
 
-  /** Handles column sorting. */
-  function handleSort(col: string): void {
-    if (sortCol === col) {
-      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+  /**
+   * Handles column sorting.
+   * Toggles the sort direction if the same column is clicked again.
+   * @param column The column to sort by.
+   */
+  function handleSort(column: string): void {
+    if (sortColumn === column) {
+      setSortDirection((direction) => (direction === "asc" ? "desc" : "asc"));
     } else {
-      setSortCol(col);
-      setSortDir("asc");
+      setSortColumn(column);
+      setSortDirection("asc");
     }
   }
 
-  const sorted = [...data].sort((a, b) => {
-    if (!sortCol) return 0;
-    const av = a[sortCol] ?? "";
-    const bv = b[sortCol] ?? "";
-    if (av < bv) return sortDir === "asc" ? -1 : 1;
-    if (av > bv) return sortDir === "asc" ? 1 : -1;
+  const sortedData = [...data].sort((a, b) => {
+    if (!sortColumn) return 0;
+    const valueA = a[sortColumn] ?? "";
+    const valueB = b[sortColumn] ?? "";
+    if (valueA < valueB) return sortDirection === "asc" ? -1 : 1;
+    if (valueA > valueB) return sortDirection === "asc" ? 1 : -1;
     return 0;
   });
 
@@ -88,16 +102,16 @@ function DataGridWidget({
       <table className="w-full text-left text-xs text-zinc-300">
         <thead className="bg-zinc-800 text-zinc-400 uppercase tracking-widest">
           <tr>
-            {displayCols.map((col) => (
+            {displayedColumns.map((column) => (
               <th
-                key={col}
+                key={column}
                 className="px-3 py-2.5 cursor-pointer select-none hover:text-zinc-100 whitespace-nowrap"
-                onClick={() => handleSort(col)}
+                onClick={() => handleSort(column)}
               >
-                {col}
-                {sortCol === col && (
+                {column}
+                {sortColumn === column && (
                   <span className="ml-1 opacity-60">
-                    {sortDir === "asc" ? "↑" : "↓"}
+                    {sortDirection === "asc" ? "↑" : "↓"}
                   </span>
                 )}
               </th>
@@ -105,18 +119,18 @@ function DataGridWidget({
           </tr>
         </thead>
         <tbody>
-          {sorted.map((row, i) => (
+          {sortedData.map((row, index) => (
             <tr
-              key={i}
+              key={index}
               className="border-t border-zinc-800 hover:bg-zinc-800/40 transition-colors"
             >
-              {displayCols.map((col) => (
+              {displayedColumns.map((column) => (
                 <td
-                  key={col}
+                  key={column}
                   className="px-3 py-2 whitespace-nowrap max-w-[200px] truncate"
                 >
-                  {row[col] !== undefined && row[col] !== null
-                    ? String(row[col])
+                  {row[column] !== undefined && row[column] !== null
+                    ? String(row[column])
                     : "—"}
                 </td>
               ))}
@@ -133,11 +147,6 @@ function DataGridWidget({
   );
 }
 
-interface MetricCardWidgetProps {
-  data: Record<string, unknown>[];
-  columns: string[];
-}
-
 /** Renders a card displaying key metrics. */
 function MetricCardWidget({
   data,
@@ -148,18 +157,18 @@ function MetricCardWidget({
 
   return (
     <div className="grid grid-cols-2 gap-3">
-      {columns.map((col) => {
-        const val = firstRow[col];
+      {columns.map((column) => {
+        const value = firstRow[column];
         return (
           <div
-            key={col}
+            key={column}
             className="rounded-lg bg-zinc-800/70 border border-zinc-700/40 px-4 py-3"
           >
             <p className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">
-              {col}
+              {column}
             </p>
             <p className="text-xl font-bold text-zinc-100">
-              {val !== null && val !== undefined ? String(val) : "—"}
+              {value !== null && value !== undefined ? String(value) : "—"}
             </p>
           </div>
         );
@@ -168,31 +177,26 @@ function MetricCardWidget({
   );
 }
 
-interface ListWidgetProps {
-  data: Record<string, unknown>[];
-  columns: string[];
-}
-
 /** Renders a simple list of text values. */
 function ListWidget({
   data,
   columns,
 }: ListWidgetProps): JSX.Element {
-  const primaryCol = columns[0];
-  const secondaryCol = columns[1];
+  const primaryColumn = columns[0];
+  const secondaryColumn = columns[1];
   return (
     <ul className="divide-y divide-zinc-800 rounded-lg border border-zinc-700/50 overflow-hidden">
-      {data.map((row, i) => (
+      {data.map((row, index) => (
         <li
-          key={i}
+          key={index}
           className="flex items-center justify-between px-3 py-2 hover:bg-zinc-800/40"
         >
           <span className="text-sm text-zinc-200">
-            {primaryCol ? String(row[primaryCol] ?? "—") : "—"}
+            {primaryColumn ? String(row[primaryColumn] ?? "—") : "—"}
           </span>
-          {secondaryCol && (
+          {secondaryColumn && (
             <span className="text-xs text-zinc-500 ml-4">
-              {String(row[secondaryCol] ?? "—")}
+              {String(row[secondaryColumn] ?? "—")}
             </span>
           )}
         </li>
@@ -214,46 +218,51 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
 }): JSX.Element => {
   const [data, setData] = useState<Record<string, unknown>[]>([]);
   const [columns, setColumns] = useState<string[]>([]);
-  const [capped, setCapped] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [isCapped, setIsCapped] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!schema?.dataSource) return;
 
-    setLoading(true);
+    setIsLoading(true);
     setError(null);
 
     fetch(schema.dataSource)
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
-        return res.json() as Promise<LiquidResponse>;
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        return response.json() as Promise<LiquidResponse>;
       })
-      .then((json) => {
-        setData(json.data ?? []);
-        setColumns(json.columns ?? schema.columns ?? []);
-        setCapped(json.capped ?? false);
-        setLoading(false);
+      .then((jsonData) => {
+        setData(jsonData.data ?? []);
+        setColumns(jsonData.columns ?? schema.columns ?? []);
+        setIsCapped(jsonData.capped ?? false);
+        setIsLoading(false);
       })
       .catch((err: Error) => {
         setError(err.message);
-        setLoading(false);
+        setIsLoading(false);
       });
   }, [schema]);
 
   // Close on Escape
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && onClose) onClose();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && onClose) onClose();
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
-  /** Handles closing the canvas on backdrop click. */
-  function handleBackdrop(e: React.MouseEvent): void {
-    if (e.target === overlayRef.current && onClose) onClose();
+  /**
+   * Handles closing the canvas on backdrop click.
+   * @param event The mouse event.
+   */
+  function handleBackdrop(event: React.MouseEvent): void {
+    if (event.target === overlayRef.current && onClose) onClose();
   }
 
   return (
@@ -279,7 +288,7 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
                 </h2>
                 <p className="text-[10px] text-zinc-500">
                   Ephemeral · {schema.dataSource.split("/").pop()} ·{" "}
-                  {loading
+                  {isLoading
                     ? "loading…"
                     : error
                       ? "error"
@@ -305,7 +314,7 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
 
           {/* Body */}
           <div className="overflow-y-auto flex-1 p-5">
-            {loading && (
+            {isLoading && (
               <div className="flex flex-col items-center gap-3 py-16">
                 <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
                 <p className="text-sm text-zinc-500">
@@ -314,7 +323,7 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
               </div>
             )}
 
-            {!loading && error && (
+            {!isLoading && error && (
               <div className="flex items-start gap-3 rounded-lg bg-red-950/40 border border-red-800/40 px-4 py-3">
                 <span className="text-red-400 text-lg mt-0.5">⚠</span>
                 <div>
@@ -326,7 +335,7 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
               </div>
             )}
 
-            {!loading && !error && data.length === 0 && (
+            {!isLoading && !error && data.length === 0 && (
               <div className="text-center py-16">
                 <p className="text-zinc-500 text-sm">
                   No data matched the ephemeral query.
@@ -334,14 +343,14 @@ export const LiquidCanvas: React.FC<LiquidCanvasProps> = ({
               </div>
             )}
 
-            {!loading && !error && data.length > 0 && (
+            {!isLoading && !error && data.length > 0 && (
               <>
                 {schema.type === "DataGrid" && (
                   <DataGridWidget
                     schema={schema}
                     data={data}
                     columns={columns}
-                    capped={capped}
+                    capped={isCapped}
                   />
                 )}
                 {schema.type === "MetricCard" && (
