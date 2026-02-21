@@ -410,7 +410,7 @@ def run_process(task: dict) -> dict:
             import json as _j
             # args is a plain string from the queue — parse as JSON dict if possible
             _tool_args = _j.loads(args) if isinstance(args, str) and args.startswith("{") else {
-                                  "command": args} if tool == "execute_bash" else {"task_name": args} if tool == "git_isolate_workspace" else {}
+                "command": args} if tool == "execute_bash" else {"task_name": args} if tool == "git_isolate_workspace" else {}
             out = _handler(_tool_args)
             success = True
             if isinstance(out, str):
@@ -559,7 +559,8 @@ def execute_sequential(task: dict) -> dict:
         try:
             from tech_lead_agent import generate_morning_briefing  # noqa: PLC0415
             generate_morning_briefing()
-            print(f"\n{GREEN}✅ [AUDIT] DAILY_BRIEFING.md regenerated — Chief will re-read priorities on next turn.{RESET}")
+            print(
+                f"\n{GREEN}✅ [AUDIT] DAILY_BRIEFING.md regenerated — Chief will re-read priorities on next turn.{RESET}")
             return {"tool": tool, "args": args, "success": True,
                     "summary": "✅ [AUDIT] Tech Lead briefing updated — DAILY_BRIEFING.md refreshed.",
                     "error_output": ""}
@@ -573,7 +574,7 @@ def execute_sequential(task: dict) -> dict:
     if tool == "escalate_to_senior":
         global _last_senior_mandate
         mandate = _call_death_loop_diagnosis(
-            str(args) or "unknown intent", attempts = 1)
+            str(args) or "unknown intent", attempts=1)
         _last_senior_mandate = mandate
         print(
             f"\n{GREEN}✅ [SENIOR ARCHITECT] Mandate stored — injecting into Chief on next turn.{RESET}")
@@ -589,8 +590,8 @@ def execute_sequential(task: dict) -> dict:
             import re as _re
             task_slug = _re.sub(
                 r"[^\w]+", "-", args[:40].lower()).strip("-") or "frontend-task"
-            result= run_frontend_swarm(args, task_name=task_slug)
-            return{
+            result = run_frontend_swarm(args, task_name=task_slug)
+            return {
                 "tool": tool, "args": args,
                 "success": result.get("success", False),
                 "summary": result.get("summary", ""),
@@ -641,7 +642,8 @@ def execute_sequential(task: dict) -> dict:
         }[tool]
         _handler2 = _mcp2.get(_mcp_name2)
         if _handler2 is None:
-            print(f"\n{RED}\u274c [{tool.upper()}] MCP handler not found.{RESET}")
+            print(
+                f"\n{RED}\u274c [{tool.upper()}] MCP handler not found.{RESET}")
             return {"tool": tool, "args": args, "success": False,
                     "summary": f"\u274c [{tool.upper()}] MCP handler not found.",
                     "error_output": "MCP server could not be loaded."}
@@ -656,7 +658,8 @@ def execute_sequential(task: dict) -> dict:
             if isinstance(out2, str):
                 try:
                     _p2 = _ji.loads(out2)
-                    success2 = _p2.get("success", True) if isinstance(_p2, dict) else True
+                    success2 = _p2.get("success", True) if isinstance(
+                        _p2, dict) else True
                     if "exit_code" in _p2:
                         success2 = _p2["exit_code"] == 0
                 except Exception:
@@ -976,7 +979,8 @@ def react_loop(goal: str, max_turns: int = 14) -> dict:
             "What is your next action? Respond with JSON only."
         )
 
-        raw = query_llm(_REACT_SYSTEM, user_prompt, temperature=0.2, model_tier="smart")
+        raw = query_llm(_REACT_SYSTEM, user_prompt,
+                        temperature=0.2, model_tier="smart")
         if not raw:
             history.append(f"[T{turn}] LLM returned empty response.")
             continue
@@ -995,7 +999,8 @@ def react_loop(goal: str, max_turns: int = 14) -> dict:
                 try:
                     step = _json.loads(m.group(0))
                 except Exception:
-                    history.append(f"[T{turn}] Could not parse JSON: {raw[:200]}")
+                    history.append(
+                        f"[T{turn}] Could not parse JSON: {raw[:200]}")
                     continue
             else:
                 history.append(f"[T{turn}] No JSON in response: {raw[:200]}")
@@ -1006,7 +1011,8 @@ def react_loop(goal: str, max_turns: int = 14) -> dict:
         step_args = step.get("args", {})
         status = step.get("status", "WORKING")
 
-        print(f"{DIM}[T{turn}] {BOLD}{action}{RESET}{DIM}  →  {thought[:100]}{RESET}")
+        print(
+            f"{DIM}[T{turn}] {BOLD}{action}{RESET}{DIM}  →  {thought[:100]}{RESET}")
 
         # ── Terminal condition ───────────────────────────────────────────────
         if action == "DONE" or status in ("DONE", "FAILED"):
@@ -1021,7 +1027,8 @@ def react_loop(goal: str, max_turns: int = 14) -> dict:
                     {"branch_name": branch, "success_status": False}
                 )
             icon = "✅" if success else "❌"
-            print(f"\n{GREEN if success else RED}{icon} [REACT] {result_msg}{RESET}")
+            print(
+                f"\n{GREEN if success else RED}{icon} [REACT] {result_msg}{RESET}")
             return {"success": success, "summary": f"{icon} [REACT] {result_msg}", "turns": turn}
 
         # ── Execute tool ─────────────────────────────────────────────────────
@@ -1046,9 +1053,11 @@ def react_loop(goal: str, max_turns: int = 14) -> dict:
         # Truncate very long observations to prevent context explosion
         obs_str = str(obs)
         if len(obs_str) > 3000:
-            obs_str = obs_str[:1500] + "\n... [truncated] ...\n" + obs_str[-600:]
+            obs_str = obs_str[:1500] + \
+                "\n... [truncated] ...\n" + obs_str[-600:]
 
-        history.append(f"[T{turn}] ACTION={action} ARGS={step_args}\nOBSERVATION={obs_str}\n")
+        history.append(
+            f"[T{turn}] ACTION={action} ARGS={step_args}\nOBSERVATION={obs_str}\n")
 
     # Max turns exceeded
     if branch:
@@ -1153,7 +1162,8 @@ def main() -> None:
     global _REACT_MODE, _last_senior_mandate
     _REACT_MODE = args.react
     if _REACT_MODE:
-        print(f"{CYAN}{BOLD}⚛️  LEVEL 8 REACT MODE ENGAGED — delegates route through ReAct Core.{RESET}")
+        print(
+            f"{CYAN}{BOLD}⚛️  LEVEL 8 REACT MODE ENGAGED — delegates route through ReAct Core.{RESET}")
 
         print(
             f"{YELLOW}{BOLD}â¡ AUTO-PILOT ENGAGED â plans execute without confirmation.{RESET}")
@@ -1243,7 +1253,7 @@ def main() -> None:
                     _dr_mandate = _last_senior_mandate
                     _last_senior_mandate = ""
                     plan = consult_chief(user_input, is_startup=False,
-                                        senior_override=_dr_mandate)
+                                         senior_override=_dr_mandate)
                     hr()
                     print(f"\n{GREEN}{BOLD}CHIEF >{RESET}")
                     type_writer(plan.get("explanation", "(no explanation)"))
@@ -1365,9 +1375,9 @@ def main() -> None:
                         print(
                             f"\n{YELLOW}\U0001f504 Consulting Chief for recovery plan...{RESET}")
                         plan = consult_chief(
-                            "", is_startup=False,
+                            "", is_startup=Falssenior_context
                             failure_context=failure_report,
-                            tech_lead_context=_senior_context,
+                            tech_lead_context=_recovery_senior,
                             senior_override=_pending_override,
                         )
                         print(f"\n{RED}{BOLD}CHIEF RECOVERY PLAN:{RESET}")

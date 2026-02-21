@@ -1,34 +1,15 @@
-import { useState, useEffect, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { fetcher } from '../utils/fetcher';
-import { ResearchAnimation } from '../components/ResearchAnimation';
-import { ImageWithFallback } from '../components/ImageWithFallback';
-import { useValidateHeroImage } from './useValidateHeroImage';
 
-// Define a lookup table for brand colors
-const brandColors: { [key: string]: string } = {
-  'Halilit': 'blue-500',
-  'Brand2': 'green-500', // Example brand and color
-  'Brand3': 'red-500', // Example brand and color
-};
-
-interface UseConductorCatalogProps {
-  page?: number;
-  pageSize?: number;
-  searchQuery?: string;
-  sortBy?: string;
-  category?: string;
-  brand?: string;
-}
-
-export const useConductorCatalog = ({
-  page = 1,
-  pageSize = 25,
-  searchQuery = '',
-  sortBy = '',
-  category = '',
-  brand = '',
-}: UseConductorCatalogProps) => {
+const useConductorCatalog = (
+  {
+    page = 1,
+    pageSize = 25,
+    searchQuery = '',
+    sortBy = '',
+    category = '',
+    brand = '',
+  }: CatalogRequestParams = {}
+) => {
   const params: CatalogRequestParams = {
     page,
     pageSize,
@@ -38,16 +19,32 @@ export const useConductorCatalog = ({
     brand,
   };
 
-  const { data, isLoading, error, refetch } = useQuery<PaginatedCatalogResponse, Error>(
+  const { data, isLoading, error } = useQuery<PaginatedCatalogResponse, Error>(
     ['catalog', params],
-    () => fetcher<PaginatedCatalogResponse>(`${CATALOG_ENDPOINT}?${new URLSearchParams(params as any)}`),
+    async () => {
+      const queryParams = new URLSearchParams();
+      if (page) queryParams.append('page', String(page));
+      if (pageSize) queryParams.append('pageSize', String(pageSize));
+      if (searchQuery) queryParams.append('searchQuery', searchQuery);
+      if (sortBy) queryParams.append('sortBy', sortBy);
+      if (category) queryParams.append('category', category);
+      if (brand) queryParams.append('brand', brand);
+
+      const url = `${CATALOG_ENDPOINT}?${queryParams.toString()}`;
+
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json() as Promise<PaginatedCatalogResponse>;
+    }
   );
 
   const products = data?.products || [];
   const totalItems = data?.totalItems || 0;
   const totalPages = data?.totalPages || 0;
   const currentPage = data?.currentPage || 1;
-  const currentBrandColor = brandColors[brand] || 'blue-500';
+  const pageSize = data?.pageSize || 25;
 
   return {
     products,
@@ -57,8 +54,7 @@ export const useConductorCatalog = ({
     pageSize,
     isLoading,
     error,
-    refetch,
-    brand,
-    brandColor: currentBrandColor,
   };
 };
+
+export default useConductorCatalog;
