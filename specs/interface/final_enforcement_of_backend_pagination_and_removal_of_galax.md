@@ -45,25 +45,20 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
 // Layout: Same size as the actual search input
 // Style: rounded corners, bg-zinc-700, h-10
 
-// 2. Inventory Grid Skeleton: (Use Bento Grid or CSS Grid for this)
-// Create 5-10 skeleton rows, with each row containing:
-// - Image placeholder: rounded corners, bg-zinc-700, w-24, h-24
-// - Text placeholders (product name, brand, price): varying widths, bg-zinc-700, h-6, rounded
+// 2. Inventory Grid Skeleton: (Use Bento Grid for multiple items display)
+// Style: rounded corners, bg-zinc-700, h-32
+// Data Slots: Create at least 5 skeleton placeholders that mimic the product tiles. Each skeleton should have a placeholder for image and product title.
 
-// Use Tailwind CSS classes for:
-// - Container: flex flex-col items-center p-4 slate-900
-// - Search Input Skeleton: rounded-md bg-zinc-700 h-10 w-full
-// - Grid Row: flex items-center space-x-4
-// - Image Placeholder: rounded-md bg-zinc-700 w-24 h-24
-// - Text Placeholders: rounded-md bg-zinc-700 h-6 w-32
+// 3. Pagination Skeleton:
+// Layout: Same as the actual pagination component
+// Style: rounded corners, bg-zinc-700, h-8
+// Data Slots: create placeholders for page number indicator, "Previous", and "Next" buttons
+// Spacing: Add spacing between the components of 4px
 
-// The entire skeleton loading UI should shimmer. Use framer-motion for the shimmer effect. The skeleton UI should be responsive.
+// Ensure the visual hierarchy and component spacing are accurate for easy integration
+
 ```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
-- Ensure galaxy_db.json is physically deleted from frontend/public/data
-- Run the application and verify that the inventory grid and other components using `useConductorCatalog` load data correctly from the backend API.
-- Inspect network requests to confirm that only paginated requests are made to `/api/conductor/catalog`.
-- Verify correct display of loading skeletons during data fetching.

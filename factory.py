@@ -393,7 +393,8 @@ def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> 
              f"task_force goal '{goal}' was an audit, not an implementation — route to 'audit' or 'diagnose' next time"],
             cwd=str(ROOT), env={**os.environ},
         )
-        log(f"✅ Audit routing complete. See Blackboard: {bb_path.relative_to(ROOT)}")
+        log(
+            f"✅ Audit routing complete. See Blackboard: {bb_path.relative_to(ROOT)}")
         return
     # ────────────────────────────────────────────────────────────────────────
 
@@ -667,7 +668,8 @@ if __name__ == "__main__":
             log("ℹ️  No spec path provided — running catalog skeleton-sync instead.")
             import subprocess as _sp
             _sp.run(
-                [sys.executable, str(ROOT / "backend" / "conductor_main.py"), "skeleton-sync"],
+                [sys.executable, str(ROOT / "backend" /
+                                     "conductor_main.py"), "skeleton-sync"],
                 cwd=str(ROOT),
             )
         else:

@@ -431,6 +431,47 @@ def inner_loop(
             print(
                 f"\n⚠️  Verification FAILED — feeding error back to Builder (round {round_num+1})...")
 
+    # ── Strike 3: Burn & Replace ─────────────────────────────────────────────
+    # Inner loop exhausted AND the Oracle has already weighed in — the file is
+    # beyond patching.  Wipe it, force a clean rewrite from scratch.
+    if _oracle_fired and target_file is not None and target_file.exists():
+        if verbose:
+            print(f"\n{'🔥' * 10}")
+            print(f"🔥  STRIKE 3 — BURN & REPLACE")
+            print(
+                f"   File deemed corrupt after {max_rounds} rounds + Oracle: {target_file.name}")
+            print(f"   Wiping target file and rewriting from spec from scratch...")
+            print(f"{'🔥' * 10}\n")
+        # Overwrite with empty file to guarantee a clean AST state
+        target_file.write_text("", encoding="utf-8")
+        burn_feedback = (
+            "🔥 BURN & REPLACE DIRECTIVE 🔥\n"
+            "The previous implementation is corrupted beyond repair.\n"
+            "The target file has been WIPED EMPTY. This is a clean-sheet rebuild.\n"
+            "DO NOT reference or patch any previous code. Start from first principles.\n"
+            "Read the spec from the top and write a COMPLETE, correct file.\n"
+            "Every import, type, and component must be freshly derived from the spec.\n"
+            f"\n--- LAST KNOWN ERRORS (do not repeat these) ---\n{error_feedback or '(unknown)'}"
+        )
+        ok = builder_fn(spec_text, burn_feedback)
+        if ok:
+            if verbose:
+                print("🧪  Running final Burn & Replace verification...")
+            vr_final = run_verification_suite(commands, verbose=verbose)
+            if vr_final.passed:
+                if verbose:
+                    print(f"\n🎉  BURN & REPLACE PASSED — clean rebuild verified!")
+                return True
+            if verbose:
+                print(f"❌  Burn & Replace also failed — manual intervention required.")
+                print(
+                    f"    Last error: {vr_final.first_failure.error_summary[:300] if vr_final.first_failure else 'unknown'}")
+        else:
+            if verbose:
+                print("❌  Burn & Replace builder_fn returned failure.")
+        return False
+    # ─────────────────────────────────────────────────────────────────────────
+
     if verbose:
         print(
             f"\n❌  Inner-Loop exhausted {max_rounds} rounds without passing. Last error saved.")

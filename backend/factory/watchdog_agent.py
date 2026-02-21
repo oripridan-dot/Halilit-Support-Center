@@ -686,85 +686,209 @@ OUTPUT FORMAT (Markdown)
 # Entry Points
 # ---------------------------------------------------------------------------
 
+def _burn_and_replace(broken_file: Path, spec_file: Path | None, raw_error: str) -> bool:
+    """
+    Strike 3: Wipe the broken file and trigger a full rebuild from spec.
+
+    Used when Strike 1 (targeted edit) and Strike 2 (Oracle) have both failed.
+    Returns True if the rebuild produced a clean build.
+    """
+    import subprocess as _sp
+    print(f"\n{'🔥' * 10}")
+    print(f"🔥  STRIKE 3 — BURN & REPLACE: {broken_file.name}")
+    print(f"   File deemed corrupt.  Wiping and scheduling full rewrite...")
+    print(f"{'🔥' * 10}\n")
+
+    # Wipe the file to guarantee a clean AST state
+    broken_file.write_text("", encoding="utf-8")
+    print(f"   ✅ {broken_file.name} wiped.")
+
+    if spec_file and spec_file.exists():
+        print(
+            f"   🏗️  Triggering builder_agent rewrite from spec: {spec_file.name}")
+        factory_py = ROOT_DIR / "factory.py"
+        result = _sp.run(
+            [sys.executable, str(factory_py), "implement", str(spec_file)],
+            cwd=str(ROOT_DIR),
+            capture_output=True,
+            text=True,
+        )
+        combined = (result.stdout + "\n" + result.stderr).strip()
+        if result.returncode == 0:
+            print(f"   ✅ Burn & Replace rebuild succeeded.")
+            return True
+        print(f"   ❌ Rebuild failed:\n{combined[:500]}")
+    else:
+        print(f"   ⚠️  No spec file available — cannot auto-rebuild.")
+        print(f"      Manually run: python factory.py implement <spec_path>")
+        burn_protocol_path = REPAIRS_DIR / "burn_and_replace_required.md"
+        burn_protocol_path.write_text(
+            f"# Burn & Replace Required\n\n"
+            f"**File:** `{broken_file.relative_to(ROOT_DIR)}`\n\n"
+            f"**Status:** Wiped empty after Strike 1 + Strike 2 both failed.\n\n"
+            f"**Action:** Run `python factory.py implement <spec_path>` to rebuild.\n\n"
+            f"**Last error:**\n```\n{raw_error[:1500]}\n```\n",
+            encoding="utf-8",
+        )
+        print(
+            f"   📋 Instructions saved → {burn_protocol_path.relative_to(ROOT_DIR)}")
+    return False
+
+
 def run_watchdog() -> bool:
     """
-    Execute a full watchdog cycle (diagnostics + prescription).
-    Returns True if the system is healthy, False if a fix spec was written.
+    3-Strike Healing Protocol — replaces blind retry loops with progressive
+    intelligent fallback, exactly like a senior developer would behave.
 
-    Wolverine self-healing:
-      If the first diagnostic run finds import/compiler errors, attempt an
-      automatic targeted_import_heal before falling back to LLM prescription.
+    STRIKE 1 — Deterministic targeted edit:
+      • JSX-in-TS Healer (esbuild 'Expected >' errors)
+      • Wolverine targeted import heal (tsc TS2307 errors)
+      Raw terminal output (stdout + stderr) is captured and fed directly into
+      LLM prompts — the AI reads the compiler, not a summary.
+
+    STRIKE 2 — Oracle Lifeline:
+      • LLM prescription via diagnose_and_prescribe (fast tier, structured Fix Spec)
+      • If prescription fails or doesn't resolve the error: JIT Oracle Lifeline
+        (cold-booted, unpolluted context, first-principles reasoning)
+
+    STRIKE 3 — Burn & Replace:
+      • File is deemed corrupted beyond patching.
+      • Wiped empty.  builder_agent rewrites from spec from scratch.
+      • Guarantees a clean AST state.
+
+    Returns True if the system is healthy after any strike, False otherwise.
     """
     REPAIRS_DIR.mkdir(parents=True, exist_ok=True)
 
     report = run_diagnostics()
 
     if report["status"] == "PASS":
-        # Remove stale fix spec if it exists from a previous run
         if FIX_SPEC_PATH.exists():
             FIX_SPEC_PATH.unlink()
         print("✅ System is Healthy. No improvements needed.")
         return True
 
-    # ── JSX-in-TS Healer: catches esbuild "Expected > but found className" ────
-    if report.get("log"):
-        jsx_healed = targeted_jsx_in_ts_heal(report["log"])
+    # Capture the raw terminal output — the AI reads the compiler directly.
+    raw_terminal_output = report.get("log", "").strip()
+    error_source = report.get("source", "unknown")
+
+    print(f"\n🩺 FAILURE DETECTED — {error_source}")
+    print(
+        f"   Raw terminal output ({len(raw_terminal_output)} chars captured)")
+    if raw_terminal_output:
+        # Print first 20 lines to terminal so operator can see what the AI sees
+        preview = "\n".join(raw_terminal_output.splitlines()[:20])
+        print(f"--- TERMINAL OUTPUT (Strike 1 reads this) ---\n{preview}\n---")
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # STRIKE 1 — Deterministic targeted edit (JSX healer + Wolverine)
+    # Feed the EXACT raw terminal output to targeted healers.
+    # ═══════════════════════════════════════════════════════════════════════════
+    print("\n⚡  STRIKE 1 — Deterministic targeted edit (reading raw compiler output)...")
+
+    strike1_applied = False
+
+    # 1a. JSX-in-TS healer (esbuild 'Expected > but found className')
+    if raw_terminal_output:
+        jsx_healed = targeted_jsx_in_ts_heal(raw_terminal_output)
         if jsx_healed:
-            print("🔧 JSX-in-TS Healer: fixes applied. Re-running diagnostics...")
-            report = run_diagnostics()
-            if report["status"] == "PASS":
-                if FIX_SPEC_PATH.exists():
-                    FIX_SPEC_PATH.unlink()
-                print("✅ System healthy after JSX-in-TS auto-heal.")
-                return True
-    # ─────────────────────────────────────────────────────────────────────────
+            print("  🔧 Strike 1a: JSX-in-TS fixes applied.")
+            strike1_applied = True
 
-    # ── Wolverine: auto-heal import errors before escalating ──────────────────
-    if report.get("log"):
-        healed = targeted_import_heal(report["log"])
-        if healed:
-            print("🐺 Wolverine: Import fixes applied. Re-running diagnostics...")
-            report = run_diagnostics()
-            if report["status"] == "PASS":
-                if FIX_SPEC_PATH.exists():
-                    FIX_SPEC_PATH.unlink()
-                print("✅ System healthy after Wolverine auto-heal.")
-                return True
-    # ──────────────────────────────────────────────────────────────────────────
+    # 1b. Wolverine — LLM-powered surgical import fix driven by raw tsc output
+    if raw_terminal_output:
+        import_healed = targeted_import_heal(raw_terminal_output)
+        if import_healed:
+            print("  🐺 Strike 1b: Wolverine import fixes applied.")
+            strike1_applied = True
 
+    if strike1_applied:
+        print("  🔄 Re-running diagnostics after Strike 1...")
+        report = run_diagnostics()
+        raw_terminal_output = report.get("log", "").strip()
+        if report["status"] == "PASS":
+            if FIX_SPEC_PATH.exists():
+                FIX_SPEC_PATH.unlink()
+            print("  ✅ System healthy after Strike 1.")
+            return True
+        print(f"  ⚠️  Strike 1 did not fully heal — escalating to Strike 2.")
+    else:
+        print("  ℹ️  Strike 1: no deterministic fixes applicable — escalating to Strike 2.")
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # STRIKE 2 — Oracle Lifeline (LLM + unpolluted first-principles reasoning)
+    # Feed the raw terminal output DIRECTLY into the Oracle prompt.
+    # ═══════════════════════════════════════════════════════════════════════════
+    print("\n🔮  STRIKE 2 — Oracle Lifeline (cold-booted, reading raw terminal)...")
+
+    # First try: structured LLM prescription (fast, targeted)
     prescription = diagnose_and_prescribe(report)
-
     if prescription:
         save_artifact(str(FIX_SPEC_PATH), prescription)
-        print(f"🩹 Fix Prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
-        print("   Run `python factory.py heal` to apply.")
-        return False
+        print(
+            f"  🩹 Strike 2a: Fix Spec prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
+        print(f"  Run `python factory.py heal` to apply the prescription.")
+        return False  # caller (heal loop) will pick up the fix spec
 
-    # ── JIT Oracle Lifeline ─────────────────────────────────────────────────
-    # The normal LLM doctor is stumped — escalate to the Oracle (cold-booted,
-    # unpolluted context) which approaches the problem from first principles.
-    print("⚠️  Swarm detecting high uncertainty/failure loop.")
-    print("🔄  Escalating to JIT Oracle Lifeline...")
+    # Second try: JIT Oracle — completely cold-booted, zero memory of failures
+    print("  ⚠️  LLM prescription returned nothing — phoning the Oracle...")
     oracle_strategy = _oracle_lifeline(
         intent=(
-            f"Fix the following {report.get('source', 'unknown')} errors "
-            f"in the Halilit Support Center project."
+            f"Fix the following {error_source} errors "
+            f"in the Halilit Support Center project.  "
+            f"The raw compiler output is below — read every line carefully."
         ),
         current_code=(
-            f"# Error source: {report.get('source', 'unknown')}\n"
-            f"# See error log for affected files."
+            f"# Error source: {error_source}\n"
+            f"# Raw terminal output is in error_logs below."
         ),
-        error_logs=report.get("log", "(no log available)"),
+        error_logs=raw_terminal_output or "(no terminal output captured)",
     )
     if oracle_strategy:
         oracle_fix_path = REPAIRS_DIR / "oracle_rescue_protocol.md"
         save_artifact(str(oracle_fix_path), oracle_strategy)
         print(
-            f"🛸 Oracle Rescue Protocol saved → {oracle_fix_path.relative_to(ROOT_DIR)}")
-        print("🔄  Chief adopting Oracle Rescue Protocol...")
-        print("   Review the protocol, then run `python factory.py heal` to apply.")
+            f"  🛸 Oracle Rescue Protocol saved → {oracle_fix_path.relative_to(ROOT_DIR)}")
+        print(f"  Run `python factory.py heal` to apply.")
+        return False  # caller (heal loop) will pick up the oracle protocol
+
+    # ═══════════════════════════════════════════════════════════════════════════
+    # STRIKE 3 — Burn & Replace
+    # Both Strike 1 and Strike 2 failed.  File is corrupted beyond patching.
+    # Wipe it and trigger a full spec-driven rewrite.
+    # ═══════════════════════════════════════════════════════════════════════════
+    print("\n🔥  STRIKE 3 — Both targeted edit and Oracle failed.")
+    print("    Activating Burn & Replace protocol...")
+
+    # Identify the broken file from the error log
+    _file_pattern = re.compile(r"(frontend/src/[\w/\-.]+\.tsx?)")
+    _match = _file_pattern.search(raw_terminal_output)
+    _broken_file: Optional[Path] = None
+    if _match:
+        _broken_file = ROOT_DIR / _match.group(1)
+        if not _broken_file.exists():
+            _broken_file = None
+
+    if _broken_file:
+        # Find a spec for this component if one exists
+        _spec: Optional[Path] = None
+        _comp_stem = _broken_file.stem.lower()
+        for _spec_candidate in (ROOT_DIR / "specs" / "interface").glob("*.md"):
+            if _comp_stem in _spec_candidate.stem.lower():
+                _spec = _spec_candidate
+                break
+        _burn_and_replace(_broken_file, _spec, raw_terminal_output)
     else:
-        print("❌ Oracle returned no response — check GEMINI_API_KEY and network.")
+        print("  ⚠️  Could not identify specific broken file from terminal output.")
+        print("      Saving terminal output for manual review...")
+        emergency_path = REPAIRS_DIR / "strike3_terminal_output.txt"
+        emergency_path.write_text(
+            f"# Strike 3 triggered — could not isolate broken file\n\n"
+            f"## Raw Terminal Output\n```\n{raw_terminal_output}\n```\n",
+            encoding="utf-8",
+        )
+        print(f"  📋 Saved → {emergency_path.relative_to(ROOT_DIR)}")
+
     return False
 
 
