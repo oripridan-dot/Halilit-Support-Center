@@ -184,3 +184,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Inconsistent naming and export conventions.
 **Fix:** Corrected naming and export declarations.
 **Lesson:** ALWAYS enforce consistent naming conventions.
+
+### [2026-02-21] Validate Anchor Existence
+**Symptom:** `PATCH_ANCHOR_MISS` error occurred during build.
+**Root Cause:** An expected anchor was missing.
+**Fix:** Rebuilt module from sandbox environment.
+**Lesson:** ALWAYS validate anchor existence before patching.
