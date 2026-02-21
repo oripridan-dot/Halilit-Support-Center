@@ -420,10 +420,14 @@ def fix_imports(
 
         content = original
 
-        # Apply fixers in order (each may modify content for the next one)
+        # Apply SAFE mechanical fixers only.
+        # _fix_imports_in_content is intentionally DISABLED — it was causing
+        # false deletions of valid '../' relative imports (the auto-immune
+        # disease).  Import path issues are now handled exclusively by the
+        # LLM + TypeScript compiler pipeline (3-Strike Healing Protocol).
         content = _fix_missing_generated(content, fpath, report, dry_run)
         content = _fix_jsx_generics(content, fpath, report, dry_run)
-        content = _fix_imports_in_content(content, fpath, report, dry_run)
+        # content = _fix_imports_in_content(content, fpath, report, dry_run)  # ← LOBOTOMIZED
 
         if content != original and not dry_run:
             fpath.write_text(content, encoding="utf-8")
