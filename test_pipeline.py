@@ -43,7 +43,8 @@ def print_section(title: str):
 
 def print_status(status: str, message: str):
     """Print a status message."""
-    icon = {"PASS": "✅", "FAIL": "❌", "WARN": "⚠️", "SKIP": "⏭️"}.get(status, "ℹ️")
+    icon = {"PASS": "✅", "FAIL": "❌", "WARN": "⚠️",
+            "SKIP": "⏭️"}.get(status, "ℹ️")
     print(f"{icon} {status}: {message}")
 
 
@@ -58,12 +59,16 @@ def test_file_structure():
         ("Frontend public data",       FRONTEND_PUBLIC_DATA),
         ("Source rules (THE LAW)",     PROJECT_ROOT / "backend" / "source_rules.py"),
         ("Server file",                PROJECT_ROOT / "backend" / "server.py"),
-        ("Conductor CLI",              PROJECT_ROOT / "backend" / "conductor_main.py"),
-        ("Product normalizer",         PROJECT_ROOT / "backend" / "product_normalizer.py"),
-        ("Visual validator",           PROJECT_ROOT / "backend" / "ingestion" / "visual_validator.py"),
+        ("Conductor CLI",              PROJECT_ROOT /
+         "backend" / "conductor_main.py"),
+        ("Product normalizer",         PROJECT_ROOT /
+         "backend" / "product_normalizer.py"),
+        ("Visual validator",           PROJECT_ROOT /
+         "backend" / "ingestion" / "visual_validator.py"),
         ("Ignition script",            PROJECT_ROOT / "ignite_factory.sh"),
         ("Factory controller",         PROJECT_ROOT / "factory.py"),
-        ("Frontend telemetry module",  PROJECT_ROOT / "frontend" / "src" / "telemetry.ts"),
+        ("Frontend telemetry module",  PROJECT_ROOT /
+         "frontend" / "src" / "telemetry.ts"),
     ]
 
     all_pass = True
@@ -151,7 +156,8 @@ def test_catalog_build():
     except Exception as e:
         pn_logger.removeHandler(handler)
         print_status("FAIL", f"Catalog build raised an exception: {e}")
-        import traceback; traceback.print_exc()
+        import traceback
+        traceback.print_exc()
         return False
     finally:
         pn_logger.removeHandler(handler)
@@ -244,7 +250,8 @@ def test_api_endpoints():
                 if resp.status == 200:
                     print_status("PASS", f"{name}: GET {endpoint} → 200 OK")
                 else:
-                    print_status("FAIL", f"{name}: GET {endpoint} → {resp.status}")
+                    print_status(
+                        "FAIL", f"{name}: GET {endpoint} → {resp.status}")
                     all_pass = False
         except urllib.error.URLError:
             print_status("SKIP", f"{name}: server not running")
@@ -259,9 +266,9 @@ def test_api_endpoints():
         url = f"http://localhost:8000{endpoint}"
         try:
             payload = json.dumps({"event": {"title": "validation-probe"},
-                                   "stacktrace": "none",
-                                   "culprit": "test_pipeline.py",
-                                   "environment": "test"}).encode()
+                                  "stacktrace": "none",
+                                  "culprit": "test_pipeline.py",
+                                  "environment": "test"}).encode()
             req = urllib.request.Request(
                 url, data=payload,
                 headers={"Content-Type": "application/json"},
@@ -270,12 +277,15 @@ def test_api_endpoints():
             with urllib.request.urlopen(req, timeout=3) as resp:
                 body = json.loads(resp.read())
                 if resp.status == 200 and body.get("status") == "received":
-                    print_status("PASS", f"{name}: POST {endpoint} → 200 received")
+                    print_status(
+                        "PASS", f"{name}: POST {endpoint} → 200 received")
                 else:
-                    print_status("FAIL", f"{name}: POST {endpoint} → unexpected: {body}")
+                    print_status(
+                        "FAIL", f"{name}: POST {endpoint} → unexpected: {body}")
                     all_pass = False
         except urllib.error.HTTPError as e:
-            print_status("FAIL", f"{name}: POST {endpoint} → HTTP {e.code} (was 405 before v9.7.6 fix)")
+            print_status(
+                "FAIL", f"{name}: POST {endpoint} → HTTP {e.code} (was 405 before v9.7.6 fix)")
             all_pass = False
         except Exception as e:
             print_status("FAIL", f"{name}: {endpoint} — {e}")
@@ -296,9 +306,11 @@ def test_frontend_components():
         ("components/views/InventoryView.tsx",              "Inventory view"),
         ("components/views/ProductDetailView.tsx",          "Product detail view"),
         ("hooks/useConductorCatalog.ts",                    "Catalog hook"),
-        ("hooks/useJITIntelligence.ts",                     "JIT intelligence hook"),
+        ("hooks/useJITIntelligence.ts",
+         "JIT intelligence hook"),
         ("store/navigationStore.ts",                        "Navigation store"),
-        ("telemetry.ts",                                    "Sovereign Nerve telemetry module"),
+        ("telemetry.ts",
+         "Sovereign Nerve telemetry module"),
     ]
 
     all_pass = True
@@ -352,7 +364,8 @@ def test_pipeline_flow():
     flow_steps = [
         ("1. Ingestion",     "Brand JSONs in frontend/public/data",
          FRONTEND_PUBLIC_DATA.exists() and len(list(FRONTEND_PUBLIC_DATA.glob("*.json"))) > 0),
-        ("2. Catalog Build", "build_catalog() importable",             BUILD_CATALOG_AVAILABLE),
+        ("2. Catalog Build", "build_catalog() importable",
+         BUILD_CATALOG_AVAILABLE),
         ("3. API Serving",   "server.py provides /api/conductor/catalog",
          (PROJECT_ROOT / "backend" / "server.py").exists()),
         ("4. Frontend Hook", "useConductorCatalog.ts present",
@@ -384,14 +397,18 @@ def test_source_rule_compliance() -> bool:
 
     source_rules_path = PROJECT_ROOT / "backend" / "source_rules.py"
     if not source_rules_path.exists():
-        print_status("FAIL", "source_rules.py MISSING — THE LAW has been violated!")
+        print_status(
+            "FAIL", "source_rules.py MISSING — THE LAW has been violated!")
         return False
 
     content = source_rules_path.read_text()
     required_symbols = [
-        ("COMMERCIAL source defined",    "COMMERCIAL" in content or "commercial" in content),
-        ("OFFICIAL source defined",       "OFFICIAL" in content or "official" in content),
-        ("CONTEXTUAL source defined",     "CONTEXTUAL" in content or "contextual" in content),
+        ("COMMERCIAL source defined",
+         "COMMERCIAL" in content or "commercial" in content),
+        ("OFFICIAL source defined",
+         "OFFICIAL" in content or "official" in content),
+        ("CONTEXTUAL source defined",
+         "CONTEXTUAL" in content or "contextual" in content),
         ("Price field ownership present", "price" in content),
     ]
 
@@ -405,7 +422,8 @@ def test_source_rule_compliance() -> bool:
 
     try:
         import importlib.util
-        spec = importlib.util.spec_from_file_location("source_rules", source_rules_path)
+        spec = importlib.util.spec_from_file_location(
+            "source_rules", source_rules_path)
         mod = importlib.util.module_from_spec(spec)  # type: ignore[arg-type]
         spec.loader.exec_module(mod)  # type: ignore[union-attr]
         print_status("PASS", "source_rules.py imports without errors")
@@ -439,8 +457,10 @@ def test_data_quality_image_url() -> bool:
         total_files += 1
         try:
             data = json.loads(f.read_text())
-            products = data if isinstance(data, list) else data.get("products", [])
-            n = sum(1 for p in products if isinstance(p.get("image_url"), dict))
+            products = data if isinstance(
+                data, list) else data.get("products", [])
+            n = sum(1 for p in products if isinstance(
+                p.get("image_url"), dict))
             if n:
                 affected.append(f"{f.name} ({n} products)")
         except Exception as e:
@@ -478,9 +498,11 @@ def test_typescript_compilation() -> bool:
 
     tsc_exec = frontend_dir / "node_modules" / ".bin" / "tsc"
     if not tsc_exec.exists():
-        which = subprocess.run(["which", "tsc"], capture_output=True, text=True)
+        which = subprocess.run(
+            ["which", "tsc"], capture_output=True, text=True)
         if which.returncode != 0:
-            print_status("SKIP", "tsc not found — run pnpm install in frontend/")
+            print_status(
+                "SKIP", "tsc not found — run pnpm install in frontend/")
             return False
         tsc_exec = Path(which.stdout.strip())
 
@@ -494,7 +516,8 @@ def test_typescript_compilation() -> bool:
             print_status("PASS", "TypeScript compilation: no type errors")
             return True
         else:
-            error_lines = [l for l in result.stdout.splitlines() if "error TS" in l]
+            error_lines = [l for l in result.stdout.splitlines()
+                           if "error TS" in l]
             print_status("FAIL", f"TypeScript: {len(error_lines)} error(s)")
             for line in error_lines[:10]:
                 print(f"     ❌  {line.strip()}")
@@ -564,7 +587,7 @@ def main() -> int:
     print_section("VALIDATION SUMMARY — v9.7.6")
 
     passed = sum(1 for _, r in results if r)
-    total  = len(results)
+    total = len(results)
 
     for name, result in results:
         print(f"{'✅ PASS' if result else '❌ FAIL'}: {name}")
@@ -576,10 +599,12 @@ def main() -> int:
         print_status("PASS", "System is healthy — all checks passed.")
         return 0
     elif passed >= total - 2:
-        print_status("WARN", f"{total - passed} minor check(s) failed — review above.")
+        print_status(
+            "WARN", f"{total - passed} minor check(s) failed — review above.")
         return 1
     else:
-        print_status("FAIL", f"{total - passed} check(s) failed — system needs attention.")
+        print_status(
+            "FAIL", f"{total - passed} check(s) failed — system needs attention.")
         return 2
 
 

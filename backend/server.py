@@ -997,7 +997,8 @@ async def crash_report(
         payload = {"message": "(unparseable payload)", "event": {}}
 
     # Skip agent processing for validation / CI probes to avoid false alarms.
-    env = payload.get("environment") or (payload.get("event") or {}).get("environment") or ""
+    env = payload.get("environment") or (
+        payload.get("event") or {}).get("environment") or ""
     if env in ("test", "validation", "ci"):
         return {"status": "received", "message": "Test probe acknowledged — Sovereign Nerve not triggered."}
 

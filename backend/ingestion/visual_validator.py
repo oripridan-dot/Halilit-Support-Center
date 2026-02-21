@@ -738,7 +738,8 @@ def reject_official_if_mismatch(product: Dict[str, Any], min_similarity: float =
     official_hero_url = None
     if official_list:
         first = official_list[0]
-        _first_url = (first.get("url") if isinstance(first, dict) else first) or ""
+        _first_url = (first.get("url") if isinstance(
+            first, dict) else first) or ""
         # Handle nested dict: {"url": {"url": "..."}}
         if isinstance(_first_url, dict):
             _first_url = _first_url.get("url") or ""

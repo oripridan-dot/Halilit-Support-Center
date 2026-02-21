@@ -262,6 +262,172 @@ def _detect_placeholder_files() -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Inline Sub-Process Resolver — auto-fix failures before escalating to Chief
+# ---------------------------------------------------------------------------
+
+def _try_resolve_failure(result: dict) -> dict:
+    """
+    Inline Sub-Process Resolver (ISR).
+
+    Before a failed task is counted as a loss and fed back to the Chief,
+    this function fires one targeted repair sub-process to attempt an
+    autonomous fix in-place.  Returns an updated result dict;
+    if resolved, result["success"] is set to True so the failure is
+    not appended to the failure list.
+
+    Strategy cascade:
+      1. TypeScript / import errors  → repair (immune-response pipeline)
+      2. Test failures               → heal   (up to 3 diagnostic cycles)
+      3. Build / compile failures    → diagnose then repair
+      4. Unknown                     → repair (best-effort)
+    """
+    if result.get("success", False):
+        return result  # nothing to do
+
+    tool = result.get("tool", "")
+    error = result.get("error_output", "") or ""
+
+    print(
+        f"\n{YELLOW}🔧 INLINE RESOLVER — auto-fixing '{tool}' before escalation...{RESET}")
+
+    def _attempt(fix_tool: str, label: str) -> bool:
+        print(f"  {DIM}→ {label}{RESET}")
+        fix_res = run_process({"tool": fix_tool, "args": ""})
+        if fix_res["success"]:
+            print(
+                f"  {GREEN}✅ Inline resolver fixed the issue via {fix_tool}.{RESET}")
+            result["success"] = True
+            result["summary"] = result.get(
+                "summary", "") + f" [RESOLVED via {fix_tool}]"
+            result["error_output"] = ""
+            return True
+        print(f"  {DIM}⚠ {fix_tool} did not resolve — continuing cascade.{RESET}")
+        return False
+
+    # 1 — TypeScript / module resolution errors
+    _ts_signals = ["error TS", "Cannot find module", "SyntaxError",
+                   "tsc", "eslint", "Unexpected token", "type error"]
+    if any(sig.lower() in error.lower() for sig in _ts_signals):
+        _attempt(
+            "repair", "TypeScript/import error — running immune-response repair pipeline...")
+        return result
+
+    # 2 — Test runner failures (Vitest / pytest)
+    _test_signals = ["FAIL", "AssertionError", "test failed", "pytest",
+                     "vitest", "expect(", "received:"]
+    if any(sig.lower() in error.lower() for sig in _test_signals):
+        _attempt("heal", "Test failure — running Watchdog heal cycles (max 3)...")
+        return result
+
+    # 3 — Build / compile / implement failures
+    if tool in ("build", "implement", "sandbox", "task_force"):
+        # surface error details first
+        run_process({"tool": "diagnose", "args": ""})
+        _attempt("repair", "Build failure — diagnose + repair cascade...")
+        return result
+
+    # 4 — Default: best-effort repair
+    _attempt("repair", "Unknown failure — best-effort repair attempt...")
+    return result
+
+
+# ---------------------------------------------------------------------------
+# System-data purge helper (called by 'purge' REPL shortcut)
+# ---------------------------------------------------------------------------
+
+def _purge_system_data() -> None:
+    """
+    Wipe ALL generated / cached pipeline artefacts for a clean-slate re-run.
+
+    Targets:
+      backend/data/ingestion/products, versions, rescrape_backups, *.json, *.jsonl
+      backend/data/graph/product_graph_*.json
+      backend/data/jit_cache/*.json
+      backend/data/catalog_cache.json.gz
+      backend/data/ai_cache/, vector_db/, brands/
+      backend/data/darwin_*.*, heartbeat_snapshot.json, repair_history.json,
+          canonical_products_by_brand.csv, learned_taxonomy.json
+      frontend/public/data/<brand>.json  (keeps index*/search*/inventory/sample/taxonomy)
+      docs/HOTFIX_PROPOSAL_*.md
+      factory_logs/*.log, backend/logs/*.log, logs/*.log
+    """
+    import shutil as _sh
+
+    DATA = ROOT / "backend" / "data"
+    PUBLIC = ROOT / "frontend" / "public" / "data"
+    KEEP = {"index", "search_index", "search_index_min",
+            "galaxy_db", "sample", "inventory", "taxonomy"}
+
+    def _rm_tree_keep(p: Path) -> int:
+        if p.is_dir():
+            _sh.rmtree(p, ignore_errors=True)
+            p.mkdir(parents=True, exist_ok=True)
+            return 1
+        return 0
+
+    def _rm_glob(directory: Path, pattern: str) -> int:
+        files = list(directory.glob(pattern)) if directory.exists() else []
+        for f in files:
+            f.unlink(missing_ok=True)
+        return len(files)
+
+    print(f"\n{YELLOW}🧹 FACTORY PURGE — clearing all ingestion artefacts...{RESET}\n")
+
+    # Ingestion sub-dirs
+    for sub in ("versions", "rescrape_backups", "products", "reports"):
+        _rm_tree_keep(DATA / "ingestion" / sub)
+    _rm_glob(DATA / "ingestion", "*.json")
+    _rm_glob(DATA / "ingestion", "*.jsonl")
+
+    # Graph + JIT cache
+    n_graph = _rm_glob(DATA / "graph", "product_graph_*.json")
+    n_jit = _rm_glob(DATA / "jit_cache", "*.json")
+
+    # Catalog build cache
+    (DATA / "catalog_cache.json.gz").unlink(missing_ok=True)
+
+    # AI / vector / Darwin / misc
+    for sub in ("ai_cache", "vector_db", "brands"):
+        _rm_tree_keep(DATA / sub)
+    for f in ["darwin_experiments.jsonl", "darwin_last_run.txt",
+              "heartbeat_snapshot.json", "canonical_products_by_brand.csv",
+              "learned_taxonomy.json", "repair_history.json"]:
+        (DATA / f).unlink(missing_ok=True)
+
+    # Brand JSONs (keep index/search artefacts)
+    n_brand = 0
+    for bf in list(PUBLIC.glob("*.json")):
+        if bf.stem not in KEEP:
+            bf.unlink(missing_ok=True)
+            n_brand += 1
+
+    # Auto-generated docs
+    _rm_glob(ROOT / "docs", "HOTFIX_PROPOSAL_*.md")
+
+    # Logs
+    for log_dir in [ROOT / "factory_logs", ROOT / "backend" / "logs", ROOT / "logs"]:
+        if log_dir.exists():
+            _rm_glob(log_dir, "*.log")
+            _rm_glob(log_dir, "*_halt.log")
+
+    # Ensure .gitkeep placeholders exist
+    for keep_dir in [DATA / "ingestion", DATA / "jit_cache", DATA / "graph", PUBLIC]:
+        keep_dir.mkdir(parents=True, exist_ok=True)
+        gk = keep_dir / ".gitkeep"
+        if not gk.exists():
+            gk.touch()
+
+    print(f"  {GREEN}✅ Purge complete:{RESET}")
+    print(f"     brand JSONs removed    : {n_brand}")
+    print(f"     graph snapshots removed: {n_graph}")
+    print(f"     jit_cache entries wiped: {n_jit}")
+    remaining = [f for f in (DATA / "ingestion").rglob("*")
+                 if f.is_file() and f.name != ".gitkeep"]
+    print(f"     ingestion files left   : {len(remaining)}")
+    print(f"  {DIM}System is clean — ready for a fresh ingestion run.{RESET}\n")
+
+
+# ---------------------------------------------------------------------------
 # Single-task factory executor (used by both sequential and parallel paths)
 # ---------------------------------------------------------------------------
 
@@ -875,7 +1041,10 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
                 res = future.result()
                 print(f"   {res['summary']}")
                 if not res["success"]:
-                    failures.append(res)
+                    # 🔧 Inline Sub-Process Resolver — attempt auto-fix before counting failure
+                    res = _try_resolve_failure(res)
+                    if not res["success"]:
+                        failures.append(res)
         batch.clear()
         # ââ HOTL STEERING GATE â fires after every parallel batch ââ
         if not auto_mode:
@@ -897,7 +1066,10 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
                 f"\n{YELLOW}ð Sequential task: {task['tool']} {task.get('args', '')}...{RESET}")
             res = execute_sequential(task)
             if not res.get("success", True):
-                failures.append(res)
+                # 🔧 Inline Sub-Process Resolver — attempt auto-fix before counting failure
+                res = _try_resolve_failure(res)
+                if not res.get("success", True):
+                    failures.append(res)
             # ââ HOTL STEERING GATE â fires after every sequential task ââ
             if not auto_mode:
                 approved = review_changes(auto_mode=False)
@@ -1485,6 +1657,25 @@ def main() -> None:
                 continue
             if user_input.lower() in ("exit", "quit", "q", ":q"):
                 break
+
+            # ---- 'purge' shortcut: wipe all generated ingestion artefacts ----
+            if user_input.lower() in ("purge", "/purge", "clean", "wipe", "reset data"):
+                print(
+                    f"\n{RED}{BOLD}⚠ FACTORY PURGE — this will DELETE all ingestion caches, "
+                    f"brand JSONs, graph snapshots and JIT cache files.{RESET}")
+                try:
+                    confirm_purge = input(
+                        f"  Type {BOLD}yes{RESET} to confirm, anything else to abort: "
+                    ).strip().lower()
+                except (KeyboardInterrupt, EOFError):
+                    confirm_purge = ""
+                if confirm_purge == "yes":
+                    _purge_system_data()
+                else:
+                    print(
+                        f"  {GREEN}Purge aborted — no files were changed.{RESET}")
+                hr()
+                continue
 
             # ---- 'senior' shortcut: print Tech Lead report on demand ----
             if user_input.lower() in ("senior", "scan", "tech lead", "tl"):
