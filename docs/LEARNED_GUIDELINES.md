@@ -190,3 +190,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** An expected anchor was missing.
 **Fix:** Rebuilt module from sandbox environment.
 **Lesson:** ALWAYS validate anchor existence before patching.
+
+### [2026-02-21] Rebuild After Patch Failure
+**Symptom:** `patch_component` failed due to anchor mismatch.
+**Root Cause:** Patch application targeted incorrect component state.
+**Fix:** Performed a clean rebuild using the `sandbox` environment.
+**Lesson:** ALWAYS rebuild after patch anchor mismatch.
