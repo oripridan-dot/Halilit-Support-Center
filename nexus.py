@@ -640,7 +640,6 @@ def execute_sequential(task: dict) -> dict:
             return {"tool": tool, "args": args, "success": False,
                     "summary": msg, "error_output": str(exc)}
 
-
     # Code-level guard: if the LLM queues ANY tool on a proposal file path,
     # silently route it to the deterministic evolution_manager instead.
     import re as _evo_re
@@ -798,7 +797,7 @@ def review_changes(auto_mode: bool = False) -> bool:
             print(f"{RED}❌ Commit failed: {(r.stdout + r.stderr).strip()}{RESET}")
             return False
         _metabolic_flush()
-        return True    
+        return True
 
     while True:
         try:
@@ -1498,6 +1497,53 @@ def main() -> None:
                 else:
                     print(
                         f"   {GREEN}\u2705 Factory is clean — no issues detected.{RESET}")
+                hr()
+                continue
+
+            # ---- 'boardroom' shortcut: Advisory consultation (Boardroom Protocol) ----
+            _consult_keywords = (
+                "consult", "advise", "advice", "think about", "what do you think",
+                "should we", "is this a good idea", "i'm thinking", "im thinking",
+                "what do you reckon", "thoughts on", "opinion on",
+            )
+            _lower_input = user_input.lower()
+            _is_advisory = (
+                _lower_input in ("boardroom", "/boardroom",
+                                 "consult", "/consult")
+                or any(kw in _lower_input for kw in _consult_keywords)
+            )
+            if _is_advisory:
+                print(
+                    f"\n{MAGENTA}🏛️  BOARDROOM PROTOCOL ACTIVATED — entering consultation mode...{RESET}")
+                try:
+                    sys.path.insert(0, str(ROOT / "backend" / "factory"))
+                    from tech_lead_agent import consult_tech_lead_on_idea  # type: ignore  # noqa: PLC0415
+                    _tl_verdict = consult_tech_lead_on_idea(user_input)
+                    # Chief adds strategic framing to the Tech Lead's verdict
+                    _boardroom_prompt = (
+                        f"The Operator has asked for advisory consultation (NOT execution) on:\n"
+                        f"{user_input}\n\n"
+                        f"The Senior Tech Lead has delivered this architectural verdict:\n"
+                        f"{_tl_verdict}\n\n"
+                        f"BOARDROOM ADVISORY MODE: Combine your strategic perspective with the Tech Lead's "
+                        f"verdict and present a joint 'BOARDROOM ADVISORY REPORT'. "
+                        f"DO NOT queue any tasks. DO NOT write code. End with a clear recommendation "
+                        f"and ask the Governor whether to proceed or drop the idea."
+                    )
+                    _advisory_plan = consult_chief(
+                        _boardroom_prompt, is_startup=False,
+                        tech_lead_context="", senior_override=""  # context already injected above
+                    )
+                    print(
+                        f"\n{BOLD}{MAGENTA}🏛️  BOARDROOM ADVISORY REPORT:{RESET}")
+                    type_writer(_advisory_plan.get("explanation", _tl_verdict))
+                    _boardroom_insight = _advisory_plan.get(
+                        "mentor_insight", "")
+                    if _boardroom_insight:
+                        print(f"\n{MAGENTA}{BOLD}🎓 ARCHITECT'S NOTE:{RESET}")
+                        type_writer(_boardroom_insight, speed=0.004)
+                except Exception as _brd_exc:
+                    print(f"   {RED}Boardroom unavailable: {_brd_exc}{RESET}")
                 hr()
                 continue
 
