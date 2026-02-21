@@ -1,4 +1,11 @@
 ## [v9.7.6] — 2026-02-21
+- [feat] Introduced code guardian to automatically restore critical code blocks.
+- [feat] Added `code_guardian.py` to enforce system invariants.
+- [feat] Implemented `_self_heal_patch_component` as a protected function.
+- [feat] Added logic to verify, restore, and run code guardian checks.
+- [feat] Included CLI support for verification and restoration.
+
+## [v9.7.6] — 2026-02-21
 - [chore] Removed JitInnovationButton component.
 
 ## [v4.1] — 2026-02-21

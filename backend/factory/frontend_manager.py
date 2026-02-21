@@ -98,6 +98,7 @@ ANTI-PATTERNS (never do these):
   - Do NOT invent file paths — only use files you KNOW exist
   - Do NOT skip ui_validate — it catches Vite runtime errors tsc/eslint miss
   - Do NOT import Three.js, GalaxyDashboard, or any 3D libraries
+- NEVER remove or weaken the `_self_heal_patch_component` function or its call-site in `run_frontend_swarm`. It is a SYSTEM INVARIANT.
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
 {
@@ -183,6 +184,127 @@ def _plan_frontend_queue(intent_spec: str) -> list[dict]:
     except json.JSONDecodeError:
         pass
     return []
+
+
+# ---------------------------------------------------------------------------
+# Self-healing — reattempt a failed patch_component by re-reading the actual
+# file and asking the LLM to produce a corrected search/replace block.
+# SYSTEM INVARIANT: do NOT remove this function.
+# ---------------------------------------------------------------------------
+
+_HEAL_SYSTEM_PROMPT = """
+You are the FRONTEND MANAGER in self-healing mode.
+A patch_component operation just failed because the search anchor was not found in the file.
+Your job: read the ACTUAL FILE CONTENT provided and produce a corrected patch, OR fall back to an 'implement' task if no surgical patch is possible.
+
+RULES:
+- Respond ONLY with valid JSON — no markdown fences.
+- Prefer 'patch_component' if you can identify the exact anchor in the file.
+- Use 'implement' only if the component needs a full rewrite.
+- Do NOT invent file paths.
+- Always end queue with 'ui_validate'.
+
+OUTPUT FORMAT:
+{
+  "thought": "Why did the original anchor miss?",
+  "queue": [
+    {"tool": "patch_component", "args": {"file": "relative/path.tsx", "search": "exact anchor", "replace": "new code"}, "parallel": false},
+    {"tool": "ui_validate", "args": "", "parallel": false}
+  ]
+}
+"""
+
+
+def _self_heal_patch_component(
+    file_path: str,
+    intent: str,
+    original_search: str,
+    original_replace: str,
+    max_retries: int = 2,
+) -> dict:
+    """
+    SYSTEM INVARIANT — do NOT remove.
+    Called when patch_component fails with "Anchor not found".
+    Reads the actual file, re-queries the LLM for a corrected plan, and retries.
+    Falls back to 'implement' (full spec build) if all patch retries fail.
+    """
+    abs_path = _ROOT / file_path
+    if not abs_path.exists():
+        return {
+            "tool": "patch_component", "args": file_path, "success": False,
+            "summary": f"❌ [self-heal] File not found: {file_path}",
+            "error_output": f"path {file_path} does not exist",
+        }
+
+    file_lines = abs_path.read_text(encoding="utf-8").splitlines()
+    file_preview = "\n".join(file_lines[:300])
+    if len(file_lines) > 300:
+        file_preview += f"\n... ({len(file_lines) - 300} more lines truncated)"
+
+    user_prompt = (
+        f"Original intent: {intent}\n\n"
+        f"Failed anchor (search block that was NOT found in the file):\n```\n{original_search}\n```\n\n"
+        f"Intended replacement:\n```\n{original_replace}\n```\n\n"
+        f"ACTUAL FILE CONTENT ({file_path}):\n```tsx\n{file_preview}\n```\n\n"
+        f"Produce a corrected JSON task queue to apply this change. "
+        f"Use the exact code from the file as the search anchor."
+    )
+
+    for attempt in range(1, max_retries + 1):
+        print(
+            f"   🔧 [self-heal] Attempt {attempt}/{max_retries} — querying LLM for corrected patch...")
+        raw = query_llm(_HEAL_SYSTEM_PROMPT, user_prompt,
+                        temperature=0.2, model_tier="smart")
+        if not raw:
+            continue
+        raw = raw.strip()
+        raw = re.sub(r"^```(?:json)?\s*", "", raw)
+        raw = re.sub(r"\s*```$", "", raw)
+        try:
+            json_match = re.search(r"\{.*\}", raw, re.DOTALL)
+            if not json_match:
+                continue
+            parsed = json.loads(json_match.group(0))
+            thought = parsed.get("thought", "")
+            if thought:
+                print(f"   💡 [self-heal] {thought}")
+            heal_queue = parsed.get("queue", [])
+        except (json.JSONDecodeError, ValueError):
+            continue
+
+        for task in heal_queue:
+            tool = task.get("tool", "")
+            args = task.get("args", "")
+            if tool == "patch_component":
+                patch_args = args if isinstance(args, dict) else {}
+                result = _execute_patch_component(patch_args)
+                if result.get("success"):
+                    print(
+                        f"   ✅ [self-heal] Patch applied on attempt {attempt}.")
+                    return result
+                print(
+                    f"   ✗  [self-heal] Attempt {attempt} still failed — {result.get('error_output', '')}")
+            elif tool == "implement":
+                str_args = args if isinstance(args, str) else str(args)
+                print(
+                    f"   🏗️  [self-heal] Falling back to implement: {str_args}")
+                return _execute_factory_cmd("implement", str_args)
+
+    # All retries exhausted — write a temp spec and implement
+    print(
+        f"   ⚠️  [self-heal] All {max_retries} patch retries failed. Attempting implement fallback...")
+    tmp_spec = _ROOT / "specs" / "temp" / f"_heal_{Path(file_path).stem}.md"
+    tmp_spec.parent.mkdir(parents=True, exist_ok=True)
+    tmp_spec.write_text(
+        f"# Auto-heal spec for {file_path}\n\n## Intent\n{intent}\n\n"
+        f"## Target\n`{file_path}`\n\n## Constraint\nPreserve all existing behaviour. "
+        f"Only apply the minimal change described in the intent.",
+        encoding="utf-8",
+    )
+    result = _execute_factory_cmd(
+        "implement", str(tmp_spec.relative_to(_ROOT)))
+    result["self_healed"] = True
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -317,22 +439,35 @@ def run_frontend_swarm(intent_spec: str, task_name: str = "frontend-task") -> di
         tasks_run += 1
 
         if not result.get("success", False):
-            # Auto-escalation: anchor miss on patch_component → mandate rebuild
+            # ── Self-healing: anchor miss → reattempt on the spot ─────────────
             if (tool == "patch_component"
                     and "Anchor not found" in result.get("error_output", "")):
-                result["error_output"] = (
-                    f"PATCH_ANCHOR_MISS: {result['error_output']}\n"
-                    f"AUTO-ESCALATION REQUIRED: Use 'sandbox' or 'delegate_frontend' "
-                    f"with explicit 'REBUILD from scratch, do NOT use patch_component' "
-                    f"for intent: {intent_spec[:200]}"
+                print(
+                    f"   🩹 [self-heal] Anchor miss detected — attempting in-place recovery...")
+                update_kanban(task_name, str(args)[:60],
+                              f"🩹 Step {tasks_run}: Anchor miss — self-healing patch...")
+                patch_args = args if isinstance(args, dict) else {}
+                healed = _self_heal_patch_component(
+                    file_path=patch_args.get("file", ""),
+                    intent=intent_spec,
+                    original_search=patch_args.get("search", ""),
+                    original_replace=patch_args.get("replace", ""),
                 )
-            failures.append(result)
-            update_kanban(task_name, str(args)[
-                          :60], f"🚨 Step {tasks_run} FAILED — sub-swarm halted. Operator review required.")
-            # Stop on first failure — don't validate broken code
-            print(
-                f"   ⛔ Frontend sub-swarm halted at step {tasks_run} due to failure.")
-            break
+                if healed.get("success"):
+                    print(
+                        f"   ✅ [self-heal] Recovered — continuing sub-swarm.")
+                    update_kanban(task_name, str(args)[:60],
+                                  f"✅ Step {tasks_run}: Self-heal succeeded — resuming.")
+                    result = healed  # swap in the successful result and continue
+
+            if not result.get("success", False):
+                failures.append(result)
+                update_kanban(task_name, str(args)[
+                              :60], f"🚨 Step {tasks_run} FAILED — sub-swarm halted. Operator review required.")
+                # Stop on first unrecoverable failure — don't validate broken code
+                print(
+                    f"   ⛔ Frontend sub-swarm halted at step {tasks_run} due to failure.")
+                break
 
     ok = len(failures) == 0
     summary = (

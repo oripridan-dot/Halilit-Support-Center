@@ -83,6 +83,14 @@ ANTI-PATTERNS:
   - Do NOT create FastAPI endpoints that bypass the Three Source Rules
   - Do NOT skip 'diagnose' after 'implement' for any backend change
 
+SYSTEM INVARIANTS (NEVER remove or weaken these — they are enforced by code_guardian):
+  - backend/factory/frontend_manager.py: _self_heal_patch_component, run_frontend_swarm
+  - backend/factory/agent_core.py: query_llm, build_dynamic_context
+  - backend/factory/udiff_patcher.py: apply_patch, apply_udiff
+  - backend/factory/data_manager.py: run_data_swarm  ← THIS FILE
+  - backend/source_rules.py: THREE_SOURCE_RULES, ZERO_TOLERANCE
+  - nexus.py: execute_swarm, review_changes
+
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
 {
   "thought": "What backend change is needed and what are the risks?",

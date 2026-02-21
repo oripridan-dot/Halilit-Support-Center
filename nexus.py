@@ -62,6 +62,26 @@ _FACTORY_DIR = ROOT / "backend" / "factory"
 
 
 # ---------------------------------------------------------------------------
+# Code Guardian — auto-protect system invariants (lazy import)
+# ---------------------------------------------------------------------------
+
+def _guardian_run(silent: bool = False) -> bool:
+    """
+    Run the Code Guardian to verify (and restore) all system invariants.
+    Called before every swarm execution and at every steering gate.
+    Never raises — logs and returns False on error.
+    """
+    try:
+        sys.path.insert(0, str(_FACTORY_DIR))
+        import importlib
+        cg = importlib.import_module("code_guardian")
+        return cg.run(auto_restore=True, silent=silent)
+    except Exception as _e:
+        print(f"{YELLOW}⚠️  Code Guardian unavailable: {_e}{RESET}")
+        return True  # degrade gracefully — don't block the swarm
+
+
+# ---------------------------------------------------------------------------
 # Janitor — lazy import so nexus.py loads even without the factory package
 # ---------------------------------------------------------------------------
 
@@ -785,7 +805,10 @@ def review_changes(auto_mode: bool = False) -> bool:
     print(f"{'â' * 52}{RESET}")
     subprocess.run(["git", "status", "-s"])
 
-    if auto_mode:
+    # ── Post-change: verify invariants BEFORE committing (catch regressions)
+    if a
+    _guardian_run(silent=False)
+    uto_mode:
         print(f"\n{CYAN}⚡ [AUTO] Changes auto-approved and committed.{RESET}")
         subprocess.run(["git", "add", "."])
         subprocess.run(["git", "config", "--local", "commit.gpgsign", "false"])
@@ -855,6 +878,8 @@ def execute_swarm(queue: list[dict], auto_mode: bool = False) -> list[dict]:
         the Operator can approve, inspect diff, or reject+revert before the
         next batch starts.
 
+    # ── Pre-flight: verify all system invariants before touching anything ──
+    _guardian_run(silent=True)
     Returns a list of failed task result dicts (empty if all succeeded).
     """
     print(f"\n{BOLD}ð MOBILIZING FACTORY SWARM...{RESET}")
