@@ -155,6 +155,14 @@ try:
 except Exception as e:
     logger.warning(f"Failed to register MCP: {e}")
 
+# ── JIT Innovation Pipeline Router ──
+try:
+    from backend.api.innovation_router import router as innovation_router
+    app.include_router(innovation_router)
+    logger.info("Innovation pipeline endpoints registered at /api/innovation")
+except Exception as e:
+    logger.warning(f"Failed to register JIT Innovation router: {e}")
+
 # Paths
 FRONTEND_DIST = FRONTEND_DIR / "dist"
 
