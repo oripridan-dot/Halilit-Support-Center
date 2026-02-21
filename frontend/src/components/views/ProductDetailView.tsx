@@ -4,7 +4,6 @@ import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import { ConductorProduct } from "../../types";
 import ImageWithFallback from "../ImageWithFallback";
 import JITBadge from "../ProductDetail/JITBadge";
-import ProductImageCarousel from "../ProductDetail/ProductImageCarousel";
 import EcosystemTab from "../ProductDetail/EcosystemTab";
 import { ProductDetailHeader } from "../ProductDetail/ProductDetailHeader";
 
@@ -86,20 +85,15 @@ const ProductDetailView: React.FC = () => {
               <JITBadge productId={product.id} />
             </div>
             {product.description && (
-              <p className="text-zinc-300 mt-2 leading-relaxed">
-                {product.description}
-              </p>
+              <p className="text-zinc-400">{product.description}</p>
             )}
           </div>
-          <div className="mb-4">
-            <ProductImageCarousel productId={product.id} />
-          </div>
-
-          <EcosystemTab productId={product.id} />
         </div>
+      </div>
+      <div className="container mx-auto p-4">
+        <EcosystemTab productId={product.id} />
       </div>
     </div>
   );
 };
-
 export default ProductDetailView;
