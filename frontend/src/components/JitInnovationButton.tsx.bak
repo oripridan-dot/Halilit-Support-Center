@@ -17,18 +17,12 @@ import React, { useState, useRef, useEffect } from "react";
 // Types
 // ---------------------------------------------------------------------------
 
-/**
- * Represents the result of submitting an innovation request.
- */
-interface InnovationRequestResult {
+interface SubmitResult {
   status: string;
   message: string;
 }
 
-/**
- * Represents the different states of the innovation panel.
- */
-type InnovationPanelState = "idle" | "submitting" | "success" | "error";
+type PanelState = "idle" | "submitting" | "success" | "error";
 
 // ---------------------------------------------------------------------------
 // Component
@@ -36,45 +30,38 @@ type InnovationPanelState = "idle" | "submitting" | "success" | "error";
 
 export const JitInnovationButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [innovationNeed, setInnovationNeed] = useState("");
-  const [panelState, setPanelState] = useState<InnovationPanelState>("idle");
+  const [need, setNeed] = useState("");
+  const [panelState, setPanelState] = useState<PanelState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  /**
-   * Auto-focus the textarea when the panel opens.
-   */
+  // Auto-focus textarea when panel opens
   useEffect(() => {
     if (isOpen && panelState === "idle") {
       setTimeout(() => textareaRef.current?.focus(), 80);
     }
   }, [isOpen, panelState]);
 
-  /**
-   * Resets the panel to the idle state.
-   */
-  const resetPanel = () => {
-    setInnovationNeed("");
+  // Reset panel to idle state
+  const reset = () => {
+    setNeed("");
     setPanelState("idle");
     setStatusMessage("");
   };
 
-  const handleOpenPanel = () => {
-    resetPanel();
+  const handleOpen = () => {
+    reset();
     setIsOpen(true);
   };
 
-  const handleClosePanel = () => {
+  const handleClose = () => {
     setIsOpen(false);
-    setTimeout(resetPanel, 300); // Reset after close animation
+    setTimeout(reset, 300); // Reset after close animation
   };
 
-  /**
-   * Handles the submission of the innovation request.
-   */
   const handleSubmit = async () => {
-    const trimmedNeed = innovationNeed.trim();
-    if (!trimmedNeed) return;
+    const trimmed = need.trim();
+    if (!trimmed) return;
 
     setPanelState("submitting");
     setStatusMessage("Waking the Factory…");
@@ -86,7 +73,7 @@ export const JitInnovationButton: React.FC = () => {
         body: JSON.stringify({
           operator_role: "Warehouse Staff",
           current_context: window.location.pathname,
-          need_description: trimmedNeed,
+          need_description: trimmed,
         }),
       });
 
@@ -94,25 +81,25 @@ export const JitInnovationButton: React.FC = () => {
         throw new Error(`Server responded with ${response.status}`);
       }
 
-      const data: InnovationRequestResult = await response.json();
+      const data: SubmitResult = await response.json();
       setPanelState("success");
       setStatusMessage(
         data.message ??
           "Pipeline activated. A FEATURE_PROPOSAL will appear in docs/ when ready.",
       );
-    } catch (error) {
+    } catch (err) {
       setPanelState("error");
       setStatusMessage(
-        error instanceof Error
-          ? error.message
+        err instanceof Error
+          ? err.message
           : "Unexpected error — check the server logs.",
       );
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
-      event.preventDefault();
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+      e.preventDefault();
       handleSubmit();
     }
   };
@@ -125,7 +112,7 @@ export const JitInnovationButton: React.FC = () => {
     <>
       {/* ── Floating Trigger Button ── */}
       <button
-        onClick={handleOpenPanel}
+        onClick={handleOpen}
         title="Request a JIT Feature from the AI Factory"
         aria-label="Open JIT Innovation Panel"
         className="
@@ -146,7 +133,7 @@ export const JitInnovationButton: React.FC = () => {
       {isOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
-          onClick={handleClosePanel}
+          onClick={handleClose}
           aria-hidden="true"
         />
       )}
@@ -180,7 +167,7 @@ export const JitInnovationButton: React.FC = () => {
               </p>
             </div>
             <button
-              onClick={handleClosePanel}
+              onClick={handleClose}
               aria-label="Close panel"
               className="text-zinc-600 hover:text-zinc-300 transition-colors p-1 rounded-md hover:bg-zinc-800"
             >
@@ -201,8 +188,8 @@ export const JitInnovationButton: React.FC = () => {
                 <textarea
                   id="jit-need-input"
                   ref={textareaRef}
-                  value={innovationNeed}
-                  onChange={(e) => setInnovationNeed(e.target.value)}
+                  value={need}
+                  onChange={(e) => setNeed(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="e.g. I need a printable PDF table for RMA repairs with broken serial numbers."
                   rows={4}
@@ -267,14 +254,14 @@ export const JitInnovationButton: React.FC = () => {
             {panelState === "idle" && (
               <>
                 <button
-                  onClick={handleClosePanel}
+                  onClick={handleClose}
                   className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSubmit}
-                  disabled={!innovationNeed.trim()}
+                  disabled={!need.trim()}
                   className="
                     px-4 py-1.5 rounded-lg text-xs font-semibold
                     bg-blue-600 hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed
@@ -287,7 +274,7 @@ export const JitInnovationButton: React.FC = () => {
             )}
             {(panelState === "success" || panelState === "error") && (
               <button
-                onClick={panelState === "success" ? handleClosePanel : resetPanel}
+                onClick={panelState === "success" ? handleClose : reset}
                 className="
                   ml-auto px-4 py-1.5 rounded-lg text-xs font-semibold
                   bg-zinc-800 hover:bg-zinc-700 text-zinc-200 transition-all active:scale-95
