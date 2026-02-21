@@ -1,10 +1,10 @@
 # Spec: Implement Backend Pagination for useConductorCatalog (Final + Skeleton Loading)
-**Version:** 7.1
+**Version:** 7.3
 **Component:** `frontend/src/hooks/useConductorCatalog.ts`
 
 ## Purpose
 
-Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the critical issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API and uses skeleton loading.
+Completely remove the `galaxy_db.json` dependency and enforce that the `useConductorCatalog` hook exclusively uses the backend API for fetching product catalog data in paginated form, addressing the critical issue of exceeding the 5MB client-side JSON limit and preventing future accidental reliance on the local file. This ensures that all filter and sort states are passed to the API and uses skeleton loading. This specification adds a catch to ensure old versions of the app break gracefully. This version adds logging so that there are no silent errors.
 
 ## Requirements
 
@@ -30,37 +30,48 @@ Completely remove the `galaxy_db.json` dependency and enforce that the `useCondu
     *   Uses `react-query` to manage the fetching and caching of paginated data.
     *   Implements skeleton components for loading states in parent components using the hook, displaying the skeleton until data is loaded.
 6. **Skeleton visibility:** Ensure that skeleton components are displayed while the data is loading, enhancing the user experience with visual feedback.
+7.  **Galaxy DB Check:**
+    * Inside the `useConductorCatalog` hook, before any fetch occurs, insert a conditional check:
+    ```typescript
+      if (process.env.NODE_ENV !== 'production') {
+          try {
+              const galaxyDb = await import('../../public/data/galaxy_db.json');
+              console.warn("Legacy galaxy_db.json is present. This should not happen in production.");
+          } catch (e) {
+              // File does not exist, which is the desired state.
+              console.log("galaxy_db.json not found, as expected.");
+          }
+      }
+    ```
 
 ## Stitch UI Prompt
 ```text
-// Target Component: useConductorCatalog hook implementation and its dependent views.
-// Description: This prompt focuses on ensuring the correct skeleton loading states are displayed while the hook is fetching data.
+// Target Component: useConductorCatalog hook implementation
+// Description: This prompt focuses on creating the skeleton loading states
 
-// The component using useConductorCatalog should display skeleton placeholders until the data is loaded:
+// The component using useConductorCatalog should have a main container with:
+// Layout: Flexbox, direction column
+// Style: dark mode, slate-900 background
 
-// InventoryView:
-// Layout: Flexbox, direction column, with a slate-900 background.
-
-// Skeleton components should be used before catalog data is loaded, including:
+// Before catalog data is loaded, show the following skeleton placeholders:
 
 // 1. Search Input Skeleton:
-// Layout: Same size and placement as the actual search input.
-// Style: rounded corners, bg-zinc-700, h-10.
+// Layout: Same size as the actual search input
+// Style: rounded corners, bg-zinc-700, h-10
 
-// 2. Inventory Grid Skeleton: (Use CSS Grid)
-// Repeat the product tile skeleton based on the pageSize and maintain the grid.
-// The skeleton tile must include:
-// Image Skeleton: square aspect ratio, bg-zinc-700.
-// Title Skeleton: rectangular shape, bg-zinc-700, 2 lines.
-// Price Skeleton: short rectangular shape, bg-zinc-700.
+// 2. Inventory Grid Skeleton: (Use Bento Grid)
+// Use shimmer animation for the loading state: bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 animate-shimmer
 
-// ProductDetailView:
-// Description: Should display a full-page skeleton mimicking the ProductDetail layout.
-// All values should be skeleton components using rounded corners and bg-zinc-700 color.
+// Should implement proper tailwind dark mode
+// Should implement proper skeleton loading indicators
 
-// Ensure consistent styling across all skeleton components, using dark mode and Tailwind CSS, and shimmer loading effect.
 ```
 
 ## Verification Commands
 - `pnpm tsc --noEmit`
 - `pnpm run lint`
+- Verify that `frontend/public/data/galaxy_db.json` is physically DELETED.
+- Verify that components using `useConductorCatalog` display skeleton loading while fetching data.
+- Verify that the `useConductorCatalog` hook correctly fetches data from the `/api/conductor/catalog` endpoint with pagination parameters.
+- Verify that the pagination parameters are being applied to filter, sort, and search.
+- In a non-production environment, confirm that the absence/presence of galaxy_db.json generates expected log messages.

@@ -1,32 +1,19 @@
 ```typescript
 // Contract: Implement Backend Pagination for useConductorCatalog (Final + Skeleton Loading)
 
-// Endpoint path
-export const CATALOG_ENDPOINT = "/api/conductor/catalog";
+export const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
-// Shared types
 export interface ConductorProduct {
   id: string;
   name: string;
   description: string;
+  price: number;
   imageUrl: string;
   category: string;
   brand: string;
-  price: number;
-  // Add other product properties as needed
+  // Add other properties as needed based on your product data
 }
 
-// Request body type (if any - this endpoint uses query parameters)
-export interface CatalogRequestParams {
-    page?: number;
-    pageSize?: number;
-    searchQuery?: string;
-    sortBy?: string;
-    category?: string;
-    brand?: string;
-}
-
-// Response type
 export interface PaginatedCatalogResponse {
   products: ConductorProduct[];
   totalItems: number;
@@ -34,4 +21,15 @@ export interface PaginatedCatalogResponse {
   currentPage: number;
   pageSize: number;
 }
+
+export interface CatalogParams {
+  page?: number;
+  pageSize?: number;
+  searchQuery?: string;
+  sortBy?: string;
+  category?: string;
+  brand?: string;
+}
+
+export type CatalogResponse = PaginatedCatalogResponse;
 ```
