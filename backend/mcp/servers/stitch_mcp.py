@@ -81,7 +81,8 @@ def generate_stitch_ui_shell(design_prompt: str, component_name: str = "UICompon
           - design_prompt: str
           - instructions: str  (merge guidance for the Builder Agent)
     """
-    print(f"\n🎨  STITCH ENGINE: Generating pristine UI shell for '{design_prompt}'...")
+    print(
+        f"\n🎨  STITCH ENGINE: Generating pristine UI shell for '{design_prompt}'...")
 
     try:
         from backend.llm import get_llm  # type: ignore
@@ -117,7 +118,8 @@ def generate_stitch_ui_shell(design_prompt: str, component_name: str = "UICompon
     # Strip any accidental markdown fences
     import re
     shell_code = re.sub(r'^```[a-zA-Z]*\n', '', shell_code, flags=re.MULTILINE)
-    shell_code = re.sub(r'\n```\s*$', '', shell_code, flags=re.MULTILINE).strip()
+    shell_code = re.sub(r'\n```\s*$', '', shell_code,
+                        flags=re.MULTILINE).strip()
 
     print(f"   ✅  UI shell generated ({len(shell_code)} chars).")
 

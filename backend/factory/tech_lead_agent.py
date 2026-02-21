@@ -245,7 +245,9 @@ class FactoryHeuristics:
                     f"[EVOLUTION] Tech Scout has {len(all_proposals)} pending proposal(s) "
                     f"awaiting Chief review (batch of {len(batch)}): {names}{tail}. "
                     f"CHIEF RULE: process ONLY this batch of {len(batch)} this session. "
-                    f"Use delegate_data per proposal. Do NOT schedule all at once."
+                    f"Use 'process_evolution_proposal' (NOT delegate_data) for each — "
+                    f"it is deterministic and moves the file to reviewed/ automatically. "
+                    f"Do NOT schedule all at once."
                 )
 
     # --- 6. Backend Integrity Checks ---------------------------------------
