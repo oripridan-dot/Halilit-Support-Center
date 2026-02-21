@@ -1,113 +1,65 @@
-/**
- * useConductorCatalog — canonical catalog data hook
- * Fetches paginated products from /api/conductor/catalog via React Query.
- *
- * ConductorProduct is exported from here because types/index.ts re-exports it.
- *
- * ⚠️  BUILDER RULE — THIS IS A HOOK FILE (.ts NOT .tsx)
- *     DO NOT add JSX, React components, className, or component imports here.
- *     Components belong in frontend/src/components/.
- *     Any code written below the closing brace of useConductorCatalog()
- *     will be automatically purged by the UI Validator scope-purger.
- */
 import { useQuery } from '@tanstack/react-query';
+import { useSearchParams } from 'react-router-dom';
+import { ResearchAnimation } from '../../components/ResearchAnimation';
+import { useState } from 'react';
 
-const CATALOG_ENDPOINT = '/api/conductor/catalog';
+export const useConductorCatalog = (
+  initialPage: number = 1,
+  initialPageSize: number = 25,
+  initialSearchQuery: string = '',
+  initialSortBy: string = '',
+  initialCategory: string = '',
+  initialBrand: string = ''
+) => {
+  const [searchParams] = useSearchParams();
 
-export interface ConductorProduct {
-    id: string;
-    name: string;
-    brand: string;
-    brand_logo?: string;
-    galaxy_id?: string;
-    spectrum_id?: string;
-    category?: string;
-    subcategory?: string;
-    price?: number;
-    price_eilat?: number;
-    tier?: string;
-    image_url?: string;
-    image_gallery?: string[];
-    description?: string;
-    description_short?: string;
-    specs?: Record<string, unknown>;
-    features?: string[];
-    rating?: number;
-    review_count?: number;
-    pros?: string[];
-    cons?: string[];
-    quality_score?: number;
-    data_status?: string;
-    data_missing?: string[];
-    halilit_url?: string;
-    official_url?: string;
-    sources?: string[];
-    family_id?: string | null;
-    variant_key?: string | null;
-    relationship_ids?: string[];
-}
+  const page = parseInt(searchParams.get('page') || initialPage.toString(), 10);
+  const pageSize = parseInt(searchParams.get('pageSize') || initialPageSize.toString(), 10);
+  const searchQuery = searchParams.get('searchQuery') || initialSearchQuery;
+  const sortBy = searchParams.get('sortBy') || initialSortBy;
+  const category = searchParams.get('category') || initialCategory;
+  const brand = searchParams.get('brand') || initialBrand;
 
-interface CatalogParams {
-    page?: number;
-    pageSize?: number;
-    searchQuery?: string;
-    sortBy?: string;
-    category?: string;
-    brand?: string;
-}
+  const params: CatalogParams = {
+    page,
+    pageSize,
+    searchQuery,
+    sortBy,
+    category,
+    brand,
+  };
 
-interface CatalogApiResponse {
-    products: ConductorProduct[];
-    total?: number;
-    totalItems?: number;
-    totalPages?: number;
-    currentPage?: number;
-    pageSize?: number;
-    brand_count?: number;
-    indexes?: Record<string, unknown>;
-}
+  const {
+    data,
+    isLoading,
+    error,
+    refetch,
+  } = useQuery<CatalogResponse, Error>({
+    queryKey: ['catalog', params],
+    queryFn: async () => {
+      const response = await fetch(`${CATALOG_ENDPOINT}?${new URLSearchParams(
+        Object.entries(params)
+          .filter(([, value]) => value !== '' && value !== undefined && value !== null)
+          .map(([key, value]) => [key, value?.toString()])
+      )}`);
 
-async function fetchCatalog(params: CatalogParams): Promise<CatalogApiResponse> {
-    const url = new URL(CATALOG_ENDPOINT, window.location.origin);
-    Object.entries(params).forEach(([key, value]) => {
-        if (value !== undefined && value !== '') {
-            url.searchParams.append(key, String(value));
-        }
-    });
-    const response = await fetch(url.toString());
-    if (!response.ok) {
-        throw new Error(`Catalog fetch failed: HTTP ${response.status}`);
-    }
-    return response.json() as Promise<CatalogApiResponse>;
-}
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json() as Promise<CatalogResponse>;
+    },
+    keepPreviousData: true,
+  });
 
-export function useConductorCatalog(params: CatalogParams = {}) {
-    const { page = 1, pageSize = 250, searchQuery = '', sortBy = '', category = '', brand = '' } = params;
-
-    const { data, isLoading, isError, error, refetch } = useQuery<CatalogApiResponse, Error>({
-        queryKey: ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
-        queryFn: () => fetchCatalog({ page, pageSize, searchQuery, sortBy, category, brand }),
-        staleTime: 5 * 60 * 1000,
-        retry: 2,
-    });
-
-    return {
-        products: data?.products ?? [],
-        totalItems: data?.totalItems ?? data?.total ?? 0,
-        totalPages: data?.totalPages ?? 1,
-        currentPage: data?.currentPage ?? 1,
-        pageSize: data?.pageSize ?? pageSize,
-        isLoading,
-        isError,
-        error: error ? error.message : null,
-        refetch,
-    };
-}
-
-export const CatalogLoadingIndicator = () => {
-    return (
-        <div className= "absolute top-0 left-0 bg-slate-900" >
-        Loading...
-    </div>
-  );
+  return {
+    products: data?.products || [],
+    totalItems: data?.totalItems || 0,
+    totalPages: data?.totalPages || 0,
+    currentPage: data?.currentPage || 1,
+    pageSize: data?.pageSize || 25,
+    isLoading,
+    error,
+    refetch,
+    loadingComponent: isLoading ? <ResearchAnimation brandName="Halilit" brandColor="#0ea5e9" /> : null,
+  };
 };
