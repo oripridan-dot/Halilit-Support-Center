@@ -117,6 +117,9 @@ TOOLS & PARALLELISM RULES:
                               simultaneously. For purely frontend or purely backend work,
                               ALWAYS prefer 'design' + 'implement' instead. task_force is
                               overkill for single-file changes.
+                              🚫 NEVER use task_force for audit, diff, review, sync, or
+                              "check X against Y" goals — these have no implementation
+                              target and will abort. Use 'audit' or 'diagnose' for those.
 - 'v0_design'   (V0 Designer):Generates a v0.dev-ready UI prompt from a plain-English  PARALLEL SAFE ✅
                               description, enforcing Halilit architecture rules.
                               args = "description of the component to design".

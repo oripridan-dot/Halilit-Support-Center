@@ -363,6 +363,40 @@ def cmd_task_force(task_id: str, goal: str, agents: list[str] | None = None) -> 
     bb_path.write_text(bb_content, encoding="utf-8")
     log(f"  Blackboard created: {bb_path.relative_to(ROOT)}")
 
+    # ─── Goal-type classifier ────────────────────────────────────────────────
+    # Audit/review/sync/diff goals have no implementation target.  The Builder
+    # will always abort for these.  Detect early and route to audit+reflect
+    # instead, so we skip the guaranteed-failure path entirely.
+    _AUDIT_KEYWORDS = ("audit", "review", "diff", "sync", "check against",
+                       "compare", "validate against", "verify against")
+    _goal_lower = goal.lower()
+    _is_audit_goal = any(kw in _goal_lower for kw in _AUDIT_KEYWORDS)
+
+    if _is_audit_goal:
+        log(f"⚠️  Goal looks like an audit/review task (no implementation target).")
+        log(f"   Skipping Task Force — routing to 'audit' + 'reflect' instead.")
+        bb_path.write_text(
+            bb_content +
+            f"\n---\n## Chief Routing Override\n\n"
+            f"**Reason:** Goal `{goal}` was classified as an audit/review/sync goal, "
+            f"not an implementation goal.\n"
+            f"Task Force requires a concrete implementation target — routing to `audit` instead.\n",
+            encoding="utf-8",
+        )
+        # Run the senior audit scan and write a reflect lesson
+        subprocess.run(
+            [sys.executable, str(ROOT / "factory.py"), "audit"],
+            cwd=str(ROOT), env={**os.environ},
+        )
+        subprocess.run(
+            [sys.executable, str(ROOT / "factory.py"), "reflect",
+             f"task_force goal '{goal}' was an audit, not an implementation — route to 'audit' or 'diagnose' next time"],
+            cwd=str(ROOT), env={**os.environ},
+        )
+        log(f"✅ Audit routing complete. See Blackboard: {bb_path.relative_to(ROOT)}")
+        return
+    # ────────────────────────────────────────────────────────────────────────
+
     env = {**os.environ,
            "PYTHONPATH": str(FACTORY), "TF_BLACKBOARD": str(bb_path),
            "TF_GOAL": goal}
