@@ -22,6 +22,12 @@ from typing import Optional
 # agent_core lives in the same package; this file is executed with cwd=FACTORY
 from agent_core import query_llm, save_artifact
 
+# JIT Oracle Lifeline — cold-booted external consultant for stuck loops
+try:
+    from oracle_agent import consult_external_oracle as _oracle_lifeline
+except ImportError:
+    from .oracle_agent import consult_external_oracle as _oracle_lifeline  # type: ignore
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
@@ -611,9 +617,33 @@ def run_watchdog() -> bool:
         print(f"🩹 Fix Prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
         print("   Run `python factory.py heal` to apply.")
         return False
+
+    # ── JIT Oracle Lifeline ─────────────────────────────────────────────────
+    # The normal LLM doctor is stumped — escalate to the Oracle (cold-booted,
+    # unpolluted context) which approaches the problem from first principles.
+    print("⚠️  Swarm detecting high uncertainty/failure loop.")
+    print("🔄  Escalating to JIT Oracle Lifeline...")
+    oracle_strategy = _oracle_lifeline(
+        intent=(
+            f"Fix the following {report.get('source', 'unknown')} errors "
+            f"in the Halilit Support Center project."
+        ),
+        current_code=(
+            f"# Error source: {report.get('source', 'unknown')}\n"
+            f"# See error log for affected files."
+        ),
+        error_logs=report.get("log", "(no log available)"),
+    )
+    if oracle_strategy:
+        oracle_fix_path = REPAIRS_DIR / "oracle_rescue_protocol.md"
+        save_artifact(str(oracle_fix_path), oracle_strategy)
+        print(
+            f"🛸 Oracle Rescue Protocol saved → {oracle_fix_path.relative_to(ROOT_DIR)}")
+        print("🔄  Chief adopting Oracle Rescue Protocol...")
+        print("   Review the protocol, then run `python factory.py heal` to apply.")
     else:
-        print("❌ Watchdog failed to analyse the error — check API key and logs.")
-        return False
+        print("❌ Oracle returned no response — check GEMINI_API_KEY and network.")
+    return False
 
 
 if __name__ == "__main__":

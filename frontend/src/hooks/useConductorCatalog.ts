@@ -1,67 +1,47 @@
+/**
+ * useConductorCatalog — canonical catalog data hook
+ * Fetches paginated products from /api/conductor/catalog via React Query.
+ *
+ * ConductorProduct is exported from here because types/index.ts re-exports it.
+ */
 import { useQuery } from '@tanstack/react-query';
-import { useState, useEffect } from 'react';
-import ImageWithFallback from '../../components/ImageWithFallback';
-import { useSearchParams } from 'react-router-dom';
 
-const fetchCatalogData = async (params: CatalogRequestParams): Promise<PaginatedCatalogResponse> => {
-  const { page = 1, pageSize = 25, searchQuery = '', sortBy = '', category = '', brand = '' } = params;
-  const url = new URL(CATALOG_ENDPOINT, window.location.origin);
-  Object.entries({ page, pageSize, searchQuery, sortBy, category, brand })
-    .filter(([, value]) => value !== '' && value !== undefined)
-    .forEach(([key, value]) => {
-      url.searchParams.append(key, String(value));
-    });
+const CATALOG_ENDPOINT = '/api/conductor/catalog';
 
-  const response = await fetch(url.toString());
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.json() as Promise<PaginatedCatalogResponse>;
-};
+export interface ConductorProduct {
+  id: string;
+  name: string;
+  brand: string;
+  brand_logo?: string;
+  galaxy_id?: string;
+  spectrum_id?: string;
+  category?: string;
+  subcategory?: string;
+  price?: number;
+  price_eilat?: number;
+  tier?: string;
+  image_url?: string;
+  image_gallery?: string[];
+  description?: string;
+  description_short?: string;
+  specs?: Record<string, unknown>;
+  features?: string[];
+  rating?: number;
+  review_count?: number;
+  pros?: string[];
+  cons?: string[];
+  quality_score?: number;
+  data_status?: string;
+  data_missing?: string[];
+  halilit_url?: string;
+  official_url?: string;
+  sources?: string[];
+  family_id?: string | null;
+  variant_key?: string | null;
+  relationship_ids?: string[];
+}
 
-const useConductorCatalog = (
-  page: number = 1,
-  pageSize: number = 25,
-  searchQuery: string = '',
-  sortBy: string = '',
-  category: string = '',
-  brand: string = '',
-) => {
-  const params: CatalogRequestParams = {
-    page,
-    pageSize,
-    searchQuery,
-    sortBy,
-    category,
-    brand,
-  };
-
-  const { data, isLoading, isError, error, refetch } = useQuery<PaginatedCatalogResponse, Error>({
-    queryKey: ['catalog', params],
-    queryFn: () => fetchCatalogData(params),
-    keepPreviousData: true,
-  });
-
-  const products = data?.products || [];
-  const totalItems = data?.totalItems || 0;
-  const totalPages = data?.totalPages || 0;
-  const currentPage = data?.currentPage || 1;
-  const itemsPerPage = data?.pageSize || 25;
-
-  return {
-    products,
-    totalItems,
-    totalPages,
-    currentPage,
-    pageSize: itemsPerPage,
-    isLoading,
-    isError,
-    error,
-    refetch,
-  };
-};
-
-interface CatalogGridProps {
+interface CatalogParams {
   page?: number;
   pageSize?: number;
   searchQuery?: string;
@@ -70,84 +50,50 @@ interface CatalogGridProps {
   brand?: string;
 }
 
-const CatalogGrid: React.FC<CatalogGridProps> = ({ page, pageSize, searchQuery, sortBy, category, brand }) => {
-  const { products, isLoading, isError, error, totalPages, currentPage, refetch, pageSize: itemsPerPage } = useConductorCatalog(
-    page,
-    pageSize,
-    searchQuery,
-    sortBy,
-    category,
-    brand,
-  );
-  const [searchParams, setSearchParams] = useSearchParams();
+interface CatalogApiResponse {
+  products: ConductorProduct[];
+  total?: number;
+  totalItems?: number;
+  totalPages?: number;
+  currentPage?: number;
+  pageSize?: number;
+  brand_count?: number;
+  indexes?: Record<string, unknown>;
+}
 
-  useEffect(() => {
-    const newParams = new URLSearchParams();
-    if (page && page !== 1) newParams.set('page', String(page));
-    if (pageSize && pageSize !== 25) newParams.set('pageSize', String(pageSize));
-    if (searchQuery) newParams.set('searchQuery', searchQuery);
-    if (sortBy) newParams.set('sortBy', sortBy);
-    if (category) newParams.set('category', category);
-    if (brand) newParams.set('brand', brand);
-
-    setSearchParams(newParams);
-  }, [page, pageSize, searchQuery, sortBy, category, brand, setSearchParams]);
-
-  if (isLoading) {
-    return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-        {[...Array(itemsPerPage)].map((_, index) => (
-          <div key={index} className="bg-zinc-700 rounded-md shadow-md overflow-hidden">
-            <div className="bg-zinc-800 h-48 w-full"></div>
-            <div className="p-4">
-              <div className="bg-zinc-700 h-6 w-3/4 mb-2 rounded-md"></div>
-              <div className="bg-zinc-700 h-4 w-1/2 rounded-md"></div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
+async function fetchCatalog(params: CatalogParams): Promise<CatalogApiResponse> {
+  const url = new URL(CATALOG_ENDPOINT, window.location.origin);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== '') {
+      url.searchParams.append(key, String(value));
+    }
+  });
+  const response = await fetch(url.toString());
+  if (!response.ok) {
+    throw new Error(`Catalog fetch failed: HTTP ${response.status}`);
   }
+  return response.json() as Promise<CatalogApiResponse>;
+}
 
-  if (isError) {
-    return (
-      <div className="p-4 text-red-500 dark:text-red-400">
-        Error: {error?.message}
-        <button onClick={refetch} className="ml-2 px-2 py-1 bg-zinc-600 hover:bg-zinc-500 rounded-md">
-          Retry
-        </button>
-      </div>
-    );
-  }
+export function useConductorCatalog(params: CatalogParams = {}) {
+  const { page = 1, pageSize = 250, searchQuery = '', sortBy = '', category = '', brand = '' } = params;
 
-  if (products.length === 0) {
-    return (
-      <div className="p-4 text-zinc-300">
-        No products found.
-      </div>
-    );
-  }
+  const { data, isLoading, isError, error, refetch } = useQuery<CatalogApiResponse, Error>({
+    queryKey: ['conductorCatalog', page, pageSize, searchQuery, sortBy, category, brand],
+    queryFn: () => fetchCatalog({ page, pageSize, searchQuery, sortBy, category, brand }),
+    staleTime: 5 * 60 * 1000,
+    retry: 2,
+  });
 
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-      {products.map((product) => (
-        <div key={product.id} className="bg-zinc-800 rounded-md shadow-md overflow-hidden">
-          <ImageWithFallback
-            src={product.image_url}
-            alt={product.name}
-            fallbackSrc="/placeholder.png"
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-zinc-200 text-lg font-medium truncate">{product.name}</h3>
-            <p className="text-zinc-400 text-sm truncate">{product.brand} - {product.category}</p>
-            <p className="text-zinc-100 font-bold mt-2">${product.price.toFixed(2)}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default CatalogGrid;
-export { useConductorCatalog };
+  return {
+    products: data?.products ?? [],
+    totalItems: data?.totalItems ?? data?.total ?? 0,
+    totalPages: data?.totalPages ?? 1,
+    currentPage: data?.currentPage ?? 1,
+    pageSize: data?.pageSize ?? pageSize,
+    isLoading,
+    isError,
+    error: error ? error.message : null,
+    refetch,
+  };
+}

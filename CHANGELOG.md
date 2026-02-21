@@ -1,3 +1,10 @@
+## [v4.1] — 2026-02-21
+## v4.1
+
+- [feat] Introduced `oracle_agent.py`, an external Oracle service to assist the Swarm in resolving failures.
+- [feat] Implemented `consult_external_oracle` function to query the Oracle with intent, code, and error logs.
+- [feat] Defined `ORACLE_SYSTEM_PROMPT` for the Oracle's persona, guiding it to provide "Rescue Protocols".
+
 ## [v4.1] — 2026-02-20
 ### v4.2 changes:
 - [feature] ANTI-LOOP DIRECTIVE added to system prompt (never retry same approach).

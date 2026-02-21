@@ -18,7 +18,7 @@ import {
   ArrowLeftRight,
   PackageOpen,
 } from "lucide-react";
-import { ImageWithFallback } from "../ImageWithFallback";
+import ImageWithFallback from "../ImageWithFallback";
 
 // ----------------------------------------------------------------------
 // 1. TYPES & CONFIGURATION
@@ -31,7 +31,11 @@ const OFFICIAL_SOURCES = [
   "brand_hierarchy",
 ];
 
-export type RelationType = "accessory" | "compatible" | "alternative" | "variant";
+export type RelationType =
+  | "accessory"
+  | "compatible"
+  | "alternative"
+  | "variant";
 export type TrustLevel = "verified" | "store" | "likely";
 
 export interface RelatedProduct {
@@ -58,7 +62,12 @@ interface ProductRelationsProps {
 
 const TRUST_CONFIG: Record<
   TrustLevel,
-  { label: string; icon: React.ComponentType<{ size?: number }>; style: string; border: string }
+  {
+    label: string;
+    icon: React.ComponentType<{ size?: number }>;
+    style: string;
+    border: string;
+  }
 > = {
   verified: {
     label: "Official",
@@ -166,7 +175,13 @@ const TabButton = ({
     >
       <Icon
         size={14}
-        className={isActive ? (accent === "emerald" ? "text-emerald-400" : "text-blue-400") : "opacity-70"}
+        className={
+          isActive
+            ? accent === "emerald"
+              ? "text-emerald-400"
+              : "text-blue-400"
+            : "opacity-70"
+        }
       />
       {label}
       <span
@@ -228,7 +243,9 @@ const RelationCard = ({
               ₪{item.price.toLocaleString("he-IL")}
             </span>
           ) : (
-            <span className="text-[10px] text-zinc-600 italic">Call for price</span>
+            <span className="text-[10px] text-zinc-600 italic">
+              Call for price
+            </span>
           )}
         </div>
       </div>

@@ -172,9 +172,9 @@ def validate_ui(run_build: bool = True) -> dict:
         if _smart_fix is not None:
             print("  🔧  SmartImportFixer: attempting deterministic repair...")
             fix_report = _smart_fix()  # scans & patches entire frontend/src
-            if fix_report.fixes:
+            if fix_report.fixes_applied:
                 print(
-                    f"     Applied {len(fix_report.fixes)} fix(es) — re-scanning...")
+                    f"     Applied {len(fix_report.fixes_applied)} fix(es) — re-scanning...")
                 raw_errors = scan_imports(SRC_DIR)  # re-scan after fixes
                 import_error_msgs = [e.reason for e in raw_errors]
                 if import_error_msgs:

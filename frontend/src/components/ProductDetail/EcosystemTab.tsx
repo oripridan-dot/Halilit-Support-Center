@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
-import { ImageWithFallback } from "../ImageWithFallback";
+import ImageWithFallback from "../ImageWithFallback";
 
 interface EcosystemData {
   related_products: RelatedProduct[];

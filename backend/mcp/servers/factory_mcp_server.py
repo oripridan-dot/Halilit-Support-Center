@@ -25,6 +25,9 @@ Tools exposed:
   apply_udiff_patch    – Apply SEARCH/REPLACE blocks or unified diff to any
                          workspace file. Replaces ast_patcher — no fragile
                          string matching, no Wolverine LLM fallback needed.
+  consult_oracle       – JIT Oracle Lifeline: route a stuck problem to a
+                         cold-booted, context-free Oracle AI for a radical
+                         outside perspective and a step-by-step Rescue Protocol.
 
 Run standalone (for debugging):
     PYTHONPATH=. python backend/mcp/servers/factory_mcp_server.py
@@ -286,6 +289,38 @@ TOOLS: list[dict[str, Any]] = [
             "required": ["patch_text"],
         },
     },
+    # -----------------------------------------------------------------------
+    # JIT Oracle Lifeline (Level 8 Safety Net)
+    # -----------------------------------------------------------------------
+    {
+        "name": "consult_oracle",
+        "description": (
+            "JIT Oracle Lifeline: when the Swarm or Core LLM is stuck in a failure loop "
+            "or feels uncertain about the right approach, invoke this tool to route the "
+            "problem to a completely isolated, cold-booted Oracle AI. The Oracle has zero "
+            "memory of previous attempts and approaches the problem from first principles, "
+            "returning a radical, step-by-step Rescue Protocol. "
+            "Trigger this proactively when confused — don't wait for a fatal loop."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "intent": {
+                    "type": "string",
+                    "description": "What you are trying to accomplish (the goal, in plain English).",
+                },
+                "current_code": {
+                    "type": "string",
+                    "description": "The code / file content that is failing or causing confusion.",
+                },
+                "error_logs": {
+                    "type": "string",
+                    "description": "Raw compiler, runtime, or test error output.",
+                },
+            },
+            "required": ["intent"],
+        },
+    },
 ]
 
 # ---------------------------------------------------------------------------
@@ -487,6 +522,28 @@ def _tool_apply_udiff_patch(args: dict[str, Any]) -> str:
         return json.dumps({"success": False, "message": str(exc)})
 
 
+def _tool_consult_oracle(args: dict[str, Any]) -> str:
+    """Route a stuck problem to the JIT Oracle Lifeline."""
+    intent: str = args.get("intent", "").strip()
+    current_code: str = args.get("current_code", "")
+    error_logs: str = args.get("error_logs", "")
+
+    if not intent:
+        return json.dumps({"error": "intent is required."})
+
+    try:
+        sys.path.insert(0, str(_ROOT / "backend" / "factory"))
+        from oracle_agent import consult_external_oracle  # type: ignore
+        rescue = consult_external_oracle(
+            intent=intent,
+            current_code=current_code,
+            error_logs=error_logs,
+        )
+        return json.dumps({"rescue_protocol": rescue})
+    except Exception as exc:
+        return json.dumps({"error": str(exc)})
+
+
 _TOOL_HANDLERS = {
     "factory_chief_plan": _tool_chief_plan,
     "factory_build": _tool_build,
@@ -501,6 +558,8 @@ _TOOL_HANDLERS = {
     "git_merge_workspace": _tool_git_merge_workspace,
     "execute_bash_command": _tool_execute_bash_command,
     "apply_udiff_patch": _tool_apply_udiff_patch,
+    # JIT Oracle Lifeline (Level 8 Safety Net)
+    "consult_oracle": _tool_consult_oracle,
 }
 
 # ---------------------------------------------------------------------------
