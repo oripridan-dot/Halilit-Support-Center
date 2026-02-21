@@ -1,6 +1,6 @@
-# Task-Force Blackboard: pyroscope_integration
+# Task-Force Blackboard: relay_compiler_investigation
 
-**Goal:** Integrate Pyroscope for performance profiling per specs/interface/integrate_pyroscope_for_performance_profiling.md.
+**Goal:** Evaluate and potentially integrate Relay Compiler for skeleton data loading.
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,7 +33,7 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-No code provided to review, therefore compliance to spec cannot be verified.
+No implemented code provided to review against the original request and spec.
 
 **Required Fix:**
 Provide the implemented code for review.

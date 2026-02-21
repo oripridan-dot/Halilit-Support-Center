@@ -1,4 +1,10 @@
 ## [v4.1] — 2026-02-21
+- [feat] Added a new function `purge_scope_violations` to automatically fix certain types of code issues.
+- [fix] `purge_scope_violations` now strips appended component blocks, JSX in `.ts` files, and invalid component imports.
+- [refactor] Improved the logic and efficiency of the `purge_scope_violations` function.
+- [chore] Enhanced the reporting of the `purge_scope_violations` function to provide more descriptive messages about the repairs made.
+
+## [v4.1] — 2026-02-21
 - [feat] Added a `purge_scope_violations` function to remove Builder-hallucinated component code and imports from hook/store/util files.
 - [feat] The `purge_scope_violations` function scans .ts files in specific directories for scope violations.
 - [feat] The `purge_scope_violations` function truncates files at appended-file markers and removes invalid component imports.

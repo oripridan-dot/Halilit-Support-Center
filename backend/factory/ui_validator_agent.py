@@ -66,18 +66,20 @@ _APPENDED_FILE_COMMENT = re.compile(
 def purge_scope_violations(src_dir: Path = SRC_DIR) -> list[str]:
     """
     Scan every .ts (non-.tsx) file under hook/store/utils directories.
-    If the file contains:
-      1. A '// frontend/src/...' comment block (Builder appended a second file)
-      2. Unresolvable relative imports to 'components/' paths
+    Auto-strips three classes of Builder hallucination that cause Vite esbuild
+    to die and can never be resolved by SmartImportFixer:
 
-    … strip the garbage in-place and return a list of repaired file paths.
+      1. Appended-file block: '// frontend/src/...' comment marker
+      2. JSX-in-.ts: any 'className=' in a .ts file → truncate back to the
+         nearest export boundary (catches appended React components)
+      3. Component imports in hook files: relative imports referencing
+         'components/' that don't resolve
 
-    This is a zero-LLM, deterministic repair pass.
+    Returns a list of human-readable repair messages.
     """
     repaired: list[str] = []
 
     for fpath in sorted(src_dir.rglob("*.ts")):
-        # Only target non-TSX files in scoped directories
         if fpath.suffix == ".tsx":
             continue
         if not any(part in _HOOK_DIRS for part in fpath.parts):
@@ -90,36 +92,63 @@ def purge_scope_violations(src_dir: Path = SRC_DIR) -> list[str]:
         except OSError:
             continue
 
+        working = original
+
         # ── Strategy 1: truncate at appended-file marker ─────────────────
-        match = _APPENDED_FILE_COMMENT.search(original)
-        if match:
-            cleaned = original[: match.start()].rstrip() + "\n"
-            fpath.write_text(cleaned, encoding="utf-8")
+        m = _APPENDED_FILE_COMMENT.search(working)
+        if m:
+            working = working[: m.start()].rstrip() + "\n"
             repaired.append(
                 f"[scope-purge] Truncated appended component block from {fpath.relative_to(ROOT_DIR)}"
             )
-            original = cleaned  # continue checking remaining content
 
-        # ── Strategy 2: strip import lines that reference non-existent
-        #    component paths (components/ imports in hook files)  ──────────
+        # ── Strategy 2: JSX in .ts — className= is the smoking gun ───────
+        #    Walk backwards from first className= to the nearest export/function
+        #    boundary and truncate there.
+        jsx_hit = re.search(r'\bclassName=', working)
+        if jsx_hit:
+            pre = working[: jsx_hit.start()]
+            # Find the last export const / export function / standalone function
+            # declaration before the JSX hit — that's the start of the junk block
+            boundary = None
+            for m2 in re.finditer(
+                r'^(export\s+)?(const|function|class)\s+\w',
+                pre,
+                re.MULTILINE,
+            ):
+                boundary = m2  # keep scanning — we want the LAST match before jsx_hit
+            if boundary:
+                working = working[: boundary.start()].rstrip() + "\n"
+            else:
+                # No clean boundary found — truncate at line containing className
+                line_start = working.rfind("\n", 0, jsx_hit.start()) + 1
+                working = working[:line_start].rstrip() + "\n"
+            repaired.append(
+                f"[scope-purge] Stripped JSX component block (className detected) from {fpath.relative_to(ROOT_DIR)}"
+            )
+
+        # ── Strategy 3: component imports in hook file ────────────────────
         import_pattern = re.compile(
             r"^import\s+.*?from\s+['\"](\./|\.\./).*?components/[^'\"]+['\"];?\s*$",
             re.MULTILINE,
         )
-        fixed = import_pattern.sub("", original)
-        if fixed != original:
-            # Also strip any now-orphaned blank lines at the top of the file
+        fixed = import_pattern.sub("", working)
+        if fixed != working:
             fixed = re.sub(r"\n{3,}", "\n\n", fixed).lstrip("\n")
-            fpath.write_text(fixed, encoding="utf-8")
+            working = fixed
             repaired.append(
                 f"[scope-purge] Stripped hallucinated component import(s) from {fpath.relative_to(ROOT_DIR)}"
             )
+
+        if working != original:
+            fpath.write_text(working, encoding="utf-8")
 
     return repaired
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 # Extensions to try when resolving a bare import (no extension)
 _EXTENSIONS = [".ts", ".tsx", ".js", ".jsx", "/index.ts", "/index.tsx"]
@@ -234,7 +263,8 @@ def validate_ui(run_build: bool = True) -> dict:
     #    and would otherwise permanently block the system.
     purge_results = purge_scope_violations(SRC_DIR)
     if purge_results:
-        print(f"  🧹 Scope-violation purge: {len(purge_results)} file(s) auto-repaired:")
+        print(
+            f"  🧹 Scope-violation purge: {len(purge_results)} file(s) auto-repaired:")
         for r in purge_results:
             print(f"     • {r}")
     else:
