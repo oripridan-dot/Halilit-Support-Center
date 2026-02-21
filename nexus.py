@@ -1367,7 +1367,7 @@ def main() -> None:
                         plan = consult_chief(
                             "", is_startup=False,
                             failure_context=failure_report,
-                            tech_lead_context=_recovery_senior,
+                            tech_lead_context=_senior_context,
                             senior_override=_pending_override,
                         )
                         print(f"\n{RED}{BOLD}CHIEF RECOVERY PLAN:{RESET}")
