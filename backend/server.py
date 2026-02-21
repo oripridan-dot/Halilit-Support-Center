@@ -163,6 +163,15 @@ try:
 except Exception as e:
     logger.warning(f"Failed to register JIT Innovation router: {e}")
 
+# ── Liquid Route Manager (Level 10 SDUI) ──
+try:
+    from backend.api.liquid_router import router as liquid_router
+    app.include_router(liquid_router)
+    logger.info(
+        "Liquid Router registered at /api/liquid — in-memory SDUI engine active")
+except Exception as e:
+    logger.warning(f"Failed to register Liquid Router: {e}")
+
 # Paths
 FRONTEND_DIST = FRONTEND_DIR / "dist"
 
@@ -997,7 +1006,8 @@ async def crash_report(
         payload = {"message": "(unparseable payload)", "event": {}}
 
     # Skip agent processing for validation / CI probes to avoid false alarms.
-    env = payload.get("environment") or (payload.get("event") or {}).get("environment") or ""
+    env = payload.get("environment") or (
+        payload.get("event") or {}).get("environment") or ""
     if env in ("test", "validation", "ci"):
         return {"status": "received", "message": "Test probe acknowledged — Sovereign Nerve not triggered."}
 

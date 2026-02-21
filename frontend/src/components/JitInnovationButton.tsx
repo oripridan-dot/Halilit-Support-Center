@@ -4,21 +4,24 @@
  * A globally visible, floating action button that lets any Halilit warehouse
  * operator submit an unmet need directly into the JIT Innovation Pipeline.
  *
- * When submitted, the backend's Boardroom → Spec Writer → Repo Agent →
- * Darwin Shadow Cell pipeline runs asynchronously and produces a
- * FEATURE_PROPOSAL.md awaiting Governor review.
+ * Level 10 Upgrade:
+ *   • "Liquid" mode (default) — calls /api/innovation/liquid and renders
+ *     the result instantly via <LiquidCanvas /> with no compilation.
+ *   • "Deep" mode — calls /api/innovation/request and triggers the full
+ *     Boardroom → Spec Writer → Repo Agent → Darwin pipeline.
  *
  * Usage: Drop <JitInnovationButton /> inside the root App shell.
  */
 
 import React, { useState, useRef, useEffect } from "react";
+import { LiquidCanvas, type LiquidSchema } from "./LiquidCanvas";
 
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
 
 /**
- * Represents the result of submitting an innovation request.
+ * Represents the result of submitting a classic (deep) innovation request.
  */
 interface InnovationRequestResult {
   status: string;
@@ -26,9 +29,28 @@ interface InnovationRequestResult {
 }
 
 /**
- * Represents the different states of the innovation panel.
+ * Represents the result of a Liquid JIT synthesis.
  */
-type InnovationPanelState = "idle" | "submitting" | "success" | "error";
+interface LiquidRequestResult {
+  status: "success" | "error";
+  ui_schema?: LiquidSchema;
+  sql_preview?: string;
+  message?: string;
+}
+
+/**
+ * Represents the different states of the innovation panel.
+ * "liquid" = LiquidCanvas overlay is active.
+ */
+type InnovationPanelState =
+  | "idle"
+  | "submitting"
+  | "success"
+  | "error"
+  | "liquid";
+
+/** Submission mode: instant SDUI or full file-writing pipeline. */
+type SubmitMode = "liquid" | "deep";
 
 // ---------------------------------------------------------------------------
 // Component
@@ -42,6 +64,8 @@ export const JitInnovationButton: React.FC = () => {
   const [innovationNeed, setInnovationNeed] = useState("");
   const [panelState, setPanelState] = useState<InnovationPanelState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
+  const [submitMode, setSubmitMode] = useState<SubmitMode>("liquid");
+  const [liquidSchema, setLiquidSchema] = useState<LiquidSchema | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   /**
@@ -60,6 +84,7 @@ export const JitInnovationButton: React.FC = () => {
     setInnovationNeed("");
     setPanelState("idle");
     setStatusMessage("");
+    setLiquidSchema(null);
   };
 
   const handleOpenPanel = () => {
@@ -77,42 +102,79 @@ export const JitInnovationButton: React.FC = () => {
 
   /**
    * Handles the submission of the innovation request to the backend.
+   * Routes to /api/innovation/liquid (Liquid mode) or /api/innovation/request (Deep mode).
    */
   const handleSubmit = async () => {
     const trimmedNeed = innovationNeed.trim();
     if (!trimmedNeed) return;
 
     setPanelState("submitting");
-    setStatusMessage("Waking the Factory…");
 
-    try {
-      const response = await fetch("/api/innovation/request", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          operator_role: "Warehouse Staff",
-          current_context: window.location.pathname,
-          need_description: trimmedNeed,
-        }),
-      });
+    if (submitMode === "liquid") {
+      setStatusMessage("Liquid Engine synthesising…");
+      try {
+        const response = await fetch("/api/innovation/liquid", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            operator_role: "Warehouse Staff",
+            current_context: window.location.pathname,
+            need_description: trimmedNeed,
+          }),
+        });
 
-      if (!response.ok) {
-        throw new Error(`Server responded with ${response.status}`);
+        if (!response.ok)
+          throw new Error(`Server responded with ${response.status}`);
+
+        const data: LiquidRequestResult = await response.json();
+
+        if (data.status === "success" && data.ui_schema) {
+          setLiquidSchema(data.ui_schema);
+          setIsOpen(false); // collapse the input panel
+          setPanelState("liquid"); // show the canvas
+        } else {
+          setPanelState("error");
+          setStatusMessage(
+            data.message ?? "Liquid synthesis returned no schema.",
+          );
+        }
+      } catch (err) {
+        setPanelState("error");
+        setStatusMessage(
+          err instanceof Error ? err.message : "Unexpected error — check logs.",
+        );
       }
+    } else {
+      // Deep mode — full pipeline (async, proposal written to docs/)
+      setStatusMessage("Waking the Factory…");
+      try {
+        const response = await fetch("/api/innovation/request", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            operator_role: "Warehouse Staff",
+            current_context: window.location.pathname,
+            need_description: trimmedNeed,
+          }),
+        });
 
-      const data: InnovationRequestResult = await response.json();
-      setPanelState("success");
-      setStatusMessage(
-        data.message ??
-          "Pipeline activated. A FEATURE_PROPOSAL will appear in docs/ when ready.",
-      );
-    } catch (error) {
-      setPanelState("error");
-      setStatusMessage(
-        error instanceof Error
-          ? error.message
-          : "Unexpected error — check the server logs.",
-      );
+        if (!response.ok)
+          throw new Error(`Server responded with ${response.status}`);
+
+        const data: InnovationRequestResult = await response.json();
+        setPanelState("success");
+        setStatusMessage(
+          data.message ??
+            "Pipeline activated. A FEATURE_PROPOSAL will appear in docs/ when ready.",
+        );
+      } catch (error) {
+        setPanelState("error");
+        setStatusMessage(
+          error instanceof Error
+            ? error.message
+            : "Unexpected error — check the server logs.",
+        );
+      }
     }
   };
 
@@ -132,6 +194,11 @@ export const JitInnovationButton: React.FC = () => {
 
   return (
     <>
+      {/* ── Liquid Canvas (full-screen overlay when a schema is ready) ── */}
+      {panelState === "liquid" && liquidSchema && (
+        <LiquidCanvas schema={liquidSchema} onClose={resetPanel} />
+      )}
+
       {/* ── Floating Trigger Button ── */}
       <button
         onClick={handleOpenPanel}
@@ -185,16 +252,45 @@ export const JitInnovationButton: React.FC = () => {
                 💡 Request a JIT Feature
               </h2>
               <p className="text-[11px] text-zinc-500 mt-0.5">
-                The AI Factory will design, test &amp; propose a solution.
+                {submitMode === "liquid"
+                  ? "Liquid mode — instant SDUI, no compilation."
+                  : "Deep mode — full pipeline + spec proposal."}
               </p>
             </div>
-            <button
-              onClick={handleClosePanel}
-              aria-label="Close panel"
-              className="text-zinc-600 hover:text-zinc-300 transition-colors p-1 rounded-md hover:bg-zinc-800"
-            >
-              ✕
-            </button>
+            <div className="flex items-center gap-2">
+              {/* Mode toggle */}
+              <div className="flex rounded-md overflow-hidden border border-zinc-700 text-[10px] font-medium">
+                <button
+                  onClick={() => setSubmitMode("liquid")}
+                  className={`px-2.5 py-1 transition-colors ${
+                    submitMode === "liquid"
+                      ? "bg-blue-600 text-white"
+                      : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
+                  }`}
+                  title="Liquid: instant Server-Driven UI"
+                >
+                  🌊 Liquid
+                </button>
+                <button
+                  onClick={() => setSubmitMode("deep")}
+                  className={`px-2.5 py-1 transition-colors ${
+                    submitMode === "deep"
+                      ? "bg-purple-700 text-white"
+                      : "bg-zinc-800 text-zinc-400 hover:text-zinc-200"
+                  }`}
+                  title="Deep: full factory pipeline + proposal"
+                >
+                  🧬 Deep
+                </button>
+              </div>
+              <button
+                onClick={handleClosePanel}
+                aria-label="Close panel"
+                className="text-zinc-600 hover:text-zinc-300 transition-colors p-1 rounded-md hover:bg-zinc-800"
+              >
+                ✕
+              </button>
+            </div>
           </div>
 
           {/* Body */}
@@ -284,19 +380,27 @@ export const JitInnovationButton: React.FC = () => {
                 <button
                   onClick={handleSubmit}
                   disabled={!innovationNeed.trim()}
-                  className="
+                  className={`
                     px-4 py-1.5 rounded-lg text-xs font-semibold
-                    bg-blue-600 hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed
+                    ${
+                      submitMode === "liquid"
+                        ? "bg-blue-600 hover:bg-blue-500"
+                        : "bg-purple-700 hover:bg-purple-600"
+                    } disabled:opacity-40 disabled:cursor-not-allowed
                     text-white transition-all active:scale-95
-                  "
+                  `}
                 >
-                  Send to Factory →
+                  {submitMode === "liquid"
+                    ? "🌊 Synthesise"
+                    : "🧬 Send to Factory →"}
                 </button>
               </>
             )}
             {(panelState === "success" || panelState === "error") && (
               <button
-                onClick={panelState === "success" ? handleClosePanel : resetPanel}
+                onClick={
+                  panelState === "success" ? handleClosePanel : resetPanel
+                }
                 className="
                   ml-auto px-4 py-1.5 rounded-lg text-xs font-semibold
                   bg-zinc-800 hover:bg-zinc-700 text-zinc-200 transition-all active:scale-95
