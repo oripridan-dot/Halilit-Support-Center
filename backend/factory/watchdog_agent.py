@@ -704,7 +704,8 @@ def _burn_and_replace(broken_file: Path, spec_file: Path | None, raw_error: str)
     print(f"   ✅ {broken_file.name} wiped.")
 
     if spec_file and spec_file.exists():
-        print(f"   🏗️  Triggering builder_agent rewrite from spec: {spec_file.name}")
+        print(
+            f"   🏗️  Triggering builder_agent rewrite from spec: {spec_file.name}")
         factory_py = ROOT_DIR / "factory.py"
         result = _sp.run(
             [sys.executable, str(factory_py), "implement", str(spec_file)],
@@ -729,7 +730,8 @@ def _burn_and_replace(broken_file: Path, spec_file: Path | None, raw_error: str)
             f"**Last error:**\n```\n{raw_error[:1500]}\n```\n",
             encoding="utf-8",
         )
-        print(f"   📋 Instructions saved → {burn_protocol_path.relative_to(ROOT_DIR)}")
+        print(
+            f"   📋 Instructions saved → {burn_protocol_path.relative_to(ROOT_DIR)}")
     return False
 
 
@@ -771,7 +773,8 @@ def run_watchdog() -> bool:
     error_source = report.get("source", "unknown")
 
     print(f"\n🩺 FAILURE DETECTED — {error_source}")
-    print(f"   Raw terminal output ({len(raw_terminal_output)} chars captured)")
+    print(
+        f"   Raw terminal output ({len(raw_terminal_output)} chars captured)")
     if raw_terminal_output:
         # Print first 20 lines to terminal so operator can see what the AI sees
         preview = "\n".join(raw_terminal_output.splitlines()[:20])
@@ -822,7 +825,8 @@ def run_watchdog() -> bool:
     prescription = diagnose_and_prescribe(report)
     if prescription:
         save_artifact(str(FIX_SPEC_PATH), prescription)
-        print(f"  🩹 Strike 2a: Fix Spec prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
+        print(
+            f"  🩹 Strike 2a: Fix Spec prescribed → {FIX_SPEC_PATH.relative_to(ROOT_DIR)}")
         print(f"  Run `python factory.py heal` to apply the prescription.")
         return False  # caller (heal loop) will pick up the fix spec
 
@@ -843,7 +847,8 @@ def run_watchdog() -> bool:
     if oracle_strategy:
         oracle_fix_path = REPAIRS_DIR / "oracle_rescue_protocol.md"
         save_artifact(str(oracle_fix_path), oracle_strategy)
-        print(f"  🛸 Oracle Rescue Protocol saved → {oracle_fix_path.relative_to(ROOT_DIR)}")
+        print(
+            f"  🛸 Oracle Rescue Protocol saved → {oracle_fix_path.relative_to(ROOT_DIR)}")
         print(f"  Run `python factory.py heal` to apply.")
         return False  # caller (heal loop) will pick up the oracle protocol
 

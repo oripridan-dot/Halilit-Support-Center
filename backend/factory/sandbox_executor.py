@@ -438,7 +438,8 @@ def inner_loop(
         if verbose:
             print(f"\n{'🔥' * 10}")
             print(f"🔥  STRIKE 3 — BURN & REPLACE")
-            print(f"   File deemed corrupt after {max_rounds} rounds + Oracle: {target_file.name}")
+            print(
+                f"   File deemed corrupt after {max_rounds} rounds + Oracle: {target_file.name}")
             print(f"   Wiping target file and rewriting from spec from scratch...")
             print(f"{'🔥' * 10}\n")
         # Overwrite with empty file to guarantee a clean AST state
@@ -463,7 +464,8 @@ def inner_loop(
                 return True
             if verbose:
                 print(f"❌  Burn & Replace also failed — manual intervention required.")
-                print(f"    Last error: {vr_final.first_failure.error_summary[:300] if vr_final.first_failure else 'unknown'}")
+                print(
+                    f"    Last error: {vr_final.first_failure.error_summary[:300] if vr_final.first_failure else 'unknown'}")
         else:
             if verbose:
                 print("❌  Burn & Replace builder_fn returned failure.")
