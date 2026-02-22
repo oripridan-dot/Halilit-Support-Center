@@ -4,15 +4,17 @@
   agent may bump versions directly; all version updates must flow through TooLoo.
 
 ## [v9.7.6] — 2026-02-22
+Version v9.7.6
+
 - [feat] Added `product_mcp_server.py`, an MCP server for the Halilit Support Center.
 - [feat] Implemented tools for retrieving project identity, directory structure, and database schema.
 - [refactor] Added configuration loading from `.tooloo.config`.
 - [chore] Added dependencies to determine the project's root path.
 - [chore] Added logging.
 - [feat] Added specification document outlining changes to update `JitInnovationButton` to use Tailwind CSS scale tokens for background colors.
-- [fix] Renamed nexus.py to TooLoo.py.
-- [fix] Updated script to execute TooLoo.py instead of nexus.py.
-- [refactor] Updated script to pass arguments to TooLoo.py instead of nexus.py.
+- [Fix] Renamed nexus.py to TooLoo.py.
+- [Fix] Updated script to execute TooLoo.py instead of nexus.py.
+- [Refactor] Updated script to pass arguments to TooLoo.py instead of nexus.py.
 
 ## [v9.7.6] — 2026-02-21
 - [chore] Removed JitInnovationButton component.
