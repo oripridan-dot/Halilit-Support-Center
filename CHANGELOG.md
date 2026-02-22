@@ -1,3 +1,10 @@
+## [v9.7.6] — 2026-02-22
+Version v9.7.6
+
+- [Fix] Renamed nexus.py to TooLoo.py.
+- [Fix] Updated script to execute TooLoo.py instead of nexus.py.
+- [Refactor] Updated script to pass arguments to TooLoo.py instead of nexus.py.
+
 ## [v9.7.6] — 2026-02-21
 - [chore] Removed JitInnovationButton component.
 

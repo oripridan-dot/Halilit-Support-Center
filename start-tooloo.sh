@@ -27,7 +27,7 @@ RESET='\033[0m'
 # Paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TOOLOO_PATH="${SCRIPT_DIR}/../tooloo-core"
-NEXUS_PATH="${TOOLOO_PATH}/nexus.py"
+NEXUS_PATH="${TOOLOO_PATH}/TooLoo.py"
 
 # Verify TooLoo exists
 if [ ! -f "$NEXUS_PATH" ]; then
@@ -56,7 +56,7 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Execute nexus with target pointing to Halilit
-# Pass all script arguments to nexus.py
+# Pass all script arguments to TooLoo.py
 python3 "$NEXUS_PATH" --target "$SCRIPT_DIR" "$@"
 
 EXIT_CODE=$?
