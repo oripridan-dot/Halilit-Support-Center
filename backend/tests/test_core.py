@@ -32,6 +32,17 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "backend" / "factory"))
 
+# ── Catalog availability guard (tests that need real product data) ─────────────
+_CATALOG_DATA_DIR = ROOT / "frontend" / "public" / "data"
+_CATALOG_HAS_DATA = (
+    _CATALOG_DATA_DIR.exists()
+    and any(_CATALOG_DATA_DIR.glob("*.json"))
+)
+_skip_no_catalog = pytest.mark.skipif(
+    not _CATALOG_HAS_DATA,
+    reason="No catalog data available in CI — requires a populated frontend/public/data/ directory",
+)
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # 1 · SOURCE RULES — The Law
@@ -228,6 +239,7 @@ class TestProductNormalizer:
         catalog = self.build_catalog(str(self.data_dir), resolve=False)
         assert "metadata" in catalog
 
+    @_skip_no_catalog
     def test_build_catalog_non_empty(self):
         catalog = self.build_catalog(str(self.data_dir), resolve=False)
         products = catalog.get("products", [])
@@ -271,10 +283,12 @@ class TestProductNormalizer:
         indexes = catalog.get("indexes", {})
         assert "by_brand" in indexes, "Catalog index must include by_brand"
 
+    @_skip_no_catalog
     def test_catalog_metadata_brand_count(self):
         catalog = self.build_catalog(str(self.data_dir), resolve=False)
         brands = catalog.get("metadata", {}).get("brands", [])
         assert len(brands) > 10, f"Expected >10 brands, got {len(brands)}"
+
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
