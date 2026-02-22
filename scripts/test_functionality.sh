@@ -108,12 +108,12 @@ echo ""
 echo -e "${BLUE}TEST 4: Frontend Component Structure${NC}"
 
 COMPONENTS=(
-    "frontend/src/components/GlobalSearch.tsx"
-    "frontend/src/components/views/DashboardView.tsx"
-    "frontend/src/components/views/InventoryView.tsx"
-    "frontend/src/components/views/ProductDetailView.tsx"
-    "frontend/src/hooks/useConductorCatalog.ts"
-    "frontend/src/store/navigationStore.ts"
+    "../frontend/src/components/GlobalSearch.tsx"
+    "../frontend/src/components/views/DashboardView.tsx"
+    "../frontend/src/components/views/InventoryView.tsx"
+    "../frontend/src/components/views/ProductDetailView.tsx"
+    "../frontend/src/hooks/useConductorCatalog.ts"
+    "../frontend/src/store/navigationStore.ts"
 )
 
 ALL_EXIST=true
@@ -137,20 +137,20 @@ echo ""
 # Test 5: Check for API usage (not static files)
 echo -e "${BLUE}TEST 5: API Integration Check${NC}"
 
-if grep -q "/api/conductor/catalog" frontend/src/hooks/useConductorCatalog.ts 2>/dev/null; then
+if grep -q "/api/conductor/catalog" ../frontend/src/hooks/useConductorCatalog.ts 2>/dev/null; then
     echo -e "${GREEN}✓${NC} useConductorCatalog uses /api/conductor/catalog"
 else
     echo -e "${RED}✗${NC} useConductorCatalog may not use API"
 fi
 
-if grep -q "/api/products/search" frontend/src/components/GlobalSearch.tsx 2>/dev/null; then
+if grep -q "/api/products/search" ../frontend/src/components/GlobalSearch.tsx 2>/dev/null; then
     echo -e "${GREEN}✓${NC} GlobalSearch uses /api/products/search"
 else
     echo -e "${RED}✗${NC} GlobalSearch may not use API"
 fi
 
 # Check for direct /data/ reads (should be minimal)
-DATA_READS=$(grep -r "fetch.*'/data/" frontend/src --include="*.tsx" --include="*.ts" 2>/dev/null | wc -l | tr -d ' ')
+DATA_READS=$(grep -r "fetch.*'/data/" ../frontend/src --include="*.tsx" --include="*.ts" 2>/dev/null | wc -l | tr -d ' ')
 if [ "$DATA_READS" -eq 0 ]; then
     echo -e "${GREEN}✓${NC} No direct /data/ file reads in frontend"
 else
@@ -162,19 +162,19 @@ echo ""
 # Test 6: Navigation store structure
 echo -e "${BLUE}TEST 6: Navigation Store Structure${NC}"
 
-if grep -q "searchQuery" frontend/src/store/navigationStore.ts 2>/dev/null; then
+if grep -q "searchQuery" ../frontend/src/store/navigationStore.ts 2>/dev/null; then
     echo -e "${GREEN}✓${NC} Navigation store has searchQuery state"
 else
     echo -e "${RED}✗${NC} Navigation store missing searchQuery"
 fi
 
-if grep -q "goToInventory.*searchQuery" frontend/src/store/navigationStore.ts 2>/dev/null; then
+if grep -q "goToInventory.*searchQuery" ../frontend/src/store/navigationStore.ts 2>/dev/null; then
     echo -e "${GREEN}✓${NC} goToInventory accepts searchQuery parameter"
 else
     echo -e "${RED}✗${NC} goToInventory may not accept searchQuery"
 fi
 
-if ! grep -qi "camera\|zoom" frontend/src/store/navigationStore.ts 2>/dev/null; then
+if ! grep -qi "camera\|zoom" ../frontend/src/store/navigationStore.ts 2>/dev/null; then
     echo -e "${GREEN}✓${NC} No camera/zoom logic in navigation store"
 else
     echo -e "${RED}✗${NC} Navigation store contains camera/zoom logic"

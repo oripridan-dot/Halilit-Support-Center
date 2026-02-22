@@ -1,7 +1,8 @@
 #!/bin/bash
 
 ###############################################################################
-# 🔌 HALILIT SUPPORT CENTER — TooLoo Startup Script
+# 🔌 HALILIT SUPPORT CENTER — TooLoo Startup Script (canonical entry point)
+# See docs/WORKFLOW.md for the full TooLoo PR loop.
 # 
 # This script attaches the external TooLoo engine (repository-agnostic AI 
 # orchestrator) to this Halilit repository via the Umbilical Cord.
@@ -27,7 +28,7 @@ RESET='\033[0m'
 # Paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TOOLOO_PATH="${SCRIPT_DIR}/../tooloo-core"
-NEXUS_PATH="${TOOLOO_PATH}/nexus.py"
+NEXUS_PATH="${TOOLOO_PATH}/TooLoo.py"
 
 # Verify TooLoo exists
 if [ ! -f "$NEXUS_PATH" ]; then
@@ -56,7 +57,7 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Execute nexus with target pointing to Halilit
-# Pass all script arguments to nexus.py
+# Pass all script arguments to TooLoo.py
 python3 "$NEXUS_PATH" --target "$SCRIPT_DIR" "$@"
 
 EXIT_CODE=$?
