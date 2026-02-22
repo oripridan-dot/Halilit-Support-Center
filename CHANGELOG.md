@@ -1,4 +1,7 @@
 ## [v9.7.6] — 2026-02-22
+- [feat] Added specification document outlining changes to update `JitInnovationButton` to use Tailwind CSS scale tokens for background colors.
+
+## [v9.7.6] — 2026-02-22
 Version v9.7.6
 
 - [Fix] Renamed nexus.py to TooLoo.py.
