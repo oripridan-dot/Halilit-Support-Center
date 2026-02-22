@@ -1,4 +1,11 @@
 ## [v9.7.6] — 2026-02-22
+- [feat] Added `product_mcp_server.py`, an MCP server for the Halilit Support Center.
+- [feat] Implemented tools for retrieving project identity, directory structure, and database schema.
+- [refactor] Added configuration loading from `.tooloo.config`.
+- [chore] Added dependencies to determine the project's root path.
+- [chore] Added logging.
+
+## [v9.7.6] — 2026-02-22
 - [feat] Added specification document outlining changes to update `JitInnovationButton` to use Tailwind CSS scale tokens for background colors.
 
 ## [v9.7.6] — 2026-02-22
