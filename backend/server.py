@@ -163,6 +163,14 @@ try:
 except Exception as e:
     logger.warning(f"Failed to register JIT Innovation router: {e}")
 
+# ── Facade Router (local_autonomy — TooLoo mandate entry point) ──
+try:
+    from backend.api.facade_router import router as facade_router
+    app.include_router(facade_router, prefix="/facade", tags=["Facade"])
+    logger.info("Facade endpoints registered at /facade (dev passthrough mode)")
+except Exception as e:
+    logger.warning(f"Failed to register Facade router: {e}")
+
 # Paths
 FRONTEND_DIST = FRONTEND_DIR / "dist"
 
