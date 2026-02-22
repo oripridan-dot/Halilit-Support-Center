@@ -1,3 +1,8 @@
+## [v9.7.7] — 2026-02-22
+- [chore] Version bump to **9.7.7** — TooLoo-managed. Establishes TooLoo as the sole
+  version authority across all products in the TooLoo ecosystem. No human or external
+  agent may bump versions directly; all version updates must flow through TooLoo.
+
 ## [v9.7.6] — 2026-02-22
 - [feat] Added `product_mcp_server.py`, an MCP server for the Halilit Support Center.
 - [feat] Implemented tools for retrieving project identity, directory structure, and database schema.
