@@ -704,10 +704,12 @@ class TestPipelineScript:
         assert spec is not None
 
     def test_ignition_script_exists_and_executable(self):
-        ignite = ROOT / "ignite_factory.sh"
-        assert ignite.exists(), "ignite_factory.sh is missing"
-        assert ignite.stat().st_mode & 0o111, "ignite_factory.sh is not executable"
+        # start-tooloo.sh is the canonical TooLoo entry point (ignite_factory.sh renamed)
+        ignite = ROOT / "start-tooloo.sh"
+        assert ignite.exists(), "start-tooloo.sh is missing"
+        assert ignite.stat().st_mode & 0o111, "start-tooloo.sh is not executable"
 
     def test_start_console_script_exists(self):
-        sc = ROOT / "start_console.sh"
-        assert sc.exists(), "start_console.sh is missing"
+        # start_console.sh moved to scripts/ as part of TooLoo workflow alignment
+        sc = ROOT / "scripts" / "start_console.sh"
+        assert sc.exists(), "scripts/start_console.sh is missing"
