@@ -18,6 +18,6 @@ _parent_dir = str(Path(__file__).parent.parent)
 if _parent_dir not in sys.path:
     sys.path.insert(0, _parent_dir)
 
-__version__ = "9.7.6"
+__version__ = "9.7.7"
 
 __all__ = ["__version__"]
