@@ -4,7 +4,7 @@ product_mcp_server.py — TooLoo Umbilical Server for Halilit Support Center
 Exposes Halilit's live state to TooLoo Core via the Model Context Protocol.
 
 Run from anywhere:
-    python local_autonomy/product_mcp_server.py
+    python backend/local_autonomy/product_mcp_server.py
 
 TooLoo connects via:
     python nexus.py halilit --test-mcp          (smoke test)
@@ -25,7 +25,7 @@ from pathlib import Path
 
 from mcp.server.fastmcp import FastMCP
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent  # backend/local_autonomy -> backend -> repo root
 PORT = int(os.environ.get("TOOLOO_MCP_PORT", 7001))
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s | %(name)s | %(message)s")

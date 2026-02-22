@@ -7,6 +7,7 @@
 
 ## 🚀 Short-Term (Current Sprint)
 
+- [ ] **Task 0 (Blocker):** TooLoo Workflow Alignment Refactor — execute spec `specs/interface/tooloo_workflow_alignment.md` before any feature sprint proceeds. Removes Git-Mind violations, relocates `local_autonomy/`, consolidates `docs/`, enforces branch protection.
 - [ ] **Task 1:** Resolve Client-Side Data Crash — remove any remaining large JSON payloads served directly to the browser; implement backend pagination on `/api/conductor/catalog`.
 - [ ] **Task 2:** Refactor ProductDetailView UI to modern Tailwind standards (flex-col layout, design-system tokens) without breaking JIT intelligence hooks.
 - [ ] **Task 3:** Wire Backend Search API — replace local frontend array filtering with a proper `/api/search?q=` REST endpoint backed by the catalog index.

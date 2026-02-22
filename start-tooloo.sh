@@ -1,7 +1,8 @@
 #!/bin/bash
 
 ###############################################################################
-# 🔌 HALILIT SUPPORT CENTER — TooLoo Startup Script
+# 🔌 HALILIT SUPPORT CENTER — TooLoo Startup Script (canonical entry point)
+# See docs/WORKFLOW.md for the full TooLoo PR loop.
 # 
 # This script attaches the external TooLoo engine (repository-agnostic AI 
 # orchestrator) to this Halilit repository via the Umbilical Cord.
