@@ -33,6 +33,50 @@ Full steps: **[docs/QUICK_START.md](docs/QUICK_START.md)**
 
 ---
 
+## 🔌 TooLoo Integration — Autonomous AI Orchestrator
+
+This repository is now connected to **TooLoo Core**, a repository-agnostic autonomous AI engine that can work on ANY client project. The **Umbilical Cord** pattern allows Halilit to leverage external AI intelligence without embedding TooLoo code.
+
+### Usage
+
+**Option 1: Use the launcher script (recommended)**
+```bash
+# Give TooLoo a mandate
+./start-tooloo.sh "Implement the user dashboard component"
+
+# View morning briefing without acting
+./start-tooloo.sh "briefing"
+
+# Dry-run: see plan without executing
+./start-tooloo.sh --dry-run "Fix the catalog sync bug"
+```
+
+**Option 2: Direct invocation**
+```bash
+# Invoke TooLoo directly with --target pointing here
+python /workspaces/tooloo-core/nexus.py --target . "Your mandate"
+
+# Or relative to parent:
+python ../tooloo-core/nexus.py --target . "Your mandate"
+```
+
+### How It Works
+
+1. `.tooloo.config` — Configuration file that tells TooLoo how to operate on Halilit
+2. `start-tooloo.sh` — Launcher that connects to the external TooLoo engine via the Umbilical Cord
+3. **Nexus orchestrator** — Dispatches Swarm agents (Chief, TechLead, RepoAgent, Builder, Watchdog)
+4. **Agents execute** — Code generation, testing, commits, documentation updates
+
+### Architecture
+
+- **TooLoo Core** (`/workspaces/tooloo-core/`) — Standalone AI orchestrator (pure logic, no client code)
+- **Halilit** (this repo) — Client project with `.tooloo.config` pointing to TooLoo
+- **Umbilical Cord** — `--target` CLI argument that makes TooLoo repository-agnostic
+
+The separation means TooLoo can work on ANY repository—not just Halilit. See [.tooloo.config](.tooloo.config) for Halilit-specific settings.
+
+---
+
 ## Documentation
 
 | Doc                                                                | Purpose                                      |
