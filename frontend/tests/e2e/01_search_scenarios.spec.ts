@@ -28,11 +28,11 @@ async function goHome(page: Page) {
     ).toBeVisible({ timeout: 15000 });
 }
 
-/** Click the Inventory nav button and wait for the mock inventory cards to load. */
+/** Click the Inventory nav button and wait for the product grid to load. */
 async function goToInventory(page: Page) {
     await page.getByRole("button", { name: /^inventory$/i }).click();
-    // Inventory cards each contain an SKU label — wait for one
-    await page.waitForSelector('p:text("SKU:")', { timeout: 20000 });
+    // InventoryView renders h3 elements for each product name — wait for one
+    await page.waitForSelector("h3", { timeout: 20000 });
 }
 
 // ── Scenario 1: Global search for a known brand ───────────────────────────────
@@ -88,9 +88,9 @@ test("Scenario 3 — Inventory filter by brand → filtered results shown", asyn
     await goHome(page);
     await goToInventory(page);
 
-    // The inventory has a search input
-    const filterInput = page.locator('input[placeholder*="Search inventory" i]');
-    await expect(filterInput).toBeVisible({ timeout: 5000 });
+    // The inventory has a search input — placeholder matches InventoryView.tsx exactly
+    const filterInput = page.locator('input[placeholder*="Search by name" i]');
+    await expect(filterInput).toBeVisible({ timeout: 8000 });
 
     // Filter by "Roland" — Roland Juno-106 should remain, others hidden
     await filterInput.fill("Roland");
